@@ -1,0 +1,384 @@
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">BaldPhone</string>
+    <string name="___app_was_not_found">%s was not found!</string>
+    <string name="a">a</string>
+    <string name="about">About</string>
+    <string name="about_subtext">Hi\nMy name is Uriah Shaul Mandel, and i\'m the developer of this platform.\nI live in Tel Aviv.\nIv\'e spent a lot of time and effort to make this platform, and released it for free, for everyone to use\nyou are more than welcome to contact me, by email.\nbaldphone.contact@gmail.com</string>
+    <string name="accessibility_level">Accessibility Level</string>
+    <string name="accessibility_settings">Accessibility</string>
+    <string name="accidental_touches">Accidental Touch Guard</string>
+    <string name="accidental_touches_settings_subtext">The guard blocks your phone from touch input when the phone is covered\nif you have problems with it you can turn it off</string>
+    <string name="accidental_touches_subtext">Accidental touch was detected\npress OK to continue using the phone\nif this message keeps appearing you can disable it in the accessibility settings</string>
+    <string name="acknowledgments">Acknowledgments</string>
+    <string name="ad">Ad</string>
+    <string name="adaptive">Adaptive</string>
+    <string name="add_alarm">Add Alarm</string>
+    <string name="add_alarm_quickly">Add Timer</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="add_emergency_contact">Add</string>
+    <string name="add_pill">Add Pill</string>
+    <string name="add_shortcut">Add Shortcut</string>
+    <string name="add_to_favorite">Add to Favorite</string>
+    <string name="add_to_home">Add to Home</string>
+    <string name="add_to_sos">Add to SOS</string>
+    <string name="address">Address</string>
+    <string name="advanced_options">Advanced Options</string>
+    <string name="afternoon">Afternoon</string>
+    <string name="airplane_mode">Airplane Mode</string>
+    <string name="alarm_name">Alarm Name</string>
+    <string name="alarm_volume">Alarm Volume</string>
+    <string name="alarm_volume_subtext">Choose Volume for Alarms.\nVolume increases from left to right.</string>
+    <string name="alarms">Alarms</string>
+    <string name="alarms_repeats_every">Alarm repeats every</string>
+    <string name="all_alarms">All Alarms</string>
+    <string name="all_pills">All Pills</string>
+    <string name="allow">Allow</string>
+    <string name="already_setted">Already Setted!\nClick here to change to it</string>
+    <string name="an_error_has_occurred">An error has occurred!</string>
+    <string name="and_welcome_to_baldphone">and welcome to Baldphone</string>
+    <string name="animation_tag">ANIMATION_TAG</string>
+    <string name="api_level" translatable="false">Api Level: </string>
+    <string name="app_version_name" translatable="false">App Version Name: </string>
+    <string name="app_version_number" translatable="false">App Version Number: </string>
+    <string name="apps">Apps</string>
+    <string name="are_you_sure_you_want_to_call_magen_david_adom">Are you sure you want to call Magen David Adom?</string>
+    <string name="are_you_sure_you_want_to_delete___">Are you sure you want to delete %s?</string>
+    <string name="arrows">Arrows</string>
+    <string name="arrows_for_scrolling">Arrows for scrolling</string>
+    <string name="arrows_for_scrolling_subtext">Choose whether you want to scroll with: \n1.arrows (recommended if hands are shaking)\n2.regular swiping</string>
+    <string name="assistant">Assistant</string>
+    <string name="at_least_one_day_must_be_selected">At least one day must be selected!</string>
+    <string name="auto_brightness">Auto\nBrightness</string>
+    <string name="back">back</string>
+    <string name="backspace">backspace</string>
+    <string name="baldphone_bla_allow_permission">Please allow the following permissions:</string>
+    <string name="baldphone_updated">BaldPhone Updated</string>
+    <string name="blocked">Blocked</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="brightness">Brightness</string>
+    <string name="brightness_subtext">Change Brightness.</string>
+    <string name="cache_cleared_successfully">Cache Cleared Successfully!</string>
+    <string name="calculator">Calculator</string>
+    <string name="call">Call</string>
+    <string name="calling">Calling</string>
+
+    <string name="call_log">Call Log:</string>
+    <string name="call_subtext">This permission is required in order to call contacts.</string>
+    <string name="calling__">Calling %s</string>
+    <string name="camera">Camera</string>
+    <string name="camera_subtext">This permission is required in order to turn on the flashlight.</string>
+    <string name="cancel">Cancel</string>
+    <string name="change_pills_time">Change Pills Time</string>
+    <string name="change_system_settings">Change System Settings</string>
+    <string name="change_system_settings_subtext">Please allow BaldPhone to change settings, such as increasing the font size and changing the brightness.</string>
+    <string name="choose_friday">Fri</string>
+    <string name="choose_monday">Mon</string>
+    <string name="choose_saturday">Sat</string>
+    <string name="choose_sunday">Sun</string>
+    <string name="choose_thursday">Thu</string>
+    <string name="choose_tuesday">Tue</string>
+    <string name="choose_wednesday">Wed</string>
+    <string name="clear">Clear</string>
+    <string name="clear_cache">Clear Cache</string>
+    <string name="clear_data">Clear All Data</string>
+    <string name="clear_data_subtext">Are you sure you want to delete all data?</string>
+    <string name="clear_data_subtext2">100%?</string>
+    <string name="clear_data_subtext3">1000000% sure?\npressing yes will delete all data!</string>
+    <string name="clicked">Clicked!</string>
+    <string name="clock">Clock</string>
+    <string name="coming_soon">Coming Soon!</string>
+    <string name="connection_settings">Connection</string>
+    <string name="contact_must_has_name">Contact must has a Name!</string>
+    <string name="contact_not_created">Contact not created!</string>
+    <string name="contacts">Contacts</string>
+    <string name="contacts_read_subtext">This permission is required in order to read contacts.</string>
+    <string name="contacts_subtext">This permission is required in order to add new contacts.</string>
+    <string name="crash">Oops!\nBaldPhone ran into a problem and will now restart.</string>
+    <string name="current_time">Current Time</string>
+    <string name="custom">Custom</string>
+    <string name="dark">Dark</string>
+    <string name="delete">Delete</string>
+    <string name="delete___">Delete %s?</string>
+    <string name="delete_all_alarms">Delete all alarms</string>
+    <string name="delete_all_pills">Delete all pills</string>
+    <string name="details">Details</string>
+    <string name="dialer">Dialer</string>
+    <string name="display_settings">Display</string>
+    <string name="do_you_want_to_add___to_your_contacts">Do you want to add %s to your contacts?</string>
+    <string name="done">Done</string>
+    <string name="down">Down</string>
+    <string name="edit">Edit</string>
+    <string name="email">Email:</string>
+    <string name="enable_notification_access">Enable Notification Access</string>
+    <string name="enable_notification_access_subtext">Please give BaldPhone access to notification.</string>
+    <string name="enter">Enter</string>
+    <string name="enter_contact_or_phone_number">Enter contact name:</string>
+    <string name="evening">Evening</string>
+    <string name="example">Example</string>
+    <string name="example_of_different_text_sizes">Example of different text sizes\nShould be readable and not to overflow.</string>
+    <string name="external_storage_subtext">This permission is required in order to save pictures.</string>
+    <string name="favorites">Favorites</string>
+    <string name="feedback">Send Feedback</string>
+    <string name="feedback_cannot_be_empty">Feedback cannot be empty!</string>
+    <string name="feedback_sent_successfully">Feedback sent successfully!</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Please select the level of accessibility</string>
+    <string name="font">Font</string>
+    <string name="font_subtext">Choose font size for the entire phone.\nMay need to restart device to see changes</string>
+    <string name="friday">Friday</string>
+    <string name="go_through_tutorial">Tutorial</string>
+    <string name="google">Google</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Have hard time using the phone\'s keyboard? use Baldphone\'s BIG keyboard instead</string>
+    <string name="hebrew">0</string>
+    <string name="hello">Hello</string>
+    <string name="help">Video Tutorial</string>
+    <string name="hide">Hide</string>
+    <string name="high_level">High Level</string>
+    <string name="home">Home</string>
+    <string name="home_phone_number">Home phone number</string>
+    <string name="hour">Hour</string>
+    <string name="how_can_i_help">How can I help?</string>
+    <string name="huge">Huge</string>
+    <string name="in_x_days">In ? days</string>
+    <string name="internet">Internet</string>
+    <string name="invoked_in">Invoked in:</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">One last thing\nIt\'s highly recommended to use Baldphone\'s home screen as the default home launcher</string>
+    <string name="language">language</string>
+    <string name="language_settings">Language</string>
+    <string name="large">Large</string>
+    <string name="last_update_subtext">Hi\nBaldPhone was updated.\npills now work differently.\nall of your pills were removed, you can add them again in the pills page.\n sorry for the inconvenient</string>
+    <string name="left">Left</string>
+    <string name="left_handed">Left Handed</string>
+    <string name="light">Light</string>
+    <string name="location">Location</string>
+    <string name="long_presses">Long Presses</string>
+    <string name="long_presses_subtext">Choose if you want to use long presses or regular ones.\Long presses are recommended if hands are shaking.\nWhen choosing long presses Vibration Feedback and Arrows Swiping should be on too.</string>
+    <string name="magen_david_adom">Magen David Adom</string>
+    <string name="mail">Mail</string>
+    <string name="manual">Manual</string>
+    <string name="maps">Maps</string>
+
+
+    <string name="medium">Medium</string>
+    <string name="medium_level">Medium Level</string>
+    <string name="message">Message</string>
+    <string name="messages">Messages</string>
+    <string name="minute">Minute</string>
+    <string name="minutes">Minutes</string>
+    <string name="missed">Missed</string>
+    <string name="mobile">Mobile</string>
+
+    <string name="mobile_phone_number">Mobile phone number</string>
+    <string name="monday">Monday</string>
+    <string name="more">more</string>
+    <string name="morning">Morning</string>
+    <string name="name">Name</string>
+    <string name="named__">named  </string>
+    <string name="new_alarm___was_created">new alarm %s was created!</string>
+    <string name="next">Next</string>
+    <string name="nfc">NFC</string>
+    <string name="no">No</string>
+    <string name="no_contact_contains___">no contact contain %s!</string>
+    <string name="not_a_real_time">not a real time!</string>
+    <string name="notes">Notes</string>
+    <string name="notes_settings">Notes</string>
+    <string name="notes_settings_subtext">Choose if you want to have a Note page in the home screen.</string>
+    <string name="notifications">Notifications</string>
+
+    <string name="of">of</string>
+    <string name="off">Off</string>
+    <string name="ok">OK</string>
+    <string name="on">On</string>
+
+    <string name="only_once">Only once</string>
+
+
+    <string name="open">Open</string>
+    <string name="opening___">Opening %s</string>
+
+    <string name="outgoing">Outgoing</string>
+    <string name="page">Page</string>//page 1 of 2
+    <string name="page_transitions">Page Transitions</string>
+    <string name="permissions_part">Permissions</string>
+    <string name="personalization_settings">Personalization</string>
+    <string name="phone">Phone</string>
+    <string name="phone_ask_permission_subtext"><![CDATA[Please go to settings -> permissions -> enable call permission]]></string>
+    <string name="photo">Photo</string>
+    <string name="photos">Photos</string>
+    <string name="pill_added">Pill added!</string>
+    <string name="pill_name">Pill Name</string>
+    <string name="pills">Pills</string>
+    <string name="pin_contact_to_home_screen">Pin Contact To Home Screen</string>
+    <string name="please_allow_baldphone_to_change_phone_settings">please allow BaldPhone to change Phone Settings!</string>
+    <string name="please_repeat_that">Couldn\'t understand, please repeat.</string>
+    <string name="press_longer">Press Longer!</string>
+    <string name="press_me_and_start_talking">Press me and start talking</string>
+    <string name="preview">Preview</string>
+    <string name="previous">Previous</string>
+    <string name="quick_alarm">Timer</string>
+    <string name="read_call_log">Read Call History</string>
+    <string name="read_call_log_subtext">This permission is required in order to view the call history.</string>
+    <string name="read_contacts">Read contacts</string>
+    <string name="received">Received</string>
+    <string name="recent">Recent</string>
+    <string name="regular_level">Regular level</string>
+    <string name="regular_presses">Regular Presses</string>
+    <string name="regular_swiping">Regular Swiping</string>
+    <string name="remind_me">Remind Me</string>
+
+    <string name="reminder_repeats_every">Reminder reminds every</string>
+    <string name="remove_from_favorite">Remove from Favorite</string>
+    <string name="remove_from_home">Remove from Home</string>
+    <string name="remove_from_sos">Remove from SOS</string>
+    <string name="remove_shortcut">Remove shortcut</string>
+    <string name="removed_all_alarms">Removed all alarms!</string>
+    <string name="repeats_every_day">Every day</string>
+    <string name="right">Right</string>
+    <string name="right_handed">Right Handed</string>
+
+    <string name="ringtone">Ringtone</string>
+    <string name="saturday">Saturday</string>
+    <string name="save">save</string>
+    <string name="selected">Selected</string>
+    <string name="send">Send</string>
+    <string name="set_default_dialer">Set Default Calling App</string>
+    <string name="set_default_dialer_subtext">BaldPhone needs to be marked as the default calling app.</string>
+    <string name="set_home_screen">Set Home Screen</string>
+    <string name="set_home_screen_subtext">In order to use BaldPhone, you should set it as home screen.\nIt is reversible and can be changed in the settings.</string>
+    <string name="set_keyboard">Set keyboard</string>
+    <string name="setting_does_not_exist">Setting Does Not Exist</string>
+    <string name="settings">Settings</string>
+    <string name="settings_permission">Settings Permission</string>
+    <string name="share">Share</string>
+    <string name="share_actual_text">Hi, i\'m using this platform named "BaldPhone" which replaces the phone\'s interface to a big, simple and friendlier one.\nInterested?\nYou can download it for free!\ncheck out the links bellow:\n\nWebsite:\nhttps://sites.google.com/view/baldphone/home\n\nDownload link:\nhttps://play.google.com/store/apps/details?id=com.bald.uriah.baldphone</string>
+    <string name="share_bald_phone_subtext">Hello There,\nknow anyone which may want to know about BaldPhone?\nyou can share it with him.</string>
+    <string name="share_baldphone">Share BaldPhone</string>
+    <string name="share_contact">Share Contact</string>
+    <string name="share_differently">Share Via Other App</string>
+    <string name="share_via_whatsapp">Share Via Whatsapp</string>
+    <string name="shift">shift</string>
+    <string name="should_contain_one_">should contain one \":\"</string>
+    <string name="show">Show</string>
+    <string name="small">Small</string>
+    <string name="snooze">Snooze</string>
+    <string name="sos">SOS</string>
+    <string name="sos_is_full">SOS is full!</string>
+    <string name="sos_is_full_subtext">SOS is full! please remove other sos contacts before adding another one</string>
+    <string name="speak">Speak</string>
+    <string name="speech_to_text">Speech to Text</string>
+    <string name="strong_hand">Strong Hand</string>
+    <string name="strong_hand_subtext">choose your strong hand.\nwill change layout according to it</string>
+    <string name="submit">submit</string>
+    <string name="sunday">Sunday</string>
+    <string name="teal">Teal</string>
+    <string name="technical_information">Technical Information</string>
+    <string name="theme_settings">Theme</string>
+    <string name="theme_settings_subtext">Choose a theme</string>
+
+    <string name="thursday">Thursday</string>
+    <string name="time_changer">Pills Time Changer</string>
+    <string name="tiny">Tiny</string>
+    <string name="to___days_and___hours_from_now">to %d days and %d hours from now</string>
+    <string name="to___hours_and___minutes_from_now">to %d hours and %d minutes from now</string>
+    <string name="to___minuets_from_now">to %d minutes from now</string>
+    <string name="today">Today</string>
+    <string name="too_many_apps_with___in_them">too many apps with %s in them!</string>
+    <string name="too_many_contacts_with___in_them">too many contacts with %s in them!</string>
+    <string name="took">Took!</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="unable_to_init_flashlight">Unable to initialize flashlight!</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="uninstall_subtext">Are you sure you want to uninstall %s?\n%s\'s data will be gone forever!</string>
+    <string name="up">Up</string>
+    <string name="vibrating_feedback">Vibrating Feedback</string>
+    <string name="vibrating_feedback_subtext">Choose if you want to get a short viberation feedback after every click\nrecommended when using long presses!</string>
+    <string name="video">Video</string>
+    <string name="video_tutorials">Video Tutorials</string>
+    <string name="videos">Videos</string>
+
+    <string name="voice_mail">Voice Mail</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="wifi">Wifi</string>
+    <string name="will_repeat_only_once">will repeat only once!</string>
+    <string name="work">Work</string>
+    <string name="write">Write</string>
+    <string name="write_contacts">Write Contacts</string>
+    <string name="write_external_storage">Write external storage</string>
+    <string name="yes">Yes</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="you_are_entering_baldphone">Entering BaldPhone</string>
+    <string name="you_are_leaving_baldphone">Exiting BaldPhone</string>
+    <string name="nothing">Nothing</string>
+    <string name="no_contacts_found">No Contacts Found!</string>
+    <string name="no_alarms">No Alarms\nCreate one by clicking\n\"Add Alarm\"\nOr\n\"Add Timer\"</string>
+    <string name="no_pills">No Pills\nCreate one by clicking\n\"Add Pill\"</string>
+    <string name="clear_all_notifications">Clear All Notifications</string>
+    <string name="clear_cache_subtext">Are you sure you want to delete all cache?\nApps shortcuts will be removed too!</string>
+    <string name="permissions_calm">Hi, BaldPhone must have the following permissions in order to run. some of them sound scary, but it is the only way BaldPhone can replace the phone\'s interface. No data is taken and it causes no harm. press OK to grant the permissions or no to exit BaldPhone.</string>
+    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com</string>
+    <string name="recent_last_words">Following Google\'s new privacy policy change, sadly, Recent Calls has to be removed.\nI\'m sure this is a mistake and hopefully google will change their decision in the future.</string>
+
+
+    <bool name="is_right_to_left">false</bool>
+
+
+
+    <string-array name="words_for_call" tools:ignore="InconsistentArrays">
+        <item>call</item>
+        <item>dial</item>
+        <item>ring</item>
+        <item>telephone</item>
+        <item>phone</item>
+    </string-array>
+    <string-array name="words_for_open">
+        <item>open</item>
+        <item>start</item>
+        <item>run</item>
+    </string-array>
+
+
+    <string-array name="names">
+        <item>Dani Konigstein</item>
+        <item>My Family</item>
+        <item>Ido Sharon</item>
+        <item>Nadav Shalev</item>
+        <item>Yooda Or</item>
+        <item>Shaked Aley-Raz</item>
+        <item>Edo Avidan</item>
+        <item>Ronnie Gilboa</item>
+        <item>Ido Heinemann</item>
+        <item>Shay Gadot</item>
+    </string-array>
+    <string-array name="tasks">
+        <item>Being the Inspiration of BaldPhone</item>
+        <item>help and support throughout the entire process</item>
+        <item>Being the longest and most helpful tester, Graphics Consultant</item>
+        <item>The awesome logo</item>
+        <item>Mentor</item>
+        <item>Graphics Consultant</item>
+        <item>Graphics Consultant</item>
+        <item>Tester</item>
+        <item>Tester</item>
+        <item>Tester</item>
+
+    </string-array>
+</resources>

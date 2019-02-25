@@ -1,0 +1,195 @@
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<resources>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">?bald_background</item>
+        <item name="bald_button_gold">@color/gold</item>
+        <item name="bald_text_on_gold">@color/on_gold</item>
+
+
+        <item name="colorAccent">#fff</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen.Transparent" parent="Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    <style name="bald_light" parent="Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <item name="bald_key_margin">@dimen/bald_key_margin</item>
+        <item name="bald_background">@color/bald_background_light</item>
+        <item name="bald_background_transparent">@color/bald_background_transparent_light</item>
+        <item name="bald_button">@color/bald_button_light</item>
+        <item name="bald_button_clicked">@color/bald_button_clicked_light</item>
+        <item name="bald_button_corners_radius">@dimen/bald_button_corners_radius_light</item>
+        <item name="bald_button_disabled">@color/bald_button_disabled_light</item>
+        <item name="bald_button_pill_corners_radius">@dimen/bald_button_pill_corners_radius_light
+        </item>
+        <item name="bald_decoration_on_background">@color/bald_decoration_on_background_light</item>
+        <item name="bald_decoration_on_button">@color/bald_decoration_on_button_light</item>
+        <item name="bald_decoration_on_key">@color/bald_decoration_on_key_light</item>
+        <item name="bald_hint_on_background">@color/bald_hint_on_background_light</item>
+        <item name="bald_hint_on_button">@color/bald_hint_on_button_light</item>
+        <item name="bald_selected_on_background">@color/bald_selected_on_background_light</item>
+        <item name="bald_text_on_selected">@color/bald_text_on_selected_light</item>
+        <item name="bald_stroke_color">@color/bald_stroke_color_light</item>
+        <item name="bald_keyboard_key_background">@color/bald_keyboard_key_background_light</item>
+        <item name="bald_keyboard_key_pressed_background">
+            @color/bald_keyboard_key_pressed_background_light
+        </item>
+        <item name="bald_stroke_size">@dimen/bald_stroke_size_light</item>
+        <item name="bald_text_on_background">@color/bald_text_on_background_light</item>
+        <item name="bald_text_on_button">@color/bald_text_on_button_light</item>
+        <item name="bald_text_on_key">@color/bald_text_on_key_light</item>
+    </style>
+
+    <!--Another Theme to add in the future, right now it looks bad.-->
+    <style name="bald_skin" parent="Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <item name="bald_key_margin">@dimen/bald_key_margin</item>
+        <item name="bald_background">@color/bald_background_skin</item>
+        <item name="bald_background_transparent">@color/bald_background_transparent_skin</item>
+        <item name="bald_button">@color/bald_button_skin</item>
+        <item name="bald_button_clicked">@color/bald_button_clicked_skin</item>
+        <item name="bald_button_corners_radius">@dimen/bald_button_corners_radius_skin</item>
+        <item name="bald_button_disabled">@color/bald_button_disabled_skin</item>
+        <item name="bald_button_pill_corners_radius">@dimen/bald_button_pill_corners_radius_skin
+        </item>
+        <item name="bald_decoration_on_background">@color/bald_decoration_on_background_skin</item>
+        <item name="bald_decoration_on_button">@color/bald_decoration_on_button_skin</item>
+        <item name="bald_decoration_on_key">@color/bald_decoration_on_key_skin</item>
+        <item name="bald_hint_on_background">@color/bald_hint_on_background_skin</item>
+        <item name="bald_hint_on_button">@color/bald_hint_on_button_skin</item>
+        <item name="bald_selected_on_background">@color/bald_selected_on_background_skin</item>
+        <item name="bald_text_on_selected">@color/bald_text_on_selected_skin</item>
+        <item name="bald_stroke_color">@color/bald_stroke_color_skin</item>
+        <item name="bald_keyboard_key_background">@color/bald_keyboard_key_background_skin</item>
+        <item name="bald_stroke_size">@dimen/bald_stroke_size_skin</item>
+        <item name="bald_text_on_background">@color/bald_text_on_background_skin</item>
+        <item name="bald_text_on_button">@color/bald_text_on_button_skin</item>
+        <item name="bald_text_on_key">@color/bald_text_on_key_skin</item>
+    </style>
+
+
+    <style name="bald_dark" parent="Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <item name="bald_key_margin">@dimen/bald_key_margin</item>
+        <item name="bald_background">@color/bald_background_dark</item>
+        <item name="bald_background_transparent">@color/bald_background_transparent_dark</item>
+        <item name="bald_button">@color/bald_button_dark</item>
+        <item name="bald_button_clicked">@color/bald_button_clicked_dark</item>
+        <item name="bald_button_corners_radius">@dimen/bald_button_corners_radius_dark</item>
+        <item name="bald_button_disabled">@color/bald_button_disabled_dark</item>
+        <item name="bald_button_pill_corners_radius">@dimen/bald_button_pill_corners_radius_dark
+        </item>
+        <item name="bald_decoration_on_background">@color/bald_decoration_on_background_dark</item>
+        <item name="bald_decoration_on_button">@color/bald_decoration_on_button_dark</item>
+        <item name="bald_decoration_on_key">@color/bald_decoration_on_key_dark</item>
+        <item name="bald_hint_on_background">@color/bald_hint_on_background_dark</item>
+        <item name="bald_hint_on_button">@color/bald_hint_on_button_dark</item>
+        <item name="bald_selected_on_background">@color/bald_selected_on_background_dark</item>
+        <item name="bald_text_on_selected">@color/bald_text_on_selected_dark</item>
+        <item name="bald_keyboard_key_pressed_background">
+            @color/bald_keyboard_key_pressed_background_dark
+        </item>
+        <item name="bald_stroke_color">@color/bald_stroke_color_dark</item>
+        <item name="bald_keyboard_key_background">@color/bald_keyboard_key_background_dark</item>
+        <item name="bald_stroke_size">@dimen/bald_stroke_size_dark</item>
+        <item name="bald_text_on_background">@color/bald_text_on_background_dark</item>
+        <item name="bald_text_on_button">@color/bald_text_on_button_dark</item>
+        <item name="bald_text_on_key">@color/bald_text_on_key_dark</item>
+    </style>
+
+
+    <style name="ScrollStyle">
+        <item name="android:fadingEdgeLength">@dimen/transparent_length_in_scrollers</item>
+        <item name="android:requiresFadingEdge">vertical</item>
+    </style>
+
+    <style name="FabStyle">
+        <item name="android:elevation">12dp</item>
+    </style>
+
+    <style name="EditText" parent="BackgroundText.Large">
+        <item name="android:textColorHint">?attr/bald_hint_on_background</item>
+    </style>
+
+    <style name="BackgroundText">
+        <item name="android:textSize">@dimen/small</item>
+        <item name="android:textColor">?attr/bald_text_on_background</item>
+    </style>
+
+    <style name="BackgroundText.Medium">
+        <item name="android:textSize">@dimen/medium</item>
+    </style>
+
+    <style name="BackgroundText.Large">
+        <item name="android:textSize">@dimen/large</item>
+    </style>
+
+    <style name="BackgroundText.Huge">
+        <item name="android:textSize">@dimen/huge</item>
+    </style>
+
+    <style name="BackgroundText.Auto">
+        <item name="autoSizeTextType">uniform</item>
+    </style>
+
+    <style name="BackgroundText.Tiny">
+        <item name="android:textSize">@dimen/tiny</item>
+    </style>
+
+    <style name="ButtonsText">
+        <item name="android:textSize">@dimen/small</item>
+        <item name="android:textColor">?attr/bald_text_on_button</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ButtonsText.Medium">
+        <item name="android:textSize">@dimen/medium</item>
+    </style>
+
+    <style name="ButtonsText.Large">
+        <item name="android:textSize">@dimen/large</item>
+    </style>
+
+    <style name="ButtonsText.Huge">
+        <item name="android:textSize">@dimen/huge</item>
+    </style>
+
+    <style name="ButtonsText.Tiny">
+        <item name="android:textSize">@dimen/tiny</item>
+    </style>
+
+    <style name="ButtonsText.Auto">
+        <item name="autoSizeTextType">uniform</item>
+
+    </style>
+
+</resources>

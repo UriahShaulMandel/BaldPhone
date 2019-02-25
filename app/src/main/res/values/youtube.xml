@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<resources>
+
+    <!--can be translatable-->
+    <string-array name="yt_links">
+        <!--DialerActivity 0 -->
+        <item>nbc0gXvOfOQ</item>
+        <!--Recent 1 -->
+        <item>ot7zy3JIJCk</item>
+        <!--SOS 2 -->
+        <item>t4cE6LnFjTk</item>
+        <!--Clock 3 -->
+        <item>KKeWTFSnqVM</item>
+        <!--Add Timer 4 -->
+        <item>Rp2EIUJkP5E</item>
+        <!--Add Alarm 5 -->
+        <item>jkjvwgXMzAM</item>
+        <!--Photos 6 -->
+        <item>zIcMWhw3m5A</item>
+
+    </string-array>
+
+    <array name="yt_logos">
+        <!--DialerActivity 0 -->
+        <item>@drawable/phone_on_background</item>
+        <!--Recent 1 -->
+        <item>@drawable/history_on_background</item>
+        <!--SOS 2 -->
+        <item>@drawable/emergency</item>
+        <!--Clock 3 -->
+        <item>@drawable/clock_on_background</item>
+        <!--Add Timer 4 -->
+        <item>@drawable/timer_on_background</item>
+        <!--Add Alarm 5 -->
+        <item>@drawable/alarm_on_background</item>
+        <!--Photos 6 -->
+        <item>@drawable/photo_on_background</item>
+
+
+    </array>
+
+    <array name="yt_background">
+        <!--DialerActivity 0 -->
+        <item>@drawable/home_item</item>
+        <!--Recent 1 -->
+        <item>@drawable/home_item</item>
+        <!--SOS 2 -->
+        <item>@drawable/transparent</item>
+        <!--Clock 3 -->
+        <item>@drawable/home_item_3</item>
+        <!--Add Timer 4 -->
+        <item>@drawable/home_item_3</item>
+        <!--Add Alarm 5 -->
+        <item>@drawable/home_item_3</item>
+        <!--Photos 6 -->
+        <item>@drawable/home_item_4</item>
+
+
+    </array>
+
+    <array name="yt_texts">
+        <!--DialerActivity 0 -->
+        <item>@string/dialer</item>
+        <!--Recent 1 -->
+        <item>@string/recent</item>
+        <!--SOS 2 -->
+        <item>@string/sos</item>
+        <!--Clock 3 -->
+        <item>@string/clock</item>
+        <!--Add Timer 4 -->
+        <item>@string/add_alarm_quickly</item>
+        <!--Add Alarm 5 -->
+        <item>@string/add_alarm</item>
+        <!--Photos 6 -->
+        <item>@string/photos</item>
+
+    </array>
+
+    <array name="yt_related">
+        <!--DialerActivity 0 -->
+        <item>[1,2]</item>
+        <!--Recent 1 -->
+        <item>[0,2]</item>
+        <!--SOS 2 -->
+        <item>[0,1]</item>
+        <!--Clock 3 -->
+        <item>[5,4]</item>
+        <!--Add Timer 4 -->
+        <item>[3,5]</item>
+        <!--Add Alarm 5 -->
+        <item>[3,4]</item>
+        <!--Photos 6 -->
+        <item>[0,1]</item>
+
+    </array>
+</resources>
