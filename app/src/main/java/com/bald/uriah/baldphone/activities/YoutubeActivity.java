@@ -46,7 +46,6 @@ public class YoutubeActivity extends BaldActivity implements YouTubePlayer.Playe
     private static final float VERTICAL_BIAS_BEFORE = 1f;
     private final static long ANIMATION_DURATION = D.MILLISECOND * 800;
 
-
     private Space bottom;
     private String url;
 
