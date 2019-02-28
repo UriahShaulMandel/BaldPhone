@@ -79,7 +79,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="What's new"
+        android:text="@string/what_s_new"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,9 +95,7 @@
         android:paddingStart="24dp"
 
         android:paddingEnd="24dp"
-        android:text="Added new screen: BANANA SCREEN
-Bug fixing
-"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

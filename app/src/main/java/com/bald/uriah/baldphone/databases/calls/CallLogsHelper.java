@@ -20,10 +20,14 @@
 package com.bald.uriah.baldphone.databases.calls;
 
 import android.content.ContentResolver;
+import android.database.Cursor;
+import android.net.Uri;
+import android.provider.CallLog;
+import android.provider.ContactsContract;
 
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,31 +35,27 @@ import java.util.List;
  */
 public class CallLogsHelper {
     public static List<Call> getAllCalls(ContentResolver contentResolver) {
-        return Collections.emptyList();
-
-//        try (Cursor cursor = contentResolver.query(CallLog.Calls.CONTENT_URI, Call.PROJECTION, null, null, CallLog.Calls.DATE + " DESC")) {
-//            final List<Call> calls = new ArrayList<>(cursor.getCount());
-//            while (cursor.moveToNext()) {
-//                calls.add(new Call(cursor));
-//            }
-//            return calls;
-//        } catch (SecurityException e) {
-//            throw new RuntimeException(e);
-//        }
+        try (Cursor cursor = contentResolver.query(CallLog.Calls.CONTENT_URI, Call.PROJECTION, null, null, CallLog.Calls.DATE + " DESC")) {
+            final List<Call> calls = new ArrayList<>(cursor.getCount());
+            while (cursor.moveToNext()) {
+                calls.add(new Call(cursor));
+            }
+            return calls;
+        } catch (SecurityException e) {
+            throw new RuntimeException(e);
+        }
     }
-//}
 
     public static List<Call> getForSpecificContact(ContentResolver contentResolver, Contact contact) {
-        return Collections.emptyList();
-//        final Uri contactUri = ContactsContract.Contacts.getLookupUri(contact.getId(), contact.getLookupKey());
-//        try (Cursor cursor = contentResolver.query(CallLog.Calls.CONTENT_URI, Call.PROJECTION, CallLog.Calls.CACHED_LOOKUP_URI + "=?", new String[]{contactUri.toString()}, CallLog.Calls.DATE + " DESC")) {
-//            final List<Call> calls = new ArrayList<>(cursor.getCount());
-//            while (cursor.moveToNext()) {
-//                calls.add(new Call(cursor));
-//            }
-//            return calls;
-//        } catch (SecurityException e) {
-//            throw new RuntimeException(e);
-//        }
+        final Uri contactUri = ContactsContract.Contacts.getLookupUri(contact.getId(), contact.getLookupKey());
+        try (Cursor cursor = contentResolver.query(CallLog.Calls.CONTENT_URI, Call.PROJECTION, CallLog.Calls.CACHED_LOOKUP_URI + "=?", new String[]{contactUri.toString()}, CallLog.Calls.DATE + " DESC")) {
+            final List<Call> calls = new ArrayList<>(cursor.getCount());
+            while (cursor.moveToNext()) {
+                calls.add(new Call(cursor));
+            }
+            return calls;
+        } catch (SecurityException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

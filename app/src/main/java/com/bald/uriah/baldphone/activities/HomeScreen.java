@@ -201,8 +201,6 @@ public class HomeScreen extends BaldActivity {
                     UpdatingUtil.checkForUpdates(this);
                 }
             }
-
-
     }
 
 

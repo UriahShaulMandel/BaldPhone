@@ -324,6 +324,27 @@
     <string name="recent_last_words">משתמשים יקרים,\nבעקבות שינוי תנאי השימוש של גוגל, בצער רב וביגון קודר אני נאלץ להסיר את מסך השיחות האחרונות מBaldPhone.\nm</string>
     <string name="calling">ביצוע שיחות</string>
 
+    <string name="pending_update">עדכון מחכה</string>
+    <string name="download">הורד</string>
+    <string name="install_updates">התקן עדכונים</string>
+    <string name="install_updates_subtext">אנא אפשר לBaldPhone להתקין עדכונים.</string>
+    <string name="a_new_update_is_available">עדכון חדש מחכה!\nעדכונים הם חשובים על מנת ש-BaldPhone ירוץ בצורה חלקה.\nלחץ על אוקיי על מנת להוריד</string>
+    <string name="current_version">גרסה נוכחית:\n</string>
+    <string name="new_version">גרסה חדשה:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">עדכונים חדשים מחכים להורדה</string>
+    <string name="install">התקן</string>
+    <string name="data_warning">אזהרת גלישה</string>
+    <string name="data_warning_subtext">הי, אתה לא מחובר לWIFI.\nגודל ההורדה הוא כ3MB, אם אתה בחול הורדה זו עלולה לעלות לך כסף.\nאתה רוצה להמשיך עם ההורדה?</string>
+    <string name="update_message_is_corrupted">מידע על הורדה לא תקין</string>
+    <string name="check_for_updates">בדוק עדכונים</string>
+    <string name="could_not_connect_to_server">לא מצליח להתחבר לשרת!</string>
+    <string name="could_not_connect_to_internet">לא מצליח להתחבר לאינטרנט!</string>
+    <string name="could_not_start_the_download">לא מצליח להתחיל את ההורדה!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">קבצי ההורדה הקודמים לא יכולים להימחק!</string>
+    <string name="downloading">מוריד…</string>
+    <string name="baldphone_is_up_to_date">BaldPhone כבר מעודכן!</string>
+    <string name="what_s_new">מה חדש</string>
+
 
     <string-array name="words_for_call" tools:ignore="InconsistentArrays">
         <item>להתקשר</item>

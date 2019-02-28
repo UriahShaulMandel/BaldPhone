@@ -49,13 +49,12 @@ import java.io.File;
  * On Different class than {@link UpdatesActivity} because may be exported to library in the future
  */
 public class UpdatingUtil {
-    public static final String MESSAGE_URL = "https://raw.githubusercontent.com/UriahShaulMandel/Android-Course/master/test";
-    public static final String APK_URL = "https://github.com/UriahShaulMandel/Android-Course/blob/master/app-release.apk?raw=true";
+    public static final String MESSAGE_URL = "https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/apks/last_release.txt";
+    public static final String APK_URL = "https://github.com/UriahShaulMandel/BaldPhone/blob/master/apks/app-release.apk?raw=true";
     public static final String FILENAME = "BaldPhoneUpdate.apk";
     public static final String VOLLEY_TAG = "baldphone";
     public static final String divider = "@@@";
     public static final int MESSAGE_PARTS = 3;
-
 
     @NonNull
     private static File getDownloadedFile() {
@@ -75,12 +74,24 @@ public class UpdatingUtil {
         }
     }
 
-    public static void downloadApk(final BaldActivity activity, final int versionNumber) {
+    /**
+     * @param activity
+     * @param versionNumber version number
+     * @return true if download was started;
+     */
+    public static boolean downloadApk(final UpdatesActivity activity, final int versionNumber) {
+        final DownloadManager manager = (DownloadManager) activity.getSystemService(Context.DOWNLOAD_SERVICE);
+        if (manager == null)
+            return false;
+
+        BaldToast.from(activity)
+                .setText(R.string.downloading)
+                .show();
         deleteCurrentUpdateFile(activity);
         final DownloadManager.Request request =
                 new DownloadManager.Request(Uri.parse(APK_URL))
                         .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, FILENAME);
-        final DownloadManager manager = (DownloadManager) activity.getSystemService(Context.DOWNLOAD_SERVICE);
+
         final long id = manager.enqueue(request);
         final BroadcastReceiver downloadFinishedReceiver = new BroadcastReceiver() {
             @Override
@@ -90,6 +101,7 @@ public class UpdatingUtil {
                             .edit()
                             .putInt(BPrefs.LAST_APK_VERSION_KEY, versionNumber)
                             .apply();
+                    activity.apply();
                 }
             }
         };
@@ -100,13 +112,18 @@ public class UpdatingUtil {
                 activity.unregisterReceiver(downloadFinishedReceiver);
             }
         });
+        return true;
     }
 
-    private static boolean isMessageOk(String message) {
+    public static boolean isMessageOk(String message) {
         if (message == null || message.length() == 0 || !message.contains(divider))
             return false;
         final String[] arr = message.split(divider);
-        return arr.length == MESSAGE_PARTS && android.text.TextUtils.isDigitsOnly(arr[0]);
+        return isMessageOk(arr);
+    }
+
+    public static boolean isMessageOk(String[] message) {
+        return message.length >= MESSAGE_PARTS && android.text.TextUtils.isDigitsOnly(message[0]);
     }
 
     private static boolean isOnline(Context context) {
@@ -169,6 +186,11 @@ public class UpdatingUtil {
                                                 return true;
                                             })
                                             .show();
+                                } else {
+                                    BaldToast
+                                            .from(activity)
+                                            .setText(R.string.baldphone_is_up_to_date)
+                                            .show();
                                 }
                             } else {
                                 BaldToast.from(activity)
@@ -193,15 +215,16 @@ public class UpdatingUtil {
     public static void install(final BaldActivity activity) {
         final File downloadedFile = getDownloadedFile();
         final Uri apkUri = S.fileToUriCompat(downloadedFile, activity);
+        final Intent intent;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            activity.startActivity(new Intent(Intent.ACTION_INSTALL_PACKAGE)
+            intent = new Intent(Intent.ACTION_INSTALL_PACKAGE)
                     .setData(apkUri)
-                    .setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION));
+                    .setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         } else {
-            activity.startActivity(new Intent(Intent.ACTION_VIEW)
+            intent = new Intent(Intent.ACTION_VIEW)
                     .setDataAndType(apkUri, "application/vnd.android.package-archive")
-                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         }
+        activity.startActivity(intent);
     }
-
 }

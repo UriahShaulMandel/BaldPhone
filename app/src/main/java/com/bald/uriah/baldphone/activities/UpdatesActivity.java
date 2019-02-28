@@ -21,6 +21,7 @@ package com.bald.uriah.baldphone.activities;
 
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.Nullable;
@@ -31,57 +32,92 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BDB;
 import com.bald.uriah.baldphone.utils.BDialog;
 import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.UpdatingUtil;
 
 import java.io.File;
 
 public class UpdatesActivity extends BaldActivity {
     public static final String EXTRA_MESSAGE = "EXTRA_MESSAGE";
+    private String[] message;
+    private BaldToast notConnected, couldNotStartDownload;
+    private TextView tv_new_version, tv_current_version, tv_change_log, bt;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update);
+        message = getIntent().getStringArrayExtra(EXTRA_MESSAGE);
+        if (!UpdatingUtil.isMessageOk(message)) {
+            BaldToast.error(this);
+            finish();
+            return;
+        }
 
-        final String[] message = getIntent().getStringArrayExtra(EXTRA_MESSAGE);
-        findViewById(R.id.tv_current_version);
+        tv_new_version = findViewById(R.id.tv_new_version);
+        tv_current_version = findViewById(R.id.tv_current_version);
+        tv_change_log = findViewById(R.id.tv_change_log);
+        bt = findViewById(R.id.bt);
 
-        ((TextView) findViewById(R.id.tv_new_version)).append(message[1]);
-        ((TextView) findViewById(R.id.tv_current_version)).append(BuildConfig.VERSION_NAME);
-        ((TextView) findViewById(R.id.tv_change_log)).setText(message[2]);
+        notConnected = BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.could_not_connect_to_internet).build();
+        couldNotStartDownload = BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.could_not_start_the_download).build();
+
+        apply();
+    }
+
+    public void apply() {
+        if (isDestroyed())
+            return;
+        tv_new_version.setText(String.format("%s%s", getString(R.string.new_version), message[1]));
+        tv_current_version.setText(String.format("%s%s", getString(R.string.current_version), BuildConfig.VERSION_NAME));
+        tv_change_log.setText(message[2]);
 
         final SharedPreferences sharedPreferences = BPrefs.get(this);
         final int downloadedVersion = sharedPreferences.getInt(BPrefs.LAST_APK_VERSION_KEY, -1);
         final int newVersion = Integer.parseInt(message[0]);
-        final TextView bt = findViewById(R.id.bt);
+
         if (downloadedVersion == newVersion && new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), UpdatingUtil.FILENAME).exists()) {
             bt.setOnClickListener(v -> UpdatingUtil.install(this));
             bt.setText(R.string.install);
         } else {
             bt.setOnClickListener(v -> {
-                if (((ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE))
-                        .getNetworkInfo(ConnectivityManager.TYPE_WIFI)
-                        .isConnected()) {
-                    UpdatingUtil.downloadApk(this, newVersion);
-
-
+                final ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+                if (connectivityManager != null) {
+                    final NetworkInfo networkInfo = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+                    if (networkInfo != null) {
+                        if (networkInfo.isConnected()) {
+                            onDownloadButtonClick(newVersion);
+                        } else {
+                            BDB.from(this)
+                                    .setTitle(R.string.data_warning)
+                                    .setSubText(R.string.data_warning_subtext)
+                                    .setDialogState(BDialog.DialogState.YES_CANCEL)
+                                    .setCancelable(true)
+                                    .setPositiveButtonListener(params -> {
+                                        onDownloadButtonClick(newVersion);
+                                        return true;
+                                    })
+                                    .show();
+                        }
+                    } else {
+                        notConnected.show();
+                    }
                 } else {
-                    BDB.from(this)
-                            .setTitle(R.string.data_warning)
-                            .setSubText(R.string.data_warning_subtext)
-                            .setDialogState(BDialog.DialogState.YES_CANCEL)
-                            .setCancelable(true)
-                            .setPositiveButtonListener(params -> {
-                                UpdatingUtil.downloadApk(this, newVersion);
-
-                                return true;
-                            })
-                            .show();
+                    notConnected.show();
                 }
             });
         }
     }
 
+    private void onDownloadButtonClick(final int newVersion) {
+        if (UpdatingUtil.downloadApk(this, newVersion)) {
+            bt.setText(R.string.downloading);
+            bt.setOnClickListener(D.EMPTY_CLICK_LISTENER);
+        } else {
+            couldNotStartDownload.show();
+        }
+    }
 
     @Override
     protected int requiredPermissions() {
