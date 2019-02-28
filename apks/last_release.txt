@@ -1,1 +1,1 @@
-52@@@10.0.5@@@First update, good luck to me:))
+55@@@11.0.0@@@First release that should work with updates
