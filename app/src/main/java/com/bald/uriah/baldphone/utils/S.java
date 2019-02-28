@@ -30,6 +30,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Build;
 import android.support.annotation.ArrayRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -42,10 +44,12 @@ import android.view.inputmethod.InputMethodManager;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.contacts.ShareActivity;
+import com.bald.uriah.baldphone.content_providers.BaldFileProvider;
 
 import org.joda.time.DateTime;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
@@ -241,4 +245,12 @@ public class S {
                 .setBaldActivityToAutoDismiss(baldActivity)
                 .show();
     }
+
+    public static Uri fileToUriCompat(final File file, final Context context) {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.N ?
+                BaldFileProvider.getUriForFile(context, context.getString(R.string.authorities), file)
+                :
+                Uri.fromFile(file);
+    }
+
 }

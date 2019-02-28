@@ -21,6 +21,7 @@ package com.bald.uriah.baldphone.activities;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
@@ -51,6 +52,7 @@ import static android.Manifest.permission.READ_CONTACTS;
 import static android.Manifest.permission.WRITE_CONTACTS;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
+import static android.provider.Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES;
 
 public class PermissionActivity extends BaldActivity {
     private List<PermissionItem> permissionItemList = new ArrayList<>();
@@ -61,7 +63,7 @@ public class PermissionActivity extends BaldActivity {
             EXTRA_INTENT = "EXTRA_INTENT";
 
 
-    public static final int[] REQUEST_CODES = {789, 788};
+    public static final int[] REQUEST_CODES = {789, 788, 787};
     private int requiredPermissions;
     private String name;
     private Intent ancestorCallingIntent;
@@ -165,17 +167,25 @@ public class PermissionActivity extends BaldActivity {
                     permissionItemList.add(
                             new SimplePermissionItem(CALL_PHONE, getString(R.string.calling), getString(R.string.call_subtext)));
             }
-//            if ((requiredPermissions & PERMISSION_READ_CALL_LOG) != 0) {
-//                if (ActivityCompat.checkSelfPermission(this, READ_CALL_LOG) != PERMISSION_GRANTED)
-//                    permissionItemList.add(
-//                            new SimplePermissionItem(READ_CALL_LOG, getString(R.string.read_call_log), getString(R.string.read_call_log_subtext)));
-//            }
+            if ((requiredPermissions & PERMISSION_READ_CALL_LOG) != 0) {
+                if (ActivityCompat.checkSelfPermission(this, READ_CALL_LOG) != PERMISSION_GRANTED)
+                    permissionItemList.add(
+                            new SimplePermissionItem(READ_CALL_LOG, getString(R.string.read_call_log), getString(R.string.read_call_log_subtext)));
+            }
 
         }
         if ((requiredPermissions & PERMISSION_CAMERA) != 0) {
             if (ActivityCompat.checkSelfPermission(this, CAMERA) != PERMISSION_GRANTED)
                 permissionItemList.add(
                         new SimplePermissionItem(CAMERA, getString(R.string.camera), getString(R.string.camera_subtext)));
+        }
+        if ((requiredPermissions & PERMISSION_REQUEST_INSTALL_PACKAGES) != 0) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                if (!getPackageManager().canRequestPackageInstalls())
+                    permissionItemList.add(
+                            new PermissionItem(v -> startActivityForResult(new Intent(
+                                    ACTION_MANAGE_UNKNOWN_APP_SOURCES).setData(Uri.parse(String.format("package:%s", getPackageName()))), REQUEST_CODES[2]), getString(R.string.install_updates), getString(R.string.install_updates_subtext)));
+            }
         }
         if ((requiredPermissions & PERMISSION_WRITE_EXTERNAL_STORAGE) != 0) {
             if (ActivityCompat.checkSelfPermission(this, WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED)

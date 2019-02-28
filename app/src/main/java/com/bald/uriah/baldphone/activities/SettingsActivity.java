@@ -59,6 +59,7 @@ import com.bald.uriah.baldphone.utils.BaldPrefsUtils;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
+import com.bald.uriah.baldphone.utils.UpdatingUtil;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 import com.bumptech.glide.Glide;
@@ -390,13 +391,18 @@ public class SettingsActivity extends BaldActivity {
                         R.drawable.tech_info_on_button)
         );
         settingsList.add(
-                new RunnableSettingsItem(R.string.share_baldphone,v-> S.shareBaldPhone(this),R.drawable.share_on_background)
+                new RunnableSettingsItem(R.string.share_baldphone, v -> S.shareBaldPhone(this), R.drawable.share_on_background)
         );
 
         settingsList.add(
                 new RunnableSettingsItem(R.string.feedback,
                         v -> startActivity(new Intent(this, FeedbackActivity.class)),
                         R.drawable.feedback_on_button)
+        );
+        settingsList.add(
+                new RunnableSettingsItem(R.string.check_for_updates,
+                        v -> UpdatingUtil.checkForUpdates(this),
+                        R.drawable.updates_on_button)
         );
 
     }

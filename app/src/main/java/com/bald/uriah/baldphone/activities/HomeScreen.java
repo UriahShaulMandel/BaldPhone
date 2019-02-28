@@ -63,6 +63,7 @@ import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.PageTransformers;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.utils.Toggeler;
+import com.bald.uriah.baldphone.utils.UpdatingUtil;
 import com.bald.uriah.baldphone.views.BaldImageButton;
 import com.bald.uriah.baldphone.views.BatteryView;
 import com.bald.uriah.baldphone.views.ViewPagerHolder;
@@ -195,7 +196,13 @@ public class HomeScreen extends BaldActivity {
             } else if (percent > 99 && Math.random() < 0.2) {
                 onStartCounter = 0;
                 S.shareBaldPhone(this);
+            } else if (percent > 95) {
+                if (sharedPreferences.getLong(BPrefs.LAST_UPDATE_ASKED_VERSION_KEY, 0) + 2 * D.DAY < System.currentTimeMillis()) {
+                    UpdatingUtil.checkForUpdates(this);
+                }
             }
+
+
     }
 
 

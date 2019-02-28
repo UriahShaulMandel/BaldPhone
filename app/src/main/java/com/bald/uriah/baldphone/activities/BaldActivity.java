@@ -35,7 +35,6 @@ import android.support.annotation.Nullable;
 import android.support.annotation.StyleRes;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.telecom.TelecomManager;
 import android.util.Log;
 import android.view.View;
 
@@ -51,7 +50,6 @@ import com.crashlytics.android.Crashlytics;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -228,7 +226,8 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
             PERMISSION_READ_CALL_LOG = 0b100000 | PERMISSION_DEFAULT_PHONE_HANDLER,
             PERMISSION_CAMERA = 0b1000000,
             PERMISSION_WRITE_EXTERNAL_STORAGE = 0b10000000,
-            PERMISSION_NOTIFICATION_LISTENER = 0b100000000 | PERMISSION_WRITE_SETTINGS;
+            PERMISSION_NOTIFICATION_LISTENER = 0b100000000 | PERMISSION_WRITE_SETTINGS,
+            PERMISSION_REQUEST_INSTALL_PACKAGES = 0b1000000000;
 
     /**
      * @return true if all permissions are granted.
@@ -262,10 +261,10 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
             if (ActivityCompat.checkSelfPermission(activity, CALL_PHONE) != PERMISSION_GRANTED)
                 return false;
         }
-//        if ((requiredPermissions & PERMISSION_READ_CALL_LOG) != 0) {
-//            if (ActivityCompat.checkSelfPermission(activity, READ_CALL_LOG) != PERMISSION_GRANTED)
-//                return false;
-//        }
+        if ((requiredPermissions & PERMISSION_READ_CALL_LOG) != 0) {
+            if (ActivityCompat.checkSelfPermission(activity, READ_CALL_LOG) != PERMISSION_GRANTED)
+                return false;
+        }
         if ((requiredPermissions & PERMISSION_CAMERA) != 0) {
             if (ActivityCompat.checkSelfPermission(activity, CAMERA) != PERMISSION_GRANTED)
                 return false;
@@ -273,6 +272,11 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
         if ((requiredPermissions & PERMISSION_WRITE_EXTERNAL_STORAGE) != 0) {
             if (ActivityCompat.checkSelfPermission(activity, WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED)
                 return false;
+        }
+        if ((requiredPermissions & PERMISSION_REQUEST_INSTALL_PACKAGES) != 0) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && !activity.getPackageManager().canRequestPackageInstalls()) {
+                return false;
+            }
         }
         return true;
     }

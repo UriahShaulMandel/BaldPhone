@@ -336,6 +336,21 @@
     <string name="permissions_calm">Hi, BaldPhone must have the following permissions in order to run. some of them sound scary, but it is the only way BaldPhone can replace the phone\'s interface. No data is taken and it causes no harm. press OK to grant the permissions or no to exit BaldPhone.</string>
     <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com</string>
     <string name="recent_last_words">Following Google\'s new privacy policy change, sadly, Recent Calls has to be removed.\nI\'m sure this is a mistake and hopefully google will change their decision in the future.</string>
+    <string name="pending_update">Pending Update</string>
+    <string name="download">Download</string>
+    <string name="install_updates">Install Updates</string>
+    <string name="install_updates_subtext">This Permission is required in order to update BaldPhone</string>
+    <string name="a_new_update_is_available">A new update is available!\nUpdates are important to keep BaldPhone running smoothly.\nPress OK to download</string>
+    <string name="current_version">Current Version:\n</string>
+    <string name="new_version">New Version:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">New updates are ready to be downloaded</string>
+    <string name="install">Install</string>
+    <string name="data_warning">Data Warning</string>
+    <string name="data_warning_subtext">Hi, you\'re not connected to WIFI.\nThe size of the download approximately 3MB, if you\'re abroad it may cost you money.\nDo you want to continue with the download?</string>
+    <string name="update_message_is_corrupted">Update message is corrupted</string>
+    <string name="check_for_updates">Check for updates</string>
+    <string name="could_not_connect_to_server">Could not connect to server!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">Downloaded update file could not be deleted!</string>
 
 
     <bool name="is_right_to_left">false</bool>

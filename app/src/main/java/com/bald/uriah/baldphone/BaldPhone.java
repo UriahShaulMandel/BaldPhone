@@ -26,6 +26,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Handler;
 import android.util.Log;
 
 import com.bald.uriah.baldphone.activities.CrashActivity;
@@ -35,6 +36,8 @@ import com.bald.uriah.baldphone.services.NotificationListenerService;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 
 /**
  * base application class - onBoot makes onCreate run when devices opens.
@@ -48,6 +51,7 @@ public class BaldPhone extends Application {
         super.onCreate();
         AlarmScheduler.reStartAlarms(this);
         ReminderScheduler.reStartReminders(this);
+
 
         try {
             startService(new Intent(this, NotificationListenerService.class));

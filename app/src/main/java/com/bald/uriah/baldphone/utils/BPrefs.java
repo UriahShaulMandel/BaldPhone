@@ -66,6 +66,11 @@ public final class BPrefs {
     public static final String LAST_CRASH_KEY = "LAST_CRASH_KEY";
     public static final long LAST_CRASH_TIME_OK = 20 * D.SECOND;
 
+    public static final String LAST_APK_VERSION_KEY = "LAST_APK_VERSION_KEY";
+
+    public static final String LAST_UPDATE_ASKED_VERSION_KEY = "LAST_UPDATE_ASKED_VERSION_KEY";
+
+
 
     public static final String HOUR_KEY_ = "HOUR_KEY_";
     public static final String MINUTE_KEY_ = "MINUTE_KEY_";
