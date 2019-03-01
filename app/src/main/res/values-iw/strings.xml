@@ -130,7 +130,7 @@
     <string name="evening">ערב</string>
     <string name="example">דוגמה</string>
     <string name="example_of_different_text_sizes">דוגמות לגדלי טקסט שונים ברחבי האפליקציה.\nצריכות להיות קריאות ובו בזמן לא לצאת מהתחום שלהן.</string>
-    <string name="external_storage_subtext">אנא אפשר לBaldPhone לגשת לתמונות ולסרטים</string>
+    <string name="external_storage_subtext">אנא אפשר לBaldPhone לגשת לתמונות ולסרטים ולקבצי עדכון</string>
     <string name="favorites">מועדפים</string>
     <string name="feedback">משוב</string>
     <string name="feedback_cannot_be_empty">המשוב אינו יכול להיות ריק!</string>
@@ -304,7 +304,7 @@
     <string name="work">עבודה</string>
     <string name="write">הקלד</string>
     <string name="write_contacts">יצירת אנשי קשר</string>
-    <string name="write_external_storage">גישה לתמונות וסרטים</string>
+    <string name="write_external_storage">גישה לתמונות, סרטים וקבצים אחרים</string>
     <string name="yes">כן</string>
     <string name="yesterday">אתמול</string>
     <string name="you_are_entering_baldphone">נכנס ל BaldPhone</string>
