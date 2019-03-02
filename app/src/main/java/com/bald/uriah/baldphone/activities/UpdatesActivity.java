@@ -110,6 +110,7 @@ public class UpdatesActivity extends BaldActivity {
         }
     }
 
+
     private void onDownloadButtonClick(final int newVersion) {
         if (UpdatingUtil.downloadApk(this, newVersion)) {
             bt.setText(R.string.downloading);
