@@ -354,8 +354,14 @@
     <string name="could_not_start_the_download">Could not start the download!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Downloaded update file could not be deleted!</string>
     <string name="downloading">Downloading…</string>
+
     <string name="baldphone_is_up_to_date">BaldPhone is up to date</string>
     <string name="what_s_new">What\'s new</string>
+    <string name="download_finished">Download finished!</string>
+    <string name="downloading_updates">Downloading Updates…</string>
+    <string name="installing_doesn_t_work">Installing doesn\'t work?</string>
+    <string name="try_now">Try Now</string>
+    <string name="download_progress">Download Progress</string>
 
 
     <bool name="is_right_to_left">false</bool>

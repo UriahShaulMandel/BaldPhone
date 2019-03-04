@@ -276,7 +276,7 @@ public class SettingsActivity extends BaldActivity {
                             this.recreate();
                             return true;
                         })
-                        .setOptionsStartingIndex(sharedPreferences.getInt(BPrefs.THEME_KEY, 0)), R.drawable.brush_on_button
+                        .setOptionsStartingIndex(sharedPreferences.getInt(BPrefs.THEME_KEY, BPrefs.THEME_DEFAULT_VALUE)), R.drawable.brush_on_button
 
 
         );
@@ -580,9 +580,9 @@ public class SettingsActivity extends BaldActivity {
 
             public void onStopTrackingTouch(SeekBar seekBar) {
                 Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, brightness[0]);
-                WindowManager.LayoutParams layoutpars = getWindow().getAttributes();
-                layoutpars.screenBrightness = brightness[0] / 255f;
-                getWindow().setAttributes(layoutpars);
+                final WindowManager.LayoutParams params = getWindow().getAttributes();
+                params.screenBrightness = brightness[0] / 255f;
+                getWindow().setAttributes(params);
             }
         });
 

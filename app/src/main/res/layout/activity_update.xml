@@ -19,7 +19,6 @@
 
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?bald_background">
@@ -52,9 +51,9 @@
         style="@style/BackgroundText.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/current_version"
         android:layout_marginTop="24dp"
         android:gravity="center"
+        android:text="@string/current_version"
         app:layout_constraintEnd_toStartOf="@+id/tv_new_version"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,8 +64,8 @@
         style="@style/BackgroundText.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/new_version"
         android:gravity="center"
+        android:text="@string/new_version"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tv_current_version"
@@ -79,9 +78,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/what_s_new"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
+        android:text="@string/what_s_new"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_current_version" />
@@ -93,7 +92,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:paddingStart="24dp"
-
         android:paddingEnd="24dp"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,6 +111,49 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_change_log"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.55" />
+
+    <com.bald.uriah.baldphone.views.BaldButton
+        android:id="@+id/bt_re"
+        android:visibility="gone"
+        style="@style/BackgroundText.Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/style_for_buttons_rectangle"
+        android:padding="5dp"
+        android:text="@string/installing_doesn_t_work"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:max="100"
+        android:progressTint="?bald_decoration_on_background"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/bt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_change_log" />
+
+    <TextView
+        android:id="@+id/tv_download_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/download_progress"
+        style="@style/BackgroundText"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/pb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

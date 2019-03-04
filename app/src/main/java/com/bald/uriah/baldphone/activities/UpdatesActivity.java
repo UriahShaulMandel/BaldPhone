@@ -19,12 +19,23 @@
 
 package com.bald.uriah.baldphone.activities;
 
+import android.app.DownloadManager;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bald.uriah.baldphone.BuildConfig;
@@ -34,15 +45,26 @@ import com.bald.uriah.baldphone.utils.BDialog;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.utils.UpdatingUtil;
 
 import java.io.File;
 
 public class UpdatesActivity extends BaldActivity {
     public static final String EXTRA_MESSAGE = "EXTRA_MESSAGE";
+    private static final int PROGRESS_DELAY = 200 * D.MILLISECOND;
+
     private String[] message;
+    private DownloadManager manager;
+    private long downloadId = -1;
+    private BroadcastReceiver downloadFinishedReceiver;
+    private Handler handler = new Handler();
+    private boolean isProgressCheckerRunning = false;
+
     private BaldToast notConnected, couldNotStartDownload;
-    private TextView tv_new_version, tv_current_version, tv_change_log, bt;
+    private TextView tv_new_version, tv_current_version, tv_change_log, bt, tv_download_progress, bt_re;
+    private ProgressBar pb;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,9 +77,13 @@ public class UpdatesActivity extends BaldActivity {
             return;
         }
 
+        manager = (DownloadManager) this.getSystemService(Context.DOWNLOAD_SERVICE);
         tv_new_version = findViewById(R.id.tv_new_version);
         tv_current_version = findViewById(R.id.tv_current_version);
         tv_change_log = findViewById(R.id.tv_change_log);
+        tv_download_progress = findViewById(R.id.tv_download_progress);
+        bt_re = findViewById(R.id.bt_re);
+        pb = findViewById(R.id.pb);
         bt = findViewById(R.id.bt);
 
         notConnected = BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.could_not_connect_to_internet).build();
@@ -65,6 +91,15 @@ public class UpdatesActivity extends BaldActivity {
 
         apply();
     }
+
+    @Override
+    protected void onDestroy() {
+        if (downloadFinishedReceiver != null)
+            unregisterReceiver(downloadFinishedReceiver);
+        stopProgressChecker();
+        super.onDestroy();
+    }
+
 
     public void apply() {
         if (isDestroyed())
@@ -78,9 +113,27 @@ public class UpdatesActivity extends BaldActivity {
         final int newVersion = Integer.parseInt(message[0]);
 
         if (downloadedVersion == newVersion && new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), UpdatingUtil.FILENAME).exists()) {
-            bt.setOnClickListener(v -> UpdatingUtil.install(this));
+            bt_re.setVisibility(View.VISIBLE);
+            bt_re.setOnClickListener(v -> {
+                BPrefs.get(UpdatesActivity.this)
+                        .edit()
+                        .remove(BPrefs.LAST_APK_VERSION_KEY)
+                        .apply();
+                BaldToast.from(this)
+                        .setLength(1)
+                        .setText(R.string.try_now)
+                        .setBig(true)
+                        .show();
+                bt_re.setVisibility(View.GONE);
+                bt_re.setOnClickListener(null);
+                apply();
+            });
+            bt.setOnClickListener(v -> {
+                install();
+            });
             bt.setText(R.string.install);
         } else {
+            bt.setText(R.string.download);
             bt.setOnClickListener(v -> {
                 final ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
                 if (connectivityManager != null) {
@@ -112,12 +165,126 @@ public class UpdatesActivity extends BaldActivity {
 
 
     private void onDownloadButtonClick(final int newVersion) {
-        if (UpdatingUtil.downloadApk(this, newVersion)) {
+        if (downloadApk(newVersion)) {
             bt.setText(R.string.downloading);
             bt.setOnClickListener(D.EMPTY_CLICK_LISTENER);
         } else {
             couldNotStartDownload.show();
         }
+    }
+
+    /**
+     * @param versionNumber version number
+     * @return true if download was started;
+     */
+    public boolean downloadApk(final int versionNumber) {
+
+        if (manager == null)
+            return false;
+
+        BaldToast.from(this)
+                .setText(R.string.downloading)
+                .show();
+        tv_download_progress.setVisibility(View.VISIBLE);
+        UpdatingUtil.deleteCurrentUpdateFile(this);
+        final DownloadManager.Request request =
+                new DownloadManager.Request(Uri.parse(UpdatingUtil.APK_URL))
+                        .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, UpdatingUtil.FILENAME)
+                        .setTitle(getText(R.string.downloading_updates))
+                        .setDescription(getText(R.string.downloading_updates));
+
+        downloadId = manager.enqueue(request);
+        downloadFinishedReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                if (downloadId == intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -2)) {
+                    BaldToast.from(UpdatesActivity.this)
+                            .setText(R.string.download_finished)
+                            .setLength(1)
+                            .show();
+                    pb.setVisibility(View.GONE);
+                    tv_download_progress.setVisibility(View.GONE);
+
+                    BPrefs.get(UpdatesActivity.this)
+                            .edit()
+                            .putInt(BPrefs.LAST_APK_VERSION_KEY, versionNumber)
+                            .apply();
+                    stopProgressChecker();
+                    apply();
+                }
+            }
+        };
+
+        this.registerReceiver(downloadFinishedReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+        pb.setVisibility(View.VISIBLE);
+        startProgressChecker();
+        return true;
+    }
+
+
+    private void checkProgress() {
+        final Cursor cursor = manager.query(new DownloadManager.Query()
+                .setFilterByStatus(~(DownloadManager.STATUS_FAILED | DownloadManager.STATUS_SUCCESSFUL)));
+        if (!cursor.moveToFirst()) {
+            cursor.close();
+            return;
+        }
+        do {
+            final long reference = cursor.getLong(cursor.getColumnIndex(DownloadManager.COLUMN_ID));
+            if (reference == downloadId) {
+                final long progress = cursor.getLong(cursor.getColumnIndex(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
+                final long progressMax = cursor.getLong(cursor.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES));
+                final int intProgress = (int) ((progress * 100.0) / ((double) progressMax));
+                pb.setProgress(intProgress);
+                break;
+            }
+
+
+        } while (cursor.moveToNext());
+        cursor.close();
+    }
+
+
+    private void startProgressChecker() {
+        if (!isProgressCheckerRunning) {
+            progressChecker.run();
+            isProgressCheckerRunning = true;
+        }
+    }
+
+
+    private void stopProgressChecker() {
+        handler.removeCallbacks(progressChecker);
+        isProgressCheckerRunning = false;
+    }
+
+    private final Runnable progressChecker = new Runnable() {
+        @Override
+        public void run() {
+            try {
+                checkProgress();
+            } finally {
+                handler.postDelayed(progressChecker, PROGRESS_DELAY);
+            }
+        }
+    };
+
+    public void install() {
+        final File downloadedFile = UpdatingUtil.getDownloadedFile();
+        final Uri apkUri = S.fileToUriCompat(downloadedFile, this);
+        final Intent intent;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            intent = new Intent(Intent.ACTION_INSTALL_PACKAGE)
+                    .setData(apkUri)
+                    .setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        } else {
+            intent = new Intent(Intent.ACTION_VIEW)
+                    .setDataAndType(apkUri, "application/vnd.android.package-archive")
+                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
+        this.startActivity(intent);
+
+
     }
 
     @Override

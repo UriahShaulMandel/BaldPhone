@@ -47,6 +47,8 @@ import java.io.File;
 
 /**
  * On Different class than {@link UpdatesActivity} because may be exported to library in the future
+ *
+ * It's a bit messy because maybe will be changed...
  */
 public class UpdatingUtil {
     public static final String MESSAGE_URL = "https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/apks/last_release.txt";
@@ -57,13 +59,14 @@ public class UpdatingUtil {
     public static final int MESSAGE_PARTS = 3;
 
     @NonNull
-    private static File getDownloadedFile() {
+    public static File getDownloadedFile() {
         final File downloads = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         downloads.mkdir();
         return new File(downloads.getAbsoluteFile() + "/" + FILENAME);
     }
 
-    private static void deleteCurrentUpdateFile(final BaldActivity activity) {
+
+    public static void deleteCurrentUpdateFile(final BaldActivity activity) {
         final File bp = getDownloadedFile();
         if (bp.exists()) {
             if (!bp.delete())
@@ -74,46 +77,6 @@ public class UpdatingUtil {
         }
     }
 
-    /**
-     * @param activity
-     * @param versionNumber version number
-     * @return true if download was started;
-     */
-    public static boolean downloadApk(final UpdatesActivity activity, final int versionNumber) {
-        final DownloadManager manager = (DownloadManager) activity.getSystemService(Context.DOWNLOAD_SERVICE);
-        if (manager == null)
-            return false;
-
-        BaldToast.from(activity)
-                .setText(R.string.downloading)
-                .show();
-        deleteCurrentUpdateFile(activity);
-        final DownloadManager.Request request =
-                new DownloadManager.Request(Uri.parse(APK_URL))
-                        .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, FILENAME);
-
-        final long id = manager.enqueue(request);
-        final BroadcastReceiver downloadFinishedReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                if (id == intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1)) {
-                    BPrefs.get(activity)
-                            .edit()
-                            .putInt(BPrefs.LAST_APK_VERSION_KEY, versionNumber)
-                            .apply();
-                    activity.apply();
-                }
-            }
-        };
-        activity.registerReceiver(downloadFinishedReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
-        activity.getLifecycle().addObserver(new LifecycleObserver() {
-            @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-            public void onDestroyed() {
-                activity.unregisterReceiver(downloadFinishedReceiver);
-            }
-        });
-        return true;
-    }
 
     public static boolean isMessageOk(String message) {
         if (message == null || message.length() == 0 || !message.contains(divider))
@@ -171,7 +134,7 @@ public class UpdatingUtil {
                                             .setTitle(R.string.pending_update)
                                             .setSubText(R.string.a_new_update_is_available)
                                             .setCancelable(true)
-                                            .setDialogState(BDialog.DialogState.YES_CANCEL)
+                                            .setDialogState(BDialog.DialogState.OK_CANCEL)
                                             .setPositiveButtonListener(params -> {
                                                 activity.startActivity(
                                                         new Intent(activity, UpdatesActivity.class)
@@ -212,19 +175,5 @@ public class UpdatingUtil {
         lifecycle.addObserver(observer);
     }
 
-    public static void install(final BaldActivity activity) {
-        final File downloadedFile = getDownloadedFile();
-        final Uri apkUri = S.fileToUriCompat(downloadedFile, activity);
-        final Intent intent;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            intent = new Intent(Intent.ACTION_INSTALL_PACKAGE)
-                    .setData(apkUri)
-                    .setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        } else {
-            intent = new Intent(Intent.ACTION_VIEW)
-                    .setDataAndType(apkUri, "application/vnd.android.package-archive")
-                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        }
-        activity.startActivity(intent);
-    }
+
 }
