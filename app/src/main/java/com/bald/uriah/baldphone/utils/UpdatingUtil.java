@@ -19,18 +19,13 @@
 
 package com.bald.uriah.baldphone.utils;
 
-import android.app.DownloadManager;
 import android.arch.lifecycle.Lifecycle;
 import android.arch.lifecycle.LifecycleObserver;
 import android.arch.lifecycle.OnLifecycleEvent;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 
@@ -47,8 +42,6 @@ import java.io.File;
 
 /**
  * On Different class than {@link UpdatesActivity} because may be exported to library in the future
- *
- * It's a bit messy because maybe will be changed...
  */
 public class UpdatingUtil {
     public static final String MESSAGE_URL = "https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/apks/last_release.txt";
@@ -66,18 +59,6 @@ public class UpdatingUtil {
     }
 
 
-    public static void deleteCurrentUpdateFile(final BaldActivity activity) {
-        final File bp = getDownloadedFile();
-        if (bp.exists()) {
-            if (!bp.delete())
-                BaldToast.from(activity)
-                        .setType(BaldToast.TYPE_ERROR)
-                        .setText(R.string.downloaded_update_file_could_not_be_deleted)
-                        .show();
-        }
-    }
-
-
     public static boolean isMessageOk(String message) {
         if (message == null || message.length() == 0 || !message.contains(divider))
             return false;
@@ -89,7 +70,7 @@ public class UpdatingUtil {
         return message.length >= MESSAGE_PARTS && android.text.TextUtils.isDigitsOnly(message[0]);
     }
 
-    private static boolean isOnline(Context context) {
+    public static boolean isOnline(Context context) {
         final ConnectivityManager manager =
                 (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         final NetworkInfo networkInfo;
@@ -100,12 +81,12 @@ public class UpdatingUtil {
         return false;
     }
 
-    private static boolean updatePending(@NonNull String[] message) {
+    public static boolean updatePending(@NonNull String[] message) {
         return Integer.parseInt(message[0]) > BuildConfig.VERSION_CODE;
     }
 
     public static void checkForUpdates(BaldActivity activity) {
-        if (!isOnline(activity)) {
+        if (!UpdatingUtil.isOnline(activity)) {
             BaldToast.from(activity)
                     .setType(BaldToast.TYPE_ERROR)
                     .setText(R.string.could_not_connect_to_server)
@@ -156,10 +137,7 @@ public class UpdatingUtil {
                                             .show();
                                 }
                             } else {
-                                BaldToast.from(activity)
-                                        .setType(BaldToast.TYPE_ERROR)
-                                        .setText(R.string.update_message_is_corrupted)
-                                        .show();
+                                BaldToast.from(activity).setType(BaldToast.TYPE_ERROR).setText(R.string.update_message_is_corrupted).show();
                             }
                             lifecycle.removeObserver(observer);
                         },

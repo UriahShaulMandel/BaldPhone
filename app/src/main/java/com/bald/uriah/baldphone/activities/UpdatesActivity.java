@@ -24,7 +24,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -50,6 +49,9 @@ import com.bald.uriah.baldphone.utils.UpdatingUtil;
 
 import java.io.File;
 
+import static com.bald.uriah.baldphone.utils.UpdatingUtil.getDownloadedFile;
+import static com.bald.uriah.baldphone.utils.UpdatingUtil.isMessageOk;
+
 public class UpdatesActivity extends BaldActivity {
     public static final String EXTRA_MESSAGE = "EXTRA_MESSAGE";
     private static final int PROGRESS_DELAY = 200 * D.MILLISECOND;
@@ -61,7 +63,7 @@ public class UpdatesActivity extends BaldActivity {
     private Handler handler = new Handler();
     private boolean isProgressCheckerRunning = false;
 
-    private BaldToast notConnected, couldNotStartDownload;
+    private BaldToast notConnectedToast, couldNotStartDownloadToast, downloadFinishedToast, downloadingToast, downloadedFileCouldNotBeDeletedToast, tryNowToast, pleaseBePateint;
     private TextView tv_new_version, tv_current_version, tv_change_log, bt, tv_download_progress, bt_re;
     private ProgressBar pb;
 
@@ -71,7 +73,7 @@ public class UpdatesActivity extends BaldActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update);
         message = getIntent().getStringArrayExtra(EXTRA_MESSAGE);
-        if (!UpdatingUtil.isMessageOk(message)) {
+        if (!isMessageOk(message)) {
             BaldToast.error(this);
             finish();
             return;
@@ -86,9 +88,12 @@ public class UpdatesActivity extends BaldActivity {
         pb = findViewById(R.id.pb);
         bt = findViewById(R.id.bt);
 
-        notConnected = BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.could_not_connect_to_internet).build();
-        couldNotStartDownload = BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.could_not_start_the_download).build();
-
+        notConnectedToast = BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.could_not_connect_to_internet);
+        couldNotStartDownloadToast = BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.could_not_start_the_download);
+        downloadFinishedToast = BaldToast.from(UpdatesActivity.this).setText(R.string.download_finished).setLength(1);
+        downloadingToast = BaldToast.from(this).setText(R.string.downloading);
+        downloadedFileCouldNotBeDeletedToast = BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.downloaded_update_file_could_not_be_deleted);
+        tryNowToast = BaldToast.from(this).setLength(1).setText(R.string.try_now).setBig(true);
         apply();
     }
 
@@ -108,8 +113,7 @@ public class UpdatesActivity extends BaldActivity {
         tv_current_version.setText(String.format("%s%s", getString(R.string.current_version), BuildConfig.VERSION_NAME));
         tv_change_log.setText(message[2]);
 
-        final SharedPreferences sharedPreferences = BPrefs.get(this);
-        final int downloadedVersion = sharedPreferences.getInt(BPrefs.LAST_APK_VERSION_KEY, -1);
+        final int downloadedVersion = BPrefs.get(this).getInt(BPrefs.LAST_APK_VERSION_KEY, -1);
         final int newVersion = Integer.parseInt(message[0]);
 
         if (downloadedVersion == newVersion && new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), UpdatingUtil.FILENAME).exists()) {
@@ -119,11 +123,7 @@ public class UpdatesActivity extends BaldActivity {
                         .edit()
                         .remove(BPrefs.LAST_APK_VERSION_KEY)
                         .apply();
-                BaldToast.from(this)
-                        .setLength(1)
-                        .setText(R.string.try_now)
-                        .setBig(true)
-                        .show();
+                tryNowToast.show();
                 bt_re.setVisibility(View.GONE);
                 bt_re.setOnClickListener(null);
                 apply();
@@ -154,22 +154,21 @@ public class UpdatesActivity extends BaldActivity {
                                     .show();
                         }
                     } else {
-                        notConnected.show();
+                        notConnectedToast.show();
                     }
                 } else {
-                    notConnected.show();
+                    notConnectedToast.show();
                 }
             });
         }
     }
-
 
     private void onDownloadButtonClick(final int newVersion) {
         if (downloadApk(newVersion)) {
             bt.setText(R.string.downloading);
             bt.setOnClickListener(D.EMPTY_CLICK_LISTENER);
         } else {
-            couldNotStartDownload.show();
+            couldNotStartDownloadToast.show();
         }
     }
 
@@ -178,19 +177,15 @@ public class UpdatesActivity extends BaldActivity {
      * @return true if download was started;
      */
     public boolean downloadApk(final int versionNumber) {
-
         if (manager == null)
             return false;
 
-        BaldToast.from(this)
-                .setText(R.string.downloading)
-                .show();
+        downloadingToast.show();
         tv_download_progress.setVisibility(View.VISIBLE);
-        UpdatingUtil.deleteCurrentUpdateFile(this);
+        deleteCurrentUpdateFile();
         final DownloadManager.Request request =
                 new DownloadManager.Request(Uri.parse(UpdatingUtil.APK_URL))
                         .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, UpdatingUtil.FILENAME)
-                        .setTitle(getText(R.string.downloading_updates))
                         .setDescription(getText(R.string.downloading_updates));
 
         downloadId = manager.enqueue(request);
@@ -198,10 +193,7 @@ public class UpdatesActivity extends BaldActivity {
             @Override
             public void onReceive(Context context, Intent intent) {
                 if (downloadId == intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -2)) {
-                    BaldToast.from(UpdatesActivity.this)
-                            .setText(R.string.download_finished)
-                            .setLength(1)
-                            .show();
+                    downloadFinishedToast.show();
                     pb.setVisibility(View.GONE);
                     tv_download_progress.setVisibility(View.GONE);
 
@@ -270,7 +262,7 @@ public class UpdatesActivity extends BaldActivity {
     };
 
     public void install() {
-        final File downloadedFile = UpdatingUtil.getDownloadedFile();
+        final File downloadedFile = getDownloadedFile();
         final Uri apkUri = S.fileToUriCompat(downloadedFile, this);
         final Intent intent;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -283,9 +275,16 @@ public class UpdatesActivity extends BaldActivity {
                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         }
         this.startActivity(intent);
-
-
     }
+
+    public void deleteCurrentUpdateFile() {
+        final File bp = getDownloadedFile();
+        if (bp.exists()) {
+            if (!bp.delete())
+                downloadedFileCouldNotBeDeletedToast.show();
+        }
+    }
+
 
     @Override
     protected int requiredPermissions() {
