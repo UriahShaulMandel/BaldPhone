@@ -26,10 +26,8 @@ import android.content.Context;
 
 @Database(entities = {Reminder.class}, version = 1, exportSchema = false)
 public abstract class RemindersDatabase extends RoomDatabase {
-    public abstract RemindersDatabaseDao remindersDatabaseDao();
-
-    private static RemindersDatabase remindersDatabase = null;
     private static final Object LOCK = new Object();
+    private static RemindersDatabase remindersDatabase = null;
 
     public static RemindersDatabase getInstance(Context context) {
         synchronized (LOCK) {
@@ -41,4 +39,6 @@ public abstract class RemindersDatabase extends RoomDatabase {
             return remindersDatabase;
         }
     }
+
+    public abstract RemindersDatabaseDao remindersDatabaseDao();
 }

@@ -63,6 +63,7 @@ public class NonSwipeableViewPager extends RtlViewPager {
             e.printStackTrace();
         }
     }
+
     public static class MyScroller extends Scroller {
         public MyScroller(Context context) {
             super(context, new DecelerateInterpolator());

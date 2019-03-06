@@ -53,18 +53,16 @@ import com.bald.uriah.baldphone.views.ModularRecyclerView;
  */
 public class NotificationRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<NotificationRecyclerViewAdapter.ViewHolder> {
     private static final String TAG = NotificationRecyclerViewAdapter.class.getSimpleName();
+    private final static int MAX_LETTERS = 60;
     @ColorInt
     private final int decoration_on_button;
-    private final static int MAX_LETTERS = 60;
-
-    //        most probably reading will happen only once for each bundle.
-    //          thus converting to old java objects wont really help..
-    private Bundle[] bundles;
-
     private final Context context;
     private final DisplayMetrics displayMetrics;
     private final LayoutInflater layoutInflater;
     private final PackageManager packageManager;
+    //        most probably reading will happen only once for each bundle.
+    //          thus converting to old java objects wont really help..
+    private Bundle[] bundles;
 
     public NotificationRecyclerViewAdapter(final Context context, final Bundle[] bundles) {
         this.context = context;
@@ -108,6 +106,11 @@ public class NotificationRecyclerViewAdapter extends ModularRecyclerView.Modular
             );
         }
 
+    }
+
+    public void changeNotifications(Bundle[] bundles) {
+        this.bundles = bundles;
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -244,11 +247,6 @@ public class NotificationRecyclerViewAdapter extends ModularRecyclerView.Modular
             return true;
         }
 
-    }
-
-    public void changeNotifications(Bundle[] bundles) {
-        this.bundles = bundles;
-        notifyDataSetChanged();
     }
 }
 

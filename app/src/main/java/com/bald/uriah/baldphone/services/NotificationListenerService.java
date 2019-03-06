@@ -38,41 +38,51 @@ import java.lang.annotation.RetentionPolicy;
 import java.util.Objects;
 
 public class NotificationListenerService extends android.service.notification.NotificationListenerService {
-    private static final String TAG = NotificationListenerService.class.getSimpleName();
     // BROADCASTS
     public static final String NOTIFICATIONS_ACTIVITY_BROADCAST = "NOTIFICATIONS_ACTIVITY_BROADCAST";
     public static final String HOME_SCREEN_ACTIVITY_BROADCAST = "HOME_SCREEN_ACTIVITY_BROADCAST";
-    // BROADCASTS
-
     //    ACTIONS
     public static final String ACTION_REGISTER_ACTIVITY = "ACTION_REGISTER_ACTIVITY";
+    // BROADCASTS
     public static final String ACTION_CLEAR = "ACTION_CLEAR";
-    //    ACTIONS
-
     //    KEYS
     public static final String KEY_EXTRA_KEY = "KEY_EXTRA_KEY";
+    //    ACTIONS
     public static final String KEY_EXTRA_NOTIFICATIONS = "KEY_EXTRA_NOTIFICATIONS";
     public static final String KEY_EXTRA_ACTIVITY = "KEY_EXTRA_ACTIVITY";
-    //    KEYS
-
     public static final int
             NOTIFICATIONS_NONE = 0,
             NOTIFICATIONS_SOME = 2,
             NOTIFICATIONS_ALOT = 5;
-
-
+    //    KEYS
     public static final int
             ACTIVITY_NONE = -1,
             NOTIFICATIONS_ACTIVITY = 1,
             NOTIFICATIONS_HOME_SCREEN = 2;
-
-
+    private static final String TAG = NotificationListenerService.class.getSimpleName();
     // VARS
     @SupportedActivitys
     private int activity = ACTIVITY_NONE;
     private PackageManager packageManager;
     private boolean listening = false;
     // VARS
+    private final BroadcastReceiver listener = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final String action = Objects.requireNonNull(intent.getAction());
+            switch (action) {
+                case ACTION_REGISTER_ACTIVITY:
+                    activity = intent.getIntExtra(KEY_EXTRA_ACTIVITY, ACTIVITY_NONE);
+                    sendBroadcastToActivity();
+                    break;
+                case ACTION_CLEAR:
+                    cancelNotification(intent.getStringExtra(KEY_EXTRA_KEY));
+                    break;
+                default:
+                    throw new AssertionError();
+            }
+        }
+    };
 
     @Override
     public void onNotificationPosted(StatusBarNotification sbn) {
@@ -113,23 +123,6 @@ public class NotificationListenerService extends android.service.notification.No
             e.printStackTrace();
         }
     }
-    private final BroadcastReceiver listener = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            final String action = Objects.requireNonNull(intent.getAction());
-            switch (action) {
-                case ACTION_REGISTER_ACTIVITY:
-                    activity = intent.getIntExtra(KEY_EXTRA_ACTIVITY, ACTIVITY_NONE);
-                    sendBroadcastToActivity();
-                    break;
-                case ACTION_CLEAR:
-                    cancelNotification(intent.getStringExtra(KEY_EXTRA_KEY));
-                    break;
-                default:
-                    throw new AssertionError();
-            }
-        }
-    };
 
     private void sendBroadcastToNotificationsActivity() {
         try {

@@ -26,7 +26,6 @@ import android.widget.TextView;
 /**
  * Simple Toggeler maker, moves the boilerplate code to here
  * each one is different, and uses different technique
- *
  */
 public class Toggeler {
     public static void newSimpleTextImageToggeler(View button, ImageView imageView, TextView textView, int pic1, int pic2, int text1, int text2, View.OnClickListener listener1, View.OnClickListener listener2) {
@@ -44,6 +43,7 @@ public class Toggeler {
             state[0] = !state[0];
         }));
     }
+
     public static void newTextImageToggeler(View button, ImageView imageView, TextView textView, int[] pics, int[] texts, View.OnClickListener[] listeners, int startingIndex) {
         final int[] which = new int[]{startingIndex};
         imageView.setImageResource(pics[startingIndex]);
@@ -77,6 +77,7 @@ public class Toggeler {
 
         }));
     }
+
     public static void newAdvancedImageToggeler(View button, ImageView imageView, int[] pics, IndexConsumer consumer, int startingIndex, int jumps) {
         final int[] which = new int[]{startingIndex};
         imageView.setImageResource(pics[startingIndex]);

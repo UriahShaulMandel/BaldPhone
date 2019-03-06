@@ -138,5 +138,4 @@ public class BDB {
     public BDialog show() {
         return BDialog.newInstance(this);
     }
-
 }

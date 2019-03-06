@@ -25,22 +25,23 @@ import android.widget.Toast;
 import com.bald.uriah.baldphone.R;
 
 public class D {
-    //nope.
-    private D() {
-    }
-
     public static final String WHATSAPP_PACKAGE_NAME = "com.whatsapp";
-
     public static final int
             MILLISECOND = 1,
             SECOND = 1000 * MILLISECOND,
             MINUTE = 60 * SECOND,
             HOUR = 60 * MINUTE,
             DAY = 24 * HOUR;
-
-
     public static final int vibetime = 100;
     public static final String BALD_PREFS = BPrefs.KEY;//default device settings
+    public final static View.OnClickListener longer = v -> Toast.makeText(v.getContext(), R.string.press_longer, Toast.LENGTH_LONG).show();
+    public static final View.OnClickListener EMPTY_CLICK_LISTENER = v -> {
+    };
+
+
+    //nope.
+    private D() {
+    }
 
     public static class Days {
         public static final int SUNDAY = 0b1;
@@ -53,11 +54,4 @@ public class D {
         public static final int ALL = SUNDAY | MONDAY | TUESDAY | WEDNESDAY | THURSDAY | FRIDAY | SATURDAY;
         public static final int[] ARRAY_ALL = new int[]{SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY};
     }
-
-
-    public final static View.OnClickListener longer = v -> Toast.makeText(v.getContext(), R.string.press_longer, Toast.LENGTH_LONG).show();
-
-
-    public static final View.OnClickListener EMPTY_CLICK_LISTENER = v -> {
-    };
 }

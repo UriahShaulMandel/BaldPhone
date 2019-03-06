@@ -45,7 +45,6 @@ public class NotesView extends HomeView {
     private SharedPreferences sharedPreferences;
 
 
-
     public NotesView(@NonNull HomeScreen activity) {
         super(activity);
     }

@@ -48,12 +48,6 @@ public class BaldMultipleSelection extends LinearLayout {
     int textColorOnButton;
     private OnItemClickListener onItemClickListener = (v) -> {
     };
-
-    @FunctionalInterface
-    public interface OnItemClickListener {
-        void onItemClick(int whichItem);
-    }
-
     private Drawable defaultDrawableSelected, defaultDrawable;
     private Context context;
     private LayoutInflater layoutInflater;
@@ -61,12 +55,11 @@ public class BaldMultipleSelection extends LinearLayout {
     private int size = 0;
     private float pxDimen;
     private ArrayList<BaldButton> buttons = new ArrayList<>(5);
-
-
     public BaldMultipleSelection(Context context) {
         super(context);
         init(context, null);
     }
+
 
     public BaldMultipleSelection(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -135,7 +128,6 @@ public class BaldMultipleSelection extends LinearLayout {
         addSelection(context.getText(resId));
     }
 
-
     public void setButtonsDrawable(@DrawableRes int drawable) {
         setButtonsDrawable(ContextCompat.getDrawable(context, drawable));
 
@@ -199,13 +191,6 @@ public class BaldMultipleSelection extends LinearLayout {
         //TODO DELETE
     }
 
-    public void setSelection(int selectionIndex) {
-        setClicked(buttons.get(selection), false);
-        this.selection = selectionIndex;
-        setClicked(buttons.get(selection), true);
-
-    }
-
     public int getSelection() {
         if (selection == -1)
             throw new RuntimeException("nothing to select from!");
@@ -213,6 +198,12 @@ public class BaldMultipleSelection extends LinearLayout {
         return selection;
     }
 
+    public void setSelection(int selectionIndex) {
+        setClicked(buttons.get(selection), false);
+        this.selection = selectionIndex;
+        setClicked(buttons.get(selection), true);
+
+    }
 
     private void setClicked(BaldButton button, boolean state) {
         if (state) {
@@ -225,5 +216,11 @@ public class BaldMultipleSelection extends LinearLayout {
         }
 
 
+    }
+
+
+    @FunctionalInterface
+    public interface OnItemClickListener {
+        void onItemClick(int whichItem);
     }
 }

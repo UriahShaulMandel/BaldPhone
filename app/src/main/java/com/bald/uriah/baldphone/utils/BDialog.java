@@ -55,9 +55,8 @@ import static com.bald.uriah.baldphone.utils.BDialog.DialogState.YES_CANCEL;
 import static com.bald.uriah.baldphone.utils.BDialog.DialogState.YES_NO;
 
 public class BDialog extends Dialog {
-    private static final String TAG = BDialog.class.getSimpleName();
     public static final float DIM_LEVEL = 0.9f;
-
+    private static final String TAG = BDialog.class.getSimpleName();
     private final Context context;
     private final CharSequence title;
     private final CharSequence subText;
@@ -141,6 +140,12 @@ public class BDialog extends Dialog {
         window.addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND); // This flag is required to set otherwise the setDimAmount method will not show any effect
         window.setDimAmount(DIM_LEVEL);
         return baldDialogBox;
+    }
+
+    private static void setLeftMargin(View view) {
+        final LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) view.getLayoutParams();
+        layoutParams.setMarginEnd(layoutParams.getMarginStart());
+        view.setLayoutParams(layoutParams);
     }
 
     @Override
@@ -248,7 +253,7 @@ public class BDialog extends Dialog {
             case OPTION_OPTION_OK_CANCEL:
                 final BaldMultipleSelection baldMultipleSelection = (BaldMultipleSelection) LayoutInflater.from(context).inflate(R.layout.bald_dialog_box_multiple_selection_view, ll, false);
                 baldMultipleSelection.setOrientation(LinearLayout.HORIZONTAL);
-                for (CharSequence option: options)
+                for (CharSequence option : options)
                     baldMultipleSelection.addSelection(option);
                 baldMultipleSelection.setSelection(optionsStartingIndex);
                 final LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80f, context.getResources().getDisplayMetrics()));
@@ -289,27 +294,24 @@ public class BDialog extends Dialog {
             if (this.extraView.getParent() != null) {
                 ((ViewGroup) extraView.getParent()).removeView(extraView);
             }
-            ((FrameLayout) findViewById(R.id.frame_layout)).addView(extraView, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-
+            ((FrameLayout) findViewById(R.id.frame_layout))
+                    .addView(extraView,
+                            new FrameLayout.LayoutParams(
+                                    ViewGroup.LayoutParams.MATCH_PARENT,
+                                    ViewGroup.LayoutParams.WRAP_CONTENT)
+                    );
         }
-    }
-
-    private static void setLeftMargin(View view) {
-        final LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) view.getLayoutParams();
-        layoutParams.setMarginEnd(layoutParams.getMarginStart());
-        view.setLayoutParams(layoutParams);
     }
 
 
     public interface DialogBoxListener {
+        DialogBoxListener EMPTY = params -> true;
         /**
          * @param params - when Integer its which selection was chosen
          *               when CharSequence its user input
          * @return true if dialog job is finished
          */
-        boolean activate(@NonNull Object...params);
-
-        DialogBoxListener EMPTY = params -> true;
+        boolean activate(@NonNull Object... params);
     }
 
     @IntDef({

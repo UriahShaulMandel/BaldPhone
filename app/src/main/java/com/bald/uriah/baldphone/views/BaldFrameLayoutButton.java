@@ -38,12 +38,12 @@ import com.bald.uriah.baldphone.utils.D;
  * use {@link BaldFrameLayoutButton#setOnClickListener(OnClickListener)} instead.
  */
 public class BaldFrameLayoutButton extends FrameLayout implements BaldButtonInterface, View.OnLongClickListener, View.OnClickListener {
-    private OnClickListener onClickListener;
-    private BaldButtonTouchListener baldButtonTouchListener;
     private final SharedPreferences sharedPreferences;
     private final boolean longPresses, vibrationFeedback, longPressesShorter;
     private final Vibrator vibrator;
     private final BaldToast longer;
+    private OnClickListener onClickListener;
+    private BaldButtonTouchListener baldButtonTouchListener;
 
 
     public BaldFrameLayoutButton(Context context) {

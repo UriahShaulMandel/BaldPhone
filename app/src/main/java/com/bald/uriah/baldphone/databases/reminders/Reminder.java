@@ -37,76 +37,53 @@ import java.lang.annotation.RetentionPolicy;
 //Will be improved in the future, with music reminders , with custom colored pills and more
 
 /**
- *
  * using this old java getters and setters because Room requires that.
  * see {@link Entity}
  */
 @Entity
 public class Reminder {
     public static final String REMINDER_KEY_VIA_INTENTS = "REMINDER_KEY_VIA_INTENTS";
-    public Reminder() {
-    }
-
     @Ignore
     public static final int TYPE_PILL = 0, TYPE_REGULAR = 1, TYPE_PICTURE = 2, TYPE_BIRTHDAY = 3;
-
     @Ignore
     public static final int TIME_MORNING = 0, TIME_AFTERNOON = 1, TIME_EVENING = 2;
-
-    @IntDef({TYPE_PILL, TYPE_REGULAR, TYPE_BIRTHDAY, TYPE_PICTURE})
-    @Retention(value = RetentionPolicy.SOURCE)
-    @interface Type {
-    }
-
-    @IntDef({TIME_MORNING, TIME_AFTERNOON, TIME_EVENING})
-    @Retention(value = RetentionPolicy.SOURCE)
-    public @interface Time {
-    }
-
     @Ignore
     public static final int BINARY_RGB = 3, BINARY_PNG = 2, BINARY_M4A = 1, NULL = 0;
+    @Ignore
+    public static final SparseIntArray PILLS_TIME_NAMES = new SparseIntArray(3);
 
-
-    @IntDef({BINARY_RGB, BINARY_PNG, BINARY_M4A, NULL})
-    @Retention(value = RetentionPolicy.SOURCE)
-    @interface BinaryType {
+    static {
+        PILLS_TIME_NAMES.append(Reminder.TIME_MORNING, R.string.morning);
+        PILLS_TIME_NAMES.append(Reminder.TIME_AFTERNOON, R.string.afternoon);
+        PILLS_TIME_NAMES.append(Reminder.TIME_EVENING, R.string.evening);
     }
 
     @PrimaryKey(autoGenerate = true)
     private int id;
-
     @ColumnInfo(name = "textual_content")
     @Nullable
     private String textualContent;
-
     @ColumnInfo(name = "binary_content_type")
     @BinaryType
     private int binaryContentType;
-
     @ColumnInfo(name = "binary_content")
     @Nullable
     private byte[] binaryContent;
-
-
     @Time
     @ColumnInfo(name = "starting_time")
     private int startingTime = Reminder.TIME_MORNING;
-
-
     @ColumnInfo(name = "hour")
     private int hour;
-
     @ColumnInfo(name = "minute")
     private int minute;
-
     @ColumnInfo(name = "days")
     private int days = -1;
-
-
     @ColumnInfo(name = "type")
     @Type
     private int reminderType;
 
+    public Reminder() {
+    }
 
     public int getId() {
         return id;
@@ -190,13 +167,19 @@ public class Reminder {
         return PILLS_TIME_NAMES.get(startingTime);
     }
 
-    @Ignore
-    public static final SparseIntArray PILLS_TIME_NAMES = new SparseIntArray(3);
+    @IntDef({TYPE_PILL, TYPE_REGULAR, TYPE_BIRTHDAY, TYPE_PICTURE})
+    @Retention(value = RetentionPolicy.SOURCE)
+    @interface Type {
+    }
 
-    static {
-        PILLS_TIME_NAMES.append(Reminder.TIME_MORNING, R.string.morning);
-        PILLS_TIME_NAMES.append(Reminder.TIME_AFTERNOON, R.string.afternoon);
-        PILLS_TIME_NAMES.append(Reminder.TIME_EVENING, R.string.evening);
+    @IntDef({TIME_MORNING, TIME_AFTERNOON, TIME_EVENING})
+    @Retention(value = RetentionPolicy.SOURCE)
+    public @interface Time {
+    }
+
+    @IntDef({BINARY_RGB, BINARY_PNG, BINARY_M4A, NULL})
+    @Retention(value = RetentionPolicy.SOURCE)
+    @interface BinaryType {
     }
 
 

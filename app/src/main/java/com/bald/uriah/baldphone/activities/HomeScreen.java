@@ -91,23 +91,72 @@ public class HomeScreen extends BaldActivity {
             R.drawable.sound_on_background
     };
     private static final IntentFilter BATTERY_FILTER = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+    private static final int SPEECH_REQUEST_CODE = 7;
     private static int onStartCounter = 0;
     private static boolean flashState;
+    @NonNull
+    public final NotesView.RecognizerManager recognizerManager = new NotesView.RecognizerManager();
     public boolean finishedUpdatingApps, launchAppsActivity;
+    public BaldPagerAdapter baldPagerAdapter;
     private Point screenSize;
     private Lantern lantern;
     private SharedPreferences sharedPreferences;
     private BaldPrefsUtils baldPrefsUtils;
     private ViewPagerHolder viewPagerHolder;
     private BatteryView batteryView;
+    //<Receivers>
+    private final BroadcastReceiver batteryReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (batteryView != null) {
+                final int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+                final int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+                final int batteryPct = Math.round(level / (float) scale * 100);
+                batteryView.setLevel(batteryPct, intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1));
+            }
+        }
+    };
     private BaldImageButton notificationsButton, sosButton, soundButton, flashButton;
     private AudioManager audioManager;
     private BaldHomeWatcher baldHomeWatcher;
     private boolean flashInited;
-    @NonNull
-    public final NotesView.RecognizerManager recognizerManager = new NotesView.RecognizerManager();
+    private Handler handler = new Handler();
+    private final Runnable shakeIt = new Runnable() {
+        @Override
+        public void run() {
+            final Drawable d = notificationsButton.getDrawable();
+            if (d instanceof AnimatedVectorDrawable) {
+                final AnimatedVectorDrawable animatedVectorDrawable = (AnimatedVectorDrawable) d;
+                animatedVectorDrawable.start();
 
-    public BaldPagerAdapter baldPagerAdapter;
+                handler.postDelayed(this, 10 * D.SECOND);
+            }
+        }
+    };
+    private final BroadcastReceiver notificationReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final int amount = intent.getIntExtra("amount", -1);
+            final @DrawableRes int drawable;
+            switch (amount) {
+                case NOTIFICATIONS_NONE:
+                    drawable = R.drawable.notification_none_on_background;
+                    break;
+                case NOTIFICATIONS_SOME:
+                    drawable = R.drawable.notification_some_on_background;
+                    break;
+                case NOTIFICATIONS_ALOT:
+                    drawable = R.drawable.notification_alot_on_background;
+                    break;
+                default:
+                    throw new AssertionError();
+            }
+            notificationsButton.setImageResource(drawable);
+
+            handler.removeCallbacks(shakeIt);
+            handler.postDelayed(shakeIt, 5 * D.SECOND);
+        }
+    };
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -203,7 +252,6 @@ public class HomeScreen extends BaldActivity {
             }
     }
 
-
     /* the security exception will happen only after api 23 so please stfu*/
     @SuppressLint("InlinedApi")
     protected void onResume() {
@@ -267,7 +315,6 @@ public class HomeScreen extends BaldActivity {
         registerReceiver(batteryReceiver, BATTERY_FILTER);
     }
 
-
     @Override
     protected void onPause() {
         //this is *NOT* bad practice.
@@ -290,73 +337,18 @@ public class HomeScreen extends BaldActivity {
         super.onPause();
     }
 
-
     @Override
     protected void onStop() {
         baldHomeWatcher.stopWatch();
         super.onStop();
     }
+    //</Receivers>
 
     @Override
     protected void onDestroy() {
         recognizerManager.setHomeScreen(null);
         super.onDestroy();
     }
-
-    //<Receivers>
-    private final BroadcastReceiver batteryReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (batteryView != null) {
-                final int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-                final int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
-                final int batteryPct = Math.round(level / (float) scale * 100);
-                batteryView.setLevel(batteryPct, intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1));
-            }
-        }
-    };
-
-    private Handler handler = new Handler();
-    private final Runnable shakeIt = new Runnable() {
-        @Override
-        public void run() {
-            final Drawable d = notificationsButton.getDrawable();
-            if (d instanceof AnimatedVectorDrawable) {
-                final AnimatedVectorDrawable animatedVectorDrawable = (AnimatedVectorDrawable) d;
-                animatedVectorDrawable.start();
-
-                handler.postDelayed(this, 10 * D.SECOND);
-            }
-        }
-    };
-
-
-    private final BroadcastReceiver notificationReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            final int amount = intent.getIntExtra("amount", -1);
-            final @DrawableRes int drawable;
-            switch (amount) {
-                case NOTIFICATIONS_NONE:
-                    drawable = R.drawable.notification_none_on_background;
-                    break;
-                case NOTIFICATIONS_SOME:
-                    drawable = R.drawable.notification_some_on_background;
-                    break;
-                case NOTIFICATIONS_ALOT:
-                    drawable = R.drawable.notification_alot_on_background;
-                    break;
-                default:
-                    throw new AssertionError();
-            }
-            notificationsButton.setImageResource(drawable);
-
-            handler.removeCallbacks(shakeIt);
-            handler.postDelayed(shakeIt, 5 * D.SECOND);
-        }
-    };
-    //</Receivers>
-
 
     private void viewPagerHandler() {
         baldPagerAdapter = new BaldPagerAdapter(this);
@@ -388,7 +380,6 @@ public class HomeScreen extends BaldActivity {
         flashButton = findViewById(R.id.flash);
     }
 
-
     @Override
     public void onBackPressed() {
         if (vibrator != null)
@@ -411,37 +402,6 @@ public class HomeScreen extends BaldActivity {
         packageManager.getPreferredActivities(filters, activities, myPackageName);
         return (activities.contains(myComponentName));
     }
-
-
-    static class UpdateApps extends AsyncTask<Context, Void, Void> {
-        final WeakReference<HomeScreen> homeScreenWeakReference;
-
-        public UpdateApps(HomeScreen homeScreen) {
-            super();
-            homeScreenWeakReference = new WeakReference<>(homeScreen);
-        }
-
-        @Override
-        protected Void doInBackground(Context... contexts) {
-            AppsDatabaseHelper.updateDB(contexts[0]);
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void aVoid) {
-            HomeScreen homeScreen = homeScreenWeakReference.get();
-            if (homeScreen != null) {
-                homeScreen.viewPagerStartHandler();
-                homeScreen.finishedUpdatingApps = true;
-                if (homeScreen.launchAppsActivity)
-                    homeScreen.startActivity(new Intent(homeScreen, AppsActivity.class));
-            }
-        }
-
-    }
-
-
-    private static final int SPEECH_REQUEST_CODE = 7;
 
     public void displaySpeechRecognizer() {
         startActivityForResult(
@@ -475,5 +435,32 @@ public class HomeScreen extends BaldActivity {
             e.printStackTrace();
             BaldToast.error(this);
         }
+    }
+
+    static class UpdateApps extends AsyncTask<Context, Void, Void> {
+        final WeakReference<HomeScreen> homeScreenWeakReference;
+
+        public UpdateApps(HomeScreen homeScreen) {
+            super();
+            homeScreenWeakReference = new WeakReference<>(homeScreen);
+        }
+
+        @Override
+        protected Void doInBackground(Context... contexts) {
+            AppsDatabaseHelper.updateDB(contexts[0]);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            HomeScreen homeScreen = homeScreenWeakReference.get();
+            if (homeScreen != null) {
+                homeScreen.viewPagerStartHandler();
+                homeScreen.finishedUpdatingApps = true;
+                if (homeScreen.launchAppsActivity)
+                    homeScreen.startActivity(new Intent(homeScreen, AppsActivity.class));
+            }
+        }
+
     }
 }

@@ -35,6 +35,7 @@ import com.bald.uriah.baldphone.views.ViewPagerHolder;
 
 public class TutorialActivity extends BaldActivity {
     private ViewPagerHolder viewPagerHolder;
+
     private void attachXml() {
         viewPagerHolder = findViewById(R.id.view_pager_holder);
     }

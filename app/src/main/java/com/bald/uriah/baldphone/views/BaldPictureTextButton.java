@@ -79,8 +79,6 @@ public class BaldPictureTextButton extends BaldLinearLayoutButton {
         styleAttributesArray.recycle();
 
 
-
-
         imageView = (ImageView) layoutInflater.inflate(R.layout.bald_picture_text_button_picture, this, false);
         imageView.setImageDrawable(pic);
         addView(imageView);

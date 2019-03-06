@@ -49,10 +49,6 @@ public class BaldPrefsUtils {
         this.notes = notes;
     }
 
-    public boolean hasChanged(Context context) {
-        return !equals(newInstance(context));
-    }
-
     public static BaldPrefsUtils newInstance(Context context) {
         final SharedPreferences sharedPreferences = context.getSharedPreferences(BPrefs.KEY, Context.MODE_PRIVATE);
         return new BaldPrefsUtils(
@@ -70,12 +66,15 @@ public class BaldPrefsUtils {
         );
     }
 
+    public boolean hasChanged(Context context) {
+        return !equals(newInstance(context));
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        BaldPrefsUtils that = (BaldPrefsUtils) o;
+        final BaldPrefsUtils that = (BaldPrefsUtils) o;
         return theme == that.theme &&
                 vibrationFeedback == that.vibrationFeedback &&
                 touchNoHard == that.touchNoHard &&

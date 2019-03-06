@@ -40,8 +40,8 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 
 public class YoutubeActivity extends BaldActivity implements YouTubePlayer.PlayerStateChangeListener, YouTubePlayer.PlaybackEventListener {
-    private static final String TAG = YoutubeActivity.class.getSimpleName();
     public static final String EXTRA_ID = "EXTRA_ID";
+    private static final String TAG = YoutubeActivity.class.getSimpleName();
     private static final float VERTICAL_BIAS_AFTER = 0.8f;
     private static final float VERTICAL_BIAS_BEFORE = 1f;
     private final static long ANIMATION_DURATION = D.MILLISECOND * 800;

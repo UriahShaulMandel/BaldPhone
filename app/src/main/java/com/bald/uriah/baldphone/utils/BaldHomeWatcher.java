@@ -53,6 +53,11 @@ public class BaldHomeWatcher {
             context.unregisterReceiver(receiver);
     }
 
+    @FunctionalInterface
+    public interface OnHomePressedListener {
+        void onHomePressed();
+    }
+
     class HomeClicksReceiver extends BroadcastReceiver {
         private static final String SYSTEM_DIALOG_REASON_KEY = "reason";
         private static final String SYSTEM_DIALOG_REASON_HOME_KEY = "homekey";
@@ -72,10 +77,5 @@ public class BaldHomeWatcher {
                 }
             }
         }
-    }
-
-    @FunctionalInterface
-    public interface OnHomePressedListener {
-        void onHomePressed();
     }
 }

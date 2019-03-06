@@ -26,7 +26,6 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Handler;
 import android.util.Log;
 
 import com.bald.uriah.baldphone.activities.CrashActivity;
@@ -36,8 +35,6 @@ import com.bald.uriah.baldphone.services.NotificationListenerService;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
-import com.crashlytics.android.Crashlytics;
-import io.fabric.sdk.android.Fabric;
 
 /**
  * base application class - onBoot makes onCreate run when devices opens.
@@ -52,16 +49,13 @@ public class BaldPhone extends Application {
         AlarmScheduler.reStartAlarms(this);
         ReminderScheduler.reStartReminders(this);
 
-
         try {
             startService(new Intent(this, NotificationListenerService.class));
         } catch (Exception e) {
             Log.e(TAG, e.getMessage());
             e.printStackTrace();
         }
-
     }
-
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -96,14 +90,14 @@ public class BaldPhone extends Application {
             //NOPE - should be done immediately because of System.exit(2);
             S.logImportant("CRASHED!!");
 
-            PendingIntent myActivity = PendingIntent.getActivity(context,
+            final PendingIntent pendingIntent = PendingIntent.getActivity(context,
                     19337, new Intent(context, CrashActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
                             | Intent.FLAG_ACTIVITY_CLEAR_TASK
                             | Intent.FLAG_ACTIVITY_NEW_TASK),
                     PendingIntent.FLAG_ONE_SHOT);
             final AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
             alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                    300 * D.MILLISECOND, myActivity);
+                    300 * D.MILLISECOND, pendingIntent);
 
             System.exit(2);
         }

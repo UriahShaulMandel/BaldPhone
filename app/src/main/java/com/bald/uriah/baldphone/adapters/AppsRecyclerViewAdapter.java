@@ -46,11 +46,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<RecyclerView.ViewHolder> {
-    private static final String TAG = AppsRecyclerViewAdapter.class.getSimpleName();
-
     public static final int TYPE_HEADER = 0;
     public static final int TYPE_ITEM = 1;
-
+    private static final String TAG = AppsRecyclerViewAdapter.class.getSimpleName();
+    public final float elevation;
+    public final List<InAppsRecyclerView> dataList;
     @ColorInt
     private final int textColorOnSelected, textColorOnBackground;
     private final Drawable selectedDrawable;
@@ -59,10 +59,6 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
     private final BaldActivity activity;
     private final LayoutInflater layoutInflater;
     private final SparseIntArray letterToPosition;
-
-    public final float elevation;
-    public final List<InAppsRecyclerView> dataList;
-
     public int index = -1;
     private AppViewHolder lastView;
 
@@ -130,6 +126,20 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
         return dataList.size();
     }
 
+    public interface InAppsRecyclerView {
+        default int type() {
+            return TYPE_HEADER;
+        }
+    }
+
+    public static class AppStickyHeader implements InAppsRecyclerView {
+        public final String name;
+
+        AppStickyHeader(String name) {
+            this.name = name;
+        }
+    }
+
     public class HeaderViewHolder extends RecyclerView.ViewHolder {
         final TextView tv_letter;
 
@@ -151,17 +161,15 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
         }
     }
 
-
     public class AppViewHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
         final ImageView app_icon;
         final TextView app_name;
         final ImageView pin;
         final ViewGroup container;
-
-        private int index;
         boolean clicked;
         boolean pinned;
+        private int index;
 
 
         AppViewHolder(final View itemView) {
@@ -248,20 +256,5 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
             }
         }
 
-    }
-
-    public static class AppStickyHeader implements InAppsRecyclerView {
-        public final String name;
-
-        AppStickyHeader(String name) {
-            this.name = name;
-        }
-    }
-
-
-    public interface InAppsRecyclerView {
-        default int type() {
-            return TYPE_HEADER;
-        }
     }
 }

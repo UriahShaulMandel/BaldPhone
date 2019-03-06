@@ -26,10 +26,8 @@ import android.content.Context;
 
 @Database(entities = {App.class}, version = 1, exportSchema = false)
 public abstract class AppsDatabase extends RoomDatabase {
-    public abstract AppsDatabaseDao appsDatabaseDao();
-
-    private static AppsDatabase appsDatabase = null;
     private static final Object LOCK = new Object();
+    private static AppsDatabase appsDatabase = null;
 
     public static AppsDatabase getInstance(Context context) {
         synchronized (LOCK) {
@@ -39,4 +37,6 @@ public abstract class AppsDatabase extends RoomDatabase {
             return appsDatabase;
         }
     }
+
+    public abstract AppsDatabaseDao appsDatabaseDao();
 }

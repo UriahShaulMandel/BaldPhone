@@ -74,6 +74,40 @@ public class AddContactActivity extends BaldActivity {
     private BaldImageButton iv_image, iv_delete;
     private View save;
 
+    private static void addFullSizePhoto(int rawContactId, byte[] fullSizedPhotoData, final ContentResolver cr) throws IOException {
+        final Uri baseUri =
+                ContentUris.withAppendedId(ContactsContract.RawContacts.CONTENT_URI, rawContactId);
+        final Uri displayPhotoUri =
+                Uri.withAppendedPath(baseUri, ContactsContract.RawContacts.DisplayPhoto.CONTENT_DIRECTORY);
+        final AssetFileDescriptor fileDescriptor =
+                cr.openAssetFileDescriptor(displayPhotoUri, "rw");
+        final FileOutputStream photoStream =
+                fileDescriptor.createOutputStream();
+        photoStream.write(fullSizedPhotoData);
+        photoStream.close();
+        fileDescriptor.close();
+    }
+
+    public static int getRawContactId(final ContentResolver contentResolver, final String contactId) {
+        final Uri uri =
+                ContactsContract.RawContacts.CONTENT_URI;
+        final String[] projection =
+                new String[]{ContactsContract.RawContacts._ID};
+        final String selection =
+                ContactsContract.RawContacts.CONTACT_ID + " = ?";
+        final String[] selectionArgs =
+                new String[]{contactId};
+        try (Cursor c = contentResolver.query(
+                uri,
+                projection,
+                selection,
+                selectionArgs,
+                null)) {
+            if (c != null && c.moveToFirst())
+                return c.getInt(c.getColumnIndex(ContactsContract.RawContacts._ID));
+        }
+        return -1;
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -162,7 +196,6 @@ public class AddContactActivity extends BaldActivity {
             iv_delete.setVisibility(View.VISIBLE);
         }
     }
-
 
     public boolean insert() {
         final String name = String.valueOf(et_name.getText());
@@ -423,6 +456,24 @@ public class AddContactActivity extends BaldActivity {
 
     }
 
+    private void setImage(Uri uri) {
+        Glide.with(iv_image).load(uri).into(iv_image);
+        newPhoto = uri.toString();
+        iv_delete.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == SELECT_IMAGE_REQUEST_CODE && resultCode == RESULT_OK)
+            setImage(data.getData());
+
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_WRITE_CONTACTS | PERMISSION_READ_CONTACTS | PERMISSION_WRITE_EXTERNAL_STORAGE;
+    }
+
     static class PhotoAdder extends SimpleTarget<Bitmap> {
         private final int rawId;
         private final ContentResolver contentResolver;
@@ -449,58 +500,5 @@ public class AddContactActivity extends BaldActivity {
                 e.printStackTrace();
             }
         }
-    }
-
-    private static void addFullSizePhoto(int rawContactId, byte[] fullSizedPhotoData, final ContentResolver cr) throws IOException {
-        final Uri baseUri =
-                ContentUris.withAppendedId(ContactsContract.RawContacts.CONTENT_URI, rawContactId);
-        final Uri displayPhotoUri =
-                Uri.withAppendedPath(baseUri, ContactsContract.RawContacts.DisplayPhoto.CONTENT_DIRECTORY);
-        final AssetFileDescriptor fileDescriptor =
-                cr.openAssetFileDescriptor(displayPhotoUri, "rw");
-        final FileOutputStream photoStream =
-                fileDescriptor.createOutputStream();
-        photoStream.write(fullSizedPhotoData);
-        photoStream.close();
-        fileDescriptor.close();
-    }
-
-    public static int getRawContactId(final ContentResolver contentResolver, final String contactId) {
-        final Uri uri =
-                ContactsContract.RawContacts.CONTENT_URI;
-        final String[] projection =
-                new String[]{ContactsContract.RawContacts._ID};
-        final String selection =
-                ContactsContract.RawContacts.CONTACT_ID + " = ?";
-        final String[] selectionArgs =
-                new String[]{contactId};
-        try (Cursor c = contentResolver.query(
-                uri,
-                projection,
-                selection,
-                selectionArgs,
-                null)) {
-            if (c != null && c.moveToFirst())
-                return c.getInt(c.getColumnIndex(ContactsContract.RawContacts._ID));
-        }
-        return -1;
-    }
-
-    private void setImage(Uri uri) {
-        Glide.with(iv_image).load(uri).into(iv_image);
-        newPhoto = uri.toString();
-        iv_delete.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == SELECT_IMAGE_REQUEST_CODE && resultCode == RESULT_OK)
-            setImage(data.getData());
-
-    }
-
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_WRITE_CONTACTS | PERMISSION_READ_CONTACTS | PERMISSION_WRITE_EXTERNAL_STORAGE;
     }
 }

@@ -51,6 +51,13 @@ public class UpdatingUtil {
     public static final String divider = "@@@";
     public static final int MESSAGE_PARTS = 3;
 
+    public static final int
+            MESSAGE_VERSION_CODE = 0,
+            MESSAGE_VERSION_NAME = 1,
+            MESSAGE_VERSION_CHANGE_LOG = 2,
+            MESSAGE_ALTERNATIVE_URL = 3;
+    public static final String NO_ALTERNATIVE_URL = "NO_ALTERNATIVE_URL";
+
     @NonNull
     public static File getDownloadedFile() {
         final File downloads = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);

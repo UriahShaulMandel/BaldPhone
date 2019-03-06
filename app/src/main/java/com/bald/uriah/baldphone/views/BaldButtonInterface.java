@@ -42,9 +42,9 @@ public interface BaldButtonInterface {
 
 
     class BaldButtonTouchListener implements View.OnTouchListener {
-        private List<View.OnTouchListener> otherListeners = new ArrayList<>();
         private final BaldButtonInterface v;
         private final Handler longPressHandler;
+        private List<View.OnTouchListener> otherListeners = new ArrayList<>();
         private boolean isLongPressHandlerActivated = false;
         private boolean isActionMoveEventStored = false;
         private float lastActionMoveEventBeforeUpX;

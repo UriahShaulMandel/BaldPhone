@@ -44,51 +44,38 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 public class BaldToast {
+    public static final int LENGTH_SEC = -1;
+    public static final int TYPE_DEFAULT = 0;
+    public static final int TYPE_ERROR = 1;
+    public static final int TYPE_INFORMATIVE = 2;
     @LayoutRes
     private final static int layout = R.layout.toast_layout;
-    public static final int LENGTH_SEC = -1;
-
-    private final Context context;
-
-    @ToastType
-    private int type = TYPE_DEFAULT;
-    private CharSequence text;
-    private boolean big = false;
-    private int duration = Toast.LENGTH_LONG;
-
-    private Toast toast;
-    private boolean built;
-
     @DrawableRes
     private static final int TYPE_DEFAULT_BACKGROUND_COLOR_RES_ID =
             R.drawable.toast_default_background;
     @ColorRes
     private static final int TYPE_DEFAULT_FOREGROUND_COLOR_RES_ID =
             R.color.toast_foreground_default;
-
     @DrawableRes
     private static final int TYPE_ERROR_BACKGROUND_COLOR_RES_ID =
             R.drawable.toast_error_background;
     @ColorRes
     private static final int TYPE_ERROR_FOREGROUND_COLOR_RES_ID =
             R.color.toast_foreground_error;
-
     @DrawableRes
     private static final int TYPE_INFORMATIVE_BACKGROUND_COLOR_RES_ID =
             R.drawable.toast_informative_background;
     @ColorRes
     private static final int TYPE_INFORMATIVE_FOREGROUND_COLOR_RES_ID =
             R.color.toast_foreground_informative;
-
-    public static final int TYPE_DEFAULT = 0;
-    public static final int TYPE_ERROR = 1;
-    public static final int TYPE_INFORMATIVE = 2;
-
-    @IntDef({TYPE_DEFAULT, TYPE_ERROR, TYPE_INFORMATIVE})
-    @Retention(RetentionPolicy.SOURCE)
-    public @interface ToastType {
-    }
-
+    private final Context context;
+    @ToastType
+    private int type = TYPE_DEFAULT;
+    private CharSequence text;
+    private boolean big = false;
+    private int duration = Toast.LENGTH_LONG;
+    private Toast toast;
+    private boolean built;
 
     private BaldToast(@NonNull Context context) {
         this.context = context.getApplicationContext();
@@ -98,6 +85,21 @@ public class BaldToast {
         return new BaldToast(context);
     }
 
+    public static void error(Context context) {
+        BaldToast.from(context).setText(R.string.an_error_has_occurred).setType(TYPE_ERROR).show();
+    }
+
+    public static void simple(Context context, CharSequence text) {
+        BaldToast.from(context).setText(text).setType(TYPE_DEFAULT).show();
+    }
+
+    public static void simple(Context context, @StringRes int resId) {
+        BaldToast.from(context).setText(context.getText(resId)).setType(TYPE_DEFAULT).show();
+    }
+
+    public static void longer(Context context) {
+        BaldToast.from(context).setText(R.string.press_longer).setType(TYPE_DEFAULT).setLength(-1).show();
+    }
 
     public BaldToast setType(@ToastType int type) {
         this.type = type;
@@ -173,20 +175,8 @@ public class BaldToast {
         return this;
     }
 
-    public static void error(Context context) {
-        BaldToast.from(context).setText(R.string.an_error_has_occurred).setType(TYPE_ERROR).show();
+    @IntDef({TYPE_DEFAULT, TYPE_ERROR, TYPE_INFORMATIVE})
+    @Retention(RetentionPolicy.SOURCE)
+    public @interface ToastType {
     }
-
-    public static void simple(Context context, CharSequence text) {
-        BaldToast.from(context).setText(text).setType(TYPE_DEFAULT).show();
-    }
-
-    public static void simple(Context context, @StringRes int resId) {
-        BaldToast.from(context).setText(context.getText(resId)).setType(TYPE_DEFAULT).show();
-    }
-
-    public static void longer(Context context) {
-        BaldToast.from(context).setText(R.string.press_longer).setType(TYPE_DEFAULT).setLength(-1).show();
-    }
-
 }

@@ -41,9 +41,9 @@ import java.util.List;
  *
  */
 public class ReminderScheduler {
-    private static final String TAG = ReminderScheduler.class.getSimpleName();
     public static final Object LOCK = new Object();
     public static final int SNOOZE_MILLIS = 5 * D.MINUTE;
+    private static final String TAG = ReminderScheduler.class.getSimpleName();
 
     /**
      * helper class should not be instantiate

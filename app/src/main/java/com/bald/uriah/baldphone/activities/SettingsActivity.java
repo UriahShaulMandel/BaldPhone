@@ -73,8 +73,15 @@ import java.util.List;
  * {{@link SettingsItem}} are generated programmatically because of the huge differences that lies between different settings.
  */
 public class SettingsActivity extends BaldActivity {
-    private static final String TAG = SettingsActivity.class.getSimpleName();
     public static final float[] FONT_SIZES = new float[]{0.8f, 0.9f, 1.0f, 1.1f, 1.3f, 1.5f, 1.7f};
+    public static final String SAVEABLE_HISTORY_KEY = "SAVEABLE_HISTORY_KEY";
+    private static final String TAG = SettingsActivity.class.getSimpleName();
+    private final List<SettingsItem>
+            mainSettingsItemList = new ArrayList<>(),
+            connectionSettingsList = new ArrayList<>(),
+            accessibilitySettingsList = new ArrayList<>(),
+            displaySettingsList = new ArrayList<>(),
+            personalizationSettingsList = new ArrayList<>();
     private Ringtone ringtone;
     private Vibrator vibrator;
     private SharedPreferences sharedPreferences;
@@ -82,13 +89,6 @@ public class SettingsActivity extends BaldActivity {
     private RecyclerView recyclerView;
     private int section = -1;
     private BaldPrefsUtils baldPrefsUtils;
-
-    private final List<SettingsItem>
-            mainSettingsItemList = new ArrayList<>(),
-            connectionSettingsList = new ArrayList<>(),
-            accessibilitySettingsList = new ArrayList<>(),
-            displaySettingsList = new ArrayList<>(),
-            personalizationSettingsList = new ArrayList<>();
     private List<SettingsItem> settingsList = mainSettingsItemList;
 
     @SuppressLint("CommitPrefEdits")
@@ -127,51 +127,6 @@ public class SettingsActivity extends BaldActivity {
         if (baldPrefsUtils.hasChanged(this))
             recreate();
     }
-
-
-    public class SettingsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<SettingsRecyclerViewAdapter.ViewHolder> {
-        final LayoutInflater layoutInflater;
-
-        SettingsRecyclerViewAdapter() {
-            layoutInflater = (LayoutInflater) SettingsActivity.this.getSystemService(LAYOUT_INFLATER_SERVICE);
-        }
-
-        @NonNull
-        @Override
-        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new ViewHolder(layoutInflater.inflate(R.layout.settings_item, parent, false));
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-            super.onBindViewHolder(holder, position);
-            holder.update(settingsList.get(position));
-        }
-
-        @Override
-        public int getItemCount() {
-            return settingsList.size();
-        }
-
-
-        public class ViewHolder extends RecyclerView.ViewHolder {
-            TextView textView;
-            ImageView setting_icon;
-
-            public ViewHolder(View itemView) {
-                super(itemView);
-                textView = itemView.findViewById(R.id.tv_setting_name);
-                setting_icon = itemView.findViewById(R.id.setting_icon);
-            }
-
-            public void update(SettingsItem settingsItem) {
-                this.textView.setText(settingsItem.textResId);
-                this.setting_icon.setImageResource(settingsItem.drawableResId);
-                this.itemView.setOnClickListener(settingsItem);
-            }
-        }
-    }
-
 
     private void populateSettingsList() {
         final SettingsItem back =
@@ -407,63 +362,6 @@ public class SettingsActivity extends BaldActivity {
 
     }
 
-
-    //OOP
-    public abstract class SettingsItem implements View.OnClickListener {
-        public final @StringRes
-        int textResId;
-        public final @DrawableRes
-        int drawableResId;
-
-        protected SettingsItem(@StringRes int textResId, @DrawableRes int drawableResId) {
-            this.textResId = textResId;
-            this.drawableResId = drawableResId;
-        }
-
-    }
-
-    public class BDBSettingsItem extends SettingsItem {
-        private final BDB bdb;
-
-        BDBSettingsItem(@StringRes int textResId, BDB bdb, @DrawableRes int drawableResId) {
-            super(textResId, drawableResId);
-            this.bdb = bdb;
-        }
-
-        @Override
-        public void onClick(View v) {
-            bdb.show();
-        }
-    }
-
-    public class RunnableSettingsItem extends SettingsItem {
-        private final View.OnClickListener onClickListener;
-
-        RunnableSettingsItem(@StringRes int textResId, View.OnClickListener onClickListener, @DrawableRes int drawableResId) {
-            super(textResId, drawableResId);
-            this.onClickListener = onClickListener;
-        }
-
-        @Override
-        public void onClick(View v) {
-            onClickListener.onClick(v);
-        }
-    }
-
-
-    //careful!! apparently for no f****** reason the compiler cannot compile this class, and doesn't bother to inform you.
-    //    public class NewSettingsListSettingsItem extends RunnableSettingsItem {
-    //        NewSettingsListSettingsItem(@StringRes int textResId, @DrawableRes int drawableResId, List<SettingsItem> newSettingsList) {
-    //            super(textResId, v -> {
-    //                history.push(settingsList);
-    //                settingsList = newSettingsList;
-    //                recyclerView.getAdapter().notifyDataSetChanged();
-    //                recyclerView.scheduleLayoutAnimation();
-    //            }, drawableResId);
-    //        }
-    //    }
-
-
     @Override
     public void onBackPressed() {
         if (!goBack())
@@ -493,6 +391,18 @@ public class SettingsActivity extends BaldActivity {
         recyclerView.scheduleLayoutAnimation();
     }
 
+
+    //careful!! apparently for no f****** reason the compiler cannot compile this class, and doesn't bother to inform you.
+    //    public class NewSettingsListSettingsItem extends RunnableSettingsItem {
+    //        NewSettingsListSettingsItem(@StringRes int textResId, @DrawableRes int drawableResId, List<SettingsItem> newSettingsList) {
+    //            super(textResId, v -> {
+    //                history.push(settingsList);
+    //                settingsList = newSettingsList;
+    //                recyclerView.getAdapter().notifyDataSetChanged();
+    //                recyclerView.scheduleLayoutAnimation();
+    //            }, drawableResId);
+    //        }
+    //    }
 
     private void setupAlarmVolume() {
         final SeekBar volumeSeekBar = (SeekBar) LayoutInflater.from(this).inflate(R.layout.volume_seek_bar, null, false);
@@ -609,9 +519,6 @@ public class SettingsActivity extends BaldActivity {
         displaySettingsList.add(brightnessSettingsItem);
     }
 
-
-    public static final String SAVEABLE_HISTORY_KEY = "SAVEABLE_HISTORY_KEY";
-
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -637,5 +544,90 @@ public class SettingsActivity extends BaldActivity {
     @Override
     protected int requiredPermissions() {
         return PERMISSION_WRITE_SETTINGS;
+    }
+
+    public class SettingsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<SettingsRecyclerViewAdapter.ViewHolder> {
+        final LayoutInflater layoutInflater;
+
+        SettingsRecyclerViewAdapter() {
+            layoutInflater = (LayoutInflater) SettingsActivity.this.getSystemService(LAYOUT_INFLATER_SERVICE);
+        }
+
+        @NonNull
+        @Override
+        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            return new ViewHolder(layoutInflater.inflate(R.layout.settings_item, parent, false));
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+            super.onBindViewHolder(holder, position);
+            holder.update(settingsList.get(position));
+        }
+
+        @Override
+        public int getItemCount() {
+            return settingsList.size();
+        }
+
+
+        public class ViewHolder extends RecyclerView.ViewHolder {
+            TextView textView;
+            ImageView setting_icon;
+
+            public ViewHolder(View itemView) {
+                super(itemView);
+                textView = itemView.findViewById(R.id.tv_setting_name);
+                setting_icon = itemView.findViewById(R.id.setting_icon);
+            }
+
+            public void update(SettingsItem settingsItem) {
+                this.textView.setText(settingsItem.textResId);
+                this.setting_icon.setImageResource(settingsItem.drawableResId);
+                this.itemView.setOnClickListener(settingsItem);
+            }
+        }
+    }
+
+    //OOP
+    public abstract class SettingsItem implements View.OnClickListener {
+        public final @StringRes
+        int textResId;
+        public final @DrawableRes
+        int drawableResId;
+
+        protected SettingsItem(@StringRes int textResId, @DrawableRes int drawableResId) {
+            this.textResId = textResId;
+            this.drawableResId = drawableResId;
+        }
+
+    }
+
+    public class BDBSettingsItem extends SettingsItem {
+        private final BDB bdb;
+
+        BDBSettingsItem(@StringRes int textResId, BDB bdb, @DrawableRes int drawableResId) {
+            super(textResId, drawableResId);
+            this.bdb = bdb;
+        }
+
+        @Override
+        public void onClick(View v) {
+            bdb.show();
+        }
+    }
+
+    public class RunnableSettingsItem extends SettingsItem {
+        private final View.OnClickListener onClickListener;
+
+        RunnableSettingsItem(@StringRes int textResId, View.OnClickListener onClickListener, @DrawableRes int drawableResId) {
+            super(textResId, drawableResId);
+            this.onClickListener = onClickListener;
+        }
+
+        @Override
+        public void onClick(View v) {
+            onClickListener.onClick(v);
+        }
     }
 }

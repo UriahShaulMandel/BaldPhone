@@ -52,23 +52,22 @@ import static android.view.View.GONE;
  * both has {@link R.layout#contacts_search} in their layout.
  */
 abstract class BaseContactsActivity extends BaldActivity {
-    private static final String TAG = BaseContactsActivity.class.getSimpleName();
     public static final int SPEECH_REQUEST_CODE = 5678;
     public static final String INTENT_EXTRA_CONTACT_ADAPTER_MODE = "INTENT_EXTRA_CONTACT_ADAPTER_MODE";
-
+    private static final String TAG = BaseContactsActivity.class.getSimpleName();
+    private static final String FILTER_STATE = "FILTER_STATE";
+    private static final String FAVORITE_STATE = "FAVORITE_STATE";
     //<views>
     protected EditText et_filter_input;
     protected ImageView bt_speak, bt_favorite, bt_type;
+    //</views>
     protected RecyclerView recyclerView;
     protected BaldTitleBar baldTitleBar;
-    //</views>
-
     protected ContentResolver contentResolver;
-    private String filter = "";
-    private boolean favorite = false;
     protected ContactRecyclerViewAdapter contactRecyclerViewAdapter;
     protected int mode = ContactRecyclerViewAdapter.MODE_DEFAULT;
-
+    private String filter = "";
+    private boolean favorite = false;
     private SoftInputAssist softInputAssist;
 
     @Override
@@ -204,7 +203,6 @@ abstract class BaseContactsActivity extends BaldActivity {
 
     protected abstract Cursor getCursorForFilter(String filter, boolean favorite);
 
-
     private void applyFilter() {
         if (contactRecyclerViewAdapter != null) {
             contactRecyclerViewAdapter.changeCursor(getCursorForFilter(filter, favorite));
@@ -220,7 +218,6 @@ abstract class BaseContactsActivity extends BaldActivity {
 
     }
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == SPEECH_REQUEST_CODE && resultCode == RESULT_OK) {
@@ -234,10 +231,6 @@ abstract class BaseContactsActivity extends BaldActivity {
         } else
             super.onActivityResult(requestCode, resultCode, data);
     }
-
-    private static final String FILTER_STATE = "FILTER_STATE";
-    private static final String FAVORITE_STATE = "FAVORITE_STATE";
-
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {

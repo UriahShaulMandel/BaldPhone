@@ -38,12 +38,12 @@ import com.bald.uriah.baldphone.utils.D;
  * use {@link BaldButton#setOnClickListener(android.view.View.OnClickListener)} instead.
  */
 public class BaldButton extends android.support.v7.widget.AppCompatTextView implements View.OnLongClickListener, View.OnClickListener, BaldButtonInterface {
-    private OnClickListener onClickListener;
-    private BaldButtonTouchListener baldButtonTouchListener;
     private final SharedPreferences sharedPreferences;
     private final boolean longPresses, vibrationFeedback, longPressesShorter;
     private final Vibrator vibrator;
     private final BaldToast longer;
+    private OnClickListener onClickListener;
+    private BaldButtonTouchListener baldButtonTouchListener;
 
 
     public BaldButton(Context context) {

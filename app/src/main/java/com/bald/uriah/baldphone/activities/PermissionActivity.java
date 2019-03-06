@@ -55,35 +55,17 @@ import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.provider.Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES;
 
 public class PermissionActivity extends BaldActivity {
-    private List<PermissionItem> permissionItemList = new ArrayList<>();
-    private RecyclerView recyclerView;
     public static final String
             EXTRA_REQUIRED_PERMISSIONS = "EXTRA_REQUIRED_PERMISSIONS",
             EXTRA_NAME = "EXTRA_NAME",
             EXTRA_INTENT = "EXTRA_INTENT";
-
-
     public static final int[] REQUEST_CODES = {789, 788, 787};
+
+    private List<PermissionItem> permissionItemList = new ArrayList<>();
+    private RecyclerView recyclerView;
     private int requiredPermissions;
     private String name;
     private Intent ancestorCallingIntent;
-
-    private void calmyBDB() {
-        if (isTaskRoot()) {
-            BDB.from(this)
-                    .setTitle(R.string.permissions_part)
-                    .setSubText(R.string.permissions_calm)
-                    .setDialogState(BDialog.DialogState.OK_NO)
-                    .setPositiveButtonListener(params -> true)
-                    .setNegativeButtonListener(params -> {
-                        FakeLauncherActivity.resetPreferredLauncherAndOpenChooser(this);
-                        return true;
-                    })
-                    .setCancelable(true)
-                    .show();
-        } else
-            finish();
-    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -112,6 +94,23 @@ public class PermissionActivity extends BaldActivity {
     protected void onResume() {
         super.onResume();
         refreshPermissions();
+    }
+
+    private void calmyBDB() {
+        if (isTaskRoot()) {
+            BDB.from(this)
+                    .setTitle(R.string.permissions_part)
+                    .setSubText(R.string.permissions_calm)
+                    .setDialogState(BDialog.DialogState.OK_NO)
+                    .setPositiveButtonListener(params -> true)
+                    .setNegativeButtonListener(params -> {
+                        FakeLauncherActivity.resetPreferredLauncherAndOpenChooser(this);
+                        return true;
+                    })
+                    .setCancelable(true)
+                    .show();
+        } else
+            finish();
     }
 
     private void refreshPermissions() {
@@ -195,59 +194,20 @@ public class PermissionActivity extends BaldActivity {
 
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (S.intArrayContains(REQUEST_CODES, requestCode))
+            refreshPermissions();
+    }
 
-//    private void obtainPermissionList2() {
-//        permissionItemList.clear();
-//
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.System.canWrite(this)) {
-//            permissionItemList.add(new PermissionItem((v) -> {
-//                startActivityForResult(
-//                        new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS)
-//                                .setData(Uri.parse("package:" + getPackageName())), 798);
-//
-//            }, getString(R.string.settings_permission), getString(R.string.change_system_settings_subtext)));
-//        } else {
-//            final String listeners = Settings.Secure.getString(getContentResolver(), "enabled_notification_listeners");
-//            if (listeners == null || !listeners.contains(getApplicationContext().getPackageName()))
-//                permissionItemList.add(new PermissionItem((v) -> startActivityForResult(new Intent(
-//                        "android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS"), REQUEST_CODES[0]), getString(R.string.enable_notification_access), getString(R.string.enable_notification_access_subtext)));
-//        }
-//
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//            if (!defaultDialerGranted(this)) {
-//                permissionItemList.add(new PermissionItem(v -> startActivityForResult(new Intent(TelecomManager.ACTION_CHANGE_DEFAULT_DIALER)
-//                        .putExtra(TelecomManager.EXTRA_CHANGE_DEFAULT_DIALER_PACKAGE_NAME, getPackageName()), REQUEST_CODES[1]), getString(R.string.set_default_dialer), getString(R.string.set_default_dialer_subtext)));
-//            } else {
-//                if (ActivityCompat.checkSelfPermission(this, READ_CALL_LOG) != PackageManager.PERMISSION_GRANTED) {
-//                    permissionItemList.add(
-//                            new SimplePermissionItem(READ_CALL_LOG, getString(R.string.read_call_log), getString(R.string.read_call_log_subtext)));
-//                }
-//                if (ActivityCompat.checkSelfPermission(this, CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-//                    permissionItemList.add(
-//                            new SimplePermissionItem(CALL_PHONE, getString(R.string.call), getString(R.string.call_subtext)));
-//                }
-//                if (ActivityCompat.checkSelfPermission(this, WRITE_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
-//                    permissionItemList.add(
-//                            new SimplePermissionItem(WRITE_CONTACTS, getString(R.string.write_contacts), getString(R.string.contacts_subtext)));
-//                }
-//                if (ActivityCompat.checkSelfPermission(this, READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
-//                    permissionItemList.add(
-//                            new SimplePermissionItem(READ_CONTACTS, getString(R.string.read_contacts), getString(R.string.contacts_read_subtext)));
-//                }
-//            }
-//            if (ActivityCompat.checkSelfPermission(this, WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-//                permissionItemList.add(
-//                        new SimplePermissionItem(WRITE_EXTERNAL_STORAGE, getString(R.string.write_external_storage), getString(R.string.external_storage_subtext)));
-//            }
-//
-//            if (ActivityCompat.checkSelfPermission(this, CAMERA) != PackageManager.PERMISSION_GRANTED) {
-//                permissionItemList.add(
-//                        new SimplePermissionItem(CAMERA, getString(R.string.camera), getString(R.string.camera_subtext)));
-//            }
-//        }
-//
-//    }
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_NONE;
+    }
 
+    @Override
+    public void onBackPressed() {
+    }
 
     private class PermissionRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<PermissionRecyclerViewAdapter.ViewHolder> {
         final LayoutInflater layoutInflater;
@@ -305,22 +265,5 @@ public class PermissionActivity extends BaldActivity {
                     title,
                     explanation);
         }
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (S.intArrayContains(REQUEST_CODES, requestCode))
-            refreshPermissions();
-
-    }
-
-
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_NONE;
-    }
-
-    @Override
-    public void onBackPressed() {
     }
 }

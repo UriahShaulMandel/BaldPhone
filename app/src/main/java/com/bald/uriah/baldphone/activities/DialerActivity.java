@@ -44,16 +44,45 @@ import com.bald.uriah.baldphone.databases.contacts.MiniContact;
 import com.bald.uriah.baldphone.utils.BaldToast;
 
 public class DialerActivity extends BaldActivity {
+    public static final String SORT_ORDER =
+            "upper(" + ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + ") ASC";
     private static final String TAG = DialerActivity.class.getSimpleName();
+    private final static String[] PROJECTION =
+            {ContactsContract.Data.DISPLAY_NAME, ContactsContract.Data._ID, ContactsContract.Contacts.PHOTO_URI, ContactsContract.Data.LOOKUP_KEY, ContactsContract.Data.STARRED};
+    private static final String NUMBER_STATE = "NUMBER_STATE";
+
     private ContentResolver contentResolver;
     private ContactRecyclerViewAdapter contactRecyclerViewAdapter;
     private RecyclerView recyclerView;
-
     private TextView tv_number;
     private View b_call, b_clear, b_hash, b_sulamit, b_backspace, empty_view;
     private View[] numpad;
     private StringBuilder number = new StringBuilder();
 
+    public static void call(CharSequence number, Context context) {
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+            try {
+                context.startActivity(new Intent(Intent.ACTION_CALL).setData(Uri.parse("tel:" + number)));
+            } catch (SecurityException e) {
+                Log.e(TAG, e.getMessage());
+                e.printStackTrace();
+                throw new RuntimeException(e);
+            }
+        } else
+            BaldToast.from(context) // should NEVER occur, but in case..
+                    .setType(BaldToast.TYPE_ERROR)
+                    .setText(R.string.phone_ask_permission_subtext)
+                    .show();
+
+    }
+
+    public static void call(MiniContact miniContact, Context context) {
+        try {
+            call(Contact.fromLookupKey(miniContact.lookupKey, context.getContentResolver()).getPhoneList().get(0).second, context);
+        } catch (Exception e) {
+            BaldToast.error(context);
+        }
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -70,7 +99,6 @@ public class DialerActivity extends BaldActivity {
 
     }
 
-
     private void getContactsByNumberFilter() {
         final Uri uri = Uri.withAppendedPath(ContactsContract.CommonDataKinds.Phone.CONTENT_FILTER_URI, Uri.encode(number.toString()));
         final Cursor contactsCursor = contentResolver.query(uri, PROJECTION, null, null, SORT_ORDER);
@@ -81,12 +109,6 @@ public class DialerActivity extends BaldActivity {
             recyclerView.setAdapter(contactRecyclerViewAdapter);
         }
     }
-
-    private final static String[] PROJECTION =
-            {ContactsContract.Data.DISPLAY_NAME, ContactsContract.Data._ID, ContactsContract.Contacts.PHOTO_URI, ContactsContract.Data.LOOKUP_KEY, ContactsContract.Data.STARRED};
-    public static final String SORT_ORDER =
-            "upper(" + ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + ") ASC";
-
 
     private void attachXml() {
         recyclerView = findViewById(R.id.contacts_recycler_view);
@@ -113,21 +135,6 @@ public class DialerActivity extends BaldActivity {
         b_backspace = findViewById(R.id.b_backspace);
         b_sulamit = findViewById(R.id.b_sulamit);
         b_hash = findViewById(R.id.b_hash);
-    }
-
-    private class DialerClickListener implements View.OnClickListener {
-        private final char c;
-
-        DialerClickListener(char c) {
-            this.c = c;
-        }
-
-        @Override
-        public void onClick(View v) {
-            number.append(c);
-            tv_number.setText(number);
-            searchForContact();
-        }
     }
 
     private void setOnClickListeners() {
@@ -158,34 +165,6 @@ public class DialerActivity extends BaldActivity {
         getContactsByNumberFilter();
     }
 
-
-    public static void call(CharSequence number, Context context) {
-        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
-            try {
-                context.startActivity(new Intent(Intent.ACTION_CALL).setData(Uri.parse("tel:" + number)));
-            } catch (SecurityException e) {
-                Log.e(TAG, e.getMessage());
-                e.printStackTrace();
-                throw new RuntimeException(e);
-            }
-        } else
-            BaldToast.from(context) // should NEVER occur, but in case..
-                    .setType(BaldToast.TYPE_ERROR)
-                    .setText(R.string.phone_ask_permission_subtext)
-                    .show();
-
-    }
-
-    public static void call(MiniContact miniContact, Context context) {
-        try {
-            call(Contact.fromLookupKey(miniContact.lookupKey, context.getContentResolver()).getPhoneList().get(0).second, context);
-        } catch (Exception e) {
-            BaldToast.error(context);
-        }
-    }
-
-    private static final String NUMBER_STATE = "NUMBER_STATE";
-
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -205,6 +184,21 @@ public class DialerActivity extends BaldActivity {
 
     @Override
     protected int requiredPermissions() {
-        return PERMISSION_READ_CONTACTS|PERMISSION_CALL_PHONE;
+        return PERMISSION_READ_CONTACTS | PERMISSION_CALL_PHONE;
+    }
+
+    private class DialerClickListener implements View.OnClickListener {
+        private final char c;
+
+        DialerClickListener(char c) {
+            this.c = c;
+        }
+
+        @Override
+        public void onClick(View v) {
+            number.append(c);
+            tv_number.setText(number);
+            searchForContact();
+        }
     }
 }

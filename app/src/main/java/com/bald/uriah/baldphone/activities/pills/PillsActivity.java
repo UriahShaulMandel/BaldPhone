@@ -123,6 +123,21 @@ public class PillsActivity extends BaldActivity {
         recyclerView.getAdapter().notifyDataSetChanged();
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == ADD_REMINDER_REQUEST_CODE)
+            if (resultCode == RESULT_OK) {
+                BaldToast.from(this).setText(R.string.pill_added).show();
+                refreshViews();
+            }
+
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_NONE;
+    }
 
     class PillsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<PillsRecyclerViewAdapter.ViewHolder> {
         private final LayoutInflater inflater;
@@ -213,21 +228,5 @@ public class PillsActivity extends BaldActivity {
                 }
             }
         }
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == ADD_REMINDER_REQUEST_CODE)
-            if (resultCode == RESULT_OK) {
-                BaldToast.from(this).setText(R.string.pill_added).show();
-                refreshViews();
-            }
-
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_NONE;
     }
 }

@@ -51,21 +51,19 @@ import com.bald.uriah.baldphone.fragments_and_dialogs.LetterChooserDialog;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<ContactRecyclerViewAdapter.ViewHolder> {
+    public static final int MODE_DEFAULT = 0;
+    public static final int MODE_SOS = 1;
+    public static final int MODE_SHARE = 2;
     private static final String TAG = ContactRecyclerViewAdapter.class.getSimpleName();
     private final BaldActivity activity;
-    private Cursor cursor;
     private final LayoutInflater layoutInflater;
     private final Drawable letterContactBackground;
     private final SparseIntArray letterToPosition;
     private final RecyclerView recyclerView;
     private final int mode;
-
     @ColorInt
     private final int textColorOnGold, textColorOnButton;
-
-    public static final int MODE_DEFAULT = 0;
-    public static final int MODE_SOS = 1;
-    public static final int MODE_SHARE = 2;
+    private Cursor cursor;
 
 
     public ContactRecyclerViewAdapter(BaldActivity activity, Cursor cursor, RecyclerView recyclerView, @IntRange(from = MODE_DEFAULT, to = MODE_SHARE) int mode) {

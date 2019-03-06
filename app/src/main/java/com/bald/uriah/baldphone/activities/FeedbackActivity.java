@@ -47,15 +47,14 @@ public class FeedbackActivity extends BaldActivity {
         });
     }
 
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_NONE;
+    }
 
     private final static class FeedbackException extends Exception {
         FeedbackException(String message) {
             super(message);
         }
-    }
-
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_NONE;
     }
 }

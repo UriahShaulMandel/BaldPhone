@@ -44,9 +44,8 @@ import org.joda.time.DateTime;
  * if called with extra {@link #ALARM_KEY_AS_EXTRA_KEY} it'll edit the alarm
  */
 public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldActivity {
-    private static final String TAG = AddAlarmActivity.class.getSimpleName();
     static final String ALARM_KEY_AS_EXTRA_KEY = "alarm";
-
+    private static final String TAG = AddAlarmActivity.class.getSimpleName();
     private int alarmKeyToEdit = -1;
     private Vibrator vibrator;
     private BaldButton bt_alarm_submit;
@@ -187,6 +186,7 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
             });
         }
     }
+
     @Override
     protected int requiredPermissions() {
         return PERMISSION_NONE;

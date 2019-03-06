@@ -31,7 +31,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v7.widget.RecyclerView;
-import android.util.SparseIntArray;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -89,16 +88,6 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
         textColorOnRegular = typedValue.data;
         theme.resolveAttribute(R.attr.bald_background, typedValue, true);
         this.letterContactBackground = new ColorDrawable(typedValue.data);
-
-        SparseIntArray timesToValues = new SparseIntArray();
-        int dayOfYear, prevDayOfYear = -1;
-        for (int i = 0; i < callList.size(); i++) {
-            dayOfYear = new DateTime(callList.get(i).dateTime).getDayOfYear();
-            if (dayOfYear != prevDayOfYear) {
-                timesToValues.append(dayOfYear, i);
-            }
-            prevDayOfYear = dayOfYear;
-        }
 
     }
 
@@ -187,10 +176,8 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
             setDay(
                     (index == 0 ||
                             new DateTime(callList.get(index - 1).dateTime).getDayOfYear() !=
-                                    new DateTime(call.dateTime).getDayOfYear())
-                            ?
-                            S.stringTimeFromLong(activity, call.dateTime, false)
-                            :
+                                    new DateTime(call.dateTime).getDayOfYear()) ?
+                            S.stringTimeFromLong(activity, call.dateTime, false) :
                             null
             );
 
@@ -283,7 +270,6 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                             return true;
                         })
                         .show();
-
             }
         }
     }

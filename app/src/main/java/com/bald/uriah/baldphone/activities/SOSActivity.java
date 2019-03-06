@@ -51,6 +51,7 @@ import static com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinH
 public class SOSActivity extends BaldActivity {
     private BaldLinearLayoutButton ec1, ec2, ecReal;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +60,16 @@ public class SOSActivity extends BaldActivity {
         setContentView(R.layout.activity_sos);
         setupXml();
         setupYoutube(2);
+    }
+
+    private static void setupEC(BaldLinearLayoutButton baldLinearLayoutButton, MiniContact miniContact) {
+        if (miniContact.photo != null)
+            ((ImageView) baldLinearLayoutButton.getChildAt(0)).setImageURI(Uri.parse(miniContact.photo));
+        else
+            ((ImageView) baldLinearLayoutButton.getChildAt(0)).setImageResource(R.drawable.face_on_button);
+
+        ((TextView) baldLinearLayoutButton.getChildAt(1)).setText(miniContact.name);
+        baldLinearLayoutButton.setOnClickListener(v -> DialerActivity.call(miniContact, v.getContext()));
     }
 
     @Override
@@ -101,18 +112,16 @@ public class SOSActivity extends BaldActivity {
         ecReal = findViewById(R.id.ec_real);
     }
 
-    private static void setupEC(BaldLinearLayoutButton baldLinearLayoutButton, MiniContact miniContact) {
-
-
-        if (miniContact.photo != null)
-            ((ImageView) baldLinearLayoutButton.getChildAt(0)).setImageURI(Uri.parse(miniContact.photo));
-        else
-            ((ImageView) baldLinearLayoutButton.getChildAt(0)).setImageResource(R.drawable.face_on_button);
-
-        ((TextView) baldLinearLayoutButton.getChildAt(1)).setText(miniContact.name);
-        baldLinearLayoutButton.setOnClickListener(v -> DialerActivity.call(miniContact, v.getContext()));
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.nothing, R.anim.slide_out_up);
     }
 
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_CALL_PHONE | PERMISSION_READ_CONTACTS;
+    }
 
     public static class PinHelper {
         /**
@@ -173,7 +182,6 @@ public class SOSActivity extends BaldActivity {
                         new String[]{
                                 lookupKey
                         }, null)) {
-
                     if (cursor.moveToFirst()) {
                         ret.add(new MiniContact(
                                 lookupKey,
@@ -182,8 +190,6 @@ public class SOSActivity extends BaldActivity {
                                 cursor.getInt(cursor.getColumnIndex(ContactsContract.Contacts._ID)),
                                 cursor.getInt(cursor.getColumnIndex(ContactsContract.Contacts.STARRED)) == 1
                         ));
-
-
                     } else {
                         removeContact(context, lookupKey);
                     }
@@ -196,17 +202,5 @@ public class SOSActivity extends BaldActivity {
             Collections.sort(ret, (o1, o2) -> o1.name.compareTo(o2.name));
             return ret;
         }
-
-    }
-
-    @Override
-    public void finish() {
-        super.finish();
-        overridePendingTransition(R.anim.nothing, R.anim.slide_out_up);
-    }
-
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_CALL_PHONE | PERMISSION_READ_CONTACTS;
     }
 }

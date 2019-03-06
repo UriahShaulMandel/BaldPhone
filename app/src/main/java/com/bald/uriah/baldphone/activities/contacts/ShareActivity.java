@@ -56,8 +56,21 @@ import java.util.List;
  * the whatsapp part the activity actually mostly defined in {@link BaseContactsActivity}
  */
 public class ShareActivity extends BaseContactsActivity {
-    private static final String TAG = ShareActivity.class.getSimpleName();
     public static final String EXTRA_SHARABLE_URI = "EXTRA_SHARABLE_URI";
+    public static final String SORT_ORDER =
+            "upper(" + ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + ") ASC";
+    private static final String TAG = ShareActivity.class.getSimpleName();
+    private final static String[] PROJECTION = {
+            ContactsContract.Data.DISPLAY_NAME,
+            ContactsContract.Data._ID,
+            ContactsContract.Data.PHOTO_URI,
+            ContactsContract.Data.LOOKUP_KEY,
+            ContactsContract.Data.STARRED,
+            ContactsContract.Data.MIMETYPE};
+    private static final String STAR_SELECTION =
+            "AND " + ContactsContract.Data.STARRED + " = 1";
+    private static final String SELECTION_NAME =
+            ContactsContract.Data.MIMETYPE + "='" + "vnd.android.cursor.item/vnd.com.whatsapp.profile" + "' AND " + ContactsContract.RawContacts.ACCOUNT_TYPE + "= ? AND " + ContactsContract.Data.DISPLAY_NAME + " LIKE ?";
     private Intent shareIntent;
     private BaldSwitch bald_switch;
     private ModularRecyclerView recyclerView;
@@ -76,7 +89,6 @@ public class ShareActivity extends BaseContactsActivity {
         packageManager = getPackageManager();
         recyclerView.getAdapter().notifyDataSetChanged();
     }
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -124,31 +136,11 @@ public class ShareActivity extends BaseContactsActivity {
         whatsapp_container = findViewById(R.id.whatsapp_container);
     }
 
-
     @Override
     protected Cursor getCursorForFilter(String filter, boolean favorite) {
         return getContactsByNameFilter(filter, favorite);
 
     }
-
-
-    private final static String[] PROJECTION = {
-            ContactsContract.Data.DISPLAY_NAME,
-            ContactsContract.Data._ID,
-            ContactsContract.Data.PHOTO_URI,
-            ContactsContract.Data.LOOKUP_KEY,
-            ContactsContract.Data.STARRED,
-            ContactsContract.Data.MIMETYPE};
-
-    private static final String STAR_SELECTION =
-            "AND " + ContactsContract.Data.STARRED + " = 1";
-
-    private static final String SELECTION_NAME =
-            ContactsContract.Data.MIMETYPE + "='" + "vnd.android.cursor.item/vnd.com.whatsapp.profile" + "' AND " + ContactsContract.RawContacts.ACCOUNT_TYPE + "= ? AND " + ContactsContract.Data.DISPLAY_NAME + " LIKE ?";
-
-    public static final String SORT_ORDER =
-            "upper(" + ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + ") ASC";
-
 
     private Cursor getContactsByNameFilter(String filter, boolean favorite) {
         final String[] args = {"com.whatsapp", "%" + filter + "%"};

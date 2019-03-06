@@ -48,6 +48,22 @@ public class NotificationsActivity extends BaldActivity {
     public Bundle[] activeNotifications;
     private RecyclerView recyclerView;
     private NotificationRecyclerViewAdapter notificationRecyclerViewAdapter;
+    private final BroadcastReceiver notificationReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (!intent.getAction().equals(NotificationListenerService.NOTIFICATIONS_ACTIVITY_BROADCAST))
+                throw new AssertionError("!intent.getAction().equals(NotificationListenerService.NOTIFICATIONS_ACTIVITY_BROADCAST)");
+            activeNotifications =
+                    (Bundle[]) intent.getParcelableArrayExtra(KEY_EXTRA_NOTIFICATIONS);
+            if (notificationRecyclerViewAdapter == null) {
+                notificationRecyclerViewAdapter =
+                        new NotificationRecyclerViewAdapter(NotificationsActivity.this, activeNotifications);
+                recyclerView.setAdapter(notificationRecyclerViewAdapter);
+            } else {
+                notificationRecyclerViewAdapter.changeNotifications(activeNotifications);
+            }
+        }
+    };
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -103,23 +119,6 @@ public class NotificationsActivity extends BaldActivity {
 
         super.onPause();
     }
-
-    private final BroadcastReceiver notificationReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (!intent.getAction().equals(NotificationListenerService.NOTIFICATIONS_ACTIVITY_BROADCAST))
-                throw new AssertionError("!intent.getAction().equals(NotificationListenerService.NOTIFICATIONS_ACTIVITY_BROADCAST)");
-            activeNotifications =
-                    (Bundle[]) intent.getParcelableArrayExtra(KEY_EXTRA_NOTIFICATIONS);
-            if (notificationRecyclerViewAdapter == null) {
-                notificationRecyclerViewAdapter =
-                        new NotificationRecyclerViewAdapter(NotificationsActivity.this, activeNotifications);
-                recyclerView.setAdapter(notificationRecyclerViewAdapter);
-            } else {
-                notificationRecyclerViewAdapter.changeNotifications(activeNotifications);
-            }
-        }
-    };
 
     @Override
     public void finish() {

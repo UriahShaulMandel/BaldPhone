@@ -36,7 +36,7 @@ import java.util.Objects;
 /**
  * even though its not a representation of App and it represents an activity
  * this name fits the best
- *
+ * <p>
  * using this old java getters and setters because Room requires that.
  * see {@link Entity}
  */

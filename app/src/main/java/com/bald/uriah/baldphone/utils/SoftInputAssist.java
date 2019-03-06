@@ -31,14 +31,13 @@ import android.widget.FrameLayout;
  * https://stackoverflow.com/questions/7417123/android-how-to-adjust-layout-in-full-screen-mode-when-softkeyboard-is-visible
  */
 public class SoftInputAssist {
+    private final Rect contentAreaOfWindowBounds = new Rect();
+    private final FrameLayout.LayoutParams rootViewLayout;
     private View rootView;
     private ViewGroup contentContainer;
     private ViewTreeObserver viewTreeObserver;
     private int usableHeightPrevious = 0;
     private boolean dead;
-
-    private final Rect contentAreaOfWindowBounds = new Rect();
-    private final FrameLayout.LayoutParams rootViewLayout;
 
     public SoftInputAssist(Activity activity) {
         contentContainer = activity.findViewById(android.R.id.content);

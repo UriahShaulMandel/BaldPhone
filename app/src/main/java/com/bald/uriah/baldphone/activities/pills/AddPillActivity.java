@@ -47,11 +47,9 @@ import com.bald.uriah.baldphone.views.BaldTitleBar;
 import static com.bald.uriah.baldphone.utils.BaldToast.TYPE_ERROR;
 
 public class AddPillActivity extends BaldActivity {
-    private static final String TAG = AddPillActivity.class.getSimpleName();
     public static final int INDEX_CUSTOM = 5;
-
     static final String REMINDER_KEY_AS_EXTRA_KEY = "reminder";
-
+    private static final String TAG = AddPillActivity.class.getSimpleName();
     private int reminderIdToEdit = -1;
 
     private Vibrator vibrator;

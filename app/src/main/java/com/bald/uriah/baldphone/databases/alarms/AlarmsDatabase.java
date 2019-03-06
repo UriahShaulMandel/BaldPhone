@@ -27,10 +27,8 @@ import android.content.Context;
 @Database(entities = {Alarm.class}, version = 1, exportSchema = false)
 
 public abstract class AlarmsDatabase extends RoomDatabase {
-    public abstract AlarmsDatabaseDao alarmsDatabaseDao();
-
-    private static AlarmsDatabase alarmsDatabase = null;
     private static final Object LOCK = new Object();
+    private static AlarmsDatabase alarmsDatabase = null;
 
     public static AlarmsDatabase getInstance(Context context) {
         synchronized (LOCK) {
@@ -40,4 +38,6 @@ public abstract class AlarmsDatabase extends RoomDatabase {
             return alarmsDatabase;
         }
     }
+
+    public abstract AlarmsDatabaseDao alarmsDatabaseDao();
 }

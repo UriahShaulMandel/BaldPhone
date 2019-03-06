@@ -30,7 +30,6 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.WindowManager;
@@ -44,18 +43,18 @@ import com.bald.uriah.baldphone.databases.apps.AppsDatabase;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
 import com.bald.uriah.baldphone.utils.BDB;
 import com.bald.uriah.baldphone.utils.BDialog;
+import com.bald.uriah.baldphone.utils.S;
 
 import java.util.List;
 
 import static com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter.TYPE_HEADER;
 
 public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivity {
-    private static final String TAG = AppsActivity.class.getSimpleName();
     public static final int UNINSTALL_REQUEST_CODE = 52;
+    private static final String TAG = AppsActivity.class.getSimpleName();
     private static final String SELECTED_APP_INDEX = "SELECTED_APP_INDEX";
     private static final int TIME_FOR_EFFECT = 300;
     private int lastIndex = -1;
-
 
     //"finals"
     private AppsDatabase appsDatabase;
@@ -63,13 +62,11 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
     private int numberOfAppsInARow;
     private int barHeight;
 
-
     //views
     private View bar, pin, open, uninstall;
     private TextView tv_add_or_rem_shortcut;
     private ImageView iv_pin;
     private RecyclerView recyclerView;
-
 
     private AppsRecyclerViewAdapter appsRecyclerViewAdapter;
 
@@ -84,11 +81,9 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
         drawableRemPin = ContextCompat.getDrawable(this, R.drawable.remove_on_button);
         barHeight = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 120f, getResources().getDisplayMetrics());
 
-
         appsDatabase = AppsDatabase.getInstance(AppsActivity.this);
         final List<App> appList = appsDatabase.appsDatabaseDao().getAllOrderedByABC();
         attachXml();
-
         appsRecyclerViewAdapter = new AppsRecyclerViewAdapter(appList, this, this::changeBar, recyclerView);
 
         final WindowManager windowManager = getWindowManager();
@@ -103,10 +98,8 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
                 switch (appsRecyclerViewAdapter.getItemViewType(position)) {
                     case TYPE_HEADER:
                         return numberOfAppsInARow;
-
                     case AppsRecyclerViewAdapter.TYPE_ITEM:
                         return 1;
-
                     default:
                         return 1;
                 }
@@ -116,14 +109,8 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
 
         open.setOnClickListener(v -> {
             if (appsRecyclerViewAdapter.index != -1) {
-                //AppsActivity.this.startActivity(AppsActivity.this.getPackageManager().getLaunchIntentForPackage(pinnedList.get(appsRecyclerViewAdapter.index).stringIntent));
-                Intent i = new Intent(Intent.ACTION_MAIN);
-
-                i.addCategory(Intent.CATEGORY_LAUNCHER);
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
-                        Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
-                i.setComponent(ComponentName.unflattenFromString(((App) appsRecyclerViewAdapter.dataList.get(appsRecyclerViewAdapter.index)).getFlattenComponentName()));
-                startActivity(i);
+                final ComponentName componentName = ComponentName.unflattenFromString(((App) appsRecyclerViewAdapter.dataList.get(appsRecyclerViewAdapter.index)).getFlattenComponentName());
+                S.startComponentName(v.getContext(), componentName);
             }
         });
         pin.setOnClickListener(v -> {
@@ -147,7 +134,6 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
             }
         });
         uninstall.setOnClickListener(v -> {
-
             final App app = (App) appsRecyclerViewAdapter.dataList.get(appsRecyclerViewAdapter.index);
             BDB.from(this)
                     .setTitle(getText(R.string.uninstall) + app.getLabel())
@@ -186,12 +172,7 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == UNINSTALL_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
-                Log.d("TAG", "onActivityResult: user accepted the (un)install");
                 recreate();
-            } else if (resultCode == RESULT_CANCELED) {
-                Log.d("TAG", "onActivityResult: user canceled the (un)install");
-            } else if (resultCode == RESULT_FIRST_USER) {
-                Log.d("TAG", "onActivityResult: failed to (un)install");
             }
         }
     }
@@ -232,11 +213,6 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
         animator.start();
     }
 
-
-    public interface ChangeAppListener {
-        void changeApp(int index);
-    }
-
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -257,5 +233,9 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
     @Override
     protected int requiredPermissions() {
         return PERMISSION_NONE;
+    }
+
+    public interface ChangeAppListener {
+        void changeApp(int index);
     }
 }

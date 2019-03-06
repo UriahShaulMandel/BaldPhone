@@ -48,14 +48,15 @@ import com.bald.uriah.baldphone.utils.S;
 
 public class HomePage1 extends HomeView {
     public static final String TAG = HomePage1.class.getSimpleName();
+    private final static String WHATSAPP_PACKAGE_NAME = "com.whatsapp";
     private View view;
     private View bt_clock, bt_camera, bt_videos, bt_assistant, bt_messages, bt_photos, bt_contacts, bt_dialer, bt_whatsapp, bt_apps, bt_reminders, bt_recent;
     private PackageManager packageManager;
 
+
     public HomePage1(@NonNull HomeScreen homeScreen) {
         super(homeScreen);
     }
-
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container) {
@@ -68,7 +69,6 @@ public class HomePage1 extends HomeView {
         genOnClickListeners();
         return view;
     }
-
 
     private void attachXml() {
         bt_apps = view.findViewById(R.id.bt_apps);
@@ -86,9 +86,6 @@ public class HomePage1 extends HomeView {
 
 
     }
-
-    private final static String WHATSAPP_PACKAGE_NAME = "com.whatsapp";
-
 
     private Intent getCameraIntent() {
         PackageManager localPackageManager = homeScreen.getPackageManager();
@@ -123,10 +120,10 @@ public class HomePage1 extends HomeView {
             });
 
         bt_apps.setOnClickListener(v -> {
-                if (!homeScreen.finishedUpdatingApps)
-                    homeScreen.launchAppsActivity = true;
-                else
-                    homeScreen.startActivity(new Intent(HomePage1.this.homeScreen, AppsActivity.class));
+            if (!homeScreen.finishedUpdatingApps)
+                homeScreen.launchAppsActivity = true;
+            else
+                homeScreen.startActivity(new Intent(HomePage1.this.homeScreen, AppsActivity.class));
 
 
         });

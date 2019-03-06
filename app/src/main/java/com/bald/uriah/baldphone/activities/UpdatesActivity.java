@@ -66,7 +66,16 @@ public class UpdatesActivity extends BaldActivity {
     private BaldToast notConnectedToast, couldNotStartDownloadToast, downloadFinishedToast, downloadingToast, downloadedFileCouldNotBeDeletedToast, tryNowToast, pleaseBePateint;
     private TextView tv_new_version, tv_current_version, tv_change_log, bt, tv_download_progress, bt_re;
     private ProgressBar pb;
-
+    private final Runnable progressChecker = new Runnable() {
+        @Override
+        public void run() {
+            try {
+                checkProgress();
+            } finally {
+                handler.postDelayed(progressChecker, PROGRESS_DELAY);
+            }
+        }
+    };
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -104,7 +113,6 @@ public class UpdatesActivity extends BaldActivity {
         stopProgressChecker();
         super.onDestroy();
     }
-
 
     public void apply() {
         if (isDestroyed())
@@ -183,8 +191,13 @@ public class UpdatesActivity extends BaldActivity {
         downloadingToast.show();
         tv_download_progress.setVisibility(View.VISIBLE);
         deleteCurrentUpdateFile();
+
+        final Uri uri =
+                Uri.parse(
+                        message.length > UpdatingUtil.MESSAGE_ALTERNATIVE_URL ?
+                                message[UpdatingUtil.MESSAGE_ALTERNATIVE_URL] : UpdatingUtil.APK_URL);
         final DownloadManager.Request request =
-                new DownloadManager.Request(Uri.parse(UpdatingUtil.APK_URL))
+                new DownloadManager.Request(uri)
                         .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, UpdatingUtil.FILENAME)
                         .setDescription(getText(R.string.downloading_updates));
 
@@ -213,7 +226,6 @@ public class UpdatesActivity extends BaldActivity {
         return true;
     }
 
-
     private void checkProgress() {
         final Cursor cursor = manager.query(new DownloadManager.Query()
                 .setFilterByStatus(~(DownloadManager.STATUS_FAILED | DownloadManager.STATUS_SUCCESSFUL)));
@@ -231,11 +243,9 @@ public class UpdatesActivity extends BaldActivity {
                 break;
             }
 
-
         } while (cursor.moveToNext());
         cursor.close();
     }
-
 
     private void startProgressChecker() {
         if (!isProgressCheckerRunning) {
@@ -244,36 +254,22 @@ public class UpdatesActivity extends BaldActivity {
         }
     }
 
-
     private void stopProgressChecker() {
         handler.removeCallbacks(progressChecker);
         isProgressCheckerRunning = false;
     }
 
-    private final Runnable progressChecker = new Runnable() {
-        @Override
-        public void run() {
-            try {
-                checkProgress();
-            } finally {
-                handler.postDelayed(progressChecker, PROGRESS_DELAY);
-            }
-        }
-    };
-
     public void install() {
         final File downloadedFile = getDownloadedFile();
         final Uri apkUri = S.fileToUriCompat(downloadedFile, this);
-        final Intent intent;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            intent = new Intent(Intent.ACTION_INSTALL_PACKAGE)
-                    .setData(apkUri)
-                    .setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        } else {
-            intent = new Intent(Intent.ACTION_VIEW)
-                    .setDataAndType(apkUri, "application/vnd.android.package-archive")
-                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        }
+        final Intent intent =
+                Build.VERSION.SDK_INT >= Build.VERSION_CODES.N ?
+                        new Intent(Intent.ACTION_INSTALL_PACKAGE)
+                                .setData(apkUri)
+                                .setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION) :
+                        new Intent(Intent.ACTION_VIEW)
+                                .setDataAndType(apkUri, "application/vnd.android.package-archive")
+                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         this.startActivity(intent);
     }
 

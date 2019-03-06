@@ -30,7 +30,6 @@ import android.util.Log;
 import com.bald.uriah.baldphone.databases.contacts.MiniContact;
 
 public class Call {
-    private static final String TAG = Call.class.getSimpleName();
     static final String[] PROJECTION = new String[]{
             CallLog.Calls.NUMBER,
             CallLog.Calls.DURATION,
@@ -38,7 +37,7 @@ public class Call {
             CallLog.Calls.TYPE,
             CallLog.Calls.CACHED_LOOKUP_URI
     };
-
+    private static final String TAG = Call.class.getSimpleName();
     public final String phoneNumber;
     public final int lengthInSeconds;
     public final long dateTime;

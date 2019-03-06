@@ -27,40 +27,40 @@ import android.util.AttributeSet;
 import com.bald.uriah.baldphone.utils.D;
 
 public class MediumBaldButtonForTutorial extends android.support.v7.widget.AppCompatTextView implements BaldButtonInterface {
-        private Vibrator vibrator;
-        private OnClickListener onClickListener;
+    private Vibrator vibrator;
+    private OnClickListener onClickListener;
 
-        public MediumBaldButtonForTutorial(Context context) {
-            super(context);
-            this.vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        }
-
-        public MediumBaldButtonForTutorial(Context context, AttributeSet attrs) {
-            super(context, attrs);
-            this.vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        }
-
-        public MediumBaldButtonForTutorial(Context context, AttributeSet attrs, int defStyleAttr) {
-            super(context, attrs, defStyleAttr);
-            this.vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        }
-
-        @Override
-        public void baldPerformClick() {
-            if (onClickListener != null)
-                onClickListener.onClick(this);
-        }
-
-        @Override
-        public void vibrate() {
-            vibrator.vibrate(D.vibetime);
-        }
-
-        @Override
-        public void setOnClickListener(@Nullable OnClickListener l) {
-            this.onClickListener = l;
-            super.setOnClickListener(D.EMPTY_CLICK_LISTENER);
-            super.setOnTouchListener(new BaldButtonTouchListener(this));
-
-        }
+    public MediumBaldButtonForTutorial(Context context) {
+        super(context);
+        this.vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
     }
+
+    public MediumBaldButtonForTutorial(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        this.vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+    }
+
+    public MediumBaldButtonForTutorial(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        this.vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+    }
+
+    @Override
+    public void baldPerformClick() {
+        if (onClickListener != null)
+            onClickListener.onClick(this);
+    }
+
+    @Override
+    public void vibrate() {
+        vibrator.vibrate(D.vibetime);
+    }
+
+    @Override
+    public void setOnClickListener(@Nullable OnClickListener l) {
+        this.onClickListener = l;
+        super.setOnClickListener(D.EMPTY_CLICK_LISTENER);
+        super.setOnTouchListener(new BaldButtonTouchListener(this));
+
+    }
+}

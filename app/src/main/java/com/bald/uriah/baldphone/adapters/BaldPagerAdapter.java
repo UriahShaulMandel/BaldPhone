@@ -41,12 +41,10 @@ public class BaldPagerAdapter extends BaldViewAdapter {
 
     private final Pools.SimplePool<HomeViewFactory> factoryPool = new Pools.SimplePool<>(10);
 
-
     public int startingPage;
+    public List<HomeScreenPinHelper.HomeScreenPinnable> pinnedList = Collections.EMPTY_LIST;
     private int numItemsBefore, numItems;
     private HomeScreen homeScreen;
-
-    public List<HomeScreenPinHelper.HomeScreenPinnable> pinnedList = Collections.EMPTY_LIST;
 
     public BaldPagerAdapter(HomeScreen homeScreen) {
         this.homeScreen = homeScreen;

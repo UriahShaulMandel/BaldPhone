@@ -122,13 +122,13 @@ public class HomeScreenPinHelper {
 
     }
 
+    public interface HomeScreenPinnable {
+        void applyToHomeScreenAppView(HomeScreenAppView homeScreenAppView);
+    }
+
     public static final class PinnedContactPreferences {
         public static final String KEY = "PINNED_CONTACTS_KEY";
         public static final String SET_KEY = "PINNED_CONTACTS_SET_KEY";
         public static final String SOS_KEY = "PINNED_CONTACTS_SET_KEY_SOS";
-    }
-
-    public interface HomeScreenPinnable {
-        void applyToHomeScreenAppView(HomeScreenAppView homeScreenAppView);
     }
 }

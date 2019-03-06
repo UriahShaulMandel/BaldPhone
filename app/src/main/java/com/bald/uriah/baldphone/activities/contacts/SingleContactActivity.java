@@ -73,12 +73,11 @@ public class SingleContactActivity extends BaldActivity {
     public static final String CONTACT_ID = "CONTACT_ID";
     public static final String CONTACT_LOOKUP_KEY = "CONTACT_KEY";
     public static final String PIC_URI_EXTRA = "PIC_URI_EXTRA";
-    private static final String TAG = SingleContactActivity.class.getSimpleName();
-
     /**
      * request check if deleted contact, if returns {@link Activity#RESULT_OK} contact was deleted.
      */
     public static final int REQUEST_CHECK_CHANGE = 97;
+    private static final String TAG = SingleContactActivity.class.getSimpleName();
     public static boolean newPictureAdded = false;
     private boolean viaId = false;
     private String contactKeyExtra;
@@ -519,6 +518,6 @@ public class SingleContactActivity extends BaldActivity {
 
     @Override
     protected int requiredPermissions() {
-        return PERMISSION_WRITE_CONTACTS|PERMISSION_READ_CONTACTS|PERMISSION_CALL_PHONE|PERMISSION_READ_CALL_LOG;
+        return PERMISSION_WRITE_CONTACTS | PERMISSION_READ_CONTACTS | PERMISSION_CALL_PHONE | PERMISSION_READ_CALL_LOG;
     }
 }

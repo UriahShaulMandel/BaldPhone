@@ -107,57 +107,16 @@
         android:orientation="horizontal"
         tools:ignore="RtlHardcoded">
 
-        <com.bald.uriah.baldphone.views.BaldConstraintLayoutButton
+
+        <com.bald.uriah.baldphone.views.FirstPageAppIcon
             android:id="@+id/bt_whatsapp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/style_for_buttons_transparent"
-            android:visibility="visible">
-
-            <ImageView
-                android:id="@+id/iv_whatsapp"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="20dp"
-                android:contentDescription="@string/whatsapp"
-                android:src="@drawable/whatsapp_on_background"
-                app:layout_constraintBottom_toTopOf="@id/tv_whatsapp"
-                app:layout_constraintDimensionRatio="1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_whatsapp"
-                style="@style/BackgroundText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:gravity="center"
-                android:text="@string/whatsapp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:id="@+id/ad_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:text="@string/ad"
-                android:textColor="?bald_hint_on_background"
-                android:textSize="11sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="SmallSp" />
-
-        </com.bald.uriah.baldphone.views.BaldConstraintLayoutButton>
+            android:visibility="visible"
+            app:__src="@drawable/whatsapp_on_background"
+            app:__text="@string/whatsapp" />
 
         <include layout="@layout/ll_divider_as_horizontal_layout" />
 

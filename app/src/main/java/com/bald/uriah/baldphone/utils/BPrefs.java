@@ -71,38 +71,11 @@ public final class BPrefs {
     public static final String LAST_UPDATE_ASKED_VERSION_KEY = "LAST_UPDATE_ASKED_VERSION_KEY";
 
 
-
     public static final String HOUR_KEY_ = "HOUR_KEY_";
     public static final String MINUTE_KEY_ = "MINUTE_KEY_";
 
     public static final String ALARM_VOLUME_KEY = "ALARM_VOLUME_KEY";
     public static final int ALARM_VOLUME_DEFAULT_VALUE = 4;
-
-
-    public static void setHourAndMinute(Context context, @Reminder.Time int time, int hour, int minute) {
-        get(context)
-                .edit()
-                .putInt(HOUR_KEY_ + time, hour)
-                .putInt(MINUTE_KEY_ + time, minute)
-                .apply();
-    }
-
-
-    public static int getHour(@Reminder.Time int time, Context context) {
-        int hour = get(context).getInt(HOUR_KEY_ + time, -1);
-        if (hour == -1)
-            hour = PILLS_HOUR_DEFAULTS.get(time);
-        return hour;
-    }
-
-    public static int getMinute(@Reminder.Time int time, Context context) {
-        int minute = get(context).getInt(MINUTE_KEY_ + time, -1);
-        if (minute == -1)
-            minute = PILLS_MINUTE_DEFAULTS.get(time);
-        return minute;
-    }
-
-
     public static final SparseIntArray PILLS_HOUR_DEFAULTS = new SparseIntArray(3);
     public static final SparseIntArray PILLS_MINUTE_DEFAULTS = new SparseIntArray(3);
 
@@ -116,6 +89,28 @@ public final class BPrefs {
         PILLS_MINUTE_DEFAULTS.append(Reminder.TIME_EVENING, 30);
 
 
+    }
+
+    public static void setHourAndMinute(Context context, @Reminder.Time int time, int hour, int minute) {
+        get(context)
+                .edit()
+                .putInt(HOUR_KEY_ + time, hour)
+                .putInt(MINUTE_KEY_ + time, minute)
+                .apply();
+    }
+
+    public static int getHour(@Reminder.Time int time, Context context) {
+        int hour = get(context).getInt(HOUR_KEY_ + time, -1);
+        if (hour == -1)
+            hour = PILLS_HOUR_DEFAULTS.get(time);
+        return hour;
+    }
+
+    public static int getMinute(@Reminder.Time int time, Context context) {
+        int minute = get(context).getInt(MINUTE_KEY_ + time, -1);
+        if (minute == -1)
+            minute = PILLS_MINUTE_DEFAULTS.get(time);
+        return minute;
     }
 
     public static SharedPreferences get(Context context) {

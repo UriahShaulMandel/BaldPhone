@@ -40,12 +40,13 @@ import java.util.List;
  *
  */
 public class AlarmScheduler {
-    private static final String TAG = AlarmScheduler.class.getSimpleName();
     public static final Object LOCK = new Object();
     public static final int SNOOZE_MILLIS = 5 * D.MINUTE;
+    private static final String TAG = AlarmScheduler.class.getSimpleName();
 
     private AlarmScheduler() {
     }
+
     public static void cancelAlarm(int key, Context context) {
         synchronized (LOCK) {
             _cancelAlarm(key, context);
@@ -147,6 +148,7 @@ public class AlarmScheduler {
     private static void _cancelAlarm(int key, Context context) {
         ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).cancel(getIntent(context, key));
     }
+
     public static void scheduleAlarm(@NonNull Alarm alarm, @NonNull Context context) throws IllegalArgumentException {
         synchronized (LOCK) {
             final AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);

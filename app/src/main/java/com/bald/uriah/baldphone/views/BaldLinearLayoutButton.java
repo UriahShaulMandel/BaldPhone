@@ -39,12 +39,12 @@ import com.bald.uriah.baldphone.utils.D;
  * for more details, head to {@link BaldButton}
  */
 public class BaldLinearLayoutButton extends LinearLayout implements BaldButtonInterface, View.OnLongClickListener, View.OnClickListener {
-    private OnClickListener onClickListener;
-    private BaldButtonTouchListener baldButtonTouchListener;
     private final SharedPreferences sharedPreferences;
     private final boolean longPresses, vibrationFeedback, longPressesShorter;
     private final Vibrator vibrator;
     private final BaldToast longer;
+    private OnClickListener onClickListener;
+    private BaldButtonTouchListener baldButtonTouchListener;
 
 
     public BaldLinearLayoutButton(Context context) {

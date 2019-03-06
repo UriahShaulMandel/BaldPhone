@@ -152,7 +152,6 @@
     <string name="hour">שעה</string>
     <string name="how_can_i_help">איך אפשר לעזור?</string>
     <string name="huge">ענק</string>
-    <string name="in_x_days">ימים ? בעוד</string>
     <string name="internet">אינטרנט</string>
     <string name="invoked_in">צלצול יופעל בעוד</string>
     <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">ולסיום אנא החלף את מסך הבית של הטלפון\nהתהליך הפיך לחלוטין וניתן לשינוי בהגדרות האפליקציה</string>
@@ -347,7 +346,9 @@
 
     <string name="download_finished">הורדה הסתיימה!</string>
     <string name="downloading_updates">מוריד עדכונים…</string>
-
+    <string name="installing_doesn_t_work">התקנה לא עובדת?</string>
+    <string name="try_now">נסה עכשיו</string>
+    <string name="download_progress">תהליך הורדה</string>
     <string-array name="words_for_call" tools:ignore="InconsistentArrays">
         <item>להתקשר</item>
         <item>לחייג</item>

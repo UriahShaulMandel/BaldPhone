@@ -59,27 +59,15 @@ public class ScrollingHelper extends ConstraintLayout {
     public static final int NO = 0;
 
     public static final int TOP_AND_BOTTOM = 0;
-
-
-    @IntDef({RIGHT, LEFT, UP, DOWN, NO})
-    @Retention(RetentionPolicy.SOURCE)
-    public @interface Direction {
-    }
-
-    @IntDef({END, RIGHT, START, LEFT, TOP_AND_BOTTOM})
-    @Retention(RetentionPolicy.SOURCE)
-    public @interface IntWhereBar {
-    }
-
-
-    @IntWhereBar
-    private int whereBar = RIGHT;
-
-    private DisplayMetrics displayMetrics;
-
     private static final String TAG = ScrollingHelper.class.getSimpleName();
+    @IdRes
+    private static final int containerId = R.id.container;
+    private static final float SCROLL_CONST_IN_DP = 9;
     public final int verticalScrollerLength = 70;//in dp lowercase cause in future may be argument
     public final int topAndBottomScrollerLength = 50;//in dp lowercase cause in future may be argument
+    @IntWhereBar
+    private int whereBar = RIGHT;
+    private DisplayMetrics displayMetrics;
     private SharedPreferences sharedPreferences;
     private LayoutInflater layoutInflater;
     private Context context;
@@ -93,17 +81,38 @@ public class ScrollingHelper extends ConstraintLayout {
 
     @IdRes
     private int childId;
-
-    @IdRes
-    private static final int containerId = R.id.container;
-
     private int SCROLL_CONST;
-    private static final float SCROLL_CONST_IN_DP = 9;
     @Direction
     private int direction;
-
     private Choreographer choreographer = Choreographer.getInstance();
     private Choreographer.FrameCallback frameCallback;
+    private View emptyView;
+    public RecyclerView.AdapterDataObserver emptyObserver = new RecyclerView.AdapterDataObserver() {
+        @Override
+        public void onChanged() {
+            if (child instanceof RecyclerView) {
+                RecyclerView.Adapter<?> adapter = ((RecyclerView) child).getAdapter();
+                if (adapter != null && emptyView != null) {
+                    if (adapter.getItemCount() == 0) {
+                        if (!gone)
+                            setArrowsVisibility(false);
+                        if (emptyView instanceof TextView) {
+                            ((TextView) emptyView).setText(empty);
+                        } else
+                            emptyView.setVisibility(VISIBLE);
+                    } else {
+                        if (emptyView instanceof TextView) {
+                            ((TextView) emptyView).setText("");
+                        } else
+                            emptyView.setVisibility(INVISIBLE);
+                        if (!gone)
+                            setArrowsVisibility(true);
+                    }
+                }
+            }
+
+        }
+    };
 
     public ScrollingHelper(Context context) {
         super(context);
@@ -465,33 +474,14 @@ public class ScrollingHelper extends ConstraintLayout {
 
     }
 
-    private View emptyView;
-    public RecyclerView.AdapterDataObserver emptyObserver = new RecyclerView.AdapterDataObserver() {
-        @Override
-        public void onChanged() {
-            if (child instanceof RecyclerView) {
-                RecyclerView.Adapter<?> adapter = ((RecyclerView) child).getAdapter();
-                if (adapter != null && emptyView != null) {
-                    if (adapter.getItemCount() == 0) {
-                        if (!gone)
-                            setArrowsVisibility(false);
-                        if (emptyView instanceof TextView) {
-                            ((TextView) emptyView).setText(empty);
-                        } else
-                            emptyView.setVisibility(VISIBLE);
-                    } else {
-                        if (emptyView instanceof TextView) {
-                            ((TextView) emptyView).setText("");
-                        } else
-                            emptyView.setVisibility(INVISIBLE);
-                        if (!gone)
-                            setArrowsVisibility(true);
-                    }
-                }
-            }
-
-        }
-    };
+    @IntDef({RIGHT, LEFT, UP, DOWN, NO})
+    @Retention(RetentionPolicy.SOURCE)
+    public @interface Direction {
+    }
+    @IntDef({END, RIGHT, START, LEFT, TOP_AND_BOTTOM})
+    @Retention(RetentionPolicy.SOURCE)
+    public @interface IntWhereBar {
+    }
 
 
 }

@@ -37,6 +37,46 @@ import com.bald.uriah.baldphone.utils.S;
 import java.io.File;
 
 public class TechnicalInfoActivity extends BaldActivity {
+    public static void deleteCache(Context context) {
+        try {
+            File dir = context.getCacheDir();
+            deleteDir(dir);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        AppsDatabase.getInstance(context).appsDatabaseDao().deleteAll();
+    }
+
+    public static boolean deleteDir(File dir) {
+        if (dir != null && dir.isDirectory()) {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++) {
+                boolean success = deleteDir(new File(dir, children[i]));
+                if (!success) {
+                    return false;
+                }
+            }
+            return dir.delete();
+        } else if (dir != null && dir.isFile()) {
+            return dir.delete();
+        } else {
+            return false;
+        }
+    }
+
+    public static String getTechnicalInfo() {
+        return
+                String.format("Api Level: %s\nVersion Name: %s\nVersion Code: %s\nManufacturer: %s\nBrand: %s\nDevice: %s\nModel: %s\n",
+                        S.str(Build.VERSION.SDK_INT),
+                        S.str(BuildConfig.VERSION_NAME),
+                        S.str(BuildConfig.VERSION_CODE),
+                        S.str(Build.MANUFACTURER),
+                        S.str(Build.BRAND),
+                        S.str(Build.DEVICE),
+                        S.str(Build.MODEL))
+                ;
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,46 +134,5 @@ public class TechnicalInfoActivity extends BaldActivity {
     @Override
     protected int requiredPermissions() {
         return PERMISSION_WRITE_SETTINGS | PERMISSION_WRITE_EXTERNAL_STORAGE;
-    }
-
-
-    public static void deleteCache(Context context) {
-        try {
-            File dir = context.getCacheDir();
-            deleteDir(dir);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        AppsDatabase.getInstance(context).appsDatabaseDao().deleteAll();
-    }
-
-    public static boolean deleteDir(File dir) {
-        if (dir != null && dir.isDirectory()) {
-            String[] children = dir.list();
-            for (int i = 0; i < children.length; i++) {
-                boolean success = deleteDir(new File(dir, children[i]));
-                if (!success) {
-                    return false;
-                }
-            }
-            return dir.delete();
-        } else if (dir != null && dir.isFile()) {
-            return dir.delete();
-        } else {
-            return false;
-        }
-    }
-
-    public static String getTechnicalInfo() {
-        return
-                String.format("Api Level: %s\nVersion Name: %s\nVersion Code: %s\nManufacturer: %s\nBrand: %s\nDevice: %s\nModel: %s\n",
-                        S.str(Build.VERSION.SDK_INT),
-                        S.str(BuildConfig.VERSION_NAME),
-                        S.str(BuildConfig.VERSION_CODE),
-                        S.str(Build.MANUFACTURER),
-                        S.str(Build.BRAND),
-                        S.str(Build.DEVICE),
-                        S.str(Build.MODEL))
-                ;
     }
 }

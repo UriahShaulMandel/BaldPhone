@@ -40,9 +40,8 @@ import org.joda.time.DateTime;
  * Activity for creating {@link Alarm}, as Timers.
  */
 public class AddTimerActivity extends BaldActivity {
-    private static final String TAG = AddTimerActivity.class.getSimpleName();
     static final String ALARM_KEY_AS_EXTRA_KEY = "alarm";
-
+    private static final String TAG = AddTimerActivity.class.getSimpleName();
     private int timeIn5Minutes = 1;
     private View bt_alarm_submit, bt_add, bt_dec;
     private TextView time;
@@ -54,7 +53,6 @@ public class AddTimerActivity extends BaldActivity {
         attachXml();
         genOnClickListeners();
         setupYoutube(4);
-
     }
 
     private void attachXml() {
@@ -62,7 +60,6 @@ public class AddTimerActivity extends BaldActivity {
         bt_add = findViewById(R.id.bt_add);
         bt_dec = findViewById(R.id.bt_dec);
         time = findViewById(R.id.tv_number);
-
     }
 
     private void submit() {

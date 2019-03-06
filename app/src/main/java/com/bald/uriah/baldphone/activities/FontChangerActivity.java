@@ -38,6 +38,8 @@ import static com.bald.uriah.baldphone.activities.SettingsActivity.FONT_SIZES;
 
 public class FontChangerActivity extends BaldActivity {
     private static final String TAG = FontChangerActivity.class.getSimpleName();
+    private static final int[] STRING_RES = new int[]{R.string.tiny, R.string.small, R.string.medium, R.string.large, R.string.huge};
+    private static final int[] SIZES_RES = new int[]{R.dimen.tiny, R.dimen.small, R.dimen.medium, R.dimen.large, R.dimen.huge};
     private LinearLayout example;
 
     @Override
@@ -89,9 +91,6 @@ public class FontChangerActivity extends BaldActivity {
     protected int requiredPermissions() {
         return PERMISSION_WRITE_SETTINGS;
     }
-
-    private static final int[] STRING_RES = new int[]{R.string.tiny, R.string.small, R.string.medium, R.string.large, R.string.huge};
-    private static final int[] SIZES_RES = new int[]{R.dimen.tiny, R.dimen.small, R.dimen.medium, R.dimen.large, R.dimen.huge};
 
     private void showExamples(Context newContext) {
         example.removeAllViews();

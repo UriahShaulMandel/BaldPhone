@@ -29,6 +29,8 @@ import android.util.AttributeSet;
 public class BaldKeyboardView extends KeyboardView {
 
 
+    public invokePressListener invokePressListener;
+
     public BaldKeyboardView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
@@ -37,11 +39,11 @@ public class BaldKeyboardView extends KeyboardView {
         super(context, attrs, defStyleAttr);
     }
 
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public BaldKeyboardView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
-
 
     @Override
     protected boolean onLongPress(Keyboard.Key popupKey) {
@@ -53,9 +55,6 @@ public class BaldKeyboardView extends KeyboardView {
         return false;
 
     }
-
-
-    public invokePressListener invokePressListener;
 
     interface invokePressListener {
         void onKey(int primaryCode, int[] keyCodes);

@@ -78,13 +78,12 @@ public class SingleVideoActivity extends SingleMediaActivity implements Constant
     }
 
     private static class VideoPagerAdapter extends MediaPagerAdapter {
+        private static final Uri EXTERNAL = MediaStore.Files.getContentUri("external");
         SparseArray<VideoViewWrapper> availableViews = new SparseArray<>();
 
         public VideoPagerAdapter(SingleMediaActivity activity) {
             super(activity);
         }
-
-        private static final Uri EXTERNAL = MediaStore.Files.getContentUri("external");
 
         @Override
         protected void delete(Activity activity, Cursor cursor) {
@@ -213,10 +212,6 @@ public class SingleVideoActivity extends SingleMediaActivity implements Constant
 
         private static class VideoViewWrapper extends FrameLayout {
 
-            private interface OnShowedChangedListener {
-                void shownChanged(boolean shown);
-            }
-
             private OnShowedChangedListener onShowedChangedListener;
 
             public VideoViewWrapper(@NonNull View view) {
@@ -231,6 +226,10 @@ public class SingleVideoActivity extends SingleMediaActivity implements Constant
             public void setShown(boolean shown) {
                 if (onShowedChangedListener != null)
                     onShowedChangedListener.shownChanged(shown);
+            }
+
+            private interface OnShowedChangedListener {
+                void shownChanged(boolean shown);
             }
 
         }

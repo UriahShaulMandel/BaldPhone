@@ -33,7 +33,6 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 public class CreditsActivity extends BaldActivity {
-
     private String[] names, tasks;
 
     @Override
@@ -49,6 +48,11 @@ public class CreditsActivity extends BaldActivity {
         dividerItemDecoration.setDrawable(getDrawable(R.drawable.ll_divider));
         recyclerView.addItemDecoration(dividerItemDecoration);
 
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_NONE;
     }
 
     class CreditsAdapter extends ModularRecyclerView.ModularAdapter<CreditsAdapter.ViewHolder> {
@@ -85,10 +89,5 @@ public class CreditsActivity extends BaldActivity {
                 task = itemView.findViewById(R.id.task);
             }
         }
-    }
-
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_NONE;
     }
 }

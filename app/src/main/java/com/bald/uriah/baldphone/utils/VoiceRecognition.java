@@ -38,73 +38,8 @@ import java.util.List;
 
 public class VoiceRecognition {
 
-    public enum AnswerType {
-        FAILED {
-            @Override
-            public String submit(Context context, Object object) {
-                return (String) object;
-            }
-        },
-        CALL {
-            @Override
-            public String submit(Context context, Object object) {
-                DialerActivity.call((CharSequence) object, context);
-                return String.format(context.getString(R.string.calling__), object);
-            }
-        },
-        OPEN_CONTACT {
-            @Override
-            public String submit(Context context, Object object) {
-                final Contact contact = (Contact) object;
-                context.startActivity(new Intent(context, SingleContactActivity.class).putExtra(SingleContactActivity.CONTACT_LOOKUP_KEY, contact.getLookupKey()));
-                return String.format(context.getString(R.string.opening___), contact.getName());
-
-            }
-        },
-        OPEN {
-            @Override
-            public String submit(Context context, Object object) {
-                context.startActivity(
-                        new Intent(Intent.ACTION_MAIN)
-                                .addCategory(Intent.CATEGORY_LAUNCHER)
-                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
-                                        Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED)
-                                .setComponent(
-                                        ComponentName.unflattenFromString(((App) object).getFlattenComponentName())
-                                )
-                );
-
-                return String.format(context.getString(R.string.opening___), ((App) object).getLabel());
-            }
-        };
-
-        public abstract String submit(Context context, Object object);
-    }
-
-
-    public static class VoiceRecognitionException extends Exception {
-        public VoiceRecognitionException(String message) {
-            super(message);
-        }
-    }
-
-    public static class Answer {
-        final AnswerType type;
-        final Object object;
-
-        public Answer(AnswerType type, Object object) {
-            this.type = type;
-            this.object = object;
-        }
-
-        public String submit(Context context) {
-            return type.submit(context, object);
-        }
-    }
-
-
     private static final String TAG = VoiceRecognition.class.getSimpleName();
-
+    private static final String SELECTION = ContactsContract.Data.DISPLAY_NAME + " LIKE ? ";
 
     //This method is indeed hard coded and problematic.
     //BUT
@@ -185,8 +120,6 @@ public class VoiceRecognition {
         return new Answer(AnswerType.FAILED, context.getString(R.string.please_repeat_that));
     }
 
-    private static final String SELECTION = ContactsContract.Data.DISPLAY_NAME + " LIKE ? ";
-
     @NonNull
     private static Contact getContactByNameFilter(final String filter, final Context context) throws VoiceRecognitionException {
         final String[] args = {
@@ -203,6 +136,70 @@ public class VoiceRecognition {
             return Contact.readContact(cursor, context.getContentResolver());
         } else {
             throw new VoiceRecognitionException(String.format(context.getString(R.string.no_contact_contains___), filter));
+        }
+    }
+
+
+    public enum AnswerType {
+        FAILED {
+            @Override
+            public String submit(Context context, Object object) {
+                return (String) object;
+            }
+        },
+        CALL {
+            @Override
+            public String submit(Context context, Object object) {
+                DialerActivity.call((CharSequence) object, context);
+                return String.format(context.getString(R.string.calling__), object);
+            }
+        },
+        OPEN_CONTACT {
+            @Override
+            public String submit(Context context, Object object) {
+                final Contact contact = (Contact) object;
+                context.startActivity(new Intent(context, SingleContactActivity.class).putExtra(SingleContactActivity.CONTACT_LOOKUP_KEY, contact.getLookupKey()));
+                return String.format(context.getString(R.string.opening___), contact.getName());
+
+            }
+        },
+        OPEN {
+            @Override
+            public String submit(Context context, Object object) {
+                context.startActivity(
+                        new Intent(Intent.ACTION_MAIN)
+                                .addCategory(Intent.CATEGORY_LAUNCHER)
+                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
+                                        Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED)
+                                .setComponent(
+                                        ComponentName.unflattenFromString(((App) object).getFlattenComponentName())
+                                )
+                );
+
+                return String.format(context.getString(R.string.opening___), ((App) object).getLabel());
+            }
+        };
+
+        public abstract String submit(Context context, Object object);
+    }
+
+    public static class VoiceRecognitionException extends Exception {
+        public VoiceRecognitionException(String message) {
+            super(message);
+        }
+    }
+
+    public static class Answer {
+        final AnswerType type;
+        final Object object;
+
+        public Answer(AnswerType type, Object object) {
+            this.type = type;
+            this.object = object;
+        }
+
+        public String submit(Context context) {
+            return type.submit(context, object);
         }
     }
 }

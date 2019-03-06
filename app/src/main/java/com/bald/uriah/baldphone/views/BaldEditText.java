@@ -33,6 +33,10 @@ import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 
 public class BaldEditText extends AppCompatEditText implements View.OnClickListener, View.OnLongClickListener {
+    private final SharedPreferences sharedPreferences;
+    private final boolean longPresses, vibrationFeedback;
+    private final Vibrator vibrator;
+    private final BaldToast longer;
     private OnClickListener onClickListener = v -> {
         if (requestFocus()) {
             setSelection(getText().length());
@@ -41,10 +45,6 @@ public class BaldEditText extends AppCompatEditText implements View.OnClickListe
 
         }
     };
-    private final SharedPreferences sharedPreferences;
-    private final boolean longPresses, vibrationFeedback;
-    private final Vibrator vibrator;
-    private final BaldToast longer;
 
     public BaldEditText(Context context) {
         super(context);

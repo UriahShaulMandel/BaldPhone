@@ -53,29 +53,44 @@ import com.bald.uriah.baldphone.utils.S;
  * Alarm screen, will be called from {@link com.bald.uriah.baldphone.broadcast_receivers.AlarmReceiver}
  */
 public class AlarmScreen extends BaldActivity {
-    private static final String TAG = AlarmScreen.class.getSimpleName();
     public static final int TIME_SCREEN_ON = D.MINUTE * 5;
-
-
+    private static final String TAG = AlarmScreen.class.getSimpleName();
     private static final int TIME_DELAYED_SCHEDULE = 100;
     private static final AudioAttributes alarmAttributes =
             new AudioAttributes.Builder()
                     .setUsage(AudioAttributes.USAGE_ALARM)
                     .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
                     .build();
-
+    private final Runnable closeScreen = () -> {
+        final Window window = getWindow();
+        if (window != null)
+            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+    };
     private TextView tv_name, snooze;//todo delete
     private ImageView cancel;
     private Vibrator vibrator;
     private Ringtone ringtone;
     private Alarm alarm;
 
-    private final Runnable closeScreen = () -> {
-        final Window window = getWindow();
-        if (window != null)
-            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-    };
-
+    public static Ringtone getRingtone(Context context) {
+        Uri alert =
+                RingtoneManager
+                        .getActualDefaultRingtoneUri(context.getApplicationContext(), RingtoneManager.TYPE_ALARM);
+        if (alert == null)
+            alert = RingtoneManager
+                    .getActualDefaultRingtoneUri(context.getApplicationContext(), RingtoneManager.TYPE_NOTIFICATION);
+        if (alert == null)
+            alert = RingtoneManager
+                    .getActualDefaultRingtoneUri(context.getApplicationContext(), RingtoneManager.TYPE_RINGTONE);
+        final Ringtone ringtone = RingtoneManager.getRingtone(context, alert);
+        final AudioManager audioManager = (AudioManager) context.getSystemService(AUDIO_SERVICE);
+        if (audioManager != null) {//who knows lol - btw don't delete user's may lower the alarm sounds by mistake
+            final int alarmVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_ALARM) * (BPrefs.get(context).getInt(BPrefs.ALARM_VOLUME_KEY, BPrefs.ALARM_VOLUME_DEFAULT_VALUE) + 6) / 10;
+            audioManager.setStreamVolume(AudioManager.STREAM_ALARM, alarmVolume, 0);
+        }
+        ringtone.setAudioAttributes(alarmAttributes);
+        return ringtone;
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -171,7 +186,6 @@ public class AlarmScreen extends BaldActivity {
         super.onDestroy();
     }
 
-
     private void attachXml() {
         tv_name = findViewById(R.id.alarm_name);
         cancel = findViewById(R.id.alarm_cancel);
@@ -240,28 +254,6 @@ public class AlarmScreen extends BaldActivity {
             }
         }, TIME_DELAYED_SCHEDULE);
     }
-
-
-    public static Ringtone getRingtone(Context context) {
-        Uri alert =
-                RingtoneManager
-                        .getActualDefaultRingtoneUri(context.getApplicationContext(), RingtoneManager.TYPE_ALARM);
-        if (alert == null)
-            alert = RingtoneManager
-                    .getActualDefaultRingtoneUri(context.getApplicationContext(), RingtoneManager.TYPE_NOTIFICATION);
-        if (alert == null)
-            alert = RingtoneManager
-                    .getActualDefaultRingtoneUri(context.getApplicationContext(), RingtoneManager.TYPE_RINGTONE);
-        final Ringtone ringtone = RingtoneManager.getRingtone(context, alert);
-        final AudioManager audioManager = (AudioManager) context.getSystemService(AUDIO_SERVICE);
-        if (audioManager != null) {//who knows lol - btw don't delete user's may lower the alarm sounds by mistake
-            final int alarmVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_ALARM) * (BPrefs.get(context).getInt(BPrefs.ALARM_VOLUME_KEY, BPrefs.ALARM_VOLUME_DEFAULT_VALUE) + 6) / 10;
-            audioManager.setStreamVolume(AudioManager.STREAM_ALARM, alarmVolume, 0);
-        }
-        ringtone.setAudioAttributes(alarmAttributes);
-        return ringtone;
-    }
-
 
     @Override
     public void onBackPressed() {

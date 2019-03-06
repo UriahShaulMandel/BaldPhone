@@ -42,14 +42,22 @@ import java.util.List;
  * This class is
  */
 public class BaldInputMethodService extends InputMethodService implements View.OnClickListener {//} implements KeyboardView.OnKeyboardActionListener {
+    public static final String VOICE_RECOGNITION_IMS = "com.google.android.googlequicksearchbox/com.google.android.voicesearch.ime.VoiceInputMethodService";
     private static final String TAG = BaldInputMethodService.class.getSimpleName();
-
     private static int lastLanguage = HebrewKeyboard.LANGUAGE_ID;
-
     private boolean onNumbers = false;
     private BaldPrefsUtils baldPrefsUtils;
     private FrameLayout keyboardFrame;
     private BaldKeyboard keyboard;
+
+    private static boolean voiceExists(InputMethodManager imeManager) {
+        final List<InputMethodInfo> list = imeManager.getInputMethodList();
+        for (final InputMethodInfo el : list) {
+            if (el.getId().equals(VOICE_RECOGNITION_IMS))
+                return true;
+        }
+        return false;
+    }
 
     @Override
     public void onStartInputView(EditorInfo info, boolean restarting) {
@@ -82,7 +90,6 @@ public class BaldInputMethodService extends InputMethodService implements View.O
         changeLanguage(lastLanguage);
         return keyboardFrame;
     }
-
 
     @Override
     public void onClick(View v) {
@@ -134,24 +141,12 @@ public class BaldInputMethodService extends InputMethodService implements View.O
         }
     }
 
-    public static final String VOICE_RECOGNITION_IMS = "com.google.android.googlequicksearchbox/com.google.android.voicesearch.ime.VoiceInputMethodService";
-
     public void startVoiceListening() {
         final InputMethodManager imeManager = (InputMethodManager) getApplicationContext().getSystemService(INPUT_METHOD_SERVICE);
         if (voiceExists(imeManager)) {
             final IBinder token = getWindow().getWindow().getAttributes().token;
             imeManager.setInputMethod(token, VOICE_RECOGNITION_IMS);
         }
-    }
-
-
-    private static boolean voiceExists(InputMethodManager imeManager) {
-        final List<InputMethodInfo> list = imeManager.getInputMethodList();
-        for (final InputMethodInfo el : list) {
-            if (el.getId().equals(VOICE_RECOGNITION_IMS))
-                return true;
-        }
-        return false;
     }
 
     public void backspace() {

@@ -67,12 +67,23 @@ import static com.bald.uriah.baldphone.activities.PermissionActivity.EXTRA_INTEN
  * the parent of all of the activitys in this app.
  */
 public abstract class BaldActivity extends AppCompatActivity implements SensorEventListener {
+    protected static final int
+            PERMISSION_NONE = 0,
+            PERMISSION_WRITE_SETTINGS = 0b1,
+            PERMISSION_DEFAULT_PHONE_HANDLER = 0b10,
+            PERMISSION_READ_CONTACTS = 0b100 | PERMISSION_DEFAULT_PHONE_HANDLER,
+            PERMISSION_WRITE_CONTACTS = 0b1000 | PERMISSION_DEFAULT_PHONE_HANDLER,
+            PERMISSION_CALL_PHONE = 0b10000 | PERMISSION_DEFAULT_PHONE_HANDLER,
+            PERMISSION_READ_CALL_LOG = 0b100000 | PERMISSION_DEFAULT_PHONE_HANDLER,
+            PERMISSION_CAMERA = 0b1000000,
+            PERMISSION_WRITE_EXTERNAL_STORAGE = 0b10000000,
+            PERMISSION_NOTIFICATION_LISTENER = 0b100000000 | PERMISSION_WRITE_SETTINGS,
+            PERMISSION_REQUEST_INSTALL_PACKAGES = 0b1000000000;
     private static final String TAG = BaldActivity.class.getSimpleName();
-
+    protected Vibrator vibrator;
     @StyleRes
     private int themeIndex;
     private List<WeakReference<Dialog>> dialogsToClose = new ArrayList<>(1);
-    protected Vibrator vibrator;
     private SensorManager sensorManager;
     private Sensor proximitySensor;
     private boolean near;
@@ -81,6 +92,81 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     private boolean useAccidentalGuard = true;
     private Handler handler;
     private Runnable touchesDecreaser = () -> touches = (touches -= 1) < 0 ? 0 : touches;
+
+    /**
+     * @return true if all permissions are granted.
+     */
+    public static boolean checkPermissions(BaldActivity activity, final int requiredPermissions) {
+        if (requiredPermissions == PERMISSION_NONE)
+            return true;
+        if ((requiredPermissions & PERMISSION_DEFAULT_PHONE_HANDLER) != 0) {
+            if (!defaultDialerGranted(activity))
+                return false;
+        }
+
+        if ((requiredPermissions & PERMISSION_WRITE_SETTINGS) != 0) {
+            if (!writeSettingsGranted(activity))
+                return false;
+            else if ((requiredPermissions & PERMISSION_NOTIFICATION_LISTENER) == PERMISSION_NOTIFICATION_LISTENER) {
+                if (!notificationListenerGranted(activity))
+                    return false;
+            }
+        }
+        if ((requiredPermissions & PERMISSION_READ_CONTACTS) != 0) {
+            if (ActivityCompat.checkSelfPermission(activity, READ_CONTACTS) != PERMISSION_GRANTED)
+                return false;
+        }
+        if ((requiredPermissions & PERMISSION_WRITE_CONTACTS) != 0) {
+            if (ActivityCompat.checkSelfPermission(activity, WRITE_CONTACTS) != PERMISSION_GRANTED)
+                return false;
+        }
+        if ((requiredPermissions & PERMISSION_CALL_PHONE) != 0) {
+            if (ActivityCompat.checkSelfPermission(activity, CALL_PHONE) != PERMISSION_GRANTED)
+                return false;
+        }
+        if ((requiredPermissions & PERMISSION_READ_CALL_LOG) != 0) {
+            if (ActivityCompat.checkSelfPermission(activity, READ_CALL_LOG) != PERMISSION_GRANTED)
+                return false;
+        }
+        if ((requiredPermissions & PERMISSION_CAMERA) != 0) {
+            if (ActivityCompat.checkSelfPermission(activity, CAMERA) != PERMISSION_GRANTED)
+                return false;
+        }
+        if ((requiredPermissions & PERMISSION_WRITE_EXTERNAL_STORAGE) != 0) {
+            if (ActivityCompat.checkSelfPermission(activity, WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED)
+                return false;
+        }
+        if ((requiredPermissions & PERMISSION_REQUEST_INSTALL_PACKAGES) != 0) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && !activity.getPackageManager().canRequestPackageInstalls()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     *
+     * not removing yet, perhaps the issue with google will be solved
+     */
+    static boolean defaultDialerGranted(BaldActivity activity) {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//            final TelecomManager telecomManager = (TelecomManager) activity.getSystemService(TELECOM_SERVICE);
+//            return telecomManager != null && Objects.equals(activity.getPackageName(), telecomManager.getDefaultDialerPackage());
+//        }
+        return true;
+    }
+
+    static boolean writeSettingsGranted(BaldActivity activity) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return Settings.System.canWrite(activity);
+        }
+        return true;
+    }
+
+    static boolean notificationListenerGranted(BaldActivity activity) {
+        final String listeners = Settings.Secure.getString(activity.getContentResolver(), "enabled_notification_listeners");
+        return listeners != null && listeners.contains(activity.getApplicationContext().getPackageName());
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -137,7 +223,6 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
         super.onPause();
     }
 
-
     @Override
     public void onBackPressed() {
         if (vibrator != null)
@@ -162,7 +247,6 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
             } else touches = 0;
         }
     }
-
 
     private void accidentalTouchChecker() {
         if (touches > accidentalMinTouches) {
@@ -212,95 +296,8 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
 
     protected abstract int requiredPermissions();
 
+    //TODO mabye remove this
     protected String activityName() {
         return "";
     }
-
-    protected static final int
-            PERMISSION_NONE = 0,
-            PERMISSION_WRITE_SETTINGS = 0b1,
-            PERMISSION_DEFAULT_PHONE_HANDLER = 0b10,
-            PERMISSION_READ_CONTACTS = 0b100 | PERMISSION_DEFAULT_PHONE_HANDLER,
-            PERMISSION_WRITE_CONTACTS = 0b1000 | PERMISSION_DEFAULT_PHONE_HANDLER,
-            PERMISSION_CALL_PHONE = 0b10000 | PERMISSION_DEFAULT_PHONE_HANDLER,
-            PERMISSION_READ_CALL_LOG = 0b100000 | PERMISSION_DEFAULT_PHONE_HANDLER,
-            PERMISSION_CAMERA = 0b1000000,
-            PERMISSION_WRITE_EXTERNAL_STORAGE = 0b10000000,
-            PERMISSION_NOTIFICATION_LISTENER = 0b100000000 | PERMISSION_WRITE_SETTINGS,
-            PERMISSION_REQUEST_INSTALL_PACKAGES = 0b1000000000;
-
-    /**
-     * @return true if all permissions are granted.
-     */
-    public static boolean checkPermissions(BaldActivity activity, final int requiredPermissions) {
-
-        if (requiredPermissions == PERMISSION_NONE)
-            return true;
-        if ((requiredPermissions & PERMISSION_DEFAULT_PHONE_HANDLER) != 0) {
-            if (!defaultDialerGranted(activity))
-                return false;
-        }
-
-        if ((requiredPermissions & PERMISSION_WRITE_SETTINGS) != 0) {
-            if (!writeSettingsGranted(activity))
-                return false;
-            else if ((requiredPermissions & PERMISSION_NOTIFICATION_LISTENER) == PERMISSION_NOTIFICATION_LISTENER) {
-                if (!notificationListenerGranted(activity))
-                    return false;
-            }
-        }
-        if ((requiredPermissions & PERMISSION_READ_CONTACTS) != 0) {
-            if (ActivityCompat.checkSelfPermission(activity, READ_CONTACTS) != PERMISSION_GRANTED)
-                return false;
-        }
-        if ((requiredPermissions & PERMISSION_WRITE_CONTACTS) != 0) {
-            if (ActivityCompat.checkSelfPermission(activity, WRITE_CONTACTS) != PERMISSION_GRANTED)
-                return false;
-        }
-        if ((requiredPermissions & PERMISSION_CALL_PHONE) != 0) {
-            if (ActivityCompat.checkSelfPermission(activity, CALL_PHONE) != PERMISSION_GRANTED)
-                return false;
-        }
-        if ((requiredPermissions & PERMISSION_READ_CALL_LOG) != 0) {
-            if (ActivityCompat.checkSelfPermission(activity, READ_CALL_LOG) != PERMISSION_GRANTED)
-                return false;
-        }
-        if ((requiredPermissions & PERMISSION_CAMERA) != 0) {
-            if (ActivityCompat.checkSelfPermission(activity, CAMERA) != PERMISSION_GRANTED)
-                return false;
-        }
-        if ((requiredPermissions & PERMISSION_WRITE_EXTERNAL_STORAGE) != 0) {
-            if (ActivityCompat.checkSelfPermission(activity, WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED)
-                return false;
-        }
-        if ((requiredPermissions & PERMISSION_REQUEST_INSTALL_PACKAGES) != 0) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && !activity.getPackageManager().canRequestPackageInstalls()) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-
-    static boolean defaultDialerGranted(BaldActivity activity) {
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//            final TelecomManager telecomManager = (TelecomManager) activity.getSystemService(TELECOM_SERVICE);
-//            return telecomManager != null && Objects.equals(activity.getPackageName(), telecomManager.getDefaultDialerPackage());
-//        }
-        return true;
-    }
-
-    static boolean writeSettingsGranted(BaldActivity activity) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            return Settings.System.canWrite(activity);
-        }
-        return true;
-    }
-
-    static boolean notificationListenerGranted(BaldActivity activity) {
-        final String listeners = Settings.Secure.getString(activity.getContentResolver(), "enabled_notification_listeners");
-        return listeners != null && listeners.contains(activity.getApplicationContext().getPackageName());
-
-    }
-
 }

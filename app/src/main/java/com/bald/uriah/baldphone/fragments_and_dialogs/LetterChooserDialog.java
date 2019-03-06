@@ -42,21 +42,13 @@ import com.bald.uriah.baldphone.views.ModularRecyclerView;
 public class LetterChooserDialog extends Dialog {
     private static final String TAG = LetterChooserDialog.class.getSimpleName();
     private static final int AMOUNT_PER_ROW = 5;
-
-    @FunctionalInterface
-    public interface OnChooseLetterListener {
-        void onChooseLetter(int position);
-    }
-
     private final OnChooseLetterListener onChooseLetterListener;
     private final SparseIntArray lettersToValues;
-
     public LetterChooserDialog(final Context context, SparseIntArray lettersToValues, OnChooseLetterListener onChooseLetterListener) {
         super(context);
         this.lettersToValues = lettersToValues;
         this.onChooseLetterListener = onChooseLetterListener;
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +59,7 @@ public class LetterChooserDialog extends Dialog {
                 WindowManager.LayoutParams.MATCH_PARENT);
         getWindow().setBackgroundDrawableResource(android.R.color.transparent);
 
-        ((BaldTitleBar)findViewById(R.id.bald_title_bar)).getBt_back().setOnClickListener(v->{
+        ((BaldTitleBar) findViewById(R.id.bald_title_bar)).getBt_back().setOnClickListener(v -> {
             dismiss();
         });
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
@@ -86,6 +78,12 @@ public class LetterChooserDialog extends Dialog {
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), numberOfAppsInARow));
         recyclerView.setAdapter(new LetterChooserAdapter());
 
+    }
+
+
+    @FunctionalInterface
+    public interface OnChooseLetterListener {
+        void onChooseLetter(int position);
     }
 
     public class LetterChooserAdapter extends ModularRecyclerView.ModularAdapter<LetterChooserAdapter.ViewHolder> {

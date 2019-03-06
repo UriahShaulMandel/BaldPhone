@@ -53,9 +53,8 @@ import java.util.List;
  * Each alarm can be edited and deleted from this activity
  */
 public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActivity {
-    private static final String TAG = AlarmsActivity.class.getSimpleName();
     public static final int ADD_ALARM_ACTIVITY_REQUEST_CODE = 1;
-
+    private static final String TAG = AlarmsActivity.class.getSimpleName();
     private LinearLayout bt_cancel_all_alarms, bt_add_alarm, bt_quickly_add_alarm;
 
     private RecyclerView recyclerView;
@@ -164,6 +163,10 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
         }
     }
 
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_NONE;
+    }
 
     class AlarmsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<AlarmsRecyclerViewAdapter.ViewHolder> {
         private final LayoutInflater inflater;
@@ -261,10 +264,5 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
                         }));
             }
         }
-    }
-
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_NONE;
     }
 }

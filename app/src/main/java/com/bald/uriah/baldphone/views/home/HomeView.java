@@ -31,6 +31,7 @@ import com.bald.uriah.baldphone.activities.HomeScreen;
 public abstract class HomeView extends FrameLayout {
     @NonNull
     protected final HomeScreen homeScreen;
+
     public HomeView(@NonNull HomeScreen homeScreen) {
         super(homeScreen);
         this.homeScreen = homeScreen;

@@ -27,11 +27,12 @@ import android.widget.TextView;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.contacts.SingleContactActivity;
+import com.bald.uriah.baldphone.utils.S;
 
 public class HomeScreenAppView {
+    public final ImageView iv_icon;
     private final BaldLinearLayoutButton child;
     private final TextView tv_name;
-    public final ImageView iv_icon;
 
     public HomeScreenAppView(BaldLinearLayoutButton child) {
         this.child = child;
@@ -49,12 +50,7 @@ public class HomeScreenAppView {
     }
 
     public void setIntent(final ComponentName componentName) {
-        child.setOnClickListener(v ->
-                v.getContext().startActivity(
-                        new Intent(Intent.ACTION_MAIN)
-                                .addCategory(Intent.CATEGORY_LAUNCHER)
-                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED)
-                                .setComponent(componentName)));
+        child.setOnClickListener(v -> S.startComponentName(v.getContext(), componentName));
 
 
     }

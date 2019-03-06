@@ -60,19 +60,17 @@ public class PillScreen extends BaldActivity {
                     .setUsage(AudioAttributes.USAGE_NOTIFICATION)
                     .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
                     .build();
-
+    private final Runnable closeScreen = () -> {
+        final Window window = getWindow();
+        if (window != null)
+            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+    };
     private TextView tv_textual_content, snooze, took;//todo delte
     private ImageView iv_pill;
     private Vibrator vibrator;
     private Ringtone ringtone;
     private Reminder reminder;
     private Handler handler;
-
-    private final Runnable closeScreen = () -> {
-        final Window window = getWindow();
-        if (window != null)
-            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-    };
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

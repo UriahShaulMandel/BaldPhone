@@ -46,6 +46,8 @@ public abstract class BaldKeyboard extends FrameLayout {
     protected final View children[], backspace;
     private final Vibrator vibrator;
     private final Runnable backspaceRunnable;
+    private Thread backspaceThread;
+
 
     @Keep
     public BaldKeyboard(Context context, View.OnClickListener onClickListener, Runnable backspaceRunnable) {
@@ -65,7 +67,6 @@ public abstract class BaldKeyboard extends FrameLayout {
         backspace.setOnTouchListener(getBackSpaceListener());
         addView(keyboard);
     }
-
 
     public static BaldKeyboard newInstance(int language, Context context, View.OnClickListener onClickListener, Runnable backspaceRunnable) {
         switch (language) {
@@ -89,12 +90,10 @@ public abstract class BaldKeyboard extends FrameLayout {
 
     abstract int nextLanguage();
 
-
-    private Thread backspaceThread;
-
     private View.OnTouchListener getBackSpaceListener() {
         final Runnable backspaceRunnable = new Runnable() {
             int counter = 0;//do not delete!
+
             @Override
             public void run() {
                 try {

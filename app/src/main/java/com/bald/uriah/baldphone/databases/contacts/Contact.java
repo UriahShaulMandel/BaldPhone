@@ -36,12 +36,43 @@ import java.util.List;
  * Immutable Contact class
  */
 public class Contact {
+    public static final String[] READ_CONTACT_PROJECTION = {
+            ContactsContract.Contacts._ID,
+            ContactsContract.Contacts.DISPLAY_NAME,
+            ContactsContract.Contacts.LOOKUP_KEY,
+            ContactsContract.Contacts.PHOTO_URI,
+            ContactsContract.Contacts.STARRED
+    };
     private static final int PO_BOX = 0;
     private static final int STREET = 1;
     private static final int CITY = 2;
     private static final int STATE = 3;
     private static final int POSTAL_CODE = 4;
     private static final int COUNTRY = 5;
+    private static final String[] PHONE_PROJECTION = {
+            ContactsContract.CommonDataKinds.Phone.TYPE,
+            ContactsContract.CommonDataKinds.Phone.NUMBER,
+            ContactsContract.CommonDataKinds.Phone.CONTACT_ID
+    };
+    private static final String PHONE_SELECTION = ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ?";
+    private static final String[] EMAIL_PROJECTION = {
+            ContactsContract.CommonDataKinds.Email.DATA,
+            ContactsContract.CommonDataKinds.Email.CONTACT_ID
+    };
+    private static final String EMAIL_SELECTION = ContactsContract.CommonDataKinds.Email.CONTACT_ID + " = ?";
+    private static final String[] ADDRESS_PROJECTION = {
+            ContactsContract.Data.CONTACT_ID,
+            ContactsContract.Data.MIMETYPE,
+            ContactsContract.CommonDataKinds.StructuredPostal.POBOX,
+            ContactsContract.CommonDataKinds.StructuredPostal.STREET,
+            ContactsContract.CommonDataKinds.StructuredPostal.CITY,
+            ContactsContract.CommonDataKinds.StructuredPostal.REGION,
+            ContactsContract.CommonDataKinds.StructuredPostal.POSTCODE,
+            ContactsContract.CommonDataKinds.StructuredPostal.COUNTRY,
+            ContactsContract.CommonDataKinds.StructuredPostal.TYPE,
+    };
+    private static final String ADDRESS_SELECTION = ContactsContract.Data.CONTACT_ID + " = ? AND " + ContactsContract.Data.MIMETYPE + " = ?";
+
 
     private final int id;
     @NonNull
@@ -58,7 +89,6 @@ public class Contact {
     private final String name;
     @Nullable
     private final String photo;
-
     private final boolean favorite;
 
     private Contact(int id,
@@ -80,7 +110,6 @@ public class Contact {
         this.photo = photo;
         this.favorite = favorite;
     }
-
 
     public static Contact fromId(@NonNull String id, @NonNull ContentResolver contentResolver) throws ContactNotFoundException {
         final Cursor contactsCursor =
@@ -106,6 +135,85 @@ public class Contact {
         return readContact(contactsCursor, contentResolver);
     }
 
+    /**
+     * @param cursor          cursor with the following projection: {{@link #READ_CONTACT_PROJECTION}}
+     * @param contentResolver a content resolver
+     * @return the contact
+     */
+    public static Contact readContact(Cursor cursor, ContentResolver contentResolver) {
+        final String id;
+        final String lookupKey;
+        final List<Pair<Integer /*Type*/, String>> phoneList = new ArrayList<>();
+        final List<String> mailList = new ArrayList<>();
+        final List<Pair<Integer, String[]>> addressList = new ArrayList<>();
+        final List<String> whatsappNumbers;
+        final String name;
+        final String photo;
+        final boolean favorite;
+
+        id = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
+        name = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+        lookupKey = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.LOOKUP_KEY));
+        photo = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.PHOTO_URI));
+
+        try (Cursor pCur = contentResolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, PHONE_PROJECTION, PHONE_SELECTION, new String[]{id}, null)) {
+            while (pCur.moveToNext()) {
+                phoneList.add(new Pair<>(
+                        pCur.getInt(pCur.getColumnIndex(ContactsContract.CommonDataKinds.Phone.TYPE)),
+                        pCur.getString(pCur.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
+                ));
+            }
+        }
+
+        try (Cursor emailCur = contentResolver.query(ContactsContract.CommonDataKinds.Email.CONTENT_URI, EMAIL_PROJECTION, EMAIL_SELECTION, new String[]{id}, null)) {
+            while (emailCur.moveToNext()) {
+                mailList.add(emailCur.getString(emailCur.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA)));
+            }
+        }
+
+        //Get Postal Address...
+        try (Cursor addrCur = contentResolver.query(ContactsContract.Data.CONTENT_URI,
+                ADDRESS_PROJECTION,
+                ADDRESS_SELECTION,
+                new String[]{id, ContactsContract.CommonDataKinds.StructuredPostal.CONTENT_ITEM_TYPE},
+                null)) {
+            while (addrCur.moveToNext()) {
+                addressList.add(new Pair<>(addrCur.getInt(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.TYPE)), new String[]{
+                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.POBOX)),
+                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.STREET)),
+                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.CITY)),
+                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.REGION)),
+                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.POSTCODE)),
+                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.COUNTRY))
+                }));
+            }
+        }
+
+        whatsappNumbers = getWhatsAppNumbers(contentResolver, name);
+        favorite = cursor.getInt(cursor.getColumnIndex(ContactsContract.Contacts.STARRED)) == 1;
+        return new Contact(Integer.parseInt(id), lookupKey, phoneList, mailList, addressList, whatsappNumbers, name, photo, favorite);
+    }
+
+    private static List<String> getWhatsAppNumbers(ContentResolver contentResolver, String contactName) {
+        final List<String> whatsappNumbers = new ArrayList<>();
+        try (Cursor cursor1 = contentResolver.query(ContactsContract.RawContacts.CONTENT_URI, new String[]{ContactsContract.RawContacts._ID}, ContactsContract.RawContacts.ACCOUNT_TYPE + "= ? AND " + ContactsContract.CommonDataKinds.StructuredName.DISPLAY_NAME_PRIMARY + " = ?", new String[]{D.WHATSAPP_PACKAGE_NAME, contactName}, null)) {
+            String rawContactId, phoneNumber;
+            while (cursor1.moveToNext()) {
+                rawContactId = cursor1.getString(cursor1.getColumnIndex(ContactsContract.RawContacts._ID));
+                try (Cursor cursor2 = contentResolver.query(ContactsContract.Data.CONTENT_URI, new String[]{ContactsContract.Data.DATA3}, ContactsContract.Data.MIMETYPE + " = ? AND " + ContactsContract.Data.RAW_CONTACT_ID + " = ? ", new String[]{"vnd.android.cursor.item/vnd.com.whatsapp.profile", rawContactId}, null)) {
+                    while (cursor2.moveToNext()) {
+                        phoneNumber = cursor2.getString(0);
+                        if (TextUtils.isEmpty(phoneNumber))
+                            continue;
+                        if (phoneNumber.startsWith("Message"))
+                            phoneNumber = phoneNumber.replace("Message", "");
+                        whatsappNumbers.add(phoneNumber);
+                    }
+                }
+            }
+            return whatsappNumbers;
+        }
+    }
 
     @NonNull
     public List<Pair<Integer, String[]>> getAddressList() {
@@ -201,11 +309,9 @@ public class Contact {
         return name;
     }
 
-
     public int getId() {
         return id;
     }
-
 
     @Nullable
     public String getPhoto() {
@@ -215,123 +321,6 @@ public class Contact {
     public static class ContactNotFoundException extends Exception {
         ContactNotFoundException() {
             super();
-        }
-    }
-
-
-    public static final String[] READ_CONTACT_PROJECTION = {
-            ContactsContract.Contacts._ID,
-            ContactsContract.Contacts.DISPLAY_NAME,
-            ContactsContract.Contacts.LOOKUP_KEY,
-            ContactsContract.Contacts.PHOTO_URI,
-            ContactsContract.Contacts.STARRED
-    };
-
-    private static final String[] PHONE_PROJECTION = {
-            ContactsContract.CommonDataKinds.Phone.TYPE,
-            ContactsContract.CommonDataKinds.Phone.NUMBER,
-            ContactsContract.CommonDataKinds.Phone.CONTACT_ID
-    };
-    private static final String PHONE_SELECTION = ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ?";
-
-    private static final String[] EMAIL_PROJECTION = {
-            ContactsContract.CommonDataKinds.Email.DATA,
-            ContactsContract.CommonDataKinds.Email.CONTACT_ID
-    };
-    private static final String EMAIL_SELECTION = ContactsContract.CommonDataKinds.Email.CONTACT_ID + " = ?";
-
-    private static final String[] ADDRESS_PROJECTION = {
-            ContactsContract.Data.CONTACT_ID,
-            ContactsContract.Data.MIMETYPE,
-            ContactsContract.CommonDataKinds.StructuredPostal.POBOX,
-            ContactsContract.CommonDataKinds.StructuredPostal.STREET,
-            ContactsContract.CommonDataKinds.StructuredPostal.CITY,
-            ContactsContract.CommonDataKinds.StructuredPostal.REGION,
-            ContactsContract.CommonDataKinds.StructuredPostal.POSTCODE,
-            ContactsContract.CommonDataKinds.StructuredPostal.COUNTRY,
-            ContactsContract.CommonDataKinds.StructuredPostal.TYPE,
-    };
-    private static final String ADDRESS_SELECTION = ContactsContract.Data.CONTACT_ID + " = ? AND " + ContactsContract.Data.MIMETYPE + " = ?";
-
-
-    /**
-     * @param cursor          cursor with the following projection: {{@link #READ_CONTACT_PROJECTION}}
-     * @param contentResolver a content resolver
-     * @return the contact
-     */
-    public static Contact readContact(Cursor cursor, ContentResolver contentResolver) {
-        final String id;
-        final String lookupKey;
-        final List<Pair<Integer /*Type*/, String>> phoneList = new ArrayList<>();
-        final List<String> mailList = new ArrayList<>();
-        final List<Pair<Integer, String[]>> addressList = new ArrayList<>();
-        final List<String> whatsappNumbers;
-        final String name;
-        final String photo;
-        final boolean favorite;
-
-        id = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
-        name = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
-        lookupKey = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.LOOKUP_KEY));
-        photo = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.PHOTO_URI));
-
-        try (Cursor pCur = contentResolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, PHONE_PROJECTION, PHONE_SELECTION, new String[]{id}, null)) {
-            while (pCur.moveToNext()) {
-                phoneList.add(new Pair<>(
-                        pCur.getInt(pCur.getColumnIndex(ContactsContract.CommonDataKinds.Phone.TYPE)),
-                        pCur.getString(pCur.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
-                ));
-            }
-        }
-
-        try (Cursor emailCur = contentResolver.query(ContactsContract.CommonDataKinds.Email.CONTENT_URI, EMAIL_PROJECTION, EMAIL_SELECTION, new String[]{id}, null)) {
-            while (emailCur.moveToNext()) {
-                mailList.add(emailCur.getString(emailCur.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA)));
-            }
-        }
-
-        //Get Postal Address...
-        try (Cursor addrCur = contentResolver.query(ContactsContract.Data.CONTENT_URI,
-                ADDRESS_PROJECTION,
-                ADDRESS_SELECTION,
-                new String[]{id, ContactsContract.CommonDataKinds.StructuredPostal.CONTENT_ITEM_TYPE},
-                null)) {
-            while (addrCur.moveToNext()) {
-                addressList.add(new Pair<>(addrCur.getInt(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.TYPE)), new String[]{
-                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.POBOX)),
-                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.STREET)),
-                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.CITY)),
-                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.REGION)),
-                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.POSTCODE)),
-                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.COUNTRY))
-                }));
-            }
-        }
-
-        whatsappNumbers = getWhatsAppNumbers(contentResolver, name);
-        favorite = cursor.getInt(cursor.getColumnIndex(ContactsContract.Contacts.STARRED)) == 1;
-        return new Contact(Integer.parseInt(id), lookupKey, phoneList, mailList, addressList, whatsappNumbers, name, photo, favorite);
-    }
-
-
-    private static List<String> getWhatsAppNumbers(ContentResolver contentResolver, String contactName) {
-        final List<String> whatsappNumbers = new ArrayList<>();
-        try (Cursor cursor1 = contentResolver.query(ContactsContract.RawContacts.CONTENT_URI, new String[]{ContactsContract.RawContacts._ID}, ContactsContract.RawContacts.ACCOUNT_TYPE + "= ? AND " + ContactsContract.CommonDataKinds.StructuredName.DISPLAY_NAME_PRIMARY + " = ?", new String[]{D.WHATSAPP_PACKAGE_NAME, contactName}, null)) {
-            String rawContactId, phoneNumber;
-            while (cursor1.moveToNext()) {
-                rawContactId = cursor1.getString(cursor1.getColumnIndex(ContactsContract.RawContacts._ID));
-                try (Cursor cursor2 = contentResolver.query(ContactsContract.Data.CONTENT_URI, new String[]{ContactsContract.Data.DATA3}, ContactsContract.Data.MIMETYPE + " = ? AND " + ContactsContract.Data.RAW_CONTACT_ID + " = ? ", new String[]{"vnd.android.cursor.item/vnd.com.whatsapp.profile", rawContactId}, null)) {
-                    while (cursor2.moveToNext()) {
-                        phoneNumber = cursor2.getString(0);
-                        if (TextUtils.isEmpty(phoneNumber))
-                            continue;
-                        if (phoneNumber.startsWith("Message"))
-                            phoneNumber = phoneNumber.replace("Message", "");
-                        whatsappNumbers.add(phoneNumber);
-                    }
-                }
-            }
-            return whatsappNumbers;
         }
     }
 }

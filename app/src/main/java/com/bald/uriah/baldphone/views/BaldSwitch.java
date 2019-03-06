@@ -202,10 +202,6 @@ public class BaldSwitch extends LinearLayout {
 
     }
 
-    public interface OnChangeListener {
-        void onChange(boolean isChecked);
-    }
-
     @Override
     public boolean isEnabled() {
         return enabled;
@@ -223,12 +219,12 @@ public class BaldSwitch extends LinearLayout {
 //        }
     }
 
-    public void setOnChangeListener(OnChangeListener onChangeListener) {
-        this.onChangeListener = onChangeListener;
-    }
-
     public OnChangeListener getOnChangeListener() {
         return onChangeListener;
+    }
+
+    public void setOnChangeListener(OnChangeListener onChangeListener) {
+        this.onChangeListener = onChangeListener;
     }
 
     public boolean isChecked() {
@@ -244,6 +240,10 @@ public class BaldSwitch extends LinearLayout {
     public void setChecked(boolean checked) {
         this.checked = checked;
         updateView();
+    }
+
+    public interface OnChangeListener {
+        void onChange(boolean isChecked);
     }
 
 

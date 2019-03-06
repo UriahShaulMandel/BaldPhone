@@ -27,6 +27,12 @@ import com.bald.uriah.baldphone.R;
 @SuppressLint("ViewConstructor")
 public class NumberKeyboard extends BaldKeyboard {
     public static final int LANGUAGE_ID = 0;
+    public static final char[] numbersKeyboardsCodes = new char[]{
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'
+            , '(', ')', '+', '-', '/', '?', '!', ':', ';', ',',
+            '\'', '@', '*', '#', '^', '$', '%', '=', BACKSPACE,
+            NUMBERS, SPEECH_TO_TEXT, ' ', HIDE, '.', ENTER,
+    };
 
     public NumberKeyboard(Context context, OnClickListener onClickListener, Runnable backspace) {
         super(context, onClickListener, backspace);
@@ -36,7 +42,6 @@ public class NumberKeyboard extends BaldKeyboard {
     protected int layout() {
         return R.layout.numbers_keyboard_layout;
     }
-
 
     @Override
     int nextLanguage() {
@@ -48,17 +53,8 @@ public class NumberKeyboard extends BaldKeyboard {
         return numbersKeyboardsCodes;
     }
 
-
     @Override
     protected int backspaceIndex() {
         return 29;
     }
-
-
-    public static final char[] numbersKeyboardsCodes = new char[]{
-            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'
-            , '(', ')', '+', '-', '/', '?', '!', ':', ';', ',',
-            '\'', '@', '*', '#', '^', '$', '%', '=', BACKSPACE,
-            NUMBERS, SPEECH_TO_TEXT, ' ', HIDE, '.', ENTER,
-    };
 }

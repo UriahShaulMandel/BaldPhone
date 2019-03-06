@@ -20,6 +20,7 @@
 package com.bald.uriah.baldphone.utils;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -59,8 +60,8 @@ import java.util.Locale;
  * S - Static. Static methods which are used everywhere in the platform.
  */
 public class S {
-    private static final String TAG = S.class.getSimpleName();
     public static final String BALD_IMPORTANT_MESSAGE = "Bald Important Message";
+    private static final String TAG = S.class.getSimpleName();
 
     public static void logImportant(@Nullable CharSequence charSequence) {
         Log.e(BALD_IMPORTANT_MESSAGE, String.valueOf(charSequence));
@@ -253,4 +254,7 @@ public class S {
                 Uri.fromFile(file);
     }
 
+    public static void startComponentName(final Context context, final ComponentName componentName) {
+        context.startActivity(Intent.makeRestartActivityTask(componentName));
+    }
 }

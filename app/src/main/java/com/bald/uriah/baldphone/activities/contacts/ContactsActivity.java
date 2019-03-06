@@ -34,6 +34,16 @@ import com.bald.uriah.baldphone.R;
  */
 public class ContactsActivity extends BaseContactsActivity {
     private static final String TAG = ContactsActivity.class.getSimpleName();
+    private final static String[] PROJECTION =
+            {ContactsContract.Data.DISPLAY_NAME,
+                    ContactsContract.Data._ID,
+                    ContactsContract.Contacts.PHOTO_URI,
+                    ContactsContract.Data.LOOKUP_KEY,
+                    ContactsContract.Data.STARRED};
+    private static final String STAR_SELECTION =
+            ContactsContract.Data.STARRED + " = 1";
+    private static final String SORT_ORDER =
+            "upper(" + ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + ") ASC";
     private View add_contact;
 
     @Override
@@ -57,7 +67,6 @@ public class ContactsActivity extends BaseContactsActivity {
         add_contact = findViewById(R.id.bt_add_contact);
     }
 
-
     @Override
     protected Cursor getCursorForFilter(String filter, boolean favorite) {
         try {
@@ -70,20 +79,6 @@ public class ContactsActivity extends BaseContactsActivity {
         }
 
     }
-
-    private final static String[] PROJECTION =
-            {ContactsContract.Data.DISPLAY_NAME,
-                    ContactsContract.Data._ID,
-                    ContactsContract.Contacts.PHOTO_URI,
-                    ContactsContract.Data.LOOKUP_KEY,
-                    ContactsContract.Data.STARRED};
-
-    private static final String STAR_SELECTION =
-            ContactsContract.Data.STARRED + " = 1";
-
-    private static final String SORT_ORDER =
-            "upper(" + ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + ") ASC";
-
 
     private Cursor getContactsByNameFilter(String filter, boolean favorite) {
         final String selection =

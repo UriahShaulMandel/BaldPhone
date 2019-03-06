@@ -58,11 +58,11 @@ public class SinglePhotoActivity extends SingleMediaActivity implements Constant
     }
 
     private static class PhotoPagerAdapter extends MediaPagerAdapter {
+        private static final Uri EXTERNAL = MediaStore.Files.getContentUri("external");
+
         public PhotoPagerAdapter(SingleMediaActivity activity) {
             super(activity);
         }
-
-        private static final Uri EXTERNAL = MediaStore.Files.getContentUri("external");
 
         @Override
         protected void delete(Activity activity, Cursor cursor) {

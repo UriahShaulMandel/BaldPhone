@@ -32,7 +32,6 @@ import com.bumptech.glide.request.RequestOptions;
  * Mini contact, contains lookupkey,photo,name and id.
  */
 public class MiniContact implements HomeScreenPinHelper.HomeScreenPinnable {
-    private static final String TAG = MiniContact.class.getSimpleName();
     public static final String[] PROJECTION = new String[]{
             ContactsContract.Contacts.LOOKUP_KEY,
             ContactsContract.Contacts.DISPLAY_NAME,
@@ -40,8 +39,7 @@ public class MiniContact implements HomeScreenPinHelper.HomeScreenPinnable {
             ContactsContract.Contacts._ID,
             ContactsContract.Contacts.STARRED,
     };
-
-
+    private static final String TAG = MiniContact.class.getSimpleName();
     public final String lookupKey, photo;
     @Nullable
     public final String name;

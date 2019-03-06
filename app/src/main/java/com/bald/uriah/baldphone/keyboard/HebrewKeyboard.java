@@ -28,6 +28,13 @@ import com.bald.uriah.baldphone.R;
 
 public class HebrewKeyboard extends BaldKeyboard {
     public static final int LANGUAGE_ID = 1;
+    public static final char[] hebrewKeyboardCodes = new char[]{
+            'ק', 'ר', 'א', 'ט', 'ו', 'ן', 'ם', 'פ', BACKSPACE,
+            'ש', 'ד', 'ג', 'כ', 'ע', 'י', 'ח', 'ל', 'ך', 'ף',
+            'ז', 'ס', 'ב', 'ה', 'נ', 'מ', 'צ', 'ת', 'ץ',
+            NUMBERS, LANGUAGE, SPEECH_TO_TEXT, ' ', HIDE, '.', ENTER,
+
+    };
 
     public HebrewKeyboard(Context context, OnClickListener onClickListener, Runnable backspace) {
         super(context, onClickListener, backspace);
@@ -37,7 +44,6 @@ public class HebrewKeyboard extends BaldKeyboard {
     protected int layout() {
         return R.layout.he_keyboard_layout;
     }
-
 
     @Override
     int nextLanguage() {
@@ -49,17 +55,8 @@ public class HebrewKeyboard extends BaldKeyboard {
         return hebrewKeyboardCodes;
     }
 
-
     @Override
     protected int backspaceIndex() {
         return 9;
     }
-
-    public static final char[] hebrewKeyboardCodes = new char[]{
-            'ק', 'ר', 'א', 'ט', 'ו', 'ן', 'ם', 'פ', BACKSPACE,
-            'ש', 'ד', 'ג', 'כ', 'ע', 'י', 'ח', 'ל', 'ך', 'ף',
-            'ז', 'ס', 'ב', 'ה', 'נ', 'מ', 'צ', 'ת', 'ץ',
-            NUMBERS, LANGUAGE, SPEECH_TO_TEXT, ' ', HIDE, '.', ENTER,
-
-    };
 }

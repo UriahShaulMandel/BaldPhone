@@ -27,7 +27,6 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.util.Pools;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -39,18 +38,14 @@ import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 import com.bald.uriah.baldphone.views.ViewPagerHolder;
 
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
-import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-
 /**
  * Parent activity for {@link SinglePhotoActivity} and {@link SingleVideoActivity}.
  * has all of their commons in here.
  */
 public abstract class SingleMediaActivity extends BaldActivity {
     public static final String MEDIA_KEY = "picKey";
-    private static final String TAG = SingleMediaActivity.class.getSimpleName();
     public static final int SHOULD_REFRESH = 0xDEAD;
-
+    private static final String TAG = SingleMediaActivity.class.getSimpleName();
     protected ViewPagerHolder viewPagerHolder;
     private View delete, share, more;
     private LinearLayout optionsBar;
@@ -105,6 +100,10 @@ public abstract class SingleMediaActivity extends BaldActivity {
         });
     }
 
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_WRITE_EXTERNAL_STORAGE;
+    }
 
     public abstract static class MediaPagerAdapter extends BaldViewAdapter {
         private final SingleMediaActivity activity;
@@ -172,10 +171,5 @@ public abstract class SingleMediaActivity extends BaldActivity {
         @Override
         public void restoreState(Parcelable state, ClassLoader loader) {
         }
-    }
-
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_WRITE_EXTERNAL_STORAGE;
     }
 }
