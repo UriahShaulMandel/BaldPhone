@@ -5,11 +5,11 @@
  
  Here is how screenshots are named:
   - BP-
-  - ARROWS- (if accesibily mode is set to Hard or Medium t(true) or f(false))
+  - ARROWS- (if accessibility mode is set to Hard or Medium t(true) or f(false))
   - THEME- (right now only d(dark) or l(light))
   - RATIO- (16:9 will be named as 16_9, if screenshot is landscape than 9_16)
   - UNIQUE_ID- (BaldPhone looks different on different phones, with different font and zoom settings, each phone will have different ID)
-  - NAME_OF_STATE- (States will be added soon)
+  - NAME_OF_STATE- (States are listed in file STATES)
   - VERSION_CODE (The version <B><U>CODE</U></B>, not name, integer that can be found under Technical Information)
   
   All together:
@@ -29,4 +29,4 @@
   - Sexual\Violent Content
   - Personal info
   - Mixed languages in same screenshot (e.g. app language in english but contact name is in hebrew)
-  - Any thing you dont want to be seen by others
+  - Any thing you don't want to be seen by others
