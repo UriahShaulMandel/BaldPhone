@@ -18,7 +18,7 @@ Main features:
  - SOS Button
  - Advanced Settings
 
-[website](https://sites.google.com/view/baldphone)
+[Website](https://sites.google.com/view/baldphone)
 
 [Download Link](https://github.com/UriahShaulMandel/BaldPhone/blob/master/apks/app-release.apk?raw=true) 
 
