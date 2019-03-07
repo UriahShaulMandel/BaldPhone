@@ -9,12 +9,13 @@
   - THEME- (right now only d(dark) or l(light))
   - RATIO- (16:9 will be named as 16_9, if screenshot is landscape than 9_16)
   - UNIQUE_ID- (BaldPhone looks different on different phones, with different font and zoom settings, each phone will have different ID)
-  - NAME_OF_STATE- (States are listed in file [STATES](https://github.com/UriahShaulMandel/BaldPhone/blob/master/screenshots/STATES))
-  - VERSION_CODE (The version <B><U>CODE</U></B>, not name, integer that can be found under Technical Information)
+  - VERSION_CODE- (The version <B><U>CODE</U></B>, not name, integer that can be found under Technical Information)
+  - NAME_OF_STATE (States are listed in file [STATES](https://github.com/UriahShaulMandel/BaldPhone/blob/master/screenshots/STATES))
+
   
   All together:
-  - BP-t-l-9_16-UPSP-SingleContactActivity_KeyboardUp-63
-  - BP-t-d-16_9-UPSP-ContactsActivity_Starred-64
+  - BP-t-l-9_16-UPSP-63-SingleContactActivity_KeyboardUp
+  - BP-t-d-16_9-UPSP-64-ContactsActivity_Starred
   
   <B>Please follow those simple rules, otherwise it'll be too hard to maintain.</B>
   
