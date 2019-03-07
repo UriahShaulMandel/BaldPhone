@@ -9,7 +9,7 @@
   - THEME- (right now only d(dark) or l(light))
   - RATIO- (16:9 will be named as 16_9, if screenshot is landscape than 9_16)
   - UNIQUE_ID- (BaldPhone looks different on different phones, with different font and zoom settings, each phone will have different ID)
-  - NAME_OF_STATE- (States are listed in file STATES)
+  - NAME_OF_STATE- (States are listed in file [STATES](https://github.com/UriahShaulMandel/BaldPhone/blob/master/screenshots/STATES))
   - VERSION_CODE (The version <B><U>CODE</U></B>, not name, integer that can be found under Technical Information)
   
   All together:
