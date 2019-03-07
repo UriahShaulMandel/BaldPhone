@@ -16,7 +16,7 @@ Pills_addPill
 Pills_deletePill
 Photos_regular
 Photos_single
-Photos_singleExapnded
+Photos_singleExpanded
 Photos_delete
 *same for videos*
 Assistant_regular
@@ -45,7 +45,7 @@ VideoTutorials
 Settings_regular
 Settings_all
 Settings_connection
-Settings_accesibilty
+Settings_accessibility
 Settings_accidentalTouchGuard
 Settings_strongHand
 Settings_font

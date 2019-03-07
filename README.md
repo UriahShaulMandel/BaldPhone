@@ -1,5 +1,5 @@
 [![alt text](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/logo/rectangle.png)](https://www.youtube.com/watch?v=G33E4XQp_Xw)
- - Click the image above to watch the video
+ - Click the image above or click [this](https://www.youtube.com/watch?v=G33E4XQp_Xw) to watch the video
 
 
 # BaldPhone
@@ -29,9 +29,9 @@ Feel free to contact me at baldphone.contact@gmail.com
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 Please make sure to update tests as appropriate.
-You can contirbute by:
+You can contribute by:
   - Adding features and fixing bugs
-  - Trasnlating BaldPhone to other languages
+  - Translating BaldPhone to other languages
   - Improving and translating the manual
   - Using BaldPhone and sending feedback
 
