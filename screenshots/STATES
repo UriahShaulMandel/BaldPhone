@@ -18,7 +18,10 @@ Photos_regular
 Photos_single
 Photos_singleExpanded
 Photos_delete
-*same for videos*
+Videos_regular
+Videos_single
+Videos_singleExpanded
+Videos_delete
 Assistant_regular
 Notifications_regular
 Notifications_cleared
