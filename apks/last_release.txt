@@ -1,1 +1,2 @@
-61@@@11.0.5@@@Updated the updating mechanism.
+62@@@11.0.6@@@Removed the "ad"
+fixed a typo
