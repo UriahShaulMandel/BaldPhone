@@ -110,6 +110,8 @@ public class UpdatesActivity extends BaldActivity {
     protected void onDestroy() {
         if (downloadFinishedReceiver != null)
             unregisterReceiver(downloadFinishedReceiver);
+        if (manager != null && downloadId != -1)
+            manager.remove(downloadId);
         stopProgressChecker();
         super.onDestroy();
     }

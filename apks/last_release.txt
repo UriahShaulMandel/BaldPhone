@@ -1,1 +1,1 @@
-64@@@11.0.9@@@Improved app launching mechanism
+65@@@11.1.0@@@Improved updating mechanism
