@@ -1,2 +1,1 @@
-62@@@11.0.6@@@Removed the "ad"
-fixed a typo
+64@@@11.0.9@@@Improved app launching mechanism

@@ -117,9 +117,9 @@ public class UpdatesActivity extends BaldActivity {
     public void apply() {
         if (isDestroyed())
             return;
-        tv_new_version.setText(String.format("%s%s", getString(R.string.new_version), message[1]));
+        tv_new_version.setText(String.format("%s%s", getString(R.string.new_version), message[UpdatingUtil.MESSAGE_VERSION_NAME]));
         tv_current_version.setText(String.format("%s%s", getString(R.string.current_version), BuildConfig.VERSION_NAME));
-        tv_change_log.setText(message[2]);
+        tv_change_log.setText(message[UpdatingUtil.MESSAGE_VERSION_CHANGE_LOG]);
 
         final int downloadedVersion = BPrefs.get(this).getInt(BPrefs.LAST_APK_VERSION_KEY, -1);
         final int newVersion = Integer.parseInt(message[0]);

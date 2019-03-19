@@ -74,7 +74,7 @@ public class UpdatingUtil {
     }
 
     public static boolean isMessageOk(String[] message) {
-        return message.length >= MESSAGE_PARTS && android.text.TextUtils.isDigitsOnly(message[0]);
+        return message.length >= MESSAGE_PARTS && android.text.TextUtils.isDigitsOnly(message[MESSAGE_VERSION_CODE]);
     }
 
     public static boolean isOnline(Context context) {
@@ -89,7 +89,7 @@ public class UpdatingUtil {
     }
 
     public static boolean updatePending(@NonNull String[] message) {
-        return Integer.parseInt(message[0]) > BuildConfig.VERSION_CODE;
+        return Integer.parseInt(message[MESSAGE_VERSION_CODE]) > BuildConfig.VERSION_CODE;
     }
 
     public static void checkForUpdates(BaldActivity activity) {
