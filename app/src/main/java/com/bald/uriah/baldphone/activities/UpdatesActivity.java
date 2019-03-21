@@ -41,6 +41,7 @@ import android.widget.TextView;
 
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.broadcast_receivers.DownloadManagerReceiver;
 import com.bald.uriah.baldphone.utils.BDB;
 import com.bald.uriah.baldphone.utils.BDialog;
 import com.bald.uriah.baldphone.utils.BPrefs;
@@ -85,6 +86,7 @@ public class UpdatesActivity extends BaldActivity {
         public void onReceive(Context context, Intent intent) {
             if (downloadId == intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -2)) {
                 handler.postDelayed(() -> {
+                    DownloadManagerReceiver.changeToDownloadedState(context);
                     downloadFinishedToast.show();
                     stopProgressChecker();
                     apply();

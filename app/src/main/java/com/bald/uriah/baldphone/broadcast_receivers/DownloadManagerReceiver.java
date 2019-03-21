@@ -33,11 +33,17 @@ public class DownloadManagerReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         final SharedPreferences sharedPreferences = BPrefs.get(context);
         if (sharedPreferences.getLong(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_ID, -3) == intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -2) && sharedPreferences.contains(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER)) {
-            sharedPreferences.edit()
-                    .putInt(BPrefs.LAST_APK_VERSION_KEY, sharedPreferences.getInt(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER, -1))
-                    .remove(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_ID)
-                    .remove(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER)
-                    .apply();
+            changeToDownloadedState(context);
         }
+    }
+
+
+    public static void changeToDownloadedState(Context context) {
+        final SharedPreferences sharedPreferences = BPrefs.get(context);
+        sharedPreferences.edit()
+                .putInt(BPrefs.LAST_APK_VERSION_KEY, sharedPreferences.getInt(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER, -1))
+                .remove(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_ID)
+                .remove(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER)
+                .apply();
     }
 }
