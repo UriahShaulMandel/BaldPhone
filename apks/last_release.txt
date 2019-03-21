@@ -1,1 +1,1 @@
-65@@@11.1.0@@@Improved updating mechanism
+67@@@11.1.1@@@Improved updating mechanism

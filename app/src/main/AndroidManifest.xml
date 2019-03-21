@@ -202,6 +202,11 @@
         <receiver
             android:name=".broadcast_receivers.ReminderReceiver"
             android:process=":remote" />
+        <receiver android:name=".broadcast_receivers.DownloadManagerReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
 
 
         <provider

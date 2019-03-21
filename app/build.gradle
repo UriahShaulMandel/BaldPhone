@@ -27,8 +27,13 @@ buildscript {
         // We recommend changing it to the latest version from our changelog:
         // https://docs.fabric.io/android/changelog.html#fabric-gradle-plugin
         //noinspection GradleDependency
-        classpath 'io.fabric.tools:gradle:1.25.4'
+//        classpath 'io.fabric.tools:gradle:1.25.4'
 //        don't change to other version - not compatible with gradle 4.6!
+
+
+
+        classpath 'io.fabric.tools:gradle:1.28.0'
+
     }
 }
 
@@ -48,8 +53,10 @@ android {
         minSdkVersion 21
         //noinspection OldTargetApi
         targetSdkVersion 27
-        versionCode 65
-        versionName "11.1.0"
+//        versionCode 65
+//        versionName "11.1.0"
+        versionCode 66
+        versionName "11.1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = false
 
