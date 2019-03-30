@@ -175,7 +175,6 @@ public class AlarmScreen extends BaldActivity {
     protected void onStop() {
         if (ringtone != null)
             ringtone.stop();
-
         super.onStop();
     }
 

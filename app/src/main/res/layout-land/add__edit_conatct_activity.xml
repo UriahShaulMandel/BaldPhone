@@ -152,14 +152,16 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:hint="@string/mail"
-        android:imeOptions="actionNext"
         android:inputType="textEmailAddress"
         android:textColorHint="?bald_hint_on_background"
         app:layout_constraintBottom_toTopOf="@+id/save"
         app:layout_constraintEnd_toEndOf="@+id/et_address"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/et_address"
-        app:layout_constraintTop_toBottomOf="@+id/et_address" />
+        app:layout_constraintTop_toBottomOf="@+id/et_address"
+        android:imeOptions="actionDone"
+
+        />
 
     <com.bald.uriah.baldphone.views.BaldButton
         android:id="@+id/save"

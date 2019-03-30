@@ -38,17 +38,18 @@
         android:paddingLeft="35dp"
         android:paddingRight="35dp">
 
+
         <com.bald.uriah.baldphone.views.BaldEditText
             android:id="@+id/reminder_edit_name"
             style="@style/EditText"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="0.7"
-            android:ems="10"
-            android:gravity="center"
+            android:layout_weight="0.4"
             android:hint="@string/pill_name"
             android:inputType="text"
+            android:imeOptions="actionDone"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
             android:textSize="@dimen/huge" />
 
         <com.bald.uriah.baldphone.views.BaldMultipleSelection

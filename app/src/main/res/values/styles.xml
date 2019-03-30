@@ -189,7 +189,6 @@
 
     <style name="ButtonsText.Auto">
         <item name="autoSizeTextType">uniform</item>
-
     </style>
 
 </resources>
