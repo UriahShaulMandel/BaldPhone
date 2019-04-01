@@ -41,6 +41,7 @@ import android.widget.TextView;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
+import com.bald.uriah.baldphone.activities.DialerActivity;
 import com.bald.uriah.baldphone.activities.contacts.AddContactActivity;
 import com.bald.uriah.baldphone.activities.contacts.SingleContactActivity;
 import com.bald.uriah.baldphone.databases.calls.Call;
@@ -162,14 +163,11 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                 tv_time.setTextColor(textColor);
                 tv_type.setTextColor(textColor);
                 iv_type.setImageTintList(miniContact.favorite ? ColorStateList.valueOf(textColor) : null);
-
-
             } else {
                 image_letter.setVisibility(View.VISIBLE);
                 profile_pic.setImageDrawable(letterContactBackground);
                 image_letter.setText(call.phoneNumber.length() > 0 ? call.phoneNumber.substring(0, 1) : "");
                 contact_name.setText(call.phoneNumber);
-
             }
 
             setType(call.callType);
@@ -245,7 +243,7 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                     break;
                 default:
                     drawableRes = R.drawable.error_on_background;
-                    stringRes = R.string.an_error_has_occurred;
+                    stringRes = R.string.empty;
             }
             tv_type.setText(stringRes);
             iv_type.setImageResource(drawableRes);
@@ -254,21 +252,31 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
         @Override
         public void onClick(View v) {
             final Call call = callList.get(getAdapterPosition());
-            MiniContact miniContact = call.getMiniContact(activity);
+            final MiniContact miniContact = call.getMiniContact(activity);
             if (miniContact != null) {
                 activity.startActivity(
                         new Intent(activity, SingleContactActivity.class)
                                 .putExtra(SingleContactActivity.CONTACT_LOOKUP_KEY, miniContact.lookupKey)
                 );
             } else {
+
                 BDB.from(activity)
-                        .setDialogState(BDialog.DialogState.YES_CANCEL)
-                        .setSubText(String.format(activity.getString(R.string.do_you_want_to_add___to_your_contacts), call.phoneNumber))
-                        .setTitle(R.string.add_contact)
+                        .setDialogState(BDialog.DialogState.OPTION_OPTION_OK_CANCEL)
+                        .setSubText(String.format(activity.getString(R.string.what_do_you_want_to_do_with___), call.phoneNumber))
+                        .setOptions(R.string.call, R.string.add_contact)
                         .setPositiveButtonListener(params -> {
-                            activity.startActivity(new Intent(activity, AddContactActivity.class).putExtra(AddContactActivity.CONTACT_NUMBER, call.phoneNumber));
-                            return true;
+                            final int option = (int) params[0];
+                            switch (option) {
+                                case 0:
+                                    DialerActivity.call(call.phoneNumber, activity);
+                                    return true;
+                                case 1:
+                                    activity.startActivity(new Intent(activity, AddContactActivity.class).putExtra(AddContactActivity.CONTACT_NUMBER, call.phoneNumber));
+                                    return true;
+                            }
+                            throw new IllegalArgumentException("option must be 0 or 1");
                         })
+                        .setOptionsStartingIndex(0)
                         .show();
             }
         }

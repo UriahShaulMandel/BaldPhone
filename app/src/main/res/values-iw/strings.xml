@@ -343,6 +343,7 @@
     <string name="downloading">מוריד…</string>
     <string name="baldphone_is_up_to_date">BaldPhone כבר מעודכן!</string>
     <string name="what_s_new">מה חדש</string>
+    <string name="what_do_you_want_to_do_with___">מה ברצונך לעשות עם %s?</string>
 
     <string name="download_finished">הורדה הסתיימה!</string>
     <string name="downloading_updates">מוריד עדכונים…</string>

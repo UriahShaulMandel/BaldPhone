@@ -44,8 +44,8 @@ android {
         minSdkVersion 21
         //noinspection OldTargetApi
         targetSdkVersion 27
-        versionCode 66
-        versionName "11.1.1"
+        versionCode 67
+        versionName "11.1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = false
 
