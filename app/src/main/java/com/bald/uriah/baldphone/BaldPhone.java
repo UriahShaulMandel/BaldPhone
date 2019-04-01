@@ -29,6 +29,7 @@ import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.bald.uriah.baldphone.activities.CrashActivity;
+import com.bald.uriah.baldphone.activities.UpdatesActivity;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
 import com.bald.uriah.baldphone.services.NotificationListenerService;
@@ -48,7 +49,7 @@ public class BaldPhone extends Application {
         super.onCreate();
         AlarmScheduler.reStartAlarms(this);
         ReminderScheduler.reStartReminders(this);
-
+        UpdatesActivity.removeUpdatesInfo(this);
         try {
             startService(new Intent(this, NotificationListenerService.class));
         } catch (Exception e) {

@@ -73,7 +73,7 @@ public class UpdatesActivity extends BaldActivity {
                 if (!checkProgress()) {
                     System.out.println();
                     stopProgressChecker();
-                    removeUpdatesInfo();
+                    removeUpdatesInfo(UpdatesActivity.this);
                     apply();
                 }
             } finally {
@@ -161,7 +161,7 @@ public class UpdatesActivity extends BaldActivity {
             tv_download_progress.setVisibility(View.GONE);
             bt_re.setVisibility(View.VISIBLE);
             bt_re.setOnClickListener(v -> {
-                removeUpdatesInfo();
+                removeUpdatesInfo(this);
                 tryNowToast.show();
                 bt_re.setVisibility(View.GONE);
                 bt_re.setOnClickListener(null);
@@ -211,8 +211,8 @@ public class UpdatesActivity extends BaldActivity {
     }
 
 
-    private void removeUpdatesInfo() {
-        BPrefs.get(UpdatesActivity.this)
+    public static void removeUpdatesInfo(Context context) {
+        BPrefs.get(context)
                 .edit()
                 .remove(BPrefs.LAST_APK_VERSION_KEY)
                 .remove(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER)
