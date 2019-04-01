@@ -91,6 +91,7 @@ public class TechnicalInfoActivity extends BaldActivity {
                     .setSubText(R.string.clear_cache_subtext)
                     .setPositiveButtonListener(params -> {
                         deleteCache(this);
+                        UpdatesActivity.removeUpdatesInfo(this);
                         BaldToast.simple(this, R.string.cache_cleared_successfully);
                         return true;
                     })

@@ -40,8 +40,9 @@ public class DownloadManagerReceiver extends BroadcastReceiver {
 
     public static void changeToDownloadedState(Context context) {
         final SharedPreferences sharedPreferences = BPrefs.get(context);
+        final int LAST_APK_VERSION_KEY = sharedPreferences.getInt(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER, -1);
         sharedPreferences.edit()
-                .putInt(BPrefs.LAST_APK_VERSION_KEY, sharedPreferences.getInt(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER, -1))
+                .putInt(BPrefs.LAST_APK_VERSION_KEY, LAST_APK_VERSION_KEY)
                 .remove(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_ID)
                 .remove(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER)
                 .apply();

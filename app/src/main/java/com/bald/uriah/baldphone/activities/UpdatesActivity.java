@@ -70,12 +70,7 @@ public class UpdatesActivity extends BaldActivity {
         @Override
         public void run() {
             try {
-                if (!checkProgress()) {
-                    System.out.println();
-                    stopProgressChecker();
-                    removeUpdatesInfo(UpdatesActivity.this);
-                    apply();
-                }
+                checkProgress();
             } finally {
                 handler.postDelayed(progressChecker, PROGRESS_DELAY);
             }
@@ -86,7 +81,6 @@ public class UpdatesActivity extends BaldActivity {
         public void onReceive(Context context, Intent intent) {
             if (downloadId == intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -2)) {
                 handler.postDelayed(() -> {
-                    DownloadManagerReceiver.changeToDownloadedState(context);
                     downloadFinishedToast.show();
                     stopProgressChecker();
                     apply();
@@ -263,6 +257,7 @@ public class UpdatesActivity extends BaldActivity {
     /**
      * @return true if progress was checked successfully
      */
+
     private boolean checkProgress() {
         final Cursor cursor = manager.query(new DownloadManager.Query());
         if (!cursor.moveToFirst()) {
@@ -288,6 +283,7 @@ public class UpdatesActivity extends BaldActivity {
 
         } while (cursor.moveToNext());
         cursor.close();
+
         return false;
     }
 
