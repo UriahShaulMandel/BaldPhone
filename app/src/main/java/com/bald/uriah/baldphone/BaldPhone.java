@@ -37,9 +37,16 @@ import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
 
+import org.acra.ACRA;
+import org.acra.config.CoreConfigurationBuilder;
+import org.acra.config.HttpSenderConfigurationBuilder;
+import org.acra.data.StringFormat;
+import org.acra.sender.HttpSender;
+
 /**
  * base application class - onBoot makes onCreate run when devices opens.
  */
+
 public class BaldPhone extends Application {
     private static final String TAG = BaldPhone.class.getSimpleName();
 
@@ -61,7 +68,15 @@ public class BaldPhone extends Application {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        S.logImportant("attachBaseContext was called! setting Thread.setDefaultUncaughtExceptionHandler");
+        S.logImportant("attachBaseContext was called! setting Acra and Thread.setDefaultUncaughtExceptionHandler");
+        final CoreConfigurationBuilder builder = new CoreConfigurationBuilder(this)
+                .setBuildConfigClass(BuildConfig.class)
+                .setReportFormat(StringFormat.JSON);
+        builder.getPluginConfigurationBuilder(HttpSenderConfigurationBuilder.class)
+                .setUri(getString(R.string.tp1).concat(getString(R.string.tp2).concat(getString(R.string.tp3))))
+                .setHttpMethod(HttpSender.Method.POST)
+                .setEnabled(true);
+        ACRA.init(this, builder);
         Thread.setDefaultUncaughtExceptionHandler(
                 new BaldUncaughtExceptionHandler(
                         this,
@@ -90,6 +105,7 @@ public class BaldPhone extends Application {
             baldPrefs.edit().putLong(BPrefs.LAST_CRASH_KEY, currentTime).commit();
             //NOPE - should be done immediately because of System.exit(2);
             S.logImportant("CRASHED!!");
+            ACRA.getErrorReporter().handleException(e);
 
             final PendingIntent pendingIntent = PendingIntent.getActivity(context,
                     19337, new Intent(context, CrashActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP

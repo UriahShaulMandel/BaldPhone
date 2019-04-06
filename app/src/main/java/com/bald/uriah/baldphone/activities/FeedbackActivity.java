@@ -25,22 +25,21 @@ import android.widget.EditText;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BaldToast;
-import com.crashlytics.android.Crashlytics;
+
+import org.acra.ACRA;
 
 public class FeedbackActivity extends BaldActivity {
-    EditText et_feedback;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
-        et_feedback = findViewById(R.id.et_feedback);
+        final EditText et_feedback = findViewById(R.id.et_feedback);
         findViewById(R.id.bt_send).setOnClickListener(v -> {
             final CharSequence text = et_feedback.getText();
             if (text.length() == 1)
                 BaldToast.from(v.getContext()).setType(BaldToast.TYPE_ERROR).setText(R.string.feedback_cannot_be_empty).show();
             else {
-                Crashlytics.logException(new FeedbackException(String.valueOf(text)));
+                ACRA.getErrorReporter().handleSilentException(new FeedbackException(String.valueOf(text)));
                 BaldToast.from(getApplicationContext()).setText(R.string.feedback_sent_successfully).show();
                 finish();
             }

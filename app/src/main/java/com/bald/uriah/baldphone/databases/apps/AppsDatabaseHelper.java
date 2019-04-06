@@ -32,7 +32,9 @@ import android.util.Log;
 
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.utils.S;
-import com.crashlytics.android.Crashlytics;
+
+
+import org.acra.ACRA;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -104,7 +106,7 @@ public class AppsDatabaseHelper {
                 } catch (PackageManager.NameNotFoundException e) {
                     Log.e(TAG, e.getMessage());
                     e.printStackTrace();
-                    Crashlytics.logException(new RuntimeException("cannot happen! new app is not found", e));
+                    ACRA.getErrorReporter().handleSilentException(new RuntimeException("cannot happen! new app is not found", e));
                 }
 
             }

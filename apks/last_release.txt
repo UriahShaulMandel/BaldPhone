@@ -1,1 +1,1 @@
-69@@@11.1.4@@@Changed Recent so you'll be able to call someone directly without adding him\her to contact
+71@@@11.1.6@@@Changed crash reporting tool

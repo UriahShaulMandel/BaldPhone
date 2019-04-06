@@ -45,7 +45,6 @@ import com.bald.uriah.baldphone.activities.pills.PillsActivity;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.S;
 
-
 public class HomePage1 extends HomeView {
     public static final String TAG = HomePage1.class.getSimpleName();
     private final static String WHATSAPP_PACKAGE_NAME = "com.whatsapp";
@@ -83,8 +82,6 @@ public class HomePage1 extends HomeView {
         bt_photos = view.findViewById(R.id.bt_photos);
         bt_messages = view.findViewById(R.id.bt_messages);
         bt_assistant = view.findViewById(R.id.bt_assistant);
-
-
     }
 
     private Intent getCameraIntent() {
@@ -102,8 +99,6 @@ public class HomePage1 extends HomeView {
     }
 
     private void genOnClickListeners() {
-
-
         if (S.isPackageInstalled(homeScreen, WHATSAPP_PACKAGE_NAME))
             bt_whatsapp.setOnClickListener(v -> homeScreen.startActivity(
                     new Intent(Intent.ACTION_MAIN)
@@ -118,14 +113,11 @@ public class HomePage1 extends HomeView {
                     homeScreen.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + WHATSAPP_PACKAGE_NAME)));
                 }
             });
-
         bt_apps.setOnClickListener(v -> {
             if (!homeScreen.finishedUpdatingApps)
                 homeScreen.launchAppsActivity = true;
             else
                 homeScreen.startActivity(new Intent(HomePage1.this.homeScreen, AppsActivity.class));
-
-
         });
 
         bt_clock.setOnClickListener(v -> homeScreen.startActivity(new Intent(homeScreen, AlarmsActivity.class)));
