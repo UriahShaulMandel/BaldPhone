@@ -105,7 +105,8 @@ public class BaldPhone extends Application {
             baldPrefs.edit().putLong(BPrefs.LAST_CRASH_KEY, currentTime).commit();
             //NOPE - should be done immediately because of System.exit(2);
             S.logImportant("CRASHED!!");
-            ACRA.getErrorReporter().handleException(e);
+            if (baldPrefs.getBoolean(BPrefs.CRASH_REPORTS_KEY, BPrefs.CRASH_REPORTS_DEFAULT_VALUE))
+                ACRA.getErrorReporter().handleException(e);
 
             final PendingIntent pendingIntent = PendingIntent.getActivity(context,
                     19337, new Intent(context, CrashActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP

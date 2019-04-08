@@ -43,11 +43,15 @@ public class AssistantActivity extends BaldActivity {
 
 
     private void displaySpeechRecognizer(View v) {
-        startActivityForResult(
-                new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
-                        .putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM),
-                SPEECH_REQUEST_CODE);
+        try {
+            startActivityForResult(
+                    new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+                            .putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                                    RecognizerIntent.LANGUAGE_MODEL_FREE_FORM),
+                    SPEECH_REQUEST_CODE);
+        } catch (Exception e){
+            BaldToast.error(this);//some emulators don't have activity to handle RecognizerIntent.ACTION_RECOGNIZE_SPEECH
+        }
     }
 
     @Override

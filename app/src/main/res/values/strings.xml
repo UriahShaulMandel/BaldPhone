@@ -363,6 +363,8 @@
     <string name="try_now">Try Now</string>
     <string name="download_progress">Download Progress</string>
     <string name="what_do_you_want_to_do_with___">What do you want to do with %s?</string>
+    <string name="crash_reports">Crash Reports</string>
+    <string name="crash_reports_subtext">Crash reports help to make BaldPhone\'s experience flawless\nThey are used only to fix bugs, and no info other than what\'s necessary to fix the bug is taken</string>
 
 
     <bool name="is_right_to_left">false</bool>

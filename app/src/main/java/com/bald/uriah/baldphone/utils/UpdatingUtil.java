@@ -92,8 +92,8 @@ public class UpdatingUtil {
         return Integer.parseInt(message[MESSAGE_VERSION_CODE]) > BuildConfig.VERSION_CODE;
     }
 
-    public static void checkForUpdates(BaldActivity activity) {
-        if (!UpdatingUtil.isOnline(activity)) {
+    public static void checkForUpdates(BaldActivity activity, boolean retAnswer) {
+        if (!UpdatingUtil.isOnline(activity) && retAnswer) {
             BaldToast.from(activity)
                     .setType(BaldToast.TYPE_ERROR)
                     .setText(R.string.could_not_connect_to_server)
@@ -138,22 +138,25 @@ public class UpdatingUtil {
                                             })
                                             .show();
                                 } else {
-                                    BaldToast
-                                            .from(activity)
-                                            .setText(R.string.baldphone_is_up_to_date)
-                                            .show();
+                                    if (retAnswer)
+                                        BaldToast
+                                                .from(activity)
+                                                .setText(R.string.baldphone_is_up_to_date)
+                                                .show();
                                 }
                             } else {
-                                BaldToast.from(activity).setType(BaldToast.TYPE_ERROR).setText(R.string.update_message_is_corrupted).show();
+                                if (retAnswer)
+                                    BaldToast.from(activity).setType(BaldToast.TYPE_ERROR).setText(R.string.update_message_is_corrupted).show();
                             }
                             lifecycle.removeObserver(observer);
                         },
                         error -> {
-                            BaldToast.from(activity)
-                                    .setLength(1)
-                                    .setType(BaldToast.TYPE_ERROR)
-                                    .setText(R.string.could_not_connect_to_server)
-                                    .show();
+                            if (retAnswer)
+                                BaldToast.from(activity)
+                                        .setLength(1)
+                                        .setType(BaldToast.TYPE_ERROR)
+                                        .setText(R.string.could_not_connect_to_server)
+                                        .show();
                             lifecycle.removeObserver(observer);
                         }
                 ).setTag(VOLLEY_TAG));

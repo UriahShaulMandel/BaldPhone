@@ -79,6 +79,7 @@ dependencies {
     implementation "ch.acra:acra-http:$acraVersion"
 
 
+
     implementation 'com.android.support:exifinterface:27.1.1'//apache 2.0
     // this is for add contact pic
 

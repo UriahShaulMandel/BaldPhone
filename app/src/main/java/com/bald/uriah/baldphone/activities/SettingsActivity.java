@@ -355,6 +355,20 @@ public class SettingsActivity extends BaldActivity {
                         R.drawable.feedback_on_button)
         );
         settingsList.add(
+                new BDBSettingsItem(R.string.crash_reports,
+                        BDB.from(this)
+                                .setDialogState(BDialog.DialogState.OPTION_OPTION_OK_CANCEL)
+                                .setTitle(R.string.crash_reports)
+                                .setSubText(R.string.crash_reports_subtext)
+                                .setOptions(R.string.on, R.string.off)
+                                .setPositiveButtonListener(params -> {
+                                    editor.putBoolean(BPrefs.CRASH_REPORTS_KEY, params[0].equals(0)).apply();
+                                    this.recreate();
+                                    return true;
+                                })
+                                .setOptionsStartingIndex(sharedPreferences.getBoolean(BPrefs.CRASH_REPORTS_KEY, BPrefs.CRASH_REPORTS_DEFAULT_VALUE) ? 0 : 1),
+                        R.drawable.upload_on_button));
+        settingsList.add(
                 new RunnableSettingsItem(R.string.check_for_updates,
                         v -> UpdatingUtil.checkForUpdates(this),
                         R.drawable.updates_on_button)

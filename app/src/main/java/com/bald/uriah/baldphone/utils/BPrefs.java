@@ -62,6 +62,9 @@ public final class BPrefs {
     public static final String USE_ACCIDENTAL_GUARD_KEY = "USE_ACCIDENTAL_GUARD_KEY";
     public static final boolean USE_ACCIDENTAL_GUARD_DEFAULT_VALUE = true;
 
+    public static final String CRASH_REPORTS_KEY = "CRASH_REPORTS_KEY";
+    public static final boolean CRASH_REPORTS_DEFAULT_VALUE = true;
+
 
     public static final String LAST_CRASH_KEY = "LAST_CRASH_KEY";
     public static final long LAST_CRASH_TIME_OK = 10 * D.SECOND;
