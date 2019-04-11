@@ -69,7 +69,7 @@
     <string name="assistant">Assistant</string>
     <string name="at_least_one_day_must_be_selected">At least one day must be selected!</string>
     <string name="auto_brightness">Auto\nBrightness</string>
-    <string name="back">back</string>
+    <string name="back">Back</string>
     <string name="backspace">backspace</string>
     <string name="baldphone_bla_allow_permission">Please allow the following permissions:</string>
     <string name="baldphone_updated">BaldPhone Updated</string>
@@ -365,6 +365,8 @@
     <string name="what_do_you_want_to_do_with___">What do you want to do with %s?</string>
     <string name="crash_reports">Crash Reports</string>
     <string name="crash_reports_subtext">Crash reports help to make BaldPhone\'s experience flawless\nThey are used only to fix bugs, and no info other than what\'s necessary to fix the bug is taken</string>
+    <string name="custom_app">Custom App</string>
+    <string name="custom_app_subtext">Choose custom app to be in the home screen.</string>
 
 
     <bool name="is_right_to_left">false</bool>

@@ -55,13 +55,19 @@ import static com.bald.uriah.baldphone.utils.BDialog.DialogState.YES_CANCEL;
 import static com.bald.uriah.baldphone.utils.BDialog.DialogState.YES_NO;
 
 public class BDialog extends Dialog {
+
+    public interface StartingIndexChooser {
+        int chooseStartingIndex();
+    }
+
+
     public static final float DIM_LEVEL = 0.9f;
     private static final String TAG = BDialog.class.getSimpleName();
     private final Context context;
     private final CharSequence title;
     private final CharSequence subText;
     private final CharSequence options[];
-    private final int optionsStartingIndex;
+    private final StartingIndexChooser startingIndexChooser;
     private final int dialogState;
     private final DialogBoxListener positive, negative, cancel;
     private final boolean cancelable;
@@ -88,7 +94,7 @@ public class BDialog extends Dialog {
                     @Nullable DialogBoxListener negative,
                     @Nullable final DialogBoxListener cancel,
                     int inputType,
-                    int optionsStartingIndex,
+                    StartingIndexChooser startingIndexChooser,
                     @Nullable View extraView
 
     ) {
@@ -103,7 +109,7 @@ public class BDialog extends Dialog {
         this.negative = negative;
         this.cancel = cancel;
         this.inputType = inputType;
-        this.optionsStartingIndex = optionsStartingIndex;
+        this.startingIndexChooser = startingIndexChooser;
         this.extraView = extraView;
 
     }
@@ -112,7 +118,7 @@ public class BDialog extends Dialog {
         if (bdb.context == null || bdb.dialogState == 0 || bdb.title == null || bdb.subText == null)
             throw new NullPointerException("bdb.activity, bdb.dialogState, bdb.title, bdb.subText cannot be null! perhaps forgot to setContext() on BDB");
 
-        final BDialog bDialog = BDialog.newInstance(bdb.context, bdb.dialogState, bdb.title, bdb.subText, bdb.cancelable, bdb.options, bdb.positiveButtonListener, bdb.negativeButtonListener, bdb.cancelButtonListener, bdb.inputType, bdb.optionsStartingIndex, bdb.extraView);
+        final BDialog bDialog = BDialog.newInstance(bdb.context, bdb.dialogState, bdb.title, bdb.subText, bdb.cancelable, bdb.options, bdb.positiveButtonListener, bdb.negativeButtonListener, bdb.cancelButtonListener, bdb.inputType, bdb.startingIndexChooser, bdb.extraView);
         if (bdb.baldActivityToAutoDismiss != null) {
             bdb.baldActivityToAutoDismiss.autoDismissDialog(bDialog);
         }
@@ -129,10 +135,10 @@ public class BDialog extends Dialog {
                                       @Nullable DialogBoxListener negative,
                                       @Nullable final DialogBoxListener cancel,
                                       int inputType,
-                                      int optionsStartingIndex,
+                                      StartingIndexChooser startingIndexChooser,
                                       @Nullable View extraView
     ) {
-        final BDialog baldDialogBox = new BDialog(context, dialogState, title, subText, cancelable, options, positive, negative, cancel, inputType, optionsStartingIndex, extraView);
+        final BDialog baldDialogBox = new BDialog(context, dialogState, title, subText, cancelable, options, positive, negative, cancel, inputType, startingIndexChooser, extraView);
         baldDialogBox.show();
         Window window = baldDialogBox.getWindow();
         window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -255,7 +261,7 @@ public class BDialog extends Dialog {
                 baldMultipleSelection.setOrientation(LinearLayout.HORIZONTAL);
                 for (CharSequence option : options)
                     baldMultipleSelection.addSelection(option);
-                baldMultipleSelection.setSelection(optionsStartingIndex);
+                baldMultipleSelection.setSelection(startingIndexChooser.chooseStartingIndex());
                 final LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80f, context.getResources().getDisplayMetrics()));
                 ll.addView(baldMultipleSelection, 2, layoutParams);
 
@@ -306,6 +312,7 @@ public class BDialog extends Dialog {
 
     public interface DialogBoxListener {
         DialogBoxListener EMPTY = params -> true;
+
         /**
          * @param params - when Integer its which selection was chosen
          *               when CharSequence its user input

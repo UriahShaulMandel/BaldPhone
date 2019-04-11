@@ -50,6 +50,9 @@ import java.util.List;
 import static com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter.TYPE_HEADER;
 
 public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivity {
+    public static final String EXTRA_MODE = "EXTRA_MODE";
+    public static final String MODE_CHOOSE_ONE = "MODE_CHOOSE_ONE ";
+
     public static final int UNINSTALL_REQUEST_CODE = 52;
     private static final String TAG = AppsActivity.class.getSimpleName();
     private static final String SELECTED_APP_INDEX = "SELECTED_APP_INDEX";
@@ -84,7 +87,9 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
         appsDatabase = AppsDatabase.getInstance(AppsActivity.this);
         final List<App> appList = appsDatabase.appsDatabaseDao().getAllOrderedByABC();
         attachXml();
-        appsRecyclerViewAdapter = new AppsRecyclerViewAdapter(appList, this, this::changeBar, recyclerView);
+
+        final boolean modeChoose = MODE_CHOOSE_ONE.equals(getIntent().getStringExtra(EXTRA_MODE));
+        appsRecyclerViewAdapter = new AppsRecyclerViewAdapter(appList, this, modeChoose ? this::appChosen : this::changeBar, recyclerView);
 
         final WindowManager windowManager = getWindowManager();
         final Point point = new Point();
@@ -197,6 +202,20 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
                 iv_pin.setImageDrawable(drawablePin);
                 tv_add_or_rem_shortcut.setText(R.string.add_shortcut);
             }
+        }
+    }
+
+
+    private void appChosen(int index) {
+        if (lastIndex == index)
+            return;
+        lastIndex = index;
+        if (index == -1) {
+            animateBarView(false);
+        } else {
+            final App app = (App) appsRecyclerViewAdapter.dataList.get(index);
+            setResult(RESULT_OK, new Intent().setComponent(ComponentName.unflattenFromString(app.getFlattenComponentName())));
+            finish();
         }
     }
 

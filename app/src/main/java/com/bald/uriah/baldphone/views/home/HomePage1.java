@@ -21,6 +21,7 @@ package com.bald.uriah.baldphone.views.home;
 
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
@@ -42,14 +43,18 @@ import com.bald.uriah.baldphone.activities.contacts.ContactsActivity;
 import com.bald.uriah.baldphone.activities.media.PhotosActivity;
 import com.bald.uriah.baldphone.activities.media.VideosActivity;
 import com.bald.uriah.baldphone.activities.pills.PillsActivity;
+import com.bald.uriah.baldphone.databases.apps.App;
+import com.bald.uriah.baldphone.databases.apps.AppsDatabase;
+import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.S;
+import com.bald.uriah.baldphone.views.FirstPageAppIcon;
 
 public class HomePage1 extends HomeView {
     public static final String TAG = HomePage1.class.getSimpleName();
     private final static String WHATSAPP_PACKAGE_NAME = "com.whatsapp";
     private View view;
-    private View bt_clock, bt_camera, bt_videos, bt_assistant, bt_messages, bt_photos, bt_contacts, bt_dialer, bt_whatsapp, bt_apps, bt_reminders, bt_recent;
+    private FirstPageAppIcon bt_clock, bt_camera, bt_videos, bt_assistant, bt_messages, bt_photos, bt_contacts, bt_dialer, bt_whatsapp, bt_apps, bt_reminders, bt_recent;
     private PackageManager packageManager;
 
 
@@ -99,20 +104,42 @@ public class HomePage1 extends HomeView {
     }
 
     private void genOnClickListeners() {
-        if (S.isPackageInstalled(homeScreen, WHATSAPP_PACKAGE_NAME))
-            bt_whatsapp.setOnClickListener(v -> homeScreen.startActivity(
-                    new Intent(Intent.ACTION_MAIN)
-                            .addCategory(Intent.CATEGORY_LAUNCHER)
-                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)// | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
-                            .setComponent(new ComponentName(WHATSAPP_PACKAGE_NAME, "com.whatsapp.Main"))));
-        else
-            bt_whatsapp.setOnClickListener(v -> {
-                try {
-                    homeScreen.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + WHATSAPP_PACKAGE_NAME)));
-                } catch (android.content.ActivityNotFoundException e) {
-                    homeScreen.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + WHATSAPP_PACKAGE_NAME)));
-                }
-            });
+        final SharedPreferences sharedPreferences = BPrefs.get(homeScreen);
+        final App app;
+        if (sharedPreferences.contains(BPrefs.CUSTOM_APP_KEY)){
+            app = AppsDatabase.getInstance(homeScreen).appsDatabaseDao().findByFlattenComponentName(sharedPreferences.getString(BPrefs.CUSTOM_APP_KEY,null));
+            if (app == null)
+                sharedPreferences.edit().remove(BPrefs.CUSTOM_APP_KEY).apply();
+        } else {
+            app = null;
+        }
+        if (app == null){
+            if (S.isPackageInstalled(homeScreen, WHATSAPP_PACKAGE_NAME))
+                bt_whatsapp.setOnClickListener(v -> homeScreen.startActivity(
+                        new Intent(Intent.ACTION_MAIN)
+                                .addCategory(Intent.CATEGORY_LAUNCHER)
+                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)// | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
+                                .setComponent(new ComponentName(WHATSAPP_PACKAGE_NAME, "com.whatsapp.Main"))));
+            else
+                bt_whatsapp.setOnClickListener(v -> {
+                    try {
+                        homeScreen.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + WHATSAPP_PACKAGE_NAME)));
+                    } catch (android.content.ActivityNotFoundException e) {
+                        homeScreen.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + WHATSAPP_PACKAGE_NAME)));
+                    }
+                });
+        } else {
+            bt_whatsapp.setText(app.getLabel());
+            bt_whatsapp.setImageBitmap(S.byteArrayToBitmap(app.getIcon()));
+            bt_whatsapp.setOnClickListener(v->S.startComponentName(homeScreen,ComponentName.unflattenFromString(app.getFlattenComponentName())));
+        }
+
+
+
+
+
+
+
         bt_apps.setOnClickListener(v -> {
             if (!homeScreen.finishedUpdatingApps)
                 homeScreen.launchAppsActivity = true;

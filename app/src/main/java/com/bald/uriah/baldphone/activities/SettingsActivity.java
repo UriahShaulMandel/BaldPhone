@@ -73,6 +73,7 @@ import java.util.List;
  * {{@link SettingsItem}} are generated programmatically because of the huge differences that lies between different settings.
  */
 public class SettingsActivity extends BaldActivity {
+    public static final int REQUEST_SELECT_CUSTOM_APP = 88;
     public static final float[] FONT_SIZES = new float[]{0.8f, 0.9f, 1.0f, 1.1f, 1.3f, 1.5f, 1.7f};
     public static final String SAVEABLE_HISTORY_KEY = "SAVEABLE_HISTORY_KEY";
     private static final String TAG = SettingsActivity.class.getSimpleName();
@@ -191,7 +192,25 @@ public class SettingsActivity extends BaldActivity {
         }, R.drawable.translate_on_button));
 
         personalizationSettingsList.add(new RunnableSettingsItem(R.string.time_changer, v -> startActivity(new Intent(this, PillTimeSetterActivity.class)), R.drawable.pill));
+        personalizationSettingsList.add(
+                // !!dont change string without changing it too in onActivityResult!!
+                new BDBSettingsItem(R.string.custom_app,
+                        BDB.from(this)
+                                .setTitle(R.string.custom_app)
+                                .setSubText(R.string.custom_app_subtext)
+                                .setDialogState(BDialog.DialogState.OPTION_OPTION_OK_CANCEL)
+                                .setOptions(R.string.whatsapp, R.string.custom)
+                                .setOptionsStartingIndex(() -> sharedPreferences.contains(BPrefs.CUSTOM_APP_KEY) ? 1 : 0)
+                                .setPositiveButtonListener(params -> {
+                                    if (params[0].equals(0)) {
+                                        editor.remove(BPrefs.CUSTOM_APP_KEY).apply();
+                                    } else
+                                        startActivityForResult(new Intent(this, AppsActivity.class).putExtra(AppsActivity.EXTRA_MODE, AppsActivity.MODE_CHOOSE_ONE), REQUEST_SELECT_CUSTOM_APP);
+                                    return true;
+                                }), R.drawable.whatsapp_on_button
 
+                )
+        );
         accessibilitySettingsList.add(new RunnableSettingsItem(R.string.accessibility_level, v -> startActivity(new Intent(this, AccessibilityLevelChangerActivity.class)), R.drawable.accessibility_on_button));
         accessibilitySettingsList.add(
                 new BDBSettingsItem(R.string.accidental_touches, BDB.from(this)
@@ -204,7 +223,7 @@ public class SettingsActivity extends BaldActivity {
                             this.recreate();
                             return true;
                         })
-                        .setOptionsStartingIndex(sharedPreferences.getBoolean(BPrefs.USE_ACCIDENTAL_GUARD_KEY, BPrefs.USE_ACCIDENTAL_GUARD_DEFAULT_VALUE) ? 0 : 1), R.drawable.blocked_on_button));
+                        .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.USE_ACCIDENTAL_GUARD_KEY, BPrefs.USE_ACCIDENTAL_GUARD_DEFAULT_VALUE) ? 0 : 1), R.drawable.blocked_on_button));
         accessibilitySettingsList.add(
                 new BDBSettingsItem(R.string.strong_hand,
                         BDB.from(this)
@@ -217,7 +236,7 @@ public class SettingsActivity extends BaldActivity {
                                     this.recreate();
                                     return true;
                                 })
-                                .setOptionsStartingIndex(sharedPreferences.getBoolean(BPrefs.RIGHT_HANDED_KEY, BPrefs.RIGHT_HANDED_DEFAULT_VALUE) ? 1 : 0), R.drawable.hand_on_button
+                                .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.RIGHT_HANDED_KEY, BPrefs.RIGHT_HANDED_DEFAULT_VALUE) ? 1 : 0), R.drawable.hand_on_button
                 )
         );
         final SettingsItem themeSettingsItem = new BDBSettingsItem(R.string.theme_settings,
@@ -231,7 +250,7 @@ public class SettingsActivity extends BaldActivity {
                             this.recreate();
                             return true;
                         })
-                        .setOptionsStartingIndex(sharedPreferences.getInt(BPrefs.THEME_KEY, BPrefs.THEME_DEFAULT_VALUE)), R.drawable.brush_on_button
+                        .setOptionsStartingIndex(() -> sharedPreferences.getInt(BPrefs.THEME_KEY, BPrefs.THEME_DEFAULT_VALUE)), R.drawable.brush_on_button
 
 
         );
@@ -248,7 +267,7 @@ public class SettingsActivity extends BaldActivity {
                             this.recreate();
                             return true;
                         })
-                        .setOptionsStartingIndex(sharedPreferences.getBoolean(BPrefs.NOTE_VISIBLE_KEY, BPrefs.NOTE_VISIBLE_DEFAULT_VALUE) ? 0 : 1),
+                        .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.NOTE_VISIBLE_KEY, BPrefs.NOTE_VISIBLE_DEFAULT_VALUE) ? 0 : 1),
                 R.drawable.note_on_button
         ));
         SettingsItem fontSettingsItem = new RunnableSettingsItem(R.string.font, v -> {
@@ -366,11 +385,11 @@ public class SettingsActivity extends BaldActivity {
                                     this.recreate();
                                     return true;
                                 })
-                                .setOptionsStartingIndex(sharedPreferences.getBoolean(BPrefs.CRASH_REPORTS_KEY, BPrefs.CRASH_REPORTS_DEFAULT_VALUE) ? 0 : 1),
+                                .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.CRASH_REPORTS_KEY, BPrefs.CRASH_REPORTS_DEFAULT_VALUE) ? 0 : 1),
                         R.drawable.upload_on_button));
         settingsList.add(
                 new RunnableSettingsItem(R.string.check_for_updates,
-                        v -> UpdatingUtil.checkForUpdates(this),
+                        v -> UpdatingUtil.checkForUpdates(this, true),
                         R.drawable.updates_on_button)
         );
 
@@ -531,6 +550,16 @@ public class SettingsActivity extends BaldActivity {
 
         );
         displaySettingsList.add(brightnessSettingsItem);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_SELECT_CUSTOM_APP && resultCode == RESULT_OK && data != null && data.getComponent() != null) {
+            editor.putString(BPrefs.CUSTOM_APP_KEY, data.getComponent().flattenToString()).apply();
+        }
+
+
     }
 
     @Override

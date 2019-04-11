@@ -276,7 +276,6 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                             }
                             throw new IllegalArgumentException("option must be 0 or 1");
                         })
-                        .setOptionsStartingIndex(0)
                         .show();
             }
         }

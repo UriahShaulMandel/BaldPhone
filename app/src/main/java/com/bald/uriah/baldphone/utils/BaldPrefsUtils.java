@@ -39,14 +39,16 @@ public class BaldPrefsUtils {
     private final int theme;
     private final boolean vibrationFeedback, touchNoHard, longPresses, notes;
     private final int swipingEffect;
+    private final String customApp;
 
-    private BaldPrefsUtils(int theme, boolean vibrationFeedback, boolean touchNoHard, boolean longPresses, int swipingEffect, boolean notes) {
+    private BaldPrefsUtils(int theme, boolean vibrationFeedback, boolean touchNoHard, boolean longPresses, int swipingEffect, boolean notes, String customApp) {
         this.theme = theme;
         this.vibrationFeedback = vibrationFeedback;
         this.touchNoHard = touchNoHard;
         this.longPresses = longPresses;
         this.swipingEffect = swipingEffect;
         this.notes = notes;
+        this.customApp = customApp;
     }
 
     public static BaldPrefsUtils newInstance(Context context) {
@@ -62,7 +64,8 @@ public class BaldPrefsUtils {
                 sharedPreferences
                         .getInt(PAGE_TRANSFORMERS_KEY, PAGE_TRANSFORMERS_DEFAULT_VALUE),
                 sharedPreferences
-                        .getBoolean(NOTE_VISIBLE_KEY, NOTE_VISIBLE_DEFAULT_VALUE)
+                        .getBoolean(NOTE_VISIBLE_KEY, NOTE_VISIBLE_DEFAULT_VALUE),
+                sharedPreferences.getString(BPrefs.CUSTOM_APP_KEY, null)
         );
     }
 
@@ -70,21 +73,15 @@ public class BaldPrefsUtils {
         return !equals(newInstance(context));
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        final BaldPrefsUtils that = (BaldPrefsUtils) o;
+
+    public boolean equals(BaldPrefsUtils that) {
         return theme == that.theme &&
                 vibrationFeedback == that.vibrationFeedback &&
                 touchNoHard == that.touchNoHard &&
                 longPresses == that.longPresses &&
                 notes == that.notes &&
-                swipingEffect == that.swipingEffect;
+                swipingEffect == that.swipingEffect &&
+                Objects.equals(customApp, that.customApp);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(theme, vibrationFeedback, touchNoHard, longPresses, notes, swipingEffect);
-    }
 }

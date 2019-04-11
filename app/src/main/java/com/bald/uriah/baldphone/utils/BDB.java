@@ -40,7 +40,7 @@ public class BDB {
     BDialog.DialogBoxListener negativeButtonListener = BDialog.DialogBoxListener.EMPTY;
     BDialog.DialogBoxListener cancelButtonListener = BDialog.DialogBoxListener.EMPTY;
     boolean cancelable = true;
-    int optionsStartingIndex = -1;
+    BDialog.StartingIndexChooser startingIndexChooser = ()->0;
     BaldActivity baldActivityToAutoDismiss;
     @Nullable
     View extraView;
@@ -120,8 +120,8 @@ public class BDB {
         return this;
     }
 
-    public BDB setOptionsStartingIndex(int optionsStartingIndex) {
-        this.optionsStartingIndex = optionsStartingIndex;
+    public BDB setOptionsStartingIndex(BDialog.StartingIndexChooser startingIndexChooser) {
+        this.startingIndexChooser = startingIndexChooser;
         return this;
     }
 

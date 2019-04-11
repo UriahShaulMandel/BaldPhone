@@ -35,6 +35,9 @@ public final class BPrefs {
     public static final String RIGHT_HANDED_KEY = "RIGHT_HANDED_KEY";
     public static final boolean RIGHT_HANDED_DEFAULT_VALUE = true;
 
+    public static final String CUSTOM_APP_KEY = "CUSTOM_APP_KEY";
+
+
     public static final String LONG_PRESSES_KEY = "LONG_PRESSES_KEY";
     public static final boolean LONG_PRESSES_DEFAULT_VALUE = true;
 
