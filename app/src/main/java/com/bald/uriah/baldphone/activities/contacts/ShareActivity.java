@@ -20,30 +20,24 @@
 package com.bald.uriah.baldphone.activities.contacts;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.telephony.PhoneNumberUtils;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
+import com.bald.uriah.baldphone.adapters.IntentAdapter;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldSwitch;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
-import com.bumptech.glide.Glide;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.Collections;
@@ -76,19 +70,8 @@ public class ShareActivity extends BaseContactsActivity {
     private ModularRecyclerView recyclerView;
     private View differently_container, whatsapp_container;
     private List<ResolveInfo> resolveInfoList = Collections.EMPTY_LIST;
-    private LayoutInflater layoutInflater;
-    private PackageManager packageManager;
 
-    @Override
-    protected void init() {
-        layoutInflater = LayoutInflater.from(this);
-        mode = ContactRecyclerViewAdapter.MODE_SHARE;
-        final Intent callingIntent = getIntent();
-        shareIntent = callingIntent.getParcelableExtra(EXTRA_SHARABLE_URI);
-        resolveInfoList = getPackageManager().queryIntentActivities(shareIntent, 0);
-        packageManager = getPackageManager();
-        recyclerView.getAdapter().notifyDataSetChanged();
-    }
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -109,7 +92,12 @@ public class ShareActivity extends BaseContactsActivity {
     protected void viewsInit() {
         super.viewsInit();
 
-        recyclerView.setAdapter(new ShareAdapter());
+        mode = ContactRecyclerViewAdapter.MODE_SHARE;
+        final Intent callingIntent = getIntent();
+        shareIntent = callingIntent.getParcelableExtra(EXTRA_SHARABLE_URI);
+        resolveInfoList = getPackageManager().queryIntentActivities(shareIntent, 0);
+
+        recyclerView.setAdapter(new IntentAdapter(this, resolveInfoList, (resolveInfo, context) -> context.startActivity(shareIntent.setPackage(resolveInfo.activityInfo.packageName))));
         recyclerView.setHasFixedSize(true);
         recyclerView.setItemViewCacheSize(10);//In Order to cover up the shitiness of loading resolve infos icons and texts
         recyclerView.addItemDecoration(
@@ -117,6 +105,8 @@ public class ShareActivity extends BaseContactsActivity {
                         .drawable(R.drawable.settings_divider)
                         .build()
         );
+        recyclerView.getAdapter().notifyDataSetChanged();
+
         bald_switch.setOnChangeListener(isChecked -> {
             differently_container.setVisibility(isChecked ? View.VISIBLE : View.INVISIBLE);
             whatsapp_container.setVisibility(isChecked ? View.INVISIBLE : View.VISIBLE);
@@ -174,51 +164,5 @@ public class ShareActivity extends BaseContactsActivity {
         shareIntent.putExtra("jid", smsNumber + "@s.whatsapp.net"); //phone number without "+" prefix
         startActivity(shareIntent);
         finish();
-    }
-
-
-    private class ShareAdapter extends ModularRecyclerView.ModularAdapter<ShareAdapter.ViewHolder> {
-        @NonNull
-        @Override
-        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new ViewHolder(layoutInflater.inflate(R.layout.settings_item, parent, false));
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-            holder.update(position);
-
-        }
-
-
-        @Override
-        public int getItemCount() {
-            return resolveInfoList.size();
-        }
-
-        class ViewHolder extends ModularRecyclerView.ViewHolder implements View.OnClickListener {
-            final ImageView settings_icon;
-            final TextView tv_settings_name;
-
-            public ViewHolder(View itemView) {
-                super(itemView);
-                settings_icon = itemView.findViewById(R.id.setting_icon);
-                tv_settings_name = itemView.findViewById(R.id.tv_setting_name);
-                itemView.setOnClickListener(this);
-            }
-
-            public void update(int position) {
-                final ResolveInfo resolveInfo = resolveInfoList.get(position);
-                Glide.with(settings_icon)
-                        .load(resolveInfo.loadIcon(packageManager))
-                        .into(settings_icon);
-                tv_settings_name.setText(resolveInfo.loadLabel(packageManager));
-            }
-
-            @Override
-            public void onClick(View v) {
-                startActivity(shareIntent.setPackage(resolveInfoList.get(getAdapterPosition()).activityInfo.packageName));
-            }
-        }
     }
 }

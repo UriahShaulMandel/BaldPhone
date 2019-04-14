@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Licensed to the Apache Software Foundation (ASF) under one
   ~ or more contributor license agreements.  See the NOTICE file
   ~ distributed with this work for additional information
@@ -18,26 +17,18 @@
   ~ under the License.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?bald_background"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:background="@drawable/drop_down_container_background"
+    android:paddingStart="4dp"
+    android:paddingTop="7dp"
+    android:paddingEnd="4dp"
+    android:paddingBottom="7dp">
 
-    <com.bald.uriah.baldphone.views.BaldTitleBar
-        android:id="@+id/bald_title_bar"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        style="@style/ScrollStyle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/color_3"
-        />
-
-    <com.bald.uriah.baldphone.views.ScrollingHelper
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.bald.uriah.baldphone.views.ModularRecyclerView
-            android:id="@+id/child"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </com.bald.uriah.baldphone.views.ScrollingHelper>
-</LinearLayout>
+        android:layout_height="wrap_content" />
+</RelativeLayout>

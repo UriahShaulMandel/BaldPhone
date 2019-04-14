@@ -152,7 +152,7 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
                                 (position -> ((LinearLayoutManager) caller.getLayoutManager()).scrollToPositionWithOffset(position, 0))
                         );
                 letterChooserDialog.show();
-                activity.autoDismissDialog(letterChooserDialog);
+                activity.autoDismiss(letterChooserDialog);
             });
         }
 

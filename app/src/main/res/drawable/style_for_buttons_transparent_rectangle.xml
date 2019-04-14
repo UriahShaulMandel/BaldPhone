@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--
   ~ Licensed to the Apache Software Foundation (ASF) under one
   ~ or more contributor license agreements.  See the NOTICE file
@@ -18,18 +19,9 @@
   ~ under the License.
   -->
 
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
-    <corners
-        android:radius="?attr/bald_button_corners_radius"
-        />
-    <solid
-       android:color="@color/color_4"
-        />
-    <stroke
-        android:width="?attr/bald_stroke_size"
-        android:color="?attr/bald_stroke_color"
-        />
-</shape>
-
-
-    <!--android:centerX="250%"-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@android:color/transparent" />
+    <item android:state_pressed="true" android:state_enabled="true" android:drawable="@drawable/btn_clicked_rectangle" />
+    <item android:state_focused="true" android:state_enabled="true" android:drawable="@android:color/transparent" />
+    <item android:state_enabled="true" android:drawable="@android:color/transparent" />
+</selector>

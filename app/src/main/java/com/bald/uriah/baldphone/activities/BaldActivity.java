@@ -37,6 +37,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.PopupWindow;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BDB;
@@ -81,6 +82,7 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     @StyleRes
     private int themeIndex;
     private List<WeakReference<Dialog>> dialogsToClose = new ArrayList<>(1);
+    private List<WeakReference<PopupWindow>> popupwindowsToClose = new ArrayList<>(1);
     private SensorManager sensorManager;
     private Sensor proximitySensor;
     private boolean near;
@@ -142,7 +144,6 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     }
 
     /**
-     *
      * not removing yet, perhaps the issue with google will be solved
      */
     static boolean defaultDialerGranted(BaldActivity activity) {
@@ -210,10 +211,16 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     protected void onPause() {
         for (WeakReference<Dialog> dialogWeakReference : dialogsToClose) {
             final Dialog dialog = dialogWeakReference.get();
-            if (dialog != null) {
+            if (dialog != null)
                 dialog.dismiss();
-            }
         }
+
+        for (WeakReference<PopupWindow> windowWeakReference : popupwindowsToClose) {
+            final PopupWindow window = windowWeakReference.get();
+            if (window != null)
+                window.dismiss();
+        }
+
         if (useAccidentalGuard)
             sensorManager.unregisterListener(this);
         super.onPause();
@@ -226,8 +233,12 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
         super.onBackPressed();
     }
 
-    public void autoDismissDialog(Dialog dialog) {
+    public void autoDismiss(Dialog dialog) {
         dialogsToClose.add(new WeakReference<>(dialog));
+    }
+
+    public void autoDismiss(PopupWindow popupWindow) {
+        popupwindowsToClose.add(new WeakReference<>(popupWindow));
     }
 
     @Override

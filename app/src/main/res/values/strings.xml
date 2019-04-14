@@ -367,6 +367,7 @@
     <string name="crash_reports_subtext">Crash reports help to make BaldPhone\'s experience flawless\nThey are used only to fix bugs, and no info other than what\'s necessary to fix the bug is taken</string>
     <string name="custom_app">Custom App</string>
     <string name="custom_app_subtext">Choose custom app to be in the home screen.</string>
+    <string name="no_app_was_found">No matching app was found!</string>
 
 
     <bool name="is_right_to_left">false</bool>

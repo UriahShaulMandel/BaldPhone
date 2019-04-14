@@ -1,1 +1,1 @@
-72@@@11.1.7@@@BaldPhone is now more generic
+73@@@11.1.8@@@BaldPhone's second homepage now looks better

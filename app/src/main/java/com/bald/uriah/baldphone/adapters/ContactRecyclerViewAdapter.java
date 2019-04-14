@@ -206,7 +206,7 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
             this.tv_image_letter = container.findViewById(R.id.image_letter);
 
             this.tv_letter.setOnClickListener((v) -> {
-                LetterChooserDialog letterChooserDialog =
+                final LetterChooserDialog letterChooserDialog =
                         new LetterChooserDialog(activity, letterToPosition,
                                 (position -> {
                                     ((LinearLayoutManager) recyclerView.getLayoutManager()).scrollToPositionWithOffset(position, 0);
@@ -214,7 +214,7 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
                                 )
                         );
                 letterChooserDialog.show();
-                activity.autoDismissDialog(letterChooserDialog);
+                activity.autoDismiss(letterChooserDialog);
 
             });
 

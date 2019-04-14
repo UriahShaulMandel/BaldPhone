@@ -31,6 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/color_1"
         app:title="@string/recent" />
 
     <com.bald.uriah.baldphone.views.ScrollingHelper

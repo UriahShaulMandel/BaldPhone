@@ -60,19 +60,19 @@
 
     <array name="yt_background">
         <!--DialerActivity 0 -->
-        <item>@drawable/home_item</item>
+        <item>@drawable/home_item_1</item>
         <!--Recent 1 -->
-        <item>@drawable/home_item</item>
+        <item>@drawable/home_item_1</item>
         <!--SOS 2 -->
         <item>@drawable/transparent</item>
         <!--Clock 3 -->
-        <item>@drawable/home_item_3</item>
-        <!--Add Timer 4 -->
-        <item>@drawable/home_item_3</item>
-        <!--Add Alarm 5 -->
-        <item>@drawable/home_item_3</item>
-        <!--Photos 6 -->
         <item>@drawable/home_item_4</item>
+        <!--Add Timer 4 -->
+        <item>@drawable/home_item_4</item>
+        <!--Add Alarm 5 -->
+        <item>@drawable/home_item_4</item>
+        <!--Photos 6 -->
+        <item>@drawable/home_item_3</item>
 
 
     </array>

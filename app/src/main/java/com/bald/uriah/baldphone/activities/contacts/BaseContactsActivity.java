@@ -79,16 +79,16 @@ abstract class BaseContactsActivity extends BaldActivity {
 
         softInputAssist = new SoftInputAssist(this);
         contentResolver = getContentResolver();
-        attachXml();
-        viewsInit();
-
 
         final Intent callingIntent = getIntent();
         if (callingIntent != null) {
             mode = callingIntent.getIntExtra(INTENT_EXTRA_CONTACT_ADAPTER_MODE, mode);
         }
 
-        init();
+        attachXml();
+        viewsInit();
+
+
 
         applyFilter();
     }
@@ -114,7 +114,7 @@ abstract class BaseContactsActivity extends BaldActivity {
             softInputAssist.onDestroy();
     }
 
-    protected abstract void init();
+
 
     @LayoutRes
     protected abstract int layout();

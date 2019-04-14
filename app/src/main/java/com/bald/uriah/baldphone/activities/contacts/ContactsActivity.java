@@ -46,9 +46,6 @@ public class ContactsActivity extends BaseContactsActivity {
             "upper(" + ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + ") ASC";
     private View add_contact;
 
-    @Override
-    protected void init() {
-    }
 
     @Override
     protected int layout() {

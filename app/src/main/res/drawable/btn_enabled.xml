@@ -31,6 +31,3 @@
         android:color="?attr/bald_stroke_color"
         />
 </shape>
-
-
-    <!--android:centerX="250%"-->

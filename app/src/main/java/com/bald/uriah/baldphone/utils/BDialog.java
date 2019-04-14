@@ -120,7 +120,7 @@ public class BDialog extends Dialog {
 
         final BDialog bDialog = BDialog.newInstance(bdb.context, bdb.dialogState, bdb.title, bdb.subText, bdb.cancelable, bdb.options, bdb.positiveButtonListener, bdb.negativeButtonListener, bdb.cancelButtonListener, bdb.inputType, bdb.startingIndexChooser, bdb.extraView);
         if (bdb.baldActivityToAutoDismiss != null) {
-            bdb.baldActivityToAutoDismiss.autoDismissDialog(bDialog);
+            bdb.baldActivityToAutoDismiss.autoDismiss(bDialog);
         }
         return bDialog;
     }

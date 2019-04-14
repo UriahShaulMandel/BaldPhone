@@ -54,7 +54,7 @@ public class LetterChooserDialog extends Dialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.letters_on_contacts);
+        setContentView(R.layout.full_screen_recycler_view_dialog);
         getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT);
         getWindow().setBackgroundDrawableResource(android.R.color.transparent);

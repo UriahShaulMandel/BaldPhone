@@ -23,7 +23,7 @@
         android:radius="?attr/bald_button_corners_radius"
         />
     <solid
-       android:color="#50bcaaa4"
+       android:color="@color/color_3"
         />
     <stroke
         android:width="?attr/bald_stroke_size"

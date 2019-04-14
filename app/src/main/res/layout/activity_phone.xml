@@ -61,7 +61,7 @@
         android:layout_marginBottom="24dp"
 
         android:layout_weight="1"
-        android:background="@drawable/home_item"
+        android:background="@drawable/home_item_1"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="0.3333"

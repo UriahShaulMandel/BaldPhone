@@ -44,7 +44,7 @@ public interface BaldButtonInterface {
     class BaldButtonTouchListener implements View.OnTouchListener {
         private final BaldButtonInterface v;
         private final Handler longPressHandler;
-        private List<View.OnTouchListener> otherListeners = new ArrayList<>();
+        private final List<View.OnTouchListener> otherListeners = new ArrayList<>();
         private boolean isLongPressHandlerActivated = false;
         private boolean isActionMoveEventStored = false;
         private float lastActionMoveEventBeforeUpX;
@@ -77,7 +77,7 @@ public interface BaldButtonInterface {
 
         @SuppressLint("ClickableViewAccessibility")
         @Override
-        public boolean onTouch(View v, MotionEvent event) {
+        public boolean onTouch(final View v, final MotionEvent event) {
 
             if (event.getAction() == MotionEvent.ACTION_DOWN) {
                 longPressHandler.postDelayed(longPressedRunnable, MEDIUM_PRESS_TIMEOUT);
@@ -87,11 +87,11 @@ public interface BaldButtonInterface {
                     lastActionMoveEventBeforeUpX = event.getX();
                     lastActionMoveEventBeforeUpY = event.getY();
                 } else {
-                    float currentX = event.getX();
-                    float currentY = event.getY();
-                    float firstX = lastActionMoveEventBeforeUpX;
-                    float firstY = lastActionMoveEventBeforeUpY;
-                    double distance = Math.sqrt(
+                    final float currentX = event.getX();
+                    final float currentY = event.getY();
+                    final float firstX = lastActionMoveEventBeforeUpX;
+                    final float firstY = lastActionMoveEventBeforeUpY;
+                    final double distance = Math.sqrt(
                             (currentY - firstY) * (currentY - firstY) + ((currentX - firstX) * (currentX - firstX)));
                     if (distance > MEDIUM_PRESS_DISTANCE) {
                         longPressHandler.removeCallbacks(longPressedRunnable);

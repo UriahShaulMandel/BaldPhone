@@ -18,26 +18,16 @@
   ~ under the License.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?bald_background"
-    android:orientation="vertical">
-
-    <com.bald.uriah.baldphone.views.BaldTitleBar
-        android:id="@+id/bald_title_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/color_3"
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+    <corners
+        android:radius="10dp"
         />
 
-    <com.bald.uriah.baldphone.views.ScrollingHelper
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <solid android:color="?attr/bald_button"/>
 
-        <com.bald.uriah.baldphone.views.ModularRecyclerView
-            android:id="@+id/child"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </com.bald.uriah.baldphone.views.ScrollingHelper>
-</LinearLayout>
+
+    <stroke
+        android:width="2dp"
+        android:color="?attr/bald_stroke_color"
+        />
+</shape>

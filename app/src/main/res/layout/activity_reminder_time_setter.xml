@@ -30,6 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/color_4"
         app:title="@string/time_changer" />
 
     <com.bald.uriah.baldphone.views.BaldMultipleSelection
