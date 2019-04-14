@@ -23,6 +23,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.Color;
@@ -153,9 +154,10 @@ public class HomePage2 extends HomeView {
             bt.setOnClickListener(v -> homeScreen.startActivity(packageManager.getLaunchIntentForPackage(browserComponentName.getPackageName())));
             try {
                 final ActivityInfo activityInfo = packageManager.getActivityInfo(browserComponentName, PackageManager.MATCH_DEFAULT_ONLY);
-                final Drawable drawable = activityInfo.loadIcon(packageManager);
+                final ApplicationInfo applicationInfo = activityInfo.applicationInfo;
+                final Drawable drawable = applicationInfo.loadIcon(packageManager);
                 iv.setImageDrawable(drawable);
-                tv.setText(activityInfo.loadLabel(packageManager));
+                tv.setText(applicationInfo.loadLabel(packageManager));
             } catch (PackageManager.NameNotFoundException e) {
                 Log.e(TAG, S.str(e.getMessage()));
                 e.printStackTrace();
