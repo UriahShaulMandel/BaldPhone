@@ -18,7 +18,7 @@
   ~ under the License.
   -->
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -765,4 +765,4 @@
             app:layout_constraintStart_toStartOf="@id/iv_enter"
             app:layout_constraintTop_toBottomOf="@id/iv_enter" />
     </com.bald.uriah.baldphone.views.BaldConstraintLayoutButton>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

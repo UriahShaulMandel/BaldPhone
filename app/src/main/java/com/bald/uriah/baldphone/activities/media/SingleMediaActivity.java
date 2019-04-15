@@ -26,8 +26,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.annotation.Nullable;
-import android.support.v4.util.Pools;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -37,6 +35,9 @@ import com.bald.uriah.baldphone.adapters.BaldViewAdapter;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 import com.bald.uriah.baldphone.views.ViewPagerHolder;
+
+import androidx.annotation.Nullable;
+import androidx.core.util.Pools;
 
 /**
  * Parent activity for {@link SinglePhotoActivity} and {@link SingleVideoActivity}.

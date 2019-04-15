@@ -24,13 +24,6 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,6 +49,14 @@ import com.bumptech.glide.Glide;
 import org.joda.time.DateTime;
 
 import java.util.List;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<CallsRecyclerViewAdapter.ViewHolder> {
     private static final String TAG = CallsRecyclerViewAdapter.class.getSimpleName();

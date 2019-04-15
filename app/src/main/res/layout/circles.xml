@@ -28,7 +28,7 @@
 
     <!--Kinda hate those hacks-->
 
-    <android.support.design.widget.TabLayout
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

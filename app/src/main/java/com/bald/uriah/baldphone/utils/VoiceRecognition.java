@@ -24,7 +24,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.DialerActivity;
@@ -34,6 +33,8 @@ import com.bald.uriah.baldphone.databases.apps.AppsDatabase;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 
 import java.util.List;
+
+import androidx.annotation.NonNull;
 
 
 public class VoiceRecognition {

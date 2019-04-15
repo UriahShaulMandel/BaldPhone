@@ -22,7 +22,6 @@ package com.bald.uriah.baldphone.views;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Vibrator;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -32,8 +31,10 @@ import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 
+import androidx.annotation.Nullable;
+
 /**
- * Simple Button, extends {@link android.support.v7.widget.AppCompatTextView}; adapted to App settings.
+ * Simple Button, extends {@link androidx.appcompat.widget.AppCompatTextView}; adapted to App settings.
  * {@link BaldFrameLayoutButton#setOnLongClickListener(OnLongClickListener)} is deprecated,
  * use {@link BaldFrameLayoutButton#setOnClickListener(OnClickListener)} instead.
  */

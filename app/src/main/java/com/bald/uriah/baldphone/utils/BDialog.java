@@ -24,9 +24,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.annotation.IntDef;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +42,10 @@ import com.bald.uriah.baldphone.views.BaldMultipleSelection;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+
+import androidx.annotation.IntDef;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import static com.bald.uriah.baldphone.utils.BDialog.DialogState.INPUT_OK_CANCEL;
 import static com.bald.uriah.baldphone.utils.BDialog.DialogState.OK;

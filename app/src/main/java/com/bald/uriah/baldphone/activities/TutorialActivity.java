@@ -20,10 +20,6 @@
 package com.bald.uriah.baldphone.activities;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment1;
@@ -32,6 +28,11 @@ import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.Tutoria
 import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment4;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.views.ViewPagerHolder;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 public class TutorialActivity extends BaldActivity {
     private ViewPagerHolder viewPagerHolder;

@@ -28,10 +28,6 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
@@ -47,6 +43,11 @@ import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldPictureTextButton;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * using RecyclerView because of constant change of notification and NOT because of long scrolling list (most probably wont happen to elderly.)

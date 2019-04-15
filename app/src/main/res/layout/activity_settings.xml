@@ -18,7 +18,7 @@
   ~ under the License.
   -->
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root"
     android:layout_width="match_parent"
@@ -46,9 +46,8 @@
             android:id="@+id/child"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fadingEdgeLength="@dimen/transparent_length_in_scrollers"
             android:layoutAnimation="@anim/layout_animation_fall_down"
-            android:requiresFadingEdge="vertical"
-            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+            style="@style/ScrollStyle"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
     </com.bald.uriah.baldphone.views.ScrollingHelper>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

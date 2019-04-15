@@ -20,13 +20,14 @@
 package com.bald.uriah.baldphone.databases.contacts;
 
 import android.provider.ContactsContract;
-import android.support.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
 import com.bald.uriah.baldphone.views.HomeScreenAppView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+
+import androidx.annotation.Nullable;
 
 /**
  * Mini contact, contains lookupkey,photo,name and id.

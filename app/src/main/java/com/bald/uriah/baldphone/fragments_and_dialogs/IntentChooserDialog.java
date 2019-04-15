@@ -24,9 +24,6 @@ import android.content.Context;
 import android.content.pm.ResolveInfo;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -36,6 +33,10 @@ import com.bald.uriah.baldphone.views.BaldTitleBar;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 @Deprecated
 public class IntentChooserDialog extends Dialog {

@@ -22,8 +22,6 @@ package com.bald.uriah.baldphone.databases.contacts;
 import android.content.ContentResolver;
 import android.database.Cursor;
 import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Pair;
 
@@ -31,6 +29,9 @@ import com.bald.uriah.baldphone.utils.D;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * Immutable Contact class

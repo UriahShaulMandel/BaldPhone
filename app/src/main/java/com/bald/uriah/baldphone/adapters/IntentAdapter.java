@@ -22,7 +22,6 @@ package com.bald.uriah.baldphone.adapters;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +33,8 @@ import com.bald.uriah.baldphone.views.ModularRecyclerView;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
+
+import androidx.annotation.NonNull;
 
 public class IntentAdapter extends ModularRecyclerView.ModularAdapter<IntentAdapter.ViewHolder> {
     public interface ResolveInfoConsumer{

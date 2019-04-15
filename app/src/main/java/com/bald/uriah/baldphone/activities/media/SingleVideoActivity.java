@@ -26,9 +26,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
-import android.support.v4.view.ViewPager;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +37,10 @@ import android.widget.VideoView;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.Constants;
 import com.bald.uriah.baldphone.utils.Toggeler;
+
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Most of this class is defined at {@link SingleMediaActivity},

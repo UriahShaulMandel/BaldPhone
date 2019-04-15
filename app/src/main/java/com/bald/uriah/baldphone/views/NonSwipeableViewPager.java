@@ -20,7 +20,6 @@
 package com.bald.uriah.baldphone.views;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.animation.DecelerateInterpolator;
@@ -29,6 +28,8 @@ import android.widget.Scroller;
 import com.duolingo.open.rtlviewpager.RtlViewPager;
 
 import java.lang.reflect.Field;
+
+import androidx.viewpager.widget.ViewPager;
 
 public class NonSwipeableViewPager extends RtlViewPager {
 

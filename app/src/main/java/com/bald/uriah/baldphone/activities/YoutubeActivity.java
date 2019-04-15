@@ -23,8 +23,6 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
@@ -38,6 +36,9 @@ import com.bald.uriah.baldphone.views.BaldTitleBar;
 import com.bald.uriah.baldphone.views.FirstPageAppIcon;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
+
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class YoutubeActivity extends BaldActivity implements YouTubePlayer.PlayerStateChangeListener, YouTubePlayer.PlaybackEventListener {
     public static final String EXTRA_ID = "EXTRA_ID";

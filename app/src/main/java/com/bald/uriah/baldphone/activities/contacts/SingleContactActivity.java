@@ -31,9 +31,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.ContactsContract;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.RecyclerView;
 import android.telephony.PhoneNumberUtils;
 import android.util.Log;
 import android.util.Pair;
@@ -64,6 +61,10 @@ import com.bald.uriah.baldphone.views.ScrollingHelper;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Simple Activity for interacting with a {@link Contact}.

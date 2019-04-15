@@ -24,8 +24,6 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -43,6 +41,9 @@ import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.views.BaldButton;
 import com.bald.uriah.baldphone.views.BaldMultipleSelection;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
+
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
 
 import static com.bald.uriah.baldphone.utils.BaldToast.TYPE_ERROR;
 

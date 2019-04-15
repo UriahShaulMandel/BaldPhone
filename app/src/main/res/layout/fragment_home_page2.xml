@@ -37,7 +37,7 @@
         android:background="@drawable/style_for_buttons"
         android:orientation="horizontal">
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -101,7 +101,7 @@
         android:background="@drawable/style_for_buttons"
         android:orientation="horizontal">
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_maps"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -133,7 +133,7 @@
         android:background="@drawable/style_for_buttons"
         android:orientation="horizontal">
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

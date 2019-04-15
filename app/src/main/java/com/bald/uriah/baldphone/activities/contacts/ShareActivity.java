@@ -24,7 +24,6 @@ import android.content.pm.ResolveInfo;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
-import android.support.annotation.Nullable;
 import android.telephony.PhoneNumberUtils;
 import android.util.Log;
 import android.view.View;
@@ -42,6 +41,8 @@ import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.Collections;
 import java.util.List;
+
+import androidx.annotation.Nullable;
 
 
 /**

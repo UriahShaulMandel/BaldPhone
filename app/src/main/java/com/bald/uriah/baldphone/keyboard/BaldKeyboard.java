@@ -22,9 +22,6 @@ package com.bald.uriah.baldphone.keyboard;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Vibrator;
-import android.support.annotation.Keep;
-import android.support.annotation.LayoutRes;
-import android.support.constraint.ConstraintLayout;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -32,6 +29,10 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.bald.uriah.baldphone.utils.S;
+
+import androidx.annotation.Keep;
+import androidx.annotation.LayoutRes;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public abstract class BaldKeyboard extends FrameLayout {
     public static final char SHIFT = (char) 1;

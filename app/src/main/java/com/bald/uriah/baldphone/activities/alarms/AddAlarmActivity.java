@@ -23,7 +23,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.support.annotation.Nullable;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -38,6 +37,8 @@ import com.bald.uriah.baldphone.views.BaldButton;
 import com.bald.uriah.baldphone.views.BaldNumberChooser;
 
 import org.joda.time.DateTime;
+
+import androidx.annotation.Nullable;
 
 /**
  * Activity for creating\editing {@link Alarm}.

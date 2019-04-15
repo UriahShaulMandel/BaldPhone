@@ -19,7 +19,6 @@
 
 package com.bald.uriah.baldphone.views.home;
 
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +26,8 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.bald.uriah.baldphone.activities.HomeScreen;
+
+import androidx.annotation.NonNull;
 
 public abstract class HomeView extends FrameLayout {
     @NonNull

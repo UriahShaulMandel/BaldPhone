@@ -23,7 +23,6 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.bald.uriah.baldphone.activities.HomeScreen;
@@ -36,6 +35,8 @@ import org.joda.time.DateTime;
 import org.joda.time.MutableDateTime;
 
 import java.util.List;
+
+import androidx.annotation.NonNull;
 
 /**
  *

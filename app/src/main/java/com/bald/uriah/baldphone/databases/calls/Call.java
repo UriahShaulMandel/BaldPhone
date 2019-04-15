@@ -24,10 +24,11 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.provider.CallLog;
 import android.provider.ContactsContract;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.bald.uriah.baldphone.databases.contacts.MiniContact;
+
+import androidx.annotation.Nullable;
 
 public class Call {
     static final String[] PROJECTION = new String[]{

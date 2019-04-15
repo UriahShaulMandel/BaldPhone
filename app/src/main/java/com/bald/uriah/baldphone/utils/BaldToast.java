@@ -21,15 +21,6 @@ package com.bald.uriah.baldphone.utils;
 
 import android.content.Context;
 import android.os.Handler;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.IntDef;
-import android.support.annotation.IntRange;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
-import android.support.v4.content.ContextCompat;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
@@ -42,6 +33,16 @@ import com.bald.uriah.baldphone.R;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.IntDef;
+import androidx.annotation.IntRange;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
+import androidx.core.content.ContextCompat;
 
 public class BaldToast {
     public static final int LENGTH_SEC = -1;
@@ -78,7 +79,7 @@ public class BaldToast {
     private boolean built;
 
     private BaldToast(@NonNull Context context) {
-        this.context = context.getApplicationContext();
+        this.context = new ContextThemeWrapper(context.getApplicationContext(), R.style.bald_light);
     }
 
     public static BaldToast from(@NonNull Context context) {
@@ -138,7 +139,7 @@ public class BaldToast {
 
     public BaldToast build() {
         //not sure why but removing this line crashes app! so don't
-        final View toastView = LayoutInflater.from(new ContextThemeWrapper(context, R.style.bald_light)).inflate(layout, null);
+        final View toastView = LayoutInflater.from(context).inflate(layout, null);
         final TextView textView = (TextView) toastView;
         if (big)
             textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textView.getTextSize() * 2);

@@ -22,12 +22,13 @@ package com.bald.uriah.baldphone.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
-import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.VoiceRecognition;
+
+import androidx.annotation.Nullable;
 
 public class AssistantActivity extends BaldActivity {
     private static final int SPEECH_REQUEST_CODE = 7;

@@ -20,8 +20,6 @@
 package com.bald.uriah.baldphone.adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v4.util.Pools;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -35,6 +33,9 @@ import com.bald.uriah.baldphone.views.home.NotesView;
 
 import java.util.Collections;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.core.util.Pools;
 
 public class BaldPagerAdapter extends BaldViewAdapter {
     private static final String TAG = BaldPagerAdapter.class.getSimpleName();

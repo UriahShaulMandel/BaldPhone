@@ -20,13 +20,14 @@
 package com.bald.uriah.baldphone.activities;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.widget.EditText;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BaldToast;
 
 import org.acra.ACRA;
+
+import androidx.annotation.Nullable;
 
 public class FeedbackActivity extends BaldActivity {
     @Override

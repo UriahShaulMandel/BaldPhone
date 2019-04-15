@@ -19,7 +19,7 @@
 
 package com.bald.uriah.baldphone.utils;
 
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * right now this feature is still working, but not available in the settings.

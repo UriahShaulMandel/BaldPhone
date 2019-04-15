@@ -19,7 +19,7 @@
 
 package com.bald.uriah.baldphone.content_providers;
 
-import android.support.v4.content.FileProvider;
+import androidx.core.content.FileProvider;
 
 /**
  * for sharing files and stuff;

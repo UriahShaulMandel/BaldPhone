@@ -23,9 +23,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.support.annotation.ColorInt;
-import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
@@ -35,6 +32,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bald.uriah.baldphone.R;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 public class BaldSwitch extends LinearLayout {
     private static final String TAG = BaldSwitch.class.getSimpleName();

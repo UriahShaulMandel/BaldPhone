@@ -22,7 +22,6 @@ package com.bald.uriah.baldphone.views;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Vibrator;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -31,12 +30,14 @@ import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 
+import androidx.annotation.Nullable;
+
 /**
- * Simple Button, extends {@link android.support.v7.widget.AppCompatImageView}; adapted to App settings.
- * EXACTLY the same code as {@link BaldButton}, but extends {@link android.support.v7.widget.AppCompatImageView} instead.
+ * Simple Button, extends {@link androidx.appcompat.widget.AppCompatImageView}; adapted to App settings.
+ * EXACTLY the same code as {@link BaldButton}, but extends {@link androidx.appcompat.widget.AppCompatImageView} instead.
  * for more details, head to {@link BaldButton}
  */
-public class BaldImageButton extends android.support.v7.widget.AppCompatImageView implements BaldButtonInterface, View.OnLongClickListener, View.OnClickListener {
+public class BaldImageButton extends androidx.appcompat.widget.AppCompatImageView implements BaldButtonInterface, View.OnLongClickListener, View.OnClickListener {
     private final SharedPreferences sharedPreferences;
     private final boolean longPresses, vibrationFeedback, longPressesShorter;
     private final Vibrator vibrator;

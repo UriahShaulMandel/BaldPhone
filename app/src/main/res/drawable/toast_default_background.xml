@@ -19,9 +19,7 @@
   -->
 
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle"
-    android:tint="@color/toast_background_default" >
+    android:shape="rectangle">
+    <solid android:color="@color/toast_background_default"/>
     <corners android:radius="@dimen/btn_corners_pill_radius"/>
-
-
 </shape>

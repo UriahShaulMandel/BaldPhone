@@ -25,10 +25,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -44,6 +40,11 @@ import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.utils.SoftInputAssist;
 import com.bald.uriah.baldphone.utils.Toggeler;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.RecyclerView;
 
 import static android.view.View.GONE;
 

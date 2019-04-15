@@ -29,13 +29,14 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.service.notification.StatusBarNotification;
-import android.support.annotation.IntDef;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.Objects;
+
+import androidx.annotation.IntDef;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 public class NotificationListenerService extends android.service.notification.NotificationListenerService {
     // BROADCASTS

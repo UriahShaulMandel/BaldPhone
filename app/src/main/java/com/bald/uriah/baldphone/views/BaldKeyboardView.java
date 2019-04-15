@@ -23,8 +23,9 @@ import android.content.Context;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
+
+import androidx.annotation.RequiresApi;
 
 public class BaldKeyboardView extends KeyboardView {
 

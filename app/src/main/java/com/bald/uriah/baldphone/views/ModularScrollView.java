@@ -20,13 +20,14 @@
 package com.bald.uriah.baldphone.views;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.ScrollView;
 
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
+
+import androidx.annotation.Nullable;
 
 public class ModularScrollView extends ScrollView implements Modular {
     public boolean touchEnabled;

@@ -19,15 +19,11 @@
 
 package com.bald.uriah.baldphone.utils;
 
-import android.arch.lifecycle.Lifecycle;
-import android.arch.lifecycle.LifecycleObserver;
-import android.arch.lifecycle.OnLifecycleEvent;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
-import android.support.annotation.NonNull;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -39,6 +35,11 @@ import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.UpdatesActivity;
 
 import java.io.File;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.OnLifecycleEvent;
 
 /**
  * On Different class than {@link UpdatesActivity} because may be exported to library in the future

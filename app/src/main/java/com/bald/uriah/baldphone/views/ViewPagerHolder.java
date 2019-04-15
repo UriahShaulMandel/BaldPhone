@@ -24,11 +24,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Build;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -41,8 +36,14 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
 import com.duolingo.open.rtlviewpager.RtlViewPager;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.Locale;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 public class ViewPagerHolder extends LinearLayout {
     private static final int HEIGHT = 60;//in dp

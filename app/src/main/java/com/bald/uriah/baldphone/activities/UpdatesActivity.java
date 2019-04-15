@@ -34,7 +34,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -50,6 +49,8 @@ import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.utils.UpdatingUtil;
 
 import java.io.File;
+
+import androidx.annotation.Nullable;
 
 import static com.bald.uriah.baldphone.utils.UpdatingUtil.getDownloadedFile;
 import static com.bald.uriah.baldphone.utils.UpdatingUtil.isMessageOk;

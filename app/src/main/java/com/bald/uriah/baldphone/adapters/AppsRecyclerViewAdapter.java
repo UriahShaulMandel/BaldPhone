@@ -21,11 +21,6 @@ package com.bald.uriah.baldphone.adapters;
 
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.SparseIntArray;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -44,6 +39,12 @@ import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<RecyclerView.ViewHolder> {
     public static final int TYPE_HEADER = 0;

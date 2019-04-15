@@ -21,11 +21,12 @@ package com.bald.uriah.baldphone.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.annotation.StyleRes;
 import android.util.SparseIntArray;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
+
+import androidx.annotation.StyleRes;
 
 public final class BPrefs {
     public static final String KEY = "baldPrefs";

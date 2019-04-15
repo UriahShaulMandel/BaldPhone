@@ -21,13 +21,14 @@ package com.bald.uriah.baldphone.views;
 
 import android.content.ComponentName;
 import android.content.Intent;
-import android.support.annotation.StringRes;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.contacts.SingleContactActivity;
 import com.bald.uriah.baldphone.utils.S;
+
+import androidx.annotation.StringRes;
 
 public class HomeScreenAppView {
     public final ImageView iv_icon;

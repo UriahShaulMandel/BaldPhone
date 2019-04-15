@@ -21,8 +21,6 @@ package com.bald.uriah.baldphone.views.home;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -38,6 +36,9 @@ import com.bald.uriah.baldphone.utils.Toggeler;
 import com.bald.uriah.baldphone.views.BaldPictureTextButton;
 
 import java.lang.ref.WeakReference;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class NotesView extends HomeView {
     public static final String TAG = NotesView.class.getSimpleName();

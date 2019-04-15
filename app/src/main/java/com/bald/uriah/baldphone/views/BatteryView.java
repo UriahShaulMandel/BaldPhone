@@ -21,11 +21,12 @@ package com.bald.uriah.baldphone.views;
 
 import android.content.Context;
 import android.os.BatteryManager;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 
 import com.bald.uriah.baldphone.R;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
 
 public class BatteryView extends BaldImageButton {
     public int percentage;

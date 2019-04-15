@@ -19,10 +19,11 @@
 
 package com.bald.uriah.baldphone.adapters;
 
-import android.support.annotation.NonNull;
-import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.PagerAdapter;
 
 public abstract class BaldViewAdapter extends PagerAdapter {
     private static final String TAG = BaldViewAdapter.class.getSimpleName();

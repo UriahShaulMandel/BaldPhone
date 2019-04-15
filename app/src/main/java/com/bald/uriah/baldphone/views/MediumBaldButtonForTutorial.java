@@ -21,12 +21,13 @@ package com.bald.uriah.baldphone.views;
 
 import android.content.Context;
 import android.os.Vibrator;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 
 import com.bald.uriah.baldphone.utils.D;
 
-public class MediumBaldButtonForTutorial extends android.support.v7.widget.AppCompatTextView implements BaldButtonInterface {
+import androidx.annotation.Nullable;
+
+public class MediumBaldButtonForTutorial extends androidx.appcompat.widget.AppCompatTextView implements BaldButtonInterface {
     private Vibrator vibrator;
     private OnClickListener onClickListener;
 

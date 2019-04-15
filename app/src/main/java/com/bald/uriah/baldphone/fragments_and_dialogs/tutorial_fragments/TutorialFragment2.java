@@ -24,7 +24,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Vibrator;
-import android.support.annotation.ColorInt;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
@@ -33,6 +32,8 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
+
+import androidx.annotation.ColorInt;
 
 public class TutorialFragment2 extends TutorialFragment {
     private Vibrator vibrator;

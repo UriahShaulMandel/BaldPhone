@@ -87,7 +87,7 @@
                     android:textSize="50dp" />
             </FrameLayout>
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
@@ -138,7 +138,7 @@
                     android:text=""
                     app:layout_constraintBottom_toBottomOf="@id/iv_call_type"
                     app:layout_constraintStart_toEndOf="@id/iv_call_type" />
-            </android.support.constraint.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
     </FrameLayout>
 

@@ -20,9 +20,10 @@
 package com.bald.uriah.baldphone.activities;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
+
+import androidx.annotation.Nullable;
 
 /**
  * A simple holder to {@link com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment3}

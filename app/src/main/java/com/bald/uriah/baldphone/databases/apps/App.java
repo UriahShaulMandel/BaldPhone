@@ -19,10 +19,6 @@
 
 package com.bald.uriah.baldphone.databases.apps;
 
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.Ignore;
-import android.arch.persistence.room.PrimaryKey;
 import android.content.ComponentName;
 
 import com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter;
@@ -32,6 +28,11 @@ import com.bumptech.glide.Glide;
 
 import java.util.Arrays;
 import java.util.Objects;
+
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 
 /**
  * even though its not a representation of App and it represents an activity

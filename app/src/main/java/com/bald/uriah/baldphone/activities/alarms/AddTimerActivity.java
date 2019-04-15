@@ -23,7 +23,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
@@ -35,6 +34,8 @@ import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
 import com.bald.uriah.baldphone.utils.D;
 
 import org.joda.time.DateTime;
+
+import androidx.annotation.Nullable;
 
 /**
  * Activity for creating {@link Alarm}, as Timers.

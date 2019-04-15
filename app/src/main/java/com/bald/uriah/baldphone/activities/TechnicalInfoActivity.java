@@ -23,7 +23,6 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.widget.TextView;
 
 import com.bald.uriah.baldphone.BuildConfig;
@@ -36,6 +35,8 @@ import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.S;
 
 import java.io.File;
+
+import androidx.annotation.Nullable;
 
 public class TechnicalInfoActivity extends BaldActivity {
     public static void deleteCache(Context context) {

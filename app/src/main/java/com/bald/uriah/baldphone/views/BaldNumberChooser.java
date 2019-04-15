@@ -22,8 +22,6 @@ package com.bald.uriah.baldphone.views;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Vibrator;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
@@ -35,6 +33,9 @@ import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
 
 import java.util.Objects;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class BaldNumberChooser extends FrameLayout {
     private static final String TAG = BaldNumberChooser.class.getSimpleName();

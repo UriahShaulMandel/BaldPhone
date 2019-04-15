@@ -23,9 +23,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -33,6 +30,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bald.uriah.baldphone.R;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 
 public class BaldPictureTextButton extends BaldLinearLayoutButton {
 

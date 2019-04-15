@@ -18,7 +18,7 @@
   ~ under the License.
   -->
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
@@ -256,4 +256,4 @@
         app:layout_constraintTop_toBottomOf="@+id/b_hash"
         app:layout_constraintWidth_percent=".3"
         app:srcCompat="@drawable/backspace_on_button" />
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,13 +24,14 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.Constants;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+
+import androidx.annotation.Nullable;
 
 /**
  * Most of this class is defined at {@link MediaScrollingActivity},

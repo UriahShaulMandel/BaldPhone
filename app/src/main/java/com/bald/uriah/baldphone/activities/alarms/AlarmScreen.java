@@ -29,7 +29,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -48,6 +47,8 @@ import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
+
+import androidx.annotation.Nullable;
 
 /**
  * Alarm screen, will be called from {@link com.bald.uriah.baldphone.broadcast_receivers.AlarmReceiver}

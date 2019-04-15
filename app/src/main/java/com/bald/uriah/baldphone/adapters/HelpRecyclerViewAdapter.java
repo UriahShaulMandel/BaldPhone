@@ -21,10 +21,6 @@ package com.bald.uriah.baldphone.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +30,11 @@ import android.widget.TextView;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.YoutubeActivity;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class HelpRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<HelpRecyclerViewAdapter.ViewHolder> {
     private final LayoutInflater inflater;

@@ -24,7 +24,6 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -33,6 +32,8 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.bald.uriah.baldphone.R;
+
+import androidx.annotation.Nullable;
 
 import static com.bald.uriah.baldphone.activities.SettingsActivity.FONT_SIZES;
 

@@ -20,11 +20,12 @@
 package com.bald.uriah.baldphone.utils;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
 import android.view.View;
 
 import com.bald.uriah.baldphone.activities.BaldActivity;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 
 /**
  * Builder for {@link BDialog}
