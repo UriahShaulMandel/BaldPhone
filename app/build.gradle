@@ -52,7 +52,9 @@ android {
 }
 
 dependencies {
+    //noinspection GradleDependency
     implementation 'androidx.room:room-runtime:2.1.0-alpha04'
+    //noinspection GradleDependency
     annotationProcessor 'androidx.room:room-compiler:2.1.0-alpha04'
     implementation 'com.github.bumptech.glide:glide:4.7.1'
     //weird not gnu
@@ -83,5 +85,9 @@ dependencies {
     implementation 'androidx.exifinterface:exifinterface:1.1.0-alpha01'
     //apache 2.0
     // this is for add contact pic
-    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
+
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.3'
+
+
 }

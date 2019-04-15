@@ -18,8 +18,6 @@
   -->
 
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="empty" translatable="false"/>
-    <string name="app_name" translatable="false">BaldPhone</string>
     <string name="___app_was_not_found">%s was not found!</string>
     <string name="a">a</string>
     <string name="about">About</string>
@@ -57,9 +55,7 @@
     <string name="an_error_has_occurred">An error has occurred!</string>
     <string name="and_welcome_to_baldphone">and welcome to Baldphone</string>
     <string name="animation_tag">ANIMATION_TAG</string>
-    <string name="api_level" translatable="false">Api Level: </string>
-    <string name="app_version_name" translatable="false">App Version Name: </string>
-    <string name="app_version_number" translatable="false">App Version Number: </string>
+
     <string name="apps">Apps</string>
     <string name="are_you_sure_you_want_to_call_magen_david_adom">Are you sure you want to call Magen David Adom?</string>
     <string name="are_you_sure_you_want_to_delete___">Are you sure you want to delete %s?</string>

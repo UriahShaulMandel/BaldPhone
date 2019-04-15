@@ -73,7 +73,7 @@ public class BaldPhone extends Application {
                 .setBuildConfigClass(BuildConfig.class)
                 .setReportFormat(StringFormat.JSON);
         builder.getPluginConfigurationBuilder(HttpSenderConfigurationBuilder.class)
-                .setUri(getString(R.string.tp1).concat(getString(R.string.tp2).concat(getString(R.string.tp3))))
+                .setUri(getString(R.string.tt_url))
                 .setHttpMethod(HttpSender.Method.POST)
                 .setEnabled(true);
         ACRA.init(this, builder);

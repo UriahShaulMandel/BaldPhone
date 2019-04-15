@@ -21,7 +21,6 @@ package com.bald.uriah.baldphone.activities;
 
 import android.content.Intent;
 import android.content.res.Resources;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -29,18 +28,22 @@ import android.view.animation.Transformation;
 import android.widget.Space;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.fragments_and_dialogs.BaldYoutubeFragment;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 import com.bald.uriah.baldphone.views.FirstPageAppIcon;
-import com.google.android.youtube.player.YouTubeInitializationResult;
-import com.google.android.youtube.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
+import org.jetbrains.annotations.NotNull;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-public class YoutubeActivity extends BaldActivity implements YouTubePlayer.PlayerStateChangeListener, YouTubePlayer.PlaybackEventListener {
+public class YoutubeActivity extends BaldActivity{
     public static final String EXTRA_ID = "EXTRA_ID";
     private static final String TAG = YoutubeActivity.class.getSimpleName();
     private static final float VERTICAL_BIAS_AFTER = 0.8f;
@@ -96,108 +99,54 @@ public class YoutubeActivity extends BaldActivity implements YouTubePlayer.Playe
         }
 
 
-        final BaldYoutubeFragment baldYoutubeFragment = (BaldYoutubeFragment) getSupportFragmentManager().findFragmentById(R.id.youtube_fragment);
-        baldYoutubeFragment.initialize(getString(R.string.yak1).concat(getString(R.string.yak2).concat(getString(R.string.yak3))), new YouTubePlayer.OnInitializedListener() {
+        final YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_fragment);
+        getLifecycle().addObserver(youTubePlayerView);
+        youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
             @Override
-            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-                youTubePlayer.setPlayerStateChangeListener(YoutubeActivity.this);
-                youTubePlayer.setPlaybackEventListener(YoutubeActivity.this);
-                youTubePlayer.loadVideo(url);
+            public void onReady(@NonNull final YouTubePlayer youTubePlayer) {
+                youTubePlayer.loadVideo(url, 0);
                 youTubePlayer.play();
             }
 
             @Override
-            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-                finish();
-                startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.youtube.com/watch?v=" + url)));
+            public void onStateChange(@NotNull YouTubePlayer youTubePlayer, @NotNull PlayerConstants.PlayerState state) {
+                if (state == PlayerConstants.PlayerState.ENDED) {
+                    if (bottom == null)
+                        return;
+                    ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) bottom.getLayoutParams();
+                    Animation animation = new Animation() {
+                        @Override
+                        protected void applyTransformation(float interpolatedTime, Transformation t) {
+                            params.verticalBias = ((interpolatedTime) * (VERTICAL_BIAS_AFTER - VERTICAL_BIAS_BEFORE)) + VERTICAL_BIAS_BEFORE;
+                            bottom.setLayoutParams(params);
+                        }
+                    };
+                    animation.setDuration(ANIMATION_DURATION);
+                    bottom.startAnimation(animation);
+                } else if (state == PlayerConstants.PlayerState.PLAYING) {
+                    if (bottom == null)
+                        return;
+                    ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) bottom.getLayoutParams();
+                    if (params.verticalBias == VERTICAL_BIAS_BEFORE)
+                        return;
+                    Animation animation = new Animation() {
+                        @Override
+                        protected void applyTransformation(float interpolatedTime, Transformation t) {
+                            params.verticalBias = ((interpolatedTime) * (VERTICAL_BIAS_BEFORE - VERTICAL_BIAS_AFTER)) + VERTICAL_BIAS_AFTER;
+                            bottom.setLayoutParams(params);
+                        }
+                    };
+                    animation.setDuration(ANIMATION_DURATION);
+                    bottom.startAnimation(animation);
+                }
             }
-
         });
+
+
     }
 
     @Override
     protected int requiredPermissions() {
         return PERMISSION_NONE;
-    }
-
-
-    @Override
-    public void onVideoEnded() {
-        if (bottom == null)
-            return;
-        ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) bottom.getLayoutParams();
-        Animation animation = new Animation() {
-            @Override
-            protected void applyTransformation(float interpolatedTime, Transformation t) {
-                params.verticalBias = ((interpolatedTime) * (VERTICAL_BIAS_AFTER - VERTICAL_BIAS_BEFORE)) + VERTICAL_BIAS_BEFORE;
-                bottom.setLayoutParams(params);
-            }
-        };
-        animation.setDuration(ANIMATION_DURATION);
-        bottom.startAnimation(animation);
-    }
-
-    @Override
-    public void onError(YouTubePlayer.ErrorReason errorReason) {
-
-    }
-
-    @Override
-    public void onPlaying() {
-        if (bottom == null)
-            return;
-        ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) bottom.getLayoutParams();
-        if (params.verticalBias == VERTICAL_BIAS_BEFORE)
-            return;
-        Animation animation = new Animation() {
-            @Override
-            protected void applyTransformation(float interpolatedTime, Transformation t) {
-                params.verticalBias = ((interpolatedTime) * (VERTICAL_BIAS_BEFORE - VERTICAL_BIAS_AFTER)) + VERTICAL_BIAS_AFTER;
-                bottom.setLayoutParams(params);
-            }
-        };
-        animation.setDuration(ANIMATION_DURATION);
-        bottom.startAnimation(animation);
-    }
-
-    @Override
-    public void onPaused() {
-
-    }
-
-    @Override
-    public void onStopped() {
-
-    }
-
-    @Override
-    public void onBuffering(boolean b) {
-
-    }
-
-    @Override
-    public void onSeekTo(int i) {
-
-    }
-
-
-    @Override
-    public void onLoading() {
-
-    }
-
-    @Override
-    public void onLoaded(String s) {
-
-    }
-
-    @Override
-    public void onAdStarted() {
-
-    }
-
-    @Override
-    public void onVideoStarted() {
-
     }
 }

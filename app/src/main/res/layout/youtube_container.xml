@@ -89,14 +89,17 @@
         app:layout_constraintLeft_toLeftOf="@id/device_frame"
         app:layout_constraintRight_toRightOf="@id/device_frame"
         app:layout_constraintTop_toTopOf="@id/_top" />
-    <fragment
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
         android:id="@+id/youtube_fragment"
-        class="com.bald.uriah.baldphone.fragments_and_dialogs.BaldYoutubeFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@id/_bottom"
         app:layout_constraintLeft_toLeftOf="@id/_left"
         app:layout_constraintRight_toRightOf="@id/_right"
+        app:showFullScreenButton="false"
+        app:showVideoCurrentTime="false"
+        app:showVideoDuration="false"
+        app:showYouTubeButton="false"
         app:layout_constraintTop_toTopOf="@id/_top"
         />
     <View
