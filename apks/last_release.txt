@@ -1,1 +1,2 @@
-73@@@11.1.8@@@BaldPhone's second homepage now looks better
+74@@@11.1.9@@@Localization of SOS
+App should use less ram

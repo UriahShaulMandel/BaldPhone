@@ -27,6 +27,10 @@ import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.Space;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
@@ -37,15 +41,8 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
-import org.jetbrains.annotations.NotNull;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
 public class YoutubeActivity extends BaldActivity{
     public static final String EXTRA_ID = "EXTRA_ID";
-    private static final String TAG = YoutubeActivity.class.getSimpleName();
     private static final float VERTICAL_BIAS_AFTER = 0.8f;
     private static final float VERTICAL_BIAS_BEFORE = 1f;
     private final static long ANIMATION_DURATION = D.MILLISECOND * 800;
@@ -109,7 +106,7 @@ public class YoutubeActivity extends BaldActivity{
             }
 
             @Override
-            public void onStateChange(@NotNull YouTubePlayer youTubePlayer, @NotNull PlayerConstants.PlayerState state) {
+            public void onStateChange(@NonNull YouTubePlayer youTubePlayer, @NonNull PlayerConstants.PlayerState state) {
                 if (state == PlayerConstants.PlayerState.ENDED) {
                     if (bottom == null)
                         return;

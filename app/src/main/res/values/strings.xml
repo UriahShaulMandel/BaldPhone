@@ -57,7 +57,7 @@
     <string name="animation_tag">ANIMATION_TAG</string>
 
     <string name="apps">Apps</string>
-    <string name="are_you_sure_you_want_to_call_magen_david_adom">Are you sure you want to call Magen David Adom?</string>
+    <string name="are_you_sure_you_want_to_call_emergency_services">Are you sure you want to call Emergency Services?</string>
     <string name="are_you_sure_you_want_to_delete___">Are you sure you want to delete %s?</string>
     <string name="arrows">Arrows</string>
     <string name="arrows_for_scrolling">Arrows for scrolling</string>
@@ -167,7 +167,7 @@
     <string name="location">Location</string>
     <string name="long_presses">Long Presses</string>
     <string name="long_presses_subtext">Choose if you want to use long presses or regular ones.\Long presses are recommended if hands are shaking.\nWhen choosing long presses Vibration Feedback and Arrows Swiping should be on too.</string>
-    <string name="magen_david_adom">Magen David Adom</string>
+    <string name="emergency_services">Emergency Services</string>
     <string name="mail">Mail</string>
     <string name="manual">Manual</string>
     <string name="maps">Maps</string>

@@ -21,17 +21,17 @@ package com.bald.uriah.baldphone.activities;
 
 import android.os.Bundle;
 
-import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.adapters.CallsRecyclerViewAdapter;
-import com.bald.uriah.baldphone.databases.calls.CallLogsHelper;
-
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.adapters.CallsRecyclerViewAdapter;
+import com.bald.uriah.baldphone.databases.calls.CallLogsHelper;
+
 public class RecentActivity extends BaldActivity {
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (!checkPermissions(this, requiredPermissions()))
             return;

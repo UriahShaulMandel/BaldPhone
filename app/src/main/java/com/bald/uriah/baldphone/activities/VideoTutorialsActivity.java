@@ -22,18 +22,18 @@ package com.bald.uriah.baldphone.activities;
 import android.content.res.Resources;
 import android.os.Bundle;
 
-import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.adapters.HelpRecyclerViewAdapter;
-import com.bald.uriah.baldphone.utils.S;
-
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.adapters.HelpRecyclerViewAdapter;
+import com.bald.uriah.baldphone.utils.S;
+
 public class VideoTutorialsActivity extends BaldActivity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
         final RecyclerView recycler_view = findViewById(R.id.recycler_view);

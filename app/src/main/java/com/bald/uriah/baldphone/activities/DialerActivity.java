@@ -32,17 +32,17 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.contacts.AddContactActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 import com.bald.uriah.baldphone.databases.contacts.MiniContact;
 import com.bald.uriah.baldphone.utils.BaldToast;
-
-import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class DialerActivity extends BaldActivity {
     public static final String SORT_ORDER =
@@ -60,7 +60,7 @@ public class DialerActivity extends BaldActivity {
     private View[] numpad;
     private StringBuilder number = new StringBuilder();
 
-    public static void call(CharSequence number, Context context) {
+    public static void call(final CharSequence number, final Context context) {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
             try {
                 context.startActivity(new Intent(Intent.ACTION_CALL).setData(Uri.parse("tel:" + number)));
@@ -77,7 +77,7 @@ public class DialerActivity extends BaldActivity {
 
     }
 
-    public static void call(MiniContact miniContact, Context context) {
+    public static void call(final MiniContact miniContact, final Context context) {
         try {
             call(Contact.fromLookupKey(miniContact.lookupKey, context.getContentResolver()).getPhoneList().get(0).second, context);
         } catch (Exception e) {
@@ -86,7 +86,7 @@ public class DialerActivity extends BaldActivity {
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (!checkPermissions(this, requiredPermissions()))
             return;
@@ -167,13 +167,13 @@ public class DialerActivity extends BaldActivity {
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(final Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putCharSequence(NUMBER_STATE, number);
     }
 
     @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+    protected void onRestoreInstanceState(final Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         final CharSequence charSequence = savedInstanceState.getCharSequence(NUMBER_STATE);
         if (charSequence != null) {
@@ -191,12 +191,12 @@ public class DialerActivity extends BaldActivity {
     private class DialerClickListener implements View.OnClickListener {
         private final char c;
 
-        DialerClickListener(char c) {
+        DialerClickListener(final char c) {
             this.c = c;
         }
 
         @Override
-        public void onClick(View v) {
+        public void onClick(final View v) {
             number.append(c);
             tv_number.setText(number);
             searchForContact();

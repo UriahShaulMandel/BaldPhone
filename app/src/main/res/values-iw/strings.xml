@@ -57,7 +57,7 @@
     <string name="and_welcome_to_baldphone">וברוכים הבאים ל-BaldPhone</string>
     <string name="animation_tag">ANIMATION_TAG</string>
     <string name="apps">יישומים</string>
-    <string name="are_you_sure_you_want_to_call_magen_david_adom">האם ברצונך להתקשר למגן דוד אדום?</string>
+    <string name="are_you_sure_you_want_to_call_emergency_services">האם ברצונך להתקשר למגן דוד אדום?</string>
     <string name="are_you_sure_you_want_to_delete___">האם ברצונך למחוק את %s?</string>
     <string name="arrows">חיצים</string>
     <string name="arrows_for_scrolling">חצים לגלילה</string>
@@ -165,7 +165,7 @@
     <string name="location">מיקום</string>
     <string name="long_presses">לחיצה ארוכה</string>
     <string name="long_presses_subtext">בחר לחיצה ארוכה או רגילה \nלחיצה ארוכה מומלצת ליד פחות יציבה \nלשימוש בלחיצה ארוכה, יש הוסף ניווט על ידי חיצים וחיווי רטט</string>
-    <string name="magen_david_adom">מגן דוד אדום</string>
+    <string name="emergency_services">מגן דוד אדום</string>
     <string name="mail">אימייל</string>
     <string name="manual">מדריך</string>
     <string name="maps">מפות</string>

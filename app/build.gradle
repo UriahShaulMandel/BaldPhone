@@ -27,8 +27,8 @@ android {
         applicationId "com.bald.uriah.baldphone"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 73
-        versionName "11.1.8"
+        versionCode 74
+        versionName "11.1.9"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -57,7 +57,6 @@ dependencies {
     //noinspection GradleDependency
     annotationProcessor 'androidx.room:room-compiler:2.1.0-alpha04'
     implementation 'com.github.bumptech.glide:glide:4.7.1'
-    //weird not gnu
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha04'
@@ -72,7 +71,8 @@ dependencies {
     //apache 2.0
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     //apache 2.0
-    implementation 'joda-time:joda-time:2.10'
+    implementation 'net.danlew:android.joda:2.10.1.2'
+
     //apache 2.0
     implementation 'com.github.nisrulz:lantern:2.0.0'
     //apache 2.0
@@ -85,9 +85,5 @@ dependencies {
     implementation 'androidx.exifinterface:exifinterface:1.1.0-alpha01'
     //apache 2.0
     // this is for add contact pic
-
-
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.3'
-
-
 }

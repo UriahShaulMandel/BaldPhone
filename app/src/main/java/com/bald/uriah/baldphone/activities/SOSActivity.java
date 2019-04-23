@@ -31,6 +31,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.contacts.ContactsActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
@@ -44,8 +46,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import androidx.annotation.Nullable;
 
 import static com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper.SHARED_PREFS_KEY;
 
@@ -77,8 +77,7 @@ public class SOSActivity extends BaldActivity {
     protected void onStart() {
         super.onStart();
         final View.OnClickListener addContactListener = v -> startActivity(new Intent(v.getContext().getApplicationContext(), ContactsActivity.class).putExtra(ContactsActivity.INTENT_EXTRA_CONTACT_ADAPTER_MODE, ContactRecyclerViewAdapter.MODE_SOS));
-
-        List<MiniContact> miniContacts = PinHelper.getAllPinnedContacts(this);
+        final List<MiniContact> miniContacts = PinHelper.getAllPinnedContacts(this);
         if (miniContacts != null) {
             final int size = miniContacts.size();
             if (size > 0)
@@ -98,13 +97,18 @@ public class SOSActivity extends BaldActivity {
         ecReal.setOnClickListener((v) -> {
             BDB.from(SOSActivity.this)
                     .setTitle("")
-                    .setSubText(v.getContext().getString(R.string.are_you_sure_you_want_to_call_magen_david_adom))
+                    .setSubText(v.getContext().getString(R.string.are_you_sure_you_want_to_call_emergency_services))
                     .setCancelable(true)
                     .setPositiveButtonListener(params -> {
-                        DialerActivity.call("101", SOSActivity.this);
+                        callEmergencyNumber();
                         return true;
                     }).show();
         });
+    }
+
+
+    private void callEmergencyNumber() {
+        DialerActivity.call("112",this);//should work 99.99% of the times
     }
 
     private void setupXml() {
@@ -131,9 +135,9 @@ public class SOSActivity extends BaldActivity {
          * @return true if succeeded
          */
         public static boolean pinContact(Context context, String lookupKey) {
-            SharedPreferences sharedPreferences = context.getSharedPreferences(HomeScreenPinHelper.PinnedContactPreferences.KEY, Context.MODE_PRIVATE);
-            Set<String> befSet = sharedPreferences.getStringSet(HomeScreenPinHelper.PinnedContactPreferences.SOS_KEY, null);
-            Set<String> newSet;
+            final SharedPreferences sharedPreferences = context.getSharedPreferences(HomeScreenPinHelper.PinnedContactPreferences.KEY, Context.MODE_PRIVATE);
+            final Set<String> befSet = sharedPreferences.getStringSet(HomeScreenPinHelper.PinnedContactPreferences.SOS_KEY, null);
+            final Set<String> newSet;
             if (befSet == null)
                 newSet = new HashSet<>();
             else {
@@ -153,9 +157,9 @@ public class SOSActivity extends BaldActivity {
         }
 
         public static void removeContact(Context context, String lookupKey) {
-            SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_KEY, Context.MODE_PRIVATE);
-            Set<String> befSet = sharedPreferences.getStringSet(HomeScreenPinHelper.PinnedContactPreferences.SOS_KEY, null);
-            Set<String> newSet;
+            final SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_KEY, Context.MODE_PRIVATE);
+            final Set<String> befSet = sharedPreferences.getStringSet(HomeScreenPinHelper.PinnedContactPreferences.SOS_KEY, null);
+            final Set<String> newSet;
             if (befSet == null)
                 newSet = new HashSet<>();
             else

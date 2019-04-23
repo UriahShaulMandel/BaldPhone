@@ -152,7 +152,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:layout_weight="1"
-            android:src="@drawable/magen_david" />
+            android:src="@drawable/emergency" />
 
         <TextView
             android:layout_width="0dp"
@@ -161,7 +161,7 @@
             android:gravity="start|center"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:text="@string/magen_david_adom"
+            android:text="@string/emergency_services"
             android:textColor="?bald_text_on_background"
             android:textSize="@dimen/huge" />
     </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>

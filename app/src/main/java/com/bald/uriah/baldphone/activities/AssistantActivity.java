@@ -24,17 +24,17 @@ import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
 
+import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.VoiceRecognition;
-
-import androidx.annotation.Nullable;
 
 public class AssistantActivity extends BaldActivity {
     private static final int SPEECH_REQUEST_CODE = 7;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (!checkPermissions(this, requiredPermissions()))
             return;
@@ -42,21 +42,20 @@ public class AssistantActivity extends BaldActivity {
         findViewById(R.id.bt_start).setOnClickListener(this::displaySpeechRecognizer);
     }
 
-
-    private void displaySpeechRecognizer(View v) {
+    private void displaySpeechRecognizer(final View v) {
         try {
             startActivityForResult(
                     new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
                             .putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                                     RecognizerIntent.LANGUAGE_MODEL_FREE_FORM),
                     SPEECH_REQUEST_CODE);
-        } catch (Exception e){
+        } catch (Exception e) {
             BaldToast.error(this);//some emulators don't have activity to handle RecognizerIntent.ACTION_RECOGNIZE_SPEECH
         }
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
         if (requestCode == SPEECH_REQUEST_CODE && resultCode == RESULT_OK) {
             final String spokenText = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS).get(0);
             final VoiceRecognition.Answer answer = VoiceRecognition.recognizeVoice(this, spokenText);

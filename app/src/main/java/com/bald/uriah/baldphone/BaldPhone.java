@@ -66,7 +66,7 @@ public class BaldPhone extends Application {
     }
 
     @Override
-    protected void attachBaseContext(Context base) {
+    protected void attachBaseContext(final Context base) {
         super.attachBaseContext(base);
         S.logImportant("attachBaseContext was called! setting Acra and Thread.setDefaultUncaughtExceptionHandler");
         final CoreConfigurationBuilder builder = new CoreConfigurationBuilder(this)
@@ -95,7 +95,7 @@ public class BaldPhone extends Application {
 
         @SuppressLint("ApplySharedPref")
         @Override
-        public void uncaughtException(Thread t, Throwable e) {
+        public void uncaughtException(final Thread t, final Throwable e) {
             final SharedPreferences baldPrefs = BPrefs.get(context);
             final long currentTime = System.currentTimeMillis();
             if (currentTime - baldPrefs.getLong(BPrefs.LAST_CRASH_KEY, -1) < BPrefs.LAST_CRASH_TIME_OK) {

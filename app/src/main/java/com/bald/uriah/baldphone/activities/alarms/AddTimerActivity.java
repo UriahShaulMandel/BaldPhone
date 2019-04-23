@@ -26,6 +26,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
@@ -34,8 +36,6 @@ import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
 import com.bald.uriah.baldphone.utils.D;
 
 import org.joda.time.DateTime;
-
-import androidx.annotation.Nullable;
 
 /**
  * Activity for creating {@link Alarm}, as Timers.
@@ -67,7 +67,7 @@ public class AddTimerActivity extends BaldActivity {
         final String name = getString(R.string.quick_alarm);
         final DateTime now = DateTime.now();
 
-        Alarm alarm = new Alarm();
+        final Alarm alarm = new Alarm();
         alarm.setDays(-1);
         alarm.setHour(now.getHourOfDay());
         alarm.setMinute(now.getMinuteOfHour());
@@ -102,8 +102,6 @@ public class AddTimerActivity extends BaldActivity {
             updateAccordingToTime();
         });
         updateAccordingToTime();
-
-
     }
 
     @SuppressLint("DefaultLocale")

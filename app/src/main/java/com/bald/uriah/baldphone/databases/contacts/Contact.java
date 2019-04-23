@@ -25,13 +25,13 @@ import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.util.Pair;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.utils.D;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 /**
  * Immutable Contact class
@@ -44,12 +44,7 @@ public class Contact {
             ContactsContract.Contacts.PHOTO_URI,
             ContactsContract.Contacts.STARRED
     };
-    private static final int PO_BOX = 0;
-    private static final int STREET = 1;
-    private static final int CITY = 2;
-    private static final int STATE = 3;
-    private static final int POSTAL_CODE = 4;
-    private static final int COUNTRY = 5;
+
     private static final String[] PHONE_PROJECTION = {
             ContactsContract.CommonDataKinds.Phone.TYPE,
             ContactsContract.CommonDataKinds.Phone.NUMBER,
@@ -73,7 +68,6 @@ public class Contact {
             ContactsContract.CommonDataKinds.StructuredPostal.TYPE,
     };
     private static final String ADDRESS_SELECTION = ContactsContract.Data.CONTACT_ID + " = ? AND " + ContactsContract.Data.MIMETYPE + " = ?";
-
 
     private final int id;
     @NonNull

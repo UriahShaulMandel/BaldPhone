@@ -21,6 +21,12 @@ package com.bald.uriah.baldphone.activities;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment1;
 import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment2;
@@ -28,11 +34,6 @@ import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.Tutoria
 import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment4;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.views.ViewPagerHolder;
-
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
 
 public class TutorialActivity extends BaldActivity {
     private ViewPagerHolder viewPagerHolder;
@@ -62,8 +63,9 @@ public class TutorialActivity extends BaldActivity {
             super(fm);
         }
 
+        @NonNull
         @Override
-        public Fragment getItem(int position) {
+        public Fragment getItem(final int position) {
             switch (position) {
                 case 0:
                     return new TutorialFragment1();
@@ -73,7 +75,6 @@ public class TutorialActivity extends BaldActivity {
                     return new TutorialFragment3();
                 case 3:
                     return new TutorialFragment4();
-
                 default:
                     return null;
             }
