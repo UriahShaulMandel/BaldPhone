@@ -24,18 +24,15 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-
+import androidx.annotation.NonNull;
 import com.bald.uriah.baldphone.activities.HomeScreen;
 import com.bald.uriah.baldphone.broadcast_receivers.AlarmReceiver;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
-
 import org.joda.time.DateTime;
 import org.joda.time.MutableDateTime;
 
 import java.util.List;
-
-import androidx.annotation.NonNull;
 
 /**
  *
@@ -90,7 +87,6 @@ public class AlarmScheduler {
             day = 7;
         return day;
     }
-
 
     public static long nextTimeAlarmWillWorkInMsFromNow(@NonNull Alarm alarm) {
         return nextTimeAlarmWillWorkInMs(alarm) - DateTime.now().getMillis();

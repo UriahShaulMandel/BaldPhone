@@ -34,15 +34,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.BaldActivity;
-import com.bald.uriah.baldphone.activities.SOSActivity;
-import com.bald.uriah.baldphone.activities.contacts.ShareActivity;
-import com.bald.uriah.baldphone.activities.contacts.SingleContactActivity;
-import com.bald.uriah.baldphone.fragments_and_dialogs.LetterChooserDialog;
-import com.bald.uriah.baldphone.views.ModularRecyclerView;
-
 import androidx.annotation.ColorInt;
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
@@ -50,6 +41,13 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
+import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.activities.BaldActivity;
+import com.bald.uriah.baldphone.activities.SOSActivity;
+import com.bald.uriah.baldphone.activities.contacts.ShareActivity;
+import com.bald.uriah.baldphone.activities.contacts.SingleContactActivity;
+import com.bald.uriah.baldphone.fragments_and_dialogs.LetterChooserDialog;
+import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<ContactRecyclerViewAdapter.ViewHolder> {
     public static final int MODE_DEFAULT = 0;
@@ -65,7 +63,6 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
     @ColorInt
     private final int textColorOnGold, textColorOnButton;
     private Cursor cursor;
-
 
     public ContactRecyclerViewAdapter(BaldActivity activity, Cursor cursor, RecyclerView recyclerView, @IntRange(from = MODE_DEFAULT, to = MODE_SHARE) int mode) {
         this.mode = mode;
@@ -85,7 +82,6 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
         textColorOnButton = typedValue.data;
         applyToCursor();
 
-
     }
 
     private void applyToCursor() {
@@ -93,7 +89,6 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
         cursor.moveToFirst();
         String previousFirstLetter = null;
         String tmpThis;
-
 
         for (int i = 0; i < cursor.getCount(); i++) {
             cursor.moveToPosition(i);
@@ -121,7 +116,6 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
             recyclerView.getLayoutManager().startSmoothScroll(smoothScroller);
         }
 
-
     }
 
     @NonNull
@@ -132,7 +126,6 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
         view.setTag(viewHolder);
         return viewHolder;
     }
-
 
     @Override
     public void onBindViewHolder(final @NonNull ViewHolder holder, final int position) {
@@ -174,7 +167,6 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
         return cursor.getCount();
     }
 
-
     private void drawText(ViewHolder viewHolder, String chr) {
         viewHolder.tv_image_letter.setVisibility(View.VISIBLE);
         viewHolder.tv_image_letter.setText(chr);
@@ -189,7 +181,6 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
         final LinearLayout container, ll_contact_only;
         final TextView tv_contact_name, tv_letter, tv_image_letter;
         final ImageView iv_contact_pic;
-
 
         String lookupKey;
         private boolean expanded;
@@ -220,7 +211,6 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
             });
 
         }
-
 
         public void setLetter(final @Nullable String character) {
             if (character == null && expanded) {
@@ -257,7 +247,6 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
             favorite = f;
             ll_contact_only.setBackgroundResource(favorite ? R.drawable.style_for_buttons_rectangle_gold : R.drawable.style_for_buttons_rectangle);
             tv_contact_name.setTextColor(favorite ? textColorOnGold : textColorOnButton);
-
 
         }
 

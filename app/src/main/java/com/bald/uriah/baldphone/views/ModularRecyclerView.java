@@ -22,18 +22,15 @@ package com.bald.uriah.baldphone.views;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-
-import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.D;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
+import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.utils.D;
 
 //most probably must be match parent! remember!
 public class ModularRecyclerView extends RecyclerView implements Modular {
     public boolean touchEnabled;
-
 
     public ModularRecyclerView(Context context) {
         super(context);
@@ -60,7 +57,6 @@ public class ModularRecyclerView extends RecyclerView implements Modular {
         return touchEnabled && super.onTouchEvent(ev);
     }
 
-
     @Override
     public void setAdapter(Adapter adapter) {
         if (adapter instanceof ModularAdapter) {
@@ -69,11 +65,9 @@ public class ModularRecyclerView extends RecyclerView implements Modular {
             adapter.registerAdapterDataObserver(emptyObserver);
             emptyObserver.onChanged();
 
-
         } else
             throw new IllegalArgumentException("Adapter must be Modular!, and remember to call super.onBindViewHolder!");
     }
-
 
     public static abstract class ModularAdapter<T extends ViewHolder> extends RecyclerView.Adapter<T> {
         //For the future

@@ -18,7 +18,8 @@
   ~ under the License.
   -->
 
-<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
- <solid android:color="?bald_keyboard_key_pressed_background"/>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+    <solid android:color="?bald_keyboard_key_pressed_background"/>
     <corners android:radius="@dimen/key_radius"/>
 </shape>

@@ -18,9 +18,10 @@
   ~ under the License.
   -->
 
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
     <solid
-       android:color="#00000000" />
+            android:color="#00000000"/>
 </shape>
 
 

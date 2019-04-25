@@ -20,11 +20,7 @@
 package com.bald.uriah.baldphone.activities;
 
 import android.app.DownloadManager;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
+import android.content.*;
 import android.database.Cursor;
 import android.media.MediaScannerConnection;
 import android.net.ConnectivityManager;
@@ -37,20 +33,12 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
+import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.BDB;
-import com.bald.uriah.baldphone.utils.BDialog;
-import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
-import com.bald.uriah.baldphone.utils.S;
-import com.bald.uriah.baldphone.utils.UpdatingUtil;
+import com.bald.uriah.baldphone.utils.*;
 
 import java.io.File;
-
-import androidx.annotation.Nullable;
 
 import static com.bald.uriah.baldphone.utils.UpdatingUtil.getDownloadedFile;
 import static com.bald.uriah.baldphone.utils.UpdatingUtil.isMessageOk;
@@ -89,6 +77,15 @@ public class UpdatesActivity extends BaldActivity {
         }
     };
 
+    public static void removeUpdatesInfo(Context context) {
+        BPrefs.get(context)
+                .edit()
+                .remove(BPrefs.LAST_APK_VERSION_KEY)
+                .remove(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER)
+                .remove(BPrefs.LAST_UPDATE_ASKED_VERSION_KEY)
+                .remove(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_ID)
+                .apply();
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -204,17 +201,6 @@ public class UpdatesActivity extends BaldActivity {
         }
     }
 
-
-    public static void removeUpdatesInfo(Context context) {
-        BPrefs.get(context)
-                .edit()
-                .remove(BPrefs.LAST_APK_VERSION_KEY)
-                .remove(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER)
-                .remove(BPrefs.LAST_UPDATE_ASKED_VERSION_KEY)
-                .remove(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_ID)
-                .apply();
-    }
-
     private void onDownloadButtonClick(final int newVersion) {
         if (downloadApk(newVersion)) {
             apply();
@@ -230,7 +216,6 @@ public class UpdatesActivity extends BaldActivity {
     public boolean downloadApk(final int versionNumber) {
         if (manager == null)
             return false;
-
 
         downloadingToast.show();
         deleteCurrentUpdateFile();
@@ -323,7 +308,6 @@ public class UpdatesActivity extends BaldActivity {
 
         }
     }
-
 
     @Override
     protected int requiredPermissions() {

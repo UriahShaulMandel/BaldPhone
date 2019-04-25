@@ -22,9 +22,9 @@
     <string name="authorities" translatable="false">com.bald.uriah.baldphone.fileprovider</string>
     <string name="empty" translatable="false"/>
     <string name="app_name" translatable="false">BaldPhone</string>
-    <string name="api_level" translatable="false">Api Level: </string>
-    <string name="app_version_name" translatable="false">App Version Name: </string>
-    <string name="app_version_number" translatable="false">App Version Number: </string>
+    <string name="api_level" translatable="false">Api Level:</string>
+    <string name="app_version_name" translatable="false">App Version Name:</string>
+    <string name="app_version_number" translatable="false">App Version Number:</string>
     <string name="tt_url" translatable="false">"https://collector.tracepot.com/9fc2295e"</string>
 
 </resources>

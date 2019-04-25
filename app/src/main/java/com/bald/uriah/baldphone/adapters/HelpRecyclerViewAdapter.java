@@ -26,15 +26,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.YoutubeActivity;
-import com.bald.uriah.baldphone.views.ModularRecyclerView;
-
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
+import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.activities.YoutubeActivity;
+import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 public class HelpRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<HelpRecyclerViewAdapter.ViewHolder> {
     private final LayoutInflater inflater;

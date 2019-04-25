@@ -30,13 +30,9 @@ import android.provider.Telephony;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import androidx.annotation.NonNull;
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.AppsActivity;
-import com.bald.uriah.baldphone.activities.AssistantActivity;
-import com.bald.uriah.baldphone.activities.DialerActivity;
-import com.bald.uriah.baldphone.activities.HomeScreen;
-import com.bald.uriah.baldphone.activities.RecentActivity;
+import com.bald.uriah.baldphone.activities.*;
 import com.bald.uriah.baldphone.activities.alarms.AlarmsActivity;
 import com.bald.uriah.baldphone.activities.contacts.ContactsActivity;
 import com.bald.uriah.baldphone.activities.media.PhotosActivity;
@@ -49,15 +45,12 @@ import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.FirstPageAppIcon;
 
-import androidx.annotation.NonNull;
-
 public class HomePage1 extends HomeView {
     public static final String TAG = HomePage1.class.getSimpleName();
     private final static String WHATSAPP_PACKAGE_NAME = "com.whatsapp";
     private View view;
     private FirstPageAppIcon bt_clock, bt_camera, bt_videos, bt_assistant, bt_messages, bt_photos, bt_contacts, bt_dialer, bt_whatsapp, bt_apps, bt_reminders, bt_recent;
     private PackageManager packageManager;
-
 
     public HomePage1(@NonNull HomeScreen homeScreen) {
         super(homeScreen);
@@ -107,14 +100,14 @@ public class HomePage1 extends HomeView {
     private void genOnClickListeners() {
         final SharedPreferences sharedPreferences = BPrefs.get(homeScreen);
         final App app;
-        if (sharedPreferences.contains(BPrefs.CUSTOM_APP_KEY)){
-            app = AppsDatabase.getInstance(homeScreen).appsDatabaseDao().findByFlattenComponentName(sharedPreferences.getString(BPrefs.CUSTOM_APP_KEY,null));
+        if (sharedPreferences.contains(BPrefs.CUSTOM_APP_KEY)) {
+            app = AppsDatabase.getInstance(homeScreen).appsDatabaseDao().findByFlattenComponentName(sharedPreferences.getString(BPrefs.CUSTOM_APP_KEY, null));
             if (app == null)
                 sharedPreferences.edit().remove(BPrefs.CUSTOM_APP_KEY).apply();
         } else {
             app = null;
         }
-        if (app == null){
+        if (app == null) {
             if (S.isPackageInstalled(homeScreen, WHATSAPP_PACKAGE_NAME))
                 bt_whatsapp.setOnClickListener(v -> homeScreen.startActivity(
                         new Intent(Intent.ACTION_MAIN)
@@ -132,14 +125,8 @@ public class HomePage1 extends HomeView {
         } else {
             bt_whatsapp.setText(app.getLabel());
             bt_whatsapp.setImageBitmap(S.byteArrayToBitmap(app.getIcon()));
-            bt_whatsapp.setOnClickListener(v->S.startComponentName(homeScreen,ComponentName.unflattenFromString(app.getFlattenComponentName())));
+            bt_whatsapp.setOnClickListener(v -> S.startComponentName(homeScreen, ComponentName.unflattenFromString(app.getFlattenComponentName())));
         }
-
-
-
-
-
-
 
         bt_apps.setOnClickListener(v -> {
             if (!homeScreen.finishedUpdatingApps)

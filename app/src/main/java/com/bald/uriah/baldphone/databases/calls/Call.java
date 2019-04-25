@@ -25,10 +25,8 @@ import android.net.Uri;
 import android.provider.CallLog;
 import android.provider.ContactsContract;
 import android.util.Log;
-
-import com.bald.uriah.baldphone.databases.contacts.MiniContact;
-
 import androidx.annotation.Nullable;
+import com.bald.uriah.baldphone.databases.contacts.MiniContact;
 
 public class Call {
     static final String[] PROJECTION = new String[]{

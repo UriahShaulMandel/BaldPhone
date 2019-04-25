@@ -31,7 +31,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
@@ -39,11 +42,6 @@ import com.duolingo.open.rtlviewpager.RtlViewPager;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.Locale;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
 public class ViewPagerHolder extends LinearLayout {
     private static final int HEIGHT = 60;//in dp
@@ -109,7 +107,6 @@ public class ViewPagerHolder extends LinearLayout {
         this.itemType = itemType;
     }
 
-
     @SuppressLint("ClickableViewAccessibility")
     private void setup() {
         final LayoutInflater layoutInflater = LayoutInflater.from(context);
@@ -135,7 +132,6 @@ public class ViewPagerHolder extends LinearLayout {
 
         }
 
-
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -154,7 +150,6 @@ public class ViewPagerHolder extends LinearLayout {
         if (!noArrows)
             addView(arrowHolder, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, HEIGHT, context.getResources().getDisplayMetrics())));
 
-
         if (useCircle) {
             circles = layoutInflater.inflate(R.layout.circles, this, false);
             ((TabLayout) circles.findViewById(R.id.tab)).setupWithViewPager(viewPager);
@@ -164,9 +159,7 @@ public class ViewPagerHolder extends LinearLayout {
         }
         addView(useCircle ? circles : page_of_);
 
-
     }
-
 
     private void pageChangeHandler(int position) {
         final PagerAdapter pagerAdapter = viewPager.getAdapter();

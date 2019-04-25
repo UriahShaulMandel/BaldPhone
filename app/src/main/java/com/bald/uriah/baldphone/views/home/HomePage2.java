@@ -40,7 +40,10 @@ import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.HomeScreen;
 import com.bald.uriah.baldphone.activities.SettingsActivity;
@@ -53,12 +56,6 @@ import com.bumptech.glide.Glide;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.List;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 
 public class HomePage2 extends HomeView {
     public static final String TAG = HomePage2.class.getSimpleName();
@@ -73,6 +70,19 @@ public class HomePage2 extends HomeView {
         super(homeScreen);
     }
 
+    public static void applyDim(@NonNull ViewGroup parent) {
+        Drawable dim = new ColorDrawable(Color.BLACK);
+        dim.setBounds(0, 0, parent.getWidth(), parent.getHeight());
+        dim.setAlpha((int) (255 * DIM_AMOUNT));
+
+        ViewGroupOverlay overlay = parent.getOverlay();
+        overlay.add(dim);
+    }
+
+    public static void clearDim(@NonNull ViewGroup parent) {
+        ViewGroupOverlay overlay = parent.getOverlay();
+        overlay.clear();
+    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container) {
@@ -107,7 +117,6 @@ public class HomePage2 extends HomeView {
 
     }
 
-
     private void clickListenerForAbstractOpener(@NonNull final Uri uri, @NonNull final View bt, @NonNull final ImageView iv, @NonNull final TextView tv) {
         final Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
         @Nullable final ComponentName browserComponentName = browserIntent.resolveActivity(packageManager);
@@ -119,7 +128,7 @@ public class HomePage2 extends HomeView {
                 bt.setOnClickListener(v -> {
                     final RelativeLayout dropDownContainer = (RelativeLayout) LayoutInflater.from(getContext()).inflate(R.layout.drop_down_recycler_view, null, false);
                     final RecyclerView recyclerView = dropDownContainer.findViewById(R.id.recycler_view);
-                    recyclerView.setLayoutManager(new LinearLayoutManager(getContext()){
+                    recyclerView.setLayoutManager(new LinearLayoutManager(getContext()) {
                         @Override
                         public boolean canScrollVertically() {
                             return false;
@@ -136,7 +145,6 @@ public class HomePage2 extends HomeView {
                                 context.startActivity(packageManager.getLaunchIntentForPackage(resolveInfo.activityInfo.applicationInfo.packageName));
                                 popupWindow.dismiss();
                             }));
-
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
                         popupWindow.setOverlapAnchor(true);
@@ -169,7 +177,6 @@ public class HomePage2 extends HomeView {
     private void showErrorMessage(View v) {
         BaldToast.from(v.getContext()).setType(BaldToast.TYPE_ERROR).setText(R.string.no_app_was_found).show();
     }
-
 
     static class DropDownRecyclerViewAdapter extends RecyclerView.Adapter<DropDownRecyclerViewAdapter.ViewHolder> {
         private final LayoutInflater layoutInflater;
@@ -227,20 +234,5 @@ public class HomePage2 extends HomeView {
             }
         }
 
-    }
-
-
-    public static void applyDim(@NonNull ViewGroup parent) {
-        Drawable dim = new ColorDrawable(Color.BLACK);
-        dim.setBounds(0, 0, parent.getWidth(), parent.getHeight());
-        dim.setAlpha((int) (255 * DIM_AMOUNT));
-
-        ViewGroupOverlay overlay = parent.getOverlay();
-        overlay.add(dim);
-    }
-
-    public static void clearDim(@NonNull ViewGroup parent) {
-        ViewGroupOverlay overlay = parent.getOverlay();
-        overlay.clear();
     }
 }

@@ -19,12 +19,12 @@
   -->
 
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/empty_view"
-    style="@style/BackgroundText.Large"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:visibility="invisible"
-    android:elevation="5dp"
-    android:translationZ="5dp"
-    />
+          android:id="@+id/empty_view"
+          style="@style/BackgroundText.Large"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:visibility="invisible"
+          android:elevation="5dp"
+          android:translationZ="5dp"
+        />

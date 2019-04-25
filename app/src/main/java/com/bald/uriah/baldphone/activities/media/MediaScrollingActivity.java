@@ -30,16 +30,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
-import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.BaldActivity;
-import com.bald.uriah.baldphone.views.BaldTitleBar;
-import com.bald.uriah.baldphone.views.ModularRecyclerView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.activities.BaldActivity;
+import com.bald.uriah.baldphone.views.BaldTitleBar;
+import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 import static com.bald.uriah.baldphone.activities.media.SingleMediaActivity.SHOULD_REFRESH;
 
@@ -58,7 +56,6 @@ public abstract class MediaScrollingActivity extends BaldActivity {
     protected MediaRecyclerViewAdapter adapter;
     protected int width;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,7 +72,6 @@ public abstract class MediaScrollingActivity extends BaldActivity {
         recyclerView = findViewById(R.id.child);
 
         baldTitleBar.setTitle(title());
-
 
         final Point point = new Point();
         getWindowManager().getDefaultDisplay().getSize(point);
@@ -154,7 +150,6 @@ public abstract class MediaScrollingActivity extends BaldActivity {
                 pic.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
             }
-
 
             @Override
             public void onClick(View v) {

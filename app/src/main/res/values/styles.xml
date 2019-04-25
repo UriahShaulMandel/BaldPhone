@@ -33,7 +33,8 @@
         <item name="colorAccent">#fff</item>
     </style>
 
-    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen.Transparent" parent="Theme.AppCompat.Light.NoActionBar.FullScreen">
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen.Transparent"
+           parent="Theme.AppCompat.Light.NoActionBar.FullScreen">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowContentOverlay">@null</item>

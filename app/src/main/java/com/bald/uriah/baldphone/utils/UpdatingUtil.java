@@ -24,7 +24,10 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
-
+import androidx.annotation.NonNull;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.OnLifecycleEvent;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
@@ -35,11 +38,6 @@ import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.UpdatesActivity;
 
 import java.io.File;
-
-import androidx.annotation.NonNull;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 
 /**
  * On Different class than {@link UpdatesActivity} because may be exported to library in the future
@@ -65,7 +63,6 @@ public class UpdatingUtil {
         downloads.mkdir();
         return new File(downloads.getAbsoluteFile() + "/" + FILENAME);
     }
-
 
     public static boolean isMessageOk(String message) {
         if (message == null || message.length() == 0 || !message.contains(divider))
@@ -163,6 +160,4 @@ public class UpdatingUtil {
                 ).setTag(VOLLEY_TAG));
         lifecycle.addObserver(observer);
     }
-
-
 }

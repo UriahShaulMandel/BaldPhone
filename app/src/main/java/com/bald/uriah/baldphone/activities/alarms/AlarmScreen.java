@@ -37,7 +37,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
@@ -47,8 +47,6 @@ import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
-
-import androidx.annotation.Nullable;
 
 /**
  * Alarm screen, will be called from {@link com.bald.uriah.baldphone.broadcast_receivers.AlarmReceiver}
@@ -97,7 +95,6 @@ public class AlarmScreen extends BaldActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         S.logImportant("alarmScreen was called!");
         final Window window = getWindow();
 
@@ -108,12 +105,10 @@ public class AlarmScreen extends BaldActivity {
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
                 | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
 
-
         setContentView(R.layout.alarm_screen);
 
         attachXml();
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);//can be always
-
 
         final Intent intent = getIntent();
         if (intent == null) throw new AssertionError();
@@ -232,7 +227,6 @@ public class AlarmScreen extends BaldActivity {
             }
         });
         view.startAnimation(enlarge);
-
 
     }
 

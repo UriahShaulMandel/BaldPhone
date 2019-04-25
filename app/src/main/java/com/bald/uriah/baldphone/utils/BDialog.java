@@ -19,22 +19,19 @@
 
 package com.bald.uriah.baldphone.utils;
 
-
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.TypedValue;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
+import android.view.*;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
+import androidx.annotation.IntDef;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.views.BaldButton;
 import com.bald.uriah.baldphone.views.BaldImageButton;
@@ -43,48 +40,29 @@ import com.bald.uriah.baldphone.views.BaldMultipleSelection;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import androidx.annotation.IntDef;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-import static com.bald.uriah.baldphone.utils.BDialog.DialogState.INPUT_OK_CANCEL;
-import static com.bald.uriah.baldphone.utils.BDialog.DialogState.OK;
-import static com.bald.uriah.baldphone.utils.BDialog.DialogState.OK_CANCEL;
-import static com.bald.uriah.baldphone.utils.BDialog.DialogState.OK_NO;
-import static com.bald.uriah.baldphone.utils.BDialog.DialogState.OPTION_OPTION_OK_CANCEL;
-import static com.bald.uriah.baldphone.utils.BDialog.DialogState.YES_CANCEL;
-import static com.bald.uriah.baldphone.utils.BDialog.DialogState.YES_NO;
+import static com.bald.uriah.baldphone.utils.BDialog.DialogState.*;
 
 public class BDialog extends Dialog {
-
-    public interface StartingIndexChooser {
-        int chooseStartingIndex();
-    }
-
 
     public static final float DIM_LEVEL = 0.9f;
     private static final String TAG = BDialog.class.getSimpleName();
     private final Context context;
     private final CharSequence title;
     private final CharSequence subText;
-    private final CharSequence options[];
+    private final CharSequence[] options;
     private final StartingIndexChooser startingIndexChooser;
     private final int dialogState;
     private final DialogBoxListener positive, negative, cancel;
     private final boolean cancelable;
     private final int inputType;
-
     @Nullable
     private final View extraView;
-
-
     //Views
     private EditText editText;
     private TextView tv_title, tv_subtext;
     private BaldButton bt_positive, bt_negative;
     private BaldImageButton bt_cancel;
     private ViewGroup container, ll;
-
     private BDialog(@NonNull Context context,
                     @DialogState int dialogState,
                     @NonNull CharSequence title,
@@ -228,7 +206,6 @@ public class BDialog extends Dialog {
                 });
                 bt_negative.setText(R.string.cancel);
 
-
                 break;
             case INPUT_OK_CANCEL:
                 editText = ll.findViewById(R.id.edit_text);
@@ -310,6 +287,9 @@ public class BDialog extends Dialog {
         }
     }
 
+    public interface StartingIndexChooser {
+        int chooseStartingIndex();
+    }
 
     public interface DialogBoxListener {
         DialogBoxListener EMPTY = params -> true;

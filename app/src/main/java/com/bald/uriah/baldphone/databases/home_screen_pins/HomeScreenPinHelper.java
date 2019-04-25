@@ -24,16 +24,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.provider.ContactsContract;
-
 import com.bald.uriah.baldphone.databases.apps.AppsDatabase;
 import com.bald.uriah.baldphone.databases.contacts.MiniContact;
 import com.bald.uriah.baldphone.views.HomeScreenAppView;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class HomeScreenPinHelper {
     public static final String SHARED_PREFS_KEY = PinnedContactPreferences.KEY;

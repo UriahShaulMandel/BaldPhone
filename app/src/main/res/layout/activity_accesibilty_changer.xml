@@ -19,28 +19,28 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?bald_background">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="?bald_background">
 
     <com.bald.uriah.baldphone.views.BaldTitleBar
-        android:id="@+id/bald_title_bar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/accessibility_settings" />
+            android:id="@+id/bald_title_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/accessibility_settings"/>
 
     <fragment
-        class="com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bald_title_bar"
-        android:id="@+id/fragment" />
+            class="com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bald_title_bar"
+            android:id="@+id/fragment"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

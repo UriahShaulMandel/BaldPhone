@@ -21,7 +21,6 @@ package com.bald.uriah.baldphone.keyboard;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-
 import com.bald.uriah.baldphone.R;
 
 @SuppressLint("ViewConstructor")

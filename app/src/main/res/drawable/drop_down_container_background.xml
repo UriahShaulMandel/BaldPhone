@@ -18,16 +18,17 @@
   ~ under the License.
   -->
 
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
     <corners
-        android:radius="10dp"
-        />
+            android:radius="10dp"
+            />
 
     <solid android:color="?attr/bald_button"/>
 
 
     <stroke
-        android:width="2dp"
-        android:color="?attr/bald_stroke_color"
-        />
+            android:width="2dp"
+            android:color="?attr/bald_stroke_color"
+            />
 </shape>

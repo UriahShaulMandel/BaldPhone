@@ -21,67 +21,40 @@ package com.bald.uriah.baldphone.activities;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.content.BroadcastReceiver;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
+import android.content.*;
 import android.content.pm.PackageManager;
 import android.graphics.Point;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
-import android.os.AsyncTask;
-import android.os.BatteryManager;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.PersistableBundle;
+import android.os.*;
 import android.speech.RecognizerIntent;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-
-import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.adapters.BaldPagerAdapter;
-import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
-import com.bald.uriah.baldphone.services.NotificationListenerService;
-import com.bald.uriah.baldphone.utils.BDB;
-import com.bald.uriah.baldphone.utils.BDialog;
-import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.BaldHomeWatcher;
-import com.bald.uriah.baldphone.utils.BaldPrefsUtils;
-import com.bald.uriah.baldphone.utils.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
-import com.bald.uriah.baldphone.utils.PageTransformers;
-import com.bald.uriah.baldphone.utils.S;
-import com.bald.uriah.baldphone.utils.Toggeler;
-import com.bald.uriah.baldphone.utils.UpdatingUtil;
-import com.bald.uriah.baldphone.views.BaldImageButton;
-import com.bald.uriah.baldphone.views.BatteryView;
-import com.bald.uriah.baldphone.views.ViewPagerHolder;
-import com.bald.uriah.baldphone.views.home.NotesView;
-
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.List;
-
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.adapters.BaldPagerAdapter;
+import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
+import com.bald.uriah.baldphone.services.NotificationListenerService;
+import com.bald.uriah.baldphone.utils.*;
+import com.bald.uriah.baldphone.views.BaldImageButton;
+import com.bald.uriah.baldphone.views.BatteryView;
+import com.bald.uriah.baldphone.views.ViewPagerHolder;
+import com.bald.uriah.baldphone.views.home.NotesView;
 import github.nisrulz.lantern.Lantern;
 
-import static com.bald.uriah.baldphone.services.NotificationListenerService.ACTION_REGISTER_ACTIVITY;
-import static com.bald.uriah.baldphone.services.NotificationListenerService.ACTIVITY_NONE;
-import static com.bald.uriah.baldphone.services.NotificationListenerService.KEY_EXTRA_ACTIVITY;
-import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_ALOT;
-import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_HOME_SCREEN;
-import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_NONE;
-import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_SOME;
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.bald.uriah.baldphone.services.NotificationListenerService.*;
 
 public class HomeScreen extends BaldActivity {
     private static final String TAG = HomeScreen.class.getSimpleName();
@@ -186,7 +159,6 @@ public class HomeScreen extends BaldActivity {
         startService(new Intent(this, NotificationListenerService.class));
         new UpdateApps(this).execute(this.getApplicationContext());
 
-
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         final Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
         screenSize = new Point();
@@ -196,11 +168,9 @@ public class HomeScreen extends BaldActivity {
         lantern = new Lantern(this)
                 .observeLifecycle(this);
 
-
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
             flashInited = lantern.initTorch();
         }
-
 
         sosButton.setOnClickListener((v) -> {
             startActivity(new Intent(this, SOSActivity.class));
@@ -247,7 +217,7 @@ public class HomeScreen extends BaldActivity {
                 S.shareBaldPhone(this);
             } else if (percent > 95) {
                 if (sharedPreferences.getLong(BPrefs.LAST_UPDATE_ASKED_VERSION_KEY, 0) + 2 * D.DAY < System.currentTimeMillis()) {
-                    UpdatingUtil.checkForUpdates(this,false);
+                    UpdatingUtil.checkForUpdates(this, false);
                 }
             }
     }

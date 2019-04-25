@@ -19,21 +19,23 @@
   -->
 
 <com.bald.uriah.baldphone.views.BaldFrameLayoutButton xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="80dp"
-    android:background="@drawable/style_for_buttons_rectangle">
+                                                      android:layout_width="match_parent"
+                                                      android:layout_height="80dp"
+                                                      android:background="@drawable/style_for_buttons_rectangle">
+
     <ImageView
-        android:id="@+id/setting_icon"
-        android:layout_width="80dp"
-        android:layout_height="match_parent"
-        android:padding="15dp" />
+            android:id="@+id/setting_icon"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:padding="15dp"/>
+
     <TextView
-        android:id="@+id/tv_setting_name"
-        style="@style/ButtonsText.Medium"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical"
-        android:paddingEnd="15dp"
-        android:paddingStart="15dp"
-        android:layout_marginStart="80dp" />
+            android:id="@+id/tv_setting_name"
+            style="@style/ButtonsText.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:layout_marginStart="80dp"/>
 </com.bald.uriah.baldphone.views.BaldFrameLayoutButton>

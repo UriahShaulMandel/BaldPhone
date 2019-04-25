@@ -36,18 +36,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.services.NotificationListenerService;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldPictureTextButton;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
-
-import androidx.annotation.ColorInt;
-import androidx.annotation.NonNull;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * using RecyclerView because of constant change of notification and NOT because of long scrolling list (most probably wont happen to elderly.)
@@ -95,7 +93,6 @@ public class NotificationRecyclerViewAdapter extends ModularRecyclerView.Modular
     public int getItemCount() {
         return bundles.length;
     }
-
 
     public void clearAll() {
         LocalBroadcastManager localBroadcastManager = LocalBroadcastManager.getInstance(context);

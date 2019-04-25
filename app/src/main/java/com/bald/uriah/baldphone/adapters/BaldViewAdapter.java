@@ -21,7 +21,6 @@ package com.bald.uriah.baldphone.adapters;
 
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 

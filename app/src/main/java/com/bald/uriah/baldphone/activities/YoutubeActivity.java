@@ -26,11 +26,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.Space;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
@@ -41,7 +39,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
-public class YoutubeActivity extends BaldActivity{
+public class YoutubeActivity extends BaldActivity {
     public static final String EXTRA_ID = "EXTRA_ID";
     private static final float VERTICAL_BIAS_AFTER = 0.8f;
     private static final float VERTICAL_BIAS_BEFORE = 1f;
@@ -95,7 +93,6 @@ public class YoutubeActivity extends BaldActivity{
             bts[i].setText(otherTexts[currRelated]);
         }
 
-
         final YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_fragment);
         getLifecycle().addObserver(youTubePlayerView);
         youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -138,7 +135,6 @@ public class YoutubeActivity extends BaldActivity{
                 }
             }
         });
-
 
     }
 

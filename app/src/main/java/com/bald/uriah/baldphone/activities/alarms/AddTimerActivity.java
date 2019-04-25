@@ -25,16 +25,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
 import androidx.annotation.Nullable;
-
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
 import com.bald.uriah.baldphone.utils.D;
-
 import org.joda.time.DateTime;
 
 /**
@@ -89,7 +86,6 @@ public class AddTimerActivity extends BaldActivity {
         finish();
 
     }
-
 
     private void genOnClickListeners() {
         bt_alarm_submit.setOnClickListener((v) -> submit());

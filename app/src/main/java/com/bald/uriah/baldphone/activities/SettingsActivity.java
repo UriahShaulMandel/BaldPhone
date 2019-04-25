@@ -39,29 +39,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.CheckBox;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.SeekBar;
-import android.widget.TextView;
-
+import android.widget.*;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.alarms.AlarmScreen;
 import com.bald.uriah.baldphone.activities.pills.PillTimeSetterActivity;
-import com.bald.uriah.baldphone.utils.BDB;
-import com.bald.uriah.baldphone.utils.BDialog;
-import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.BaldPrefsUtils;
-import com.bald.uriah.baldphone.utils.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
-import com.bald.uriah.baldphone.utils.S;
-import com.bald.uriah.baldphone.utils.UpdatingUtil;
+import com.bald.uriah.baldphone.utils.*;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 import com.bumptech.glide.Glide;
@@ -167,7 +154,6 @@ public class SettingsActivity extends BaldActivity {
                         , R.drawable.home_on_button)
         );
 
-
         mainSettingsItemList.add(new RunnableSettingsItem(R.string.advanced_options, v -> {
             try {
                 startActivity(new Intent(android.provider.Settings.ACTION_SETTINGS));
@@ -178,7 +164,6 @@ public class SettingsActivity extends BaldActivity {
 
             }
         }, R.drawable.settings_on_button));
-
 
         final SettingsItem keyboard = new RunnableSettingsItem(R.string.set_keyboard, v -> startActivity(new Intent(this, KeyboardChangerActivity.class)), R.drawable.keyboard_on_button);
         accessibilitySettingsList.add(keyboard);
@@ -255,7 +240,6 @@ public class SettingsActivity extends BaldActivity {
                             return true;
                         })
                         .setOptionsStartingIndex(() -> sharedPreferences.getInt(BPrefs.THEME_KEY, BPrefs.THEME_DEFAULT_VALUE)), R.drawable.brush_on_button
-
 
         );
         displaySettingsList.add(themeSettingsItem);
@@ -345,7 +329,7 @@ public class SettingsActivity extends BaldActivity {
         LayoutInflater.from(this).inflate(R.layout.credits_button, linearLayout, true);
         LayoutInflater.from(this).inflate(R.layout.open_source_licenses_button, linearLayout, true);
         linearLayout.findViewById(R.id.credits_button).setOnClickListener(v -> startActivity(new Intent(this, CreditsActivity.class)));
-        linearLayout.findViewById(R.id.open_source_licenses_button).setOnClickListener(v -> startActivity(new Intent(ACTION_VIEW,Uri.parse("https://sites.google.com/view/baldphone-open-source-licenses/home"))));
+        linearLayout.findViewById(R.id.open_source_licenses_button).setOnClickListener(v -> startActivity(new Intent(ACTION_VIEW, Uri.parse("https://sites.google.com/view/baldphone-open-source-licenses/home"))));
         final ImageView pic = new ImageView(this);
         linearLayout.addView(pic);
         Glide.with(pic).load(R.drawable.me).into(pic);
@@ -395,7 +379,6 @@ public class SettingsActivity extends BaldActivity {
                         v -> UpdatingUtil.checkForUpdates(this, true),
                         R.drawable.updates_on_button)
         );
-
     }
 
     @Override
@@ -470,10 +453,8 @@ public class SettingsActivity extends BaldActivity {
                         .setPositiveButtonListener(params -> true)
                         .setExtraView(volumeSeekBar), R.drawable.clock_on_background
 
-
         );
         personalizationSettingsList.add(alarmVolumeSettingsItem);
-
 
     }
 
@@ -536,8 +517,6 @@ public class SettingsActivity extends BaldActivity {
                         .setSubText(R.string.brightness_subtext)
                         .setPositiveButtonListener(params -> true)
                         .setExtraView(brightnessSeekBarHolder), R.drawable.brightness_on_button
-
-
         );
         displaySettingsList.add(brightnessSettingsItem);
     }
@@ -548,8 +527,6 @@ public class SettingsActivity extends BaldActivity {
         if (requestCode == REQUEST_SELECT_CUSTOM_APP && resultCode == RESULT_OK && data != null && data.getComponent() != null) {
             editor.putString(BPrefs.CUSTOM_APP_KEY, data.getComponent().flattenToString()).apply();
         }
-
-
     }
 
     @Override
@@ -564,7 +541,6 @@ public class SettingsActivity extends BaldActivity {
         this.section = savedInstanceState.getInt(SAVEABLE_HISTORY_KEY);
         if (section != -1)
             settingsList.get(section).onClick(null);
-
     }
 
     @Override
@@ -602,7 +578,6 @@ public class SettingsActivity extends BaldActivity {
         public int getItemCount() {
             return settingsList.size();
         }
-
 
         public class ViewHolder extends RecyclerView.ViewHolder {
             TextView textView;

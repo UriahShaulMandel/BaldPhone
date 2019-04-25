@@ -34,33 +34,21 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.PopupWindow;
-
 import androidx.annotation.Nullable;
 import androidx.annotation.StyleRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.BDB;
-import com.bald.uriah.baldphone.utils.BDialog;
-import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.D;
-import com.bald.uriah.baldphone.utils.S;
+import com.bald.uriah.baldphone.utils.*;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.Manifest.permission.CALL_PHONE;
-import static android.Manifest.permission.CAMERA;
-import static android.Manifest.permission.READ_CALL_LOG;
-import static android.Manifest.permission.READ_CONTACTS;
-import static android.Manifest.permission.WRITE_CONTACTS;
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.Manifest.permission.*;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static com.bald.uriah.baldphone.activities.PermissionActivity.EXTRA_INTENT;
-
 
 /**
  * the parent of all of the activitys in this app.
@@ -83,7 +71,7 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     @StyleRes
     private int themeIndex;
     private List<WeakReference<Dialog>> dialogsToClose = new ArrayList<>(1);
-    private List<WeakReference<PopupWindow>> popupwindowsToClose = new ArrayList<>(1);
+    private List<WeakReference<PopupWindow>> popupWindowsToClose = new ArrayList<>(1);
     private SensorManager sensorManager;
     private Sensor proximitySensor;
     private boolean near;
@@ -137,9 +125,7 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
                 return false;
         }
         if ((requiredPermissions & PERMISSION_REQUEST_INSTALL_PACKAGES) != 0) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && !activity.getPackageManager().canRequestPackageInstalls()) {
-                return false;
-            }
+            return Build.VERSION.SDK_INT < Build.VERSION_CODES.O || activity.getPackageManager().canRequestPackageInstalls();
         }
         return true;
     }
@@ -216,7 +202,7 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
                 dialog.dismiss();
         }
 
-        for (WeakReference<PopupWindow> windowWeakReference : popupwindowsToClose) {
+        for (WeakReference<PopupWindow> windowWeakReference : popupWindowsToClose) {
             final PopupWindow window = windowWeakReference.get();
             if (window != null)
                 window.dismiss();
@@ -239,7 +225,7 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     }
 
     public void autoDismiss(PopupWindow popupWindow) {
-        popupwindowsToClose.add(new WeakReference<>(popupWindow));
+        popupWindowsToClose.add(new WeakReference<>(popupWindow));
     }
 
     @Override

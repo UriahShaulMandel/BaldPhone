@@ -31,7 +31,10 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
@@ -46,17 +49,11 @@ import com.bald.uriah.baldphone.views.ModularRecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 public class PillsActivity extends BaldActivity {
     private static final int ADD_REMINDER_REQUEST_CODE = 6699;
     private List<Reminder> list = new ArrayList<>();
     private RecyclerView recyclerView;
     private View bt_add, bt_time_changer;
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -65,7 +62,6 @@ public class PillsActivity extends BaldActivity {
 
         attachXml();
         genOnClickListeners();
-
 
         final WindowManager windowManager = getWindowManager();
         final Point point = new Point();
@@ -82,7 +78,6 @@ public class PillsActivity extends BaldActivity {
                         r.getDimensionPixelSize(R.dimen.padding_dividers)));
 
         recyclerView.setAdapter(new PillsRecyclerViewAdapter());
-
 
     }
 
@@ -104,7 +99,6 @@ public class PillsActivity extends BaldActivity {
         bt_time_changer.setOnClickListener(v -> startActivity(new Intent(this, PillTimeSetterActivity.class)));
     }
 
-
     private void cancelAllAlarms() {
         final RemindersDatabase remindersDatabase = RemindersDatabase.getInstance(this);
         final List<Reminder> reminderList =
@@ -117,7 +111,6 @@ public class PillsActivity extends BaldActivity {
         refreshViews();
         BaldToast.from(this).setText(R.string.removed_all_alarms).show();
     }
-
 
     public void refreshViews() {
         list = RemindersDatabase.getInstance(this).remindersDatabaseDao().getAllRemindersOrderedByTime();

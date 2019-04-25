@@ -19,21 +19,22 @@
   -->
 
 <FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="80dp"
-    android:paddingStart="25dp"
-    android:paddingEnd="25dp"
-    android:paddingTop="15dp"
-    android:paddingBottom="15dp">
-    <com.bald.uriah.baldphone.views.BaldButton
-        android:id="@+id/tv_letter"
-        style="@style/ButtonsText.Medium"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_gravity="bottom"
-        android:background="@drawable/style_for_buttons"
-        android:gravity="center"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp" />
+        android:layout_height="80dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+    <com.bald.uriah.baldphone.views.BaldButton
+            android:id="@+id/tv_letter"
+            style="@style/ButtonsText.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/style_for_buttons"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
 </FrameLayout>

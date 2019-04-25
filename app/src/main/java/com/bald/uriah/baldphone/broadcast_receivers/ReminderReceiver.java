@@ -23,7 +23,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-
 import com.bald.uriah.baldphone.activities.pills.PillScreen;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
 import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;

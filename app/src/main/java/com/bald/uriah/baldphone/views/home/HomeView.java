@@ -24,10 +24,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-
-import com.bald.uriah.baldphone.activities.HomeScreen;
-
 import androidx.annotation.NonNull;
+import com.bald.uriah.baldphone.activities.HomeScreen;
 
 public abstract class HomeView extends FrameLayout {
     @NonNull
@@ -39,8 +37,6 @@ public abstract class HomeView extends FrameLayout {
         addView(onCreateView(LayoutInflater.from(homeScreen), this), new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
     }
 
-
     public abstract View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup);
-
 
 }

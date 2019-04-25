@@ -27,26 +27,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import androidx.annotation.NonNull;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-import androidx.annotation.NonNull;
-
 public class IntentAdapter extends ModularRecyclerView.ModularAdapter<IntentAdapter.ViewHolder> {
-    public interface ResolveInfoConsumer{
-        void consume(final ResolveInfo resolveInfo, final Context context);
-    }
-
     private final LayoutInflater layoutInflater;
     private final List<ResolveInfo> resolveInfoList;
     private final PackageManager packageManager;
     private final ResolveInfoConsumer resolveInfoConsumer;
     private final Context context;
-
     public IntentAdapter(final Context context, final List<ResolveInfo> resolveInfoList, final ResolveInfoConsumer resolveInfoConsumer) {
         this.layoutInflater = LayoutInflater.from(context);
         this.packageManager = context.getPackageManager();
@@ -71,6 +64,10 @@ public class IntentAdapter extends ModularRecyclerView.ModularAdapter<IntentAdap
         return resolveInfoList.size();
     }
 
+    public interface ResolveInfoConsumer {
+        void consume(final ResolveInfo resolveInfo, final Context context);
+    }
+
     class ViewHolder extends ModularRecyclerView.ViewHolder implements View.OnClickListener {
         final ImageView settings_icon;
         final TextView tv_settings_name;
@@ -92,7 +89,7 @@ public class IntentAdapter extends ModularRecyclerView.ModularAdapter<IntentAdap
 
         @Override
         public void onClick(final View v) {
-            resolveInfoConsumer.consume(resolveInfoList.get(getAdapterPosition()),context);
+            resolveInfoConsumer.consume(resolveInfoList.get(getAdapterPosition()), context);
         }
     }
 }

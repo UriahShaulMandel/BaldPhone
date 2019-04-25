@@ -21,11 +21,9 @@ package com.bald.uriah.baldphone.activities;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.adapters.HelpRecyclerViewAdapter;
 import com.bald.uriah.baldphone.utils.S;
@@ -53,6 +51,5 @@ public class VideoTutorialsActivity extends BaldActivity {
     protected int requiredPermissions() {
         return PERMISSION_NONE;
     }
-
 
 }

@@ -24,19 +24,16 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-
+import androidx.annotation.NonNull;
 import com.bald.uriah.baldphone.activities.HomeScreen;
 import com.bald.uriah.baldphone.broadcast_receivers.ReminderReceiver;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
-
 import org.joda.time.DateTime;
 import org.joda.time.MutableDateTime;
 
 import java.util.List;
-
-import androidx.annotation.NonNull;
 
 /**
  *
@@ -65,7 +62,6 @@ public class ReminderScheduler {
           monday =2
           baldDay = 1<<israeliDay...
      */
-
 
     // JodaDay -
     /*
@@ -96,7 +92,6 @@ public class ReminderScheduler {
         return day;
     }
 
-
     private static long nextTimeReminderWillWorkInMs(@NonNull Reminder reminder, Context context) {
         final MutableDateTime mDateTime = MutableDateTime.now();
 
@@ -104,11 +99,9 @@ public class ReminderScheduler {
             mDateTime.setMillisOfSecond(0);
             mDateTime.setSecondOfMinute(0);
 
-
             mDateTime.setHourOfDay(BPrefs.getHour(reminder.getStartingTime(), context));
             mDateTime.setMinuteOfHour(BPrefs.getMinute(reminder.getStartingTime(), context));
         }
-
 
         final int baldDay = getBaldDay();
         final int days = reminder.getDays();
@@ -152,7 +145,6 @@ public class ReminderScheduler {
         return mDateTime.getMillis();
     }
 
-
     private static void _cancelReminder(int key, Context context) {
         ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).cancel(getIntent(context, key));
     }
@@ -171,13 +163,11 @@ public class ReminderScheduler {
         }
     }
 
-
     private static PendingIntent getIntent(Context context, int alarmKey) {
         Log.e(TAG, "getIntent: ");
         Intent intent = new Intent(context, ReminderReceiver.class).putExtra(Reminder.REMINDER_KEY_VIA_INTENTS, alarmKey);
         return PendingIntent.getBroadcast(context, alarmKey, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
-
 
     public static void scheduleSnooze(@NonNull Reminder alarm, Context context) throws IllegalArgumentException {
         synchronized (LOCK) {
@@ -191,7 +181,6 @@ public class ReminderScheduler {
             );
         }
     }
-
 
     public static void reStartReminders(final Context context) {
         S.logImportant("reStartReminders was called!");

@@ -36,12 +36,11 @@ import android.os.Build;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-
+import androidx.annotation.*;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.contacts.ShareActivity;
 import com.bald.uriah.baldphone.content_providers.BaldFileProvider;
-
 import org.joda.time.DateTime;
 
 import java.io.ByteArrayOutputStream;
@@ -50,12 +49,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
-
-import androidx.annotation.ArrayRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.annotation.StyleRes;
 
 /**
  * S - Static. Static methods which are used everywhere in the platform.
@@ -129,7 +122,6 @@ public class S {
         return list.size() > 0;
     }
 
-
     public static String numberToAlarmString(int hours, int minutes) {
         return String.format("%s:%s", hours < 10 ? "0" + hours : hours, minutes < 10 ? "0" + minutes : minutes);
     }
@@ -145,7 +137,6 @@ public class S {
     public static Bitmap byteArrayToBitmap(@NonNull byte[] image) {
         return BitmapFactory.decodeByteArray(image, 0, image.length);
     }
-
 
     @StyleRes
     public static int getTheme(@NonNull Context context) {
@@ -190,7 +181,6 @@ public class S {
             return new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(timeStamp);
         }
     }
-
 
     public static int[] intArrFromString(@NonNull String string) {
         final String[] splitted = string

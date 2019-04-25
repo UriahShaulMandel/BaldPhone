@@ -19,12 +19,7 @@
 
 package com.bald.uriah.baldphone.activities.contacts;
 
-import android.content.ContentProviderOperation;
-import android.content.ContentProviderResult;
-import android.content.ContentResolver;
-import android.content.ContentUris;
-import android.content.Context;
-import android.content.Intent;
+import android.content.*;
 import android.content.res.AssetFileDescriptor;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -35,7 +30,9 @@ import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.exifinterface.media.ExifInterface;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.HomeScreen;
@@ -53,10 +50,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.exifinterface.media.ExifInterface;
 
 /**
  * simple activity which can Add\Edit a simple contact.
@@ -169,7 +162,6 @@ public class AddContactActivity extends BaldActivity {
             }
         });
 
-
     }
 
     private void attachXml() {
@@ -254,7 +246,6 @@ public class AddContactActivity extends BaldActivity {
     public boolean update() {
         final int rawId = getRawContactId(getContentResolver(), String.valueOf(currentContact.getId()));
 
-
 //        final String DEFAULT_WHERE = ContactsContract.Data.CONTACT_ID + "= ?";
         final String DEFAULT_WHERE = ContactsContract.Data.CONTACT_ID + "= ?";
         final String[] args = {String.valueOf(currentContact.getId()), ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE};
@@ -275,7 +266,6 @@ public class AddContactActivity extends BaldActivity {
             );
         else
             return false;
-
 
         //Mobile number adder + remover
         final String mobilePhoneNumber = currentContact.getMobilePhone();
@@ -328,7 +318,6 @@ public class AddContactActivity extends BaldActivity {
                             .build()
             );
 
-
         //mail number adder + remover
         final String beforeMail = currentContact.getMail();
         if (beforeMail != null)
@@ -342,7 +331,6 @@ public class AddContactActivity extends BaldActivity {
                                             beforeMail})
                             .build());
 
-
         final String mail = String.valueOf(et_mail.getText());
         if (!mail.equals(""))
             operations.add(
@@ -354,7 +342,6 @@ public class AddContactActivity extends BaldActivity {
                             .withValue(ContactsContract.CommonDataKinds.Email.TYPE,
                                     ContactsContract.CommonDataKinds.Email.TYPE_MOBILE)
                             .build());
-
 
         //Addresses:
         final CharSequence beforeAddress = currentContact.getAddress();
@@ -371,7 +358,6 @@ public class AddContactActivity extends BaldActivity {
                                             ContactsContract.CommonDataKinds.StructuredPostal.CONTENT_ITEM_TYPE,
                                             beforeAddress.toString()})
                             .build());
-
 
         final String address = String.valueOf(et_address.getText());
         if (!address.equals(""))
@@ -399,7 +385,6 @@ public class AddContactActivity extends BaldActivity {
                             .build());
         }
 
-
         //apply operations
         try {
             ContentProviderResult[] results =
@@ -412,7 +397,6 @@ public class AddContactActivity extends BaldActivity {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
-
 
         if (newPhoto != null && !newPhoto.equals(beforeImage)) {
             try {
@@ -442,16 +426,13 @@ public class AddContactActivity extends BaldActivity {
                             .load(Uri.parse(newPhoto))
                             .into(new PhotoAdder(rawId, this, false));
 
-
             } catch (IOException e) {
                 Log.e(TAG, e.getMessage());
                 e.printStackTrace();
                 BaldToast.error(this);
             }
 
-
         }
-
 
         return true;
 
@@ -485,7 +466,6 @@ public class AddContactActivity extends BaldActivity {
             this.rawId = rawId;
             this.contentResolver = context.getApplicationContext().getContentResolver();
         }
-
 
         @Override
         public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {

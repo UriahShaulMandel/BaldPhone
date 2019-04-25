@@ -29,13 +29,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BDB;
 import com.bald.uriah.baldphone.utils.BDialog;
@@ -46,12 +44,7 @@ import com.bald.uriah.baldphone.views.ModularRecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.Manifest.permission.CALL_PHONE;
-import static android.Manifest.permission.CAMERA;
-import static android.Manifest.permission.READ_CALL_LOG;
-import static android.Manifest.permission.READ_CONTACTS;
-import static android.Manifest.permission.WRITE_CONTACTS;
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.Manifest.permission.*;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.provider.Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES;
 
@@ -90,7 +83,6 @@ public class PermissionActivity extends BaldActivity {
 
     }
 
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -119,7 +111,6 @@ public class PermissionActivity extends BaldActivity {
         if (permissionItemList.isEmpty()) {
             startActivity(ancestorCallingIntent == null ? new Intent(this, HomeScreen.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK) : ancestorCallingIntent);
             finish();
-            ;
             return;
         }
         recyclerView.getAdapter().notifyDataSetChanged();

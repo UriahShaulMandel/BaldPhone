@@ -23,17 +23,12 @@ import android.graphics.Point;
 import android.inputmethodservice.InputMethodService;
 import android.os.IBinder;
 import android.util.Log;
-import android.view.Display;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
+import android.view.*;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
-
 import com.bald.uriah.baldphone.utils.BaldPrefsUtils;
 
 import java.util.List;

@@ -29,11 +29,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.Log;
-
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.utils.S;
-
-
 import org.acra.ACRA;
 
 import java.util.ArrayList;
@@ -63,7 +60,6 @@ public class AppsDatabaseHelper {
         }
         return componentNames;
     }
-
 
     /**
      * Updates Apps Database - should never throw any exception
@@ -112,7 +108,6 @@ public class AppsDatabaseHelper {
             }
             appsDatabase.appsDatabaseDao().insertAll(appsToAdd);
         }
-
 
         if (dbAmountBefore > realAppsInDbCount) {
             final int howMuchToGo = dbAmountBefore - realAppsInDbCount;

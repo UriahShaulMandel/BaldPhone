@@ -29,12 +29,10 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
@@ -62,14 +60,12 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
     private AlarmsRecyclerViewAdapter adapter;
     private List<Alarm> alarmList = Collections.EMPTY_LIST;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.alarm_activity);
         attachXml();
         adapter = new AlarmsRecyclerViewAdapter(this);
-
 
         final WindowManager windowManager = getWindowManager();
         final Point point = new Point();
@@ -80,7 +76,6 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
         recyclerView.setLayoutManager(gridLayoutManager);
         Resources r = getResources();
         recyclerView.addItemDecoration(new BaldGridItemDecoration(r.getDimensionPixelSize(R.dimen.divider), numberOfAppsInARow, getDrawable(R.drawable.ll_divider), r.getDimensionPixelSize(R.dimen.padding_dividers)));
-
 
         recyclerView.setAdapter(adapter);
 
@@ -126,7 +121,6 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
                         new Intent(AlarmsActivity.this, AddTimerActivity.class), ADD_ALARM_ACTIVITY_REQUEST_CODE)
         );
     }
-
 
     private void cancelAllAlarms() {
         final AlarmsDatabase alarmsDatabase = AlarmsDatabase.getInstance(this);
@@ -250,7 +244,6 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
                         AlarmScheduler.cancelAlarm(alarm.getKey(), AlarmsActivity.this);
 
                     }
-
 
                 });
 

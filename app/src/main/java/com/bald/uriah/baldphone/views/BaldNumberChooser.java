@@ -27,15 +27,13 @@ import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
 
 import java.util.Objects;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public class BaldNumberChooser extends FrameLayout {
     private static final String TAG = BaldNumberChooser.class.getSimpleName();
@@ -44,7 +42,6 @@ public class BaldNumberChooser extends FrameLayout {
     private int max, min, jumps, number;
     private Vibrator vibrator;
     private OnClickListener onClickListener;
-
 
     public BaldNumberChooser(@NonNull Context context) {
         super(context);
@@ -75,7 +72,6 @@ public class BaldNumberChooser extends FrameLayout {
 
         if (max == -1 || min == -1)
             throw new IllegalArgumentException("must specify largest and smallest numbers!");
-
 
         LayoutInflater.from(context).inflate(R.layout.number_chooser, this, true);
 
@@ -118,7 +114,6 @@ public class BaldNumberChooser extends FrameLayout {
         this.number = number;
         tv_number.setText(String.valueOf(number));
     }
-
 
     @Override
     public void setOnClickListener(OnClickListener onClickListener) {

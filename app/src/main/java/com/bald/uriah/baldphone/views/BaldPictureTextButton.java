@@ -28,12 +28,10 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.bald.uriah.baldphone.R;
-
 import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
+import com.bald.uriah.baldphone.R;
 
 public class BaldPictureTextButton extends BaldLinearLayoutButton {
 
@@ -69,7 +67,6 @@ public class BaldPictureTextButton extends BaldLinearLayoutButton {
         init(attrs);
     }
 
-
     private void init(AttributeSet attributeSet) {
         setOrientation(HORIZONTAL);
         setGravity(Gravity.CENTER);
@@ -78,7 +75,6 @@ public class BaldPictureTextButton extends BaldLinearLayoutButton {
         final Drawable pic = styleAttributesArray.getDrawable(R.styleable.BaldPictureTextButton__src);
         final String text = styleAttributesArray.getString(R.styleable.BaldPictureTextButton__text);
         styleAttributesArray.recycle();
-
 
         imageView = (ImageView) layoutInflater.inflate(R.layout.bald_picture_text_button_picture, this, false);
         imageView.setImageDrawable(pic);
@@ -108,7 +104,6 @@ public class BaldPictureTextButton extends BaldLinearLayoutButton {
     public void setImageResource(@DrawableRes int resId) {
         imageView.setImageResource(resId);
     }
-
 
     public ImageView getImageView() {
         return imageView;

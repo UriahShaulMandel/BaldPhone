@@ -22,11 +22,9 @@ package com.bald.uriah.baldphone.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.SparseIntArray;
-
+import androidx.annotation.StyleRes;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
-
-import androidx.annotation.StyleRes;
 
 public final class BPrefs {
     public static final String KEY = "baldPrefs";
@@ -38,7 +36,6 @@ public final class BPrefs {
 
     public static final String CUSTOM_APP_KEY = "CUSTOM_APP_KEY";
 
-
     public static final String LONG_PRESSES_KEY = "LONG_PRESSES_KEY";
     public static final boolean LONG_PRESSES_DEFAULT_VALUE = true;
 
@@ -48,17 +45,14 @@ public final class BPrefs {
     public static final String VIBRATION_FEEDBACK_KEY = "VIBRATION_FEEDBACK_KEY";
     public static final boolean VIBRATION_FEEDBACK_DEFAULT_VALUE = true;
 
-
     public static final String THEME_KEY = "THEME_KEY";
     public static final int THEME_DEFAULT_VALUE = Themes.ADAPTIVE;
-
 
     public static final String NOTE_VISIBLE_KEY = "NOTE_VISIBLE_KEY";
     public static final boolean NOTE_VISIBLE_DEFAULT_VALUE = true;
 
     public static final String NOTE_KEY = "NOTE_KEY";
     public static final String AFTER_TUTORIAL_KEY = "AFTER_TUTORIAL_KEY";
-
 
     public static final String PAGE_TRANSFORMERS_KEY = "pageTransformersKey";
     public static final int PAGE_TRANSFORMERS_DEFAULT_VALUE = 0;
@@ -69,7 +63,6 @@ public final class BPrefs {
     public static final String CRASH_REPORTS_KEY = "CRASH_REPORTS_KEY";
     public static final boolean CRASH_REPORTS_DEFAULT_VALUE = true;
 
-
     public static final String LAST_CRASH_KEY = "LAST_CRASH_KEY";
     public static final long LAST_CRASH_TIME_OK = 10 * D.SECOND;
 
@@ -79,7 +72,6 @@ public final class BPrefs {
 
     public static final String LAST_DOWNLOAD_MANAGER_REQUEST_ID = "LAST_DOWNLOAD_MANAGER_REQUEST_ID";
     public static final String LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER = "LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER";
-
 
     public static final String HOUR_KEY_ = "HOUR_KEY_";
     public static final String MINUTE_KEY_ = "MINUTE_KEY_";
@@ -124,7 +116,6 @@ public final class BPrefs {
     public static SharedPreferences get(Context context) {
         return context.getSharedPreferences(KEY, Context.MODE_PRIVATE);
     }
-
 
     static class Themes {
         static final int LIGHT = 0;

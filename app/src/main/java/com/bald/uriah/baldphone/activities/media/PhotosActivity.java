@@ -24,14 +24,12 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-
+import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.Constants;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
-
-import androidx.annotation.Nullable;
 
 /**
  * Most of this class is defined at {@link MediaScrollingActivity},
@@ -59,7 +57,6 @@ public class PhotosActivity extends MediaScrollingActivity implements Constants.
     protected CharSequence title() {
         return getString(R.string.photos);
     }
-
 
     @Override
     protected Cursor cursor(ContentResolver contentResolver) {
@@ -112,6 +109,5 @@ public class PhotosActivity extends MediaScrollingActivity implements Constants.
     protected Uri getData(Cursor cursor) {
         return Uri.parse("file://" + cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA)));
     }
-
 
 }

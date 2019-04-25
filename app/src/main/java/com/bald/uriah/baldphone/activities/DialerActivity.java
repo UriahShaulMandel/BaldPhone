@@ -31,12 +31,10 @@ import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.contacts.AddContactActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;

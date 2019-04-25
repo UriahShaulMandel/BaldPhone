@@ -24,7 +24,6 @@ import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.provider.MediaStore;
-
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.Constants;
 import com.bumptech.glide.Glide;
@@ -56,7 +55,6 @@ public class VideosActivity extends MediaScrollingActivity implements Constants.
     protected CharSequence title() {
         return getString(R.string.videos);
     }
-
 
     @Override
     protected Cursor cursor(ContentResolver contentResolver) {

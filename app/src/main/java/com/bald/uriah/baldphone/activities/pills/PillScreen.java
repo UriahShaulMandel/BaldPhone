@@ -37,7 +37,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
@@ -47,8 +47,6 @@ import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
-
-import androidx.annotation.Nullable;
 
 public class PillScreen extends BaldActivity {
     public static final int TIME_SCREEN_ON = D.MINUTE * 2;
@@ -77,7 +75,6 @@ public class PillScreen extends BaldActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         S.logImportant("reminderScreen was called!");
         final Window window = getWindow();
 
@@ -87,15 +84,12 @@ public class PillScreen extends BaldActivity {
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
                 | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
 
-
         setContentView(R.layout.reminder_screen);
-
 
         attachXml();
         if (getSharedPreferences(BPrefs.KEY, MODE_PRIVATE)
                 .getBoolean(BPrefs.VIBRATION_FEEDBACK_KEY, BPrefs.VIBRATION_FEEDBACK_DEFAULT_VALUE))
             vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-
 
         final Intent intent = getIntent();
         if (intent == null) throw new AssertionError();
@@ -136,7 +130,6 @@ public class PillScreen extends BaldActivity {
             return true;
         });
 
-
         try {
             Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
             ringtone = RingtoneManager.getRingtone(getApplicationContext(), notification);
@@ -164,7 +157,6 @@ public class PillScreen extends BaldActivity {
     protected void onStop() {
         if (ringtone != null)
             ringtone.stop();
-
 
         super.onStop();
     }
@@ -216,7 +208,6 @@ public class PillScreen extends BaldActivity {
         });
         view.startAnimation(enlarge);
 
-
     }
 
     private void snooze() {
@@ -229,7 +220,6 @@ public class PillScreen extends BaldActivity {
     private void scheduleNextAlarm() {
         new Handler().postDelayed(() -> ReminderScheduler.scheduleReminder(reminder, this), TIME_DELAYED_SCHEDULE);
     }
-
 
     @Override
     public void onBackPressed() {

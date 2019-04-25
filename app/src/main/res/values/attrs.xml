@@ -19,82 +19,82 @@
   -->
 
 <resources>
-    <attr name="bald_background" format="reference|color" />
-    <attr name="bald_key_margin" format="reference|dimension" />
-    <attr name="bald_background_transparent" format="reference|color" />
-    <attr name="bald_button" format="reference|color" />
-    <attr name="bald_button_gold" format="reference|color" />
-    <attr name="bald_text_on_gold" format="reference|color" />
-    <attr name="bald_button_clicked" format="reference|color" />
-    <attr name="bald_button_corners_radius" format="reference|dimension" />
-    <attr name="bald_button_disabled" format="reference|color" />
-    <attr name="bald_button_pill_corners_radius" format="reference|dimension" />
-    <attr name="bald_decoration_on_background" format="reference|color" />
-    <attr name="bald_decoration_on_button" format="reference|color" />
-    <attr name="bald_decoration_on_key" format="reference|color" />
-    <attr name="bald_hint_on_background" format="reference|color" />
-    <attr name="bald_hint_on_button" format="reference|color" />
-    <attr name="bald_keyboard_key_background" format="reference|color" />
-    <attr name="bald_keyboard_key_pressed_background" format="reference|color" />
-    <attr name="bald_selected_on_background" format="reference|color" />
-    <attr name="bald_text_on_selected" format="reference|color" />
-    <attr name="bald_stroke_color" format="reference|color" />
-    <attr name="bald_stroke_size" format="reference|dimension" />
-    <attr name="bald_text_on_background" format="reference|color" />
-    <attr name="bald_text_on_button" format="reference|color" />
-    <attr name="bald_text_on_key" format="reference|color" />
+    <attr name="bald_background" format="reference|color"/>
+    <attr name="bald_key_margin" format="reference|dimension"/>
+    <attr name="bald_background_transparent" format="reference|color"/>
+    <attr name="bald_button" format="reference|color"/>
+    <attr name="bald_button_gold" format="reference|color"/>
+    <attr name="bald_text_on_gold" format="reference|color"/>
+    <attr name="bald_button_clicked" format="reference|color"/>
+    <attr name="bald_button_corners_radius" format="reference|dimension"/>
+    <attr name="bald_button_disabled" format="reference|color"/>
+    <attr name="bald_button_pill_corners_radius" format="reference|dimension"/>
+    <attr name="bald_decoration_on_background" format="reference|color"/>
+    <attr name="bald_decoration_on_button" format="reference|color"/>
+    <attr name="bald_decoration_on_key" format="reference|color"/>
+    <attr name="bald_hint_on_background" format="reference|color"/>
+    <attr name="bald_hint_on_button" format="reference|color"/>
+    <attr name="bald_keyboard_key_background" format="reference|color"/>
+    <attr name="bald_keyboard_key_pressed_background" format="reference|color"/>
+    <attr name="bald_selected_on_background" format="reference|color"/>
+    <attr name="bald_text_on_selected" format="reference|color"/>
+    <attr name="bald_stroke_color" format="reference|color"/>
+    <attr name="bald_stroke_size" format="reference|dimension"/>
+    <attr name="bald_text_on_background" format="reference|color"/>
+    <attr name="bald_text_on_button" format="reference|color"/>
+    <attr name="bald_text_on_key" format="reference|color"/>
 
 
     <declare-styleable name="BaldPictureTextButton">
-        <attr name="_src" format="reference" />
-        <attr name="_text" format="string" />
-        <attr name="_size" format="dimension" />
+        <attr name="_src" format="reference"/>
+        <attr name="_text" format="string"/>
+        <attr name="_size" format="dimension"/>
     </declare-styleable>
 
 
     <declare-styleable name="FirstPageAppIcon">
-        <attr name="__src" format="reference" />
-        <attr name="__text" format="string" />
+        <attr name="__src" format="reference"/>
+        <attr name="__text" format="string"/>
     </declare-styleable>
 
     <declare-styleable name="BaldSwitch">
-        <attr name="yes" format="string" />
-        <attr name="no" format="string" />
-        <attr name="checked" format="boolean" />
-        <attr name="enabled" format="boolean" />
-        <attr name="size" format="dimension" />
+        <attr name="yes" format="string"/>
+        <attr name="no" format="string"/>
+        <attr name="checked" format="boolean"/>
+        <attr name="enabled" format="boolean"/>
+        <attr name="size" format="dimension"/>
     </declare-styleable>
 
     <declare-styleable name="ScrollingHelper">
-        <attr name="horizontal_scrolling" format="boolean" />
-        <attr name="where_bar" format="integer" />
-        <attr name="im_aware_this_inner_view_isnt_modular" format="boolean" />
-        <attr name="empty_text" format="string" />
+        <attr name="horizontal_scrolling" format="boolean"/>
+        <attr name="where_bar" format="integer"/>
+        <attr name="im_aware_this_inner_view_isnt_modular" format="boolean"/>
+        <attr name="empty_text" format="string"/>
 
     </declare-styleable>
 
     <declare-styleable name="BaldTitleBar">
-        <attr name="title" format="string" />
+        <attr name="title" format="string"/>
     </declare-styleable>
 
     <declare-styleable name="BaldNumberChooser">
-        <attr name="biggest" format="integer" />
-        <attr name="smallest" format="integer" />
-        <attr name="jumps" format="integer" />
-        <attr name="description" format="string" />
+        <attr name="biggest" format="integer"/>
+        <attr name="smallest" format="integer"/>
+        <attr name="jumps" format="integer"/>
+        <attr name="description" format="string"/>
     </declare-styleable>
 
     <declare-styleable name="ViewPagerHolder">
-        <attr name="item_type" format="string" />
-        <attr name="use_circles" format="boolean" />
+        <attr name="item_type" format="string"/>
+        <attr name="use_circles" format="boolean"/>
     </declare-styleable>
 
     <declare-styleable name="BaldMultipleSelection">
-        <attr name="text_color" format="color" />
-        <attr name="selected_text_color" format="color" />
-        <attr name="background_default" format="reference" />
-        <attr name="background_selected" format="reference" />
-        <attr name="is_vertical" format="boolean" />
-        <attr name="text_size" format="dimension" />
+        <attr name="text_color" format="color"/>
+        <attr name="selected_text_color" format="color"/>
+        <attr name="background_default" format="reference"/>
+        <attr name="background_selected" format="reference"/>
+        <attr name="is_vertical" format="boolean"/>
+        <attr name="text_size" format="dimension"/>
     </declare-styleable>
 </resources>

@@ -23,9 +23,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
-
 import androidx.annotation.Nullable;
-
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.VoiceRecognition;

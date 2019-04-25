@@ -19,31 +19,32 @@
   -->
 
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="5dp">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
     <SeekBar
-        android:id="@+id/brightness_seek_bar"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:indeterminate="false"
-        android:max="255"
-        android:thumbTint="?bald_decoration_on_background"
-        android:progressTint="?bald_selected_on_background"
-        android:progressBackgroundTint="?bald_decoration_on_background"
-        android:progress="0"
-        xmlns:android="http://schemas.android.com/apk/res/android"/>
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/brightness_seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:indeterminate="false"
+            android:max="255"
+            android:thumbTint="?bald_decoration_on_background"
+            android:progressTint="?bald_selected_on_background"
+            android:progressBackgroundTint="?bald_decoration_on_background"
+            android:progress="0"/>
 
     <CheckBox
-        android:id="@+id/auto_brightness_check_box"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/auto_brightness"
-        android:textColor="?bald_text_on_background"
-        android:buttonTint="?bald_decoration_on_background"
-        />
+            android:id="@+id/auto_brightness_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/auto_brightness"
+            android:textColor="?bald_text_on_background"
+            android:buttonTint="?bald_decoration_on_background"
+            />
 </LinearLayout>
 

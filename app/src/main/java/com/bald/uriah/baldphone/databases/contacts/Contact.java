@@ -24,10 +24,8 @@ import android.database.Cursor;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.util.Pair;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.bald.uriah.baldphone.utils.D;
 
 import java.util.ArrayList;

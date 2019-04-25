@@ -19,9 +19,9 @@
   -->
 
 <com.bald.uriah.baldphone.views.BaldButton xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/ButtonsText"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_marginBottom="4dp"
-    android:layout_marginTop="4dp"
-     />
+                                           style="@style/ButtonsText"
+                                           android:layout_width="match_parent"
+                                           android:layout_height="0dp"
+                                           android:layout_marginBottom="4dp"
+                                           android:layout_marginTop="4dp"
+        />

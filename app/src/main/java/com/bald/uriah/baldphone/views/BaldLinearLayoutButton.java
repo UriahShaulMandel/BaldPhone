@@ -25,14 +25,11 @@ import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
-
+import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
-
-import androidx.annotation.Nullable;
-
 
 /**
  * Simple Button, extends {@link LinearLayout}; adapted to App settings.
@@ -46,7 +43,6 @@ public class BaldLinearLayoutButton extends LinearLayout implements BaldButtonIn
     private final BaldToast longer;
     private OnClickListener onClickListener;
     private BaldButtonTouchListener baldButtonTouchListener;
-
 
     public BaldLinearLayoutButton(Context context) {
         super(context);

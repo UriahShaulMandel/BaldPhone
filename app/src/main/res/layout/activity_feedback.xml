@@ -19,67 +19,67 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?bald_background">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="?bald_background">
 
     <com.bald.uriah.baldphone.views.BaldTitleBar
-        android:id="@+id/bald_title_bar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/feedback" />
+            android:id="@+id/bald_title_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/feedback"/>
 
     <TextView
-        android:id="@+id/tv"
-        style="@style/BackgroundText.Medium"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/also_available_at"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bald_title_bar" />
+            android:id="@+id/tv"
+            style="@style/BackgroundText.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/also_available_at"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bald_title_bar"/>
 
     <com.bald.uriah.baldphone.views.BaldEditText
-        android:id="@+id/et_feedback"
-        style="@style/EditText"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bt_send"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv" />
+            android:id="@+id/et_feedback"
+            style="@style/EditText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bt_send"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv"/>
 
     <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-        android:id="@+id/bt_send"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:background="@drawable/style_for_buttons_transparent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+            android:id="@+id/bt_send"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@drawable/style_for_buttons_transparent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
 
-            android:src="@drawable/share_on_background" />
+                android:src="@drawable/share_on_background"/>
 
         <TextView
-            style="@style/BackgroundText"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="@string/send" />
+                style="@style/BackgroundText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/send"/>
 
     </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
 </androidx.constraintlayout.widget.ConstraintLayout>

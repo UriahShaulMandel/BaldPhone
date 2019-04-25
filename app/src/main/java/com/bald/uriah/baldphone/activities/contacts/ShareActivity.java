@@ -27,7 +27,7 @@ import android.provider.ContactsContract;
 import android.telephony.PhoneNumberUtils;
 import android.util.Log;
 import android.view.View;
-
+import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 import com.bald.uriah.baldphone.adapters.IntentAdapter;
@@ -41,9 +41,6 @@ import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.Collections;
 import java.util.List;
-
-import androidx.annotation.Nullable;
-
 
 /**
  * Activity for Sharing Photos, Videos and Contacts.
@@ -71,8 +68,6 @@ public class ShareActivity extends BaseContactsActivity {
     private ModularRecyclerView recyclerView;
     private View differently_container, whatsapp_container;
     private List<ResolveInfo> resolveInfoList = Collections.EMPTY_LIST;
-
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -114,7 +109,6 @@ public class ShareActivity extends BaseContactsActivity {
             if (isChecked)
                 S.hideKeyboard(this);
         });
-
 
     }
 

@@ -21,17 +21,23 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--<item>-->
-        <!--<shape android:shape="rectangle">-->
-            <!--<solid android:color="@color/background_transparent"/>-->
-            <!--<corners android:radius="@dimen/pin_radius2"/>-->
-        <!--</shape>-->
+    <!--<shape android:shape="rectangle">-->
+    <!--<solid android:color="@color/background_transparent"/>-->
+    <!--<corners android:radius="@dimen/pin_radius2"/>-->
+    <!--</shape>-->
 
     <!--</item>-->
-    <item android:top="1dp" android:bottom="1dp" android:right="1dp" android:left="1dp">
+    <item
+            android:top="1dp"
+            android:bottom="1dp"
+            android:right="1dp"
+            android:left="1dp">
         <shape android:shape="rectangle">
             <solid android:color="?bald_background"/>
             <corners android:radius="@dimen/pin_radius"/>
-            <stroke android:color="?bald_decoration_on_background" android:width="1dp"/>
+            <stroke
+                    android:color="?bald_decoration_on_background"
+                    android:width="1dp"/>
 
         </shape>
 

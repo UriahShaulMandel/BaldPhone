@@ -20,13 +20,11 @@
 package com.bald.uriah.baldphone.activities;
 
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment1;
 import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment2;
@@ -56,7 +54,6 @@ public class TutorialActivity extends BaldActivity {
     protected int requiredPermissions() {
         return PERMISSION_NONE;
     }
-
 
     private static class Adapter extends FragmentPagerAdapter {
         Adapter(FragmentManager fm) {

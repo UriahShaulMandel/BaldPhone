@@ -25,14 +25,12 @@ import android.content.SharedPreferences;
 import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.view.View;
-
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
-
-import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 /**
  * Simple Button, extends {@link ConstraintLayout}; adapted to App settings.
@@ -46,7 +44,6 @@ public class BaldConstraintLayoutButton extends ConstraintLayout implements Bald
     private final BaldToast longer;
     private OnClickListener onClickListener;
     private BaldButtonTouchListener baldButtonTouchListener;
-
 
     @SuppressLint("ClickableViewAccessibility")
     public BaldConstraintLayoutButton(Context context) {
@@ -114,7 +111,6 @@ public class BaldConstraintLayoutButton extends ConstraintLayout implements Bald
         else
             super.setOnClickListener(this);
     }
-
 
     @Override
     public void setOnClickListener(View.OnClickListener onClickListener) {

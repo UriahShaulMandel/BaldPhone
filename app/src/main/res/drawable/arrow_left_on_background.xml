@@ -18,11 +18,11 @@
   -->
 
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="24dp"
-    android:height="24dp"
-    android:viewportWidth="24"
-    android:viewportHeight="24">
+        android:width="24dp"
+        android:height="24dp"
+        android:viewportWidth="24"
+        android:viewportHeight="24">
     <path
-        android:fillColor="?bald_decoration_on_background"
-        android:pathData="M20,9V15H12V19.84L4.16,12L12,4.16V9H20Z" />
+            android:fillColor="?bald_decoration_on_background"
+            android:pathData="M20,9V15H12V19.84L4.16,12L12,4.16V9H20Z"/>
 </vector>

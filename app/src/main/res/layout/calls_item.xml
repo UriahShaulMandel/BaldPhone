@@ -19,125 +19,125 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/contact_row_linear_layout"
-    android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:orientation="vertical">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/contact_row_linear_layout"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:orientation="vertical">
 
     <com.bald.uriah.baldphone.views.BaldButton
-        android:id="@+id/day"
-        style="@style/BackgroundText.Medium"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/style_for_buttons_transparent"
-        android:gravity="center_vertical|start"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:visibility="gone" />
+            android:id="@+id/day"
+            style="@style/BackgroundText.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/style_for_buttons_transparent"
+            android:gravity="center_vertical|start"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:visibility="gone"/>
 
     <View
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="2dp"
-        android:background="?bald_decoration_on_background"
-        android:visibility="gone" />
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="2dp"
+            android:background="?bald_decoration_on_background"
+            android:visibility="gone"/>
 
     <FrameLayout
-        android:id="@+id/fl_contact_only"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal">
-
-        <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-            android:id="@+id/ll_contact_only"
+            android:id="@+id/fl_contact_only"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/style_for_buttons_transparent_rectangle"
+            android:layout_height="100dp"
             android:orientation="horizontal">
 
-            <FrameLayout
-                android:id="@+id/pic_holder"
-                android:layout_width="80dp"
+        <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
+                android:id="@+id/ll_contact_only"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp">
+                android:background="@drawable/style_for_buttons_transparent_rectangle"
+                android:orientation="horizontal">
+
+            <FrameLayout
+                    android:id="@+id/pic_holder"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/profile_pic"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:transitionName="prof_pic_contacts_animation"
-                    app:civ_border_color="#DD000000"
-                    app:civ_border_width="2dp" />
+                        android:id="@+id/profile_pic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:transitionName="prof_pic_contacts_animation"
+                        app:civ_border_color="#DD000000"
+                        app:civ_border_width="2dp"/>
 
                 <TextView
-                    android:id="@+id/image_letter"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:textColor="?bald_text_on_background"
-                    android:textSize="50dp" />
+                        android:id="@+id/image_letter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="?bald_text_on_background"
+                        android:textSize="50dp"/>
             </FrameLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp">
-
-                <TextView
-                    android:id="@+id/contact_name"
-                    style="@style/ButtonsText.Large"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
-                    android:gravity="center_vertical"
-                    android:lines="1"
-                    android:maxLength="25"
-                    android:transitionName="bald_bar_title_animation"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
 
                 <TextView
-                    android:id="@+id/tv_time"
-                    style="@style/ButtonsText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_call_type"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                        android:id="@+id/contact_name"
+                        style="@style/ButtonsText.Large"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:maxLength="25"
+                        android:transitionName="bald_bar_title_animation"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                        android:id="@+id/tv_time"
+                        style="@style/ButtonsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_call_type"
+                        app:layout_constraintEnd_toEndOf="parent"/>
 
                 <ImageView
-                    android:id="@+id/iv_call_type"
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_marginBottom="10dp"
-                    android:src="@drawable/call_made_on_button"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="1"
-                    app:layout_constraintStart_toStartOf="@+id/contact_name" />
+                        android:id="@+id/iv_call_type"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/call_made_on_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1"
+                        app:layout_constraintStart_toStartOf="@+id/contact_name"/>
 
                 <TextView
-                    android:id="@+id/tv_call_type"
-                    style="@style/ButtonsText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:text=""
-                    app:layout_constraintBottom_toBottomOf="@id/iv_call_type"
-                    app:layout_constraintStart_toEndOf="@id/iv_call_type" />
+                        android:id="@+id/tv_call_type"
+                        style="@style/ButtonsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        app:layout_constraintBottom_toBottomOf="@id/iv_call_type"
+                        app:layout_constraintStart_toEndOf="@id/iv_call_type"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
     </FrameLayout>

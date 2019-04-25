@@ -19,54 +19,54 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:background="@drawable/list_shape"
-    android:orientation="vertical">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:layout_marginTop="10dp"
+                                                   android:background="@drawable/list_shape"
+                                                   android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView"
-        style="@style/BackgroundText.Large"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="40dp"
-        android:gravity="center_vertical"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:text="@string/call_log"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/textView"
+            style="@style/BackgroundText.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/call_log"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <com.bald.uriah.baldphone.views.BaldPictureTextButton
-        android:id="@+id/bt_show"
-        android:layout_width="100dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:_src="@drawable/drop_down_on_button"
-        app:_text="@string/show"
-        android:background="@drawable/style_for_buttons">
+            android:id="@+id/bt_show"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:_src="@drawable/drop_down_on_button"
+            app:_text="@string/show"
+            android:background="@drawable/style_for_buttons">
     </com.bald.uriah.baldphone.views.BaldPictureTextButton>
 
     <com.bald.uriah.baldphone.views.ScrollingHelper
-        android:id="@+id/scrolling_helper"
-        android:layout_width="0dp"
-        android:layout_height="360dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+            android:id="@+id/scrolling_helper"
+            android:layout_width="0dp"
+            android:layout_height="360dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <com.bald.uriah.baldphone.views.ModularRecyclerView
-            android:id="@+id/child"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            style="@style/ScrollStyle"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                android:id="@+id/child"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/ScrollStyle"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
     </com.bald.uriah.baldphone.views.ScrollingHelper>
 </androidx.constraintlayout.widget.ConstraintLayout>

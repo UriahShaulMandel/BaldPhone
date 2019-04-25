@@ -33,14 +33,12 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.VideoView;
-
-import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.Constants;
-import com.bald.uriah.baldphone.utils.Toggeler;
-
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.ViewPager;
+import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.utils.Constants;
+import com.bald.uriah.baldphone.utils.Toggeler;
 
 /**
  * Most of this class is defined at {@link SingleMediaActivity},
@@ -97,7 +95,6 @@ public class SingleVideoActivity extends SingleMediaActivity implements Constant
 
         }
 
-
         private String getPath(Uri uri) {
             try (Cursor cursor = getContentResolver().query(uri, PROJECTION, null, null, null)) {
                 final int column_index = cursor.getColumnIndexOrThrow(MediaStore.Video.Media.DATA);
@@ -128,7 +125,6 @@ public class SingleVideoActivity extends SingleMediaActivity implements Constant
                     .setTypeAndNormalize("image/*")
                     .putExtra(Intent.EXTRA_STREAM, uri);
         }
-
 
         @Override
         protected Cursor cursor(Context context) {
@@ -234,7 +230,6 @@ public class SingleVideoActivity extends SingleMediaActivity implements Constant
             }
 
         }
-
 
     }
 }

@@ -19,12 +19,12 @@
   -->
 
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/bar_title"
-    android:layout_width="0dp"
-    android:layout_height="match_parent"
-    android:layout_weight="4"
-    android:gravity="center"
-    android:transitionName="bald_bar_title_animation"
-    style="@style/BackgroundText.Medium"
-    android:alpha="0.75"
-    />
+          android:id="@+id/bar_title"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="4"
+          android:gravity="center"
+          android:transitionName="bald_bar_title_animation"
+          style="@style/BackgroundText.Medium"
+          android:alpha="0.75"
+        />

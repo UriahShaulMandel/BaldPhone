@@ -26,28 +26,22 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
-import android.view.Choreographer;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-
-import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.D;
-
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-
 import androidx.annotation.IdRes;
 import androidx.annotation.IntDef;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.recyclerview.widget.RecyclerView;
+import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.utils.D;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 public class ScrollingHelper extends ConstraintLayout {
 
@@ -130,7 +124,6 @@ public class ScrollingHelper extends ConstraintLayout {
         init(context, attrs);
     }
 
-
     private void init(Context context, @Nullable AttributeSet attributeSet) {
         this.context = context;
         this.displayMetrics = context.getResources().getDisplayMetrics();
@@ -175,7 +168,6 @@ public class ScrollingHelper extends ConstraintLayout {
             constraintSet.setTranslationZ(id, 2);
 
             constraintSet.applyTo(this);
-
 
             if (aViewAdded)
                 return;
@@ -224,7 +216,6 @@ public class ScrollingHelper extends ConstraintLayout {
             constraintSet.connect(containerId, ConstraintSet.TOP, ConstraintSet.PARENT_ID, ConstraintSet.TOP);
             constraintSet.connect(containerId, ConstraintSet.BOTTOM, ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM);
 
-
         } else {
             constraintSet.constrainHeight(childId, ConstraintSet.MATCH_CONSTRAINT);
             constraintSet.constrainWidth(childId, ConstraintSet.MATCH_CONSTRAINT);
@@ -242,7 +233,6 @@ public class ScrollingHelper extends ConstraintLayout {
 
         }
         constraintSet.applyTo(this);
-
 
     }
 
@@ -283,7 +273,6 @@ public class ScrollingHelper extends ConstraintLayout {
             throw new IllegalArgumentException("Horizontal Scrolling is not yet supported!");
 
     }
-
 
     @SuppressLint("ClickableViewAccessibility")
     private void scrollerHandler() {
@@ -339,9 +328,7 @@ public class ScrollingHelper extends ConstraintLayout {
                 }
             };
 
-
         final OnClickListener onClickListener = D.EMPTY_CLICK_LISTENER;
-
 
         if (whereBar == RIGHT || whereBar == LEFT) {
             LinearLayout container;
@@ -352,7 +339,6 @@ public class ScrollingHelper extends ConstraintLayout {
             super.addView(container);
 
             setArrowsVisibility(true);
-
 
             if (horizontalScrolling) {
                 //will never happen see: private void assertion()
@@ -390,19 +376,15 @@ public class ScrollingHelper extends ConstraintLayout {
                     return false;
                 });
 
-
             }
-
 
         } else if (whereBar == TOP_AND_BOTTOM) {
             final int upContainerId = R.id.container;
             final int downContainerId = R.id.container2;
             final int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, topAndBottomScrollerLength, displayMetrics);
 
-
             final View upContainer = layoutInflater.inflate(R.layout.scrolling_helper_up, this, false);
             final View downContainer = layoutInflater.inflate(R.layout.scrolling_helper_down, this, false);
-
 
             upContainer.setId(upContainerId);
             downContainer.setId(downContainerId);
@@ -431,7 +413,6 @@ public class ScrollingHelper extends ConstraintLayout {
             constraintSet.connect(downContainerId, ConstraintSet.RIGHT, ConstraintSet.PARENT_ID, ConstraintSet.RIGHT);
             constraintSet.connect(downContainerId, ConstraintSet.BOTTOM, ConstraintSet.PARENT_ID, ConstraintSet.BOTTOM);
             constraintSet.connect(downContainerId, ConstraintSet.LEFT, ConstraintSet.PARENT_ID, ConstraintSet.LEFT);
-
 
             constraintSet.applyTo(this);
             upContainer.setOnClickListener(onClickListener);
@@ -472,17 +453,16 @@ public class ScrollingHelper extends ConstraintLayout {
             return false;
         });
 
-
     }
 
     @IntDef({RIGHT, LEFT, UP, DOWN, NO})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Direction {
     }
+
     @IntDef({END, RIGHT, START, LEFT, TOP_AND_BOTTOM})
     @Retention(RetentionPolicy.SOURCE)
     public @interface IntWhereBar {
     }
-
 
 }

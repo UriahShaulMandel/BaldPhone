@@ -21,7 +21,6 @@ package com.bald.uriah.baldphone.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
-
 import androidx.annotation.Nullable;
 
 public class SquareImageView extends androidx.appcompat.widget.AppCompatImageView {

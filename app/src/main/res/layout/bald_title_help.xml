@@ -19,12 +19,12 @@
   -->
 
 <com.bald.uriah.baldphone.views.BaldImageButton xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/bar_help"
-    android:layout_width="0dp"
-    android:layout_height="match_parent"
-    android:layout_weight="1"
-    android:alpha="0.75"
-    android:background="@drawable/style_for_buttons_transparent"
-    app:srcCompat="@drawable/help_on_background"
-    />
+                                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                android:id="@+id/bar_help"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:alpha="0.75"
+                                                android:background="@drawable/style_for_buttons_transparent"
+                                                app:srcCompat="@drawable/help_on_background"
+        />

@@ -25,7 +25,6 @@ import android.net.Uri;
 import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
-
 import com.bald.uriah.baldphone.R;
 
 /**
@@ -45,7 +44,6 @@ public class ContactsActivity extends BaseContactsActivity {
     private static final String SORT_ORDER =
             "upper(" + ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + ") ASC";
     private View add_contact;
-
 
     @Override
     protected int layout() {

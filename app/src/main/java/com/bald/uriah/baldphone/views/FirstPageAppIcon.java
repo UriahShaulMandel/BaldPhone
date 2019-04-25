@@ -27,12 +27,10 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.bald.uriah.baldphone.R;
-
 import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
+import com.bald.uriah.baldphone.R;
 
 public class FirstPageAppIcon extends BaldFrameLayoutButton {
     protected final Context context;
@@ -61,7 +59,6 @@ public class FirstPageAppIcon extends BaldFrameLayoutButton {
         init(attrs);
     }
 
-
     private void init(@Nullable AttributeSet attributeSet) {
         layoutInflater.inflate(R.layout.first_page_app_icon, this, true);
         imageView = findViewById(R.id.iv);
@@ -73,7 +70,6 @@ public class FirstPageAppIcon extends BaldFrameLayoutButton {
             setText(styleAttributesArray.getString(R.styleable.FirstPageAppIcon___text));
             styleAttributesArray.recycle();
         }
-
 
     }
 
@@ -97,7 +93,6 @@ public class FirstPageAppIcon extends BaldFrameLayoutButton {
         imageView.setImageResource(resId);
     }
 
-
     public ImageView getImageView() {
         return imageView;
     }
@@ -105,6 +100,5 @@ public class FirstPageAppIcon extends BaldFrameLayoutButton {
     public TextView getTextView() {
         return textView;
     }
-
 
 }

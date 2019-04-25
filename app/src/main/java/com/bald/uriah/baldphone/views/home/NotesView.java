@@ -28,7 +28,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.HomeScreen;
 import com.bald.uriah.baldphone.utils.BPrefs;
@@ -37,14 +38,10 @@ import com.bald.uriah.baldphone.views.BaldPictureTextButton;
 
 import java.lang.ref.WeakReference;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 public class NotesView extends HomeView {
     public static final String TAG = NotesView.class.getSimpleName();
     private EditText editText;
     private SharedPreferences sharedPreferences;
-
 
     public NotesView(@NonNull HomeScreen activity) {
         super(activity);
@@ -103,7 +100,6 @@ public class NotesView extends HomeView {
         return view;
     }
 
-
     public void onSpeechRecognizerResult(final String spokenText) {
         editText.append("\n");
         editText.append(spokenText);
@@ -113,7 +109,6 @@ public class NotesView extends HomeView {
     public static class RecognizerManager {
         private WeakReference<HomeScreen> homeScreen;
         private WeakReference<NotesView> notesFragment;
-
 
         public void displaySpeechRecognizer() {
             if (assertOk())

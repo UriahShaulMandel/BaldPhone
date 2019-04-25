@@ -25,26 +25,21 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseIntArray;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
+import android.view.*;
 import android.widget.TextView;
-
-import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.views.BaldTitleBar;
-import com.bald.uriah.baldphone.views.ModularRecyclerView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.views.BaldTitleBar;
+import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 public class LetterChooserDialog extends Dialog {
     private static final String TAG = LetterChooserDialog.class.getSimpleName();
     private static final int AMOUNT_PER_ROW = 5;
     private final OnChooseLetterListener onChooseLetterListener;
     private final SparseIntArray lettersToValues;
+
     public LetterChooserDialog(final Context context, SparseIntArray lettersToValues, OnChooseLetterListener onChooseLetterListener) {
         super(context);
         this.lettersToValues = lettersToValues;
@@ -80,7 +75,6 @@ public class LetterChooserDialog extends Dialog {
         recyclerView.setAdapter(new LetterChooserAdapter());
 
     }
-
 
     @FunctionalInterface
     public interface OnChooseLetterListener {

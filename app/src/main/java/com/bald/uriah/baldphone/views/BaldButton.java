@@ -24,13 +24,11 @@ import android.content.SharedPreferences;
 import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.view.View;
-
+import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
-
-import androidx.annotation.Nullable;
 
 /**
  * Simple Button, extends {@link androidx.appcompat.widget.AppCompatTextView}; adapted to App settings.
@@ -45,7 +43,6 @@ public class BaldButton extends androidx.appcompat.widget.AppCompatTextView impl
     private final BaldToast longer;
     private OnClickListener onClickListener;
     private BaldButtonTouchListener baldButtonTouchListener;
-
 
     public BaldButton(Context context) {
         super(context);
@@ -109,7 +106,6 @@ public class BaldButton extends androidx.appcompat.widget.AppCompatTextView impl
         else
             super.setOnClickListener(this);
     }
-
 
     @Override
     public void setOnClickListener(View.OnClickListener onClickListener) {

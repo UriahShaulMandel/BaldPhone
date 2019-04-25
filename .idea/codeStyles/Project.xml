@@ -1,0 +1,13 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <AndroidXmlCodeStyleSettings>
+      <option name="USE_CUSTOM_SETTINGS" value="true" />
+    </AndroidXmlCodeStyleSettings>
+    <codeStyleSettings language="JAVA">
+      <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="1" />
+      <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+      <option name="KEEP_BLANK_LINES_BETWEEN_PACKAGE_DECLARATION_AND_HEADER" value="1" />
+      <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="1" />
+    </codeStyleSettings>
+  </code_scheme>
+</component>

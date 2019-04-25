@@ -22,16 +22,14 @@ package com.bald.uriah.baldphone.views.home;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.HomeScreen;
 import com.bald.uriah.baldphone.adapters.BaldPagerAdapter;
 import com.bald.uriah.baldphone.views.BaldLinearLayoutButton;
 import com.bald.uriah.baldphone.views.HomeScreenAppView;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class HomeViewFactory extends HomeView {
     public static final String TAG = HomeViewFactory.class.getSimpleName();
@@ -57,7 +55,6 @@ public class HomeViewFactory extends HomeView {
         int endIndex = ((AMOUNT_PER_PAGE * (index)) + AMOUNT_PER_PAGE);
         if (endIndex > baldPagerAdapter.pinnedList.size())
             endIndex = baldPagerAdapter.pinnedList.size();
-
 
         for (int i = 0; i < endIndex - startIndex; i++) {
             final HomeScreenAppView homeScreenAppView = new HomeScreenAppView(

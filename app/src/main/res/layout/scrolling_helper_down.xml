@@ -19,9 +19,9 @@
   -->
 
 <androidx.appcompat.widget.AppCompatImageView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/style_for_buttons_transparent"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:srcCompat="@drawable/arrow_down_on_background"
-    android:contentDescription="@string/down"/>
+                                              xmlns:app="http://schemas.android.com/apk/res-auto"
+                                              android:background="@drawable/style_for_buttons_transparent"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="match_parent"
+                                              app:srcCompat="@drawable/arrow_down_on_background"
+                                              android:contentDescription="@string/down"/>

@@ -19,93 +19,93 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/options_bar"
-    android:layout_width="match_parent"
-    android:layout_height="75dp"
-    android:background="?bald_background_transparent"
-    android:orientation="horizontal"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="@+id/scrollingHelper2">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/options_bar"
+              android:layout_width="match_parent"
+              android:layout_height="75dp"
+              android:background="?bald_background_transparent"
+              android:orientation="horizontal"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="@+id/scrollingHelper2">
 
     <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-        android:id="@+id/bt_edit"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/style_for_buttons_transparent"
-        android:orientation="vertical">
+            android:id="@+id/bt_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/style_for_buttons_transparent"
+            android:orientation="vertical">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="4"
-            android:src="@drawable/edit_on_background" />
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="4"
+                android:src="@drawable/edit_on_background"/>
 
         <TextView
-            style="@style/ButtonsText.Auto"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:text="@string/edit" />
+                style="@style/ButtonsText.Auto"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/edit"/>
 
     </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
 
     <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-        android:id="@+id/bt_share"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1.2"
-        android:background="@drawable/style_for_buttons_transparent"
-        android:orientation="vertical">
+            android:id="@+id/bt_share"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:background="@drawable/style_for_buttons_transparent"
+            android:orientation="vertical">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="4"
 
-            android:src="@drawable/share_on_background" />
+                android:src="@drawable/share_on_background"/>
 
         <TextView
-            style="@style/ButtonsText.Auto"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:text="@string/share_contact" />
+                style="@style/ButtonsText.Auto"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/share_contact"/>
 
     </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
 
     <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-        android:id="@+id/bt_delete"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/style_for_buttons_transparent"
-        android:orientation="vertical">
+            android:id="@+id/bt_delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/style_for_buttons_transparent"
+            android:orientation="vertical">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="4"
 
-            android:src="@drawable/delete_on_background" />
+                android:src="@drawable/delete_on_background"/>
 
         <TextView
-            style="@style/ButtonsText.Auto"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:text="@string/delete" />
+                style="@style/ButtonsText.Auto"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/delete"/>
 
     </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
 </LinearLayout>

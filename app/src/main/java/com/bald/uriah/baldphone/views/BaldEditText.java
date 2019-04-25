@@ -25,13 +25,11 @@ import android.os.Vibrator;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-
+import androidx.appcompat.widget.AppCompatEditText;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
-
-import androidx.appcompat.widget.AppCompatEditText;
 
 public class BaldEditText extends AppCompatEditText implements View.OnClickListener, View.OnLongClickListener {
     private final SharedPreferences sharedPreferences;
@@ -79,7 +77,6 @@ public class BaldEditText extends AppCompatEditText implements View.OnClickListe
         super.setOnClickListener(this);
         super.setOnLongClickListener(this);
     }
-
 
     @Override
     public void onClick(View v) {

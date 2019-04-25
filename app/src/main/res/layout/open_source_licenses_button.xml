@@ -19,13 +19,13 @@
   -->
 
 <com.bald.uriah.baldphone.views.BaldButton xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/open_source_licenses_button"
-    android:layout_width="match_parent"
-    android:layout_height="60dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginBottom="20dp"
-    android:background="@drawable/style_for_buttons"
-    android:text="@string/open_source_licenses"
-    style="@style/ButtonsText.Medium"
-    />
+                                           android:id="@+id/open_source_licenses_button"
+                                           android:layout_width="match_parent"
+                                           android:layout_height="60dp"
+                                           android:layout_marginTop="20dp"
+                                           android:layout_marginBottom="20dp"
+                                           android:background="@drawable/style_for_buttons"
+                                           android:text="@string/open_source_licenses"
+                                           style="@style/ButtonsText.Medium"
+        />
 

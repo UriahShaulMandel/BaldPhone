@@ -19,74 +19,74 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
 
     <com.bald.uriah.baldphone.views.BaldPictureTextButton
-        android:id="@+id/bt_edit"
-        android:layout_width="90dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/style_for_buttons"
-        app:_src="@drawable/edit_on_button"
-        app:_text="@string/write"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/bt_edit"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/style_for_buttons"
+            app:_src="@drawable/edit_on_button"
+            app:_text="@string/write"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        style="@style/BackgroundText.Medium"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="@string/notes"
-        app:layout_constraintBottom_toTopOf="@+id/scrolling_helper"
-        app:layout_constraintEnd_toStartOf="@+id/bt_edit"
-        app:layout_constraintStart_toEndOf="@+id/bt_speak"
-        app:layout_constraintTop_toTopOf="parent" />
+            style="@style/BackgroundText.Medium"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/notes"
+            app:layout_constraintBottom_toTopOf="@+id/scrolling_helper"
+            app:layout_constraintEnd_toStartOf="@+id/bt_edit"
+            app:layout_constraintStart_toEndOf="@+id/bt_speak"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <com.bald.uriah.baldphone.views.BaldPictureTextButton
-        android:id="@+id/bt_speak"
-        android:layout_width="90dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/style_for_buttons"
-        app:_src="@drawable/voice_on_button"
-        app:_text="@string/speak"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/bt_speak"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/style_for_buttons"
+            app:_src="@drawable/voice_on_button"
+            app:_text="@string/speak"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <com.bald.uriah.baldphone.views.ScrollingHelper
-        android:id="@+id/scrolling_helper"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+            android:id="@+id/scrolling_helper"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_edit">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_edit">
 
         <com.bald.uriah.baldphone.views.ModularScrollView
-            android:id="@+id/child"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                android:id="@+id/child"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                 <com.bald.uriah.baldphone.views.BaldEditText
-                    android:id="@+id/edit_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:enabled="false"
-                    android:gravity="top|start"
-                    android:padding="15dp"
-                    android:textColor="?bald_text_on_background"
-                    android:textSize="@dimen/medium" />
+                        android:id="@+id/edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:enabled="false"
+                        android:gravity="top|start"
+                        android:padding="15dp"
+                        android:textColor="?bald_text_on_background"
+                        android:textSize="@dimen/medium"/>
             </LinearLayout>
         </com.bald.uriah.baldphone.views.ModularScrollView>
     </com.bald.uriah.baldphone.views.ScrollingHelper>

@@ -21,7 +21,6 @@ package com.bald.uriah.baldphone.utils;
 
 import android.view.View;
 import android.widget.Toast;
-
 import com.bald.uriah.baldphone.R;
 
 public class D {
@@ -37,7 +36,6 @@ public class D {
     public final static View.OnClickListener longer = v -> Toast.makeText(v.getContext(), R.string.press_longer, Toast.LENGTH_LONG).show();
     public static final View.OnClickListener EMPTY_CLICK_LISTENER = v -> {
     };
-
 
     //nope.
     private D() {

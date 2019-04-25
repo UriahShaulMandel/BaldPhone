@@ -27,13 +27,11 @@ import android.os.Vibrator;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
-
+import androidx.annotation.ColorInt;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
-
-import androidx.annotation.ColorInt;
 
 public class TutorialFragment2 extends TutorialFragment {
     private Vibrator vibrator;
@@ -87,7 +85,6 @@ public class TutorialFragment2 extends TutorialFragment {
         selected[0] = root.findViewById(R.id.short_presses_selected);
     }
 
-
     private void clickedEffect(TextView v) {
         longPressesFlag = (int) v.getTag();
         applyDuoToFlag();
@@ -101,7 +98,6 @@ public class TutorialFragment2 extends TutorialFragment {
         if (activity != null) {
             activity.recreate();
         }
-
 
     }
 

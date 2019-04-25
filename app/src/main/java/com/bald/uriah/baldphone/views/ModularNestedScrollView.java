@@ -22,12 +22,10 @@ package com.bald.uriah.baldphone.views;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-
-import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.D;
-
 import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
+import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.utils.D;
 
 public class ModularNestedScrollView extends NestedScrollView implements Modular {
     public boolean touchEnabled;
@@ -56,6 +54,5 @@ public class ModularNestedScrollView extends NestedScrollView implements Modular
     public boolean onTouchEvent(MotionEvent ev) {
         return touchEnabled && super.onTouchEvent(ev);
     }
-
 
 }

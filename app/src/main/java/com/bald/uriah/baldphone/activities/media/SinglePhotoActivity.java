@@ -30,12 +30,10 @@ import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
-
+import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.Constants;
 import com.bumptech.glide.Glide;
-
-import androidx.annotation.Nullable;
 
 /**
  * Most of this class is defined at {@link SingleMediaActivity}
@@ -94,7 +92,6 @@ public class SinglePhotoActivity extends SingleMediaActivity implements Constant
                     .setTypeAndNormalize("image/*")
                     .putExtra(Intent.EXTRA_STREAM, uri);
         }
-
 
         @Override
         protected Cursor cursor(Context context) {

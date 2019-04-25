@@ -32,7 +32,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
+import androidx.annotation.*;
+import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.DialerActivity;
@@ -45,18 +46,9 @@ import com.bald.uriah.baldphone.utils.BDialog;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 import com.bumptech.glide.Glide;
-
 import org.joda.time.DateTime;
 
 import java.util.List;
-
-import androidx.annotation.ColorInt;
-import androidx.annotation.ColorRes;
-import androidx.annotation.DrawableRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<CallsRecyclerViewAdapter.ViewHolder> {
     private static final String TAG = CallsRecyclerViewAdapter.class.getSimpleName();
@@ -70,14 +62,12 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
     private static final int BLOCKED_TYPE = 6;
     private static final int ANSWERED_EXTERNALLY_TYPE = 7;
 
-
     @ColorInt
     private final int textColorOnRegular;
     private final List<Call> callList;
     private final BaldActivity activity;
     private final LayoutInflater inflater;
     private final Drawable letterContactBackground;
-
 
     public CallsRecyclerViewAdapter(List<Call> callList, BaldActivity activity) {
         this.callList = callList;
@@ -110,11 +100,9 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
         return callList.size();
     }
 
-
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private static final int expandedSize = 150;
         private static final int notExpandedSize = 100;
-
 
         final ImageView profile_pic, iv_type;
         final TextView tv_type, contact_name, tv_time, image_letter, day;
@@ -179,7 +167,6 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
             final DateTime dateTime = new DateTime(call.dateTime);
             tv_time.setText(S.numberToAlarmString(dateTime.getHourOfDay(), dateTime.getMinuteOfHour()));
         }
-
 
         public void setDay(final @Nullable String day) {
             if (day == null && expanded) {

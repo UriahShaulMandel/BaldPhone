@@ -20,7 +20,6 @@
 package com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments;
 
 import android.content.Context;
-
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.FakeLauncherActivity;
 import com.bald.uriah.baldphone.utils.BPrefs;
@@ -28,7 +27,6 @@ import com.bald.uriah.baldphone.views.BaldButton;
 
 public class TutorialFragment4 extends TutorialFragment {
     BaldButton bt_home;
-
 
     @Override
     protected void attachXml() {

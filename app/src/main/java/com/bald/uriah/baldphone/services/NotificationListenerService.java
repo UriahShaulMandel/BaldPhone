@@ -30,13 +30,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.service.notification.StatusBarNotification;
 import android.util.Log;
+import androidx.annotation.IntDef;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.Objects;
-
-import androidx.annotation.IntDef;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 public class NotificationListenerService extends android.service.notification.NotificationListenerService {
     // BROADCASTS
@@ -128,7 +127,7 @@ public class NotificationListenerService extends android.service.notification.No
     private void sendBroadcastToNotificationsActivity() {
         try {
             final StatusBarNotification[] statusBarNotifications = getActiveNotifications();
-            final Bundle bundlesToSend[] = new Bundle[statusBarNotifications.length];
+            final Bundle[] bundlesToSend = new Bundle[statusBarNotifications.length];
 
             for (int i = 0, statusBarNotificationsLength = statusBarNotifications.length; i < statusBarNotificationsLength; i++) {
                 final StatusBarNotification statusBarNotification = statusBarNotifications[i];

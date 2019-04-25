@@ -19,120 +19,127 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?bald_background">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:id="@+id/container"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="?bald_background">
 
     <com.bald.uriah.baldphone.views.BaldTitleBar
-        android:id="@+id/bald_title_bar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/color_3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/bald_title_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/color_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <com.bald.uriah.baldphone.views.ViewPagerHolder
-        android:id="@+id/view_pager_holder"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bald_title_bar" />
+            android:id="@+id/view_pager_holder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bald_title_bar"/>
 
     <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view_pager_holder">
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view_pager_holder">
 
         <LinearLayout
-            android:id="@+id/options_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?bald_background_transparent"
-            android:orientation="horizontal"
-            android:visibility="gone">
+                android:id="@+id/options_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?bald_background_transparent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
             <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-                android:id="@+id/share"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:orientation="vertical">
+                    android:id="@+id/share"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_for_buttons_transparent"
+                    android:orientation="vertical">
+
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2"
-                    app:srcCompat="@drawable/share_on_background" />
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/share_on_background"/>
+
                 <TextView
-                    style="@style/BackgroundText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.1"
-                    android:gravity="center"
-                    android:includeFontPadding="false"
-                    android:text="@string/share"
-                    app:autoSizeTextType="uniform" />
+                        style="@style/BackgroundText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/share"
+                        app:autoSizeTextType="uniform"/>
 
             </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
 
             <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-                android:id="@+id/delete"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:orientation="vertical">
+                    android:id="@+id/delete"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_for_buttons_transparent"
+                    android:orientation="vertical">
+
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2"
-                    app:srcCompat="@drawable/delete_on_background" />
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/delete_on_background"/>
+
                 <TextView
-                    style="@style/BackgroundText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.1"
-                    android:gravity="center"
-                    android:includeFontPadding="false"
-                    android:text="@string/delete"
-                    app:autoSizeTextType="uniform" />
+                        style="@style/BackgroundText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/delete"
+                        app:autoSizeTextType="uniform"/>
 
 
             </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
         </LinearLayout>
+
         <com.bald.uriah.baldphone.views.BaldFrameLayoutButton
-            android:id="@+id/more"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_gravity="start"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/style_for_buttons"
-            android:padding="5dp">
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/style_for_buttons"
+                android:padding="5dp">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:paddingBottom="5dp"
-                android:src="@drawable/more_on_button"
-                />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/more_on_button"
+                    />
+
             <TextView
-                style="@style/ButtonsText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:includeFontPadding="false"
-                android:text="@string/more"
-                />
+                    style="@style/ButtonsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:includeFontPadding="false"
+                    android:text="@string/more"
+                    />
         </com.bald.uriah.baldphone.views.BaldFrameLayoutButton>
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

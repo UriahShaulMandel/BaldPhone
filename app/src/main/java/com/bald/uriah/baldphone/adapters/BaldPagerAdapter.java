@@ -22,7 +22,8 @@ package com.bald.uriah.baldphone.adapters;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-
+import androidx.annotation.NonNull;
+import androidx.core.util.Pools;
 import com.bald.uriah.baldphone.activities.HomeScreen;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
 import com.bald.uriah.baldphone.utils.BPrefs;
@@ -33,9 +34,6 @@ import com.bald.uriah.baldphone.views.home.NotesView;
 
 import java.util.Collections;
 import java.util.List;
-
-import androidx.annotation.NonNull;
-import androidx.core.util.Pools;
 
 public class BaldPagerAdapter extends BaldViewAdapter {
     private static final String TAG = BaldPagerAdapter.class.getSimpleName();
@@ -52,7 +50,6 @@ public class BaldPagerAdapter extends BaldViewAdapter {
         startingPage = (this.homeScreen.getSharedPreferences(BPrefs.KEY, Context.MODE_PRIVATE).getBoolean(BPrefs.NOTE_VISIBLE_KEY, BPrefs.NOTE_VISIBLE_DEFAULT_VALUE) ? 2 : 1);
         numItems = numItemsBefore = startingPage + 1;
 
-
     }
 
     public void obtainAppList() {
@@ -62,7 +59,6 @@ public class BaldPagerAdapter extends BaldViewAdapter {
         notifyDataSetChanged();
 
     }
-
 
     public View getItem(int position) {
         final View view;
@@ -96,14 +92,12 @@ public class BaldPagerAdapter extends BaldViewAdapter {
         return numItems;
     }
 
-
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         final int virtualPosition = position - (startingPage - 1);
         return super.instantiateItem(container, virtualPosition);
     }
-
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
@@ -115,7 +109,6 @@ public class BaldPagerAdapter extends BaldViewAdapter {
             factoryPool.release(homeFragmentFactory);
         }
     }
-
 
     @Override
     public int getItemPosition(@NonNull Object object) {

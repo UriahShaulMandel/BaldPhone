@@ -28,9 +28,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
-
 import androidx.annotation.Nullable;
-
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
@@ -39,7 +37,6 @@ import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.views.BaldButton;
 import com.bald.uriah.baldphone.views.BaldNumberChooser;
-
 import org.joda.time.DateTime;
 
 /**
@@ -149,7 +146,6 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
                 .putExtra(AddAlarmActivity.ALARM_KEY_AS_EXTRA_KEY, alarm.getKey()));
         finish();
     }
-
 
     private void genOnClickListeners() {
         bt_alarm_submit.setOnClickListener((v) -> submit());

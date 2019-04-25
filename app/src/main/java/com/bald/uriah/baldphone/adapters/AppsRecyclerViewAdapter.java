@@ -28,7 +28,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.AppsActivity;
 import com.bald.uriah.baldphone.activities.BaldActivity;
@@ -39,12 +43,6 @@ import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.annotation.ColorInt;
-import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<RecyclerView.ViewHolder> {
     public static final int TYPE_HEADER = 0;
@@ -62,7 +60,6 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
     private final SparseIntArray letterToPosition;
     public int index = -1;
     private AppViewHolder lastView;
-
 
     public AppsRecyclerViewAdapter(List<App> appList, BaldActivity activity, AppsActivity.ChangeAppListener changeAppListener, RecyclerView caller) {
         this.caller = caller;
@@ -172,7 +169,6 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
         boolean pinned;
         private int index;
 
-
         AppViewHolder(final View itemView) {
             super(itemView);
             container = (ViewGroup) itemView;
@@ -212,7 +208,6 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
             }
 
         }
-
 
         @Override
         public void onClick(View v) {

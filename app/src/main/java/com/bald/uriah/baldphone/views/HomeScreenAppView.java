@@ -23,12 +23,10 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import androidx.annotation.StringRes;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.contacts.SingleContactActivity;
 import com.bald.uriah.baldphone.utils.S;
-
-import androidx.annotation.StringRes;
 
 public class HomeScreenAppView {
     public final ImageView iv_icon;
@@ -41,7 +39,6 @@ public class HomeScreenAppView {
         iv_icon = child.findViewById(R.id.iv_icon);
     }
 
-
     public void setText(@StringRes int resId) {
         tv_name.setText(resId);
     }
@@ -52,7 +49,6 @@ public class HomeScreenAppView {
 
     public void setIntent(final ComponentName componentName) {
         child.setOnClickListener(v -> S.startComponentName(v.getContext(), componentName));
-
 
     }
 

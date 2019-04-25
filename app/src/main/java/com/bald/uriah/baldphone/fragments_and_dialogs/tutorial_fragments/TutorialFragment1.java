@@ -24,7 +24,6 @@ import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.bald.uriah.baldphone.R;
 
 public class TutorialFragment1 extends TutorialFragment {
@@ -65,7 +64,6 @@ public class TutorialFragment1 extends TutorialFragment {
         view.startAnimation(animation);
     }
 
-
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
@@ -84,6 +82,4 @@ public class TutorialFragment1 extends TutorialFragment {
     protected int layoutRes() {
         return R.layout.tutorial_fragment_1;
     }
-
-
 }

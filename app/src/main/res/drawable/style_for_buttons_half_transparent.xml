@@ -20,8 +20,10 @@
   -->
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="false" android:drawable="@android:color/transparent" />
-    <item android:state_pressed="true" android:state_enabled="true" android:drawable="@drawable/btn_clicked_half_transparent" />
-    <item android:state_focused="true" android:state_enabled="true" android:drawable="@drawable/btn_enabled_half_transparent" />
-    <item android:state_enabled="true" android:drawable="@drawable/btn_enabled_half_transparent" />
+    <item android:state_enabled="false" android:drawable="@android:color/transparent"/>
+    <item android:state_pressed="true" android:state_enabled="true"
+          android:drawable="@drawable/btn_clicked_half_transparent"/>
+    <item android:state_focused="true" android:state_enabled="true"
+          android:drawable="@drawable/btn_enabled_half_transparent"/>
+    <item android:state_enabled="true" android:drawable="@drawable/btn_enabled_half_transparent"/>
 </selector>

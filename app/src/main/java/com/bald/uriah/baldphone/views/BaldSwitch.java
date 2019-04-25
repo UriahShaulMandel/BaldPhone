@@ -30,12 +30,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.bald.uriah.baldphone.R;
-
 import androidx.annotation.ColorInt;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
+import com.bald.uriah.baldphone.R;
 
 public class BaldSwitch extends LinearLayout {
     private static final String TAG = BaldSwitch.class.getSimpleName();
@@ -76,7 +74,6 @@ public class BaldSwitch extends LinearLayout {
         init(context, attributeSet);
     }
 
-
     private void init(Context context, @Nullable AttributeSet attributeSet) {
         this.context = context;
         setOrientation(LinearLayout.HORIZONTAL);
@@ -116,7 +113,6 @@ public class BaldSwitch extends LinearLayout {
 
     }
 
-
     private void updateView() {
         if (tv_yes == null && tv_no == null)//First Call
         {
@@ -127,7 +123,6 @@ public class BaldSwitch extends LinearLayout {
 
             setPadding(2, 2, 2, 2);
             setOrientation(HORIZONTAL);
-
 
             tv_yes.setText(yes);
             tv_yes.setOnClickListener(new OnClickListener() {
@@ -167,7 +162,6 @@ public class BaldSwitch extends LinearLayout {
                 tv_no.setTextSize(TypedValue.COMPLEX_UNIT_PX, size);
             }
 
-
             addView(tv_yes);
             addView(tv_no);
         }
@@ -175,9 +169,7 @@ public class BaldSwitch extends LinearLayout {
         tv_yes.setEnabled(enabled);
         tv_no.setEnabled(enabled);
 
-
         if (enabled) {
-
 
             setBackground(ContextCompat.getDrawable(context, R.drawable.btn_enabled));
             if (checked) {
@@ -192,7 +184,6 @@ public class BaldSwitch extends LinearLayout {
                 tv_yes.setTextColor(textColorOnButton);
                 tv_no.setTextColor(textColorOnSelected);
             }
-
 
         } else {
             setBackground(ContextCompat.getDrawable(context, R.drawable.btn_disabled));
@@ -246,6 +237,5 @@ public class BaldSwitch extends LinearLayout {
     public interface OnChangeListener {
         void onChange(boolean isChecked);
     }
-
 
 }

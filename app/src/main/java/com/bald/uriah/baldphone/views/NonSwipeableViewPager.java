@@ -24,12 +24,10 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Scroller;
-
+import androidx.viewpager.widget.ViewPager;
 import com.duolingo.open.rtlviewpager.RtlViewPager;
 
 import java.lang.reflect.Field;
-
-import androidx.viewpager.widget.ViewPager;
 
 public class NonSwipeableViewPager extends RtlViewPager {
 
@@ -52,7 +50,6 @@ public class NonSwipeableViewPager extends RtlViewPager {
     public boolean onTouchEvent(MotionEvent event) {
         return false;
     }
-
 
     private void setMyScroller() {
         try {

@@ -19,34 +19,34 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginTop="10dp"
-    android:background="@drawable/list_shape"
-    android:orientation="vertical">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:background="@drawable/list_shape"
+              android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_address"
-        style="@style/BackgroundText.Medium"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center_vertical"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-         />
+            android:id="@+id/tv_address"
+            style="@style/BackgroundText.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            />
 
     <com.bald.uriah.baldphone.views.BaldPictureTextButton
-        android:id="@+id/address_button"
-        style="@style/BackgroundText.Medium"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
+            android:id="@+id/address_button"
+            style="@style/BackgroundText.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
 
-        android:layout_margin="15dp"
-        android:background="@drawable/style_for_buttons"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:_src="@drawable/location_on_button">
+            android:layout_margin="15dp"
+            android:background="@drawable/style_for_buttons"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:_src="@drawable/location_on_button">
 
     </com.bald.uriah.baldphone.views.BaldPictureTextButton>
 

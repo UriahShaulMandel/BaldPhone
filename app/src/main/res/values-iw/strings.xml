@@ -20,14 +20,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="right">ימין</string>
     <string name="___app_was_not_found">היישום או איש הקשר %s לא נמצא/ה!</string>
-    <string name="a" />
+    <string name="a"/>
     <string name="about">אודות</string>
-    <string name="about_subtext">הפרוייקט נולד מפגישה עם חבר שחלה בפרקינסון. עזרתי לו עם בעיה כלשהי בטלפון, והבחנתי עד כמה הוא מתקשה לבצע פעולות, שעד אז חשבתי שהן פשוטות ומובנות מאליהן.\nהייתי בן 15, תלמיד במגמת מחשבים בכפר הירוק, והחלטתי שזו תהיה המשימה שלי לחופשת הקיץ. BaldPhone הוא תוצר של מעל 800 שעות פיתוח. אני מקווה שבעזרתו מאות, ואולי אלפי האנשים שזקוקים לו, יצליחו להינות משימוש נוח במכשיר שמותאם להם.\nפיתוח הממשק נעשה תוך כדי קבלת משוב צמוד. ניסיתי לענות על מגוון רחב של בעיות וצרכים. אם זאת, כדי להמשיך לשפר וסייע אשמח לקבל משוב, תגובות והערות.\nהBaldPhone הוא חינמי ופתוח לכל. מקווה שתהנו.\nשלכם,\nאוריה שאול מנדל\nbaldphone.contact@gmail.com</string>
+    <string name="about_subtext">הפרוייקט נולד מפגישה עם חבר שחלה בפרקינסון. עזרתי לו עם בעיה כלשהי בטלפון, והבחנתי עד
+        כמה הוא מתקשה לבצע פעולות, שעד אז חשבתי שהן פשוטות ומובנות מאליהן.\nהייתי בן 15, תלמיד במגמת מחשבים בכפר הירוק,
+        והחלטתי שזו תהיה המשימה שלי לחופשת הקיץ. BaldPhone הוא תוצר של מעל 800 שעות פיתוח. אני מקווה שבעזרתו מאות, ואולי
+        אלפי האנשים שזקוקים לו, יצליחו להינות משימוש נוח במכשיר שמותאם להם.\nפיתוח הממשק נעשה תוך כדי קבלת משוב צמוד.
+        ניסיתי לענות על מגוון רחב של בעיות וצרכים. אם זאת, כדי להמשיך לשפר וסייע אשמח לקבל משוב, תגובות
+        והערות.\nהBaldPhone הוא חינמי ופתוח לכל. מקווה שתהנו.\nשלכם,\nאוריה שאול מנדל\nbaldphone.contact@gmail.com
+    </string>
     <string name="accessibility_level">רמת נגישות</string>
     <string name="accessibility_settings">נגישות</string>
     <string name="accidental_touches">חוסם הלחיצות המקריות</string>
-    <string name="accidental_touches_settings_subtext">חוסם הלחיצות המקריות חוסם מגע בטלפון כאשר המסך מכוסה\nאם אתה חווה בעיות עם חוסם זה ניתן לבטל אותו</string>
-    <string name="accidental_touches_subtext">לחיצה מקרית זוהתה\nלחץ על אישור על מנת להמשיך להשתמש בטלפון\nאם הודעה זו חוזרת על עצמה יותר מדי ניתן לבטל את החסימה בהגדרות הנגישות</string>
+    <string name="accidental_touches_settings_subtext">חוסם הלחיצות המקריות חוסם מגע בטלפון כאשר המסך מכוסה\nאם אתה חווה
+        בעיות עם חוסם זה ניתן לבטל אותו
+    </string>
+    <string name="accidental_touches_subtext">לחיצה מקרית זוהתה\nלחץ על אישור על מנת להמשיך להשתמש בטלפון\nאם הודעה זו
+        חוזרת על עצמה יותר מדי ניתן לבטל את החסימה בהגדרות הנגישות
+    </string>
     <string name="acknowledgments">תודות</string>
     <string name="ad">Ad</string>
     <string name="adaptive">משתנה</string>
@@ -61,13 +71,17 @@
     <string name="are_you_sure_you_want_to_delete___">האם ברצונך למחוק את %s?</string>
     <string name="arrows">חיצים</string>
     <string name="arrows_for_scrolling">חצים לגלילה</string>
-    <string name="arrows_for_scrolling_subtext">שיטת גלילה או דפדוף:\n1.חיצים (מומלץ ליד פחות יציבה)\n2. גלילה או דפדוף במשיכת אצבע</string>
+    <string name="arrows_for_scrolling_subtext">שיטת גלילה או דפדוף:\n1.חיצים (מומלץ ליד פחות יציבה)\n2. גלילה או דפדוף
+        במשיכת אצבע
+    </string>
     <string name="assistant">סיוע קולי</string>
     <string name="at_least_one_day_must_be_selected">לפחות יום אחד חייב להיות מסומן!</string>
     <string name="auto_brightness">בהירות אוטומטית</string>
     <string name="back">חזור</string>
     <string name="backspace">מחיקה</string>
-    <string name="baldphone_bla_allow_permission">אנא אפשר את ההרשאות הבאות\nהאפליקציה אינה אוספת מידע אישי וצריכה את הרשאות אלו על מנת לתפקד</string>
+    <string name="baldphone_bla_allow_permission">אנא אפשר את ההרשאות הבאות\nהאפליקציה אינה אוספת מידע אישי וצריכה את
+        הרשאות אלו על מנת לתפקד
+    </string>
     <string name="baldphone_updated">BaldPhone שודרג</string>
     <string name="blocked">חסום</string>
     <string name="bluetooth">Bluetooth</string>
@@ -80,7 +94,8 @@
     <string name="call_subtext">אנא אשר ל BaldPhone לבצע שיחות טלפון</string>
     <string name="calling__">מתקשר ל%s</string>
     <string name="camera">מצלמה</string>
-    <string name="camera_subtext">אנא אשר ל BaldPhone את הרשאת המצלמה, שמאפשרת להפעיל את הפנס. תמונות לעולם לא יצולמו.</string>
+    <string name="camera_subtext">אנא אשר ל BaldPhone את הרשאת המצלמה, שמאפשרת להפעיל את הפנס. תמונות לעולם לא יצולמו.
+    </string>
     <string name="cancel">ביטול</string>
     <string name="change_pills_time">שינוי זמן תרופות</string>
     <string name="change_system_settings">הגדרות</string>
@@ -124,12 +139,16 @@
     <string name="edit">ערוך</string>
     <string name="email">אימייל:</string>
     <string name="enable_notification_access">אפשר להציג התראות שמתקבלות</string>
-    <string name="enable_notification_access_subtext">אנא אפשר ל BaldPhone להציג התראות שמתקבלות, במסך ההתראות. שום מידע לא נאסף.</string>
+    <string name="enable_notification_access_subtext">אנא אפשר ל BaldPhone להציג התראות שמתקבלות, במסך ההתראות. שום מידע
+        לא נאסף.
+    </string>
     <string name="enter">אישור</string>
     <string name="enter_contact_or_phone_number">הקלד שם</string>
     <string name="evening">ערב</string>
     <string name="example">דוגמה</string>
-    <string name="example_of_different_text_sizes">דוגמות לגדלי טקסט שונים ברחבי האפליקציה.\nצריכות להיות קריאות ובו בזמן לא לצאת מהתחום שלהן.</string>
+    <string name="example_of_different_text_sizes">דוגמות לגדלי טקסט שונים ברחבי האפליקציה.\nצריכות להיות קריאות ובו
+        בזמן לא לצאת מהתחום שלהן.
+    </string>
     <string name="external_storage_subtext">אנא אפשר לBaldPhone לגשת לתמונות ולסרטים ולקבצי עדכון</string>
     <string name="favorites">מועדפים</string>
     <string name="feedback">משוב</string>
@@ -141,7 +160,9 @@
     <string name="friday">שישי</string>
     <string name="go_through_tutorial">מדריך</string>
     <string name="google">גוגל</string>
-    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">מתקשה בתפעול המקלדת? עבור למקלדת הגדולה והמותאמת!</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">מתקשה בתפעול המקלדת?
+        עבור למקלדת הגדולה והמותאמת!
+    </string>
     <string name="hebrew">1</string>
     <string name="hello">שלום</string>
     <string name="help">סרטון הדרכה</string>
@@ -154,17 +175,23 @@
     <string name="huge">ענק</string>
     <string name="internet">אינטרנט</string>
     <string name="invoked_in">צלצול יופעל בעוד</string>
-    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">ולסיום אנא החלף את מסך הבית של הטלפון\nהתהליך הפיך לחלוטין וניתן לשינוי בהגדרות האפליקציה</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">ולסיום אנא החלף
+        את מסך הבית של הטלפון\nהתהליך הפיך לחלוטין וניתן לשינוי בהגדרות האפליקציה
+    </string>
     <string name="language">שפה</string>
     <string name="language_settings">שפה</string>
     <string name="large">גדול</string>
-    <string name="last_update_subtext">שלום, BaldPhone שודרג. דרך פעולת תזכור התרופות שונתה. התרופות שלך נמחקו. ניתן להגדיר אותן מחדש במסך התרופות. סליחה על אי הנוחות.</string>
+    <string name="last_update_subtext">שלום, BaldPhone שודרג. דרך פעולת תזכור התרופות שונתה. התרופות שלך נמחקו. ניתן
+        להגדיר אותן מחדש במסך התרופות. סליחה על אי הנוחות.
+    </string>
     <string name="left">שמאל</string>
     <string name="left_handed">לשמאליים</string>
     <string name="light">בהיר</string>
     <string name="location">מיקום</string>
     <string name="long_presses">לחיצה ארוכה</string>
-    <string name="long_presses_subtext">בחר לחיצה ארוכה או רגילה \nלחיצה ארוכה מומלצת ליד פחות יציבה \nלשימוש בלחיצה ארוכה, יש הוסף ניווט על ידי חיצים וחיווי רטט</string>
+    <string name="long_presses_subtext">בחר לחיצה ארוכה או רגילה \nלחיצה ארוכה מומלצת ליד פחות יציבה \nלשימוש בלחיצה
+        ארוכה, יש הוסף ניווט על ידי חיצים וחיווי רטט
+    </string>
     <string name="emergency_services">מגן דוד אדום</string>
     <string name="mail">אימייל</string>
     <string name="manual">מדריך</string>
@@ -206,7 +233,8 @@
     <string name="permissions_part">הרשאות</string>
     <string name="personalization_settings">התאמה אישית</string>
     <string name="phone">טלפון</string>
-    <string name="phone_ask_permission_subtext"><![CDATA[Please go to settings -> permissions -> enable call permission]]></string>
+    <string name="phone_ask_permission_subtext">
+        <![CDATA[Please go to settings -> permissions -> enable call permission]]></string>
     <string name="photo">תמונה</string>
     <string name="photos">תמונות</string>
     <string name="pill_added">תרופה הוספה!</string>
@@ -221,7 +249,8 @@
     <string name="previous">הקודם</string>
     <string name="quick_alarm">טיימר</string>
     <string name="read_call_log">גישה לשיחות האחרונות</string>
-    <string name="read_call_log_subtext">אנא אפשר לBaldPhone לגשת לשיחות האחרונות, אשר יוצגו במסך השיחות האחרונות.</string>
+    <string name="read_call_log_subtext">אנא אפשר לBaldPhone לגשת לשיחות האחרונות, אשר יוצגו במסך השיחות האחרונות.
+    </string>
     <string name="read_contacts">סרוק אנשי קשר</string>
     <string name="received">נענתה</string>
     <string name="recent">שיחות אחרונות</string>
@@ -243,16 +272,25 @@
     <string name="selected">נבחר</string>
     <string name="send">שלח</string>
     <string name="set_default_dialer">יישום שיחות</string>
-    <string name="set_default_dialer_subtext">אנא אפשר לBaldPhone להיות יישום השיחות, על מנת שיוכל לגשת לשיחות אחרונות, ליצור אנשי קשר ולהתקשר.</string>
+    <string name="set_default_dialer_subtext">אנא אפשר לBaldPhone להיות יישום השיחות, על מנת שיוכל לגשת לשיחות אחרונות,
+        ליצור אנשי קשר ולהתקשר.
+    </string>
     <string name="set_home_screen">שנה את מסך הבית</string>
-    <string name="set_home_screen_subtext">על מנת להוציא את המיטב מ-BaldPhone, מומלץ להגדיר אותה בתור מסך הבית.\nהתהליך הפיך וניתן לשינוי בהגדרות</string>
+    <string name="set_home_screen_subtext">על מנת להוציא את המיטב מ-BaldPhone, מומלץ להגדיר אותה בתור מסך הבית.\nהתהליך
+        הפיך וניתן לשינוי בהגדרות
+    </string>
     <string name="set_keyboard">הגדר מקלדת</string>
     <string name="setting_does_not_exist">הגדרה אינה קיימת!</string>
     <string name="settings">הגדרות</string>
     <string name="settings_permission">הגדרות</string>
     <string name="share">שלח</string>
-    <string name="share_actual_text">הי, אני משתמש/ת בפלטפורמה שנקראת Baldphone, המציעה פנים חדשות לטלפון הסלולרי, לטובת ממשק נח, פשוט וקל לתפעול ולראייה. והחלק הכי טוב, היא חינמית לחלוטין! מעוניינ/ת?\n\nעוד מידע:\nhttps://sites.google.com/view/baldphone-il/home\n\n</string>
-    <string name="share_bald_phone_subtext">שלום,\nמכיר.ה אדם שיעוניין בBaldPhone?\nאת.ה מוזמנ.ת לשתף את BaldPhone עמו.</string>
+    <string name="share_actual_text">הי, אני משתמש/ת בפלטפורמה שנקראת Baldphone, המציעה פנים חדשות לטלפון הסלולרי, לטובת
+        ממשק נח, פשוט וקל לתפעול ולראייה. והחלק הכי טוב, היא חינמית לחלוטין! מעוניינ/ת?\n\nעוד
+        מידע:\nhttps://sites.google.com/view/baldphone-il/home\n\n
+    </string>
+    <string name="share_bald_phone_subtext">שלום,\nמכיר.ה אדם שיעוניין בBaldPhone?\nאת.ה מוזמנ.ת לשתף את BaldPhone
+        עמו.
+    </string>
     <string name="share_baldphone">שיתוף BaldPhone</string>
     <string name="share_contact">שליחת איש קשר</string>
     <string name="share_differently">שליחה דרך יישום אחר</string>
@@ -283,7 +321,7 @@
     <string name="to___minuets_from_now">ל%d דקות מעכשיו</string>
     <string name="today">היום</string>
     <string name="too_many_apps_with___in_them">יותר מידי יישומים ששמם מכיל %s!</string>
-    <string name="too_many_contacts_with___in_them"> יותר מידי אנשי קשר ששמם %s!</string>
+    <string name="too_many_contacts_with___in_them">יותר מידי אנשי קשר ששמם %s!</string>
     <string name="took">לקחתי!</string>
     <string name="tuesday">שלישי</string>
     <string name="unable_to_init_flashlight">אתחול הפנס אינו מתאפשר</string>
@@ -315,25 +353,36 @@
     <string name="no_alarms">אין שעונים\nהוסף אחד על ידי לחיצה על\n\"הוסף שעון מעורר\"\nאו\n\"הוסף טיימר\"</string>
     <string name="no_pills">אין תרופות\nהוסף אחת על ידי לחיצה על\n\"הוסף תרופה\"</string>
     <string name="clear_all_notifications">מחיקת כל ההתראות</string>
-    <string name="clear_cache_subtext">האם אתה בטוח שאתה רוצה למחוק את כל המטמון?\nיישומים מוצמדים יפסיקו להיות מוצמדים</string>
-    <string name="permissions_calm">הי, BaldPhone חייב לקבל את ההרשאות הבאות בשביל לרוץ. חלק נשמעות מפחיד, אבל זוהי הדרך היחידה שבה BaldPhone יכול להחליף את ממשק הטלפון. שום מידע לא נלקח ומתן ההרשאות לא גורם לשום נזק. לחץ אישור על מנת לאפשר את ההרשאות או לא בשביל לצאת מBaldPhone.</string>
+    <string name="clear_cache_subtext">האם אתה בטוח שאתה רוצה למחוק את כל המטמון?\nיישומים מוצמדים יפסיקו להיות
+        מוצמדים
+    </string>
+    <string name="permissions_calm">הי, BaldPhone חייב לקבל את ההרשאות הבאות בשביל לרוץ. חלק נשמעות מפחיד, אבל זוהי הדרך
+        היחידה שבה BaldPhone יכול להחליף את ממשק הטלפון. שום מידע לא נלקח ומתן ההרשאות לא גורם לשום נזק. לחץ אישור על
+        מנת לאפשר את ההרשאות או לא בשביל לצאת מBaldPhone.
+    </string>
 
     <string name="also_available_at">ניתן גם לשלוח מייל ל\nbaldphone.contact@gmail.com</string>
 
-    <string name="recent_last_words">משתמשים יקרים,\nבעקבות שינוי תנאי השימוש של גוגל, בצער רב וביגון קודר אני נאלץ להסיר את מסך השיחות האחרונות מBaldPhone.\nm</string>
+    <string name="recent_last_words">משתמשים יקרים,\nבעקבות שינוי תנאי השימוש של גוגל, בצער רב וביגון קודר אני נאלץ
+        להסיר את מסך השיחות האחרונות מBaldPhone.\nm
+    </string>
     <string name="calling">ביצוע שיחות</string>
 
     <string name="pending_update">עדכון מחכה</string>
     <string name="download">הורד</string>
     <string name="install_updates">התקן עדכונים</string>
     <string name="install_updates_subtext">אנא אפשר לBaldPhone להתקין עדכונים.</string>
-    <string name="a_new_update_is_available">עדכון חדש מחכה!\nעדכונים הם חשובים על מנת ש-BaldPhone ירוץ בצורה חלקה.\nלחץ על אוקיי על מנת להוריד</string>
+    <string name="a_new_update_is_available">עדכון חדש מחכה!\nעדכונים הם חשובים על מנת ש-BaldPhone ירוץ בצורה חלקה.\nלחץ
+        על אוקיי על מנת להוריד
+    </string>
     <string name="current_version">גרסה נוכחית:\n</string>
     <string name="new_version">גרסה חדשה:\n</string>
     <string name="new_updates_are_ready_to_be_downloaded">עדכונים חדשים מחכים להורדה</string>
     <string name="install">התקן</string>
     <string name="data_warning">אזהרת גלישה</string>
-    <string name="data_warning_subtext">הי, אתה לא מחובר לWIFI.\nגודל ההורדה הוא כ3MB, אם אתה בחול הורדה זו עלולה לעלות לך כסף.\nאתה רוצה להמשיך עם ההורדה?</string>
+    <string name="data_warning_subtext">הי, אתה לא מחובר לWIFI.\nגודל ההורדה הוא כ3MB, אם אתה בחול הורדה זו עלולה לעלות
+        לך כסף.\nאתה רוצה להמשיך עם ההורדה?
+    </string>
     <string name="update_message_is_corrupted">מידע על הורדה לא תקין</string>
     <string name="check_for_updates">בדוק עדכונים</string>
     <string name="could_not_connect_to_server">לא מצליח להתחבר לשרת!</string>
@@ -352,7 +401,9 @@
     <string name="download_progress">תהליך הורדה</string>
 
     <string name="crash_reports">דיווח על קריסות</string>
-    <string name="crash_reports_subtext">דיווח על קריסות עוזר לי לתקן אותן במהירות\nnהמידע שנשלח הוא רק המידע ההכרחי על מנת לתקן את התקלה, ולא נלקח שום מידע אישי</string>
+    <string name="crash_reports_subtext">דיווח על קריסות עוזר לי לתקן אותן במהירות\nnהמידע שנשלח הוא רק המידע ההכרחי על
+        מנת לתקן את התקלה, ולא נלקח שום מידע אישי
+    </string>
     <string name="custom_app">יישום מועדף</string>
     <string name="custom_app_subtext">בחר יישום מועדף להצמדה למסך הבית.</string>
 

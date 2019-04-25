@@ -27,12 +27,10 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
-
-import com.bald.uriah.baldphone.utils.S;
-
 import androidx.annotation.Keep;
 import androidx.annotation.LayoutRes;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import com.bald.uriah.baldphone.utils.S;
 
 public abstract class BaldKeyboard extends FrameLayout {
     public static final char SHIFT = (char) 1;
@@ -44,11 +42,11 @@ public abstract class BaldKeyboard extends FrameLayout {
     public static final char HIDE = (char) 7;
 
     protected final ConstraintLayout keyboard;
-    protected final View children[], backspace;
+    protected final View[] children;
+    protected final View backspace;
     private final Vibrator vibrator;
     private final Runnable backspaceRunnable;
     private Thread backspaceThread;
-
 
     @Keep
     public BaldKeyboard(Context context, View.OnClickListener onClickListener, Runnable backspaceRunnable) {

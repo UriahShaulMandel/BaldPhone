@@ -19,8 +19,8 @@
   -->
 
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/style_for_buttons_transparent"
-    android:contentDescription="@string/right"
-    android:src="@drawable/arrow_right_on_background" />
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@drawable/style_for_buttons_transparent"
+           android:contentDescription="@string/right"
+           android:src="@drawable/arrow_right_on_background"/>

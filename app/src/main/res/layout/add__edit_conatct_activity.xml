@@ -19,158 +19,157 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?bald_background"
-    >
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="?bald_background"
+        >
 
     <com.bald.uriah.baldphone.views.BaldTitleBar
-        android:id="@+id/bald_title_bar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@color/color_1"
-        app:title="@string/add_contact" />
+            android:id="@+id/bald_title_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="@color/color_1"
+            app:title="@string/add_contact"/>
 
 
     <com.bald.uriah.baldphone.views.BaldEditText
-        android:id="@+id/et_name"
-        style="@style/BackgroundText.Large"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="8dp"
-        android:hint="@string/name"
-        android:imeOptions="actionNext"
-        android:inputType="textPersonName"
-        android:nextFocusForward="@+id/et_mobile_number"
-        android:textColorHint="?bald_hint_on_background"
-        app:layout_constraintBottom_toTopOf="@+id/et_mobile_number"
-        app:layout_constraintEnd_toStartOf="@+id/iv_image"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bald_title_bar" />
+            android:id="@+id/et_name"
+            style="@style/BackgroundText.Large"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/name"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:nextFocusForward="@+id/et_mobile_number"
+            android:textColorHint="?bald_hint_on_background"
+            app:layout_constraintBottom_toTopOf="@+id/et_mobile_number"
+            app:layout_constraintEnd_toStartOf="@+id/iv_image"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bald_title_bar"/>
 
     <com.bald.uriah.baldphone.views.BaldImageButton
-        android:id="@+id/iv_image"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/style_for_buttons"
-        android:padding="5dp"
-        android:src="@drawable/photo_on_button"
-        app:layout_constraintBottom_toBottomOf="@id/et_name"
-        app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/et_name" />
+            android:id="@+id/iv_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/style_for_buttons"
+            android:padding="5dp"
+            android:src="@drawable/photo_on_button"
+            app:layout_constraintBottom_toBottomOf="@id/et_name"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et_name"/>
 
     <com.bald.uriah.baldphone.views.BaldImageButton
-        android:id="@+id/iv_delete"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:background="@drawable/style_for_buttons"
-        android:src="@drawable/delete_on_button"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_image"
-        app:layout_constraintEnd_toEndOf="@+id/iv_image" />
-
-
-
-    <com.bald.uriah.baldphone.views.BaldEditText
-        android:id="@+id/et_mobile_number"
-        style="@style/BackgroundText.Large"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:hint="@string/mobile_phone_number"
-        android:imeOptions="actionNext"
-        android:inputType="phone"
-        android:nextFocusForward="@+id/et_home_number"
-        android:textColorHint="?bald_hint_on_background"
-        app:layout_constraintBottom_toTopOf="@+id/et_home_number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+            android:id="@+id/iv_delete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/style_for_buttons"
+            android:src="@drawable/delete_on_button"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_image"
+            app:layout_constraintEnd_toEndOf="@+id/iv_image"/>
 
 
     <com.bald.uriah.baldphone.views.BaldEditText
-        android:id="@+id/et_home_number"
-        style="@style/BackgroundText.Large"
-        android:layout_width="0dp"
+            android:id="@+id/et_mobile_number"
+            style="@style/BackgroundText.Large"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/mobile_phone_number"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:nextFocusForward="@+id/et_home_number"
+            android:textColorHint="?bald_hint_on_background"
+            app:layout_constraintBottom_toTopOf="@+id/et_home_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
 
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:hint="@string/home_phone_number"
-        android:imeOptions="actionNext"
-        android:inputType="phone"
-        android:nextFocusForward="@+id/et_address"
-        android:textColorHint="?bald_hint_on_background"
-        app:layout_constraintBottom_toTopOf="@+id/et_address"
-        app:layout_constraintEnd_toEndOf="@+id/et_mobile_number"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/et_mobile_number"
-
-        app:layout_constraintTop_toBottomOf="@+id/et_mobile_number" />
-
-
-    <com.bald.uriah.baldphone.views.BaldEditText
-        android:id="@+id/et_address"
-        style="@style/BackgroundText.Large"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:hint="@string/address"
-        android:imeOptions="actionNext"
-        android:inputType="textPostalAddress"
-        android:nextFocusForward="@+id/et_mail"
-        android:textColorHint="?bald_hint_on_background"
-        app:layout_constraintBottom_toTopOf="@+id/et_mail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_home_number" />
+            app:layout_constraintTop_toBottomOf="@+id/et_name"/>
 
 
     <com.bald.uriah.baldphone.views.BaldEditText
-        android:id="@+id/et_mail"
-        style="@style/BackgroundText.Large"
-        android:layout_width="0dp"
+            android:id="@+id/et_home_number"
+            style="@style/BackgroundText.Large"
+            android:layout_width="0dp"
 
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:hint="@string/mail"
-        android:imeOptions="actionDone"
-        android:inputType="textEmailAddress"
-        android:textColorHint="?bald_hint_on_background"
-        app:layout_constraintBottom_toTopOf="@+id/save"
-        app:layout_constraintEnd_toEndOf="@+id/et_address"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/et_address"
-        app:layout_constraintTop_toBottomOf="@+id/et_address" />
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/home_phone_number"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:nextFocusForward="@+id/et_address"
+            android:textColorHint="?bald_hint_on_background"
+            app:layout_constraintBottom_toTopOf="@+id/et_address"
+            app:layout_constraintEnd_toEndOf="@+id/et_mobile_number"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/et_mobile_number"
+
+            app:layout_constraintTop_toBottomOf="@+id/et_mobile_number"/>
+
+
+    <com.bald.uriah.baldphone.views.BaldEditText
+            android:id="@+id/et_address"
+            style="@style/BackgroundText.Large"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/address"
+            android:imeOptions="actionNext"
+            android:inputType="textPostalAddress"
+            android:nextFocusForward="@+id/et_mail"
+            android:textColorHint="?bald_hint_on_background"
+            app:layout_constraintBottom_toTopOf="@+id/et_mail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_home_number"/>
+
+
+    <com.bald.uriah.baldphone.views.BaldEditText
+            android:id="@+id/et_mail"
+            style="@style/BackgroundText.Large"
+            android:layout_width="0dp"
+
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/mail"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:textColorHint="?bald_hint_on_background"
+            app:layout_constraintBottom_toTopOf="@+id/save"
+            app:layout_constraintEnd_toEndOf="@+id/et_address"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/et_address"
+            app:layout_constraintTop_toBottomOf="@+id/et_address"/>
 
     <com.bald.uriah.baldphone.views.BaldButton
-        android:id="@+id/save"
-        style="@style/ButtonsText.Large"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/style_for_buttons_pill"
-        android:text="@string/save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            android:id="@+id/save"
+            style="@style/ButtonsText.Large"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/style_for_buttons_pill"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

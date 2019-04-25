@@ -18,20 +18,22 @@
   ~ under the License.
   -->
 
-<layer-list  xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--<item  >-->
-        <!--<shape android:shape="rectangle">-->
-            <!--<solid android:color="@color/button_grad_color" />-->
-        <!--</shape>-->
+    <!--<shape android:shape="rectangle">-->
+    <!--<solid android:color="@color/button_grad_color" />-->
+    <!--</shape>-->
     <!--</item>-->
 
-    <item android:bottom="1dp"  android:top="1dp">
-        <shape android:shape="rectangle" >
+    <item
+            android:bottom="1dp"
+            android:top="1dp">
+        <shape android:shape="rectangle">
 
-        <solid
-            android:color="?bald_background"
-            />
+            <solid
+                    android:color="?bald_background"
+                    />
 
 
         </shape>

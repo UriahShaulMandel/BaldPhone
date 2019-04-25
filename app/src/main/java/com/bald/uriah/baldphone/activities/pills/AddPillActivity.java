@@ -29,7 +29,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
-
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
@@ -41,9 +42,6 @@ import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.views.BaldButton;
 import com.bald.uriah.baldphone.views.BaldMultipleSelection;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
-
-import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
 
 import static com.bald.uriah.baldphone.utils.BaldToast.TYPE_ERROR;
 
@@ -59,7 +57,7 @@ public class AddPillActivity extends BaldActivity {
     private EditText reminder_edit_name;
     private BaldMultipleSelection baldMultipleSelection;
     private ImageView[] colors;
-    private int COLORS[] = new int[]{
+    private int[] COLORS = new int[]{
             R.color.blue,
             R.color.red,
             R.color.gray,
@@ -110,7 +108,6 @@ public class AddPillActivity extends BaldActivity {
                 }
             }
 
-
         }
 
     }
@@ -140,7 +137,6 @@ public class AddPillActivity extends BaldActivity {
                 findViewById(R.id.custom),
         };
 
-
         every_day.setChecked(true);
 
     }
@@ -156,12 +152,10 @@ public class AddPillActivity extends BaldActivity {
         } else
             sum = D.Days.ALL;
 
-
         if (sum == 0) {
             BaldToast.from(this).setType(TYPE_ERROR).setText(R.string.at_least_one_day_must_be_selected).show();
             return;
         }
-
 
         Reminder reminder = new Reminder();
 
@@ -194,17 +188,14 @@ public class AddPillActivity extends BaldActivity {
         }
         ReminderScheduler.scheduleReminder(reminder, this);
 
-
         setResult(RESULT_OK, new Intent().putExtra(Reminder.REMINDER_KEY_VIA_INTENTS, reminder.getId())
                 .putExtra(AddPillActivity.REMINDER_KEY_AS_EXTRA_KEY, reminder.getId()));
         finish();
 
     }
 
-
     private void genOnClickListeners() {
         bt_submit.setOnClickListener((v) -> submit2());
-
 
         every_day.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (vibrator != null) vibrator.vibrate(D.vibetime);
@@ -248,7 +239,6 @@ public class AddPillActivity extends BaldActivity {
                 return true;
             });
         }
-
 
         for (int i = 0; i < colors.length; i++) {
             int finalI = i;

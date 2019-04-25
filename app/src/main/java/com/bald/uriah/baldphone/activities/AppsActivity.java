@@ -31,7 +31,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.apps.App;
@@ -42,11 +45,6 @@ import com.bald.uriah.baldphone.utils.BDialog;
 import com.bald.uriah.baldphone.utils.S;
 
 import java.util.List;
-
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import static com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter.TYPE_HEADER;
 
@@ -205,7 +203,6 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
             }
         }
     }
-
 
     private void appChosen(int index) {
         if (lastIndex == index)

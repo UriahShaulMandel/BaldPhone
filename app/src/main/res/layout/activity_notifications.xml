@@ -19,73 +19,73 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?bald_background">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="?bald_background">
 
     <com.bald.uriah.baldphone.views.BaldTitleBar
-        android:id="@+id/bald_title_bar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/notifications" />
+            android:id="@+id/bald_title_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/notifications"/>
 
     <com.bald.uriah.baldphone.views.ScrollingHelper
-        android:id="@+id/scroller"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bald_title_bar">
+            android:id="@+id/scroller"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bald_title_bar">
 
         <com.bald.uriah.baldphone.views.ModularRecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:paddingBottom="60dp"
-            style="@style/ScrollStyle"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            />
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="60dp"
+                style="@style/ScrollStyle"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
 
     </com.bald.uriah.baldphone.views.ScrollingHelper>
 
     <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:background="?bald_background_transparent"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="?bald_background_transparent"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
         <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-            android:id="@+id/clear_all_notifications"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/style_for_buttons_transparent"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingStart="50dp"
-            android:paddingEnd="50dp">
+                android:id="@+id/clear_all_notifications"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/style_for_buttons_transparent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/delete_on_background" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/delete_on_background"/>
 
             <TextView
-                style="@style/BackgroundText.Medium"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="start|center_vertical"
-                android:paddingStart="5dp"
-                android:paddingEnd="0dp"
-                android:text="@string/clear_all_notifications" />
+                    style="@style/BackgroundText.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/clear_all_notifications"/>
         </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
     </FrameLayout>
 

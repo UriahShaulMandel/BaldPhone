@@ -24,7 +24,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.provider.ContactsContract;
-
+import androidx.annotation.NonNull;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.DialerActivity;
 import com.bald.uriah.baldphone.activities.contacts.SingleContactActivity;
@@ -33,9 +33,6 @@ import com.bald.uriah.baldphone.databases.apps.AppsDatabase;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 
 import java.util.List;
-
-import androidx.annotation.NonNull;
-
 
 public class VoiceRecognition {
 
@@ -139,7 +136,6 @@ public class VoiceRecognition {
             throw new VoiceRecognitionException(String.format(context.getString(R.string.no_contact_contains___), filter));
         }
     }
-
 
     public enum AnswerType {
         FAILED {

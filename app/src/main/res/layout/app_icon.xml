@@ -19,76 +19,79 @@
   -->
 
 <com.bald.uriah.baldphone.views.BaldConstraintLayoutButton xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:outlineProvider="bounds"
-    android:padding="5dp">
+                                                           xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                           android:id="@+id/container"
+                                                           android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content"
+                                                           android:orientation="vertical"
+                                                           android:outlineProvider="bounds"
+                                                           android:padding="5dp">
 
     <ImageView
-        android:id="@+id/app_icon"
-        android:padding="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="1:1"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="48dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:adjustViewBounds="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/app_icon"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
     <Space
-        android:id="@+id/space2"
-        android:layout_width="0dp"
-        android:layout_height="5dp"
-        app:layout_constraintBottom_toBottomOf="@id/app_icon"
-         />
+            android:id="@+id/space2"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/app_icon"
+            />
+
     <Space
-        android:id="@+id/space3"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        app:layout_constraintTop_toBottomOf="@id/app_icon"
-        />
+            android:id="@+id/space3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf="@id/app_icon"
+            />
 
     <TextView
-        android:id="@+id/app_name"
-        style="@style/BackgroundText"
-        android:textSize="18dp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="@id/space3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/space2" />
+            android:id="@+id/app_name"
+            style="@style/BackgroundText"
+            android:textSize="18dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/space3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/space2"/>
 
     <ImageView
-        android:id="@+id/pin"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/pin_background"
-        app:srcCompat="@drawable/pin_on_button"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/space"
-        app:layout_constraintStart_toEndOf="@+id/space" />
+            android:id="@+id/pin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/pin_background"
+            app:srcCompat="@drawable/pin_on_button"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/space"
+            app:layout_constraintStart_toEndOf="@+id/space"/>
+
     <Space
-        android:id="@+id/space"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/app_icon"
-        app:layout_constraintTop_toTopOf="@id/app_icon" />
+            android:id="@+id/space"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="@+id/app_icon"
+            app:layout_constraintTop_toTopOf="@id/app_icon"/>
 </com.bald.uriah.baldphone.views.BaldConstraintLayoutButton>

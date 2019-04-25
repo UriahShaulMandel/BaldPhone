@@ -28,19 +28,13 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-
+import androidx.annotation.*;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.core.content.ContextCompat;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.D;
 
 import java.util.ArrayList;
-
-import androidx.annotation.ColorInt;
-import androidx.annotation.DrawableRes;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.annotation.StringRes;
-import androidx.appcompat.widget.LinearLayoutCompat;
-import androidx.core.content.ContextCompat;
 
 public class BaldMultipleSelection extends LinearLayout {
     private @ColorInt
@@ -56,11 +50,11 @@ public class BaldMultipleSelection extends LinearLayout {
     private int size = 0;
     private float pxDimen;
     private ArrayList<BaldButton> buttons = new ArrayList<>(5);
+
     public BaldMultipleSelection(Context context) {
         super(context);
         init(context, null);
     }
-
 
     public BaldMultipleSelection(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -108,7 +102,6 @@ public class BaldMultipleSelection extends LinearLayout {
             textColorOnSelected = typedArray.getColor(R.styleable.BaldMultipleSelection_selected_text_color, textColorOnSelected);
             typedArray.recycle();
         }
-
 
     }
 
@@ -188,7 +181,6 @@ public class BaldMultipleSelection extends LinearLayout {
             setClicked(button, true);
         }
 
-
         //TODO DELETE
     }
 
@@ -216,9 +208,7 @@ public class BaldMultipleSelection extends LinearLayout {
 
         }
 
-
     }
-
 
     @FunctionalInterface
     public interface OnItemClickListener {

@@ -19,46 +19,46 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?bald_background"
-    android:orientation="vertical">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="?bald_background"
+              android:orientation="vertical">
 
     <com.bald.uriah.baldphone.views.BaldTitleBar
-        android:id="@+id/bald_title_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/color_1"
-        app:title="Dad" />
+            android:id="@+id/bald_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/color_1"
+            app:title="Dad"/>
 
     <com.bald.uriah.baldphone.views.ScrollingHelper
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.bald.uriah.baldphone.views.ModularScrollView
-            android:id="@+id/single_contact_scroll_view"
-            style="@style/ScrollStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
-                android:id="@+id/ll_info"
+        <com.bald.uriah.baldphone.views.ModularScrollView
+                android:id="@+id/single_contact_scroll_view"
+                style="@style/ScrollStyle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent">
 
-                <include
-                    layout="@layout/contact_bar"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginBottom="10dp" />
-
-                <com.bald.uriah.baldphone.views.SquareImageView
-                    android:id="@+id/contact_image"
+            <LinearLayout
+                    android:id="@+id/ll_info"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:transitionName="prof_pic_contacts_animation" />
+                    android:orientation="vertical">
+
+                <include
+                        layout="@layout/contact_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="10dp"/>
+
+                <com.bald.uriah.baldphone.views.SquareImageView
+                        android:id="@+id/contact_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:transitionName="prof_pic_contacts_animation"/>
             </LinearLayout>
         </com.bald.uriah.baldphone.views.ModularScrollView>
     </com.bald.uriah.baldphone.views.ScrollingHelper>

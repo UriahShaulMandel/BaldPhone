@@ -22,11 +22,9 @@ package com.bald.uriah.baldphone.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-
+import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.D;
-
-import androidx.annotation.Nullable;
 
 public class CrashActivity extends BaldActivity {
     @Override

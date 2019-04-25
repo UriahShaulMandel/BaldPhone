@@ -19,13 +19,13 @@
 
 package com.bald.uriah.baldphone.databases.alarms;
 
-import java.util.Calendar;
-
 import androidx.annotation.Nullable;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
+
+import java.util.Calendar;
 
 /**
  * Alarm class.

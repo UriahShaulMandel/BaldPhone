@@ -19,30 +19,30 @@
   -->
 
 <com.bald.uriah.baldphone.views.BaldLinearLayoutButton xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/bt_add_contact"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/style_for_buttons_transparent"
-    android:gravity="center"
-    android:orientation="horizontal"
-    android:paddingStart="50dp"
-    android:paddingEnd="50dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/bald_title_bar">
+                                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                       android:id="@+id/bt_add_contact"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="match_parent"
+                                                       android:background="@drawable/style_for_buttons_transparent"
+                                                       android:gravity="center"
+                                                       android:orientation="horizontal"
+                                                       android:paddingStart="50dp"
+                                                       android:paddingEnd="50dp"
+                                                       app:layout_constraintEnd_toEndOf="parent"
+                                                       app:layout_constraintStart_toStartOf="parent"
+                                                       app:layout_constraintTop_toBottomOf="@id/bald_title_bar">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:src="@drawable/add_outlined_on_background" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/add_outlined_on_background"/>
 
     <TextView
-        style="@style/BackgroundText.Medium"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:gravity="start|center_vertical"
-        android:paddingStart="5dp"
-        android:paddingEnd="0dp"
-        android:text="@string/add_contact" />
+            style="@style/BackgroundText.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:text="@string/add_contact"/>
 </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>

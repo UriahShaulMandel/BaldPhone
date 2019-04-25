@@ -29,14 +29,12 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 
 public class BaldTitleBar extends LinearLayout {
     private CharSequence title;
@@ -45,7 +43,6 @@ public class BaldTitleBar extends LinearLayout {
     private TextView tv_title;
     private boolean added;
     private int textColorBeforeGold = -1;
-
 
     public BaldTitleBar(Context context) {
         super(context);
@@ -70,7 +67,6 @@ public class BaldTitleBar extends LinearLayout {
 
     }
 
-
     private void init(Context context, @Nullable AttributeSet attributeSet) {
         this.context = context;
         setOrientation(LinearLayout.HORIZONTAL);
@@ -91,9 +87,7 @@ public class BaldTitleBar extends LinearLayout {
         tv_title.setText(title);
         updateView();
 
-
     }
-
 
     public void setGold(boolean gold) {
         if (textColorBeforeGold == -1) {
@@ -107,7 +101,6 @@ public class BaldTitleBar extends LinearLayout {
         tv_title.setTextColor(gold ? onGoldColorInt : textColorBeforeGold);
 
     }
-
 
     //public on purpose, because of settings app... trust me
     private void updateView() {
@@ -153,6 +146,5 @@ public class BaldTitleBar extends LinearLayout {
     public ImageView getBt_help() {
         return bt_help;
     }
-
 
 }

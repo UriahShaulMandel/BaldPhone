@@ -24,11 +24,9 @@ import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.os.Build;
 import android.util.AttributeSet;
-
 import androidx.annotation.RequiresApi;
 
 public class BaldKeyboardView extends KeyboardView {
-
 
     public invokePressListener invokePressListener;
 
@@ -39,7 +37,6 @@ public class BaldKeyboardView extends KeyboardView {
     public BaldKeyboardView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
-
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public BaldKeyboardView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {

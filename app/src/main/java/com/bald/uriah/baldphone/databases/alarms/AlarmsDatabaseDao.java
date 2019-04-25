@@ -19,11 +19,7 @@
 
 package com.bald.uriah.baldphone.databases.alarms;
 
-import androidx.room.Dao;
-import androidx.room.Delete;
-import androidx.room.Insert;
-import androidx.room.OnConflictStrategy;
-import androidx.room.Query;
+import androidx.room.*;
 
 import java.util.List;
 
@@ -58,7 +54,6 @@ public interface AlarmsDatabaseDao {
 
     @Query("DELETE FROM Alarm WHERE `key` IN (:keys)")
     void deleteByIds(int... keys);
-
 
     @Query("DELETE FROM Alarm")
     void deleteAll();

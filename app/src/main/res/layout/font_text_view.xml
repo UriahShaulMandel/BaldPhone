@@ -18,11 +18,11 @@
   ~ under the License.
   -->
 
-<TextView android:id="@+id/tiny"
-    android:layout_width="0dp"
-    android:layout_weight="1"
-    android:layout_height="match_parent"
-    android:text="@string/tiny"
-    style="@style/BackgroundText.Tiny"
-    android:gravity="center"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/tiny"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="match_parent"
+          android:text="@string/tiny"
+          style="@style/BackgroundText.Tiny"
+          android:gravity="center"/>

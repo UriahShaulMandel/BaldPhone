@@ -20,7 +20,10 @@
 package com.bald.uriah.baldphone.databases.apps;
 
 import android.content.ComponentName;
-
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 import com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
 import com.bald.uriah.baldphone.views.HomeScreenAppView;
@@ -28,11 +31,6 @@ import com.bumptech.glide.Glide;
 
 import java.util.Arrays;
 import java.util.Objects;
-
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.Ignore;
-import androidx.room.PrimaryKey;
 
 /**
  * even though its not a representation of App and it represents an activity
@@ -64,7 +62,6 @@ public class App implements AppsRecyclerViewAdapter.InAppsRecyclerView, HomeScre
     public int type() {
         return AppsRecyclerViewAdapter.TYPE_ITEM;
     }
-
 
     public String getFlattenComponentName() {
         return flattenComponentName;
@@ -105,7 +102,6 @@ public class App implements AppsRecyclerViewAdapter.InAppsRecyclerView, HomeScre
     public void setPinned(boolean pinned) {
         this.pinned = pinned;
     }
-
 
     @Override
     public boolean equals(Object o) {

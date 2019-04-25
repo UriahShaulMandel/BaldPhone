@@ -30,10 +30,8 @@ import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
-
-import com.bald.uriah.baldphone.R;
-
 import androidx.annotation.Nullable;
+import com.bald.uriah.baldphone.R;
 
 import static com.bald.uriah.baldphone.activities.SettingsActivity.FONT_SIZES;
 
@@ -64,7 +62,6 @@ public class FontChangerActivity extends BaldActivity {
             e.printStackTrace();
             fontSeekBar.setProgress(4);
         }
-
 
         fontSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override

@@ -21,15 +21,13 @@ package com.bald.uriah.baldphone.activities.pills;
 
 import android.os.Bundle;
 import android.view.View;
-
+import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.views.BaldMultipleSelection;
 import com.bald.uriah.baldphone.views.BaldNumberChooser;
-
-import androidx.annotation.Nullable;
 
 public class PillTimeSetterActivity extends BaldActivity {
     private BaldNumberChooser hour, minute;

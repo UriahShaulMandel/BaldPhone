@@ -21,9 +21,7 @@ package com.bald.uriah.baldphone.utils;
 
 import android.content.Context;
 import android.content.res.Resources;
-
 import com.bald.uriah.baldphone.R;
-
 
 public class VoiceRecognitionValues {
     //only single instance is required per app

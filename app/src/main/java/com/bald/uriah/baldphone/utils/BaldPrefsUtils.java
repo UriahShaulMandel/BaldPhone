@@ -24,16 +24,7 @@ import android.content.SharedPreferences;
 
 import java.util.Objects;
 
-import static com.bald.uriah.baldphone.utils.BPrefs.LONG_PRESSES_DEFAULT_VALUE;
-import static com.bald.uriah.baldphone.utils.BPrefs.LONG_PRESSES_KEY;
-import static com.bald.uriah.baldphone.utils.BPrefs.NOTE_VISIBLE_DEFAULT_VALUE;
-import static com.bald.uriah.baldphone.utils.BPrefs.NOTE_VISIBLE_KEY;
-import static com.bald.uriah.baldphone.utils.BPrefs.PAGE_TRANSFORMERS_DEFAULT_VALUE;
-import static com.bald.uriah.baldphone.utils.BPrefs.PAGE_TRANSFORMERS_KEY;
-import static com.bald.uriah.baldphone.utils.BPrefs.TOUCH_NOT_HARD_DEFAULT_VALUE;
-import static com.bald.uriah.baldphone.utils.BPrefs.TOUCH_NOT_HARD_KEY;
-import static com.bald.uriah.baldphone.utils.BPrefs.VIBRATION_FEEDBACK_DEFAULT_VALUE;
-import static com.bald.uriah.baldphone.utils.BPrefs.VIBRATION_FEEDBACK_KEY;
+import static com.bald.uriah.baldphone.utils.BPrefs.*;
 
 public class BaldPrefsUtils {
     private final int theme;
@@ -72,7 +63,6 @@ public class BaldPrefsUtils {
     public boolean hasChanged(Context context) {
         return !equals(newInstance(context));
     }
-
 
     public boolean equals(BaldPrefsUtils that) {
         return theme == that.theme &&

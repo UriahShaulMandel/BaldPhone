@@ -32,7 +32,10 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
-
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
@@ -40,11 +43,6 @@ import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.utils.SoftInputAssist;
 import com.bald.uriah.baldphone.utils.Toggeler;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
-
-import androidx.annotation.LayoutRes;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.RecyclerView;
 
 import static android.view.View.GONE;
 
@@ -89,8 +87,6 @@ abstract class BaseContactsActivity extends BaldActivity {
         attachXml();
         viewsInit();
 
-
-
         applyFilter();
     }
 
@@ -115,8 +111,6 @@ abstract class BaseContactsActivity extends BaldActivity {
             softInputAssist.onDestroy();
     }
 
-
-
     @LayoutRes
     protected abstract int layout();
 
@@ -131,7 +125,6 @@ abstract class BaseContactsActivity extends BaldActivity {
                 new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
         dividerItemDecoration.setDrawable(getDrawable(R.drawable.ll_divider));
         recyclerView.addItemDecoration(dividerItemDecoration);
-
 
     }
 
@@ -250,7 +243,6 @@ abstract class BaseContactsActivity extends BaldActivity {
         et_filter_input.setSelection(et_filter_input.getText().length());
         applyFilter();
     }
-
 
     private void onClick(View v) {
         if (v.getId() == R.id.bt_speak)

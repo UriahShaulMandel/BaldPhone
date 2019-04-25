@@ -28,16 +28,14 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
 import android.widget.LinearLayout;
-
+import androidx.annotation.Nullable;
+import androidx.core.util.Pools;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.adapters.BaldViewAdapter;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 import com.bald.uriah.baldphone.views.ViewPagerHolder;
-
-import androidx.annotation.Nullable;
-import androidx.core.util.Pools;
 
 /**
  * Parent activity for {@link SinglePhotoActivity} and {@link SingleVideoActivity}.
@@ -127,7 +125,6 @@ public abstract class SingleMediaActivity extends BaldActivity {
                 activity.finish();
             });
 
-
         }
 
         protected abstract Intent share(Activity activity, Cursor cursor);
@@ -137,13 +134,11 @@ public abstract class SingleMediaActivity extends BaldActivity {
             return share(activity, cursor);
         }
 
-
         protected abstract Cursor cursor(Context context);
 
         protected abstract void bindView(View view, Cursor cursor, Context context);
 
         protected abstract View getView(Context context);
-
 
         protected ContentResolver getContentResolver() {
             return activity.getContentResolver();

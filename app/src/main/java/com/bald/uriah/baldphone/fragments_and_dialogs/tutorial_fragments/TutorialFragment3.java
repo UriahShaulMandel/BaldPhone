@@ -27,7 +27,6 @@ import android.view.animation.Transformation;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
-
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.views.BaldButton;
@@ -55,7 +54,6 @@ public class TutorialFragment3 extends TutorialFragment {
 
     }
 
-
     @Override
     protected int layoutRes() {
         return R.layout.tutorial_fragment_3;
@@ -73,7 +71,6 @@ public class TutorialFragment3 extends TutorialFragment {
         if (bt_set_keyboard != null)
             setupBtn();
     }
-
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
@@ -118,7 +115,6 @@ public class TutorialFragment3 extends TutorialFragment {
         }
     }
 
-
     public void firstAnimation(final long msDuration) {
         final String theString = getString(R.string.have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead);
         final int theStringLength = theString.length();
@@ -134,10 +130,8 @@ public class TutorialFragment3 extends TutorialFragment {
             }
         };
 
-
         animation.setDuration(msDuration);
         bald.startAnimation(animation);
     }
-
 
 }
