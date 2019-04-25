@@ -26,6 +26,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.media.Ringtone;
+import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.nfc.NfcManager;
 import android.os.Bundle;
@@ -43,6 +44,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.alarms.AlarmScreen;
@@ -63,11 +70,7 @@ import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.DrawableRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.recyclerview.widget.RecyclerView;
+import static android.content.Intent.ACTION_VIEW;
 
 /**
  * Settings Activity,
@@ -337,13 +340,12 @@ public class SettingsActivity extends BaldActivity {
             }
         }, R.drawable.location_on_button));
 
-
-//        settingsList.add(new RunnableSettingsItem(R.string.manual, v -> startActivity(new Intent(this, ManualActivity.class)), R.drawable.help_on_button));
-
         final LinearLayout linearLayout = new LinearLayout(this);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         LayoutInflater.from(this).inflate(R.layout.credits_button, linearLayout, true);
+        LayoutInflater.from(this).inflate(R.layout.open_source_licenses_button, linearLayout, true);
         linearLayout.findViewById(R.id.credits_button).setOnClickListener(v -> startActivity(new Intent(this, CreditsActivity.class)));
+        linearLayout.findViewById(R.id.open_source_licenses_button).setOnClickListener(v -> startActivity(new Intent(ACTION_VIEW,Uri.parse("https://sites.google.com/view/baldphone-open-source-licenses/home"))));
         final ImageView pic = new ImageView(this);
         linearLayout.addView(pic);
         Glide.with(pic).load(R.drawable.me).into(pic);
@@ -424,19 +426,6 @@ public class SettingsActivity extends BaldActivity {
         recyclerView.getAdapter().notifyDataSetChanged();
         recyclerView.scheduleLayoutAnimation();
     }
-
-
-    //careful!! apparently for no f****** reason the compiler cannot compile this class, and doesn't bother to inform you.
-    //    public class NewSettingsListSettingsItem extends RunnableSettingsItem {
-    //        NewSettingsListSettingsItem(@StringRes int textResId, @DrawableRes int drawableResId, List<SettingsItem> newSettingsList) {
-    //            super(textResId, v -> {
-    //                history.push(settingsList);
-    //                settingsList = newSettingsList;
-    //                recyclerView.getAdapter().notifyDataSetChanged();
-    //                recyclerView.scheduleLayoutAnimation();
-    //            }, drawableResId);
-    //        }
-    //    }
 
     private void setupAlarmVolume() {
         final SeekBar volumeSeekBar = (SeekBar) LayoutInflater.from(this).inflate(R.layout.volume_seek_bar, null, false);
