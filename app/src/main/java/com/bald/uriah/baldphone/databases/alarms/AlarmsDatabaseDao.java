@@ -19,18 +19,21 @@
 
 package com.bald.uriah.baldphone.databases.alarms;
 
-import java.util.List;
-
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
+import java.util.List;
+
 @Dao
 public interface AlarmsDatabaseDao {
     @Query("SELECT * FROM Alarm")
     List<Alarm> getAll();
+
+    @Query("SELECT * FROM Alarm ORDER BY hour ASC, minute ASC")
+    List<Alarm> getAllSortedByTime();
 
     @Query("SELECT * FROM Alarm WHERE enabled = 1")
     List<Alarm> getAllEnabled();

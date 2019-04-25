@@ -23,9 +23,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.text.TextUtils;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
+
+import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
@@ -37,8 +41,6 @@ import com.bald.uriah.baldphone.views.BaldButton;
 import com.bald.uriah.baldphone.views.BaldNumberChooser;
 
 import org.joda.time.DateTime;
-
-import androidx.annotation.Nullable;
 
 /**
  * Activity for creating\editing {@link Alarm}.
@@ -53,7 +55,7 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
     private EditText alarm_edit_name;
     private BaldNumberChooser chooser_hours, chooser_minutes;
     private CheckBox[] daysCheckBoxes;
-    private RadioButton only_once;
+    private RadioButton only_once, every_day;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -106,19 +108,24 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
                 findViewById(R.id.saturday)
         };
         only_once = findViewById(R.id.rb_once);
+        every_day = findViewById(R.id.rb_every_day);
         only_once.setChecked(true);
 
     }
 
     private void submit() {
-        final String name = alarm_edit_name.getText().toString();
+        String name = alarm_edit_name.getText().toString();
+        if (TextUtils.isEmpty(name)) name = this.getString(R.string.alarm);
 
         int sum = 0;
-        for (int i = 0; i < daysCheckBoxes.length; i++)
-            sum |= daysCheckBoxes[i].isChecked() ? D.Days.SUNDAY << i : 0;
+        if (every_day.isChecked()) {
+            sum = D.Days.ALL;
+        } else {
+            for (int i = 0; i < daysCheckBoxes.length; i++)
+                sum |= daysCheckBoxes[i].isChecked() ? D.Days.SUNDAY << i : 0;
 
-        if (sum == 0)
-            sum = -1;
+            if (sum == 0) sum = -1;
+        }
 
         final Alarm alarm = new Alarm();
         alarm.setDays(sum);
@@ -151,6 +158,7 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
             if (isChecked) {
                 for (CheckBox checkBox : daysCheckBoxes)
                     checkBox.setChecked(false);
+                every_day.setChecked(false);
             }
         });
         only_once.setOnLongClickListener(v -> {
@@ -158,23 +166,48 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
             return true;
         });
 
+        every_day.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (vibrator != null) vibrator.vibrate(D.vibetime);
+                if (isChecked) {
+                    for (CheckBox checkBox : daysCheckBoxes)
+                        checkBox.setChecked(false);
+                    only_once.setChecked(false);
+                    every_day.setOnCheckedChangeListener(null);
+                    every_day.setChecked(true);
+                    every_day.setOnCheckedChangeListener(this);
+                }
+            }
+        });
+        every_day.setOnLongClickListener(v -> {
+            every_day.setChecked(true);
+            return true;
+        });
+
         for (final CheckBox checkBox : daysCheckBoxes) {
             checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 if (vibrator != null)
                     vibrator.vibrate(D.vibetime);
-                if (isChecked)
+                if (isChecked) {
                     only_once.setChecked(false);
-                else {
-                    boolean anyIsChecked = false;
-                    for (CheckBox cb : daysCheckBoxes) {
-                        if (cb.isChecked()) {
-                            anyIsChecked = true;
-                            break;
-                        }
+                    every_day.setChecked(false);
+                }
+                boolean anyIsChecked = false;
+                boolean allAreChecked = true;
+                for (CheckBox cb : daysCheckBoxes) {
+                    if (cb.isChecked()) {
+                        anyIsChecked = true;
+                    } else {
+                        allAreChecked = false;
                     }
-                    if (!anyIsChecked) {
-                        only_once.setChecked(true);
-                    }
+                }
+                if (!anyIsChecked) {
+                    only_once.setChecked(true);
+                } else if (allAreChecked) {
+                    for (CheckBox cb : daysCheckBoxes)
+                        cb.setChecked(false);
+                    every_day.setChecked(true);
                 }
             });
             checkBox.setOnLongClickListener(v -> {

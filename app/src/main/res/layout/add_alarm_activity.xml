@@ -165,6 +165,23 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
+
+            <RadioButton
+                android:id="@+id/rb_every_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:buttonTint="?bald_decoration_on_background"
+                android:text="@string/repeats_every_day"
+                android:textColor="?bald_text_on_button"
+                android:textSize="@dimen/small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
             <RadioButton
                 android:id="@+id/rb_once"
                 android:layout_width="wrap_content"
@@ -178,6 +195,7 @@
                 android:textSize="@dimen/small"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

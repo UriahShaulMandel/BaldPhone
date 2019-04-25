@@ -357,6 +357,7 @@
     <string name="custom_app_subtext">בחר יישום מועדף להצמדה למסך הבית.</string>
 
     <string name="no_app_was_found">לא נמצא יישום מתאים!</string>
+    <string name="alarm">שעון מעורר</string>
 
     <string-array name="words_for_call" tools:ignore="InconsistentArrays">
         <item>להתקשר</item>

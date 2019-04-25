@@ -30,6 +30,11 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
@@ -43,11 +48,6 @@ import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 import java.util.Collections;
 import java.util.List;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Activity for viewing the enabled {@link Alarm}
@@ -88,11 +88,10 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
 
         setupYoutube(3);
 
-
     }
 
     public void refreshViews() {
-        alarmList = AlarmsDatabase.getInstance(this).alarmsDatabaseDao().getAll();
+        alarmList = AlarmsDatabase.getInstance(this).alarmsDatabaseDao().getAllSortedByTime();
         adapter.notifyDataSetChanged();
     }
 
@@ -100,10 +99,14 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
     protected void onStart() {
         super.onStart();
         refreshViews();
-
-
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (AlarmsDatabase.getInstance(this).alarmsDatabaseDao().getNumberOfRows() != alarmList.size())
+            refreshViews();
+    }
 
     private void attachXml() {
         recyclerView = findViewById(R.id.child);
