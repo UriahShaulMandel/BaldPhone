@@ -51,14 +51,12 @@ import static android.provider.Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES;
 public class PermissionActivity extends BaldActivity {
     public static final String
             EXTRA_REQUIRED_PERMISSIONS = "EXTRA_REQUIRED_PERMISSIONS",
-            EXTRA_NAME = "EXTRA_NAME",
             EXTRA_INTENT = "EXTRA_INTENT";
     public static final int[] REQUEST_CODES = {789, 788, 787};
 
     private List<PermissionItem> permissionItemList = new ArrayList<>();
     private RecyclerView recyclerView;
     private int requiredPermissions;
-    private String name;
     private Intent ancestorCallingIntent;
 
     @Override
@@ -69,7 +67,6 @@ public class PermissionActivity extends BaldActivity {
         requiredPermissions = callingIntent.getIntExtra(EXTRA_REQUIRED_PERMISSIONS, -1);
         ancestorCallingIntent = callingIntent.getParcelableExtra(EXTRA_INTENT);
 
-        name = callingIntent.getStringExtra(EXTRA_NAME);
         recyclerView = findViewById(R.id.child);
         final DividerItemDecoration dividerItemDecoration =
                 new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
@@ -109,7 +106,7 @@ public class PermissionActivity extends BaldActivity {
     private void refreshPermissions() {
         obtainPermissionList();
         if (permissionItemList.isEmpty()) {
-            startActivity(ancestorCallingIntent == null ? new Intent(this, HomeScreen.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK) : ancestorCallingIntent);
+            startActivity(ancestorCallingIntent == null ? new Intent(this, HomeScreenActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK) : ancestorCallingIntent);
             finish();
             return;
         }

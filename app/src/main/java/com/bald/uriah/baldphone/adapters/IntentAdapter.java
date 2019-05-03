@@ -40,6 +40,7 @@ public class IntentAdapter extends ModularRecyclerView.ModularAdapter<IntentAdap
     private final PackageManager packageManager;
     private final ResolveInfoConsumer resolveInfoConsumer;
     private final Context context;
+
     public IntentAdapter(final Context context, final List<ResolveInfo> resolveInfoList, final ResolveInfoConsumer resolveInfoConsumer) {
         this.layoutInflater = LayoutInflater.from(context);
         this.packageManager = context.getPackageManager();

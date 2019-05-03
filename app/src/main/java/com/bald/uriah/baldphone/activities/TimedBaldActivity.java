@@ -19,31 +19,25 @@
 
 package com.bald.uriah.baldphone.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Window;
+import android.view.WindowManager;
 import androidx.annotation.Nullable;
-import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.D;
 
-public class CrashActivity extends BaldActivity {
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+public abstract class TimedBaldActivity extends BaldActivity {
+
+    @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crash);
-        new Handler().postDelayed(() -> {
-            startActivity(new Intent(this, HomeScreenActivity.class));
-            finish();
-        }, 4 * D.SECOND);
+
+        final Window window = getWindow();
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+
+        new Handler().postDelayed(() -> window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON), screenTimeout());
+
     }
 
-    @Override
-    public void onBackPressed() {
-        //nope
-    }
-
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_NONE;
-    }
+    protected abstract int screenTimeout();
 }

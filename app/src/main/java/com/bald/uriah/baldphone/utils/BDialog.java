@@ -63,6 +63,7 @@ public class BDialog extends Dialog {
     private BaldButton bt_positive, bt_negative;
     private BaldImageButton bt_cancel;
     private ViewGroup container, ll;
+
     private BDialog(@NonNull Context context,
                     @DialogState int dialogState,
                     @NonNull CharSequence title,

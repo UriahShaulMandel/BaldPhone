@@ -90,6 +90,7 @@ public abstract class MediaScrollingActivity extends BaldActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == resultCode && requestCode == SHOULD_REFRESH) {
             cursor = cursor(getContentResolver());
             adapter.notifyDataSetChanged();

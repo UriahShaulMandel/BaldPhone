@@ -159,7 +159,6 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
         if (!checkPermissions(this, requiredPermissions())) {
             startActivity(new Intent(this, PermissionActivity.class)
                     .putExtra(PermissionActivity.EXTRA_REQUIRED_PERMISSIONS, requiredPermissions())
-                    .putExtra(PermissionActivity.EXTRA_NAME, activityName())
                     .putExtra(EXTRA_INTENT, getIntent())
             );
             finish();
@@ -290,8 +289,9 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
 
     protected abstract int requiredPermissions();
 
-    //TODO mabye remove this
-    protected String activityName() {
-        return "";
-    }
+    /**
+     * @return time in milliseconds for tha activity to stay on.
+     * if it returns -1 activity will time out as set in device settings
+     */
+
 }

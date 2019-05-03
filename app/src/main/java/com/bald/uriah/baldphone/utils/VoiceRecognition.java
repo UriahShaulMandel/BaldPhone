@@ -124,7 +124,7 @@ public class VoiceRecognition {
                 "%" + filter + "%"
         };
         final Cursor cursor = context.getContentResolver().query(ContactsContract.Contacts.CONTENT_URI,
-                Contact.READ_CONTACT_PROJECTION,
+                Contact.PROJECTION,
                 SELECTION,
                 args,
                 null);

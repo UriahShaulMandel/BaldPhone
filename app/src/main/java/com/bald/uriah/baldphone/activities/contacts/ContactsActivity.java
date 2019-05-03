@@ -23,9 +23,11 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.ContactsContract;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 
 /**
  * Activity for viewing and adding {@link com.bald.uriah.baldphone.databases.contacts.Contact}.
@@ -33,16 +35,8 @@ import com.bald.uriah.baldphone.R;
  */
 public class ContactsActivity extends BaseContactsActivity {
     private static final String TAG = ContactsActivity.class.getSimpleName();
-    private final static String[] PROJECTION =
-            {ContactsContract.Data.DISPLAY_NAME,
-                    ContactsContract.Data._ID,
-                    ContactsContract.Contacts.PHOTO_URI,
-                    ContactsContract.Data.LOOKUP_KEY,
-                    ContactsContract.Data.STARRED};
-    private static final String STAR_SELECTION =
-            ContactsContract.Data.STARRED + " = 1";
-    private static final String SORT_ORDER =
-            "upper(" + ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + ") ASC";
+    private static final String STAR_SELECTION = ContactsContract.Data.STARRED + " = 1";
+    private static final String SORT_ORDER = "upper(" + ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + ") ASC";
     private View add_contact;
 
     @Override
@@ -64,15 +58,11 @@ public class ContactsActivity extends BaseContactsActivity {
 
     @Override
     protected Cursor getCursorForFilter(String filter, boolean favorite) {
-        try {
-            Integer.valueOf(filter);
+        if (!TextUtils.isEmpty(filter) && TextUtils.isDigitsOnly(filter)) {
             return getContactsByNumberFilter(filter, favorite);
-        } catch (Exception e) {
-            Log.e(TAG, e.getMessage());
-            e.printStackTrace();
+        } else {
             return getContactsByNameFilter(filter, favorite);
         }
-
     }
 
     private Cursor getContactsByNameFilter(String filter, boolean favorite) {
@@ -84,7 +74,7 @@ public class ContactsActivity extends BaseContactsActivity {
         final String[] args = {"%" + filter + "%"};
         try {
             return contentResolver.query(ContactsContract.Contacts.CONTENT_URI,
-                    PROJECTION,
+                    ContactRecyclerViewAdapter.PROJECTION,
                     selection,
                     args,
                     SORT_ORDER);
@@ -108,7 +98,7 @@ public class ContactsActivity extends BaseContactsActivity {
         try {
             return contentResolver.query(
                     uri,
-                    PROJECTION,
+                    ContactRecyclerViewAdapter.PROJECTION,
                     favorite ? STAR_SELECTION : null,
                     null,
                     SORT_ORDER);

@@ -45,7 +45,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.HomeScreen;
+import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.activities.SettingsActivity;
 import com.bald.uriah.baldphone.activities.VideoTutorialsActivity;
 import com.bald.uriah.baldphone.adapters.IntentAdapter;
@@ -66,7 +66,7 @@ public class HomePage2 extends HomeView {
     private View bt_settings, bt_internet, bt_maps, bt_help;
     private PackageManager packageManager;
 
-    public HomePage2(@NonNull HomeScreen homeScreen) {
+    public HomePage2(@NonNull HomeScreenActivity homeScreen) {
         super(homeScreen);
     }
 

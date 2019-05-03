@@ -27,6 +27,7 @@ import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -35,7 +36,7 @@ import androidx.annotation.Nullable;
 import androidx.exifinterface.media.ExifInterface;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
-import com.bald.uriah.baldphone.activities.HomeScreen;
+import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.activities.media.PhotosActivity;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 import com.bald.uriah.baldphone.utils.BaldToast;
@@ -60,47 +61,21 @@ public class AddContactActivity extends BaldActivity {
 
     private static final String TAG = AddContactActivity.class.getSimpleName();
     private static final int SELECT_IMAGE_REQUEST_CODE = 3;
-
+    private static final String DEFAULT_WHERE = ContactsContract.Data.CONTACT_ID + "= ?";
     private Contact currentContact;
     private String newPhoto;
-
     private EditText et_name, et_mobile_number, et_home_number, et_address, et_mail;
     private BaldImageButton iv_image, iv_delete;
     private View save;
 
     private static void addFullSizePhoto(int rawContactId, byte[] fullSizedPhotoData, final ContentResolver cr) throws IOException {
-        final Uri baseUri =
-                ContentUris.withAppendedId(ContactsContract.RawContacts.CONTENT_URI, rawContactId);
-        final Uri displayPhotoUri =
-                Uri.withAppendedPath(baseUri, ContactsContract.RawContacts.DisplayPhoto.CONTENT_DIRECTORY);
-        final AssetFileDescriptor fileDescriptor =
-                cr.openAssetFileDescriptor(displayPhotoUri, "rw");
-        final FileOutputStream photoStream =
-                fileDescriptor.createOutputStream();
+        final Uri baseUri = ContentUris.withAppendedId(ContactsContract.RawContacts.CONTENT_URI, rawContactId);
+        final Uri displayPhotoUri = Uri.withAppendedPath(baseUri, ContactsContract.RawContacts.DisplayPhoto.CONTENT_DIRECTORY);
+        final AssetFileDescriptor fileDescriptor = cr.openAssetFileDescriptor(displayPhotoUri, "rw");
+        final FileOutputStream photoStream = fileDescriptor.createOutputStream();
         photoStream.write(fullSizedPhotoData);
         photoStream.close();
         fileDescriptor.close();
-    }
-
-    public static int getRawContactId(final ContentResolver contentResolver, final String contactId) {
-        final Uri uri =
-                ContactsContract.RawContacts.CONTENT_URI;
-        final String[] projection =
-                new String[]{ContactsContract.RawContacts._ID};
-        final String selection =
-                ContactsContract.RawContacts.CONTACT_ID + " = ?";
-        final String[] selectionArgs =
-                new String[]{contactId};
-        try (Cursor c = contentResolver.query(
-                uri,
-                projection,
-                selection,
-                selectionArgs,
-                null)) {
-            if (c != null && c.moveToFirst())
-                return c.getInt(c.getColumnIndex(ContactsContract.RawContacts._ID));
-        }
-        return -1;
     }
 
     @Override
@@ -142,17 +117,16 @@ public class AddContactActivity extends BaldActivity {
             v.setVisibility(View.INVISIBLE);
         });
         save.setOnClickListener(v -> {
-            if (!(currentContact != null ? update() : insert()))
+            final String name = String.valueOf(et_name.getText());
+            if (TextUtils.isEmpty(name.replace(" ", ""))) {
+                BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.contact_must_has_name).show();
+            } else if (!(currentContact != null ? update() : insert())) {
                 BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.contact_not_created).show();
-
-            else {
+            } else {
                 finishAffinity();
                 SingleContactActivity.newPictureAdded = true;//static vars are simpler and more rational in this case
 
-                startActivity( // its good to restart the homescreen activity once in a while
-                        new Intent(this, HomeScreen.class)
-                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                );
+                startActivity(new Intent(this, HomeScreenActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                 startActivity(new Intent(this, ContactsActivity.class));
                 startActivity(
                         new Intent(this, SingleContactActivity.class)
@@ -191,25 +165,24 @@ public class AddContactActivity extends BaldActivity {
     }
 
     public boolean insert() {
+        final ArrayList<ContentProviderOperation> operations = new ArrayList<>();
         final String name = String.valueOf(et_name.getText());
-        if (name.replace(" ", "").equals("")) {
-            BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.contact_must_has_name).show();
-            return false;
-        }
 
-        ArrayList<ContentProviderOperation> operations = new ArrayList<>();
-        operations.add(ContentProviderOperation.newInsert(ContactsContract.RawContacts.CONTENT_URI)
-                .withValue(ContactsContract.RawContacts.ACCOUNT_NAME, null)
-                .withValue(ContactsContract.RawContacts.ACCOUNT_TYPE, null)
-                .withValue(ContactsContract.RawContacts.DIRTY, false).build());
-        operations.add(ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI)
-                .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0)
-                .withValue(ContactsContract.Data.MIMETYPE,
-                        ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE)
-                .withValue(ContactsContract.CommonDataKinds.StructuredName.GIVEN_NAME, name)
-                .withValue(ContactsContract.CommonDataKinds.StructuredName.FAMILY_NAME, null)
-                .withValue(ContactsContract.CommonDataKinds.StructuredName.MIDDLE_NAME, null)
-                .build()
+        operations.add(
+                ContentProviderOperation.newInsert(ContactsContract.RawContacts.CONTENT_URI)
+                        .withValue(ContactsContract.RawContacts.ACCOUNT_NAME, null)
+                        .withValue(ContactsContract.RawContacts.ACCOUNT_TYPE, null)
+                        .withValue(ContactsContract.RawContacts.DIRTY, false).build());
+
+        operations.add(
+                ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI)
+                        .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, 0)
+                        .withValue(ContactsContract.Data.MIMETYPE,
+                                ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE)
+                        .withValue(ContactsContract.CommonDataKinds.StructuredName.GIVEN_NAME, name)
+                        .withValue(ContactsContract.CommonDataKinds.StructuredName.FAMILY_NAME, null)
+                        .withValue(ContactsContract.CommonDataKinds.StructuredName.MIDDLE_NAME, null)
+                        .build()
         );
 
         try {
@@ -234,26 +207,22 @@ public class AddContactActivity extends BaldActivity {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
-
     }
 
     /**
-     * newUpdate doesn't work!!! using Delete and Create instead
+     * newUpdate doesn't work! using Delete and Create instead
      * great example (in kotlin) here:https://github.com/SimpleMobileTools/Simple-Contacts/blob/master/app/src/main/kotlin/com/simplemobiletools/contacts/pro/helpers/ContactsHelper.kt)
      *
      * @return true if everything went without any problems
      */
     public boolean update() {
-        final int rawId = getRawContactId(getContentResolver(), String.valueOf(currentContact.getId()));
-
-//        final String DEFAULT_WHERE = ContactsContract.Data.CONTACT_ID + "= ?";
-        final String DEFAULT_WHERE = ContactsContract.Data.CONTACT_ID + "= ?";
-        final String[] args = {String.valueOf(currentContact.getId()), ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE};
-
-//        final String[] args = {String.valueOf(currentContact.getLookupKey()), ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE};
         final ArrayList<ContentProviderOperation> operations = new ArrayList<>();
+
+        final int rawId = currentContact.getRawContactId(getContentResolver());
+
+        final String[] args = {String.valueOf(currentContact.getId()), ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE};
         final String name = String.valueOf(et_name.getText());
-        if (!name.equals(""))
+        if (!TextUtils.isEmpty(name))
             operations.add(
                     ContentProviderOperation.newUpdate(ContactsContract.Data.CONTENT_URI)
                             .withSelection(DEFAULT_WHERE + " AND " + ContactsContract.Data.MIMETYPE + " = ?", args)
@@ -282,7 +251,7 @@ public class AddContactActivity extends BaldActivity {
             );
 
         final String mNumber = String.valueOf(et_mobile_number.getText());
-        if (!mNumber.equals(""))
+        if (!TextUtils.isEmpty(mNumber))
             operations.add(
                     ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI)
                             .withValue(ContactsContract.Data.RAW_CONTACT_ID, String.valueOf(rawId))
@@ -306,7 +275,7 @@ public class AddContactActivity extends BaldActivity {
                                             homePhoneNumber})
                             .build());
         final String hNumber = String.valueOf(et_home_number.getText());
-        if (!hNumber.equals(""))
+        if (!TextUtils.isEmpty(hNumber))
             operations.add(
                     ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI)
                             .withValue(ContactsContract.Data.RAW_CONTACT_ID, String.valueOf(rawId))
@@ -332,7 +301,7 @@ public class AddContactActivity extends BaldActivity {
                             .build());
 
         final String mail = String.valueOf(et_mail.getText());
-        if (!mail.equals(""))
+        if (!TextUtils.isEmpty(mail))
             operations.add(
                     ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI)
                             .withValue(ContactsContract.Data.RAW_CONTACT_ID, String.valueOf(rawId))
@@ -360,7 +329,7 @@ public class AddContactActivity extends BaldActivity {
                             .build());
 
         final String address = String.valueOf(et_address.getText());
-        if (!address.equals(""))
+        if (!TextUtils.isEmpty(address))
             operations.add(
                     ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI)
                             .withValue(ContactsContract.Data.RAW_CONTACT_ID, String.valueOf(rawId))
@@ -371,7 +340,6 @@ public class AddContactActivity extends BaldActivity {
 
         //Photo
         final String beforeImage = currentContact.getPhoto();
-
         if (beforeImage != null && (!beforeImage.equals(newPhoto))) {
             operations.add(
                     ContentProviderOperation.newDelete(ContactsContract.Data.CONTENT_URI)
@@ -401,26 +369,22 @@ public class AddContactActivity extends BaldActivity {
         if (newPhoto != null && !newPhoto.equals(beforeImage)) {
             try {
                 final Uri photoUri = Uri.parse(newPhoto);
-                ExifInterface exifInterface;
+                final ExifInterface exifInterface;
                 try (InputStream inputStream = getContentResolver().openInputStream(photoUri)) {
                     exifInterface = new ExifInterface(inputStream);
                 }
-                int width = exifInterface.getAttributeInt(ExifInterface.TAG_IMAGE_WIDTH, -1);
-                int height = exifInterface.getAttributeInt(ExifInterface.TAG_IMAGE_LENGTH, -1);
+                final int width = exifInterface.getAttributeInt(ExifInterface.TAG_IMAGE_WIDTH, -1);
+                final int height = exifInterface.getAttributeInt(ExifInterface.TAG_IMAGE_LENGTH, -1);
                 if (width != -1 && height != -1) {
                     final int smaller = Math.min(width, height);
-                    Glide
-                            .with(getApplicationContext())
+                    Glide.with(getApplicationContext())
                             .asBitmap()
                             .apply(new RequestOptions().centerCrop().override(smaller))
                             .load(photoUri)
-                            .into(new PhotoAdder(rawId, this, true))
-
-                    ;
+                            .into(new PhotoAdder(rawId, this, true));
 
                 } else
-                    Glide
-                            .with(getApplicationContext())
+                    Glide.with(getApplicationContext())
                             .asBitmap()
                             .thumbnail(0.1f)
                             .load(Uri.parse(newPhoto))
@@ -431,11 +395,8 @@ public class AddContactActivity extends BaldActivity {
                 e.printStackTrace();
                 BaldToast.error(this);
             }
-
         }
-
         return true;
-
     }
 
     private void setImage(Uri uri) {
@@ -446,9 +407,9 @@ public class AddContactActivity extends BaldActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == SELECT_IMAGE_REQUEST_CODE && resultCode == RESULT_OK)
             setImage(data.getData());
-
     }
 
     @Override

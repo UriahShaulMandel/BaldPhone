@@ -73,5 +73,4 @@ public class BaldPrefsUtils {
                 swipingEffect == that.swipingEffect &&
                 Objects.equals(customApp, that.customApp);
     }
-
 }

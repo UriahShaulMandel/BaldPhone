@@ -22,74 +22,43 @@ package com.bald.uriah.baldphone.activities.pills;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.media.AudioAttributes;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.BaldActivity;
+import com.bald.uriah.baldphone.activities.TimedBaldActivity;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
 import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
 import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
-import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.utils.Animations;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
 
-public class PillScreen extends BaldActivity {
-    public static final int TIME_SCREEN_ON = D.MINUTE * 2;
-
-    private static final String TAG = PillScreen.class.getSimpleName();
+public class PillScreenActivity extends TimedBaldActivity {
+    private static final String TAG = PillScreenActivity.class.getSimpleName();
 
     private static final int TIME_DELAYED_SCHEDULE = 100;
-    private static final AudioAttributes alarmAttributes =
-            new AudioAttributes.Builder()
-                    .setUsage(AudioAttributes.USAGE_NOTIFICATION)
-                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                    .build();
-    private final Runnable closeScreen = () -> {
-        final Window window = getWindow();
-        if (window != null)
-            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-    };
-    private TextView tv_textual_content, snooze, took;//todo delte
+
+    private TextView tv_textual_content, snooze, took;
     private ImageView iv_pill;
-    private Vibrator vibrator;
     private Ringtone ringtone;
     private Reminder reminder;
-    private Handler handler;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         S.logImportant("reminderScreen was called!");
-        final Window window = getWindow();
-
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-                | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
-        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-                | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
-
         setContentView(R.layout.reminder_screen);
 
         attachXml();
-        if (getSharedPreferences(BPrefs.KEY, MODE_PRIVATE)
-                .getBoolean(BPrefs.VIBRATION_FEEDBACK_KEY, BPrefs.VIBRATION_FEEDBACK_DEFAULT_VALUE))
-            vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         final Intent intent = getIntent();
         if (intent == null) throw new AssertionError();
@@ -139,11 +108,8 @@ public class PillScreen extends BaldActivity {
             e.printStackTrace();
         }
 
-        makeBiggerAndSmaller(iv_pill);
-        scheduleNextAlarm();
-        handler = new Handler();
-        handler.postDelayed(closeScreen, TIME_SCREEN_ON);
-
+        Animations.makeBiggerAndSmaller(this, iv_pill, null);
+        scheduleNextReminder();
     }
 
     @Override
@@ -175,41 +141,6 @@ public class PillScreen extends BaldActivity {
         iv_pill = findViewById(R.id.iv_pill);
     }
 
-    private void makeBiggerAndSmaller(final View view) {
-        final Animation enlarge = AnimationUtils.loadAnimation(this, R.anim.enlarge);
-        final Animation ensmall = AnimationUtils.loadAnimation(this, R.anim.ensmall);
-        enlarge.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                view.startAnimation(ensmall);
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-            }
-        });
-        ensmall.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                view.startAnimation(enlarge);
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-            }
-        });
-        view.startAnimation(enlarge);
-
-    }
-
     private void snooze() {
         if (vibrator != null)
             vibrator.vibrate(D.vibetime);
@@ -217,7 +148,7 @@ public class PillScreen extends BaldActivity {
         finish();
     }
 
-    private void scheduleNextAlarm() {
+    private void scheduleNextReminder() {
         new Handler().postDelayed(() -> ReminderScheduler.scheduleReminder(reminder, this), TIME_DELAYED_SCHEDULE);
     }
 
@@ -230,5 +161,9 @@ public class PillScreen extends BaldActivity {
     @Override
     protected int requiredPermissions() {
         return PERMISSION_NONE;
+    }
+
+    @Override protected int screenTimeout() {
+        return D.MINUTE * 2;
     }
 }

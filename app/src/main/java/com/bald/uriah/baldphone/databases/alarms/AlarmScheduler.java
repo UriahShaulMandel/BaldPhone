@@ -25,7 +25,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import androidx.annotation.NonNull;
-import com.bald.uriah.baldphone.activities.HomeScreen;
+import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.broadcast_receivers.AlarmReceiver;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
@@ -153,7 +153,7 @@ public class AlarmScheduler {
             alarmManager.setAlarmClock(
                     new AlarmManager.AlarmClockInfo(
                             nextTimeAlarmWillWorkInMs,
-                            PendingIntent.getActivity(context, 0, new Intent(context, HomeScreen.class), 0)//TODO??
+                            PendingIntent.getActivity(context, 0, new Intent(context, HomeScreenActivity.class), 0)//TODO??
                     ),
                     getIntent(context, alarm.getKey())
             );
@@ -172,7 +172,7 @@ public class AlarmScheduler {
             alarmManager.setAlarmClock(
                     new AlarmManager.AlarmClockInfo(
                             DateTime.now().getMillis() + SNOOZE_MILLIS,
-                            PendingIntent.getActivity(context, alarm.getKey(), new Intent(context, HomeScreen.class), 0)//TODO??
+                            PendingIntent.getActivity(context, alarm.getKey(), new Intent(context, HomeScreenActivity.class), 0)//TODO??
                     ),
                     getIntent(context, alarm.getKey())
             );

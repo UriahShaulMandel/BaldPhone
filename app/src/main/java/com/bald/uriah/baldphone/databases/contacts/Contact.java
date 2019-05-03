@@ -26,6 +26,7 @@ import android.text.TextUtils;
 import android.util.Pair;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import com.bald.uriah.baldphone.utils.Constants;
 import com.bald.uriah.baldphone.utils.D;
 
 import java.util.ArrayList;
@@ -34,54 +35,15 @@ import java.util.List;
 /**
  * Immutable Contact class
  */
-public class Contact {
-    public static final String[] READ_CONTACT_PROJECTION = {
-            ContactsContract.Contacts._ID,
-            ContactsContract.Contacts.DISPLAY_NAME,
-            ContactsContract.Contacts.LOOKUP_KEY,
-            ContactsContract.Contacts.PHOTO_URI,
-            ContactsContract.Contacts.STARRED
-    };
-
-    private static final String[] PHONE_PROJECTION = {
-            ContactsContract.CommonDataKinds.Phone.TYPE,
-            ContactsContract.CommonDataKinds.Phone.NUMBER,
-            ContactsContract.CommonDataKinds.Phone.CONTACT_ID
-    };
-    private static final String PHONE_SELECTION = ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ?";
-    private static final String[] EMAIL_PROJECTION = {
-            ContactsContract.CommonDataKinds.Email.DATA,
-            ContactsContract.CommonDataKinds.Email.CONTACT_ID
-    };
-    private static final String EMAIL_SELECTION = ContactsContract.CommonDataKinds.Email.CONTACT_ID + " = ?";
-    private static final String[] ADDRESS_PROJECTION = {
-            ContactsContract.Data.CONTACT_ID,
-            ContactsContract.Data.MIMETYPE,
-            ContactsContract.CommonDataKinds.StructuredPostal.POBOX,
-            ContactsContract.CommonDataKinds.StructuredPostal.STREET,
-            ContactsContract.CommonDataKinds.StructuredPostal.CITY,
-            ContactsContract.CommonDataKinds.StructuredPostal.REGION,
-            ContactsContract.CommonDataKinds.StructuredPostal.POSTCODE,
-            ContactsContract.CommonDataKinds.StructuredPostal.COUNTRY,
-            ContactsContract.CommonDataKinds.StructuredPostal.TYPE,
-    };
-    private static final String ADDRESS_SELECTION = ContactsContract.Data.CONTACT_ID + " = ? AND " + ContactsContract.Data.MIMETYPE + " = ?";
-
+public class Contact implements Constants.ContactConstants {
     private final int id;
-    @NonNull
-    private final String lookupKey;
-    @NonNull
-    private final List<Pair<Integer /*Type*/, String>> phoneList;
-    @NonNull
-    private final List<String> mailList;
-    @NonNull
-    private final List<Pair<Integer, String[]>> addressList;
-    @NonNull
-    private final List<String> whatsappNumbers;
-    @NonNull
-    private final String name;
-    @Nullable
-    private final String photo;
+    @NonNull private final String lookupKey;
+    @NonNull private final List<Pair<Integer /*Type*/, String>> phoneList;
+    @NonNull private final List<String> mailList;
+    @NonNull private final List<Pair<Integer, String[]>> addressList;
+    @NonNull private final List<String> whatsappNumbers;
+    @NonNull private final String name;
+    @Nullable private final String photo;
     private final boolean favorite;
 
     private Contact(int id,
@@ -108,7 +70,7 @@ public class Contact {
         final Cursor contactsCursor =
                 contentResolver.query(
                         ContactsContract.Contacts.CONTENT_URI,
-                        READ_CONTACT_PROJECTION,
+                        PROJECTION,
                         ContactsContract.Contacts._ID + " = ?",
                         new String[]{id},
                         null);
@@ -120,7 +82,7 @@ public class Contact {
         final Cursor contactsCursor =
                 contentResolver.query(
                         ContactsContract.Contacts.CONTENT_URI,
-                        READ_CONTACT_PROJECTION,
+                        PROJECTION,
                         ContactsContract.Contacts.LOOKUP_KEY + " = ?",
                         new String[]{lookupKey},
                         null);
@@ -129,7 +91,7 @@ public class Contact {
     }
 
     /**
-     * @param cursor          cursor with the following projection: {{@link #READ_CONTACT_PROJECTION}}
+     * @param cursor          cursor with the following projection: {{@link #PROJECTION}}
      * @param contentResolver a content resolver
      * @return the contact
      */
@@ -149,35 +111,35 @@ public class Contact {
         lookupKey = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.LOOKUP_KEY));
         photo = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.PHOTO_URI));
 
-        try (Cursor pCur = contentResolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, PHONE_PROJECTION, PHONE_SELECTION, new String[]{id}, null)) {
+        try (final Cursor pCur = contentResolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, PHONE_PROJECTION, PHONE_SELECTION, new String[]{id}, null)) {
             while (pCur.moveToNext()) {
                 phoneList.add(new Pair<>(
-                        pCur.getInt(pCur.getColumnIndex(ContactsContract.CommonDataKinds.Phone.TYPE)),
-                        pCur.getString(pCur.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
+                        pCur.getInt(PHONE_TYPE_INDEX),
+                        pCur.getString(PHONE_NUMBER_INDEX)
                 ));
             }
         }
 
-        try (Cursor emailCur = contentResolver.query(ContactsContract.CommonDataKinds.Email.CONTENT_URI, EMAIL_PROJECTION, EMAIL_SELECTION, new String[]{id}, null)) {
+        try (final Cursor emailCur = contentResolver.query(ContactsContract.CommonDataKinds.Email.CONTENT_URI, EMAIL_PROJECTION, EMAIL_SELECTION, new String[]{id}, null)) {
             while (emailCur.moveToNext()) {
-                mailList.add(emailCur.getString(emailCur.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA)));
+                mailList.add(emailCur.getString(EMAIL_DATA_INDEX));
             }
         }
 
         //Get Postal Address...
-        try (Cursor addrCur = contentResolver.query(ContactsContract.Data.CONTENT_URI,
+        try (final Cursor addrCur = contentResolver.query(ContactsContract.Data.CONTENT_URI,
                 ADDRESS_PROJECTION,
                 ADDRESS_SELECTION,
                 new String[]{id, ContactsContract.CommonDataKinds.StructuredPostal.CONTENT_ITEM_TYPE},
                 null)) {
             while (addrCur.moveToNext()) {
                 addressList.add(new Pair<>(addrCur.getInt(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.TYPE)), new String[]{
-                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.POBOX)),
-                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.STREET)),
-                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.CITY)),
-                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.REGION)),
-                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.POSTCODE)),
-                        addrCur.getString(addrCur.getColumnIndex(ContactsContract.CommonDataKinds.StructuredPostal.COUNTRY))
+                        addrCur.getString(POBOX_INDEX),
+                        addrCur.getString(STREET_INDEX),
+                        addrCur.getString(CITY_INDEX),
+                        addrCur.getString(REGION_INDEX),
+                        addrCur.getString(POSTCODE_INDEX),
+                        addrCur.getString(COUNTRY_INDEX)
                 }));
             }
         }
@@ -187,9 +149,20 @@ public class Contact {
         return new Contact(Integer.parseInt(id), lookupKey, phoneList, mailList, addressList, whatsappNumbers, name, photo, favorite);
     }
 
+    /**
+     * @param contentResolver - a content resolver
+     * @param contactName     - the contact DISPLAY_NAME
+     * @return List of the whatsapp numbers.
+     */
     private static List<String> getWhatsAppNumbers(ContentResolver contentResolver, String contactName) {
         final List<String> whatsappNumbers = new ArrayList<>();
-        try (Cursor cursor1 = contentResolver.query(ContactsContract.RawContacts.CONTENT_URI, new String[]{ContactsContract.RawContacts._ID}, ContactsContract.RawContacts.ACCOUNT_TYPE + "= ? AND " + ContactsContract.CommonDataKinds.StructuredName.DISPLAY_NAME_PRIMARY + " = ?", new String[]{D.WHATSAPP_PACKAGE_NAME, contactName}, null)) {
+        try (final Cursor cursor1 =
+                     contentResolver.query(
+                             ContactsContract.RawContacts.CONTENT_URI,
+                             new String[]{ContactsContract.RawContacts._ID},
+                             ContactsContract.RawContacts.ACCOUNT_TYPE + "= ? AND " + ContactsContract.CommonDataKinds.StructuredName.DISPLAY_NAME_PRIMARY + " = ?",
+                             new String[]{D.WHATSAPP_PACKAGE_NAME, contactName},
+                             null)) {
             String rawContactId, phoneNumber;
             while (cursor1.moveToNext()) {
                 rawContactId = cursor1.getString(cursor1.getColumnIndex(ContactsContract.RawContacts._ID));
@@ -215,18 +188,16 @@ public class Contact {
 
     @Nullable
     public CharSequence getAddress() {
-        for (Pair<Integer, String[]> address :
-                addressList) {
+        for (Pair<Integer, String[]> address : addressList) {
             final StringBuilder stringBuilder = new StringBuilder();
             if (address.second != null)
-                for (String s :
-                        address.second) {
+                for (String s : address.second)
                     if (s != null)
                         stringBuilder.append(s);
-                }
-            if (stringBuilder.length() != 0) {
+
+            if (stringBuilder.length() != 0)
                 return stringBuilder;
-            }
+
         }
         return null;
     }
@@ -281,6 +252,19 @@ public class Contact {
 
     public boolean hasPhoto() {
         return photo != null;
+    }
+
+    public int getRawContactId(final ContentResolver contentResolver) {
+        try (final Cursor c = contentResolver.query(
+                ContactsContract.RawContacts.CONTENT_URI,
+                RAW_CONTACT_PROJECTION,
+                RAW_CONTACT_SELECTION,
+                new String[]{String.valueOf(this.getId())},
+                null)) {
+            if (c != null && c.moveToFirst())
+                return c.getInt(c.getColumnIndex(ContactsContract.RawContacts._ID));
+        }
+        return -1;
     }
 
     @NonNull

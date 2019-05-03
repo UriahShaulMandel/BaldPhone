@@ -25,13 +25,13 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
-import com.bald.uriah.baldphone.activities.HomeScreen;
+import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 
 public abstract class HomeView extends FrameLayout {
     @NonNull
-    protected final HomeScreen homeScreen;
+    protected final HomeScreenActivity homeScreen;
 
-    public HomeView(@NonNull HomeScreen homeScreen) {
+    public HomeView(@NonNull HomeScreenActivity homeScreen) {
         super(homeScreen);
         this.homeScreen = homeScreen;
         addView(onCreateView(LayoutInflater.from(homeScreen), this), new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));

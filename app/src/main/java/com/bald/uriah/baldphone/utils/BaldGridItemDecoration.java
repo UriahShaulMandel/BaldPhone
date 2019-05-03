@@ -23,6 +23,7 @@ import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.view.View;
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class BaldGridItemDecoration extends RecyclerView.ItemDecoration {
@@ -40,7 +41,7 @@ public class BaldGridItemDecoration extends RecyclerView.ItemDecoration {
     }
 
     @Override
-    public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+    public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
         int frameWidth = (int) ((parent.getWidth() - (float) sizeGridSpacingPx * (gridSize - 1)) / gridSize);
         int padding = parent.getWidth() / gridSize - frameWidth;
         int itemPosition = ((RecyclerView.LayoutParams) view.getLayoutParams()).getViewAdapterPosition();
@@ -66,11 +67,9 @@ public class BaldGridItemDecoration extends RecyclerView.ItemDecoration {
                 outRect.right = sizeGridSpacingPx / 2;
             }
         } else if ((itemPosition + 2) % gridSize == 0) {
-            needLeftSpacing = false;
             outRect.left = sizeGridSpacingPx / 2;
             outRect.right = sizeGridSpacingPx - padding;
         } else {
-            needLeftSpacing = false;
             outRect.left = sizeGridSpacingPx / 2;
             outRect.right = sizeGridSpacingPx / 2;
         }
@@ -78,7 +77,7 @@ public class BaldGridItemDecoration extends RecyclerView.ItemDecoration {
     }
 
     @Override
-    public void onDrawOver(Canvas c, RecyclerView parent, RecyclerView.State state) {
+    public void onDrawOver(@NonNull Canvas c, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
         int childCount = parent.getChildCount();
         for (int i = 0; i < childCount; i++) {
             View child = parent.getChildAt(i);

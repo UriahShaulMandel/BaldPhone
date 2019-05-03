@@ -50,10 +50,15 @@ import com.bald.uriah.baldphone.fragments_and_dialogs.LetterChooserDialog;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<ContactRecyclerViewAdapter.ViewHolder> {
+    public final static String[] PROJECTION =
+            {ContactsContract.Data.DISPLAY_NAME,
+                    ContactsContract.Data._ID,
+                    ContactsContract.Contacts.PHOTO_URI,
+                    ContactsContract.Data.LOOKUP_KEY,
+                    ContactsContract.Data.STARRED};
     public static final int MODE_DEFAULT = 0;
     public static final int MODE_SOS = 1;
     public static final int MODE_SHARE = 2;
-    private static final String TAG = ContactRecyclerViewAdapter.class.getSimpleName();
     private final BaldActivity activity;
     private final LayoutInflater layoutInflater;
     private final Drawable letterContactBackground;

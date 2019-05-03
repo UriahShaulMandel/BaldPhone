@@ -52,7 +52,7 @@ public class HomePage1 extends HomeView {
     private FirstPageAppIcon bt_clock, bt_camera, bt_videos, bt_assistant, bt_messages, bt_photos, bt_contacts, bt_dialer, bt_whatsapp, bt_apps, bt_reminders, bt_recent;
     private PackageManager packageManager;
 
-    public HomePage1(@NonNull HomeScreen homeScreen) {
+    public HomePage1(@NonNull HomeScreenActivity homeScreen) {
         super(homeScreen);
     }
 

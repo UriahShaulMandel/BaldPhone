@@ -28,46 +28,32 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.BaldActivity;
+import com.bald.uriah.baldphone.activities.TimedBaldActivity;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
-import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
-import com.bald.uriah.baldphone.utils.S;
+import com.bald.uriah.baldphone.utils.*;
 
 /**
  * Alarm screen, will be called from {@link com.bald.uriah.baldphone.broadcast_receivers.AlarmReceiver}
  */
-public class AlarmScreen extends BaldActivity {
-    public static final int TIME_SCREEN_ON = D.MINUTE * 5;
-    private static final String TAG = AlarmScreen.class.getSimpleName();
+public class AlarmScreenActivity extends TimedBaldActivity {
+    private static final String TAG = AlarmScreenActivity.class.getSimpleName();
     private static final int TIME_DELAYED_SCHEDULE = 100;
     private static final AudioAttributes alarmAttributes =
             new AudioAttributes.Builder()
                     .setUsage(AudioAttributes.USAGE_ALARM)
                     .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
                     .build();
-    private final Runnable closeScreen = () -> {
-        final Window window = getWindow();
-        if (window != null)
-            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-    };
-    private TextView tv_name, snooze;//todo delete
+
+    private TextView tv_name, snooze;
     private ImageView cancel;
-    private Vibrator vibrator;
     private Ringtone ringtone;
     private Alarm alarm;
 
@@ -94,21 +80,10 @@ public class AlarmScreen extends BaldActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         S.logImportant("alarmScreen was called!");
-        final Window window = getWindow();
-
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-                | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
-        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-                | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
-
         setContentView(R.layout.alarm_screen);
 
         attachXml();
-        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);//can be always
 
         final Intent intent = getIntent();
         if (intent == null) throw new AssertionError();
@@ -155,9 +130,10 @@ public class AlarmScreen extends BaldActivity {
             e.printStackTrace();
         }
 
-        makeBiggerAndSmaller(cancel);
+        Animations.makeBiggerAndSmaller(this, cancel, () -> {
+            if (vibrator != null) vibrator.vibrate(D.vibetime);
+        });
         scheduleNextAlarm();
-        new Handler().postDelayed(closeScreen, TIME_SCREEN_ON);
     }
 
     @Override
@@ -187,49 +163,6 @@ public class AlarmScreen extends BaldActivity {
         snooze = findViewById(R.id.snooze);
     }
 
-    private void makeBiggerAndSmaller(final View view) {
-        final Animation enlarge =
-                AnimationUtils.loadAnimation(this, R.anim.enlarge);
-        final Animation ensmall =
-                AnimationUtils.loadAnimation(this, R.anim.ensmall);
-        enlarge.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                view.startAnimation(ensmall);
-                if (vibrator != null)
-                    vibrator.vibrate(D.vibetime);
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-            }
-        });
-        ensmall.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                view.startAnimation(enlarge);
-                if (vibrator != null)
-                    vibrator.vibrate(D.vibetime);
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-            }
-        });
-        view.startAnimation(enlarge);
-
-    }
-
     private void snooze() {
         if (vibrator != null)
             vibrator.vibrate(D.vibetime);
@@ -237,26 +170,29 @@ public class AlarmScreen extends BaldActivity {
         finish();
     }
 
-    //TODO DEFAQ???
     private void scheduleNextAlarm() {
         new Handler().postDelayed(() -> {
-            if (alarm.getDays() == -1) {
-                AlarmsDatabase.getInstance(this)
-                        .alarmsDatabaseDao().update(alarm.getKey(), false);
-            } else {
-                AlarmScheduler.scheduleAlarm(alarm, this);
+            if (alarm.isEnabled()) {
+                if (alarm.getDays() == -1) {
+                    AlarmsDatabase.getInstance(this)
+                            .alarmsDatabaseDao().update(alarm.getKey(), false);
+                } else {
+                    AlarmScheduler.scheduleAlarm(alarm, this);
+                }
             }
         }, TIME_DELAYED_SCHEDULE);
     }
 
-    @Override
-    public void onBackPressed() {
+    @Override public void onBackPressed() {
         snooze();
         super.onBackPressed();
     }
 
-    @Override
-    protected int requiredPermissions() {
+    @Override protected int requiredPermissions() {
         return PERMISSION_NONE;
+    }
+
+    @Override protected int screenTimeout() {
+        return D.MINUTE * 5;
     }
 }

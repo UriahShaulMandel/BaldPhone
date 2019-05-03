@@ -191,8 +191,7 @@ public class SingleContactActivity extends BaldActivity {
     }
 
     private void inflatePhones() {
-//        final boolean userHasWhatsapp = S.userHasWhatsapp(this);
-        List<Pair<Integer, String>> phoneList = contact.getPhoneList(); //removing dup
+        final List<Pair<Integer, String>> phoneList = contact.getPhoneList(); //removing dup
         for (int i = 0, phoneListSize = phoneList.size(); i < phoneListSize - 1; i++) {
             final Pair<Integer, String> pair = phoneList.get(i);
             final Pair<Integer, String> next = phoneList.get(i + 1);
@@ -264,8 +263,7 @@ public class SingleContactActivity extends BaldActivity {
     }
 
     private void inflateMails() {
-
-        List<String> mailList = contact.getMailList();
+        final List<String> mailList = contact.getMailList();
         for (int i = 0, mailListSize = mailList.size(); i < mailListSize - 1; i++) {
             final String phone = mailList.get(i);
             final String next = mailList.get(i + 1);
@@ -369,7 +367,6 @@ public class SingleContactActivity extends BaldActivity {
 
         );
         ll.addView(view);
-
     }
 
     private void inflateAddresses() {
@@ -448,8 +445,7 @@ public class SingleContactActivity extends BaldActivity {
                 .putExtra(Intent.EXTRA_STREAM, vcardUri)
                 .putExtra(Intent.EXTRA_SUBJECT, contact.getName());
 
-        findViewById(R.id.bt_share).setOnClickListener(v ->
-                {
+        findViewById(R.id.bt_share).setOnClickListener(v -> {
                     changed = true;
                     S.share(this, shareIntent);
                 }

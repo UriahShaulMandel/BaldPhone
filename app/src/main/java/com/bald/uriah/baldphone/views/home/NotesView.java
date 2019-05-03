@@ -31,7 +31,7 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.HomeScreen;
+import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.Toggeler;
 import com.bald.uriah.baldphone.views.BaldPictureTextButton;
@@ -43,7 +43,7 @@ public class NotesView extends HomeView {
     private EditText editText;
     private SharedPreferences sharedPreferences;
 
-    public NotesView(@NonNull HomeScreen activity) {
+    public NotesView(@NonNull HomeScreenActivity activity) {
         super(activity);
     }
 
@@ -107,7 +107,7 @@ public class NotesView extends HomeView {
     }
 
     public static class RecognizerManager {
-        private WeakReference<HomeScreen> homeScreen;
+        private WeakReference<HomeScreenActivity> homeScreen;
         private WeakReference<NotesView> notesFragment;
 
         public void displaySpeechRecognizer() {
@@ -125,7 +125,7 @@ public class NotesView extends HomeView {
             return homeScreen != null && notesFragment != null && homeScreen.get() != null && notesFragment.get() != null;
         }
 
-        public void setHomeScreen(HomeScreen homeScreen) {
+        public void setHomeScreen(HomeScreenActivity homeScreen) {
             this.homeScreen = new WeakReference<>(homeScreen);
         }
 

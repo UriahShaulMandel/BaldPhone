@@ -56,8 +56,8 @@ import java.util.List;
 
 import static com.bald.uriah.baldphone.services.NotificationListenerService.*;
 
-public class HomeScreen extends BaldActivity {
-    private static final String TAG = HomeScreen.class.getSimpleName();
+public class HomeScreenActivity extends BaldActivity {
+    private static final String TAG = HomeScreenActivity.class.getSimpleName();
     private static final int[] SOUND_DRAWABLES = new int[]{
             R.drawable.mute_on_background,
             R.drawable.vibration_on_background,
@@ -135,7 +135,7 @@ public class HomeScreen extends BaldActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        S.logImportant("HomeScreen was started!");
+        S.logImportant("HomeScreenActivity was started!");
         sharedPreferences = BPrefs.get(this);
 
         if (!sharedPreferences.getBoolean(BPrefs.AFTER_TUTORIAL_KEY, false)) {
@@ -263,7 +263,7 @@ public class HomeScreen extends BaldActivity {
         } else if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             flashButton.setOnClickListener(v -> startActivity(new Intent(this, PermissionActivity.class)
                     .putExtra(PermissionActivity.EXTRA_REQUIRED_PERMISSIONS, PERMISSION_CAMERA)
-                    .putExtra(PermissionActivity.EXTRA_NAME, activityName())));
+            ));
 
         } else {
             flashButton.setOnClickListener(D.EMPTY_CLICK_LISTENER);
@@ -385,6 +385,7 @@ public class HomeScreen extends BaldActivity {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == SPEECH_REQUEST_CODE && resultCode == RESULT_OK) {
             final String spokenText = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS).get(0);
             recognizerManager.onSpeechRecognizerResult(spokenText);
@@ -408,9 +409,9 @@ public class HomeScreen extends BaldActivity {
     }
 
     static class UpdateApps extends AsyncTask<Context, Void, Void> {
-        final WeakReference<HomeScreen> homeScreenWeakReference;
+        final WeakReference<HomeScreenActivity> homeScreenWeakReference;
 
-        public UpdateApps(HomeScreen homeScreen) {
+        public UpdateApps(HomeScreenActivity homeScreen) {
             super();
             homeScreenWeakReference = new WeakReference<>(homeScreen);
         }
@@ -423,7 +424,7 @@ public class HomeScreen extends BaldActivity {
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            HomeScreen homeScreen = homeScreenWeakReference.get();
+            HomeScreenActivity homeScreen = homeScreenWeakReference.get();
             if (homeScreen != null) {
                 homeScreen.viewPagerStartHandler();
                 homeScreen.finishedUpdatingApps = true;

@@ -46,7 +46,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.alarms.AlarmScreen;
+import com.bald.uriah.baldphone.activities.alarms.AlarmScreenActivity;
 import com.bald.uriah.baldphone.activities.pills.PillTimeSetterActivity;
 import com.bald.uriah.baldphone.utils.*;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
@@ -431,7 +431,7 @@ public class SettingsActivity extends BaldActivity {
                 closeRingtone.run();
 
                 sharedPreferences.edit().putInt(BPrefs.ALARM_VOLUME_KEY, progress).apply();
-                ringtone = AlarmScreen.getRingtone(SettingsActivity.this);
+                ringtone = AlarmScreenActivity.getRingtone(SettingsActivity.this);
                 ringtone.play();
                 handler.postDelayed(closeRingtone, 4 * D.SECOND);
 

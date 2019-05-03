@@ -24,7 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.core.util.Pools;
-import com.bald.uriah.baldphone.activities.HomeScreen;
+import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.views.home.HomePage1;
@@ -43,9 +43,9 @@ public class BaldPagerAdapter extends BaldViewAdapter {
     public int startingPage;
     public List<HomeScreenPinHelper.HomeScreenPinnable> pinnedList = Collections.EMPTY_LIST;
     private int numItemsBefore, numItems;
-    private HomeScreen homeScreen;
+    private HomeScreenActivity homeScreen;
 
-    public BaldPagerAdapter(HomeScreen homeScreen) {
+    public BaldPagerAdapter(HomeScreenActivity homeScreen) {
         this.homeScreen = homeScreen;
         startingPage = (this.homeScreen.getSharedPreferences(BPrefs.KEY, Context.MODE_PRIVATE).getBoolean(BPrefs.NOTE_VISIBLE_KEY, BPrefs.NOTE_VISIBLE_DEFAULT_VALUE) ? 2 : 1);
         numItems = numItemsBefore = startingPage + 1;

@@ -21,6 +21,7 @@ package com.bald.uriah.baldphone.utils;
 
 import android.content.Context;
 import android.view.View;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import com.bald.uriah.baldphone.activities.BaldActivity;
@@ -31,9 +32,8 @@ import com.bald.uriah.baldphone.activities.BaldActivity;
 public class BDB {
     public Context context;
 
-    @BDialog.DialogState
-    int dialogState = BDialog.DialogState.OK;
-    CharSequence title = "";
+    @BDialog.DialogState int dialogState = BDialog.DialogState.OK;
+    @NonNull CharSequence title = "";
     CharSequence subText;
     CharSequence[] options;
     int inputType;
@@ -41,10 +41,9 @@ public class BDB {
     BDialog.DialogBoxListener negativeButtonListener = BDialog.DialogBoxListener.EMPTY;
     BDialog.DialogBoxListener cancelButtonListener = BDialog.DialogBoxListener.EMPTY;
     boolean cancelable = true;
-    BDialog.StartingIndexChooser startingIndexChooser = () -> 0;
-    BaldActivity baldActivityToAutoDismiss;
-    @Nullable
-    View extraView;
+    @NonNull BDialog.StartingIndexChooser startingIndexChooser = () -> 0;
+    @Nullable BaldActivity baldActivityToAutoDismiss;
+    @Nullable View extraView;
 
     private BDB() {
     }

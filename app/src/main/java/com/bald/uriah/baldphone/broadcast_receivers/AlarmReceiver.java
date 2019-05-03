@@ -23,13 +23,13 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import com.bald.uriah.baldphone.activities.alarms.AlarmScreen;
+import com.bald.uriah.baldphone.activities.alarms.AlarmScreenActivity;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
 
 /**
- * the middle man between the {@link AlarmScheduler} and {@link AlarmScreen}.
+ * the middle man between the {@link AlarmScheduler} and {@link AlarmScreenActivity}.
  * the reason for having this is the wake lock the system creates for broadcast receivers.
  */
 public class AlarmReceiver extends BroadcastReceiver {
@@ -48,7 +48,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         }
 
         final Context appContext = context.getApplicationContext();
-        appContext.startActivity(new Intent(appContext, AlarmScreen.class)
+        appContext.startActivity(new Intent(appContext, AlarmScreenActivity.class)
                 .putExtra(Alarm.ALARM_KEY_VIA_INTENTS, key)
                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         );

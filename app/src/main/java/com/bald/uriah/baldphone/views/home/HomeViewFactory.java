@@ -26,7 +26,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.HomeScreen;
+import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.adapters.BaldPagerAdapter;
 import com.bald.uriah.baldphone.views.BaldLinearLayoutButton;
 import com.bald.uriah.baldphone.views.HomeScreenAppView;
@@ -36,7 +36,7 @@ public class HomeViewFactory extends HomeView {
     public static final int AMOUNT_PER_PAGE = 8;
     public ConstraintLayout child;
 
-    public HomeViewFactory(@NonNull HomeScreen homeScreen) {
+    public HomeViewFactory(@NonNull HomeScreenActivity homeScreen) {
         super(homeScreen);
     }
 

@@ -19,10 +19,10 @@
 
 package com.bald.uriah.baldphone.databases.contacts;
 
-import android.provider.ContactsContract;
 import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
+import com.bald.uriah.baldphone.utils.Constants;
 import com.bald.uriah.baldphone.views.HomeScreenAppView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -30,18 +30,10 @@ import com.bumptech.glide.request.RequestOptions;
 /**
  * Mini contact, contains lookupkey,photo,name and id.
  */
-public class MiniContact implements HomeScreenPinHelper.HomeScreenPinnable {
-    public static final String[] PROJECTION = new String[]{
-            ContactsContract.Contacts.LOOKUP_KEY,
-            ContactsContract.Contacts.DISPLAY_NAME,
-            ContactsContract.Contacts.PHOTO_URI,
-            ContactsContract.Contacts._ID,
-            ContactsContract.Contacts.STARRED,
-    };
-    private static final String TAG = MiniContact.class.getSimpleName();
+public class MiniContact implements HomeScreenPinHelper.HomeScreenPinnable, Constants.BaseContactsConstants {
+
     public final String lookupKey, photo;
-    @Nullable
-    public final String name;
+    @Nullable public final String name;
     public final int id;
     public final boolean favorite;
 

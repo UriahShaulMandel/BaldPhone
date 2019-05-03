@@ -95,7 +95,6 @@ public class DialerActivity extends BaldActivity {
         setOnClickListeners();
         setupYoutube(0);
         searchForContact();
-
     }
 
     private void getContactsByNumberFilter() {

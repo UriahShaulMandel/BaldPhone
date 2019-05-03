@@ -52,13 +52,7 @@ public class ShareActivity extends BaseContactsActivity {
     public static final String SORT_ORDER =
             "upper(" + ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + ") ASC";
     private static final String TAG = ShareActivity.class.getSimpleName();
-    private final static String[] PROJECTION = {
-            ContactsContract.Data.DISPLAY_NAME,
-            ContactsContract.Data._ID,
-            ContactsContract.Data.PHOTO_URI,
-            ContactsContract.Data.LOOKUP_KEY,
-            ContactsContract.Data.STARRED,
-            ContactsContract.Data.MIMETYPE};
+
     private static final String STAR_SELECTION =
             "AND " + ContactsContract.Data.STARRED + " = 1";
     private static final String SELECTION_NAME =
@@ -131,7 +125,7 @@ public class ShareActivity extends BaseContactsActivity {
         final String[] args = {"com.whatsapp", "%" + filter + "%"};
         try {
             return contentResolver.query(ContactsContract.Data.CONTENT_URI,
-                    PROJECTION,
+                    ContactRecyclerViewAdapter.PROJECTION,
                     SELECTION_NAME + (favorite ? (STAR_SELECTION) : ("")),
                     args,
                     SORT_ORDER);

@@ -42,10 +42,6 @@ import org.acra.config.HttpSenderConfigurationBuilder;
 import org.acra.data.StringFormat;
 import org.acra.sender.HttpSender;
 
-/**
- * base application class - onBoot makes onCreate run when devices opens.
- */
-
 public class BaldPhone extends Application {
     private static final String TAG = BaldPhone.class.getSimpleName();
 
@@ -116,7 +112,7 @@ public class BaldPhone extends Application {
             alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,
                     300 * D.MILLISECOND, pendingIntent);
 
-            System.exit(2);
+            Runtime.getRuntime().exit(2);
         }
     }
 }

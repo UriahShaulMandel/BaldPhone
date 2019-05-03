@@ -58,7 +58,7 @@
 
 
         <activity
-            android:name=".activities.HomeScreen"
+            android:name=".activities.HomeScreenActivity"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -76,7 +76,7 @@
         </activity>
         <activity android:name=".activities.alarms.AlarmsActivity" />
         <activity
-            android:name=".activities.alarms.AlarmScreen"
+            android:name=".activities.alarms.AlarmScreenActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.alarms.AddAlarmActivity"
@@ -128,7 +128,7 @@
             android:name=".activities.pills.AddPillActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.pills.PillScreen"
+            android:name=".activities.pills.PillScreenActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.FontChangerActivity"

@@ -53,7 +53,6 @@ import static android.view.View.GONE;
 abstract class BaseContactsActivity extends BaldActivity {
     public static final int SPEECH_REQUEST_CODE = 5678;
     public static final String INTENT_EXTRA_CONTACT_ADAPTER_MODE = "INTENT_EXTRA_CONTACT_ADAPTER_MODE";
-    private static final String TAG = BaseContactsActivity.class.getSimpleName();
     private static final String FILTER_STATE = "FILTER_STATE";
     private static final String FAVORITE_STATE = "FAVORITE_STATE";
     //<views>
@@ -65,6 +64,7 @@ abstract class BaseContactsActivity extends BaldActivity {
     protected ContentResolver contentResolver;
     protected ContactRecyclerViewAdapter contactRecyclerViewAdapter;
     protected int mode = ContactRecyclerViewAdapter.MODE_DEFAULT;
+
     private String filter = "";
     private boolean favorite = false;
     private SoftInputAssist softInputAssist;
@@ -146,9 +146,7 @@ abstract class BaseContactsActivity extends BaldActivity {
                     }
                 });
 
-        et_filter_input.setOnFocusChangeListener((v, gotFocus) ->
-
-        {
+        et_filter_input.setOnFocusChangeListener((v, gotFocus) -> {
             if (gotFocus)
                 et_filter_input.setCompoundDrawables(null, null, null, null);
             else
