@@ -35,6 +35,7 @@ import com.bald.uriah.baldphone.services.NotificationListenerService;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
+import net.danlew.android.joda.JodaTimeAndroid;
 import org.acra.ACRA;
 import org.acra.config.CoreConfigurationBuilder;
 import org.acra.config.HttpSenderConfigurationBuilder;
@@ -52,6 +53,7 @@ public class BaldPhone extends Application {
     public void onCreate() {
         S.logImportant(TAG + " was started!");
         super.onCreate();
+        JodaTimeAndroid.init(this);
         AlarmScheduler.reStartAlarms(this);
         ReminderScheduler.reStartReminders(this);
         UpdatesActivity.removeUpdatesInfo(this);

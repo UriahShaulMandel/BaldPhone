@@ -27,8 +27,8 @@ android {
         applicationId "com.bald.uriah.baldphone"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 74
-        versionName "11.1.9"
+        versionCode 75
+        versionName "11.2.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
