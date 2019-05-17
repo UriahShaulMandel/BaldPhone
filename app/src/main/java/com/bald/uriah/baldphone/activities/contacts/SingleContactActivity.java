@@ -323,7 +323,7 @@ public class SingleContactActivity extends BaldActivity {
                                 BDB.from(v.getContext())
                                         .setTitle(R.string.sos_is_full)
                                         .setSubText(R.string.sos_is_full_subtext)
-                                        .setDialogState(BDialog.DialogState.OK)
+                                        .addFlag(BDialog.FLAG_OK)
                                         .show();
                                 v.setVisibility(View.GONE);
                             }
@@ -429,7 +429,7 @@ public class SingleContactActivity extends BaldActivity {
                         .putExtra(CONTACT_LOOKUP_KEY, contact.getLookupKey());
         final View.OnClickListener deleteListener = (v) ->
                 BDB.from(this)
-                        .setDialogState(BDialog.DialogState.YES_CANCEL)
+                        .addFlag(BDialog.FLAG_YES | BDialog.FLAG_CANCEL)
                         .setSubText(String.format(getString(R.string.are_you_sure_you_want_to_delete___), contact.getName()))
                         .setPositiveButtonListener(params -> {
                             deleteContact();

@@ -34,6 +34,7 @@ import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.PopupWindow;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -62,6 +63,11 @@ public class HomeScreenActivity extends BaldActivity {
             R.drawable.mute_on_background,
             R.drawable.vibration_on_background,
             R.drawable.sound_on_background
+    };
+    private static final int[] SOUND_TEXTS = new int[]{
+            R.string.mute,
+            R.string.vibrate,
+            R.string.sound
     };
     private static final IntentFilter BATTERY_FILTER = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
     private static final int SPEECH_REQUEST_CODE = 7;
@@ -180,6 +186,29 @@ public class HomeScreenActivity extends BaldActivity {
             startActivity(new Intent(this, NotificationsActivity.class));
             overridePendingTransition(R.anim.slide_in_down, R.anim.nothing);
         });
+        soundButton.setOnClickListener(v -> {
+            S.showDropDownPopup(this, getWindow().getDecorView().getWidth(), new DropDownRecyclerViewAdapter.DropDownListener() {
+                @Override
+                public void onUpdate(DropDownRecyclerViewAdapter.ViewHolder viewHolder, final int position, PopupWindow popupWindow) {
+                    viewHolder.pic.setImageResource(SOUND_DRAWABLES[position]);
+                    viewHolder.text.setText(SOUND_TEXTS[position]);
+                    viewHolder.itemView.setOnClickListener(v1 -> {
+                        try {
+                            audioManager.setRingerMode(position);
+                            soundButton.setImageResource(SOUND_DRAWABLES[position]);
+                        } catch (SecurityException e) {
+                            startActivity(new Intent(android.provider.Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS));
+                        }
+                        popupWindow.dismiss();
+                    });
+                }
+
+                @Override public int size() {
+                    return 3;
+                }
+            }, soundButton);
+
+        });
         batteryView.setOnClickListener((v) -> BaldToast.from(this)
                 .setText(batteryView.percentage + "%")
                 .setBig(true)
@@ -206,7 +235,7 @@ public class HomeScreenActivity extends BaldActivity {
                 BDB.from(this)
                         .setTitle(R.string.set_home_screen)
                         .setSubText(R.string.set_home_screen_subtext)
-                        .setDialogState(BDialog.DialogState.OK_NO)
+                        .addFlag(BDialog.FLAG_OK | BDialog.FLAG_NO)
                         .setPositiveButtonListener(params -> {
                             FakeLauncherActivity.resetPreferredLauncherAndOpenChooser(this);
                             return true;
@@ -230,23 +259,8 @@ public class HomeScreenActivity extends BaldActivity {
             viewPagerHolder.getViewPager().removeAllViews();//android auto saves fragments, not good for us in this case
             this.recreate();
         }
-        Toggeler.newAdvancedImageToggeler(
-                soundButton,
-                soundButton,
-                SOUND_DRAWABLES,
-                index -> {
-                    try {
-                        audioManager.setRingerMode(index);
-                    } catch (SecurityException e) {
-                        startActivity(new Intent(
-                                android.provider.Settings
-                                        .ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS));
-                    }
-                },
-                audioManager.getRingerMode(),
-                -1
-        );
 
+        soundButton.setImageResource(SOUND_DRAWABLES[audioManager.getRingerMode()]);
         flashButton.setImageResource(flashState ?
                 R.drawable.flashlight_on_background :
                 R.drawable.flashlight_off_on_background);

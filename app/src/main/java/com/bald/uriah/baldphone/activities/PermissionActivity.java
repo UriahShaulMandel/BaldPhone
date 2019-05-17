@@ -91,13 +91,12 @@ public class PermissionActivity extends BaldActivity {
             BDB.from(this)
                     .setTitle(R.string.permissions_part)
                     .setSubText(R.string.permissions_calm)
-                    .setDialogState(BDialog.DialogState.OK_NO)
+                    .addFlag(BDialog.FLAG_OK | BDialog.FLAG_NO)
                     .setPositiveButtonListener(params -> true)
                     .setNegativeButtonListener(params -> {
                         FakeLauncherActivity.resetPreferredLauncherAndOpenChooser(this);
                         return true;
                     })
-                    .setCancelable(true)
                     .show();
         } else
             finish();

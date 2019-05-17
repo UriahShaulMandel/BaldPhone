@@ -410,6 +410,13 @@
     <string name="no_app_was_found">לא נמצא יישום מתאים!</string>
     <string name="alarm">שעון מעורר</string>
 
+    <string name="no_new_notifications">אין התראות חדשות</string>
+    <string name="sound_mode">מצב סאונד</string>
+    <string name="sound">סאונד</string>
+    <string name="mute">השתק</string>
+    <string name="vibrate">רטט</string>
+
+
     <string-array name="words_for_call" tools:ignore="InconsistentArrays">
         <item>להתקשר</item>
         <item>לחייג</item>

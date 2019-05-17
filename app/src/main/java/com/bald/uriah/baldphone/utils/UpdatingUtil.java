@@ -24,6 +24,8 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
+import android.os.Parcel;
+import android.os.Parcelable;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
@@ -36,6 +38,9 @@ import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.UpdatesActivity;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 
@@ -43,19 +48,10 @@ import java.io.File;
  * On Different class than {@link UpdatesActivity} because may be exported to library in the future
  */
 public class UpdatingUtil {
-    public static final String MESSAGE_URL = "https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/apks/last_release.txt";
-    public static final String APK_URL = "https://github.com/UriahShaulMandel/BaldPhone/blob/master/apks/app-release.apk?raw=true";
+    public static final String MESSAGE_URL = "https://api.github.com/repos/UriahShaulMandel/BaldPhone/releases/latest";
     public static final String FILENAME = "BaldPhoneUpdate.apk";
     public static final String VOLLEY_TAG = "baldphone";
-    public static final String divider = "@@@";
-    public static final int MESSAGE_PARTS = 3;
 
-    public static final int
-            MESSAGE_VERSION_CODE = 0,
-            MESSAGE_VERSION_NAME = 1,
-            MESSAGE_VERSION_CHANGE_LOG = 2,
-            MESSAGE_ALTERNATIVE_URL = 3;
-    public static final String NO_ALTERNATIVE_URL = "NO_ALTERNATIVE_URL";
 
     @NonNull
     public static File getDownloadedFile() {
@@ -64,16 +60,6 @@ public class UpdatingUtil {
         return new File(downloads.getAbsoluteFile() + "/" + FILENAME);
     }
 
-    public static boolean isMessageOk(String message) {
-        if (message == null || message.length() == 0 || !message.contains(divider))
-            return false;
-        final String[] arr = message.split(divider);
-        return isMessageOk(arr);
-    }
-
-    public static boolean isMessageOk(String[] message) {
-        return message.length >= MESSAGE_PARTS && android.text.TextUtils.isDigitsOnly(message[MESSAGE_VERSION_CODE]);
-    }
 
     public static boolean isOnline(Context context) {
         final ConnectivityManager manager =
@@ -86,8 +72,8 @@ public class UpdatingUtil {
         return false;
     }
 
-    public static boolean updatePending(@NonNull String[] message) {
-        return Integer.parseInt(message[MESSAGE_VERSION_CODE]) > BuildConfig.VERSION_CODE;
+    public static boolean updatePending(@NonNull BaldUpdateObject baldUpdateObject) {
+        return baldUpdateObject.versionCode > BuildConfig.VERSION_CODE;
     }
 
     public static void checkForUpdates(BaldActivity activity, boolean retAnswer) {
@@ -113,21 +99,20 @@ public class UpdatingUtil {
                         Request.Method.GET,
                         MESSAGE_URL,
                         response -> {
-                            if (isMessageOk(response)) {
-                                final String[] message = response.split(divider);
-                                if (updatePending(message)) {
+                            try {
+                                final BaldUpdateObject baldUpdateObject = BaldUpdateObject.parseMessage(response);
+                                if (updatePending(baldUpdateObject)) {
                                     BDB.from(activity)
                                             .setTitle(R.string.pending_update)
                                             .setSubText(R.string.a_new_update_is_available)
-                                            .setCancelable(true)
-                                            .setDialogState(BDialog.DialogState.OK_CANCEL)
+                                            .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
                                             .setPositiveButtonListener(params -> {
                                                 activity.startActivity(
                                                         new Intent(activity, UpdatesActivity.class)
-                                                                .putExtra(UpdatesActivity.EXTRA_MESSAGE, message));
+                                                                .putExtra(UpdatesActivity.EXTRA_BALD_UPDATE_OBJECT, baldUpdateObject));
                                                 return true;
                                             })
-                                            .setCancelButtonListener(params -> {
+                                            .setNegativeButtonListener(params -> {
                                                 BPrefs.get(activity)
                                                         .edit()
                                                         .putLong(BPrefs.LAST_UPDATE_ASKED_VERSION_KEY, System.currentTimeMillis())
@@ -142,9 +127,11 @@ public class UpdatingUtil {
                                                 .setText(R.string.baldphone_is_up_to_date)
                                                 .show();
                                 }
-                            } else {
-                                if (retAnswer)
+                            } catch (JSONException e) {
+                                if (retAnswer) {
                                     BaldToast.from(activity).setType(BaldToast.TYPE_ERROR).setText(R.string.update_message_is_corrupted).show();
+                                    BaldToast.from(activity).setType(BaldToast.TYPE_ERROR).setText(S.str(e.getMessage())).show();
+                                }
                             }
                             lifecycle.removeObserver(observer);
                         },
@@ -159,5 +146,71 @@ public class UpdatingUtil {
                         }
                 ).setTag(VOLLEY_TAG));
         lifecycle.addObserver(observer);
+    }
+
+    public static class BaldUpdateObject implements Parcelable {
+        public final int versionCode;
+        public final String versionName;
+        public final String changeLog;
+        public final String apkUrl;
+
+        public BaldUpdateObject(int versionCode, String versionName, String changeLog, String apkUrl) {
+            this.versionCode = versionCode;
+            this.versionName = versionName;
+            this.changeLog = changeLog;
+            this.apkUrl = apkUrl;
+        }
+
+        protected BaldUpdateObject(Parcel in) {
+            versionCode = in.readInt();
+            versionName = in.readString();
+            changeLog = in.readString();
+            apkUrl = in.readString();
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeInt(versionCode);
+            dest.writeString(versionName);
+            dest.writeString(changeLog);
+            dest.writeString(apkUrl);
+        }
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        public static final Creator<BaldUpdateObject> CREATOR = new Creator<BaldUpdateObject>() {
+            @Override
+            public BaldUpdateObject createFromParcel(Parcel in) {
+                return new BaldUpdateObject(in);
+            }
+
+            @Override
+            public BaldUpdateObject[] newArray(int size) {
+                return new BaldUpdateObject[size];
+            }
+        };
+
+        public static BaldUpdateObject parseMessage(String json) throws JSONException {
+            final JSONObject root = new JSONObject(json);
+            final int versionNumber = Integer.parseInt(root.getString("tag_name"));
+            final String versionName = root.getString("name");
+
+            final JSONArray assets = root.getJSONArray("assets");
+            final JSONObject apkObject = assets.getJSONObject(0);
+            if (!apkObject.getString("content_type").equals("application/vnd.android.package-archive"))
+                throw new JSONException("first object in assets array is not an apk file!");
+            final String apkDownloadUrl = apkObject.getString("browser_download_url");
+            final String changeLog = root.getString("body");
+
+            return new BaldUpdateObject(
+                    versionNumber,
+                    versionName,
+                    changeLog,
+                    apkDownloadUrl
+            );
+        }
     }
 }

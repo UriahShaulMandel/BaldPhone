@@ -32,18 +32,18 @@ import com.bald.uriah.baldphone.activities.BaldActivity;
 public class BDB {
     public Context context;
 
-    @BDialog.DialogState int dialogState = BDialog.DialogState.OK;
     @NonNull CharSequence title = "";
     CharSequence subText;
     CharSequence[] options;
     int inputType;
     BDialog.DialogBoxListener positiveButtonListener = BDialog.DialogBoxListener.EMPTY;
     BDialog.DialogBoxListener negativeButtonListener = BDialog.DialogBoxListener.EMPTY;
-    BDialog.DialogBoxListener cancelButtonListener = BDialog.DialogBoxListener.EMPTY;
-    boolean cancelable = true;
     @NonNull BDialog.StartingIndexChooser startingIndexChooser = () -> 0;
     @Nullable BaldActivity baldActivityToAutoDismiss;
     @Nullable View extraView;
+    @Nullable CharSequence negativeCustomText;
+    @Nullable CharSequence positiveCustomText;
+    int flags;
 
     private BDB() {
     }
@@ -57,10 +57,6 @@ public class BDB {
         return bdb;
     }
 
-    public BDB setDialogState(@BDialog.DialogState int dialogState) {
-        this.dialogState = dialogState;
-        return this;
-    }
 
     public BDB setTitle(CharSequence title) {
         this.title = title;
@@ -81,7 +77,7 @@ public class BDB {
     }
 
     public BDB setOptions(CharSequence... options) {
-        dialogState = BDialog.DialogState.OPTION_OPTION_OK_CANCEL;
+        flags |= BDialog.FLAG_OPTIONS;
         this.options = options;
         return this;
     }
@@ -94,29 +90,19 @@ public class BDB {
         return setOptions(charSequences);
     }
 
-    public BDB setCancelable(boolean cancelable) {
-        this.cancelable = cancelable;
-        return this;
-    }
-
     public BDB setPositiveButtonListener(@Nullable BDialog.DialogBoxListener dialogBoxListener) {
         this.positiveButtonListener = dialogBoxListener;
-        return this;
+        return addFlag(BDialog.FLAG_POSITIVE);
     }
 
     public BDB setNegativeButtonListener(@Nullable BDialog.DialogBoxListener dialogBoxListener) {
         this.negativeButtonListener = dialogBoxListener;
-        return this;
-    }
-
-    public BDB setCancelButtonListener(@Nullable BDialog.DialogBoxListener dialogBoxListener) {
-        this.cancelButtonListener = dialogBoxListener;
-        return this;
+        return addFlag(BDialog.FLAG_NEGATIVE);
     }
 
     public BDB setInputType(int inputType) {
         this.inputType = inputType;
-        return this;
+        return addFlag(BDialog.FLAG_INPUT);
     }
 
     public BDB setOptionsStartingIndex(BDialog.StartingIndexChooser startingIndexChooser) {
@@ -131,6 +117,21 @@ public class BDB {
 
     public BDB setBaldActivityToAutoDismiss(BaldActivity baldActivityToAutoDismiss) {
         this.baldActivityToAutoDismiss = baldActivityToAutoDismiss;
+        return this;
+    }
+
+    public BDB setNegativeCustomText(@Nullable CharSequence negativeCustomText) {
+        this.negativeCustomText = negativeCustomText;
+        return addFlag(BDialog.FLAG_CUSTOM_NEGATIVE);
+    }
+
+    public BDB setPositiveCustomText(@Nullable CharSequence positiveCustomText) {
+        this.positiveCustomText = positiveCustomText;
+        return addFlag(BDialog.FLAG_CUSTOM_POSITIVE);
+    }
+
+    public BDB addFlag(int flags) {
+        this.flags |= flags;
         return this;
     }
 

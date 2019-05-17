@@ -220,10 +220,14 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     }
 
     public void autoDismiss(Dialog dialog) {
+        if (dialogsToClose.size() > 10)
+            dialogsToClose = S.cleanWeakList(dialogsToClose);
         dialogsToClose.add(new WeakReference<>(dialog));
     }
 
     public void autoDismiss(PopupWindow popupWindow) {
+        if (popupWindowsToClose.size() > 10)
+            popupWindowsToClose = S.cleanWeakList(popupWindowsToClose);
         popupWindowsToClose.add(new WeakReference<>(popupWindow));
     }
 
@@ -248,8 +252,7 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
             BDB.from(this)
                     .setTitle(R.string.accidental_touches)
                     .setSubText(R.string.accidental_touches_subtext)
-                    .setDialogState(BDialog.DialogState.OK)
-                    .setCancelable(false)
+                    .addFlag(BDialog.FLAG_NOT_CANCELABLE | BDialog.FLAG_OK)
                     .setPositiveButtonListener(params -> {
                         touches = 0;
                         accidentalMinTouches += 2;
@@ -288,10 +291,5 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     }
 
     protected abstract int requiredPermissions();
-
-    /**
-     * @return time in milliseconds for tha activity to stay on.
-     * if it returns -1 activity will time out as set in device settings
-     */
 
 }

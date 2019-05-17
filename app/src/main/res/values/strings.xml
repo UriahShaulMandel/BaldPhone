@@ -414,7 +414,12 @@
     <string name="custom_app_subtext">Choose custom app to be in the home screen.</string>
     <string name="no_app_was_found">No matching app was found!</string>
     <string name="alarm">Alarm</string>
-    <string name="open_source_licenses">Open Source Licenses</string>
+    <string name="open_source_licenses" translatable="false">Open Source Licenses</string>
+    <string name="no_new_notifications">No New Notifications</string>
+    <string name="sound_mode">Sound Mode</string>
+    <string name="sound">Sound</string>
+    <string name="mute">Mute</string>
+    <string name="vibrate">Vibrate</string>
 
 
     <bool name="is_right_to_left">false</bool>

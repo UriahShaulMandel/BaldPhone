@@ -91,7 +91,6 @@ public class SOSActivity extends BaldActivity {
             BDB.from(SOSActivity.this)
                     .setTitle("")
                     .setSubText(v.getContext().getString(R.string.are_you_sure_you_want_to_call_emergency_services))
-                    .setCancelable(true)
                     .setPositiveButtonListener(params -> {
                         callEmergencyNumber();
                         return true;

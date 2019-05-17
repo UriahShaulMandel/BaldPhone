@@ -47,7 +47,6 @@ import java.util.List;
 public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<RecyclerView.ViewHolder> {
     public static final int TYPE_HEADER = 0;
     public static final int TYPE_ITEM = 1;
-    private static final String TAG = AppsRecyclerViewAdapter.class.getSimpleName();
     public final float elevation;
     public final List<InAppsRecyclerView> dataList;
     @ColorInt
@@ -59,7 +58,7 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
     private final LayoutInflater layoutInflater;
     private final SparseIntArray letterToPosition;
     public int index = -1;
-    private AppViewHolder lastView;
+    public AppViewHolder lastView;
 
     public AppsRecyclerViewAdapter(List<App> appList, BaldActivity activity, AppsActivity.ChangeAppListener changeAppListener, RecyclerView caller) {
         this.caller = caller;
@@ -167,7 +166,6 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
         final ViewGroup container;
         boolean clicked;
         boolean pinned;
-        private int index;
 
         AppViewHolder(final View itemView) {
             super(itemView);
@@ -182,7 +180,6 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
 
         public void update(final int index) {
             final App app = (App) AppsRecyclerViewAdapter.this.dataList.get(index);
-            this.index = index;
             this.app_name.setText(app.getLabel());
             app_icon.setImageBitmap(S.byteArrayToBitmap(app.getIcon()));
             if (this.pinned) {
@@ -195,33 +192,26 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
                 }
             }
             if (clicked) {
-                if (this.index != AppsRecyclerViewAdapter.this.index) {
+                if (getAdapterPosition() != AppsRecyclerViewAdapter.this.index) {
                     setClicked(false);
                 } else {
                     lastView = this;
                 }
             } else {
-                if (this.index == AppsRecyclerViewAdapter.this.index) {
+                if (getAdapterPosition() == AppsRecyclerViewAdapter.this.index) {
                     setClicked(true);
                     lastView = this;
                 }
             }
-
         }
 
         @Override
         public void onClick(View v) {
-            if (this.clicked) {
-                AppsRecyclerViewAdapter.this.index = -1;
-                lastView = null;
-                setClicked(false);
-            } else {
                 if (lastView != null)
                     lastView.setClicked(false);
-                AppsRecyclerViewAdapter.this.index = this.index;
+            AppsRecyclerViewAdapter.this.index = getAdapterPosition();
                 lastView = this;
                 setClicked(true);
-            }
 
             if (changeAppListener != null) {
                 changeAppListener.changeApp(AppsRecyclerViewAdapter.this.index);
@@ -251,6 +241,5 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
 
             }
         }
-
     }
 }

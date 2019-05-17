@@ -70,6 +70,7 @@ public class NotificationsActivity extends BaldActivity {
         findViewById(R.id.clear_all_notifications).setOnClickListener(v -> {
             if (notificationRecyclerViewAdapter != null)
                 notificationRecyclerViewAdapter.clearAll();
+            finish();
         });
         recyclerView = findViewById(R.id.recycler_view);
         final DividerItemDecoration dividerItemDecoration =
@@ -83,14 +84,13 @@ public class NotificationsActivity extends BaldActivity {
             BDB.from(this)
                     .setTitle(R.string.enable_notification_access)
                     .setSubText(R.string.enable_notification_access_subtext)
-                    .setCancelable(true)
-                    .setDialogState(BDialog.DialogState.OK_CANCEL)
+                    .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
                     .setPositiveButtonListener(params -> {
                         getApplicationContext().startActivity(new Intent(
                                 "android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS"));
                         return true;
                     })
-                    .setCancelButtonListener(params -> true)
+                    .setNegativeButtonListener(params -> true)
                     .show();
         }
 

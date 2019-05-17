@@ -187,7 +187,7 @@ public class SettingsActivity extends BaldActivity {
                         BDB.from(this)
                                 .setTitle(R.string.custom_app)
                                 .setSubText(R.string.custom_app_subtext)
-                                .setDialogState(BDialog.DialogState.OPTION_OPTION_OK_CANCEL)
+                                .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
                                 .setOptions(R.string.whatsapp, R.string.custom)
                                 .setOptionsStartingIndex(() -> sharedPreferences.contains(BPrefs.CUSTOM_APP_KEY) ? 1 : 0)
                                 .setPositiveButtonListener(params -> {
@@ -203,8 +203,7 @@ public class SettingsActivity extends BaldActivity {
         accessibilitySettingsList.add(new RunnableSettingsItem(R.string.accessibility_level, v -> startActivity(new Intent(this, AccessibilityLevelChangerActivity.class)), R.drawable.accessibility_on_button));
         accessibilitySettingsList.add(
                 new BDBSettingsItem(R.string.accidental_touches, BDB.from(this)
-                        .setDialogState(BDialog.DialogState.OPTION_OPTION_OK_CANCEL)
-                        .setTitle(R.string.accidental_touches)
+                        .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL).setTitle(R.string.accidental_touches)
                         .setSubText(R.string.accidental_touches_settings_subtext)
                         .setOptions(R.string.on, R.string.off)
                         .setPositiveButtonListener(params -> {
@@ -216,7 +215,7 @@ public class SettingsActivity extends BaldActivity {
         accessibilitySettingsList.add(
                 new BDBSettingsItem(R.string.strong_hand,
                         BDB.from(this)
-                                .setDialogState(BDialog.DialogState.OPTION_OPTION_OK_CANCEL)
+                                .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
                                 .setTitle(R.string.strong_hand)
                                 .setSubText(R.string.strong_hand_subtext)
                                 .setOptions(R.string.left_handed, R.string.right_handed)
@@ -230,7 +229,7 @@ public class SettingsActivity extends BaldActivity {
         );
         final SettingsItem themeSettingsItem = new BDBSettingsItem(R.string.theme_settings,
                 BDB.from(this)
-                        .setDialogState(BDialog.DialogState.OPTION_OPTION_OK_CANCEL)
+                        .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
                         .setTitle(R.string.theme_settings)
                         .setSubText(R.string.theme_settings_subtext)
                         .setOptions(R.string.light, R.string.adaptive, R.string.dark)
@@ -246,7 +245,7 @@ public class SettingsActivity extends BaldActivity {
         personalizationSettingsList.add(themeSettingsItem);
         personalizationSettingsList.add(new BDBSettingsItem(R.string.notes_settings,
                 BDB.from(this)
-                        .setDialogState(BDialog.DialogState.OPTION_OPTION_OK_CANCEL)
+                        .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
                         .setTitle(R.string.notes_settings)
                         .setSubText(R.string.notes_settings_subtext)
                         .setOptions(R.string.yes, R.string.no)
@@ -337,8 +336,7 @@ public class SettingsActivity extends BaldActivity {
         settingsList.add(
                 new BDBSettingsItem(R.string.about,
                         BDB.from(this)
-                                .setCancelable(true)
-                                .setDialogState(BDialog.DialogState.OK)
+                                .addFlag(BDialog.FLAG_OK)
                                 .setTitle(R.string.about)
                                 .setSubText(R.string.about_subtext)
                                 .setPositiveButtonListener(params -> true)
@@ -363,8 +361,7 @@ public class SettingsActivity extends BaldActivity {
         settingsList.add(
                 new BDBSettingsItem(R.string.crash_reports,
                         BDB.from(this)
-                                .setDialogState(BDialog.DialogState.OPTION_OPTION_OK_CANCEL)
-                                .setTitle(R.string.crash_reports)
+                                .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL).setTitle(R.string.crash_reports)
                                 .setSubText(R.string.crash_reports_subtext)
                                 .setOptions(R.string.on, R.string.off)
                                 .setPositiveButtonListener(params -> {
@@ -447,7 +444,7 @@ public class SettingsActivity extends BaldActivity {
 
         final SettingsItem alarmVolumeSettingsItem = new BDBSettingsItem(R.string.alarm_volume,
                 BDB.from(this)
-                        .setDialogState(BDialog.DialogState.OK)
+                        .addFlag(BDialog.FLAG_OK)
                         .setTitle(R.string.alarm_volume)
                         .setSubText(R.string.alarm_volume_subtext)
                         .setPositiveButtonListener(params -> true)
@@ -512,7 +509,7 @@ public class SettingsActivity extends BaldActivity {
 
         final SettingsItem brightnessSettingsItem = new BDBSettingsItem(R.string.brightness,
                 BDB.from(this)
-                        .setDialogState(BDialog.DialogState.OK)
+                        .addFlag(BDialog.FLAG_OK)
                         .setTitle(R.string.brightness)
                         .setSubText(R.string.brightness_subtext)
                         .setPositiveButtonListener(params -> true)

@@ -36,7 +36,7 @@ import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 public class LetterChooserDialog extends Dialog {
     private static final String TAG = LetterChooserDialog.class.getSimpleName();
-    private static final int AMOUNT_PER_ROW = 5;
+    private static final int AMOUNT_PER_ROW = 4;
     private final OnChooseLetterListener onChooseLetterListener;
     private final SparseIntArray lettersToValues;
 

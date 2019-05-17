@@ -40,21 +40,34 @@ import com.bald.uriah.baldphone.views.BaldMultipleSelection;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import static com.bald.uriah.baldphone.utils.BDialog.DialogState.*;
 
 public class BDialog extends Dialog {
+    public static final int
+            FLAG_POSITIVE = 1,
+            FLAG_NEGATIVE = 1 << 1,
+            FLAG_INPUT = 1 << 8 | FLAG_POSITIVE,
+            FLAG_OK = FLAG_POSITIVE | 1 << 2,
+            FLAG_YES = FLAG_POSITIVE | 1 << 3,
+            FLAG_CANCEL = FLAG_NEGATIVE | 1 << 4,
+            FLAG_NO = FLAG_NEGATIVE | 1 << 5,
+            FLAG_CUSTOM_NEGATIVE = FLAG_NEGATIVE | 1 << 6,
+            FLAG_CUSTOM_POSITIVE = FLAG_POSITIVE | 1 << 7,
+            FLAG_OPTIONS = 1 << 9,
+            FLAG_NOT_CANCELABLE = 1 << 10;
+    ;
 
-    public static final float DIM_LEVEL = 0.9f;
+    private static final float DIM_LEVEL = 0.9f;
     private static final String TAG = BDialog.class.getSimpleName();
     private final Context context;
     private final CharSequence title;
     private final CharSequence subText;
     private final CharSequence[] options;
     private final StartingIndexChooser startingIndexChooser;
-    private final int dialogState;
-    private final DialogBoxListener positive, negative, cancel;
-    private final boolean cancelable;
+    private final DialogBoxListener positive, negative;
     private final int inputType;
+    private final int flags;
+    private final CharSequence negativeCustomText;
+    private final CharSequence positiveCustomText;
     @Nullable
     private final View extraView;
     //Views
@@ -64,61 +77,59 @@ public class BDialog extends Dialog {
     private BaldImageButton bt_cancel;
     private ViewGroup container, ll;
 
-    private BDialog(@NonNull Context context,
-                    @DialogState int dialogState,
-                    @NonNull CharSequence title,
-                    @NonNull CharSequence subText,
-                    boolean cancelable,
-                    @Nullable CharSequence[] options,
-                    @Nullable DialogBoxListener positive,
-                    @Nullable DialogBoxListener negative,
-                    @Nullable final DialogBoxListener cancel,
-                    int inputType,
-                    StartingIndexChooser startingIndexChooser,
-                    @Nullable View extraView
-
-    ) {
-        super(context, cancelable, null);
-        this.cancelable = cancelable;
+    private BDialog(final @NonNull Context context,
+                    final @NonNull CharSequence title,
+                    final @NonNull CharSequence subText,
+                    final @Nullable CharSequence[] options,
+                    final @Nullable DialogBoxListener positive,
+                    final @Nullable DialogBoxListener negative,
+                    final int inputType,
+                    final @Nullable StartingIndexChooser startingIndexChooser,
+                    final @Nullable View extraView,
+                    final @Nullable CharSequence negativeCustomText,
+                    final @Nullable CharSequence positiveCustomText,
+                    final int flags) {
+        super(context);
         this.context = context;
         this.options = options;
         this.subText = subText;
-        this.dialogState = dialogState;
         this.title = title;
         this.positive = positive;
         this.negative = negative;
-        this.cancel = cancel;
         this.inputType = inputType;
         this.startingIndexChooser = startingIndexChooser;
         this.extraView = extraView;
+        this.negativeCustomText = negativeCustomText;
+        this.positiveCustomText = positiveCustomText;
 
+        this.flags = flags;
     }
 
     public static BDialog newInstance(BDB bdb) {
-        if (bdb.context == null || bdb.dialogState == 0 || bdb.title == null || bdb.subText == null)
+        if (bdb.context == null || bdb.title == null || bdb.subText == null)
             throw new NullPointerException("bdb.activity, bdb.dialogState, bdb.title, bdb.subText cannot be null! perhaps forgot to setContext() on BDB");
 
-        final BDialog bDialog = BDialog.newInstance(bdb.context, bdb.dialogState, bdb.title, bdb.subText, bdb.cancelable, bdb.options, bdb.positiveButtonListener, bdb.negativeButtonListener, bdb.cancelButtonListener, bdb.inputType, bdb.startingIndexChooser, bdb.extraView);
+        final BDialog bDialog = BDialog.newInstance(bdb.context, bdb.title, bdb.subText, bdb.options, bdb.positiveButtonListener, bdb.negativeButtonListener, bdb.inputType, bdb.startingIndexChooser, bdb.extraView, bdb.negativeCustomText, bdb.positiveCustomText, bdb.flags);
         if (bdb.baldActivityToAutoDismiss != null) {
             bdb.baldActivityToAutoDismiss.autoDismiss(bDialog);
         }
         return bDialog;
     }
 
-    public static BDialog newInstance(@NonNull Context context,
-                                      @DialogState int dialogState,
-                                      @NonNull CharSequence title,
-                                      @NonNull CharSequence subText,
-                                      boolean cancelable,
-                                      @Nullable CharSequence[] options,
-                                      @Nullable DialogBoxListener positive,
-                                      @Nullable DialogBoxListener negative,
-                                      @Nullable final DialogBoxListener cancel,
-                                      int inputType,
-                                      StartingIndexChooser startingIndexChooser,
-                                      @Nullable View extraView
+    public static BDialog newInstance(final @NonNull Context context,
+                                      final @NonNull CharSequence title,
+                                      final @NonNull CharSequence subText,
+                                      final @Nullable CharSequence[] options,
+                                      final @Nullable DialogBoxListener positive,
+                                      final @Nullable DialogBoxListener negative,
+                                      final int inputType,
+                                      final StartingIndexChooser startingIndexChooser,
+                                      final @Nullable View extraView,
+                                      final @Nullable CharSequence negativeCustomText,
+                                      final @Nullable CharSequence positiveCustomText,
+                                      final int flags
     ) {
-        final BDialog baldDialogBox = new BDialog(context, dialogState, title, subText, cancelable, options, positive, negative, cancel, inputType, startingIndexChooser, extraView);
+        final BDialog baldDialogBox = new BDialog(context, title, subText, options, positive, negative, inputType, startingIndexChooser, extraView, negativeCustomText, positiveCustomText, flags);
         baldDialogBox.show();
         Window window = baldDialogBox.getWindow();
         window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -142,127 +153,84 @@ public class BDialog extends Dialog {
         attachXml();
         tv_title.setText(title);
         tv_subtext.setText(subText);
-        if (cancelable) {
+        if (!containFlag(FLAG_NOT_CANCELABLE)) {
             bt_cancel = (BaldImageButton) LayoutInflater.from(context).inflate(R.layout.bald_dialog_box_close_button, container, false);
-            bt_cancel.setOnClickListener(v -> {
-                if (cancel == null)
+            View.OnClickListener cancelClickListener = v -> {
+                if (negative == null)
                     cancel();
-                else if (cancel.activate()) {
+                else if (negative.activate()) {
                     cancel();
                 }
-            });
-
+            };
+            bt_cancel.setOnClickListener(cancelClickListener);
+            if (containFlag(FLAG_CANCEL))
+                bt_negative.setOnClickListener(cancelClickListener);
             container.addView(bt_cancel);
         }
-
-        switch (dialogState) {
-            case DialogState.OK:
-                bt_negative.setVisibility(View.GONE);
-                bt_positive.setOnClickListener(v -> {
-                    if (positive == null)
-                        cancel();
-                    else if (positive.activate()) {
-                        cancel();
-                    }
-                });
-                bt_positive.setText(R.string.ok);
-                setLeftMargin(bt_positive);
-
-                break;
-            case OK_NO:
-                bt_positive.setText(R.string.ok);
-            case YES_NO:
-                bt_positive.setOnClickListener(v -> {
-                    if (positive == null)
-                        cancel();
-                    else if (positive.activate()) {
-                        cancel();
-                    }
-                });
-                bt_negative.setOnClickListener(v -> {
-                    if (negative == null)
-                        cancel();
-                    else if (negative.activate()) {
-                        cancel();
-                    }
-                });
-
-                break;
-            case OK_CANCEL:
-                bt_positive.setText(R.string.ok);
-            case YES_CANCEL:
-                bt_positive.setOnClickListener(v -> {
-                    if (positive == null)
-                        cancel();
-                    else if (positive.activate()) {
-                        cancel();
-                    }
-                });
-                bt_negative.setOnClickListener(v -> {
-                    if (cancel == null)
-                        cancel();
-                    else if (cancel.activate()) {
-                        cancel();
-                    }
-                });
-                bt_negative.setText(R.string.cancel);
-
-                break;
-            case INPUT_OK_CANCEL:
+        if (containFlag(FLAG_POSITIVE)) {
+            if (containFlag(FLAG_INPUT)) {
                 editText = ll.findViewById(R.id.edit_text);
                 editText.setVisibility(View.VISIBLE);
                 bt_positive.setOnClickListener(v -> {
                     if (positive == null)
                         cancel();
-                    else if (positive.activate(editText.getText())) {
+                    else if (positive.activate(editText.getText()))
                         cancel();
-                    }
-                });
-                bt_negative.setOnClickListener(v -> {
-                    if (cancel == null)
-                        cancel();
-                    else if (cancel.activate()) {
-                        cancel();
-                    }
-                });
-                bt_cancel.setOnClickListener(v -> {
-                    if (cancel == null)
-                        cancel();
-                    else if (cancel.activate()) {
-                        cancel();
-                    }
-                });
-                bt_positive.setText(R.string.ok);
-                bt_negative.setText(R.string.cancel);
-                break;
-            case OPTION_OPTION_OK_CANCEL:
-                final BaldMultipleSelection baldMultipleSelection = (BaldMultipleSelection) LayoutInflater.from(context).inflate(R.layout.bald_dialog_box_multiple_selection_view, ll, false);
-                baldMultipleSelection.setOrientation(LinearLayout.HORIZONTAL);
-                for (CharSequence option : options)
-                    baldMultipleSelection.addSelection(option);
-                baldMultipleSelection.setSelection(startingIndexChooser.chooseStartingIndex());
-                final LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80f, context.getResources().getDisplayMetrics()));
-                ll.addView(baldMultipleSelection, 2, layoutParams);
 
+                });
+            } else {
                 bt_positive.setOnClickListener(v -> {
                     if (positive == null)
                         cancel();
-                    else if (positive.activate(baldMultipleSelection.getSelection())) {
+                    else if (positive.activate())
                         cancel();
-                    }
                 });
-                bt_negative.setOnClickListener(v -> {
-                    if (cancel == null)
-                        cancel();
-                    else if (cancel.activate(baldMultipleSelection.getSelection())) {
-                        cancel();
-                    }
-                });
+            }
+            if (containFlag(FLAG_OK))
                 bt_positive.setText(R.string.ok);
+            else if (containFlag(FLAG_CUSTOM_POSITIVE))
+                bt_positive.setText(positiveCustomText);
+        }
+        if (containFlag(FLAG_NEGATIVE)) {
+            bt_negative.setOnClickListener(v -> {
+                if (negative == null)
+                    cancel();
+                else if (negative.activate())
+                    cancel();
+            });
+            if (containFlag(FLAG_CANCEL))
                 bt_negative.setText(R.string.cancel);
+            else if (containFlag(FLAG_CUSTOM_NEGATIVE))
+                bt_negative.setText(negativeCustomText);
+        } else {
+            bt_negative.setVisibility(View.GONE);
+            setLeftMargin(bt_positive);
+        }
 
-                break;
+        if (containFlag(FLAG_OPTIONS)) {
 
+            final BaldMultipleSelection baldMultipleSelection = (BaldMultipleSelection) LayoutInflater.from(context).inflate(R.layout.bald_dialog_box_multiple_selection_view, ll, false);
+            baldMultipleSelection.setOrientation(LinearLayout.HORIZONTAL);
+            for (final CharSequence option : options)
+                baldMultipleSelection.addSelection(option);
+            baldMultipleSelection.setSelection(startingIndexChooser.chooseStartingIndex());
+            final LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 80f, context.getResources().getDisplayMetrics()));
+            ll.addView(baldMultipleSelection, 2, layoutParams);
+            if (containFlag(FLAG_POSITIVE))
+                bt_positive.setOnClickListener(v -> {
+                    if (positive == null)
+                        cancel();
+                    else if (positive.activate(baldMultipleSelection.getSelection()))
+                        cancel();
+
+                });
+            if (containFlag(FLAG_NEGATIVE))
+                bt_negative.setOnClickListener(v -> {
+                    if (negative == null)
+                        cancel();
+                    else if (negative.activate(baldMultipleSelection.getSelection()))
+                        cancel();
+                });
         }
     }
 
@@ -303,24 +271,13 @@ public class BDialog extends Dialog {
         boolean activate(@NonNull Object... params);
     }
 
-    @IntDef({
-            YES_CANCEL,
-            OK_CANCEL,
-            YES_NO,
-            OK,
-            INPUT_OK_CANCEL,
-            OPTION_OPTION_OK_CANCEL,
-            OK_NO
-    })
-    @Retention(RetentionPolicy.SOURCE)
-    public @interface DialogState {
-        int
-                YES_CANCEL = 1,
-                OK_CANCEL = 2,
-                OK_NO = 7,
-                YES_NO = 3,
-                OK = 4,
-                INPUT_OK_CANCEL = 5,
-                OPTION_OPTION_OK_CANCEL = 6;
+    public boolean containFlag(@BDFlags int flag) {
+        return (flags | flag) == flags;
     }
+
+    @IntDef({FLAG_POSITIVE, FLAG_NEGATIVE, FLAG_INPUT, FLAG_OPTIONS, FLAG_OK, FLAG_YES, FLAG_CANCEL, FLAG_NO, FLAG_CUSTOM_NEGATIVE, FLAG_CUSTOM_POSITIVE, FLAG_NOT_CANCELABLE})
+    @Retention(RetentionPolicy.SOURCE)
+    private @interface BDFlags {
+    }
+
 }

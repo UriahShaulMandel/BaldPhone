@@ -82,7 +82,7 @@ public class TechnicalInfoActivity extends BaldActivity {
         ((TextView) findViewById(R.id.tv_info)).setText(getTechnicalInfo());
         findViewById(R.id.bt_clear_cache).setOnClickListener(v -> {
             BDB.from(this)
-                    .setDialogState(BDialog.DialogState.YES_CANCEL)
+                    .addFlag(BDialog.FLAG_YES | BDialog.FLAG_CANCEL)
                     .setTitle(R.string.clear_cache)
                     .setSubText(R.string.clear_cache_subtext)
                     .setPositiveButtonListener(params -> {
@@ -102,17 +102,17 @@ public class TechnicalInfoActivity extends BaldActivity {
 
                 {
                     BDB.from(this)
-                            .setDialogState(BDialog.DialogState.YES_CANCEL)
+                            .addFlag(BDialog.FLAG_YES | BDialog.FLAG_CANCEL)
                             .setTitle(R.string.clear_data)
                             .setSubText(R.string.clear_data_subtext)
                             .setPositiveButtonListener(params -> {
                                 BDB.from(this)
-                                        .setDialogState(BDialog.DialogState.YES_CANCEL)
+                                        .addFlag(BDialog.FLAG_YES | BDialog.FLAG_CANCEL)
                                         .setTitle(R.string.clear_data)
                                         .setSubText(R.string.clear_data_subtext2)
                                         .setPositiveButtonListener(params2 -> {
                                             BDB.from(this)
-                                                    .setDialogState(BDialog.DialogState.YES_CANCEL)
+                                                    .addFlag(BDialog.FLAG_YES | BDialog.FLAG_CANCEL)
                                                     .setTitle(R.string.clear_data)
                                                     .setSubText(R.string.clear_data_subtext3)
                                                     .setPositiveButtonListener(params3 -> {

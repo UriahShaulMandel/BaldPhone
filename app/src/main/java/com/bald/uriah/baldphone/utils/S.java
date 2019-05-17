@@ -30,22 +30,34 @@ import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import androidx.annotation.*;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.contacts.ShareActivity;
 import com.bald.uriah.baldphone.content_providers.BaldFileProvider;
+import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import org.joda.time.DateTime;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.lang.ref.WeakReference;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
@@ -56,6 +68,7 @@ import java.util.Locale;
 public class S {
     public static final String BALD_IMPORTANT_MESSAGE = "Bald Important Message";
     private static final String TAG = S.class.getSimpleName();
+    private static final float DIM_AMOUNT = 0.5f;
 
     public static void logImportant(@Nullable CharSequence charSequence) {
         Log.e(BALD_IMPORTANT_MESSAGE, String.valueOf(charSequence));
@@ -69,7 +82,7 @@ public class S {
         BDB.from(baldActivity)
                 .setTitle(R.string.share_baldphone)
                 .setSubText(R.string.share_bald_phone_subtext)
-                .setDialogState(BDialog.DialogState.YES_NO)
+                .addFlag(BDialog.FLAG_YES | BDialog.FLAG_NO)
                 .setPositiveButtonListener(params -> {
                     S.share(baldActivity, new Intent(Intent.ACTION_SEND)
                             .setType("text/plain")
@@ -232,8 +245,7 @@ public class S {
                     deleteRunnable.run();
                     return true;
                 }))
-                .setDialogState(BDialog.DialogState.YES_CANCEL)
-                .setCancelable(true)
+                .addFlag(BDialog.FLAG_YES | BDialog.FLAG_CANCEL)
                 .setBaldActivityToAutoDismiss(baldActivity)
                 .show();
     }
@@ -247,5 +259,64 @@ public class S {
 
     public static void startComponentName(final Context context, final ComponentName componentName) {
         context.startActivity(Intent.makeRestartActivityTask(componentName));
+    }
+
+    public static boolean containFlag(int flags, int flag) {
+        return (flags | flag) == flags;
+    }
+
+    public static void applyDim(@NonNull ViewGroup parent) {
+        final Drawable dim = new ColorDrawable(Color.BLACK);
+        dim.setBounds(0, 0, parent.getWidth(), parent.getHeight());
+        dim.setAlpha((int) (255 * DIM_AMOUNT));
+        parent.getOverlay().add(dim);
+    }
+
+    public static void clearDim(@NonNull ViewGroup parent) {
+        parent.getOverlay().clear();
+    }
+
+    public static <T> List<WeakReference<T>> cleanWeakList(List<WeakReference<T>> list) {
+        final List<WeakReference<T>> ret = new ArrayList<>();
+        for (WeakReference<T> tWeakReference : list) {
+            final T t = tWeakReference.get();
+            if (t != null)
+                ret.add(new WeakReference<>(t));
+        }
+        return ret;
+    }
+
+    public static void showDropDownPopup(BaldActivity baldActivity, int windowsWidth, DropDownRecyclerViewAdapter.DropDownListener dropDownListener, View view) {
+        final RelativeLayout dropDownContainer = (RelativeLayout) LayoutInflater.from(baldActivity).inflate(R.layout.drop_down_recycler_view, null, false);
+        final RecyclerView recyclerView = dropDownContainer.findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(baldActivity) {
+            @Override
+            public boolean canScrollVertically() {
+                return false;
+            }
+        });
+        final PopupWindow popupWindow = new PopupWindow(dropDownContainer, (int) (windowsWidth / 1.3),
+                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 82 * dropDownListener.size(), baldActivity.getResources().getDisplayMetrics()), true);
+        recyclerView.addItemDecoration(
+                new HorizontalDividerItemDecoration.Builder(baldActivity)
+                        .drawable(R.drawable.settings_divider)
+                        .build()
+        );
+
+        recyclerView.setAdapter(new DropDownRecyclerViewAdapter(baldActivity, popupWindow, dropDownListener));
+
+        final ViewGroup root = (ViewGroup) baldActivity.getWindow().getDecorView().getRootView();
+        if (root == null) throw new AssertionError();
+        popupWindow.setOnDismissListener(() -> {
+            S.clearDim(root);
+            dropDownListener.onDismiss();
+        });
+        popupWindow.setBackgroundDrawable(baldActivity.getDrawable(R.drawable.empty));
+
+        //if app crashes here view == null ? atPosition : asDropDown
+        popupWindow.showAsDropDown(view);
+
+        baldActivity.autoDismiss(popupWindow);
+        S.applyDim(root);
     }
 }

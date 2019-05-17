@@ -254,9 +254,9 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
             } else {
 
                 BDB.from(activity)
-                        .setDialogState(BDialog.DialogState.OPTION_OPTION_OK_CANCEL)
                         .setSubText(String.format(activity.getString(R.string.what_do_you_want_to_do_with___), call.phoneNumber))
                         .setOptions(R.string.call, R.string.add_contact)
+                        .addFlag(BDialog.FLAG_OK)
                         .setPositiveButtonListener(params -> {
                             final int option = (int) params[0];
                             switch (option) {

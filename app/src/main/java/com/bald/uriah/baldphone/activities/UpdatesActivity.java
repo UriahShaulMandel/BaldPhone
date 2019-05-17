@@ -40,13 +40,12 @@ import com.bald.uriah.baldphone.utils.*;
 
 import java.io.File;
 
-import static com.bald.uriah.baldphone.utils.UpdatingUtil.getDownloadedFile;
-import static com.bald.uriah.baldphone.utils.UpdatingUtil.isMessageOk;
+import static com.bald.uriah.baldphone.utils.UpdatingUtil.*;
 
 public class UpdatesActivity extends BaldActivity {
-    public static final String EXTRA_MESSAGE = "EXTRA_MESSAGE";
+    public static final String EXTRA_BALD_UPDATE_OBJECT = "EXTRA_BALD_UPDATE_OBJECT";
     private static final int PROGRESS_DELAY = 200 * D.MILLISECOND;
-    private String[] message;
+    private BaldUpdateObject baldUpdateObject;
     private DownloadManager manager;
     private long downloadId = -1;
     private Handler handler = new Handler();
@@ -93,8 +92,8 @@ public class UpdatesActivity extends BaldActivity {
         setContentView(R.layout.activity_update);
         if (!checkPermissions(this, requiredPermissions()))
             return;
-        message = getIntent().getStringArrayExtra(EXTRA_MESSAGE);
-        if (!isMessageOk(message)) {
+        baldUpdateObject = getIntent().getParcelableExtra(EXTRA_BALD_UPDATE_OBJECT);
+        if (baldUpdateObject == null) {
             BaldToast.error(this);
             finish();
             return;
@@ -138,14 +137,14 @@ public class UpdatesActivity extends BaldActivity {
     public void apply() {
         if (isDestroyed())
             return;
-        tv_new_version.setText(String.format("%s%s", getString(R.string.new_version), message[UpdatingUtil.MESSAGE_VERSION_NAME]));
+        tv_new_version.setText(String.format("%s%s", getString(R.string.new_version), baldUpdateObject.versionName));
         tv_current_version.setText(String.format("%s%s", getString(R.string.current_version), BuildConfig.VERSION_NAME));
-        tv_change_log.setText(message[UpdatingUtil.MESSAGE_VERSION_CHANGE_LOG]);
+        tv_change_log.setText(baldUpdateObject.changeLog);
         final SharedPreferences sharedPreferences = BPrefs.get(this);
         final int downloadedVersion = BPrefs.get(this).getInt(BPrefs.LAST_APK_VERSION_KEY, -1);
-        final int newVersion = Integer.parseInt(message[0]);
+        final int newVersion = baldUpdateObject.versionCode;
         final boolean downloading = sharedPreferences.contains(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_ID) && sharedPreferences.contains(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER);
-        final boolean downloaded = downloadedVersion == newVersion && UpdatingUtil.getDownloadedFile().exists();
+        final boolean downloaded = downloadedVersion == newVersion && getDownloadedFile().exists();
         assert true;
         if (downloaded) {
             pb.setVisibility(View.GONE);
@@ -183,8 +182,7 @@ public class UpdatesActivity extends BaldActivity {
                             BDB.from(this)
                                     .setTitle(R.string.data_warning)
                                     .setSubText(R.string.data_warning_subtext)
-                                    .setDialogState(BDialog.DialogState.YES_CANCEL)
-                                    .setCancelable(true)
+                                    .addFlag(BDialog.FLAG_YES | BDialog.FLAG_CANCEL)
                                     .setPositiveButtonListener(params -> {
                                         onDownloadButtonClick(newVersion);
                                         return true;
@@ -221,12 +219,10 @@ public class UpdatesActivity extends BaldActivity {
         deleteCurrentUpdateFile();
 
         final Uri uri =
-                Uri.parse(
-                        message.length > UpdatingUtil.MESSAGE_ALTERNATIVE_URL ?
-                                message[UpdatingUtil.MESSAGE_ALTERNATIVE_URL] : UpdatingUtil.APK_URL);
+                Uri.parse(baldUpdateObject.apkUrl);
         final DownloadManager.Request request =
                 new DownloadManager.Request(uri)
-                        .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, UpdatingUtil.FILENAME)
+                        .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, FILENAME)
                         .setAllowedOverRoaming(true)
                         .setAllowedOverMetered(true)
                         .setDescription(getText(R.string.downloading_updates));
