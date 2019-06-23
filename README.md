@@ -2,8 +2,11 @@
  - Click the image above or click [this](https://www.youtube.com/watch?v=G33E4XQp_Xw) to watch the video
 
 
-# BaldPhone
+# BaldPhone [![Build Status](https://travis-ci.com/UriahShaulMandel/BaldPhone.svg?branch=master)](https://travis-ci.com/UriahShaulMandel/BaldPhone)
+
 A platform which replaces the phone's interface to a bigger, simpler and friendlier one.
+
+
 
 Main features:
  - Home Launcher
