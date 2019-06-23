@@ -95,6 +95,7 @@ public class HomeScreenActivity extends BaldActivity {
             }
         }
     };
+
     private BaldImageButton notificationsButton, sosButton, soundButton, flashButton;
     private AudioManager audioManager;
     private BaldHomeWatcher baldHomeWatcher;
@@ -107,7 +108,6 @@ public class HomeScreenActivity extends BaldActivity {
             if (d instanceof AnimatedVectorDrawable) {
                 final AnimatedVectorDrawable animatedVectorDrawable = (AnimatedVectorDrawable) d;
                 animatedVectorDrawable.start();
-
                 handler.postDelayed(this, 10 * D.SECOND);
             }
         }
@@ -148,7 +148,6 @@ public class HomeScreenActivity extends BaldActivity {
             finish();
             return;
         }
-
         //this is the way to inform user on updates that changes things.
 //        if (!sharedPreferences.getBoolean("6.1.0", false)) {
 //            sharedPreferences.edit().putBoolean("6.1.0", true).apply();
