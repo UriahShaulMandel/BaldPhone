@@ -8,7 +8,8 @@ android:
     - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
-    - sys-img-x86-android-28
+    - sys-img-armeabi-v7a-android-28
+
 jdk:
   - oraclejdk8
 before_script:
