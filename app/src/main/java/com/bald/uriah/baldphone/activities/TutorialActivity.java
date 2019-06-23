@@ -43,7 +43,6 @@ public class TutorialActivity extends BaldActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.tutorial_activity);
         getSharedPreferences(BPrefs.KEY, MODE_PRIVATE).edit().putBoolean(BPrefs.AFTER_TUTORIAL_KEY, true).apply();
         attachXml();
