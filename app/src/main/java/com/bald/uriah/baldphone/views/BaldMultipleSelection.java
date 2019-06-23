@@ -19,6 +19,7 @@
 
 package com.bald.uriah.baldphone.views;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -72,7 +73,7 @@ public class BaldMultipleSelection extends LinearLayout {
         init(context, attrs);
     }
 
-    private void init(Context context, AttributeSet attrs) {
+    @SuppressLint("WrongConstant") private void init(Context context, AttributeSet attrs) {
         this.context = context;
         this.layoutInflater = LayoutInflater.from(context);
 

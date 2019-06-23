@@ -112,7 +112,7 @@
     <string name="clear_data">Clear All Data</string>
     <string name="clear_data_subtext">Are you sure you want to delete all data?</string>
     <string name="clear_data_subtext2">100%?</string>
-    <string name="clear_data_subtext3">1000000% sure?\npressing yes will delete all data!</string>
+    <string name="clear_data_subtext3">sure?\npressing yes will delete all data!</string>
     <string name="clicked">Clicked!</string>
     <string name="clock">Clock</string>
     <string name="coming_soon">Coming Soon!</string>
