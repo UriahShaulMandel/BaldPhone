@@ -469,7 +469,8 @@ public class SingleContactActivity extends BaldActivity {
     }
 
     private void loadPhoto(String uriToLoad) {
-        Glide.with(contact_image).load(uriToLoad).into(contact_image);
+        if (S.isValidContextForGlide(contact_image.getContext()))
+            Glide.with(contact_image).load(uriToLoad).into(contact_image);
         final int width = ((ViewGroup) contact_image.getParent()).getWidth();
         contact_image.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, width));
         contact_image.setScaleType(ImageView.ScaleType.FIT_XY);

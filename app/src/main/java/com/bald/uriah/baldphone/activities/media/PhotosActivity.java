@@ -27,9 +27,12 @@ import android.provider.MediaStore;
 import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.Constants;
+import com.bald.uriah.baldphone.utils.S;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+
+import java.io.File;
 
 /**
  * Most of this class is defined at {@link MediaScrollingActivity},
@@ -70,6 +73,9 @@ public class PhotosActivity extends MediaScrollingActivity implements Constants.
 
     @Override
     protected void bindViewHolder(Cursor cursor, MediaRecyclerViewAdapter.ViewHolder holder) {
+        if (!S.isValidContextForGlide(holder.itemView.getContext()))
+            return;
+
         final long imgId = cursor.getLong(cursor.getColumnIndex(MediaStore.Images.Media._ID));
         Cursor thumbnailCursor =
                 MediaStore.Images.Thumbnails.queryMiniThumbnail(
@@ -77,8 +83,8 @@ public class PhotosActivity extends MediaScrollingActivity implements Constants.
                         imgId,
                         MediaStore.Images.Thumbnails.MINI_KIND,
                         null);
-        if (thumbnailCursor != null && thumbnailCursor.getCount() > 0) {
-            thumbnailCursor.moveToFirst();//**EDIT**
+
+        if (thumbnailCursor != null && thumbnailCursor.getCount() > 0 && thumbnailCursor.moveToFirst() && new File(thumbnailCursor.getString(thumbnailCursor.getColumnIndex(MediaStore.Images.Thumbnails.DATA))).exists()) {
             Glide
                     .with(holder.itemView)
                     .load(thumbnailCursor.getString(thumbnailCursor.getColumnIndex(MediaStore.Images.Thumbnails.DATA)))
@@ -86,8 +92,7 @@ public class PhotosActivity extends MediaScrollingActivity implements Constants.
                     .into(holder.pic);
         } else {
             thumbnailCursor = MediaStore.Images.Thumbnails.queryMiniThumbnail(getContentResolver(), imgId, MediaStore.Images.Thumbnails.MICRO_KIND, null);
-            if (thumbnailCursor != null && thumbnailCursor.getCount() > 0) {
-                thumbnailCursor.moveToFirst();//**EDIT**
+            if (thumbnailCursor != null && thumbnailCursor.getCount() > 0 && thumbnailCursor.moveToFirst() && new File(thumbnailCursor.getString(thumbnailCursor.getColumnIndex(MediaStore.Images.Thumbnails.DATA))).exists()) {
                 Glide
                         .with(this)
                         .load(thumbnailCursor.getString(thumbnailCursor.getColumnIndex(MediaStore.Images.Thumbnails.DATA)))

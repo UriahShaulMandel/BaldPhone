@@ -26,6 +26,7 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 import com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
+import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.HomeScreenAppView;
 import com.bumptech.glide.Glide;
 
@@ -126,7 +127,8 @@ public class App implements AppsRecyclerViewAdapter.InAppsRecyclerView, HomeScre
     @Override
     public void applyToHomeScreenAppView(HomeScreenAppView homeScreenAppView) {
         homeScreenAppView.setText(getLabel());
-        Glide.with(homeScreenAppView.iv_icon).load(getIcon()).into(homeScreenAppView.iv_icon);
+        if (S.isValidContextForGlide(homeScreenAppView.iv_icon.getContext()))
+            Glide.with(homeScreenAppView.iv_icon).load(getIcon()).into(homeScreenAppView.iv_icon);
         homeScreenAppView.setIntent(ComponentName.unflattenFromString(getFlattenComponentName()));
     }
 }

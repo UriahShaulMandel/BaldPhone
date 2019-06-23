@@ -108,9 +108,10 @@ public class HomePage2 extends HomeView {
                                 @Override
                                 public void onUpdate(DropDownRecyclerViewAdapter.ViewHolder viewHolder, int position, PopupWindow popupWindow) {
                                     final ResolveInfo resolveInfo = browsers.get(position);
-                                    Glide.with(viewHolder.pic)
-                                            .load(resolveInfo.loadIcon(packageManager))
-                                            .into(viewHolder.pic);
+                                    if (S.isValidContextForGlide(viewHolder.pic.getContext()))
+                                        Glide.with(viewHolder.pic)
+                                                .load(resolveInfo.loadIcon(packageManager))
+                                                .into(viewHolder.pic);
                                     viewHolder.text.setText(resolveInfo.loadLabel(packageManager));
                                     viewHolder.itemView.setOnClickListener(v1 -> {
                                         homeScreen.startActivity(packageManager.getLaunchIntentForPackage(resolveInfo.activityInfo.applicationInfo.packageName));

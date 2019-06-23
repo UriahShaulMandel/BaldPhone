@@ -117,7 +117,6 @@ public abstract class SingleMediaActivity extends BaldActivity {
         protected abstract void delete(Activity activity, Cursor cursor);
 
         private void delete(int position) {
-
             S.showAreYouSureYouWantToDelete(String.valueOf(activity.title()), activity, () -> {
                 cursor.moveToPosition(position);
                 delete(activity, cursor);

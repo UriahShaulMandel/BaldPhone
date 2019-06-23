@@ -140,7 +140,8 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                     image_letter.setVisibility(View.VISIBLE);
                     profile_pic.setImageDrawable(letterContactBackground);
                 } else {
-                    Glide.with(profile_pic).load(miniContact.photo).into(profile_pic);
+                    if (S.isValidContextForGlide(profile_pic.getContext()))
+                        Glide.with(profile_pic).load(miniContact.photo).into(profile_pic);
                     image_letter.setVisibility(View.INVISIBLE);
                 }
                 contact_name.setText(miniContact.name);

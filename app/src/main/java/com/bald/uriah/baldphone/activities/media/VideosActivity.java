@@ -26,6 +26,7 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.Constants;
+import com.bald.uriah.baldphone.utils.S;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
@@ -72,6 +73,9 @@ public class VideosActivity extends MediaScrollingActivity implements Constants.
 
     @Override
     protected void bindViewHolder(Cursor cursor, MediaRecyclerViewAdapter.ViewHolder holder) {
+        if (!S.isValidContextForGlide(holder.itemView.getContext()))
+            return;
+
         final long vidId = cursor.getLong(cursor.getColumnIndex(MediaStore.Video.Media._ID));
         Glide.with(holder.pic)
                 .load(MediaStore.Video.Thumbnails.getThumbnail(contentResolver,

@@ -319,4 +319,18 @@ public class S {
         baldActivity.autoDismiss(popupWindow);
         S.applyDim(root);
     }
+
+    /**
+     * https://github.com/bumptech/glide/issues/1484#issuecomment-365625087
+     */
+    public static boolean isValidContextForGlide(final Context context) {
+        if (context == null) {
+            return false;
+        }
+        if (context instanceof Activity) {
+            final Activity activity = (Activity) context;
+            return !activity.isDestroyed() && !activity.isFinishing();
+        }
+        return true;
+    }
 }

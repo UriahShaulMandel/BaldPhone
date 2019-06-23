@@ -264,7 +264,7 @@
     <string name="remove_from_sos">הסר מ SOS</string>
     <string name="remove_shortcut">הסר קיצור דרך</string>
     <string name="removed_all_alarms">כל השעונים הוסרו!</string>
-    <string name="repeats_every_day">יחזור בכל יום</string>
+    <string name="repeats_every_day">כל יום</string>
     <string name="right_handed">לימניים</string>
     <string name="ringtone">רינגטון</string>
     <string name="saturday">שבת</string>
@@ -352,7 +352,7 @@
     <string name="no_contacts_found">איש קשר לא נמצא!</string>
     <string name="no_alarms">אין שעונים\nהוסף אחד על ידי לחיצה על\n\"הוסף שעון מעורר\"\nאו\n\"הוסף טיימר\"</string>
     <string name="no_pills">אין תרופות\nהוסף אחת על ידי לחיצה על\n\"הוסף תרופה\"</string>
-    <string name="clear_all_notifications">מחיקת כל ההתראות</string>
+    <string name="clear_all_notifications">ניקוי כל ההתראות</string>
     <string name="clear_cache_subtext">האם אתה בטוח שאתה רוצה למחוק את כל המטמון?\nיישומים מוצמדים יפסיקו להיות
         מוצמדים
     </string>

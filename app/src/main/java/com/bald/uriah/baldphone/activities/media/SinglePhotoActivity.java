@@ -33,6 +33,7 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.Constants;
+import com.bald.uriah.baldphone.utils.S;
 import com.bumptech.glide.Glide;
 
 /**
@@ -106,7 +107,8 @@ public class SinglePhotoActivity extends SingleMediaActivity implements Constant
         @Override
         protected void bindView(View view, Cursor cursor, Context context) {
             final ImageView pic = view.findViewById(R.id.pic);
-            Glide.with(pic).load(cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA))).into(pic);
+            if (S.isValidContextForGlide(pic.getContext()))
+                Glide.with(pic).load(cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA))).into(pic);
         }
 
         @Override

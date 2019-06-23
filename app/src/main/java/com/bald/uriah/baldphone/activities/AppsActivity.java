@@ -148,7 +148,8 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
                         });
                         break;
                     case 1:
-                        Glide.with(viewHolder.pic).load(app.getIcon()).into(viewHolder.pic);
+                        if (S.isValidContextForGlide(viewHolder.pic.getContext()))
+                            Glide.with(viewHolder.pic).load(app.getIcon()).into(viewHolder.pic);
                         viewHolder.text.setText(R.string.open);
                         viewHolder.itemView.setOnClickListener(v1 -> {
                             final ComponentName componentName = ComponentName.unflattenFromString(app.getFlattenComponentName());

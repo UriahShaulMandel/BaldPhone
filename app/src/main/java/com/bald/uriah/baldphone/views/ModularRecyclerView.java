@@ -75,5 +75,6 @@ public class ModularRecyclerView extends RecyclerView implements Modular {
         public void onBindViewHolder(@NonNull T holder, int position) {
 
         }
+
     }
 }

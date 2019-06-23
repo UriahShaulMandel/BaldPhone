@@ -29,6 +29,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 import com.bumptech.glide.Glide;
 
@@ -82,9 +83,10 @@ public class IntentAdapter extends ModularRecyclerView.ModularAdapter<IntentAdap
 
         public void update(final int position) {
             final ResolveInfo resolveInfo = resolveInfoList.get(position);
-            Glide.with(settings_icon)
-                    .load(resolveInfo.loadIcon(packageManager))
-                    .into(settings_icon);
+            if (S.isValidContextForGlide(settings_icon.getContext()))
+                Glide.with(settings_icon)
+                        .load(resolveInfo.loadIcon(packageManager))
+                        .into(settings_icon);
             tv_settings_name.setText(resolveInfo.loadLabel(packageManager));
         }
 

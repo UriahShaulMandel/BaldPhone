@@ -166,7 +166,8 @@ public class BDialog extends Dialog {
             if (containFlag(FLAG_CANCEL))
                 bt_negative.setOnClickListener(cancelClickListener);
             container.addView(bt_cancel);
-        }
+        } else
+            setCancelable(false);
         if (containFlag(FLAG_POSITIVE)) {
             if (containFlag(FLAG_INPUT)) {
                 editText = ll.findViewById(R.id.edit_text);

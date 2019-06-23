@@ -40,6 +40,7 @@ import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.activities.media.PhotosActivity;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldImageButton;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -159,7 +160,8 @@ public class AddContactActivity extends BaldActivity {
         et_mail.setText(currentContact.getMail());
 
         if (currentContact.getPhoto() != null) {
-            Glide.with(iv_image).load(Uri.parse(currentContact.getPhoto())).into(iv_image);
+            if (S.isValidContextForGlide(iv_image.getContext()))
+                Glide.with(iv_image).load(Uri.parse(currentContact.getPhoto())).into(iv_image);
             iv_delete.setVisibility(View.VISIBLE);
         }
     }
@@ -400,7 +402,8 @@ public class AddContactActivity extends BaldActivity {
     }
 
     private void setImage(Uri uri) {
-        Glide.with(iv_image).load(uri).into(iv_image);
+        if (S.isValidContextForGlide(iv_image.getContext()))
+            Glide.with(iv_image).load(uri).into(iv_image);
         newPhoto = uri.toString();
         iv_delete.setVisibility(View.VISIBLE);
     }
