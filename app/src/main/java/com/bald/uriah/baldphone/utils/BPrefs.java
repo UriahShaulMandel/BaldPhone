@@ -39,6 +39,9 @@ public final class BPrefs {
     public static final String LONG_PRESSES_KEY = "LONG_PRESSES_KEY";
     public static final boolean LONG_PRESSES_DEFAULT_VALUE = true;
 
+    public static final String TEST_KEY = "TEST_KEY";
+    public static final boolean TEST_DEFAULT_VALUE = false;
+
     public static final String LONG_PRESSES_SHORTER_KEY = "LONG_PRESSES_SHORTER_KEY";
     public static final boolean LONG_PRESSES_SHORTER_DEFAULT_VALUE = true;
 

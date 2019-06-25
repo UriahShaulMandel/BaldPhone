@@ -81,6 +81,8 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     private Handler handler;
     private Runnable touchesDecreaser = () -> touches = (touches -= 1) < 0 ? 0 : touches;
 
+    public boolean testing = false;
+
     /**
      * @return true if all permissions are granted.
      */
@@ -156,6 +158,9 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final SharedPreferences sharedPreferences = BPrefs.get(this);
+        testing = sharedPreferences.getBoolean(BPrefs.TEST_KEY, BPrefs.TEST_DEFAULT_VALUE);
+
         if (!checkPermissions(this, requiredPermissions())) {
             startActivity(new Intent(this, PermissionActivity.class)
                     .putExtra(PermissionActivity.EXTRA_REQUIRED_PERMISSIONS, requiredPermissions())
@@ -166,7 +171,6 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
         }
 
         handler = new Handler();
-        final SharedPreferences sharedPreferences = BPrefs.get(this);
         vibrator = sharedPreferences
                 .getBoolean(BPrefs.VIBRATION_FEEDBACK_KEY, BPrefs.VIBRATION_FEEDBACK_DEFAULT_VALUE)
                 ? (Vibrator) getSystemService(VIBRATOR_SERVICE) : null;

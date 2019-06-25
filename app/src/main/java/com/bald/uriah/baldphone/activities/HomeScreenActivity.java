@@ -143,7 +143,7 @@ public class HomeScreenActivity extends BaldActivity {
         S.logImportant("HomeScreenActivity was started!");
         sharedPreferences = BPrefs.get(this);
 
-        if (!sharedPreferences.getBoolean(BPrefs.AFTER_TUTORIAL_KEY, false)) {
+        if (!sharedPreferences.getBoolean(BPrefs.AFTER_TUTORIAL_KEY, false) && !testing) {
             startActivity(new Intent(this, TutorialActivity.class));
             finish();
             return;
@@ -226,27 +226,30 @@ public class HomeScreenActivity extends BaldActivity {
         if (finishedUpdatingApps)
             viewPagerStartHandler();
         baldHomeWatcher.startWatch();
-        final int percent = (int) (Math.random() * 100) + 1;//1 - 100
-        if (percent < (100 + (onStartCounter - 20) * 5))
-            if (percent % 3 == 1 && !isActivityDefault()) { // one in 3 chance
-                onStartCounter = 0;
-                BDB.from(this)
-                        .setTitle(R.string.set_home_screen)
-                        .setSubText(R.string.set_home_screen_subtext)
-                        .addFlag(BDialog.FLAG_OK | BDialog.FLAG_NO)
-                        .setPositiveButtonListener(params -> {
-                            FakeLauncherActivity.resetPreferredLauncherAndOpenChooser(this);
-                            return true;
-                        })
-                        .show();
-            } else if (percent > 99 && Math.random() < 0.2) {
-                onStartCounter = 0;
-                S.shareBaldPhone(this);
-            } else if (percent > 95) {
-                if (sharedPreferences.getLong(BPrefs.LAST_UPDATE_ASKED_VERSION_KEY, 0) + 2 * D.DAY < System.currentTimeMillis()) {
-                    UpdatingUtil.checkForUpdates(this, false);
+        if (!testing) {
+            final int percent = (int) (Math.random() * 100) + 1;//1 - 100
+            if (percent < (100 + (onStartCounter - 20) * 5))
+                if (percent % 3 == 1 && !isActivityDefault()) { // one in 3 chance
+                    onStartCounter = 0;
+                    BDB.from(this)
+                            .setTitle(R.string.set_home_screen)
+                            .setSubText(R.string.set_home_screen_subtext)
+                            .addFlag(BDialog.FLAG_OK | BDialog.FLAG_NO)
+                            .setPositiveButtonListener(params -> {
+                                FakeLauncherActivity.resetPreferredLauncherAndOpenChooser(this);
+                                return true;
+                            })
+                            .show();
+                } else if (percent > 99 && Math.random() < 0.2) {
+                    onStartCounter = 0;
+                    S.shareBaldPhone(this);
+                } else if (percent > 95) {
+                    if (sharedPreferences.getLong(BPrefs.LAST_UPDATE_ASKED_VERSION_KEY, 0) + 2 * D.DAY < System.currentTimeMillis()) {
+                        UpdatingUtil.checkForUpdates(this, false);
+                    }
                 }
-            }
+        }
+
     }
 
     /* the security exception will happen only after api 23 so please stfu*/

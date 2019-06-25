@@ -19,6 +19,7 @@
 
 package com.bald.uriah.baldphone.activities;
 
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
@@ -35,38 +36,50 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static androidx.test.espresso.Espresso.onView;
-import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.Espresso.pressBack;
+import static androidx.test.espresso.action.ViewActions.longClick;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class TutorialActivityTest {
+public class SOSActivityTest extends BaseActivityTest {
 
     @Rule
-    public ActivityTestRule<TutorialActivity> mActivityTestRule = new ActivityTestRule<>(TutorialActivity.class);
+    public ActivityTestRule<HomeScreenActivity> mActivityTestRule = new ActivityTestRule<>(HomeScreenActivity.class, true, false);
 
     @Test
-    public void tutorialActivityTest() {
-        // Added a sleep statement to match the app's execution delay.
-        // The recommended way to handle such scenarios is to use Espresso idling resources:
-        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
-        try {
-            Thread.sleep(200);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public void sOSActivityTest() {
 
-        ViewInteraction baldImageButton = onView(
-                allOf(withId(R.id.right_arrow),
+        mActivityTestRule.launchActivity(new Intent());
+        ViewInteraction baldImageButton2 = onView(
+                allOf(withId(R.id.sos),
+                        childAtPosition(
+                                allOf(withId(R.id.top_bar),
+                                        childAtPosition(
+                                                withId(R.id.container),
+                                                0)),
+                                0),
+                        isDisplayed()));
+        sleep();
+        baldImageButton2.perform(longClick());
+
+        ViewInteraction baldLinearLayoutButton = onView(
+                allOf(withId(R.id.ec1),
                         childAtPosition(
                                 childAtPosition(
-                                        withId(R.id.view_pager_holder),
-                                        1),
-                                1),
+                                        withId(android.R.id.content),
+                                        0),
+                                2),
                         isDisplayed()));
-        baldImageButton.perform(click());
+        sleep();
+        baldLinearLayoutButton.perform(longClick());
+
+        pressBack();
+        pressBack();
+        sleep();
+
     }
 
     private static Matcher<View> childAtPosition(
