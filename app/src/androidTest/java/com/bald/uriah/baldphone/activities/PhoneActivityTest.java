@@ -45,223 +45,79 @@ import static org.hamcrest.Matchers.is;
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class PhoneActivityTest extends BaseActivityTest {
-
     @Rule
     public ActivityTestRule<HomeScreenActivity> mActivityTestRule = new ActivityTestRule<>(HomeScreenActivity.class, true, false);
 
-    @Test
-    public void phoneActivityTest() {
-
+    @Test public void phoneActivityTest() {
         mActivityTestRule.launchActivity(new Intent());
-
-        ViewInteraction firstPageAppIcon = onView(
-                allOf(withId(R.id.bt_dialer),
-                        childAtPosition(
-                                allOf(withId(R.id.phone_container),
-                                        childAtPosition(
-                                                withId(R.id.page1),
-                                                2)),
-                                2),
-                        isDisplayed()));
+        ViewInteraction firstPageAppIcon = onView(allOf(withId(R.id.bt_dialer), childAtPosition(allOf(withId(R.id.phone_container), childAtPosition(withId(R.id.page1), 2)), 2), isDisplayed()));
         sleep();
         firstPageAppIcon.perform(longClick());
-
-        ViewInteraction baldButton = onView(
-                allOf(withId(R.id.b_0), withText("0"),
-                        childAtPosition(
-                                allOf(withId(R.id.include),
-                                        childAtPosition(
-                                                withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")),
-                                                2)),
-                                10),
-                        isDisplayed()));
+        ViewInteraction baldButton = onView(allOf(withId(R.id.b_0), withText("0"), childAtPosition(allOf(withId(R.id.include), childAtPosition(withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")), 2)), 10), isDisplayed()));
         sleep();
         baldButton.perform(longClick());
-
-        ViewInteraction baldButton2 = onView(
-                allOf(withId(R.id.b_5), withText("5"),
-                        childAtPosition(
-                                allOf(withId(R.id.include),
-                                        childAtPosition(
-                                                withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")),
-                                                2)),
-                                4),
-                        isDisplayed()));
+        ViewInteraction baldButton2 = onView(allOf(withId(R.id.b_5), withText("5"), childAtPosition(allOf(withId(R.id.include), childAtPosition(withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")), 2)), 4), isDisplayed()));
         sleep();
         baldButton2.perform(longClick());
-
-        ViewInteraction baldButton3 = onView(
-                allOf(withId(R.id.b_4), withText("4"),
-                        childAtPosition(
-                                allOf(withId(R.id.include),
-                                        childAtPosition(
-                                                withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")),
-                                                2)),
-                                3),
-                        isDisplayed()));
+        ViewInteraction baldButton3 = onView(allOf(withId(R.id.b_4), withText("4"), childAtPosition(allOf(withId(R.id.include), childAtPosition(withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")), 2)), 3), isDisplayed()));
         sleep();
         baldButton3.perform(longClick());
-
-        ViewInteraction baldLinearLayoutButton = onView(
-                allOf(withId(R.id.empty_view),
-                        childAtPosition(
-                                allOf(withId(R.id.scrolling_helper),
-                                        childAtPosition(
-                                                withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")),
-                                                3)),
-                                2),
-                        isDisplayed()));
+        ViewInteraction baldLinearLayoutButton = onView(allOf(withId(R.id.empty_view), childAtPosition(allOf(withId(R.id.scrolling_helper), childAtPosition(withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")), 3)), 2), isDisplayed()));
         sleep();
         baldLinearLayoutButton.perform(longClick());
-
-        ViewInteraction baldEditText = onView(
-                allOf(withId(R.id.et_name),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                1),
-                        isDisplayed()));
+        ViewInteraction baldEditText = onView(allOf(withId(R.id.et_name), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 1), isDisplayed()));
         sleep();
         baldEditText.perform(replaceText("v"), closeSoftKeyboard());
-
-        ViewInteraction baldButton4 = onView(
-                allOf(withId(R.id.save), withText("save"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                8),
-                        isDisplayed()));
+        ViewInteraction baldButton4 = onView(allOf(withId(R.id.save), withText("save"), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 8), isDisplayed()));
         sleep();
         baldButton4.perform(longClick());
-
-        // Added a sleep statement to match the app's execution delay.
-        // The recommended way to handle such scenarios is to use Espresso idling resources:
-        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-        ViewInteraction baldLinearLayoutButton2 = onView(
-                allOf(withId(R.id.bt_edit),
-                        childAtPosition(
-                                allOf(withId(R.id.options_bar),
-                                        childAtPosition(
-                                                withId(R.id.ll_info),
-                                                0)),
-                                0),
-                        isDisplayed()));
+        ViewInteraction baldLinearLayoutButton2 = onView(allOf(withId(R.id.bt_edit), childAtPosition(allOf(withId(R.id.options_bar), childAtPosition(withId(R.id.ll_info), 0)), 0), isDisplayed()));
         sleep();
         baldLinearLayoutButton2.perform(longClick());
-
-        ViewInteraction baldEditText2 = onView(
-                allOf(withId(R.id.et_mail),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                7),
-                        isDisplayed()));
+        ViewInteraction baldEditText2 = onView(allOf(withId(R.id.et_mail), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 7), isDisplayed()));
         sleep();
         baldEditText2.perform(replaceText("hh"), closeSoftKeyboard());
-
-        ViewInteraction baldButton5 = onView(
-                allOf(withId(R.id.save), withText("save"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                8),
-                        isDisplayed()));
+        ViewInteraction baldButton5 = onView(allOf(withId(R.id.save), withText("save"), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 8), isDisplayed()));
         sleep();
         baldButton5.perform(longClick());
-
-        // Added a sleep statement to match the app's execution delay.
-        // The recommended way to handle such scenarios is to use Espresso idling resources:
-        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-        ViewInteraction baldPictureTextButton = onView(
-                allOf(withId(R.id.favorite),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.ll_info),
-                                        4),
-                                0),
-                        isDisplayed()));
+        ViewInteraction baldPictureTextButton = onView(allOf(withId(R.id.favorite), childAtPosition(childAtPosition(withId(R.id.ll_info), 4), 0), isDisplayed()));
         sleep();
         baldPictureTextButton.perform(longClick());
-
-        ViewInteraction baldPictureTextButton2 = onView(
-                allOf(withId(R.id.home),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.ll_info),
-                                        4),
-                                1),
-                        isDisplayed()));
+        ViewInteraction baldPictureTextButton2 = onView(allOf(withId(R.id.home), childAtPosition(childAtPosition(withId(R.id.ll_info), 4), 1), isDisplayed()));
         sleep();
         baldPictureTextButton2.perform(longClick());
-
-        ViewInteraction baldPictureTextButton3 = onView(
-                allOf(withId(R.id.sos),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.ll_info),
-                                        4),
-                                2),
-                        isDisplayed()));
+        ViewInteraction baldPictureTextButton3 = onView(allOf(withId(R.id.sos), childAtPosition(childAtPosition(withId(R.id.ll_info), 4), 2), isDisplayed()));
         sleep();
         baldPictureTextButton3.perform(longClick());
-
-        ViewInteraction baldLinearLayoutButton3 = onView(
-                allOf(withId(R.id.bt_delete),
-                        childAtPosition(
-                                allOf(withId(R.id.options_bar),
-                                        childAtPosition(
-                                                withId(R.id.ll_info),
-                                                0)),
-                                2),
-                        isDisplayed()));
+        ViewInteraction baldLinearLayoutButton3 = onView(allOf(withId(R.id.bt_delete), childAtPosition(allOf(withId(R.id.options_bar), childAtPosition(withId(R.id.ll_info), 0)), 2), isDisplayed()));
         sleep();
         baldLinearLayoutButton3.perform(longClick());
-
-        ViewInteraction baldButton6 = onView(
-                allOf(withId(R.id.dialog_box_true), withText("Yes"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.container),
-                                        1),
-                                0),
-                        isDisplayed()));
+        ViewInteraction baldButton6 = onView(allOf(withId(R.id.dialog_box_true), withText("Yes"), childAtPosition(childAtPosition(withId(R.id.container), 1), 0), isDisplayed()));
         sleep();
         baldButton6.perform(longClick());
-
         pressBack();
     }
 
-    private static Matcher<View> childAtPosition(
-            final Matcher<View> parentMatcher, final int position) {
-
+    private static Matcher<View> childAtPosition(final Matcher<View> parentMatcher, final int position) {
         return new TypeSafeMatcher<View>() {
-            @Override
-            public void describeTo(Description description) {
+            @Override public void describeTo(Description description) {
                 description.appendText("Child at position " + position + " in parent ");
                 parentMatcher.describeTo(description);
             }
 
-            @Override
-            public boolean matchesSafely(View view) {
+            @Override public boolean matchesSafely(View view) {
                 ViewParent parent = view.getParent();
-                return parent instanceof ViewGroup && parentMatcher.matches(parent)
-                        && view.equals(((ViewGroup) parent).getChildAt(position));
+                return parent instanceof ViewGroup && parentMatcher.matches(parent) && view.equals(((ViewGroup) parent).getChildAt(position));
             }
         };
     }

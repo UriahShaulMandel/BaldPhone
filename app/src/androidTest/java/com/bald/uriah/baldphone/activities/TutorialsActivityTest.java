@@ -48,102 +48,41 @@ public class TutorialsActivityTest extends BaseActivityTest {
     @Rule
     public ActivityTestRule<TutorialActivity> mActivityTestRule = new ActivityTestRule<>(TutorialActivity.class, true, false);
 
-    @Test
-    public void tutorialsActivityTest() {
+    @Test public void tutorialsActivityTest() {
         mActivityTestRule.launchActivity(new Intent());
-
-        try {
-            Thread.sleep(250);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        ViewInteraction baldImageButton = onView(
-                allOf(withId(R.id.right_arrow),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.view_pager_holder),
-                                        1),
-                                1),
-                        isDisplayed()));
+        sleep();
+        ViewInteraction baldImageButton = onView(allOf(withId(R.id.right_arrow), childAtPosition(childAtPosition(withId(R.id.view_pager_holder), 1), 1), isDisplayed()));
         baldImageButton.perform(longClick());
-
-        ViewInteraction appCompatTextView = onView(
-                allOf(withId(R.id.short_presses), withText("Regular level"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.id_dummy),
-                                        1),
-                                6),
-                        isDisplayed()));
+        sleep();
+        ViewInteraction appCompatTextView = onView(allOf(withId(R.id.short_presses), withText("Regular level"), childAtPosition(childAtPosition(withId(R.id.id_dummy), 1), 6), isDisplayed()));
         appCompatTextView.perform(click());
-
-        ViewInteraction appCompatTextView2 = onView(
-                allOf(withId(R.id.long_presses), withText("High Level"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.id_dummy),
-                                        1),
-                                2),
-                        isDisplayed()));
+        sleep();
+        ViewInteraction appCompatTextView2 = onView(allOf(withId(R.id.long_presses), withText("High Level"), childAtPosition(childAtPosition(withId(R.id.id_dummy), 1), 2), isDisplayed()));
         appCompatTextView2.perform(longClick());
-
-        ViewInteraction baldImageButton2 = onView(
-                allOf(withId(R.id.right_arrow),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.view_pager_holder),
-                                        1),
-                                1),
-                        isDisplayed()));
+        sleep();
+        ViewInteraction baldImageButton2 = onView(allOf(withId(R.id.right_arrow), childAtPosition(childAtPosition(withId(R.id.view_pager_holder), 1), 1), isDisplayed()));
         baldImageButton2.perform(longClick());
-
-        ViewInteraction baldImageButton3 = onView(
-                allOf(withId(R.id.left_arrow),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.view_pager_holder),
-                                        1),
-                                0),
-                        isDisplayed()));
+        sleep();
+        ViewInteraction baldImageButton3 = onView(allOf(withId(R.id.left_arrow), childAtPosition(childAtPosition(withId(R.id.view_pager_holder), 1), 0), isDisplayed()));
         baldImageButton3.perform(longClick());
-
-        ViewInteraction baldImageButton4 = onView(
-                allOf(withId(R.id.right_arrow),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.view_pager_holder),
-                                        1),
-                                1),
-                        isDisplayed()));
+        sleep();
+        ViewInteraction baldImageButton4 = onView(allOf(withId(R.id.right_arrow), childAtPosition(childAtPosition(withId(R.id.view_pager_holder), 1), 1), isDisplayed()));
         baldImageButton4.perform(longClick());
-
-        ViewInteraction baldImageButton5 = onView(
-                allOf(withId(R.id.right_arrow),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(R.id.view_pager_holder),
-                                        1),
-                                1),
-                        isDisplayed()));
+        sleep();
+        ViewInteraction baldImageButton5 = onView(allOf(withId(R.id.right_arrow), childAtPosition(childAtPosition(withId(R.id.view_pager_holder), 1), 1), isDisplayed()));
         baldImageButton5.perform(longClick());
     }
 
-    private static Matcher<View> childAtPosition(
-            final Matcher<View> parentMatcher, final int position) {
-
+    private static Matcher<View> childAtPosition(final Matcher<View> parentMatcher, final int position) {
         return new TypeSafeMatcher<View>() {
-            @Override
-            public void describeTo(Description description) {
+            @Override public void describeTo(Description description) {
                 description.appendText("Child at position " + position + " in parent ");
                 parentMatcher.describeTo(description);
             }
 
-            @Override
-            public boolean matchesSafely(View view) {
+            @Override public boolean matchesSafely(View view) {
                 ViewParent parent = view.getParent();
-                return parent instanceof ViewGroup && parentMatcher.matches(parent)
-                        && view.equals(((ViewGroup) parent).getChildAt(position));
+                return parent instanceof ViewGroup && parentMatcher.matches(parent) && view.equals(((ViewGroup) parent).getChildAt(position));
             }
         };
     }

@@ -45,45 +45,27 @@ import static org.hamcrest.Matchers.allOf;
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class NotificationsActivityTest extends BaseActivityTest {
-
     @Rule
     public ActivityTestRule<HomeScreenActivity> mActivityTestRule = new ActivityTestRule<>(HomeScreenActivity.class, true, false);
 
-    @Test
-    public void notificationsActivityTest() {
-
+    @Test public void notificationsActivityTest() {
         mActivityTestRule.launchActivity(new Intent());
-
-        ViewInteraction baldImageButton2 = onView(
-                allOf(withId(R.id.notifications),
-                        childAtPosition(
-                                allOf(withId(R.id.top_bar),
-                                        childAtPosition(
-                                                withId(R.id.container),
-                                                0)),
-                                4),
-                        isDisplayed()));
+        ViewInteraction baldImageButton2 = onView(allOf(withId(R.id.notifications), childAtPosition(allOf(withId(R.id.top_bar), childAtPosition(withId(R.id.container), 0)), 4), isDisplayed()));
         sleep();
         baldImageButton2.perform(longClick());
-
         pressBack();
     }
 
-    private static Matcher<View> childAtPosition(
-            final Matcher<View> parentMatcher, final int position) {
-
+    private static Matcher<View> childAtPosition(final Matcher<View> parentMatcher, final int position) {
         return new TypeSafeMatcher<View>() {
-            @Override
-            public void describeTo(Description description) {
+            @Override public void describeTo(Description description) {
                 description.appendText("Child at position " + position + " in parent ");
                 parentMatcher.describeTo(description);
             }
 
-            @Override
-            public boolean matchesSafely(View view) {
+            @Override public boolean matchesSafely(View view) {
                 ViewParent parent = view.getParent();
-                return parent instanceof ViewGroup && parentMatcher.matches(parent)
-                        && view.equals(((ViewGroup) parent).getChildAt(position));
+                return parent instanceof ViewGroup && parentMatcher.matches(parent) && view.equals(((ViewGroup) parent).getChildAt(position));
             }
         };
     }
