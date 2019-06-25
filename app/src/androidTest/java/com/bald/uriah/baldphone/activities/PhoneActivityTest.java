@@ -85,20 +85,7 @@ public class PhoneActivityTest extends BaseActivityTest {
         ViewInteraction baldButton5 = onView(allOf(withId(R.id.save), withText("save"), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 8), isDisplayed()));
         sleep();
         baldButton5.perform(longClick());
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        ViewInteraction baldPictureTextButton = onView(allOf(withId(R.id.favorite), childAtPosition(childAtPosition(withId(R.id.ll_info), 4), 0), isDisplayed()));
         sleep();
-        baldPictureTextButton.perform(longClick());
-        ViewInteraction baldPictureTextButton2 = onView(allOf(withId(R.id.home), childAtPosition(childAtPosition(withId(R.id.ll_info), 4), 1), isDisplayed()));
-        sleep();
-        baldPictureTextButton2.perform(longClick());
-        ViewInteraction baldPictureTextButton3 = onView(allOf(withId(R.id.sos), childAtPosition(childAtPosition(withId(R.id.ll_info), 4), 2), isDisplayed()));
-        sleep();
-        baldPictureTextButton3.perform(longClick());
         ViewInteraction baldLinearLayoutButton3 = onView(allOf(withId(R.id.bt_delete), childAtPosition(allOf(withId(R.id.options_bar), childAtPosition(withId(R.id.ll_info), 0)), 2), isDisplayed()));
         sleep();
         baldLinearLayoutButton3.perform(longClick());
