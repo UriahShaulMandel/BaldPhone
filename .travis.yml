@@ -30,7 +30,11 @@ before_script:
   - adb shell settings put secure enabled_notification_listeners %nlisteners:com.bald.uriah.baldphone/com.bald.uriah.baldphone.services.NotificationListenerService
   - adb shell ime enable com.bald.uriah.baldphone/.keyboard.BaldInputMethodService
   - adb shell ime set com.bald.uriah.baldphone/.keyboard.BaldInputMethodService
-  - adb remount
+  - adb shell
+  - $su
+  - mount -o rw,remount rootfs /
+  - chmod 777 /mnt/sdcard
+  - exit
   - adb shell screencap -p /sdcard/screen.png
   - adb shell am broadcast -a android.intent.action.MEDIA_MOUNTED -d file:///sdcard
   - adb shell input keyevent 82 &
