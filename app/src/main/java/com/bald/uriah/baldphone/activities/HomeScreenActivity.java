@@ -140,6 +140,8 @@ public class HomeScreenActivity extends BaldActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(true)
+            throw new AssertionError("test");
         S.logImportant("HomeScreenActivity was started!");
         sharedPreferences = BPrefs.get(this);
 
