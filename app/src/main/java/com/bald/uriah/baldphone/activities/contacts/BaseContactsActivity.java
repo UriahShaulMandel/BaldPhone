@@ -19,6 +19,7 @@
 
 package com.bald.uriah.baldphone.activities.contacts;
 
+import android.content.ActivityNotFoundException;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -27,6 +28,7 @@ import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -39,6 +41,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
+import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.utils.SoftInputAssist;
 import com.bald.uriah.baldphone.utils.Toggeler;
@@ -51,6 +54,7 @@ import static android.view.View.GONE;
  * both has {@link R.layout#contacts_search} in their layout.
  */
 abstract class BaseContactsActivity extends BaldActivity {
+    private static final String TAG = BaseContactsActivity.class.getSimpleName();
     public static final int SPEECH_REQUEST_CODE = 5678;
     public static final String INTENT_EXTRA_CONTACT_ADAPTER_MODE = "INTENT_EXTRA_CONTACT_ADAPTER_MODE";
     private static final String FILTER_STATE = "FILTER_STATE";
@@ -184,13 +188,19 @@ abstract class BaseContactsActivity extends BaldActivity {
     }
 
     private void displaySpeechRecognizer() {
-        startActivityForResult(
-                new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
-                        .putExtra(
-                                RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
-                        ),
-                SPEECH_REQUEST_CODE);
+        try {
+            startActivityForResult(
+                    new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+                            .putExtra(
+                                    RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                                    RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+                            ),
+                    SPEECH_REQUEST_CODE);
+        } catch (ActivityNotFoundException e) {
+            Log.e(TAG, S.str(e.getMessage()));
+            e.printStackTrace();
+            BaldToast.error(this);
+        }
     }
 
     protected abstract Cursor getCursorForFilter(String filter, boolean favorite);

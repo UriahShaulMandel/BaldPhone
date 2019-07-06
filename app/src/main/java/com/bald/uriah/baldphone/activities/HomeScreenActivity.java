@@ -112,6 +112,7 @@ public class HomeScreenActivity extends BaldActivity {
             }
         }
     };
+
     private final BroadcastReceiver notificationReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -136,6 +137,7 @@ public class HomeScreenActivity extends BaldActivity {
             handler.postDelayed(shakeIt, 5 * D.SECOND);
         }
     };
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -286,16 +288,12 @@ public class HomeScreenActivity extends BaldActivity {
         }
 
         LocalBroadcastManager.getInstance(this).
-
                 registerReceiver(notificationReceiver,
                         new IntentFilter(NotificationListenerService.HOME_SCREEN_ACTIVITY_BROADCAST));
         LocalBroadcastManager.getInstance(this).
-
                 sendBroadcast(
                         new Intent(ACTION_REGISTER_ACTIVITY)
-                                .
-
-                                        putExtra(KEY_EXTRA_ACTIVITY, NOTIFICATIONS_HOME_SCREEN));
+                                .putExtra(KEY_EXTRA_ACTIVITY, NOTIFICATIONS_HOME_SCREEN));
 
         registerReceiver(batteryReceiver, BATTERY_FILTER);
     }
@@ -389,13 +387,19 @@ public class HomeScreenActivity extends BaldActivity {
     }
 
     public void displaySpeechRecognizer() {
-        startActivityForResult(
-                new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
-                        .putExtra(
-                                RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
-                        ),
-                SPEECH_REQUEST_CODE);
+        try {
+            startActivityForResult(
+                    new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+                            .putExtra(
+                                    RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                                    RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+                            ),
+                    SPEECH_REQUEST_CODE);
+        } catch (ActivityNotFoundException e) {
+            Log.e(TAG, S.str(e.getMessage()));
+            e.printStackTrace();
+            BaldToast.error(this);
+        }
     }
 
     @Override

@@ -25,6 +25,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.DrawableRes;
@@ -37,6 +38,7 @@ public class FirstPageAppIcon extends BaldFrameLayoutButton {
     protected final LayoutInflater layoutInflater;
     protected ImageView imageView;
     protected TextView textView;
+    protected View badge;
 
     public FirstPageAppIcon(Context context) {
         super(context);
@@ -63,6 +65,7 @@ public class FirstPageAppIcon extends BaldFrameLayoutButton {
         layoutInflater.inflate(R.layout.first_page_app_icon, this, true);
         imageView = findViewById(R.id.iv);
         textView = findViewById(R.id.tv);
+        badge = findViewById(R.id.notifications_counter);
 
         if (attributeSet != null) {
             final TypedArray styleAttributesArray = context.obtainStyledAttributes(attributeSet, R.styleable.FirstPageAppIcon);
@@ -93,12 +96,7 @@ public class FirstPageAppIcon extends BaldFrameLayoutButton {
         imageView.setImageResource(resId);
     }
 
-    public ImageView getImageView() {
-        return imageView;
+    public void setBadgeVisibility(boolean visible) {
+        badge.setVisibility(visible ? VISIBLE : INVISIBLE);
     }
-
-    public TextView getTextView() {
-        return textView;
-    }
-
 }

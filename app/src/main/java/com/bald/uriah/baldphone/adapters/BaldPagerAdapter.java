@@ -57,7 +57,6 @@ public class BaldPagerAdapter extends BaldViewAdapter {
         numItems =
                 numItemsBefore + (pinnedList.size() / HomeViewFactory.AMOUNT_PER_PAGE + (pinnedList.size() % HomeViewFactory.AMOUNT_PER_PAGE == 0 ? 0 : 1));
         notifyDataSetChanged();
-
     }
 
     public View getItem(int position) {

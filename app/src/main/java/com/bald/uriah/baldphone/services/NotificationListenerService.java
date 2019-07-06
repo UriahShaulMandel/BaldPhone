@@ -35,6 +35,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class NotificationListenerService extends android.service.notification.NotificationListenerService {
@@ -167,15 +168,21 @@ public class NotificationListenerService extends android.service.notification.No
     private void sendBroadcastToHomeScreenActivity() {
         try {
             final StatusBarNotification[] statusBarNotifications = getActiveNotifications();
+            final ArrayList<String> packages = new ArrayList<>(statusBarNotifications.length);
+            for (final StatusBarNotification statusBarNotification : statusBarNotifications) {
+                packages.add(statusBarNotification.getPackageName());
+
+            }
+            final Intent intent = new Intent(HOME_SCREEN_ACTIVITY_BROADCAST)
+                    .putExtra("amount", statusBarNotifications.length < NOTIFICATIONS_ALOT ?
+                            statusBarNotifications.length < NOTIFICATIONS_SOME ?
+                                    NOTIFICATIONS_NONE :
+                                    NOTIFICATIONS_SOME :
+                            NOTIFICATIONS_ALOT)
+                    .putStringArrayListExtra("packages", packages);
+
             LocalBroadcastManager.getInstance(this)
-                    .sendBroadcast(
-                            new Intent(HOME_SCREEN_ACTIVITY_BROADCAST)
-                                    .putExtra("amount", statusBarNotifications.length < NOTIFICATIONS_ALOT ?
-                                            statusBarNotifications.length < NOTIFICATIONS_SOME ?
-                                                    NOTIFICATIONS_NONE :
-                                                    NOTIFICATIONS_SOME :
-                                            NOTIFICATIONS_ALOT)
-                    );
+                    .sendBroadcast(intent);
         } catch (SecurityException e) {
             Log.e(TAG, e.getMessage());
             e.printStackTrace();

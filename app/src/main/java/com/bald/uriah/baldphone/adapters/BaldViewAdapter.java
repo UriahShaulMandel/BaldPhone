@@ -32,6 +32,7 @@ public abstract class BaldViewAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         View layout = getItem(position);
         container.addView(layout);
+
         return layout;
     }
 

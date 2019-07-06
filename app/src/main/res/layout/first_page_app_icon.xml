@@ -51,4 +51,24 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
+
+    <Space
+            android:id="@+id/space"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toTopOf="@id/iv"
+            app:layout_constraintStart_toEndOf="@id/iv"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            />
+
+    <View
+            android:id="@+id/notifications_counter"
+            app:layout_constraintTop_toBottomOf="@id/space"
+            app:layout_constraintEnd_toStartOf="@id/space"
+            android:layout_width="@dimen/small"
+            android:layout_height="@dimen/small"
+            android:background="@drawable/notifications_pill"
+            android:visibility="invisible"
+            />
 </androidx.constraintlayout.widget.ConstraintLayout>
