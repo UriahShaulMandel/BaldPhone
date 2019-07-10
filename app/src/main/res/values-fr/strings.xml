@@ -48,7 +48,7 @@
     <string name="airplane_mode">Mode avion</string>
     <string name="alarm_name">Nom de l\'alarme</string>
     <string name="alarm_volume">Volume de l\'alarme</string>
-    <string name="alarm_volume_subtext">Choisissez le volume des alarmes.\nLe volume augmente en glissant de gauche à droite.</string>
+    <string name="alarm_volume_subtext">Choisissez le volume des alarmes.\nLe volume s\'augmente en glissant de gauche à droite.</string>
     <string name="alarms">Alarmes</string>
 
     <string name="alarms_repeats_every">L\'alarme se répète chaque</string>
@@ -82,7 +82,7 @@
     <string name="camera">Appareil photo</string>
     <string name="camera_subtext">Cette permission est requise pour activer la torche.</string>
     <string name="cancel">Annuler</string>
-    <string name="change_pills_time">Modifier l\'heure des médicaments.</string>
+    <string name="change_pills_time">Modifier l\'heure des médicaments</string>
     <string name="change_system_settings_subtext">Veuillez autoriser BaldPhone à modifier les paramètres, pour accroître la taille du texte ou ajuster la luminosité par exemple.
     </string>
     <string name="choose_friday">Ven</string>
@@ -124,10 +124,10 @@
     <string name="enter">Saisir</string>
     <string name="enter_contact_or_phone_number">Saisissez le nom du contact :</string>
     <string name="evening">Soir</string>
-    <string name="example_of_different_text_sizes">Exemple de différentes tailles de texte\nElles doivent êtres lisibles et ne pas déborder.
+    <string name="example_of_different_text_sizes">Exemple de différentes tailles de texte.\nElles doivent êtres lisibles et ne pas déborder.
     </string>
     <string name="external_storage_subtext">Cette permission est requise pour enregister vos images.</string>
-    <string name="feedback">Faire un retour</string>
+    <string name="feedback">Donnez votre avis</string>
     <string name="feedback_cannot_be_empty">Le message ne peut pas être vide !</string>
     <string name="feedback_sent_successfully">Message envoyé avec succès !</string>
     <string name="first_please_select_how_you_want_to_interact_with_buttons">Veuillez sélectionner un niveau d\'accessibilité.
@@ -213,7 +213,7 @@
     <string name="read_call_log">Lire l\'historique des appels</string>
     <string name="read_call_log_subtext">Cette permission est nécessaire pour voir le journal d\'appels.</string>
     <string name="read_contacts">Lire les contacts</string>
-    <string name="received">Reçu</string>
+    <string name="received">Entrant</string>
     <string name="recent">Appels récents</string>
     <string name="regular_level">Faible</string>
 
@@ -241,10 +241,10 @@
     <string name="share">Partager</string>
     <string name="share_actual_text">Bonjour, j\'utilise l\'application "BaldPhone" qui remplace l\'interface de mon téléphone par quelque chose de plus lisible, simple et facile d\'utilisation.\nIntéressé(e) ?\nTu peux la télécharger gratuitement !\nRegarde le lien ci-dessous pour plus d\'informations :\n\nhttps://sites.google.com/view/baldphone/home
     </string>
-    <string name="share_bald_phone_subtext">Bonjour,\nconnaissez-vous une personne qui serait intéressée par BaldPhone?\nMerci de faire passer le mot.
+    <string name="share_bald_phone_subtext">Bonjour,\nConnaissez-vous une personne qui serait intéressée par BaldPhone ?\nMerci de faire passer le mot.
     </string>
     <string name="share_baldphone">Partager BaldPhone</string>
-    <string name="share_contact">Partager le contact</string>
+    <string name="share_contact">Partager</string>
     <string name="share_differently">Partager via une autre application</string>
     <string name="share_via_whatsapp">Partager via Whatsapp</string>
     <string name="shift">majuscule</string>
@@ -257,8 +257,8 @@
     <string name="speak">Parler</string>
     <string name="speech_to_text">Saisie vocale</string>
     <string name="strong_hand">Droitier/Gaucher</string>
-    <string name="strong_hand_subtext">Votre choix modifiera\nla disposition de l\'application</string>
-    <string name="submit">soumettre</string>
+    <string name="strong_hand_subtext">Votre choix modifiera l\'interface de l\'application</string>
+    <string name="submit">Enregistrer</string>
     <string name="sunday">Dimanche</string>
     <string name="technical_information">Informations techniques</string>
     <string name="theme_settings">Thème</string>
@@ -267,9 +267,9 @@
     <string name="thursday">Jeudi</string>
     <string name="time_changer">Horaires médicaments</string>
     <string name="tiny">Très petit</string>
-    <string name="to___days_and___hours_from_now">dans %d jours et %d heures</string>
-    <string name="to___hours_and___minutes_from_now">dans %d heures et %d minutes</string>
-    <string name="to___minuets_from_now">dans %d minutes</string>
+    <string name="to___days_and___hours_from_now">Sonnera dans %d jours et %d heures</string>
+    <string name="to___hours_and___minutes_from_now">Sonnera dans %d heures et %d minutes</string>
+    <string name="to___minuets_from_now">Sonnera dans %d minutes</string>
     <string name="today">Aujourd\'hui</string>
     <string name="too_many_apps_with___in_them">too many apps with %s in them!</string>
     <string name="too_many_contacts_with___in_them">too many contacts with %s in them!</string>
@@ -285,7 +285,7 @@
     <string name="voice_mail">Messagerie vocale</string>
     <string name="wednesday">Mercredi</string>
     <string name="whatsapp">Whatsapp</string>
-    <string name="wifi">Wi-fi</string>
+    <string name="wifi">Wi-Fi</string>
     <string name="will_repeat_only_once">Ne sonnera qu\'une seule fois !</string>
     <string name="write">Écriture"</string>
     <string name="write_contacts">Créer des contacts Contacts</string>
@@ -313,7 +313,7 @@
     <string name="new_updates_are_ready_to_be_downloaded">De nouvelles mises à jour sont disponibes et prêtes à être téléchargées.</string>
     <string name="install">Installer</string>
     <string name="data_warning">Avertissement de données mobiles</string>
-    <string name="data_warning_subtext">Bonjour, vous n\'êtes pas connecté(e) au Wi-fi.\nLa taille du téléchargement est d\'environ 3MB, si vous êtes à l\'étranger, cela peut vous coûter de l\'argent.\nSouhaitez-vous poursuivre ?
+    <string name="data_warning_subtext">Bonjour, vous n\'êtes pas connecté(e) au Wi-Fi.\nLa taille du téléchargement est d\'environ 3MB, si vous êtes à l\'étranger, cela peut vous coûter de l\'argent.\nSouhaitez-vous poursuivre ?
     </string>
     <string name="update_message_is_corrupted">Le message de mise à jour est corrompu.</string>
     <string name="check_for_updates">Vérifier les mises à jour</string>
