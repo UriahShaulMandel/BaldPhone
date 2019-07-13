@@ -243,6 +243,22 @@ public class SettingsActivity extends BaldActivity {
         );
         displaySettingsList.add(themeSettingsItem);
         personalizationSettingsList.add(themeSettingsItem);
+
+        personalizationSettingsList.add(new BDBSettingsItem(R.string.status_bar_settings,
+                BDB.from(this)
+                        .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
+                        .setTitle(R.string.status_bar_settings)
+                        .setSubText(R.string.status_bar_settings_subtext)
+                        .setOptions(R.string.nowhere, R.string.only_home_screen, R.string.everywhere)
+                        .setPositiveButtonListener(params -> {
+                            editor.putInt(BPrefs.STATUS_BAR_KEY, (Integer) params[0]).apply();
+                            this.recreate();
+                            return true;
+                        })
+                        .setOptionsStartingIndex(() -> sharedPreferences.getInt(BPrefs.STATUS_BAR_KEY, BPrefs.STATUS_BAR_DEFAULT_VALUE)),
+                R.drawable.status_bar_on_button
+        ));
+
         personalizationSettingsList.add(new BDBSettingsItem(R.string.notes_settings,
                 BDB.from(this)
                         .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)

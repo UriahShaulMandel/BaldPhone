@@ -45,6 +45,9 @@ public final class BPrefs {
     public static final String LONG_PRESSES_SHORTER_KEY = "LONG_PRESSES_SHORTER_KEY";
     public static final boolean LONG_PRESSES_SHORTER_DEFAULT_VALUE = true;
 
+    public static final String STATUS_BAR_KEY = "STATUS_BAR_KEY";
+    public static final int STATUS_BAR_DEFAULT_VALUE = 0;
+
     public static final String VIBRATION_FEEDBACK_KEY = "VIBRATION_FEEDBACK_KEY";
     public static final boolean VIBRATION_FEEDBACK_DEFAULT_VALUE = true;
 

@@ -29,10 +29,10 @@ import static com.bald.uriah.baldphone.utils.BPrefs.*;
 public class BaldPrefsUtils {
     private final int theme;
     private final boolean vibrationFeedback, touchNoHard, longPresses, notes;
-    private final int swipingEffect;
+    private final int swipingEffect, statusBar;
     private final String customApp;
 
-    private BaldPrefsUtils(int theme, boolean vibrationFeedback, boolean touchNoHard, boolean longPresses, int swipingEffect, boolean notes, String customApp) {
+    private BaldPrefsUtils(int theme, boolean vibrationFeedback, boolean touchNoHard, boolean longPresses, int swipingEffect, boolean notes, String customApp, int statusBar) {
         this.theme = theme;
         this.vibrationFeedback = vibrationFeedback;
         this.touchNoHard = touchNoHard;
@@ -40,6 +40,7 @@ public class BaldPrefsUtils {
         this.swipingEffect = swipingEffect;
         this.notes = notes;
         this.customApp = customApp;
+        this.statusBar = statusBar;
     }
 
     public static BaldPrefsUtils newInstance(Context context) {
@@ -56,7 +57,9 @@ public class BaldPrefsUtils {
                         .getInt(PAGE_TRANSFORMERS_KEY, PAGE_TRANSFORMERS_DEFAULT_VALUE),
                 sharedPreferences
                         .getBoolean(NOTE_VISIBLE_KEY, NOTE_VISIBLE_DEFAULT_VALUE),
-                sharedPreferences.getString(BPrefs.CUSTOM_APP_KEY, null)
+                sharedPreferences.getString(BPrefs.CUSTOM_APP_KEY, null),
+                sharedPreferences
+                        .getInt(STATUS_BAR_KEY, STATUS_BAR_DEFAULT_VALUE)
         );
     }
 
@@ -64,13 +67,17 @@ public class BaldPrefsUtils {
         return !equals(newInstance(context));
     }
 
-    public boolean equals(BaldPrefsUtils that) {
+    @Override public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BaldPrefsUtils that = (BaldPrefsUtils) o;
         return theme == that.theme &&
                 vibrationFeedback == that.vibrationFeedback &&
                 touchNoHard == that.touchNoHard &&
                 longPresses == that.longPresses &&
                 notes == that.notes &&
                 swipingEffect == that.swipingEffect &&
+                statusBar == that.statusBar &&
                 Objects.equals(customApp, that.customApp);
     }
 }

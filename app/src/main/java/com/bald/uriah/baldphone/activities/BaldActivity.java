@@ -22,6 +22,7 @@ package com.bald.uriah.baldphone.activities;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -33,6 +34,8 @@ import android.os.Vibrator;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.PopupWindow;
 import androidx.annotation.Nullable;
 import androidx.annotation.StyleRes;
@@ -176,6 +179,19 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
                 ? (Vibrator) getSystemService(VIBRATOR_SERVICE) : null;
         themeIndex = S.getTheme(this);
         setTheme(themeIndex);
+
+        final int statusBar = sharedPreferences.getInt(BPrefs.STATUS_BAR_KEY, BPrefs.STATUS_BAR_DEFAULT_VALUE);
+        if (statusBar != 2) {
+            requestWindowFeature(Window.FEATURE_NO_TITLE);
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
+        if (statusBar != 0) {
+            final Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.BLACK);
+        }
 
         if (useAccidentalGuard = sharedPreferences.getBoolean(BPrefs.USE_ACCIDENTAL_GUARD_KEY, BPrefs.USE_ACCIDENTAL_GUARD_DEFAULT_VALUE)) {
             sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);

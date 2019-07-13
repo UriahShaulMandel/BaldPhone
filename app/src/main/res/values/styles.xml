@@ -22,14 +22,13 @@
     <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentTransitions">true</item>
-        <item name="android:windowActionBar">false</item>
-        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowActionBar">true</item>
+        <item name="android:windowFullscreen">false</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowBackground">?bald_background</item>
         <item name="bald_button_gold">@color/gold</item>
         <item name="bald_text_on_gold">@color/on_gold</item>
-
-
+        <item name="android:actionBarStyle">@style/BaldActionBar</item>
         <item name="colorAccent">#fff</item>
     </style>
 
@@ -178,4 +177,7 @@
         <item name="autoSizeTextType">uniform</item>
     </style>
 
+    <style name="BaldActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">?attr/bald_background</item>
+    </style>
 </resources>

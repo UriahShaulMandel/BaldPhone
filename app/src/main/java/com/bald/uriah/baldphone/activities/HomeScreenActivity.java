@@ -30,10 +30,7 @@ import android.media.AudioManager;
 import android.os.*;
 import android.speech.RecognizerIntent;
 import android.util.Log;
-import android.view.Display;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
+import android.view.*;
 import android.widget.PopupWindow;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
@@ -138,7 +135,6 @@ public class HomeScreenActivity extends BaldActivity {
         }
     };
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -169,6 +165,11 @@ public class HomeScreenActivity extends BaldActivity {
         final Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
         screenSize = new Point();
         display.getSize(screenSize);
+
+        if ((sharedPreferences.getInt(BPrefs.STATUS_BAR_KEY, BPrefs.STATUS_BAR_DEFAULT_VALUE) == 1)) {
+            getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
 
         attachToXml();
         lantern = new Lantern(this)
