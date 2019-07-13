@@ -92,8 +92,6 @@
                     android:id="@+id/tuesday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_row="0"
-                    android:layout_column="2"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:buttonTint="?bald_decoration_on_background"
@@ -108,8 +106,6 @@
                     android:id="@+id/wednesday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_row="1"
-                    android:layout_column="0"
                     android:layout_marginStart="8dp"
                     android:buttonTint="?bald_decoration_on_background"
                     android:text="@string/choose_wednesday"
@@ -123,15 +119,12 @@
                     android:id="@+id/thursday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_row="1"
-                    android:layout_column="1"
                     android:buttonTint="?bald_decoration_on_background"
                     android:text="@string/choose_thursday"
                     android:textColor="?bald_text_on_button"
                     android:textSize="@dimen/small"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
 
@@ -150,21 +143,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
 
-            <CheckBox
-                    android:id="@+id/saturday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="2"
-                    android:layout_column="0"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:buttonTint="?bald_decoration_on_background"
-                    android:text="@string/choose_saturday"
-                    android:textColor="?bald_text_on_button"
-                    android:textSize="@dimen/small"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
-
 
             <RadioButton
                     android:id="@+id/rb_every_day"
@@ -177,9 +155,22 @@
                     android:textColor="?bald_text_on_button"
                     android:textSize="@dimen/small"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     />
+
+
+            <CheckBox
+                    android:id="@+id/saturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:buttonTint="?bald_decoration_on_background"
+                    android:text="@string/choose_saturday"
+                    android:textColor="?bald_text_on_button"
+                    android:textSize="@dimen/small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
 
 
             <RadioButton

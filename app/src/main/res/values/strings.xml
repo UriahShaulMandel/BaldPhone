@@ -17,7 +17,7 @@
   ~ under the License.
   -->
 
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="___app_was_not_found">%s was not found!</string>
     <string name="about">About</string>
     <string name="about_subtext">Hi\nMy name is Uriah Shaul Mandel, and i\'m the developer of this platform.\nI live in
@@ -364,25 +364,12 @@
     <bool name="is_right_to_left">false</bool>
 
 
-    <string-array name="words_for_call" tools:ignore="InconsistentArrays">
-        <item>call</item>
-        <item>dial</item>
-        <item>ring</item>
-        <item>telephone</item>
-        <item>phone</item>
-    </string-array>
-    <string-array name="words_for_open">
-        <item>open</item>
-        <item>start</item>
-        <item>run</item>
-    </string-array>
-
-
     <string-array name="names">
         <item>Dani Konigstein</item>
         <item>My Family</item>
         <item>Ido Sharon</item>
         <item>Nadav Shalev</item>
+        <item>Primokorn</item>
         <item>Yooda Or</item>
         <item>Shaked Aley-Raz</item>
         <item>Edo Avidan</item>
@@ -395,6 +382,7 @@
         <item>help and support throughout the entire process</item>
         <item>Being the longest and most helpful tester, Graphics Consultant</item>
         <item>The awesome logo</item>
+        <item>The french translations</item>
         <item>Mentor</item>
         <item>Graphics Consultant</item>
         <item>Graphics Consultant</item>
