@@ -355,11 +355,16 @@
     <string name="alarm">שעון מעורר</string>
 
     <string name="no_new_notifications">אין התראות חדשות</string>
-    <string name="sound">סאונד</string>
-    <string name="mute">השתק</string>
+    <string name="sound">שמע</string>
+    <string name="mute">שקט</string>
     <string name="vibrate">רטט</string>
     <string name="your_phone_doesnt_have_assistant_installed">אין במכשיר זה סיוע קולי</string>
 
 
+    <string name="status_bar_settings">שורת מצב</string>
+    <string name="status_bar_settings_subtext">איפה להראות את שורת המצב?</string>
+    <string name="only_home_screen">רק במסך הבית</string>
+    <string name="nowhere">בשום מסך</string>
+    <string name="everywhere">בכל מסך</string>
 </resources>
 
