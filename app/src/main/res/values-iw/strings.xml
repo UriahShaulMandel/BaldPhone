@@ -17,7 +17,7 @@
   ~ under the License.
   -->
 
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="___app_was_not_found">היישום או איש הקשר %s לא נמצא/ה!</string>
     <string name="about">אודות</string>
     <string name="about_subtext">הפרוייקט נולד מפגישה עם חבר שחלה בפרקינסון. עזרתי לו עם בעיה כלשהי בטלפון, והבחנתי עד
@@ -358,53 +358,8 @@
     <string name="sound">סאונד</string>
     <string name="mute">השתק</string>
     <string name="vibrate">רטט</string>
+    <string name="your_phone_doesnt_have_assistant_installed">אין במכשיר זה סיוע קולי</string>
 
 
-    <string-array name="words_for_call" tools:ignore="InconsistentArrays">
-        <item>להתקשר</item>
-        <item>לחייג</item>
-        <item>התקשרי</item>
-        <item>התקשר</item>
-        <item>תתקשרי</item>
-        <item>תתקשר</item>
-        <item>חייגי</item>
-        <item>חייג</item>
-        <item>טלפון</item>
-        <item>טלפני</item>
-        <item>טלפן</item>
-    </string-array>
-
-    <string-array name="words_for_open">
-        <item>לפתוח</item>
-        <item>פתח</item>
-        <item>פתחי</item>
-    </string-array>
-
-    <string-array name="names">
-        <item>דני קניגשטיין</item>
-        <item>המשפחה שלי</item>
-        <item>עידו שרון</item>
-        <item>נדב שלו</item>
-        <item>יהודה אור</item>
-        <item>שקד עלי רז</item>
-        <item>עידו אבידן</item>
-        <item>רוני גלבוע</item>
-        <item>עידו היינמן</item>
-        <item>שי גדות</item>
-    </string-array>
-
-    <string-array name="tasks">
-        <item>ההשראה והעילה לאפליקציה</item>
-        <item>עזרה ותמיכה לאורך כל התהליך</item>
-        <item>בדיקה רצופה ועזרה גרפית</item>
-        <item>הלוגו החתיך</item>
-        <item>מנטור</item>
-        <item>ייעוץ גרפי</item>
-        <item>ייעוץ גרפי</item>
-        <item>נסיין בטא</item>
-        <item>נסיין בטא</item>
-        <item>נסיינית בטא</item>
-
-    </string-array>
 </resources>
 

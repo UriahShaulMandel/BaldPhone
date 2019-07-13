@@ -18,7 +18,7 @@
   ~ under the License.
   -->
 
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="___app_was_not_found">%s n\'a pas été trouvée !</string>
     <string name="about">À propos</string>
     <string name="about_subtext">Bonjour\nJe m\'appelle Uriah Shaul Mandel et je suis le développeur de cette plateforme.\nJe vis à
@@ -343,48 +343,8 @@
     <string name="sound">Sonnerie</string>
     <string name="mute">Muet</string>
     <string name="vibrate">Vibreur</string>
+    <string name="your_phone_doesnt_have_assistant_installed">Your Phone doesn\'t have assistant installed</string>
 
     <bool name="is_right_to_left">false</bool>
 
-
-    <string-array name="words_for_call" tools:ignore="InconsistentArrays">
-        <item>call</item>
-        <item>dial</item>
-        <item>ring</item>
-        <item>telephone</item>
-        <item>phone</item>
-    </string-array>
-
-    <string-array name="words_for_open">
-        <item>open</item>
-        <item>start</item>
-        <item>run</item>
-    </string-array>
-
-
-    <string-array name="names">
-        <item>Dani Konigstein</item>
-        <item>My Family</item>
-        <item>Ido Sharon</item>
-        <item>Nadav Shalev</item>
-        <item>Yooda Or</item>
-        <item>Shaked Aley-Raz</item>
-        <item>Edo Avidan</item>
-        <item>Ronnie Gilboa</item>
-        <item>Ido Heinemann</item>
-        <item>Shay Gadot</item>
-    </string-array>
-    <string-array name="tasks">
-        <item>Being the Inspiration of BaldPhone</item>
-        <item>help and support throughout the entire process</item>
-        <item>Being the longest and most helpful tester, Graphics Consultant</item>
-        <item>The awesome logo</item>
-        <item>Mentor</item>
-        <item>Graphics Consultant</item>
-        <item>Graphics Consultant</item>
-        <item>Tester</item>
-        <item>Tester</item>
-        <item>Tester</item>
-
-    </string-array>
 </resources>

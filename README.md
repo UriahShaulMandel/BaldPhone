@@ -25,7 +25,7 @@ Main features:
 
 [Website](https://sites.google.com/view/baldphone)
 
-[Apk Download Link](https://github.com/UriahShaulMandel/BaldPhone/raw/master/apks/app-release.apk) 
+[Apk Download Link](http://bit.ly/BALDPHONE) 
 
 [Installing Manual](https://github.com/UriahShaulMandel/BaldPhone/raw/master/manual/Manual%20hebrew.pdf)
 

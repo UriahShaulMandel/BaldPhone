@@ -31,7 +31,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.*;
+import com.bald.uriah.baldphone.activities.AppsActivity;
+import com.bald.uriah.baldphone.activities.DialerActivity;
+import com.bald.uriah.baldphone.activities.HomeScreenActivity;
+import com.bald.uriah.baldphone.activities.RecentActivity;
 import com.bald.uriah.baldphone.activities.alarms.AlarmsActivity;
 import com.bald.uriah.baldphone.activities.contacts.ContactsActivity;
 import com.bald.uriah.baldphone.activities.media.PhotosActivity;
@@ -190,7 +193,13 @@ public class HomePage1 extends HomeView {
                 BaldToast.from(homeScreen).setType(BaldToast.TYPE_ERROR).setText(R.string.an_error_has_occurred).show();
             }
         });
-        bt_assistant.setOnClickListener(v -> homeScreen.startActivity(new Intent(homeScreen, AssistantActivity.class)));
+        bt_assistant.setOnClickListener(v -> {
+            try {
+                homeScreen.startActivity(new Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            } catch (Exception e) {
+                BaldToast.from(homeScreen).setType(BaldToast.TYPE_ERROR).setText(R.string.your_phone_doesnt_have_assistant_installed).show();
+            }
+        });
     }
 
 }

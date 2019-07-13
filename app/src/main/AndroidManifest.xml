@@ -90,11 +90,7 @@
             android:name=".activities.TutorialActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".activities.SOSActivity" />
-        <activity android:name=".activities.AssistantActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.ACTION_VOICE_COMMAND" />
-            </intent-filter>
-        </activity>
+
         <activity android:name=".activities.SettingsActivity" />
         <activity android:name=".activities.NotificationsActivity" />
         <activity
