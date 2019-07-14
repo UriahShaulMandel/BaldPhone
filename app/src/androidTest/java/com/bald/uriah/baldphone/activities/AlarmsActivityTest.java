@@ -85,7 +85,7 @@ public class AlarmsActivityTest extends BaseActivityTest {
         ViewInteraction baldButton3 = onView(allOf(withId(R.id.bt_alarm_submit), withText("submit"), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 7), isDisplayed()));
         baldButton3.perform(longClick());
         sleep();
-        ViewInteraction baldLinearLayoutButton3 = onView(allOf(withId(R.id.bt_cancel_all_alarms), childAtPosition(allOf(withId(R.id.options_bar), childAtPosition(withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")), 2)), 2), isDisplayed()));
+        ViewInteraction baldLinearLayoutButton3 = onView(allOf(withId(R.id.bt_cancel_all_alarms), isDisplayed()));
         baldLinearLayoutButton3.perform(longClick());
         sleep();
         ViewInteraction baldButton4 = onView(allOf(withId(R.id.dialog_box_true), withText("Yes"), childAtPosition(childAtPosition(withId(R.id.container), 1), 0), isDisplayed()));
