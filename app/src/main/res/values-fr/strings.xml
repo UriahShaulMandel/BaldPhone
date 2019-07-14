@@ -343,8 +343,14 @@
     <string name="sound">Sonnerie</string>
     <string name="mute">Muet</string>
     <string name="vibrate">Vibreur</string>
-    <string name="your_phone_doesnt_have_assistant_installed">Your Phone doesn\'t have assistant installed</string>
-
     <bool name="is_right_to_left">false</bool>
+    
+    <!--new strings - needs to be translated:-->
+    <string name="status_bar_settings">Status bar</string>
+    <string name="status_bar_settings_subtext">Where do you want to show the status bar?</string>
+    <string name="only_home_screen">Only Home Screen</string>
+    <string name="nowhere">Nowhere</string>
+    <string name="everywhere">Everywhere</string>
+
 
 </resources>
