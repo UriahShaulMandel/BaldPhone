@@ -67,7 +67,7 @@ public class AlarmsActivityTest extends BaseActivityTest {
         ViewInteraction appCompatCheckBox2 = onView(allOf(withId(R.id.thursday), withText("Thu"), childAtPosition(childAtPosition(withClassName(is("android.widget.LinearLayout")), 2), 4), isDisplayed()));
         appCompatCheckBox2.perform(longClick());
         sleep();
-        ViewInteraction appCompatRadioButton = onView(allOf(withId(R.id.rb_every_day), withText("Every day"), childAtPosition(childAtPosition(withClassName(is("android.widget.LinearLayout")), 2), 7), isDisplayed()));
+        ViewInteraction appCompatRadioButton = onView(allOf(withId(R.id.rb_every_day), withText("Every day"), isDisplayed()));
         appCompatRadioButton.perform(longClick());
         sleep();
         ViewInteraction baldButton = onView(allOf(withId(R.id.bt_alarm_submit), withText("submit"), childAtPosition(childAtPosition(withClassName(is("android.widget.LinearLayout")), 1), 3), isDisplayed()));
