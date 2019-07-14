@@ -343,7 +343,7 @@
     <string name="sound">Sonnerie</string>
     <string name="mute">Muet</string>
     <string name="vibrate">Vibreur</string>
-    <string name="your_phone_doesnt_have_assistant_installed">Your Phone doesn\'t have assistant installed</string>
+    <string name="your_phone_doesnt_have_assistant_installed">Vous devez installer l\'application Google Assistant pour utiliser cette fonctionnalité.</string>
 
     <bool name="is_right_to_left">false</bool>
 
