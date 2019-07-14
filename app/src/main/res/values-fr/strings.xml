@@ -350,6 +350,6 @@
     <string name="only_home_screen">Écran d\'accueil uniquement</string>
     <string name="nowhere">Jamais</string>
     <string name="everywhere">Tout le temps</string>
-
+    <string name="your_phone_doesnt_have_assistant_installed">Vous devez installer l\'application Google Assistant pour utiliser cette fonctionnalité.</string>
 
 </resources>
