@@ -12,15 +12,15 @@ android:
     - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
-    - sys-img-x86-android-22
+    - sys-img-armeabi-v7a-android-22
 
 jdk:
   - oraclejdk8
 before_script:
   - chmod +x gradlew
 
-  - echo no | android create avd --force -n test -t android-22 --abi x86
-  - emulator -avd test -no-window -memory 1500 -no-accel -gpu swiftshader -camera-back none -camera-front none -no-boot-anim -no-snapshot-save -no-snapstorage &
+  - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
+  - emulator -avd test -no-audio -no-window -camera-back none -camera-front none -no-boot-anim -no-snapshot-save -no-snapstorage &
   - android-wait-for-emulator
   - adb shell settings put global window_animation_scale 0 &
   - adb shell settings put global transition_animation_scale 0 &
