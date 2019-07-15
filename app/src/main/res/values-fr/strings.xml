@@ -345,12 +345,11 @@
     <string name="vibrate">Vibreur</string>
     <bool name="is_right_to_left">false</bool>
     
-    <!--new strings - needs to be translated:-->
-    <string name="status_bar_settings">Status bar</string>
-    <string name="status_bar_settings_subtext">Where do you want to show the status bar?</string>
-    <string name="only_home_screen">Only Home Screen</string>
-    <string name="nowhere">Nowhere</string>
-    <string name="everywhere">Everywhere</string>
-
+    <string name="status_bar_settings">Barre d\'état</string>
+    <string name="status_bar_settings_subtext">Où souhaitez-vous afficher la barre d\'état ?</string>
+    <string name="only_home_screen">Écran d\'accueil uniquement</string>
+    <string name="nowhere">Jamais</string>
+    <string name="everywhere">Tout le temps</string>
+    <string name="your_phone_doesnt_have_assistant_installed">Vous devez installer l\'application Google Assistant pour utiliser cette fonctionnalité.</string>
 
 </resources>
