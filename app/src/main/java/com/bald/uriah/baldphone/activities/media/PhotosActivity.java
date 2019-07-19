@@ -44,7 +44,7 @@ public class PhotosActivity extends MediaScrollingActivity implements Constants.
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setupYoutube(6);
+        setupYoutube(8);
     }
 
     @Override

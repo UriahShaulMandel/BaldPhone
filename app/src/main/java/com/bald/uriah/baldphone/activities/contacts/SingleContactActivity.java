@@ -227,14 +227,8 @@ public class SingleContactActivity extends BaldActivity {
                     e.printStackTrace();
                 }
             });
-
-            message.setOnClickListener(v -> {
-                final Intent smsIntent = new Intent(Intent.ACTION_VIEW)
-                        .setData(Uri.parse("smsto:"))
-                        .setType("vnd.android-dir/mms-sms")
-                        .putExtra("address", pair.second.replaceAll("[^0123456789]", ""));
-                startActivity(smsIntent);
-            });
+            message.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_SENDTO)
+                    .setData(Uri.parse("smsto:" + Uri.encode(pair.second)))));
 
             ll.addView(layout);
         }

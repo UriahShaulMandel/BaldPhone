@@ -86,7 +86,7 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
             chooser_minutes.setNumber(now.getMinuteOfHour());
         }
 
-        setupYoutube(5);
+        setupYoutube(7);
 
     }
 

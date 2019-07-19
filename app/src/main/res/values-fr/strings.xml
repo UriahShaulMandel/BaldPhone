@@ -244,7 +244,7 @@
     <string name="share_bald_phone_subtext">Bonjour,\nConnaissez-vous une personne qui serait intéressée par BaldPhone ?\nMerci de faire passer le mot.
     </string>
     <string name="share_baldphone">Partager BaldPhone</string>
-    <string name="share_contact">Partager</string>
+    <string name="share_contact">Partager le contact</string>
     <string name="share_differently">Partager via une autre application</string>
     <string name="share_via_whatsapp">Partager via Whatsapp</string>
     <string name="shift">majuscule</string>
@@ -351,5 +351,6 @@
     <string name="nowhere">Jamais</string>
     <string name="everywhere">Tout le temps</string>
     <string name="your_phone_doesnt_have_assistant_installed">Vous devez installer l\'application Google Assistant pour utiliser cette fonctionnalité.</string>
+    <string name="share_photo">Partager Photo</string>
 
 </resources>

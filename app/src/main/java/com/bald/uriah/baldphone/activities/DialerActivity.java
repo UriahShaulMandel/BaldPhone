@@ -93,7 +93,7 @@ public class DialerActivity extends BaldActivity {
 
         attachXml();
         setOnClickListeners();
-        setupYoutube(0);
+        setupYoutube(2);
         searchForContact();
     }
 

@@ -22,94 +22,114 @@
 
     <!--can be translatable-->
     <string-array name="yt_links">
-        <!--DialerActivity 0 -->
+        <!--Share Photo 0 -->
+        <item>Zk4hXWiR8cg</item>
+        <!--Share Contact 1 -->
+        <item>REAmh21hd98</item>
+        <!--DialerActivity 2 -->
         <item>nbc0gXvOfOQ</item>
-        <!--Recent 1 -->
+        <!--Recent 3 -->
         <item>ot7zy3JIJCk</item>
-        <!--SOS 2 -->
+        <!--SOS 4 -->
         <item>t4cE6LnFjTk</item>
-        <!--Clock 3 -->
+        <!--Clock 5 -->
         <item>KKeWTFSnqVM</item>
-        <!--Add Timer 4 -->
+        <!--Add Timer 6 -->
         <item>Rp2EIUJkP5E</item>
-        <!--Add Alarm 5 -->
+        <!--Add Alarm 7 -->
         <item>jkjvwgXMzAM</item>
-        <!--Photos 6 -->
+        <!--Photos 8 -->
         <item>zIcMWhw3m5A</item>
 
     </string-array>
 
     <array name="yt_logos">
-        <!--DialerActivity 0 -->
+        <!--Share Photo 0 -->
+        <item>@drawable/photo_on_background</item>
+        <!--Share Contact 1 -->
+        <item>@drawable/human_on_background</item>
+        <!--DialerActivity 2 -->
         <item>@drawable/phone_on_background</item>
-        <!--Recent 1 -->
+        <!--Recent 3 -->
         <item>@drawable/history_on_background</item>
-        <!--SOS 2 -->
+        <!--SOS 4 -->
         <item>@drawable/emergency</item>
-        <!--Clock 3 -->
+        <!--Clock 5 -->
         <item>@drawable/clock_on_background</item>
-        <!--Add Timer 4 -->
+        <!--Add Timer 6 -->
         <item>@drawable/timer_on_background</item>
-        <!--Add Alarm 5 -->
+        <!--Add Alarm 7 -->
         <item>@drawable/alarm_on_background</item>
-        <!--Photos 6 -->
+        <!--Photos 8 -->
         <item>@drawable/photo_on_background</item>
 
 
     </array>
 
     <array name="yt_background">
-        <!--DialerActivity 0 -->
+        <!--Share Photo 0 -->
+        <item>@drawable/home_item_3</item>
+        <!--Share Contact 1 -->
         <item>@drawable/home_item_1</item>
-        <!--Recent 1 -->
+        <!--DialerActivity 2 -->
         <item>@drawable/home_item_1</item>
-        <!--SOS 2 -->
+        <!--Recent 3 -->
+        <item>@drawable/home_item_1</item>
+        <!--SOS 4 -->
         <item>@drawable/transparent</item>
-        <!--Clock 3 -->
+        <!--Clock 5 -->
         <item>@drawable/home_item_4</item>
-        <!--Add Timer 4 -->
+        <!--Add Timer 6 -->
         <item>@drawable/home_item_4</item>
-        <!--Add Alarm 5 -->
+        <!--Add Alarm 7 -->
         <item>@drawable/home_item_4</item>
-        <!--Photos 6 -->
+        <!--Photos 8 -->
         <item>@drawable/home_item_3</item>
 
 
     </array>
 
     <array name="yt_texts">
-        <!--DialerActivity 0 -->
+        <!--Share Photo 0 -->
+        <item>@string/share_photo</item>
+        <!--Share Contact 1 -->
+        <item>@string/share_contact</item>
+        <!--DialerActivity 2 -->
         <item>@string/dialer</item>
-        <!--Recent 1 -->
+        <!--Recent 3 -->
         <item>@string/recent</item>
-        <!--SOS 2 -->
+        <!--SOS 4 -->
         <item>@string/sos</item>
-        <!--Clock 3 -->
+        <!--Clock 5 -->
         <item>@string/clock</item>
-        <!--Add Timer 4 -->
+        <!--Add Timer 6 -->
         <item>@string/add_alarm_quickly</item>
-        <!--Add Alarm 5 -->
+        <!--Add Alarm 7 -->
         <item>@string/add_alarm</item>
-        <!--Photos 6 -->
+        <!--Photos 8 -->
         <item>@string/photos</item>
 
     </array>
 
     <array name="yt_related">
-        <!--DialerActivity 0 -->
-        <item>[1,2]</item>
-        <!--Recent 1 -->
-        <item>[0,2]</item>
-        <!--SOS 2 -->
-        <item>[0,1]</item>
-        <!--Clock 3 -->
-        <item>[5,4]</item>
-        <!--Add Timer 4 -->
-        <item>[3,5]</item>
-        <!--Add Alarm 5 -->
+        <!--Share Photo 0 -->
+        <item>[8,1]</item>
+        <!--Share Contact 1 -->
+        <item>[2,0]</item>
+        <!--DialerActivity 2 -->
         <item>[3,4]</item>
-        <!--Photos 6 -->
-        <item>[0,1]</item>
+        <!--Recent 3 -->
+        <item>[2,4]</item>
+        <!--SOS 4 -->
+        <item>[2,3]</item>
+        <!--Clock 5 -->
+        <item>[7,6]</item>
+        <!--Add Timer 6 -->
+        <item>[5,7]</item>
+        <!--Add Alarm 7 -->
+        <item>[5,6]</item>
+        <!--Photos 8 -->
+        <item>[2,3]</item>
 
     </array>
 </resources>

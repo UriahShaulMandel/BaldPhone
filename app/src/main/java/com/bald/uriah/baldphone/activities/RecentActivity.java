@@ -42,7 +42,7 @@ public class RecentActivity extends BaldActivity {
         recyclerView.addItemDecoration(dividerItemDecoration);
         recyclerView.setAdapter(new CallsRecyclerViewAdapter(CallLogsHelper.getAllCalls(getContentResolver()), this));
 
-        setupYoutube(1);
+        setupYoutube(3);
     }
 
     @Override

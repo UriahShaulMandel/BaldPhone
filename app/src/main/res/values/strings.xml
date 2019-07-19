@@ -369,6 +369,9 @@
     <string name="everywhere">Everywhere</string>
 
 
+    <string name="share_photo">Share Photo</string>
+
+
     <string-array name="names">
         <item>Dani Konigstein</item>
         <item>My Family</item>

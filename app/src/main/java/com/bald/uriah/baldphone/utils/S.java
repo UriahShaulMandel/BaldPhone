@@ -261,10 +261,6 @@ public class S {
         context.startActivity(Intent.makeRestartActivityTask(componentName));
     }
 
-    public static boolean containFlag(int flags, int flag) {
-        return (flags | flag) == flags;
-    }
-
     public static void applyDim(@NonNull ViewGroup parent) {
         final Drawable dim = new ColorDrawable(Color.BLACK);
         dim.setBounds(0, 0, parent.getWidth(), parent.getHeight());
@@ -312,10 +308,7 @@ public class S {
             dropDownListener.onDismiss();
         });
         popupWindow.setBackgroundDrawable(baldActivity.getDrawable(R.drawable.empty));
-
-        //if app crashes here view == null ? atPosition : asDropDown
         popupWindow.showAsDropDown(view);
-
         baldActivity.autoDismiss(popupWindow);
         S.applyDim(root);
     }

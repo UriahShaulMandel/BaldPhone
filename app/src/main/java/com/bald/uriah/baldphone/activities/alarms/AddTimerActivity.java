@@ -50,7 +50,7 @@ public class AddTimerActivity extends BaldActivity {
         setContentView(R.layout.add_alarm_quick);
         attachXml();
         genOnClickListeners();
-        setupYoutube(4);
+        setupYoutube(6);
     }
 
     private void attachXml() {

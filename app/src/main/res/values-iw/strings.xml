@@ -366,5 +366,8 @@
     <string name="only_home_screen">רק במסך הבית</string>
     <string name="nowhere">בשום מסך</string>
     <string name="everywhere">בכל מסך</string>
+
+    <string name="share_photo">שיתוף תמונה</string>
+
 </resources>
 

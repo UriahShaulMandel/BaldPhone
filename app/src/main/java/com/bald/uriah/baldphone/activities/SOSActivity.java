@@ -63,7 +63,7 @@ public class SOSActivity extends BaldActivity {
             return;
         setContentView(R.layout.activity_sos);
         setupXml();
-        setupYoutube(2);
+        setupYoutube(4);
     }
 
     @Override
