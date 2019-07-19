@@ -88,7 +88,6 @@ public class TechnicalInfoActivity extends BaldActivity {
                     .setPositiveButtonListener(params -> {
                         deleteCache(this);
                         BPrefs.get(this).edit().remove(BPrefs.CUSTOM_APP_KEY).apply();
-                        UpdatesActivity.removeUpdatesInfo(this);
                         BaldToast.simple(this, R.string.cache_cleared_successfully);
                         return true;
                     })

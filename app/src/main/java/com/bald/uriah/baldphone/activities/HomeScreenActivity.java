@@ -248,7 +248,7 @@ public class HomeScreenActivity extends BaldActivity {
                     S.shareBaldPhone(this);
                 } else if (percent > 95) {
                     if (sharedPreferences.getLong(BPrefs.LAST_UPDATE_ASKED_VERSION_KEY, 0) + 2 * D.DAY < System.currentTimeMillis()) {
-                        UpdatingUtil.checkForUpdates(this, false);
+
                     }
                 }
         }

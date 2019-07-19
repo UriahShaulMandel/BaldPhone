@@ -387,11 +387,6 @@ public class SettingsActivity extends BaldActivity {
                                 })
                                 .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.CRASH_REPORTS_KEY, BPrefs.CRASH_REPORTS_DEFAULT_VALUE) ? 0 : 1),
                         R.drawable.upload_on_button));
-        settingsList.add(
-                new RunnableSettingsItem(R.string.check_for_updates,
-                        v -> UpdatingUtil.checkForUpdates(this, true),
-                        R.drawable.updates_on_button)
-        );
     }
 
     @Override
