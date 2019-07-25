@@ -52,7 +52,8 @@ public class BaldPhone extends Application {
         JodaTimeAndroid.init(this);
         AlarmScheduler.reStartAlarms(this);
         ReminderScheduler.reStartReminders(this);
-        UpdatesActivity.removeUpdatesInfo(this);
+        if (BuildConfig.FLAVOR.equals("baldUpdates"))
+            UpdatesActivity.removeUpdatesInfo(this);
         try {
             startService(new Intent(this, NotificationListenerService.class));
         } catch (Exception e) {

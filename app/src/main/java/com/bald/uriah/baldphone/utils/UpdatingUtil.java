@@ -60,8 +60,7 @@ public class UpdatingUtil {
         return new File(downloads.getAbsoluteFile() + "/" + FILENAME);
     }
 
-
-    public static boolean isOnline(Context context) {
+    private static boolean isOnline(Context context) {
         final ConnectivityManager manager =
                 (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         final NetworkInfo networkInfo;
@@ -72,7 +71,7 @@ public class UpdatingUtil {
         return false;
     }
 
-    public static boolean updatePending(@NonNull BaldUpdateObject baldUpdateObject) {
+    private static boolean updatePending(@NonNull BaldUpdateObject baldUpdateObject) {
         return baldUpdateObject.versionCode > BuildConfig.VERSION_CODE;
     }
 

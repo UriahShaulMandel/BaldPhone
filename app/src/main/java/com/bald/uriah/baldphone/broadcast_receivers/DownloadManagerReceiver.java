@@ -24,6 +24,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.utils.BPrefs;
 
 public class DownloadManagerReceiver extends BroadcastReceiver {
@@ -41,8 +42,9 @@ public class DownloadManagerReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         final SharedPreferences sharedPreferences = BPrefs.get(context);
-        if (sharedPreferences.getLong(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_ID, -3) == intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -2) && sharedPreferences.contains(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER)) {
-            changeToDownloadedState(context);
-        }
+        if (BuildConfig.FLAVOR.equals("baldUpdates"))
+            if (sharedPreferences.getLong(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_ID, -3) == intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -2) && sharedPreferences.contains(BPrefs.LAST_DOWNLOAD_MANAGER_REQUEST_VERSION_NUMBER)) {
+                changeToDownloadedState(context);
+            }
     }
 }

@@ -37,6 +37,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.adapters.BaldPagerAdapter;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
@@ -247,9 +248,10 @@ public class HomeScreenActivity extends BaldActivity {
                     onStartCounter = 0;
                     S.shareBaldPhone(this);
                 } else if (percent > 95) {
-                    if (sharedPreferences.getLong(BPrefs.LAST_UPDATE_ASKED_VERSION_KEY, 0) + 2 * D.DAY < System.currentTimeMillis()) {
-                        UpdatingUtil.checkForUpdates(this, false);
-                    }
+                    if (BuildConfig.FLAVOR.equals("baldUpdates"))
+                        if (sharedPreferences.getLong(BPrefs.LAST_UPDATE_ASKED_VERSION_KEY, 0) + 2 * D.DAY < System.currentTimeMillis()) {
+                            UpdatingUtil.checkForUpdates(this, false);
+                        }
                 }
         }
 

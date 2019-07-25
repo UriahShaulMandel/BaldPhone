@@ -62,10 +62,11 @@ public class TechnicalInfoActivity extends BaldActivity {
 
     public static String getTechnicalInfo() {
         return
-                String.format("Api Level: %s\nVersion Name: %s\nVersion Code: %s\nManufacturer: %s\nBrand: %s\nDevice: %s\nModel: %s\n",
+                String.format("Api Level: %s\nVersion Name: %s\nVersion Code: %s\nFlavor: %s\nManufacturer: %s\nBrand: %s\nDevice: %s\nModel: %s\n",
                         S.str(Build.VERSION.SDK_INT),
                         S.str(BuildConfig.VERSION_NAME),
                         S.str(BuildConfig.VERSION_CODE),
+                        S.str(BuildConfig.FLAVOR),
                         S.str(Build.MANUFACTURER),
                         S.str(Build.BRAND),
                         S.str(Build.DEVICE),
@@ -88,7 +89,8 @@ public class TechnicalInfoActivity extends BaldActivity {
                     .setPositiveButtonListener(params -> {
                         deleteCache(this);
                         BPrefs.get(this).edit().remove(BPrefs.CUSTOM_APP_KEY).apply();
-                        UpdatesActivity.removeUpdatesInfo(this);
+                        if (BuildConfig.FLAVOR.equals("baldUpdates"))
+                            UpdatesActivity.removeUpdatesInfo(this);
                         BaldToast.simple(this, R.string.cache_cleared_successfully);
                         return true;
                     })

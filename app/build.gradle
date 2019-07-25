@@ -27,8 +27,8 @@ android {
         applicationId "com.bald.uriah.baldphone"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 79
-        versionName "11.3.3"
+        versionCode 80
+        versionName "11.3.4"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -44,7 +44,17 @@ android {
         }
 
     }
+    /**
+     * This is used to remove the self-updating mechanism from the F-Droid flavour
+     */
+    flavorDimensions "updating_mechanism"
     productFlavors {
+        baldUpdates {
+            dimension "updating_mechanism"
+        }
+        fDroid {
+            dimension "updating_mechanism"
+        }
     }
     compileOptions {
         targetCompatibility JavaVersion.VERSION_1_8

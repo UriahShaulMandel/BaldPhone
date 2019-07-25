@@ -45,6 +45,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
+import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.alarms.AlarmScreenActivity;
 import com.bald.uriah.baldphone.activities.pills.PillTimeSetterActivity;
@@ -387,11 +388,12 @@ public class SettingsActivity extends BaldActivity {
                                 })
                                 .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.CRASH_REPORTS_KEY, BPrefs.CRASH_REPORTS_DEFAULT_VALUE) ? 0 : 1),
                         R.drawable.upload_on_button));
-        settingsList.add(
-                new RunnableSettingsItem(R.string.check_for_updates,
-                        v -> UpdatingUtil.checkForUpdates(this, true),
-                        R.drawable.updates_on_button)
-        );
+        if (BuildConfig.FLAVOR.equals("baldUpdates"))
+            settingsList.add(
+                    new RunnableSettingsItem(R.string.check_for_updates,
+                            v -> UpdatingUtil.checkForUpdates(this, true),
+                            R.drawable.updates_on_button)
+            );
     }
 
     @Override
