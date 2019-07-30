@@ -46,6 +46,7 @@ import com.bald.uriah.baldphone.utils.*;
 import com.bald.uriah.baldphone.views.BaldImageButton;
 import com.bald.uriah.baldphone.views.BatteryView;
 import com.bald.uriah.baldphone.views.ViewPagerHolder;
+import com.bald.uriah.baldphone.views.home.HomePage1;
 import com.bald.uriah.baldphone.views.home.NotesView;
 import github.nisrulz.lantern.Lantern;
 
@@ -57,31 +58,31 @@ import static com.bald.uriah.baldphone.services.NotificationListenerService.*;
 
 public class HomeScreenActivity extends BaldActivity {
     private static final String TAG = HomeScreenActivity.class.getSimpleName();
-    private static final int[] SOUND_DRAWABLES = new int[]{
-            R.drawable.mute_on_background,
-            R.drawable.vibration_on_background,
-            R.drawable.sound_on_background
-    };
-    private static final int[] SOUND_TEXTS = new int[]{
-            R.string.mute,
-            R.string.vibrate,
-            R.string.sound
-    };
+
+    private static final int[]
+            SOUND_DRAWABLES = {R.drawable.mute_on_background, R.drawable.vibration_on_background, R.drawable.sound_on_background},
+            SOUND_TEXTS = {R.string.mute, R.string.vibrate, R.string.sound};
+
     private static final IntentFilter BATTERY_FILTER = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
     private static final int SPEECH_REQUEST_CODE = 7;
+
     private static int onStartCounter = 0;
     private static boolean flashState;
-    @NonNull
-    public final NotesView.RecognizerManager recognizerManager = new NotesView.RecognizerManager();
+
+    @NonNull public final NotesView.RecognizerManager recognizerManager = new NotesView.RecognizerManager();
+
     public boolean finishedUpdatingApps, launchAppsActivity;
     public BaldPagerAdapter baldPagerAdapter;
+
     private Point screenSize;
     private Lantern lantern;
     private SharedPreferences sharedPreferences;
     private BaldPrefsUtils baldPrefsUtils;
     private ViewPagerHolder viewPagerHolder;
     private BatteryView batteryView;
-    //<Receivers>
+    /**
+     * Listens to changes in battery {@value Intent#ACTION_BATTERY_CHANGED}
+     */
     private final BroadcastReceiver batteryReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -93,12 +94,14 @@ public class HomeScreenActivity extends BaldActivity {
             }
         }
     };
-
     private BaldImageButton notificationsButton, sosButton, soundButton, flashButton;
     private AudioManager audioManager;
     private BaldHomeWatcher baldHomeWatcher;
     private boolean flashInited;
     private Handler handler = new Handler();
+    /**
+     * "Shakes" the notifications icon when it has more than {@value NotificationListenerService#NOTIFICATIONS_ALOT}
+     */
     private final Runnable shakeIt = new Runnable() {
         @Override
         public void run() {
@@ -110,8 +113,12 @@ public class HomeScreenActivity extends BaldActivity {
             }
         }
     };
-
-    private final BroadcastReceiver notificationReceiver = new BroadcastReceiver() {
+    /**
+     * Listens to broadcasts from {@link NotificationListenerService}
+     * This listener only gets the number of notifications and updates {@link HomeScreenActivity#notificationsButton}
+     * The red dot is being updated via {@link HomePage1#notificationReceiver}
+     */
+    public final BroadcastReceiver notificationReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             final int amount = intent.getIntExtra("amount", -1);
@@ -188,29 +195,26 @@ public class HomeScreenActivity extends BaldActivity {
             startActivity(new Intent(this, NotificationsActivity.class));
             overridePendingTransition(R.anim.slide_in_down, R.anim.nothing);
         });
-        soundButton.setOnClickListener(v -> {
-            S.showDropDownPopup(this, getWindow().getDecorView().getWidth(), new DropDownRecyclerViewAdapter.DropDownListener() {
-                @Override
-                public void onUpdate(DropDownRecyclerViewAdapter.ViewHolder viewHolder, final int position, PopupWindow popupWindow) {
-                    viewHolder.pic.setImageResource(SOUND_DRAWABLES[position]);
-                    viewHolder.text.setText(SOUND_TEXTS[position]);
-                    viewHolder.itemView.setOnClickListener(v1 -> {
-                        try {
-                            audioManager.setRingerMode(position);
-                            soundButton.setImageResource(SOUND_DRAWABLES[position]);
-                        } catch (SecurityException e) {
-                            startActivity(new Intent(android.provider.Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS));
-                        }
-                        popupWindow.dismiss();
-                    });
-                }
+        soundButton.setOnClickListener(v -> S.showDropDownPopup(this, getWindow().getDecorView().getWidth(), new DropDownRecyclerViewAdapter.DropDownListener() {
+            @SuppressLint("InlinedApi") @Override
+            public void onUpdate(DropDownRecyclerViewAdapter.ViewHolder viewHolder, final int position, PopupWindow popupWindow) {
+                viewHolder.pic.setImageResource(SOUND_DRAWABLES[position]);
+                viewHolder.text.setText(SOUND_TEXTS[position]);
+                viewHolder.itemView.setOnClickListener(v1 -> {
+                    try {
+                        audioManager.setRingerMode(position);
+                        soundButton.setImageResource(SOUND_DRAWABLES[position]);
+                    } catch (SecurityException e) {
+                        startActivity(new Intent(android.provider.Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS));
+                    }
+                    popupWindow.dismiss();
+                });
+            }
 
-                @Override public int size() {
-                    return 3;
-                }
-            }, soundButton);
-
-        });
+            @Override public int size() {
+                return 3;
+            }
+        }, soundButton));
         batteryView.setOnClickListener((v) -> BaldToast.from(this)
                 .setText(batteryView.percentage + "%")
                 .setBig(true)
@@ -218,17 +222,18 @@ public class HomeScreenActivity extends BaldActivity {
                 .show());
         baldPrefsUtils = BaldPrefsUtils.newInstance(this);
         viewPagerHandler();
-        baldHomeWatcher = new BaldHomeWatcher(this, this::viewPagerStartHandler);
+        baldHomeWatcher = new BaldHomeWatcher(this, this::updateViewPager);
         recognizerManager.setHomeScreen(this);
 
     }
+
 
     @Override
     protected void onStart() {
         super.onStart();
         onStartCounter++;
         if (finishedUpdatingApps)
-            viewPagerStartHandler();
+            updateViewPager();
         baldHomeWatcher.startWatch();
         if (!testing) {
             final int percent = (int) (Math.random() * 100) + 1;//1 - 100
@@ -248,6 +253,7 @@ public class HomeScreenActivity extends BaldActivity {
                     onStartCounter = 0;
                     S.shareBaldPhone(this);
                 } else if (percent > 95) {
+                    //noinspection ConstantConditions
                     if (BuildConfig.FLAVOR.equals("baldUpdates"))
                         if (sharedPreferences.getLong(BPrefs.LAST_UPDATE_ASKED_VERSION_KEY, 0) + 2 * D.DAY < System.currentTimeMillis()) {
                             UpdatingUtil.checkForUpdates(this, false);
@@ -257,7 +263,7 @@ public class HomeScreenActivity extends BaldActivity {
 
     }
 
-    /* the security exception will happen only after api 23 so please stfu*/
+    /* the security exception will happen only after api 23 so Lint please shush*/
     @SuppressLint("InlinedApi")
     protected void onResume() {
         super.onResume();
@@ -336,6 +342,9 @@ public class HomeScreenActivity extends BaldActivity {
         super.onDestroy();
     }
 
+    /**
+     * Starts the view pager - being called only in {@link #onCreate(Bundle)}
+     */
     private void viewPagerHandler() {
         baldPagerAdapter = new BaldPagerAdapter(this);
         viewPagerHolder.setPageTransformer(false, PageTransformers.pageTransformers[sharedPreferences.getInt(BPrefs.PAGE_TRANSFORMERS_KEY, BPrefs.PAGE_TRANSFORMERS_DEFAULT_VALUE)]);
@@ -343,7 +352,11 @@ public class HomeScreenActivity extends BaldActivity {
         viewPagerHolder.setCurrentItem(baldPagerAdapter.startingPage);
     }
 
-    private void viewPagerStartHandler() {
+    /**
+     * Updates {@link HomeScreenActivity#baldPagerAdapter} apps
+     * Sets the page to {@link BaldPagerAdapter#startingPage}
+     */
+    private void updateViewPager() {
         baldPagerAdapter.obtainAppList();
         viewPagerHolder.setCurrentItem(baldPagerAdapter.startingPage);
         viewPagerHolder.notifyDataChanegd();
@@ -370,7 +383,7 @@ public class HomeScreenActivity extends BaldActivity {
     public void onBackPressed() {
         if (vibrator != null)
             vibrator.vibrate(D.vibetime);
-        viewPagerStartHandler();
+        updateViewPager();
     }
 
     @Override
@@ -433,7 +446,7 @@ public class HomeScreenActivity extends BaldActivity {
     static class UpdateApps extends AsyncTask<Context, Void, Void> {
         final WeakReference<HomeScreenActivity> homeScreenWeakReference;
 
-        public UpdateApps(HomeScreenActivity homeScreen) {
+        UpdateApps(HomeScreenActivity homeScreen) {
             super();
             homeScreenWeakReference = new WeakReference<>(homeScreen);
         }
@@ -448,7 +461,7 @@ public class HomeScreenActivity extends BaldActivity {
         protected void onPostExecute(Void aVoid) {
             HomeScreenActivity homeScreen = homeScreenWeakReference.get();
             if (homeScreen != null) {
-                homeScreen.viewPagerStartHandler();
+                homeScreen.updateViewPager();
                 homeScreen.finishedUpdatingApps = true;
                 if (homeScreen.launchAppsActivity)
                     homeScreen.startActivity(new Intent(homeScreen, AppsActivity.class));

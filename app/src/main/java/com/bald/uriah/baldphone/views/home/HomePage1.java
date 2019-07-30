@@ -19,6 +19,7 @@
 
 package com.bald.uriah.baldphone.views.home;
 
+import android.annotation.SuppressLint;
 import android.content.*;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
@@ -50,10 +51,12 @@ import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.FirstPageAppIcon;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import static com.bald.uriah.baldphone.services.NotificationListenerService.*;
 
+@SuppressLint("ViewConstructor")
 public class HomePage1 extends HomeView {
     public static final String TAG = HomePage1.class.getSimpleName();
     private final static String WHATSAPP_PACKAGE_NAME = "com.whatsapp";
@@ -62,12 +65,13 @@ public class HomePage1 extends HomeView {
     private PackageManager packageManager;
     private boolean registered = false;
     private App app;
-
-    public HomePage1(@NonNull HomeScreenActivity homeScreen) {
-        super(homeScreen);
-    }
-
-    private final BroadcastReceiver notificationReceiver = new BroadcastReceiver() {
+    /**
+     * Listens to broadcasts from {@link NotificationListenerService}
+     * This listener only checks if there are new messages\whatsapps,
+     * and updates {@link HomePage1#bt_messages} and {@link HomePage1#bt_whatsapp} according to it
+     * The notification icon is being updated via {@link HomeScreenActivity#notificationReceiver}
+     */
+    public final BroadcastReceiver notificationReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             final Set<String> packagesSet = new HashSet<>(intent.getStringArrayListExtra("packages"));
@@ -75,9 +79,13 @@ public class HomePage1 extends HomeView {
             if (app == null) {
                 bt_whatsapp.setBadgeVisibility(packagesSet.contains(D.WHATSAPP_PACKAGE_NAME));
             } else
-                bt_whatsapp.setBadgeVisibility(packagesSet.contains(ComponentName.unflattenFromString(app.getFlattenComponentName()).getPackageName()));
+                bt_whatsapp.setBadgeVisibility(packagesSet.contains(Objects.requireNonNull(ComponentName.unflattenFromString(app.getFlattenComponentName())).getPackageName()));
         }
     };
+
+    public HomePage1(@NonNull HomeScreenActivity homeScreen) {
+        super(homeScreen);
+    }
 
     @Override public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container) {
         view = inflater.inflate(R.layout.fragment_home_page1, container, false);
