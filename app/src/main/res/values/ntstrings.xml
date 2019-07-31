@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8" standalone="no"?><!--
   ~ Licensed to the Apache Software Foundation (ASF) under one
   ~ or more contributor license agreements.  See the NOTICE file
   ~ distributed with this work for additional information
@@ -17,12 +16,48 @@
   ~ specific language governing permissions and limitations
   ~ under the License.
   -->
-
 <resources>
-    <string name="authorities" translatable="false">com.bald.uriah.baldphone.fileprovider</string>
-    <string name="empty" translatable="false"/>
-    <string name="app_name" translatable="false">BaldPhone</string>
     <string name="api_level" translatable="false">Api Level:</string>
-    <string name="tt_url" translatable="false">"https://collector.tracepot.com/9fc2295e"</string>
 
+    <string name="app_name" translatable="false">BaldPhone</string>
+
+    <string name="authorities" translatable="false">com.bald.uriah.baldphone.fileprovider</string>
+
+    <string name="empty" translatable="false" />
+
+    <string-array name="names">
+        <item>Dani Konigstein</item>
+        <item>My Family</item>
+        <item>Ido Sharon</item>
+        <item>Nadav Shalev</item>
+        <item>Primokorn</item>
+        <item>Yooda Or</item>
+        <item>Bait Balev</item>
+        <item>eHealthVentures</item>
+        <item>Shaked Aley-Raz</item>
+        <item>Edo Avidan</item>
+        <item>Ronnie Gilboa</item>
+        <item>Ido Heinemann</item>
+        <item>Shay Gadot</item>
+    </string-array>
+
+    <string name="open_source_licenses" translatable="false">Open Source Licenses</string>
+
+    <string-array name="tasks">
+        <item>Being the Inspiration of BaldPhone</item>
+        <item>Help and support throughout the entire process</item>
+        <item>Being the longest and most helpful tester, Graphics Consultant</item>
+        <item>The awesome logo</item>
+        <item>The french translations</item>
+        <item>Mentor</item>
+        <item>The opportunity to be in the incubator</item>
+        <item>The opportunity to be in the incubator</item>
+        <item>Graphics Consultant</item>
+        <item>Graphics Consultant</item>
+        <item>Tester</item>
+        <item>Tester</item>
+        <item>Tester</item>
+    </string-array>
+
+    <string name="tt_url" translatable="false">"https://collector.tracepot.com/9fc2295e"</string>
 </resources>

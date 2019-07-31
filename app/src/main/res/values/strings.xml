@@ -247,8 +247,8 @@
     <string name="settings_permission">Settings Permission</string>
     <string name="share">Share</string>
     <string name="share_actual_text">Hi, i\'m using this platform named "BaldPhone" which replaces the phone\'s
-        interface to a big, simple and friendlier one.\nInterested?\nYou can download it for free!\ncheck out the link
-        bellow for more information:\n\nhttps://sites.google.com/view/baldphone/home
+        interface to a big, simple and friendly one.\nInterested?\nYou can download it for free!\ncheck out the link
+        bellow for more information:\n\nhttps://sites.google.com/view/baldphone
     </string>
     <string name="share_bald_phone_subtext">Hello There,\nknow anyone which may want to know about BaldPhone?\nyou can
         share it with him.
@@ -353,7 +353,6 @@
     <string name="custom_app_subtext">Choose custom app to be in the home screen.</string>
     <string name="no_app_was_found">No matching app was found!</string>
     <string name="alarm">Alarm</string>
-    <string name="open_source_licenses" translatable="false">Open Source Licenses</string>
     <string name="no_new_notifications">No New Notifications</string>
     <string name="sound">Sound</string>
     <string name="mute">Mute</string>
@@ -361,7 +360,7 @@
     <string name="your_phone_doesnt_have_assistant_installed">Your Phone doesn\'t have assistant installed</string>
     <bool name="is_right_to_left">false</bool>
 
-    <!--new strings - needs to be translated:-->
+
     <string name="status_bar_settings">Status bar</string>
     <string name="status_bar_settings_subtext">Where do you want to show the status bar?</string>
     <string name="only_home_screen">Only Home Screen</string>
@@ -372,35 +371,4 @@
     <string name="share_photo">Share Photo</string>
 
 
-    <string-array name="names">
-        <item>Dani Konigstein</item>
-        <item>My Family</item>
-        <item>Ido Sharon</item>
-        <item>Nadav Shalev</item>
-        <item>Primokorn</item>
-        <item>Yooda Or</item>
-        <item>Bait Balev</item>
-        <item>eHealthVentures</item>
-        <item>Shaked Aley-Raz</item>
-        <item>Edo Avidan</item>
-        <item>Ronnie Gilboa</item>
-        <item>Ido Heinemann</item>
-        <item>Shay Gadot</item>
-    </string-array>
-    <string-array name="tasks">
-        <item>Being the Inspiration of BaldPhone</item>
-        <item>Help and support throughout the entire process</item>
-        <item>Being the longest and most helpful tester, Graphics Consultant</item>
-        <item>The awesome logo</item>
-        <item>The french translations</item>
-        <item>Mentor</item>
-        <item>The opportunity to be in the incubator</item>
-        <item>The opportunity to be in the incubator</item>
-        <item>Graphics Consultant</item>
-        <item>Graphics Consultant</item>
-        <item>Tester</item>
-        <item>Tester</item>
-        <item>Tester</item>
-
-    </string-array>
 </resources>
