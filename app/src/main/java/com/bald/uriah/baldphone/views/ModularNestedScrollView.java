@@ -22,8 +22,10 @@ package com.bald.uriah.baldphone.views;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+
 import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
+
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
 

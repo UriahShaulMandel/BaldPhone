@@ -22,7 +22,9 @@ package com.bald.uriah.baldphone.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.SparseIntArray;
+
 import androidx.annotation.StyleRes;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
 

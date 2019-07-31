@@ -26,8 +26,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 
 public class DropDownRecyclerViewAdapter extends RecyclerView.Adapter<DropDownRecyclerViewAdapter.ViewHolder> {
@@ -47,7 +49,8 @@ public class DropDownRecyclerViewAdapter extends RecyclerView.Adapter<DropDownRe
         return new ViewHolder(layoutInflater.inflate(R.layout.settings_item, parent, false));
     }
 
-    @Override public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         dropDownListener.onUpdate(holder, position, popupWindow);
     }
 

@@ -24,8 +24,10 @@ import android.database.Cursor;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.util.Pair;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.utils.Constants;
 import com.bald.uriah.baldphone.utils.D;
 
@@ -37,13 +39,20 @@ import java.util.List;
  */
 public class Contact implements Constants.ContactConstants {
     private final int id;
-    @NonNull private final String lookupKey;
-    @NonNull private final List<Pair<Integer /*Type*/, String>> phoneList;
-    @NonNull private final List<String> mailList;
-    @NonNull private final List<Pair<Integer, String[]>> addressList;
-    @NonNull private final List<String> whatsappNumbers;
-    @NonNull private final String name;
-    @Nullable private final String photo;
+    @NonNull
+    private final String lookupKey;
+    @NonNull
+    private final List<Pair<Integer /*Type*/, String>> phoneList;
+    @NonNull
+    private final List<String> mailList;
+    @NonNull
+    private final List<Pair<Integer, String[]>> addressList;
+    @NonNull
+    private final List<String> whatsappNumbers;
+    @NonNull
+    private final String name;
+    @Nullable
+    private final String photo;
     private final boolean favorite;
 
     private Contact(int id,

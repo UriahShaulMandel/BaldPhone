@@ -30,10 +30,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
@@ -110,11 +112,6 @@ public abstract class MediaScrollingActivity extends BaldActivity {
 
     protected abstract CharSequence title();
 
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_WRITE_EXTERNAL_STORAGE;
-    }
-
     public class MediaRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<MediaRecyclerViewAdapter.ViewHolder> {
         private final LayoutInflater layoutInflater;
 
@@ -168,5 +165,10 @@ public abstract class MediaScrollingActivity extends BaldActivity {
             }
         }
 
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_WRITE_EXTERNAL_STORAGE;
     }
 }

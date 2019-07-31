@@ -43,14 +43,21 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
-import androidx.annotation.*;
+
+import androidx.annotation.ArrayRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.annotation.StyleRes;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.contacts.ShareActivity;
 import com.bald.uriah.baldphone.content_providers.BaldFileProvider;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
+
 import org.joda.time.DateTime;
 
 import java.io.ByteArrayOutputStream;
@@ -66,8 +73,8 @@ import java.util.Locale;
  * S - Static. Static methods which are used everywhere in the platform.
  */
 public class S {
-    public static final String BALD_IMPORTANT_MESSAGE = "Bald Important Message";
     private static final String TAG = S.class.getSimpleName();
+    public static final String BALD_IMPORTANT_MESSAGE = "Bald Important Message";
     private static final float DIM_AMOUNT = 0.5f;
 
     public static void logImportant(@Nullable CharSequence charSequence) {

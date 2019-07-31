@@ -20,7 +20,12 @@
 package com.bald.uriah.baldphone.views.home;
 
 import android.annotation.SuppressLint;
-import android.content.*;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
@@ -29,8 +34,10 @@ import android.provider.Telephony;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.AppsActivity;
 import com.bald.uriah.baldphone.activities.DialerActivity;
@@ -54,7 +61,9 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-import static com.bald.uriah.baldphone.services.NotificationListenerService.*;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.ACTION_REGISTER_ACTIVITY;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.KEY_EXTRA_ACTIVITY;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_HOME_SCREEN;
 
 @SuppressLint("ViewConstructor")
 public class HomePage1 extends HomeView {
@@ -87,7 +96,8 @@ public class HomePage1 extends HomeView {
         super(homeScreen);
     }
 
-    @Override public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container) {
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container) {
         view = inflater.inflate(R.layout.fragment_home_page1, container, false);
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
             view.findViewById(R.id.clock).setVisibility(View.GONE);
@@ -98,7 +108,8 @@ public class HomePage1 extends HomeView {
         return view;
     }
 
-    @Override protected void onAttachedToWindow() {
+    @Override
+    protected void onAttachedToWindow() {
         super.onAttachedToWindow();
         if (!registered) {
             LocalBroadcastManager.getInstance(homeScreen)
@@ -111,7 +122,8 @@ public class HomePage1 extends HomeView {
         }
     }
 
-    @Override protected void onDetachedFromWindow() {
+    @Override
+    protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
         if (registered) {
             LocalBroadcastManager.getInstance(homeScreen)

@@ -22,28 +22,34 @@ package com.bald.uriah.baldphone.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.D;
 
 public class CrashActivity extends BaldActivity {
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crash);
-        new Handler().postDelayed(() -> {
-            startActivity(new Intent(this, HomeScreenActivity.class));
-            finish();
-        }, 4 * D.SECOND);
+        new Handler().postDelayed(
+                () -> {
+                    startActivity(new Intent(this, HomeScreenActivity.class));
+                    finish();
+                },
+                4 * D.SECOND);
     }
 
     @Override
     public void onBackPressed() {
-        //nope
+        //Nope
     }
 
     @Override
     protected int requiredPermissions() {
         return PERMISSION_NONE;
     }
+
 }

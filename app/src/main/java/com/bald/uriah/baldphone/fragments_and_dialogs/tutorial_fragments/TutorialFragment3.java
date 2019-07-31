@@ -27,6 +27,7 @@ import android.view.animation.Transformation;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.views.BaldButton;
@@ -44,6 +45,19 @@ public class TutorialFragment3 extends TutorialFragment {
     private TextView bald;
 
     @Override
+    public void onStart() {
+        super.onStart();
+        firstAnimation(6000);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (bt_set_keyboard != null)
+            setupBtn();
+    }
+
+    @Override
     protected void attachXml() {
         bt_set_keyboard = root.findViewById(R.id.bt_set_keyboard);
         bald = root.findViewById(R.id.bald);
@@ -57,19 +71,6 @@ public class TutorialFragment3 extends TutorialFragment {
     @Override
     protected int layoutRes() {
         return R.layout.tutorial_fragment_3;
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        firstAnimation(6000);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (bt_set_keyboard != null)
-            setupBtn();
     }
 
     @Override

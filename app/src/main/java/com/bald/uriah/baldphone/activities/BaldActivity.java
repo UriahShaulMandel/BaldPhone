@@ -37,19 +37,30 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.PopupWindow;
+
 import androidx.annotation.Nullable;
 import androidx.annotation.StyleRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.*;
+import com.bald.uriah.baldphone.utils.BDB;
+import com.bald.uriah.baldphone.utils.BDialog;
+import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.Manifest.permission.*;
+import static android.Manifest.permission.CALL_PHONE;
+import static android.Manifest.permission.CAMERA;
+import static android.Manifest.permission.READ_CALL_LOG;
+import static android.Manifest.permission.READ_CONTACTS;
+import static android.Manifest.permission.WRITE_CONTACTS;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static com.bald.uriah.baldphone.activities.PermissionActivity.EXTRA_INTENT;
 
@@ -57,6 +68,7 @@ import static com.bald.uriah.baldphone.activities.PermissionActivity.EXTRA_INTEN
  * the parent of all of the activitys in this app.
  */
 public abstract class BaldActivity extends AppCompatActivity implements SensorEventListener {
+    private static final String TAG = BaldActivity.class.getSimpleName();
     protected static final int
             PERMISSION_NONE = 0,
             PERMISSION_WRITE_SETTINGS = 0b1,
@@ -69,7 +81,7 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
             PERMISSION_WRITE_EXTERNAL_STORAGE = 0b10000000,
             PERMISSION_NOTIFICATION_LISTENER = 0b100000000 | PERMISSION_WRITE_SETTINGS,
             PERMISSION_REQUEST_INSTALL_PACKAGES = 0b1000000000;
-    private static final String TAG = BaldActivity.class.getSimpleName();
+    public boolean testing = false;
     protected Vibrator vibrator;
     @StyleRes
     private int themeIndex;
@@ -83,8 +95,6 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     private boolean useAccidentalGuard = true;
     private Handler handler;
     private Runnable touchesDecreaser = () -> touches = (touches -= 1) < 0 ? 0 : touches;
-
-    public boolean testing = false;
 
     /**
      * @return true if all permissions are granted.
@@ -284,11 +294,11 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
         }
     }
 
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-    }
-
     public void onSensorChanged(SensorEvent event) {
         near = event.values[0] == 0;
+    }
+
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
 
     /**

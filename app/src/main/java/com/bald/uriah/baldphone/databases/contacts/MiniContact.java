@@ -20,6 +20,7 @@
 package com.bald.uriah.baldphone.databases.contacts;
 
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
 import com.bald.uriah.baldphone.utils.Constants;
@@ -34,7 +35,8 @@ import com.bumptech.glide.request.RequestOptions;
 public class MiniContact implements HomeScreenPinHelper.HomeScreenPinnable, Constants.BaseContactsConstants {
 
     public final String lookupKey, photo;
-    @Nullable public final String name;
+    @Nullable
+    public final String name;
     public final int id;
     public final boolean favorite;
 

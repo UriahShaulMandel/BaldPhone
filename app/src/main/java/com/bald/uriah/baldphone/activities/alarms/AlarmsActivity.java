@@ -29,10 +29,12 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
@@ -52,8 +54,8 @@ import java.util.List;
  * Each alarm can be edited and deleted from this activity
  */
 public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActivity {
-    public static final int ADD_ALARM_ACTIVITY_REQUEST_CODE = 1;
     private static final String TAG = AlarmsActivity.class.getSimpleName();
+    public static final int ADD_ALARM_ACTIVITY_REQUEST_CODE = 1;
     private LinearLayout bt_cancel_all_alarms, bt_add_alarm, bt_quickly_add_alarm;
 
     private RecyclerView recyclerView;
@@ -85,11 +87,6 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
 
     }
 
-    public void refreshViews() {
-        alarmList = AlarmsDatabase.getInstance(this).alarmsDatabaseDao().getAllSortedByTime();
-        adapter.notifyDataSetChanged();
-    }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -101,6 +98,11 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
         super.onResume();
         if (AlarmsDatabase.getInstance(this).alarmsDatabaseDao().getNumberOfRows() != alarmList.size())
             refreshViews();
+    }
+
+    public void refreshViews() {
+        alarmList = AlarmsDatabase.getInstance(this).alarmsDatabaseDao().getAllSortedByTime();
+        adapter.notifyDataSetChanged();
     }
 
     private void attachXml() {
@@ -159,11 +161,6 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
                 BaldToast.from(this).setText(message2).setType(BaldToast.TYPE_INFORMATIVE).show();
             }
         }
-    }
-
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_NONE;
     }
 
     class AlarmsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<AlarmsRecyclerViewAdapter.ViewHolder> {
@@ -261,5 +258,10 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
                         }));
             }
         }
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_NONE;
     }
 }

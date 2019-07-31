@@ -31,10 +31,12 @@ import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.contacts.AddContactActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
@@ -43,9 +45,9 @@ import com.bald.uriah.baldphone.databases.contacts.MiniContact;
 import com.bald.uriah.baldphone.utils.BaldToast;
 
 public class DialerActivity extends BaldActivity {
+    private static final String TAG = DialerActivity.class.getSimpleName();
     public static final String SORT_ORDER =
             "upper(" + ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + ") ASC";
-    private static final String TAG = DialerActivity.class.getSimpleName();
     private final static String[] PROJECTION =
             {ContactsContract.Data.DISPLAY_NAME, ContactsContract.Data._ID, ContactsContract.Contacts.PHOTO_URI, ContactsContract.Data.LOOKUP_KEY, ContactsContract.Data.STARRED};
     private static final String NUMBER_STATE = "NUMBER_STATE";
@@ -95,6 +97,23 @@ public class DialerActivity extends BaldActivity {
         setOnClickListeners();
         setupYoutube(2);
         searchForContact();
+    }
+
+    @Override
+    protected void onSaveInstanceState(final Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putCharSequence(NUMBER_STATE, number);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(final Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        final CharSequence charSequence = savedInstanceState.getCharSequence(NUMBER_STATE);
+        if (charSequence != null) {
+            number = new StringBuilder(charSequence);
+            tv_number.setText(number);
+            searchForContact();
+        }
     }
 
     private void getContactsByNumberFilter() {
@@ -163,28 +182,6 @@ public class DialerActivity extends BaldActivity {
         getContactsByNumberFilter();
     }
 
-    @Override
-    protected void onSaveInstanceState(final Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putCharSequence(NUMBER_STATE, number);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(final Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        final CharSequence charSequence = savedInstanceState.getCharSequence(NUMBER_STATE);
-        if (charSequence != null) {
-            number = new StringBuilder(charSequence);
-            tv_number.setText(number);
-            searchForContact();
-        }
-    }
-
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_READ_CONTACTS | PERMISSION_CALL_PHONE;
-    }
-
     private class DialerClickListener implements View.OnClickListener {
         private final char c;
 
@@ -198,5 +195,10 @@ public class DialerActivity extends BaldActivity {
             tv_number.setText(number);
             searchForContact();
         }
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_READ_CONTACTS | PERMISSION_CALL_PHONE;
     }
 }

@@ -24,12 +24,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
+
+import java.util.Objects;
 
 public class CreditsActivity extends BaldActivity {
     private String[] names, tasks;
@@ -44,14 +48,9 @@ public class CreditsActivity extends BaldActivity {
 
         recyclerView.setAdapter(new CreditsAdapter());
         final DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
-        dividerItemDecoration.setDrawable(getDrawable(R.drawable.ll_divider));
+        dividerItemDecoration.setDrawable(Objects.requireNonNull(getDrawable(R.drawable.ll_divider)));
         recyclerView.addItemDecoration(dividerItemDecoration);
 
-    }
-
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_NONE;
     }
 
     class CreditsAdapter extends ModularRecyclerView.ModularAdapter<CreditsAdapter.ViewHolder> {
@@ -68,25 +67,30 @@ public class CreditsActivity extends BaldActivity {
         }
 
         @Override
+        public int getItemCount() {
+            return names.length;
+        }
+
+        @Override
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
             super.onBindViewHolder(holder, position);
             holder.name.setText(names[position]);
             holder.task.setText(tasks[position]);
         }
 
-        @Override
-        public int getItemCount() {
-            return names.length;
-        }
-
         class ViewHolder extends RecyclerView.ViewHolder {
             final TextView name, task;
 
-            public ViewHolder(View itemView) {
+            ViewHolder(View itemView) {
                 super(itemView);
                 name = itemView.findViewById(R.id.name);
                 task = itemView.findViewById(R.id.task);
             }
         }
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_NONE;
     }
 }

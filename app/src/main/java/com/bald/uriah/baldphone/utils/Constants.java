@@ -55,7 +55,7 @@ public class Constants {
     /**
      * contains the constants used in
      * {@link com.bald.uriah.baldphone.databases.contacts.MiniContact}
-     *
+     * <p>
      * and parent to {@link ContactConstants}
      */
     public interface BaseContactsConstants {
@@ -68,6 +68,7 @@ public class Constants {
         };
 
     }
+
     /**
      * contains the constants used in
      * {@link com.bald.uriah.baldphone.databases.contacts.Contact}

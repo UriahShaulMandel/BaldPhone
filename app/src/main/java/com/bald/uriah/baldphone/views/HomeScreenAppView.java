@@ -23,7 +23,9 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.StringRes;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.contacts.SingleContactActivity;
 import com.bald.uriah.baldphone.utils.S;

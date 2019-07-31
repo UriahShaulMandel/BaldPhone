@@ -26,17 +26,23 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
+
 import androidx.annotation.Nullable;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.adapters.NotificationRecyclerViewAdapter;
 import com.bald.uriah.baldphone.services.NotificationListenerService;
 import com.bald.uriah.baldphone.utils.BDB;
 import com.bald.uriah.baldphone.utils.BDialog;
 
-import static com.bald.uriah.baldphone.services.NotificationListenerService.*;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.ACTION_REGISTER_ACTIVITY;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.ACTIVITY_NONE;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.KEY_EXTRA_ACTIVITY;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.KEY_EXTRA_NOTIFICATIONS;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_ACTIVITY;
 
 public class NotificationsActivity extends BaldActivity {
     private static final String TAG = NotificationsActivity.class.getSimpleName();

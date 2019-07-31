@@ -30,9 +30,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.annotation.ColorInt;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
+
 import com.bald.uriah.baldphone.R;
 
 public class BaldSwitch extends LinearLayout {

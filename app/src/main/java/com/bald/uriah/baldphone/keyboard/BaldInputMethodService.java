@@ -23,12 +23,17 @@ import android.graphics.Point;
 import android.inputmethodservice.InputMethodService;
 import android.os.IBinder;
 import android.util.Log;
-import android.view.*;
+import android.view.Display;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
+
 import com.bald.uriah.baldphone.utils.BaldPrefsUtils;
 
 import java.util.List;
@@ -37,8 +42,8 @@ import java.util.List;
  * This class is
  */
 public class BaldInputMethodService extends InputMethodService implements View.OnClickListener {//} implements KeyboardView.OnKeyboardActionListener {
-    public static final String VOICE_RECOGNITION_IMS = "com.google.android.googlequicksearchbox/com.google.android.voicesearch.ime.VoiceInputMethodService";
     private static final String TAG = BaldInputMethodService.class.getSimpleName();
+    public static final String VOICE_RECOGNITION_IMS = "com.google.android.googlequicksearchbox/com.google.android.voicesearch.ime.VoiceInputMethodService";
     private static int lastLanguage = HebrewKeyboard.LANGUAGE_ID;
     private boolean onNumbers = false;
     private BaldPrefsUtils baldPrefsUtils;

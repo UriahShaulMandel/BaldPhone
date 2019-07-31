@@ -21,9 +21,12 @@ package com.bald.uriah.baldphone.activities;
 
 import android.os.Bundle;
 import android.widget.EditText;
+
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BaldToast;
+
 import org.acra.ACRA;
 
 public class FeedbackActivity extends BaldActivity {
@@ -44,14 +47,14 @@ public class FeedbackActivity extends BaldActivity {
         });
     }
 
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_NONE;
-    }
-
     private final static class FeedbackException extends Exception {
         FeedbackException(String message) {
             super(message);
         }
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_NONE;
     }
 }

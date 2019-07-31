@@ -20,7 +20,11 @@
 package com.bald.uriah.baldphone.activities.contacts;
 
 import android.app.Activity;
-import android.content.*;
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -36,9 +40,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.SOSActivity;
@@ -47,7 +53,11 @@ import com.bald.uriah.baldphone.databases.calls.Call;
 import com.bald.uriah.baldphone.databases.calls.CallLogsHelper;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
-import com.bald.uriah.baldphone.utils.*;
+import com.bald.uriah.baldphone.utils.BDB;
+import com.bald.uriah.baldphone.utils.BDialog;
+import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.utils.S;
+import com.bald.uriah.baldphone.utils.Toggeler;
 import com.bald.uriah.baldphone.views.BaldLinearLayoutButton;
 import com.bald.uriah.baldphone.views.BaldPictureTextButton;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
@@ -61,6 +71,7 @@ import java.util.List;
  * {@link #CONTACT_ID} or {@link #CONTACT_LOOKUP_KEY} must be added
  */
 public class SingleContactActivity extends BaldActivity {
+    private static final String TAG = SingleContactActivity.class.getSimpleName();
     public static final String CONTACT_ID = "CONTACT_ID";
     public static final String CONTACT_LOOKUP_KEY = "CONTACT_KEY";
     public static final String PIC_URI_EXTRA = "PIC_URI_EXTRA";
@@ -68,7 +79,6 @@ public class SingleContactActivity extends BaldActivity {
      * request check if deleted contact, if returns {@link Activity#RESULT_OK} contact was deleted.
      */
     public static final int REQUEST_CHECK_CHANGE = 97;
-    private static final String TAG = SingleContactActivity.class.getSimpleName();
     public static boolean newPictureAdded = false;
     private boolean viaId = false;
     private String contactKeyExtra;

@@ -28,9 +28,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
+
 import com.bald.uriah.baldphone.R;
 
 public class FirstPageAppIcon extends BaldFrameLayoutButton {

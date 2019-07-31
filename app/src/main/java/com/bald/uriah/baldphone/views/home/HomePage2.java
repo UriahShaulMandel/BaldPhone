@@ -34,8 +34,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.activities.SettingsActivity;
@@ -119,7 +121,8 @@ public class HomePage2 extends HomeView {
                                     });
                                 }
 
-                                @Override public int size() {
+                                @Override
+                                public int size() {
                                     return browsers.size();
                                 }
 

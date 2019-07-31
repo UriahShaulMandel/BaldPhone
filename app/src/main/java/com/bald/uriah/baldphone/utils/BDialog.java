@@ -24,14 +24,20 @@ import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.TypedValue;
-import android.view.*;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.views.BaldButton;
 import com.bald.uriah.baldphone.views.BaldImageButton;
@@ -40,8 +46,8 @@ import com.bald.uriah.baldphone.views.BaldMultipleSelection;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-
 public class BDialog extends Dialog {
+    private static final String TAG = BDialog.class.getSimpleName();
     public static final int
             FLAG_POSITIVE = 1,
             FLAG_NEGATIVE = 1 << 1,
@@ -54,10 +60,7 @@ public class BDialog extends Dialog {
             FLAG_CUSTOM_POSITIVE = FLAG_POSITIVE | 1 << 7,
             FLAG_OPTIONS = 1 << 9,
             FLAG_NOT_CANCELABLE = 1 << 10;
-    ;
-
     private static final float DIM_LEVEL = 0.9f;
-    private static final String TAG = BDialog.class.getSimpleName();
     private final Context context;
     private final CharSequence title;
     private final CharSequence subText;
@@ -257,6 +260,10 @@ public class BDialog extends Dialog {
         }
     }
 
+    public boolean containFlag(@BDFlags int flag) {
+        return (flags | flag) == flags;
+    }
+
     public interface StartingIndexChooser {
         int chooseStartingIndex();
     }
@@ -270,10 +277,6 @@ public class BDialog extends Dialog {
          * @return true if dialog job is finished
          */
         boolean activate(@NonNull Object... params);
-    }
-
-    public boolean containFlag(@BDFlags int flag) {
-        return (flags | flag) == flags;
     }
 
     @IntDef({FLAG_POSITIVE, FLAG_NEGATIVE, FLAG_INPUT, FLAG_OPTIONS, FLAG_OK, FLAG_YES, FLAG_CANCEL, FLAG_NO, FLAG_CUSTOM_NEGATIVE, FLAG_CUSTOM_POSITIVE, FLAG_NOT_CANCELABLE})

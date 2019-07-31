@@ -21,40 +21,72 @@ package com.bald.uriah.baldphone.activities;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.content.*;
+import android.content.ActivityNotFoundException;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Point;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
-import android.os.*;
+import android.os.AsyncTask;
+import android.os.BatteryManager;
+import android.os.Bundle;
+import android.os.Handler;
 import android.speech.RecognizerIntent;
 import android.util.Log;
-import android.view.*;
+import android.view.Display;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.PopupWindow;
+
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.adapters.BaldPagerAdapter;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
 import com.bald.uriah.baldphone.services.NotificationListenerService;
-import com.bald.uriah.baldphone.utils.*;
+import com.bald.uriah.baldphone.utils.BDB;
+import com.bald.uriah.baldphone.utils.BDialog;
+import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.utils.BaldHomeWatcher;
+import com.bald.uriah.baldphone.utils.BaldPrefsUtils;
+import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DropDownRecyclerViewAdapter;
+import com.bald.uriah.baldphone.utils.PageTransformers;
+import com.bald.uriah.baldphone.utils.S;
+import com.bald.uriah.baldphone.utils.UpdatingUtil;
 import com.bald.uriah.baldphone.views.BaldImageButton;
 import com.bald.uriah.baldphone.views.BatteryView;
 import com.bald.uriah.baldphone.views.ViewPagerHolder;
 import com.bald.uriah.baldphone.views.home.HomePage1;
 import com.bald.uriah.baldphone.views.home.NotesView;
-import github.nisrulz.lantern.Lantern;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.bald.uriah.baldphone.services.NotificationListenerService.*;
+import github.nisrulz.lantern.Lantern;
+
+import static com.bald.uriah.baldphone.services.NotificationListenerService.ACTION_REGISTER_ACTIVITY;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.ACTIVITY_NONE;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.KEY_EXTRA_ACTIVITY;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_ALOT;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_HOME_SCREEN;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_NONE;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_SOME;
 
 public class HomeScreenActivity extends BaldActivity {
     private static final String TAG = HomeScreenActivity.class.getSimpleName();
@@ -69,7 +101,8 @@ public class HomeScreenActivity extends BaldActivity {
     private static int onStartCounter = 0;
     private static boolean flashState;
 
-    @NonNull public final NotesView.RecognizerManager recognizerManager = new NotesView.RecognizerManager();
+    @NonNull
+    public final NotesView.RecognizerManager recognizerManager = new NotesView.RecognizerManager();
 
     public boolean finishedUpdatingApps, launchAppsActivity;
     public BaldPagerAdapter baldPagerAdapter;
@@ -196,7 +229,8 @@ public class HomeScreenActivity extends BaldActivity {
             overridePendingTransition(R.anim.slide_in_down, R.anim.nothing);
         });
         soundButton.setOnClickListener(v -> S.showDropDownPopup(this, getWindow().getDecorView().getWidth(), new DropDownRecyclerViewAdapter.DropDownListener() {
-            @SuppressLint("InlinedApi") @Override
+            @SuppressLint("InlinedApi")
+            @Override
             public void onUpdate(DropDownRecyclerViewAdapter.ViewHolder viewHolder, final int position, PopupWindow popupWindow) {
                 viewHolder.pic.setImageResource(SOUND_DRAWABLES[position]);
                 viewHolder.text.setText(SOUND_TEXTS[position]);
@@ -211,7 +245,8 @@ public class HomeScreenActivity extends BaldActivity {
                 });
             }
 
-            @Override public int size() {
+            @Override
+            public int size() {
                 return 3;
             }
         }, soundButton));
@@ -226,7 +261,6 @@ public class HomeScreenActivity extends BaldActivity {
         recognizerManager.setHomeScreen(this);
 
     }
-
 
     @Override
     protected void onStart() {
@@ -380,16 +414,14 @@ public class HomeScreenActivity extends BaldActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        if (vibrator != null)
-            vibrator.vibrate(D.vibetime);
-        updateViewPager();
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
-
+    public void startActivity(Intent intent, @Nullable Bundle options) {
+        try {
+            super.startActivity(intent, options);
+        } catch (Exception e) {
+            Log.e(TAG, S.str(e.getMessage()));
+            e.printStackTrace();
+            BaldToast.error(this);
+        }
     }
 
     private boolean isActivityDefault() {
@@ -428,19 +460,10 @@ public class HomeScreenActivity extends BaldActivity {
     }
 
     @Override
-    protected int requiredPermissions() {
-        return PERMISSION_NONE;
-    }
-
-    @Override
-    public void startActivity(Intent intent, @Nullable Bundle options) {
-        try {
-            super.startActivity(intent, options);
-        } catch (Exception e) {
-            Log.e(TAG, S.str(e.getMessage()));
-            e.printStackTrace();
-            BaldToast.error(this);
-        }
+    public void onBackPressed() {
+        if (vibrator != null)
+            vibrator.vibrate(D.vibetime);
+        updateViewPager();
     }
 
     static class UpdateApps extends AsyncTask<Context, Void, Void> {
@@ -468,5 +491,10 @@ public class HomeScreenActivity extends BaldActivity {
             }
         }
 
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_NONE;
     }
 }

@@ -45,18 +45,18 @@ public class SoftInputAssist {
         rootViewLayout = (FrameLayout.LayoutParams) rootView.getLayoutParams();
     }
 
-    public void onPause() {
-        if (viewTreeObserver.isAlive()) {
-            viewTreeObserver.removeOnGlobalLayoutListener(this::possiblyResizeChildOfContent);
-        }
-    }
-
     public void onResume() {
         if (viewTreeObserver == null || !viewTreeObserver.isAlive()) {
             viewTreeObserver = rootView.getViewTreeObserver();
         }
 
         viewTreeObserver.addOnGlobalLayoutListener(this::possiblyResizeChildOfContent);
+    }
+
+    public void onPause() {
+        if (viewTreeObserver.isAlive()) {
+            viewTreeObserver.removeOnGlobalLayoutListener(this::possiblyResizeChildOfContent);
+        }
     }
 
     public void onDestroy() {

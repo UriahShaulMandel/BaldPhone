@@ -19,7 +19,12 @@
 
 package com.bald.uriah.baldphone.activities.contacts;
 
-import android.content.*;
+import android.content.ContentProviderOperation;
+import android.content.ContentProviderResult;
+import android.content.ContentResolver;
+import android.content.ContentUris;
+import android.content.Context;
+import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -31,9 +36,11 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.exifinterface.media.ExifInterface;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
@@ -58,9 +65,8 @@ import java.util.ArrayList;
  * in order to Create\Edit an advanced contact the user must click on the selected button
  */
 public class AddContactActivity extends BaldActivity {
-    public static final String CONTACT_NUMBER = "CONTACT_NUMBER";
-
     private static final String TAG = AddContactActivity.class.getSimpleName();
+    public static final String CONTACT_NUMBER = "CONTACT_NUMBER";
     private static final int SELECT_IMAGE_REQUEST_CODE = 3;
     private static final String DEFAULT_WHERE = ContactsContract.Data.CONTACT_ID + "= ?";
     private Contact currentContact;
@@ -415,11 +421,6 @@ public class AddContactActivity extends BaldActivity {
             setImage(data.getData());
     }
 
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_WRITE_CONTACTS | PERMISSION_READ_CONTACTS | PERMISSION_WRITE_EXTERNAL_STORAGE;
-    }
-
     static class PhotoAdder extends SimpleTarget<Bitmap> {
         private final int rawId;
         private final ContentResolver contentResolver;
@@ -445,5 +446,10 @@ public class AddContactActivity extends BaldActivity {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_WRITE_CONTACTS | PERMISSION_READ_CONTACTS | PERMISSION_WRITE_EXTERNAL_STORAGE;
     }
 }

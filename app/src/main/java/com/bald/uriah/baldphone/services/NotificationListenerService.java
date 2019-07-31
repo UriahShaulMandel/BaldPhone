@@ -30,6 +30,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.service.notification.StatusBarNotification;
 import android.util.Log;
+
 import androidx.annotation.IntDef;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
@@ -39,6 +40,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class NotificationListenerService extends android.service.notification.NotificationListenerService {
+    private static final String TAG = NotificationListenerService.class.getSimpleName();
     // BROADCASTS
     public static final String NOTIFICATIONS_ACTIVITY_BROADCAST = "NOTIFICATIONS_ACTIVITY_BROADCAST";
     public static final String HOME_SCREEN_ACTIVITY_BROADCAST = "HOME_SCREEN_ACTIVITY_BROADCAST";
@@ -60,7 +62,6 @@ public class NotificationListenerService extends android.service.notification.No
             ACTIVITY_NONE = -1,
             NOTIFICATIONS_ACTIVITY = 1,
             NOTIFICATIONS_HOME_SCREEN = 2;
-    private static final String TAG = NotificationListenerService.class.getSimpleName();
     // VARS
     @SupportedActivitys
     private int activity = ACTIVITY_NONE;
@@ -189,21 +190,6 @@ public class NotificationListenerService extends android.service.notification.No
         }
     }
 
-    /**
-     * IDEA USE THIS METHOD IN ORDER TO ADD BADGES ON APPS IN HOME SCREEN, PERHAPS ADD TO CONTACTS TOO
-     *
-     * @param packageName;
-     * @return true if a notification with this package name is active;
-     */
-    private boolean hasNotification(final String packageName) {
-        final StatusBarNotification[] statusBarNotifications = getActiveNotifications();
-        for (StatusBarNotification statusBarNotification : statusBarNotifications) {
-            if (statusBarNotification.getPackageName().equals(packageName)) {
-                return true;
-            }
-        }
-        return false;
-    }
 
     @IntDef({ACTIVITY_NONE, NOTIFICATIONS_ACTIVITY, NOTIFICATIONS_HOME_SCREEN})
     @Retention(RetentionPolicy.SOURCE)

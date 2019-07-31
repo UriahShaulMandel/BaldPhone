@@ -34,10 +34,12 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+
 import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
@@ -113,6 +115,24 @@ abstract class BaseContactsActivity extends BaldActivity {
         super.onDestroy();
         if (softInputAssist != null)
             softInputAssist.onDestroy();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(FILTER_STATE, filter);
+        outState.putBoolean(FAVORITE_STATE, favorite);
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        filter = savedInstanceState.getString(FILTER_STATE);
+        favorite = savedInstanceState.getBoolean(FAVORITE_STATE);
+        et_filter_input.setText(filter);
+        et_filter_input.setSelection(et_filter_input.getText().length());
+        applyFilter();
     }
 
     @LayoutRes
@@ -232,24 +252,6 @@ abstract class BaseContactsActivity extends BaldActivity {
             applyFilter();
         } else
             super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putString(FILTER_STATE, filter);
-        outState.putBoolean(FAVORITE_STATE, favorite);
-
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        filter = savedInstanceState.getString(FILTER_STATE);
-        favorite = savedInstanceState.getBoolean(FAVORITE_STATE);
-        et_filter_input.setText(filter);
-        et_filter_input.setSelection(et_filter_input.getText().length());
-        applyFilter();
     }
 
     private void onClick(View v) {

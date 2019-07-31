@@ -25,6 +25,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
+
 import com.bald.uriah.baldphone.utils.BaldToast;
 
 import java.util.ArrayList;

@@ -29,9 +29,15 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import androidx.annotation.*;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.annotation.StringRes;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.content.ContextCompat;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.D;
 
@@ -73,7 +79,8 @@ public class BaldMultipleSelection extends LinearLayout {
         init(context, attrs);
     }
 
-    @SuppressLint("WrongConstant") private void init(Context context, AttributeSet attrs) {
+    @SuppressLint("WrongConstant")
+    private void init(Context context, AttributeSet attrs) {
         this.context = context;
         this.layoutInflater = LayoutInflater.from(context);
 

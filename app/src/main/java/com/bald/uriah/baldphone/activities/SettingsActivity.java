@@ -39,17 +39,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.*;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.SeekBar;
+import android.widget.TextView;
+
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.alarms.AlarmScreenActivity;
 import com.bald.uriah.baldphone.activities.pills.PillTimeSetterActivity;
-import com.bald.uriah.baldphone.utils.*;
+import com.bald.uriah.baldphone.utils.BDB;
+import com.bald.uriah.baldphone.utils.BDialog;
+import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.utils.BaldPrefsUtils;
+import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.S;
+import com.bald.uriah.baldphone.utils.UpdatingUtil;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 import com.bumptech.glide.Glide;
@@ -65,10 +78,10 @@ import static android.content.Intent.ACTION_VIEW;
  * {{@link SettingsItem}} are generated programmatically because of the huge differences that lies between different settings.
  */
 public class SettingsActivity extends BaldActivity {
+    private static final String TAG = SettingsActivity.class.getSimpleName();
     public static final int REQUEST_SELECT_CUSTOM_APP = 88;
     public static final float[] FONT_SIZES = new float[]{0.8f, 0.9f, 1.0f, 1.1f, 1.3f, 1.5f, 1.7f};
     public static final String SAVEABLE_HISTORY_KEY = "SAVEABLE_HISTORY_KEY";
-    private static final String TAG = SettingsActivity.class.getSimpleName();
     private final List<SettingsItem>
             mainSettingsItemList = new ArrayList<>(),
             connectionSettingsList = new ArrayList<>(),
@@ -119,6 +132,27 @@ public class SettingsActivity extends BaldActivity {
         super.onResume();
         if (baldPrefsUtils.hasChanged(this))
             recreate();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (ringtone != null)
+            ringtone.stop();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(SAVEABLE_HISTORY_KEY, section);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        this.section = savedInstanceState.getInt(SAVEABLE_HISTORY_KEY);
+        if (section != -1)
+            settingsList.get(section).onClick(null);
     }
 
     private void populateSettingsList() {
@@ -396,12 +430,6 @@ public class SettingsActivity extends BaldActivity {
             );
     }
 
-    @Override
-    public void onBackPressed() {
-        if (!goBack())
-            super.onBackPressed();
-    }
-
     /**
      * @return true if succeeded
      */
@@ -545,29 +573,9 @@ public class SettingsActivity extends BaldActivity {
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt(SAVEABLE_HISTORY_KEY, section);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        this.section = savedInstanceState.getInt(SAVEABLE_HISTORY_KEY);
-        if (section != -1)
-            settingsList.get(section).onClick(null);
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        if (ringtone != null)
-            ringtone.stop();
-    }
-
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_WRITE_SETTINGS;
+    public void onBackPressed() {
+        if (!goBack())
+            super.onBackPressed();
     }
 
     public class SettingsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<SettingsRecyclerViewAdapter.ViewHolder> {
@@ -584,14 +592,14 @@ public class SettingsActivity extends BaldActivity {
         }
 
         @Override
-        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-            super.onBindViewHolder(holder, position);
-            holder.update(settingsList.get(position));
+        public int getItemCount() {
+            return settingsList.size();
         }
 
         @Override
-        public int getItemCount() {
-            return settingsList.size();
+        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+            super.onBindViewHolder(holder, position);
+            holder.update(settingsList.get(position));
         }
 
         public class ViewHolder extends RecyclerView.ViewHolder {
@@ -652,5 +660,10 @@ public class SettingsActivity extends BaldActivity {
         public void onClick(View v) {
             onClickListener.onClick(v);
         }
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_WRITE_SETTINGS;
     }
 }

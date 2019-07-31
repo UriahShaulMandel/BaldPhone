@@ -20,6 +20,7 @@
 package com.bald.uriah.baldphone.databases.reminders;
 
 import android.util.SparseIntArray;
+
 import androidx.annotation.IntDef;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
@@ -27,6 +28,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
+
 import com.bald.uriah.baldphone.R;
 
 import java.lang.annotation.Retention;

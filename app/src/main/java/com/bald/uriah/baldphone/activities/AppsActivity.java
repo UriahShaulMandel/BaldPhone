@@ -27,9 +27,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.PopupWindow;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.apps.App;
@@ -47,11 +49,10 @@ import java.util.Objects;
 import static com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter.TYPE_HEADER;
 
 public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivity {
+    private static final String TAG = AppsActivity.class.getSimpleName();
     public static final String EXTRA_MODE = "EXTRA_MODE";
     public static final String MODE_CHOOSE_ONE = "MODE_CHOOSE_ONE ";
-
     public static final int UNINSTALL_REQUEST_CODE = 52;
-    private static final String TAG = AppsActivity.class.getSimpleName();
     private static final String SELECTED_APP_INDEX = "SELECTED_APP_INDEX";
 
     //"finals"
@@ -71,8 +72,7 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
 
         appsDatabase = AppsDatabase.getInstance(AppsActivity.this);
         final List<App> appList = appsDatabase.appsDatabaseDao().getAllOrderedByABC();
-        attachXml();
-
+        recyclerView = findViewById(R.id.rc_apps);
         final boolean modeChoose = MODE_CHOOSE_ONE.equals(getIntent().getStringExtra(EXTRA_MODE));
         appsRecyclerViewAdapter = new AppsRecyclerViewAdapter(appList, this, modeChoose ? this::appChosen : this::showDropDown, recyclerView);
 
@@ -99,8 +99,22 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
         recyclerView.setAdapter(appsRecyclerViewAdapter);
     }
 
-    private void attachXml() {
-        recyclerView = findViewById(R.id.rc_apps);
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(SELECTED_APP_INDEX, ((AppsRecyclerViewAdapter) recyclerView.getAdapter()).index);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        final int index = savedInstanceState.getInt(SELECTED_APP_INDEX);
+        final AppsRecyclerViewAdapter adapter = ((AppsRecyclerViewAdapter) recyclerView.getAdapter());
+        if (index < adapter.dataList.size() && index > 0 && adapter.dataList.get(index).type() != TYPE_HEADER) {
+            adapter.index = index;
+            recyclerView.getLayoutManager().scrollToPosition(index);
+            recyclerView.post(() -> showDropDown(index));
+        }
     }
 
     private void uninstallApp(App app) {
@@ -177,11 +191,13 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
                 }
             }
 
-            @Override public int size() {
+            @Override
+            public int size() {
                 return 3;
             }
 
-            @Override public void onDismiss() {
+            @Override
+            public void onDismiss() {
                 if (appsRecyclerViewAdapter.lastView != null)
                     appsRecyclerViewAdapter.lastView.setClicked(false);
                 appsRecyclerViewAdapter.lastView = null;
@@ -203,30 +219,12 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
         }
     }
 
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt(SELECTED_APP_INDEX, ((AppsRecyclerViewAdapter) recyclerView.getAdapter()).index);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        final int index = savedInstanceState.getInt(SELECTED_APP_INDEX);
-        final AppsRecyclerViewAdapter adapter = ((AppsRecyclerViewAdapter) recyclerView.getAdapter());
-        if (index < adapter.dataList.size() && index > 0 && adapter.dataList.get(index).type() != TYPE_HEADER) {
-            adapter.index = index;
-            recyclerView.getLayoutManager().scrollToPosition(index);
-            recyclerView.post(() -> showDropDown(index));
-        }
+    public interface ChangeAppListener {
+        void changeApp(int index);
     }
 
     @Override
     protected int requiredPermissions() {
         return PERMISSION_NONE;
-    }
-
-    public interface ChangeAppListener {
-        void changeApp(int index);
     }
 }

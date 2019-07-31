@@ -20,7 +20,9 @@
 package com.bald.uriah.baldphone.activities;
 
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 
 /**

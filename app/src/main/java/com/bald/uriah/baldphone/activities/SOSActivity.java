@@ -30,21 +30,28 @@ import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.contacts.ContactsActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.contacts.MiniContact;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
-import com.bald.uriah.baldphone.utils.BDB;
 import com.bald.uriah.baldphone.views.BaldLinearLayoutButton;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import static com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper.SHARED_PREFS_KEY;
 
 public class SOSActivity extends BaldActivity {
-    private BaldLinearLayoutButton ec1, ec2, ecReal;
+    private static final int MAX_PINNED_CONTACTS = 2;
+    private BaldLinearLayoutButton[] ec;
+    private BaldLinearLayoutButton ecReal;
 
     private static void setupEC(BaldLinearLayoutButton baldLinearLayoutButton, MiniContact miniContact) {
         if (miniContact.photo != null)
@@ -62,7 +69,8 @@ public class SOSActivity extends BaldActivity {
         if (!checkPermissions(this, requiredPermissions()))
             return;
         setContentView(R.layout.activity_sos);
-        setupXml();
+        ec = new BaldLinearLayoutButton[]{findViewById(R.id.ec1), findViewById(R.id.ec2)};
+        ecReal = findViewById(R.id.ec_real);
         setupYoutube(4);
     }
 
@@ -71,41 +79,19 @@ public class SOSActivity extends BaldActivity {
         super.onStart();
         final View.OnClickListener addContactListener = v -> startActivity(new Intent(v.getContext().getApplicationContext(), ContactsActivity.class).putExtra(ContactsActivity.INTENT_EXTRA_CONTACT_ADAPTER_MODE, ContactRecyclerViewAdapter.MODE_SOS));
         final List<MiniContact> miniContacts = PinHelper.getAllPinnedContacts(this);
-        if (miniContacts != null) {
-            final int size = miniContacts.size();
-            if (size > 0)
-                setupEC(ec1, miniContacts.get(0));
+        final int size = miniContacts == null ? 0 : miniContacts.size();
+        for (int i = 0; i < MAX_PINNED_CONTACTS; i++) {
+            if (size > i)
+                setupEC(ec[i], miniContacts.get(i));
             else
-                ec1.setOnClickListener(addContactListener);
-
-            if (size > 1)
-                setupEC(ec2, miniContacts.get(1));
-            else
-                ec2.setOnClickListener(addContactListener);
-        } else {
-            ec1.setOnClickListener(addContactListener);
-            ec2.setOnClickListener(addContactListener);
+                ec[i].setOnClickListener(addContactListener);
         }
 
-        ecReal.setOnClickListener((v) -> {
-            BDB.from(SOSActivity.this)
-                    .setTitle("")
-                    .setSubText(v.getContext().getString(R.string.are_you_sure_you_want_to_call_emergency_services))
-                    .setPositiveButtonListener(params -> {
-                        callEmergencyNumber();
-                        return true;
-                    }).show();
-        });
+        ecReal.setOnClickListener((v) -> callEmergencyNumber());
     }
 
     private void callEmergencyNumber() {
         DialerActivity.call("112", this);//should work 99.99% of the times
-    }
-
-    private void setupXml() {
-        ec1 = findViewById(R.id.ec1);
-        ec2 = findViewById(R.id.ec2);
-        ecReal = findViewById(R.id.ec_real);
     }
 
     @Override
@@ -114,15 +100,8 @@ public class SOSActivity extends BaldActivity {
         overridePendingTransition(R.anim.nothing, R.anim.slide_out_up);
     }
 
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_CALL_PHONE | PERMISSION_READ_CONTACTS;
-    }
-
     public static class PinHelper {
         /**
-         * @param context
-         * @param lookupKey
          * @return true if succeeded
          */
         public static boolean pinContact(Context context, String lookupKey) {
@@ -132,7 +111,7 @@ public class SOSActivity extends BaldActivity {
             if (befSet == null)
                 newSet = new HashSet<>();
             else {
-                if (befSet.size() > 1)
+                if (befSet.size() >= SOSActivity.MAX_PINNED_CONTACTS)
                     return false;
                 else
                     newSet = new HashSet<>(befSet);
@@ -197,5 +176,10 @@ public class SOSActivity extends BaldActivity {
             Collections.sort(ret, (o1, o2) -> o1.name.compareTo(o2.name));
             return ret;
         }
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_CALL_PHONE | PERMISSION_READ_CONTACTS;
     }
 }

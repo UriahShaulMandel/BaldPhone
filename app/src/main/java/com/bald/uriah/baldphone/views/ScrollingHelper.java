@@ -26,16 +26,22 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
-import android.view.*;
+import android.view.Choreographer;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
 import androidx.annotation.IdRes;
 import androidx.annotation.IntDef;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
@@ -45,6 +51,7 @@ import java.lang.annotation.RetentionPolicy;
 
 public class ScrollingHelper extends ConstraintLayout {
 
+    private static final String TAG = ScrollingHelper.class.getSimpleName();
     public static final int START = -3;
     public static final int RIGHT = 2;
     public static final int END = 3;
@@ -52,9 +59,7 @@ public class ScrollingHelper extends ConstraintLayout {
     public static final int UP = 1;
     public static final int DOWN = -1;
     public static final int NO = 0;
-
     public static final int TOP_AND_BOTTOM = 0;
-    private static final String TAG = ScrollingHelper.class.getSimpleName();
     @IdRes
     private static final int containerId = R.id.container;
     private static final float SCROLL_CONST_IN_DP = 9;

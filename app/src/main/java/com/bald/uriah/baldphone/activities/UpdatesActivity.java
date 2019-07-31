@@ -20,7 +20,11 @@
 package com.bald.uriah.baldphone.activities;
 
 import android.app.DownloadManager;
-import android.content.*;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.media.MediaScannerConnection;
 import android.net.ConnectivityManager;
@@ -33,18 +37,28 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.*;
+import com.bald.uriah.baldphone.utils.BDB;
+import com.bald.uriah.baldphone.utils.BDialog;
+import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.S;
 
 import java.io.File;
 
-import static com.bald.uriah.baldphone.utils.UpdatingUtil.*;
+import static com.bald.uriah.baldphone.utils.UpdatingUtil.BaldUpdateObject;
+import static com.bald.uriah.baldphone.utils.UpdatingUtil.FILENAME;
+import static com.bald.uriah.baldphone.utils.UpdatingUtil.getDownloadedFile;
 
 public class UpdatesActivity extends BaldActivity {
     public static final String EXTRA_BALD_UPDATE_OBJECT = "EXTRA_BALD_UPDATE_OBJECT";
     private static final int PROGRESS_DELAY = 200 * D.MILLISECOND;
+
     private BaldUpdateObject baldUpdateObject;
     private DownloadManager manager;
     private long downloadId = -1;

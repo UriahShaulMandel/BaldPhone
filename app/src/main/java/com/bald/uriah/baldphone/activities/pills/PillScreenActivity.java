@@ -31,7 +31,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.TimedBaldActivity;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
@@ -159,11 +161,12 @@ public class PillScreenActivity extends TimedBaldActivity {
     }
 
     @Override
-    protected int requiredPermissions() {
-        return PERMISSION_NONE;
+    protected int screenTimeout() {
+        return D.MINUTE * 2;
     }
 
-    @Override protected int screenTimeout() {
-        return D.MINUTE * 2;
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_NONE;
     }
 }

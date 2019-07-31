@@ -27,9 +27,11 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
+
 import androidx.annotation.Keep;
 import androidx.annotation.LayoutRes;
 import androidx.constraintlayout.widget.ConstraintLayout;
+
 import com.bald.uriah.baldphone.utils.S;
 
 public abstract class BaldKeyboard extends FrameLayout {

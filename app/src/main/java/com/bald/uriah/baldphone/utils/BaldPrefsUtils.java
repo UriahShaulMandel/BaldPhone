@@ -24,7 +24,18 @@ import android.content.SharedPreferences;
 
 import java.util.Objects;
 
-import static com.bald.uriah.baldphone.utils.BPrefs.*;
+import static com.bald.uriah.baldphone.utils.BPrefs.LONG_PRESSES_DEFAULT_VALUE;
+import static com.bald.uriah.baldphone.utils.BPrefs.LONG_PRESSES_KEY;
+import static com.bald.uriah.baldphone.utils.BPrefs.NOTE_VISIBLE_DEFAULT_VALUE;
+import static com.bald.uriah.baldphone.utils.BPrefs.NOTE_VISIBLE_KEY;
+import static com.bald.uriah.baldphone.utils.BPrefs.PAGE_TRANSFORMERS_DEFAULT_VALUE;
+import static com.bald.uriah.baldphone.utils.BPrefs.PAGE_TRANSFORMERS_KEY;
+import static com.bald.uriah.baldphone.utils.BPrefs.STATUS_BAR_DEFAULT_VALUE;
+import static com.bald.uriah.baldphone.utils.BPrefs.STATUS_BAR_KEY;
+import static com.bald.uriah.baldphone.utils.BPrefs.TOUCH_NOT_HARD_DEFAULT_VALUE;
+import static com.bald.uriah.baldphone.utils.BPrefs.TOUCH_NOT_HARD_KEY;
+import static com.bald.uriah.baldphone.utils.BPrefs.VIBRATION_FEEDBACK_DEFAULT_VALUE;
+import static com.bald.uriah.baldphone.utils.BPrefs.VIBRATION_FEEDBACK_KEY;
 
 public class BaldPrefsUtils {
     private final int theme;
@@ -67,7 +78,8 @@ public class BaldPrefsUtils {
         return !equals(newInstance(context));
     }
 
-    @Override public boolean equals(Object o) {
+    @Override
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BaldPrefsUtils that = (BaldPrefsUtils) o;

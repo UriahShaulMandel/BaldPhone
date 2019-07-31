@@ -27,7 +27,9 @@ import android.provider.ContactsContract;
 import android.telephony.PhoneNumberUtils;
 import android.util.Log;
 import android.view.View;
+
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 import com.bald.uriah.baldphone.adapters.IntentAdapter;
@@ -48,11 +50,10 @@ import java.util.List;
  * the whatsapp part the activity actually mostly defined in {@link BaseContactsActivity}
  */
 public class ShareActivity extends BaseContactsActivity {
+    private static final String TAG = ShareActivity.class.getSimpleName();
     public static final String EXTRA_SHARABLE_URI = "EXTRA_SHARABLE_URI";
     public static final String SORT_ORDER =
             "upper(" + ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + ") ASC";
-    private static final String TAG = ShareActivity.class.getSimpleName();
-
     private static final String STAR_SELECTION =
             "AND " + ContactsContract.Data.STARRED + " = 1";
     private static final String SELECTION_NAME =

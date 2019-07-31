@@ -21,7 +21,9 @@ package com.bald.uriah.baldphone.activities.pills;
 
 import android.os.Bundle;
 import android.view.View;
+
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
@@ -56,15 +58,15 @@ public class PillTimeSetterActivity extends BaldActivity {
 
     }
 
-    private void applyChoosers() {
-        hour.setNumber(BPrefs.getHour(multipleSelection.getSelection(), this));
-        minute.setNumber(BPrefs.getMinute(multipleSelection.getSelection(), this));
-    }
-
     @Override
     protected void onStop() {
         super.onStop();
         ReminderScheduler.reStartReminders(this);
+    }
+
+    private void applyChoosers() {
+        hour.setNumber(BPrefs.getHour(multipleSelection.getSelection(), this));
+        minute.setNumber(BPrefs.getMinute(multipleSelection.getSelection(), this));
     }
 
     @Override

@@ -26,10 +26,12 @@ import android.net.NetworkInfo;
 import android.os.Environment;
 import android.os.Parcel;
 import android.os.Parcelable;
+
 import androidx.annotation.NonNull;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
@@ -38,6 +40,7 @@ import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.UpdatesActivity;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -51,7 +54,6 @@ public class UpdatingUtil {
     public static final String MESSAGE_URL = "https://api.github.com/repos/UriahShaulMandel/BaldPhone/releases/latest";
     public static final String FILENAME = "BaldPhoneUpdate.apk";
     public static final String VOLLEY_TAG = "baldphone";
-
 
     @NonNull
     public static File getDownloadedFile() {
@@ -148,6 +150,17 @@ public class UpdatingUtil {
     }
 
     public static class BaldUpdateObject implements Parcelable {
+        public static final Creator<BaldUpdateObject> CREATOR = new Creator<BaldUpdateObject>() {
+            @Override
+            public BaldUpdateObject createFromParcel(Parcel in) {
+                return new BaldUpdateObject(in);
+            }
+
+            @Override
+            public BaldUpdateObject[] newArray(int size) {
+                return new BaldUpdateObject[size];
+            }
+        };
         public final int versionCode;
         public final String versionName;
         public final String changeLog;
@@ -167,31 +180,6 @@ public class UpdatingUtil {
             apkUrl = in.readString();
         }
 
-        @Override
-        public void writeToParcel(Parcel dest, int flags) {
-            dest.writeInt(versionCode);
-            dest.writeString(versionName);
-            dest.writeString(changeLog);
-            dest.writeString(apkUrl);
-        }
-
-        @Override
-        public int describeContents() {
-            return 0;
-        }
-
-        public static final Creator<BaldUpdateObject> CREATOR = new Creator<BaldUpdateObject>() {
-            @Override
-            public BaldUpdateObject createFromParcel(Parcel in) {
-                return new BaldUpdateObject(in);
-            }
-
-            @Override
-            public BaldUpdateObject[] newArray(int size) {
-                return new BaldUpdateObject[size];
-            }
-        };
-
         public static BaldUpdateObject parseMessage(String json) throws JSONException {
             final JSONObject root = new JSONObject(json);
             final int versionNumber = Integer.parseInt(root.getString("tag_name"));
@@ -210,6 +198,19 @@ public class UpdatingUtil {
                     changeLog,
                     apkDownloadUrl
             );
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeInt(versionCode);
+            dest.writeString(versionName);
+            dest.writeString(changeLog);
+            dest.writeString(apkUrl);
+        }
+
+        @Override
+        public int describeContents() {
+            return 0;
         }
     }
 }

@@ -30,7 +30,9 @@ import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 
 import static com.bald.uriah.baldphone.activities.SettingsActivity.FONT_SIZES;
@@ -85,11 +87,6 @@ public class FontChangerActivity extends BaldActivity {
 
     }
 
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_WRITE_SETTINGS;
-    }
-
     private void showExamples(Context newContext) {
         example.removeAllViews();
         TextView textView;
@@ -99,5 +96,10 @@ public class FontChangerActivity extends BaldActivity {
             textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, newContext.getResources().getDimension(SIZES_RES[i]));
             example.addView(textView);
         }
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_WRITE_SETTINGS;
     }
 }

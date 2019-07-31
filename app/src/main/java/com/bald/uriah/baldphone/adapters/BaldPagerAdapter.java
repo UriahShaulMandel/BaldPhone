@@ -19,11 +19,12 @@
 
 package com.bald.uriah.baldphone.adapters;
 
-import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.core.util.Pools;
+
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
 import com.bald.uriah.baldphone.utils.BPrefs;
@@ -35,21 +36,32 @@ import com.bald.uriah.baldphone.views.home.NotesView;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * This is the pager adapter used in the {@link HomeScreenActivity}
+ * It contains:
+ * {@link HomePage1}
+ * {@link HomePage2}
+ * {@link NotesView}
+ * {@link HomeViewFactory} (For accessing Apps)
+ * Notice - it uses Views and not Fragments
+ */
 public class BaldPagerAdapter extends BaldViewAdapter {
     private static final String TAG = BaldPagerAdapter.class.getSimpleName();
-
     private final Pools.SimplePool<HomeViewFactory> factoryPool = new Pools.SimplePool<>(10);
-
+    /**
+     * This field holds the index of the {@link HomePage1}.
+     * It depends on the value of {@link BPrefs#NOTE_VISIBLE_KEY} in {@link BPrefs}
+     */
     public int startingPage;
+    @SuppressWarnings("unchecked")
     public List<HomeScreenPinHelper.HomeScreenPinnable> pinnedList = Collections.EMPTY_LIST;
     private int numItemsBefore, numItems;
     private HomeScreenActivity homeScreen;
 
     public BaldPagerAdapter(HomeScreenActivity homeScreen) {
         this.homeScreen = homeScreen;
-        startingPage = (this.homeScreen.getSharedPreferences(BPrefs.KEY, Context.MODE_PRIVATE).getBoolean(BPrefs.NOTE_VISIBLE_KEY, BPrefs.NOTE_VISIBLE_DEFAULT_VALUE) ? 2 : 1);
+        startingPage = (BPrefs.get(this.homeScreen).getBoolean(BPrefs.NOTE_VISIBLE_KEY, BPrefs.NOTE_VISIBLE_DEFAULT_VALUE) ? 2 : 1);
         numItems = numItemsBefore = startingPage + 1;
-
     }
 
     public void obtainAppList() {

@@ -24,12 +24,15 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+
 import androidx.annotation.NonNull;
+
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.broadcast_receivers.ReminderReceiver;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
+
 import org.joda.time.DateTime;
 import org.joda.time.MutableDateTime;
 
@@ -39,9 +42,9 @@ import java.util.List;
  *
  */
 public class ReminderScheduler {
+    private static final String TAG = ReminderScheduler.class.getSimpleName();
     public static final Object LOCK = new Object();
     public static final int SNOOZE_MILLIS = 5 * D.MINUTE;
-    private static final String TAG = ReminderScheduler.class.getSimpleName();
 
     /**
      * helper class should not be instantiate

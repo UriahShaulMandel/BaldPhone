@@ -28,8 +28,10 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
 import android.widget.LinearLayout;
+
 import androidx.annotation.Nullable;
 import androidx.core.util.Pools;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.adapters.BaldViewAdapter;
@@ -42,9 +44,9 @@ import com.bald.uriah.baldphone.views.ViewPagerHolder;
  * has all of their commons in here.
  */
 public abstract class SingleMediaActivity extends BaldActivity {
+    private static final String TAG = SingleMediaActivity.class.getSimpleName();
     public static final String MEDIA_KEY = "picKey";
     public static final int SHOULD_REFRESH = 0xDEAD;
-    private static final String TAG = SingleMediaActivity.class.getSimpleName();
     protected ViewPagerHolder viewPagerHolder;
     private View delete, share, more;
     private LinearLayout optionsBar;
@@ -97,11 +99,6 @@ public abstract class SingleMediaActivity extends BaldActivity {
             more.setVisibility(View.GONE);
             optionsBar.setVisibility(View.VISIBLE);
         });
-    }
-
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_WRITE_EXTERNAL_STORAGE;
     }
 
     public abstract static class MediaPagerAdapter extends BaldViewAdapter {
@@ -166,5 +163,10 @@ public abstract class SingleMediaActivity extends BaldActivity {
         @Override
         public void restoreState(Parcelable state, ClassLoader loader) {
         }
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_WRITE_EXTERNAL_STORAGE;
     }
 }

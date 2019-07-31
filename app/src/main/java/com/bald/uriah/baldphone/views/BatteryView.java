@@ -22,8 +22,10 @@ package com.bald.uriah.baldphone.views;
 import android.content.Context;
 import android.os.BatteryManager;
 import android.util.AttributeSet;
+
 import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 
 public class BatteryView extends BaldImageButton {

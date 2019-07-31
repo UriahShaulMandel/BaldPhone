@@ -31,10 +31,12 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
@@ -128,11 +130,6 @@ public class PillsActivity extends BaldActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    @Override
-    protected int requiredPermissions() {
-        return PERMISSION_NONE;
-    }
-
     class PillsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<PillsRecyclerViewAdapter.ViewHolder> {
         private final LayoutInflater inflater;
 
@@ -222,5 +219,10 @@ public class PillsActivity extends BaldActivity {
                 }
             }
         }
+    }
+
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_NONE;
     }
 }

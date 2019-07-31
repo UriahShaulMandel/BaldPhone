@@ -23,6 +23,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+
 import com.bald.uriah.baldphone.R;
 
 public class Animations {
@@ -44,7 +45,8 @@ public class Animations {
                     runnable.run();
             }
 
-            @Override public void onAnimationRepeat(Animation animation) {
+            @Override
+            public void onAnimationRepeat(Animation animation) {
             }
         });
         ensmall.setAnimationListener(new Animation.AnimationListener() {

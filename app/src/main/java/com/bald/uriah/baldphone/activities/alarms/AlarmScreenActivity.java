@@ -32,13 +32,19 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.TimedBaldActivity;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
-import com.bald.uriah.baldphone.utils.*;
+import com.bald.uriah.baldphone.utils.Animations;
+import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.S;
 
 /**
  * Alarm screen, will be called from {@link com.bald.uriah.baldphone.broadcast_receivers.AlarmReceiver}
@@ -183,16 +189,19 @@ public class AlarmScreenActivity extends TimedBaldActivity {
         }, TIME_DELAYED_SCHEDULE);
     }
 
-    @Override public void onBackPressed() {
+    @Override
+    public void onBackPressed() {
         snooze();
         super.onBackPressed();
     }
 
-    @Override protected int requiredPermissions() {
-        return PERMISSION_NONE;
+    @Override
+    protected int screenTimeout() {
+        return D.MINUTE * 5;
     }
 
-    @Override protected int screenTimeout() {
-        return D.MINUTE * 5;
+    @Override
+    protected int requiredPermissions() {
+        return PERMISSION_NONE;
     }
 }

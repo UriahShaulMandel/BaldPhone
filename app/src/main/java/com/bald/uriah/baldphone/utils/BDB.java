@@ -21,9 +21,11 @@ package com.bald.uriah.baldphone.utils;
 
 import android.content.Context;
 import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
+
 import com.bald.uriah.baldphone.activities.BaldActivity;
 
 /**
@@ -32,17 +34,23 @@ import com.bald.uriah.baldphone.activities.BaldActivity;
 public class BDB {
     public Context context;
 
-    @NonNull CharSequence title = "";
+    @NonNull
+    CharSequence title = "";
     CharSequence subText;
     CharSequence[] options;
     int inputType;
     BDialog.DialogBoxListener positiveButtonListener = BDialog.DialogBoxListener.EMPTY;
     BDialog.DialogBoxListener negativeButtonListener = BDialog.DialogBoxListener.EMPTY;
-    @NonNull BDialog.StartingIndexChooser startingIndexChooser = () -> 0;
-    @Nullable BaldActivity baldActivityToAutoDismiss;
-    @Nullable View extraView;
-    @Nullable CharSequence negativeCustomText;
-    @Nullable CharSequence positiveCustomText;
+    @NonNull
+    BDialog.StartingIndexChooser startingIndexChooser = () -> 0;
+    @Nullable
+    BaldActivity baldActivityToAutoDismiss;
+    @Nullable
+    View extraView;
+    @Nullable
+    CharSequence negativeCustomText;
+    @Nullable
+    CharSequence positiveCustomText;
     int flags;
 
     private BDB() {
@@ -56,7 +64,6 @@ public class BDB {
         }
         return bdb;
     }
-
 
     public BDB setTitle(CharSequence title) {
         this.title = title;

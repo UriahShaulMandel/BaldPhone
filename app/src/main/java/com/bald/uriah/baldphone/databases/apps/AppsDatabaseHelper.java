@@ -29,8 +29,10 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.Log;
+
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.utils.S;
+
 import org.acra.ACRA;
 
 import java.util.ArrayList;

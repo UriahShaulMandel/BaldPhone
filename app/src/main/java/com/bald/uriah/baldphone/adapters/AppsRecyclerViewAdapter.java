@@ -28,11 +28,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.AppsActivity;
 import com.bald.uriah.baldphone.activities.BaldActivity;
@@ -207,11 +209,11 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
 
         @Override
         public void onClick(View v) {
-                if (lastView != null)
-                    lastView.setClicked(false);
+            if (lastView != null)
+                lastView.setClicked(false);
             AppsRecyclerViewAdapter.this.index = getAdapterPosition();
-                lastView = this;
-                setClicked(true);
+            lastView = this;
+            setClicked(true);
 
             if (changeAppListener != null) {
                 changeAppListener.changeApp(AppsRecyclerViewAdapter.this.index);

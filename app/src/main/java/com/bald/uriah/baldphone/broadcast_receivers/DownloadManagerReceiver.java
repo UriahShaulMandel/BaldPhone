@@ -24,6 +24,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.utils.BPrefs;
 
