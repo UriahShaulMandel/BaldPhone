@@ -1,5 +1,5 @@
 <h2><b>Description</b></h2>
-BaldPhone is a platform which replaces the phone’s interface to a bigger, simpler and friendlier one.
+BaldPhone is a platform which replaces the phone’s interface with a bigger, simpler and friendlier one.
 It is built for elderly people, people with motoric problems and people who need a visual aid.
 It’s 100% free and open source. It is made out of a desire to help the community and is purely a goodwill product.
 
