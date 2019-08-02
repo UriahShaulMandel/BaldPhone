@@ -2,7 +2,9 @@
  - Click the image above or click [this](https://www.youtube.com/watch?v=G33E4XQp_Xw) to watch the video
 
 
-# BaldPhone [![Build Status](https://travis-ci.com/UriahShaulMandel/BaldPhone.svg?branch=master)](https://travis-ci.com/UriahShaulMandel/BaldPhone)
+# BaldPhone [![Build Status](https://travis-ci.com/UriahShaulMandel/BaldPhone.svg?branch=master)](https://travis-ci.com/UriahShaulMandel/BaldPhone) [![GitHub version](https://img.shields.io/github/tag/UriahShaulMandel/BaldPhone.svg)](https://github.com/UriahShaulMandel/BaldPhone/releases/latest) [![License](https://img.shields.io/github/license/UriahShaulMandel/BaldPhone)](https://github.com/UriahShaulMandel/BaldPhone/blob/master/LICENSE) [![GitHub repo size](https://img.shields.io/github/repo-size/UriahShaulMandel/BaldPhone)](https://github.com/UriahShaulMandel/BaldPhone) [![Maintenance](https://img.shields.io/maintenance/yes/2022)](https://github.com/UriahShaulMandel/BaldPhone)
+
+
 
 A platform which replaces the phone's interface to a bigger, simpler and friendlier one.
 
