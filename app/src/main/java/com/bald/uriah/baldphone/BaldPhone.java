@@ -19,22 +19,16 @@
 
 package com.bald.uriah.baldphone;
 
-import android.annotation.SuppressLint;
-import android.app.AlarmManager;
 import android.app.Application;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.util.Log;
 
-import com.bald.uriah.baldphone.activities.CrashActivity;
 import com.bald.uriah.baldphone.activities.UpdatesActivity;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
 import com.bald.uriah.baldphone.services.NotificationListenerService;
-import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.BaldUncaughtExceptionHandler;
 import com.bald.uriah.baldphone.utils.S;
 
 import net.danlew.android.joda.JodaTimeAndroid;
@@ -48,15 +42,18 @@ import org.acra.sender.HttpSender;
 public class BaldPhone extends Application {
     private static final String TAG = BaldPhone.class.getSimpleName();
 
+    // Application class should not have any fields, http://www.developerphil.com/dont-store-data-in-the-application-object/
+
     @Override
     public void onCreate() {
-        S.logImportant(TAG + " was started!");
+        S.logImportant("BaldPhone was started!");
         super.onCreate();
         JodaTimeAndroid.init(this);
         AlarmScheduler.reStartAlarms(this);
         ReminderScheduler.reStartReminders(this);
-        if (BuildConfig.FLAVOR.equals("baldUpdates"))
+        if (BuildConfig.FLAVOR.equals("baldUpdates")) {
             UpdatesActivity.removeUpdatesInfo(this);
+        }
         try {
             startService(new Intent(this, NotificationListenerService.class));
         } catch (Exception e) {
@@ -68,55 +65,18 @@ public class BaldPhone extends Application {
     @Override
     protected void attachBaseContext(final Context base) {
         super.attachBaseContext(base);
-        S.logImportant("attachBaseContext was called! setting Acra and Thread.setDefaultUncaughtExceptionHandler");
-        final CoreConfigurationBuilder builder = new CoreConfigurationBuilder(this)
-                .setBuildConfigClass(BuildConfig.class)
-                .setReportFormat(StringFormat.JSON);
+        final CoreConfigurationBuilder builder =
+                new CoreConfigurationBuilder(this)
+                        .setBuildConfigClass(BuildConfig.class)
+                        .setReportFormat(StringFormat.JSON);
         builder.getPluginConfigurationBuilder(HttpSenderConfigurationBuilder.class)
                 .setUri(getString(R.string.tt_url))
                 .setHttpMethod(HttpSender.Method.POST)
                 .setEnabled(true);
         ACRA.init(this, builder);
+
         Thread.setDefaultUncaughtExceptionHandler(
-                new BaldUncaughtExceptionHandler(
-                        this,
-                        Thread.getDefaultUncaughtExceptionHandler()));
-    }
-
-    private static class BaldUncaughtExceptionHandler implements Thread.UncaughtExceptionHandler {
-        final Context context;
-        final Thread.UncaughtExceptionHandler defaultUEH;
-
-        BaldUncaughtExceptionHandler(Context context, Thread.UncaughtExceptionHandler defaultUEH) {
-            this.context = context;
-            this.defaultUEH = defaultUEH;
-        }
-
-        @SuppressLint("ApplySharedPref")
-        @Override
-        public void uncaughtException(final Thread t, final Throwable e) {
-            final SharedPreferences baldPrefs = BPrefs.get(context);
-            final long currentTime = System.currentTimeMillis();
-            if (currentTime - baldPrefs.getLong(BPrefs.LAST_CRASH_KEY, -1) < BPrefs.LAST_CRASH_TIME_OK) {
-                defaultUEH.uncaughtException(t, e);
-                return;
-            }
-            baldPrefs.edit().putLong(BPrefs.LAST_CRASH_KEY, currentTime).commit();
-            //NOPE - should be done immediately because of System.exit(2);
-            S.logImportant("CRASHED!!");
-            if (baldPrefs.getBoolean(BPrefs.CRASH_REPORTS_KEY, BPrefs.CRASH_REPORTS_DEFAULT_VALUE))
-                ACRA.getErrorReporter().handleException(e);
-
-            final PendingIntent pendingIntent = PendingIntent.getActivity(context,
-                    19337, new Intent(context, CrashActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
-                            | Intent.FLAG_ACTIVITY_CLEAR_TASK
-                            | Intent.FLAG_ACTIVITY_NEW_TASK),
-                    PendingIntent.FLAG_ONE_SHOT);
-            final AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-            alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                    300 * D.MILLISECOND, pendingIntent);
-
-            Runtime.getRuntime().exit(2);
-        }
+                new BaldUncaughtExceptionHandler(this, Thread.getDefaultUncaughtExceptionHandler())
+        );
     }
 }

@@ -214,12 +214,12 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
             @StringRes final int stringRes;
             switch (type) {
                 case INCOMING_TYPE:
+                case ANSWERED_EXTERNALLY_TYPE:
                     drawableRes = R.drawable.call_received_on_button;
                     stringRes = R.string.received;
                     colorRes = R.color.received;
                     break;
                 case MISSED_TYPE:
-                case ANSWERED_EXTERNALLY_TYPE:
                 case REJECTED_TYPE:
                     drawableRes = R.drawable.call_missed_on_button;
                     stringRes = R.string.missed;

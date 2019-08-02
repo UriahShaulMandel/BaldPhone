@@ -26,14 +26,11 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 public abstract class BaldViewAdapter extends PagerAdapter {
-    private static final String TAG = BaldViewAdapter.class.getSimpleName();
-
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        View layout = getItem(position);
+        final View layout = getItem(position);
         container.addView(layout);
-
         return layout;
     }
 

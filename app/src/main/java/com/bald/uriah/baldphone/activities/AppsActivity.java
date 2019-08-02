@@ -55,7 +55,6 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
     public static final int UNINSTALL_REQUEST_CODE = 52;
     private static final String SELECTED_APP_INDEX = "SELECTED_APP_INDEX";
 
-    //"finals"
     private AppsDatabase appsDatabase;
     private int numberOfAppsInARow;
 

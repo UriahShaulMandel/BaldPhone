@@ -53,5 +53,4 @@ public class VideoTutorialsActivity extends BaldActivity {
     protected int requiredPermissions() {
         return PERMISSION_NONE;
     }
-
 }

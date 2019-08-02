@@ -28,82 +28,51 @@ import android.view.inputmethod.InputMethodManager;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
-import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 
-public class BaldEditText extends AppCompatEditText implements View.OnClickListener, View.OnLongClickListener {
+/**
+ * This class isn't the same as {@link BaldButton} so be careful
+ */
+public class BaldEditText extends AppCompatEditText implements View.OnLongClickListener {
     private final SharedPreferences sharedPreferences;
-    private final boolean longPresses, vibrationFeedback;
+    private final boolean vibrationFeedback;
     private final Vibrator vibrator;
-    private final BaldToast longer;
-    private OnClickListener onClickListener = v -> {
-        if (requestFocus()) {
-            setSelection(getText().length());
-            InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.showSoftInput(this, InputMethodManager.SHOW_IMPLICIT);
-
-        }
-    };
 
     public BaldEditText(Context context) {
         super(context);
         this.sharedPreferences = context.getSharedPreferences(D.BALD_PREFS, Context.MODE_PRIVATE);
-        this.longPresses = sharedPreferences.getBoolean(BPrefs.LONG_PRESSES_KEY, BPrefs.LONG_PRESSES_DEFAULT_VALUE);
         this.vibrationFeedback = sharedPreferences.getBoolean(BPrefs.VIBRATION_FEEDBACK_KEY, BPrefs.VIBRATION_FEEDBACK_DEFAULT_VALUE);
         this.vibrator = this.vibrationFeedback ? (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE) : null;
-        longer = longPresses ? BaldToast.from(context).setText(context.getText(R.string.press_longer)).setType(BaldToast.TYPE_DEFAULT).setLength(0).build() : null;
-        super.setOnClickListener(this);
         super.setOnLongClickListener(this);
     }
 
     public BaldEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.sharedPreferences = context.getSharedPreferences(D.BALD_PREFS, Context.MODE_PRIVATE);
-        this.longPresses = sharedPreferences.getBoolean(BPrefs.LONG_PRESSES_KEY, BPrefs.LONG_PRESSES_DEFAULT_VALUE);
         this.vibrationFeedback = sharedPreferences.getBoolean(BPrefs.VIBRATION_FEEDBACK_KEY, BPrefs.VIBRATION_FEEDBACK_DEFAULT_VALUE);
         this.vibrator = this.vibrationFeedback ? (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE) : null;
-        longer = longPresses ? BaldToast.from(context).setText(context.getText(R.string.press_longer)).setType(BaldToast.TYPE_DEFAULT).setLength(0).build() : null;
-        super.setOnClickListener(this);
         super.setOnLongClickListener(this);
     }
 
     public BaldEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.sharedPreferences = context.getSharedPreferences(D.BALD_PREFS, Context.MODE_PRIVATE);
-        this.longPresses = sharedPreferences.getBoolean(BPrefs.LONG_PRESSES_KEY, BPrefs.LONG_PRESSES_DEFAULT_VALUE);
         this.vibrationFeedback = sharedPreferences.getBoolean(BPrefs.VIBRATION_FEEDBACK_KEY, BPrefs.VIBRATION_FEEDBACK_DEFAULT_VALUE);
         this.vibrator = this.vibrationFeedback ? (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE) : null;
-        longer = longPresses ? BaldToast.from(context).setText(context.getText(R.string.press_longer)).setType(BaldToast.TYPE_DEFAULT).setLength(0).build() : null;
-        super.setOnClickListener(this);
         super.setOnLongClickListener(this);
     }
 
     @Override
-    public void onClick(View v) {
-        if (longPresses) {
-            longer.show();
-        } else {
-            if (vibrationFeedback)
-                vibrator.vibrate(D.vibetime);
-
-            if (onClickListener != null)
-                onClickListener.onClick(v);
-        }
-    }
-
-    @Override
     public boolean onLongClick(View v) {
-        if (longPresses) {
-            if (vibrationFeedback)
-                vibrator.vibrate(D.vibetime);
+        if (vibrationFeedback)
+            vibrator.vibrate(D.vibetime);
 
-            if (onClickListener != null)
-                onClickListener.onClick(v);
-            return true;
+        if (requestFocus()) {
+            setSelection(getText().length());
+            InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(this, InputMethodManager.SHOW_IMPLICIT);
         }
-        return false;
-
+        return true;
     }
 }
