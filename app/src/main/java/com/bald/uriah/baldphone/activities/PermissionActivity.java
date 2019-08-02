@@ -45,6 +45,7 @@ import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static android.Manifest.permission.CALL_PHONE;
 import static android.Manifest.permission.CAMERA;
@@ -77,13 +78,11 @@ public class PermissionActivity extends BaldActivity {
         recyclerView = findViewById(R.id.child);
         final DividerItemDecoration dividerItemDecoration =
                 new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
-        dividerItemDecoration.setDrawable(getDrawable(R.drawable.ll_divider));
+        dividerItemDecoration.setDrawable(Objects.requireNonNull(getDrawable(R.drawable.ll_divider)));
         recyclerView.addItemDecoration(dividerItemDecoration);
         recyclerView.setAdapter(new PermissionRecyclerViewAdapter());
         BaldTitleBar baldTitleBar = findViewById(R.id.bald_title_bar);
-        baldTitleBar.getBt_back().setOnClickListener(v -> {
-            calmyBDB();
-        });
+        baldTitleBar.getBt_back().setOnClickListener(v -> calmyBDB());
 
     }
 

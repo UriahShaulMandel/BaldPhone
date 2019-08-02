@@ -41,8 +41,7 @@ import java.io.File;
 public class TechnicalInfoActivity extends BaldActivity {
     public static void deleteCache(Context context) {
         try {
-            File dir = context.getCacheDir();
-            deleteDir(dir);
+            deleteDir(context.getCacheDir());
         } catch (Exception e) {
             e.printStackTrace();
         }

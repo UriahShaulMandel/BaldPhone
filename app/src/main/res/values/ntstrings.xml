@@ -28,6 +28,7 @@
     <string-array name="names">
         <item>Dani Konigstein</item>
         <item>My Family</item>
+        <item>Ido Heinemann</item>
         <item>Ido Sharon</item>
         <item>Nadav Shalev</item>
         <item>Primokorn</item>
@@ -37,7 +38,6 @@
         <item>Shaked Aley-Raz</item>
         <item>Edo Avidan</item>
         <item>Ronnie Gilboa</item>
-        <item>Ido Heinemann</item>
         <item>Shay Gadot</item>
     </string-array>
 
@@ -46,6 +46,7 @@
     <string-array name="tasks">
         <item>Being the Inspiration of BaldPhone</item>
         <item>Help and support throughout the entire process</item>
+        <item>Programming counselor, Created BaldPhone Server</item>
         <item>Being the longest and most helpful tester, Graphics Consultant</item>
         <item>The awesome logo</item>
         <item>The french translations</item>
@@ -54,7 +55,6 @@
         <item>The opportunity to be in the incubator</item>
         <item>Graphics Consultant</item>
         <item>Graphics Consultant</item>
-        <item>Tester</item>
         <item>Tester</item>
         <item>Tester</item>
     </string-array>
