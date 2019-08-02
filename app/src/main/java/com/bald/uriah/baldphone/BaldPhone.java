@@ -74,7 +74,7 @@ public class BaldPhone extends Application {
     }
 
     private void sendVersionInfo() {
-        if (S.isEmulator())
+        if (S.isEmulator() || BuildConfig.TRAVIS)
             return;
 
         final SharedPreferences sharedPreferences = BPrefs.get(this);

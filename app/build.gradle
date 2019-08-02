@@ -22,6 +22,8 @@ apply plugin: 'com.android.application'
 
 
 android {
+    def isRunningOnTravis = System.getenv("CI") == "true"
+
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.bald.uriah.baldphone"
@@ -30,6 +32,12 @@ android {
         versionCode 81
         versionName "11.4.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        if (isRunningOnTravis) {
+            buildConfigField "boolean", "TRAVIS", 'true'
+        } else {
+            buildConfigField "boolean", "TRAVIS", 'false'
+        }
     }
 
     buildTypes {
