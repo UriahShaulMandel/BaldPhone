@@ -343,10 +343,8 @@ public class HomeScreenActivity extends BaldActivity {
 
     @Override
     protected void onPause() {
-        //this is *NOT* bad practice.
         //read https://stackoverflow.com/questions/6165070/receiver-not-registered-exception-error
         //android platform may unregister the receiver without asking anyone, and this is the best solution.
-        //that's a known bug.
         //first occurred in LG k10 api level 23
         try {
             LocalBroadcastManager.getInstance(this).unregisterReceiver(notificationReceiver);
@@ -368,7 +366,6 @@ public class HomeScreenActivity extends BaldActivity {
         baldHomeWatcher.stopWatch();
         super.onStop();
     }
-    //</Receivers>
 
     @Override
     protected void onDestroy() {
