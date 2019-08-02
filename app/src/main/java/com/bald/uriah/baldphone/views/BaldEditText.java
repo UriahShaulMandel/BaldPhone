@@ -69,9 +69,12 @@ public class BaldEditText extends AppCompatEditText implements View.OnLongClickL
             vibrator.vibrate(D.vibetime);
 
         if (requestFocus()) {
-            setSelection(getText().length());
-            InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.showSoftInput(this, InputMethodManager.SHOW_IMPLICIT);
+            final CharSequence charSequence = getText();
+            if (charSequence != null) {
+                setSelection(charSequence.length());
+                InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.showSoftInput(this, InputMethodManager.SHOW_IMPLICIT);
+            }
         }
         return true;
     }
