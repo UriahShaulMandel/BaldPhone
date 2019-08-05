@@ -27,6 +27,10 @@ Main features:
 
 [Website](https://sites.google.com/view/baldphone)
 
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+    alt="Get it on F-Droid"
+    height="80">](https://f-droid.org/packages/com.bald.uriah.baldphone)
+
 [Apk Download Link](http://bit.ly/BALDPHONE) 
 
 [Installing Manual](https://github.com/UriahShaulMandel/BaldPhone/raw/master/manual/Manual%20hebrew.pdf)
