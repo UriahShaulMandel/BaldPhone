@@ -20,9 +20,9 @@
 <resources>
     <string name="___app_was_not_found">%s was not found!</string>
     <string name="about">About</string>
-    <string name="about_subtext">Hi\nMy name is Uriah Shaul Mandel, and i\'m the developer of this platform.\nI live in
-        Tel Aviv.\nIv\'e spent a lot of time and effort to make this platform, and released it for free, for everyone to
-        use\nyou are more than welcome to contact me, by email.\nbaldphone.contact@gmail.com
+    <string name="about_subtext">Hi!\nMy name is Uriah Shaul Mandel, and I\'m the developer of this platform.\n
+        I\'ve spent most of my \"adult\" life making this platform, and I\'ve released it for free, for all to
+        use.\nYou are more than welcome to contact me by email:\nbaldphone.contact@gmail.com
     </string>
     <string name="accessibility_level">Accessibility Level</string>
     <string name="accessibility_settings">Accessibility</string>
@@ -56,7 +56,7 @@
     <string name="alarms_repeats_every">Alarm repeats every</string>
     <string name="all_alarms">All Alarms</string>
     <string name="allow">Allow</string>
-    <string name="already_setted">Already Setted!\nClick here to change to it</string>
+    <string name="already_setted">Already Set!\nClick here to change to it</string>
     <string name="an_error_has_occurred">An error has occurred!</string>
     <string name="and_welcome_to_baldphone">and welcome to Baldphone</string>
 
@@ -138,8 +138,8 @@
     </string>
     <string name="font">Font</string>
     <string name="friday">Friday</string>
-    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Have hard time using
-        the phone\'s keyboard? use Baldphone\'s BIG keyboard instead
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Having a hard time using
+        the phone\'s keyboard? use Baldphone\'s BIG keyboard instead!
     </string>
     <string name="hebrew">0</string>
     <string name="hello">Hello</string>
@@ -153,7 +153,7 @@
     <string name="internet">Internet</string>
     <string name="invoked_in">Invoked in:</string>
     <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">One last
-        thing\nIt\'s highly recommended to use Baldphone\'s home screen as the default home launcher
+        thing:\nIt\'s highly recommended to use Baldphone\'s home screen as the default home launcher
     </string>
     <string name="language">language</string>
     <string name="language_settings">Language</string>
@@ -183,7 +183,7 @@
     <string name="new_alarm___was_created">new alarm %s was created!</string>
     <string name="nfc">NFC</string>
     <string name="no">No</string>
-    <string name="no_contact_contains___">no contact contain %s!</string>
+    <string name="no_contact_contains___">no contact contains %s!</string>
     <string name="notes">Notes</string>
     <string name="notes_settings">Notes</string>
     <string name="notes_settings_subtext">Choose if you want to have a Note page in the home screen.</string>
@@ -246,12 +246,12 @@
     <string name="settings">Settings</string>
     <string name="settings_permission">Settings Permission</string>
     <string name="share">Share</string>
-    <string name="share_actual_text">Hi, i\'m using this platform named "BaldPhone" which replaces the phone\'s
+    <string name="share_actual_text">Hi, I\'m using this platform named "BaldPhone" which replaces the phone\'s
         interface to a big, simple and friendly one.\nInterested?\nYou can download it for free!\ncheck out the link
         bellow for more information:\n\nhttps://sites.google.com/view/baldphone
     </string>
-    <string name="share_bald_phone_subtext">Hello There,\nknow anyone which may want to know about BaldPhone?\nyou can
-        share it with him.
+    <string name="share_bald_phone_subtext">Hey, know anyone who may want to know about BaldPhone?\nYou can
+        share it with them!"
     </string>
     <string name="share_baldphone">Share BaldPhone</string>
     <string name="share_contact">Share Contact</string>
@@ -266,8 +266,8 @@
     <string name="sos_is_full_subtext">SOS is full! please remove other sos contacts before adding another one</string>
     <string name="speak">Speak</string>
     <string name="speech_to_text">Speech to Text</string>
-    <string name="strong_hand">Strong Hand</string>
-    <string name="strong_hand_subtext">choose your strong hand.\nwill change layout according to it</string>
+    <string name="strong_hand">Dominant Hand</string>
+    <string name="strong_hand_subtext">Choose your dominant hand to adjust the user interface.</string>
     <string name="submit">submit</string>
     <string name="sunday">Sunday</string>
     <string name="technical_information">Technical Information</string>
@@ -319,17 +319,17 @@
     <string name="install_updates">Install Updates</string>
     <string name="install_updates_subtext">This Permission is required in order to update BaldPhone</string>
     <string name="a_new_update_is_available">A new update is available!\nUpdates are important to keep BaldPhone running
-        smoothly.\nPress OK to download
+        smoothly.\nPress OK to download.
     </string>
     <string name="current_version">Current Version:\n</string>
     <string name="new_version">New Version:\n</string>
-    <string name="new_updates_are_ready_to_be_downloaded">New updates are ready to be downloaded</string>
+    <string name="new_updates_are_ready_to_be_downloaded">New updates are ready to be downloaded.</string>
     <string name="install">Install</string>
     <string name="data_warning">Data Warning</string>
-    <string name="data_warning_subtext">Hi, you\'re not connected to WIFI.\nThe size of the download approximately 3MB,
+    <string name="data_warning_subtext">Hi, you\'re not connected to WIFI.\nThe size of the download is approximately 3MB,
         if you\'re abroad it may cost you money.\nDo you want to continue with the download?
     </string>
-    <string name="update_message_is_corrupted">Update message is corrupted</string>
+    <string name="update_message_is_corrupted">Update message is corrupted.</string>
     <string name="check_for_updates">Check for updates</string>
     <string name="could_not_connect_to_server">Could not connect to server!</string>
     <string name="could_not_connect_to_internet">Could not connect to internet!</string>
@@ -337,7 +337,7 @@
     <string name="downloaded_update_file_could_not_be_deleted">Downloaded update file could not be deleted!</string>
     <string name="downloading">Downloading…</string>
 
-    <string name="baldphone_is_up_to_date">BaldPhone is up to date</string>
+    <string name="baldphone_is_up_to_date">BaldPhone is up to date.</string>
     <string name="what_s_new">What\'s new</string>
     <string name="download_finished">Download finished!</string>
     <string name="downloading_updates">Downloading Updates…</string>
@@ -357,7 +357,7 @@
     <string name="sound">Sound</string>
     <string name="mute">Mute</string>
     <string name="vibrate">Vibrate</string>
-    <string name="your_phone_doesnt_have_assistant_installed">Your Phone doesn\'t have assistant installed</string>
+    <string name="your_phone_doesnt_have_assistant_installed">Your Phone doesn\'t have an assistant installed.</string>
     <bool name="is_right_to_left">false</bool>
 
 
