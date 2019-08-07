@@ -27,11 +27,15 @@ Main features:
 
 [Website](https://sites.google.com/view/baldphone)
 
-[Apk Download Link](http://bit.ly/BALDPHONE) 
-
 [Installing Manual](https://github.com/UriahShaulMandel/BaldPhone/raw/master/manual/Manual%20hebrew.pdf)
 
 Feel free to contact me at baldphone.contact@gmail.com
+
+
+[<img src="https://github.com/UriahShaulMandel/BaldPhone/blob/master/logo/direct_apk_download.png?raw=true" alt="Get it on F-Droid" height="80">](http://bit.ly/BALDPHONE)
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/com.bald.uriah.baldphone)
+
+
 
 ## [Contributing](https://github.com/UriahShaulMandel/BaldPhone/blob/master/CONTRIBUTING.md)
 
@@ -40,5 +44,4 @@ Feel free to contact me at baldphone.contact@gmail.com
  - [Application Class](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/java/com/bald/uriah/baldphone/BaldPhone.java)
  - [Main Manifest](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/AndroidManifest.xml)
  - [build.gradle (app)](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/build.gradle)
-
 
