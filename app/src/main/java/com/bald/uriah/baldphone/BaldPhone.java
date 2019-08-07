@@ -74,23 +74,22 @@ public class BaldPhone extends Application {
     }
 
     private void sendVersionInfo() {
-        if (S.isEmulator() || BuildConfig.TRAVIS)
-            return;
+        if (!S.isEmulator() && !BuildConfig.DEBUG) {
+            final SharedPreferences sharedPreferences = BPrefs.get(this);
+            if (!sharedPreferences.contains(BPrefs.UUID_KEY)) {
+                sharedPreferences.edit().putString(BPrefs.UUID_KEY, UUID.randomUUID().toString()).apply();
+            }
 
-        final SharedPreferences sharedPreferences = BPrefs.get(this);
-        if (!sharedPreferences.contains(BPrefs.UUID_KEY)) {
-            sharedPreferences.edit().putString(BPrefs.UUID_KEY, UUID.randomUUID().toString()).apply();
+            Volley.newRequestQueue(this).add(
+                    new StringRequest(
+                            Request.Method.GET,
+                            String.format(Locale.US, SERVER_URL, sharedPreferences.getString(BPrefs.UUID_KEY, null), BuildConfig.VERSION_CODE),
+                            response -> {
+                            },
+                            error -> {
+                            }
+                    ).setTag(VOLLEY_TAG));
         }
-
-        Volley.newRequestQueue(this).add(
-                new StringRequest(
-                        Request.Method.GET,
-                        String.format(Locale.US, SERVER_URL, sharedPreferences.getString(BPrefs.UUID_KEY, null), BuildConfig.VERSION_CODE),
-                        response -> {
-                        },
-                        error -> {
-                        }
-                ).setTag(VOLLEY_TAG));
     }
 
     @Override

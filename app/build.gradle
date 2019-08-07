@@ -22,22 +22,15 @@ apply plugin: 'com.android.application'
 
 
 android {
-    def isRunningOnTravis = System.getenv("CI") == "true"
+
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.bald.uriah.baldphone"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 82
+        versionCode 83
         versionName "11.4.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        if (isRunningOnTravis) {
-            buildConfigField "boolean", "TRAVIS", 'true'
-        } else {
-            buildConfigField "boolean", "TRAVIS", 'false'
-        }
-        throw new GradleException('gradle is running on travis: '+ isRunningOnTravis)
     }
 
     buildTypes {
@@ -52,8 +45,8 @@ android {
         }
 
     }
-    
-    
+
+
     flavorDimensions "updating_mechanism"
     productFlavors {
         baldUpdates {
