@@ -23,6 +23,7 @@ import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
@@ -52,6 +53,10 @@ import androidx.annotation.StyleRes;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.contacts.ShareActivity;
@@ -68,6 +73,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
+import java.util.UUID;
 
 /**
  * S - Static. Static methods which are used everywhere in the platform.
@@ -343,5 +349,24 @@ public class S {
                 || Build.MANUFACTURER.contains("Genymotion")
                 || (Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith("generic"))
                 || "google_sdk".equals(Build.PRODUCT);
+    }
+
+    public static void sendVersionInfo(final Context context) {
+        if (!S.isEmulator() && !BuildConfig.DEBUG) {
+            final SharedPreferences sharedPreferences = BPrefs.get(context);
+            if (!sharedPreferences.contains(BPrefs.UUID_KEY)) {
+                sharedPreferences.edit().putString(BPrefs.UUID_KEY, UUID.randomUUID().toString()).apply();
+            }
+
+            Volley.newRequestQueue(context).add(
+                    new StringRequest(
+                            Request.Method.GET,
+                            String.format(Locale.US, "http://baldphone.co.nf/insert_new_install.php?uuid=%s&vcode=%d", sharedPreferences.getString(BPrefs.UUID_KEY, null), BuildConfig.VERSION_CODE),
+                            response -> {
+                            },
+                            error -> {
+                            }
+                    ).setTag("baldphone_server"));
+        }
     }
 }

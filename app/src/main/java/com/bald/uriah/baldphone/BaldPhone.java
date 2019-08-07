@@ -22,17 +22,12 @@ package com.bald.uriah.baldphone;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.util.Log;
 
-import com.android.volley.Request;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.bald.uriah.baldphone.activities.UpdatesActivity;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
 import com.bald.uriah.baldphone.services.NotificationListenerService;
-import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldUncaughtExceptionHandler;
 import com.bald.uriah.baldphone.utils.S;
 
@@ -44,13 +39,9 @@ import org.acra.config.HttpSenderConfigurationBuilder;
 import org.acra.data.StringFormat;
 import org.acra.sender.HttpSender;
 
-import java.util.Locale;
-import java.util.UUID;
-
 public class BaldPhone extends Application {
     private static final String TAG = BaldPhone.class.getSimpleName();
-    private static final String SERVER_URL = "http://baldphone.co.nf/insert_new_install.php?uuid=%s&vcode=%d";
-    private static final String VOLLEY_TAG = "baldphone_server";
+
 
     // Application class should not have any fields, http://www.developerphil.com/dont-store-data-in-the-application-object/
 
@@ -70,27 +61,9 @@ public class BaldPhone extends Application {
             Log.e(TAG, e.getMessage());
             e.printStackTrace();
         }
-        sendVersionInfo();
+        S.sendVersionInfo(this);
     }
 
-    private void sendVersionInfo() {
-        if (!S.isEmulator() && !BuildConfig.DEBUG) {
-            final SharedPreferences sharedPreferences = BPrefs.get(this);
-            if (!sharedPreferences.contains(BPrefs.UUID_KEY)) {
-                sharedPreferences.edit().putString(BPrefs.UUID_KEY, UUID.randomUUID().toString()).apply();
-            }
-
-            Volley.newRequestQueue(this).add(
-                    new StringRequest(
-                            Request.Method.GET,
-                            String.format(Locale.US, SERVER_URL, sharedPreferences.getString(BPrefs.UUID_KEY, null), BuildConfig.VERSION_CODE),
-                            response -> {
-                            },
-                            error -> {
-                            }
-                    ).setTag(VOLLEY_TAG));
-        }
-    }
 
     @Override
     protected void attachBaseContext(final Context base) {

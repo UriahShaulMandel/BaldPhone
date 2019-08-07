@@ -31,7 +31,8 @@ import com.bald.uriah.baldphone.utils.S;
  */
 public class BootUpBroadcastReceiver extends BroadcastReceiver {
     @Override
-    public void onReceive(Context context, Intent intent) {
+    public void onReceive(final Context context, final Intent intent) {
         S.logImportant("BaldPhone OnBoot called");
+        S.sendVersionInfo(context);
     }
 }

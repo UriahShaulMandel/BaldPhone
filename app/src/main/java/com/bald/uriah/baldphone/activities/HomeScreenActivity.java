@@ -269,7 +269,7 @@ public class HomeScreenActivity extends BaldActivity {
         if (finishedUpdatingApps)
             updateViewPager();
         baldHomeWatcher.startWatch();
-        if (!testing) {
+        if (!testing) { // TODO replace with system env
             final int percent = (int) (Math.random() * 100) + 1;//1 - 100
             if (percent < (100 + (onStartCounter - 20) * 5))
                 if (percent % 3 == 1 && !isActivityDefault()) { // one in 3 chance
