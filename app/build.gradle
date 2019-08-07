@@ -44,9 +44,8 @@ android {
         }
 
     }
-    /**
-     * This is used to remove the self-updating mechanism from the F-Droid flavour
-     */
+    
+    
     flavorDimensions "updating_mechanism"
     productFlavors {
         baldUpdates {
@@ -85,5 +84,5 @@ dependencies {
     implementation "ch.acra:acra-http:5.3.0"
     implementation 'androidx.exifinterface:exifinterface:1.1.0-beta01'
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.3'
-    androidTestImplementation 'androidx.test:rules:1.2.0'//for adding pic to contact
+    androidTestImplementation 'androidx.test:rules:1.2.0'
 }
