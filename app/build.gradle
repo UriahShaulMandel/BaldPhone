@@ -23,7 +23,6 @@ apply plugin: 'com.android.application'
 
 android {
     def isRunningOnTravis = System.getenv("CI") == "true"
-
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.bald.uriah.baldphone"
@@ -38,6 +37,7 @@ android {
         } else {
             buildConfigField "boolean", "TRAVIS", 'false'
         }
+        throw new GradleException('gradle is running on travis: '+ isRunningOnTravis)
     }
 
     buildTypes {
