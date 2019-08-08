@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +46,8 @@ import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldSwitch;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
+
+import org.acra.ACRA;
 
 import java.util.Collections;
 import java.util.List;
@@ -143,10 +146,16 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
         if (requestCode == ADD_ALARM_ACTIVITY_REQUEST_CODE) {
             if (resultCode != RESULT_CANCELED) {
                 int key = data.getIntExtra(Alarm.ALARM_KEY_VIA_INTENTS, -1);
-                if (key == -1)
-                    throw new AssertionError("key cannot be -1");
-                Alarm newAlarm = AlarmsDatabase.getInstance(this).alarmsDatabaseDao().getByKey(key);
-                String name = newAlarm.getName();
+                if (key == -1) {
+                    Log.wtf(TAG, "Key should never be -1");
+                    ACRA.getErrorReporter().handleSilentException(new AssertionError("key cannot be -1"));
+                    BaldToast.error(this);
+                    finish();
+                    return;
+                }
+
+                final Alarm newAlarm = AlarmsDatabase.getInstance(this).alarmsDatabaseDao().getByKey(key);
+                final String name = newAlarm.getName();
                 final String message = String.format(getString(R.string.new_alarm___was_created), name == null || name.equals("") ? "" : getString(R.string.named__) + " " + name);
                 BaldToast.from(this).setText(message).setType(BaldToast.TYPE_INFORMATIVE).show();
                 final long nextTimeAlarmWillWork = AlarmScheduler.nextTimeAlarmWillWorkInMsFromNow(newAlarm);

@@ -106,7 +106,7 @@ public class S {
     }
 
     public static void hideKeyboard(@NonNull Activity activity) {
-        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        final InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
         View view = activity.getCurrentFocus();
         if (view == null) view = new View(activity);
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
@@ -140,7 +140,7 @@ public class S {
 
     public static boolean isPackageInstalled(@NonNull Context context, @NonNull String packageName) {
         final PackageManager packageManager = context.getPackageManager();
-        Intent intent = packageManager.getLaunchIntentForPackage(packageName);
+        final Intent intent = packageManager.getLaunchIntentForPackage(packageName);
         if (intent == null) {
             return false;
         }

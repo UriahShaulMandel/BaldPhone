@@ -37,7 +37,7 @@ public class FeedbackActivity extends BaldActivity {
         final EditText et_feedback = findViewById(R.id.et_feedback);
         findViewById(R.id.bt_send).setOnClickListener(v -> {
             final CharSequence text = et_feedback.getText();
-            if (text.length() == 1)
+            if (text.length() == 0)
                 BaldToast.from(v.getContext()).setType(BaldToast.TYPE_ERROR).setText(R.string.feedback_cannot_be_empty).show();
             else {
                 ACRA.getErrorReporter().handleSilentException(new FeedbackException(String.valueOf(text)));
