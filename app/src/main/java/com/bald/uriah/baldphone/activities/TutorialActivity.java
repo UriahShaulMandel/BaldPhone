@@ -36,14 +36,13 @@ import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.views.ViewPagerHolder;
 
 public class TutorialActivity extends BaldActivity {
-    private ViewPagerHolder viewPagerHolder;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tutorial_activity);
         getSharedPreferences(BPrefs.KEY, MODE_PRIVATE).edit().putBoolean(BPrefs.AFTER_TUTORIAL_KEY, true).apply();
-        viewPagerHolder = findViewById(R.id.view_pager_holder);
+        ViewPagerHolder viewPagerHolder = findViewById(R.id.view_pager_holder);
         viewPagerHolder.setViewPagerAdapter(new Adapter(getSupportFragmentManager()));
     }
 

@@ -18,7 +18,6 @@
   -->
 
 <resources>
-    <string name="___app_was_not_found">%s was not found!</string>
     <string name="about">About</string>
     <string name="about_subtext">Hi!\nMy name is Uriah Shaul Mandel, and I\'m the developer of this platform.\n
         I\'ve spent most of my \"adult\" life making this platform, and I\'ve released it for free, for all to
@@ -61,8 +60,6 @@
     <string name="and_welcome_to_baldphone">and welcome to Baldphone</string>
 
     <string name="apps">Apps</string>
-    <string name="are_you_sure_you_want_to_call_emergency_services">Are you sure you want to call Emergency Services?
-    </string>
     <string name="are_you_sure_you_want_to_delete___">Are you sure you want to delete %s?</string>
     <string name="assistant">Assistant</string>
     <string name="at_least_one_day_must_be_selected">At least one day must be selected!</string>
@@ -80,7 +77,6 @@
 
     <string name="call_log">Call Log:</string>
     <string name="call_subtext">This permission is required in order to call contacts.</string>
-    <string name="calling__">Calling %s</string>
     <string name="camera">Camera</string>
     <string name="camera_subtext">This permission is required in order to turn on the flashlight.</string>
     <string name="cancel">Cancel</string>
@@ -141,14 +137,12 @@
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Having a hard time using
         the phone\'s keyboard? use Baldphone\'s BIG keyboard instead!
     </string>
-    <string name="hebrew">0</string>
     <string name="hello">Hello</string>
     <string name="help">Video Tutorial</string>
     <string name="hide">Hide</string>
     <string name="high_level">High Level</string>
     <string name="home_phone_number">Home phone number</string>
     <string name="hour">Hour</string>
-    <string name="how_can_i_help">How can I help?</string>
     <string name="huge">Huge</string>
     <string name="internet">Internet</string>
     <string name="invoked_in">Invoked in:</string>
@@ -183,7 +177,6 @@
     <string name="new_alarm___was_created">new alarm %s was created!</string>
     <string name="nfc">NFC</string>
     <string name="no">No</string>
-    <string name="no_contact_contains___">no contact contains %s!</string>
     <string name="notes">Notes</string>
     <string name="notes_settings">Notes</string>
     <string name="notes_settings_subtext">Choose if you want to have a Note page in the home screen.</string>
@@ -198,7 +191,6 @@
 
 
     <string name="open">Open</string>
-    <string name="opening___">Opening %s</string>
 
     <string name="outgoing">Outgoing</string>
     <string name="page">Page</string>//page 1 of 2
@@ -212,9 +204,7 @@
     <string name="pill_added">Pill added!</string>
     <string name="pill_name">Pill Name</string>
     <string name="pills">Pills</string>
-    <string name="please_repeat_that">Couldn\'t understand, please repeat.</string>
     <string name="press_longer">Press Longer!</string>
-    <string name="press_me_and_start_talking">Press me and start talking</string>
     <string name="quick_alarm">Timer</string>
     <string name="read_call_log">Read Call History</string>
     <string name="read_call_log_subtext">This permission is required in order to view the call history.</string>
@@ -281,8 +271,6 @@
     <string name="to___hours_and___minutes_from_now">to %d hours and %d minutes from now</string>
     <string name="to___minuets_from_now">to %d minutes from now</string>
     <string name="today">Today</string>
-    <string name="too_many_apps_with___in_them">too many apps with %s in them!</string>
-    <string name="too_many_contacts_with___in_them">too many contacts with %s in them!</string>
     <string name="took">Took!</string>
     <string name="tuesday">Tuesday</string>
     <string name="uninstall">Uninstall</string>

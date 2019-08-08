@@ -19,7 +19,6 @@
   -->
 
 <resources>
-    <string name="___app_was_not_found">%s n\'a pas été trouvée !</string>
     <string name="about">À propos</string>
     <string name="about_subtext">Bonjour\nJe m\'appelle Uriah Shaul Mandel et je suis le développeur de cette plateforme.\nJe vis à
         Tel Aviv.\nBeaucoup de temps et d\'efforts ont été nécessaires pour créer cette plateforme et pour qu\'elle soit gratuite à utiliser pour tout le monde.\nVous pouvez me contacter avec plaisir par e-mail :\nbaldphone.contact@gmail.com
@@ -59,8 +58,6 @@
     <string name="and_welcome_to_baldphone">et bienvenue à Baldphone</string>
 
     <string name="apps">Applications</string>
-    <string name="are_you_sure_you_want_to_call_emergency_services">Êtes-vous sûr(e) de vouloir appeler les Services d\'Urgence ?
-    </string>
     <string name="are_you_sure_you_want_to_delete___">Êtes-vous sûr(e) de vouloir supprimer %s?</string>
     <string name="assistant">Assistant</string>
     <string name="at_least_one_day_must_be_selected">Vous devez en choisir au moins un !</string>
@@ -78,7 +75,6 @@
 
     <string name="call_log">Journal d\'appels :</string>
     <string name="call_subtext">Cette permission est requise pour appeler vos contacts.</string>
-    <string name="calling__">Appel de %s</string>
     <string name="camera">Appareil photo</string>
     <string name="camera_subtext">Cette permission est requise pour activer la torche.</string>
     <string name="cancel">Annuler</string>
@@ -136,14 +132,12 @@
     <string name="friday">Vendredi</string>
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Des difficultés pour utiliser le clavier de votre téléphone ? Utilisez le GROS de Baldphone plutôt.
     </string>
-    <string name="hebrew">0</string>
     <string name="hello">Bonjour</string>
     <string name="help">Didacticiel vidéo</string>
     <string name="hide">Masquer</string>
     <string name="high_level">Élevé</string>
     <string name="home_phone_number">Numéro de téléphone Domicile</string>
     <string name="hour">Heure</string>
-    <string name="how_can_i_help">Comment puis-je aider ?</string>
     <string name="huge">Très grand</string>
     <string name="internet">Internet</string>
     <string name="invoked_in">Minuteur de :</string>
@@ -177,7 +171,6 @@
     <string name="new_alarm___was_created">La nouvelle alarme %s a été créée!</string>
     <string name="nfc">NFC</string>
     <string name="no">Non</string>
-    <string name="no_contact_contains___">Aucun contact ne contient %s !</string>
     <string name="notes">Notes</string>
     <string name="notes_settings">Notes</string>
     <string name="notes_settings_subtext">Choisissez si vous voulez avoir une page Notes sur l\'écran d\'accueil.</string>
@@ -192,7 +185,6 @@
 
 
     <string name="open">Ouvrir</string>
-    <string name="opening___">Ouverture de %s</string>
 
     <string name="outgoing">Sortant</string>
     <string name="page">Page</string>//page 1 de 2
@@ -206,9 +198,7 @@
     <string name="pill_added">Médicament ajouté !</string>
     <string name="pill_name">Nom du médicament</string>
     <string name="pills">Médicaments</string>
-    <string name="please_repeat_that">Je ne comprends pas, veuillez répéter.</string>
     <string name="press_longer">Appuyez plus longtemps !</string>
-    <string name="press_me_and_start_talking">Appuyez dessus et commencez à parler</string>
     <string name="quick_alarm">Minuteur</string>
     <string name="read_call_log">Lire l\'historique des appels</string>
     <string name="read_call_log_subtext">Cette permission est nécessaire pour voir le journal d\'appels.</string>
@@ -271,8 +261,6 @@
     <string name="to___hours_and___minutes_from_now">Sonnera dans %d heures et %d minutes</string>
     <string name="to___minuets_from_now">Sonnera dans %d minutes</string>
     <string name="today">Aujourd\'hui</string>
-    <string name="too_many_apps_with___in_them">too many apps with %s in them!</string>
-    <string name="too_many_contacts_with___in_them">too many contacts with %s in them!</string>
     <string name="took">Prise !</string>
     <string name="tuesday">Mardi</string>
     <string name="uninstall">Désinstaller</string>

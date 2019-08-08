@@ -18,7 +18,6 @@
   -->
 
 <resources>
-    <string name="___app_was_not_found">היישום או איש הקשר %s לא נמצא/ה!</string>
     <string name="about">אודות</string>
     <string name="about_subtext">הפרוייקט נולד מפגישה עם חבר שחלה בפרקינסון. עזרתי לו עם בעיה כלשהי בטלפון, והבחנתי עד
         כמה הוא מתקשה לבצע פעולות, שעד אז חשבתי שהן פשוטות ומובנות מאליהן.\nהייתי בן 15, תלמיד במגמת מחשבים בכפר הירוק,
@@ -62,7 +61,6 @@
     <string name="an_error_has_occurred">אירעה שגיאה!</string>
     <string name="and_welcome_to_baldphone">וברוכים הבאים ל-BaldPhone</string>
     <string name="apps">יישומים</string>
-    <string name="are_you_sure_you_want_to_call_emergency_services">האם ברצונך להתקשר למגן דוד אדום?</string>
     <string name="are_you_sure_you_want_to_delete___">האם ברצונך למחוק את %s?</string>
     <string name="assistant">סיוע קולי</string>
     <string name="at_least_one_day_must_be_selected">לפחות יום אחד חייב להיות מסומן!</string>
@@ -80,7 +78,6 @@
     <string name="call">התקשר</string>
     <string name="call_log">שיחות אחרונות:</string>
     <string name="call_subtext">אנא אשר ל BaldPhone לבצע שיחות טלפון</string>
-    <string name="calling__">מתקשר ל%s</string>
     <string name="camera">מצלמה</string>
     <string name="camera_subtext">אנא אשר ל BaldPhone את הרשאת המצלמה, שמאפשרת להפעיל את הפנס. תמונות לעולם לא יצולמו.
     </string>
@@ -141,14 +138,12 @@
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">מתקשה בתפעול המקלדת?
         עבור למקלדת הגדולה והמותאמת!
     </string>
-    <string name="hebrew">1</string>
     <string name="hello">שלום</string>
     <string name="help">סרטון הדרכה</string>
     <string name="hide">הסתר</string>
     <string name="high_level">רמה גבוהה</string>
     <string name="home_phone_number">בית</string>
     <string name="hour">שעה</string>
-    <string name="how_can_i_help">איך אפשר לעזור?</string>
     <string name="huge">ענק</string>
     <string name="internet">אינטרנט</string>
     <string name="invoked_in">צלצול יופעל בעוד</string>
@@ -180,7 +175,6 @@
     <string name="new_alarm___was_created">השכמה חדשה בשם %s הוגדרה!</string>
     <string name="nfc">NFC</string>
     <string name="no">לא</string>
-    <string name="no_contact_contains___">אין איש קשר בשם %s!</string>
     <string name="notes">רשימות</string>
     <string name="notes_settings">הגדרות פתקים</string>
     <string name="notes_settings_subtext">בחר האם להוסיף מסך רשימות למסך הבית</string>
@@ -191,7 +185,6 @@
     <string name="on">מופעל</string>
     <string name="only_once">חד פעמי</string>
     <string name="open">לפתוח</string>
-    <string name="opening___">טוען %s</string>
     <string name="outgoing">יוצאת</string>
     <string name="page">עמוד</string>
     <string name="permissions_part">הרשאות</string>
@@ -204,9 +197,7 @@
     <string name="pill_added">תרופה הוספה!</string>
     <string name="pill_name">שם תרופה</string>
     <string name="pills">תרופות</string>
-    <string name="please_repeat_that">לא הצלחתי להבין, אנא חזור על מילותיך.</string>
     <string name="press_longer">לחיצה ארוכה</string>
-    <string name="press_me_and_start_talking">לחץ כאן והתחל לדבר</string>
     <string name="quick_alarm">טיימר</string>
     <string name="read_call_log">גישה לשיחות האחרונות</string>
     <string name="read_call_log_subtext">אנא אפשר לBaldPhone לגשת לשיחות האחרונות, אשר יוצגו במסך השיחות האחרונות.
@@ -273,8 +264,6 @@
     <string name="to___hours_and___minutes_from_now">ל%d שעות ו%d דקות מעכשיו</string>
     <string name="to___minuets_from_now">ל%d דקות מעכשיו</string>
     <string name="today">היום</string>
-    <string name="too_many_apps_with___in_them">יותר מידי יישומים ששמם מכיל %s!</string>
-    <string name="too_many_contacts_with___in_them">יותר מידי אנשי קשר ששמם %s!</string>
     <string name="took">לקחתי!</string>
     <string name="tuesday">שלישי</string>
     <string name="uninstall">מחיקת יישום</string>
