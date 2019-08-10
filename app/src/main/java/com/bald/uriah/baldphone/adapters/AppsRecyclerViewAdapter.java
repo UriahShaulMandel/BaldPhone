@@ -177,7 +177,6 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
             this.pin = container.findViewById(R.id.pin);
 
             container.setOnClickListener(this);
-
         }
 
         public void update(final int index) {
