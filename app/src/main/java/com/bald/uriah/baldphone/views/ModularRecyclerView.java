@@ -22,6 +22,7 @@ package com.bald.uriah.baldphone.views;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -78,5 +79,17 @@ public class ModularRecyclerView extends RecyclerView implements Modular {
 
         }
 
+        public static final ModularAdapter EMPTY_ADAPTER = new ModularAdapter() {
+            @NonNull
+            @Override
+            public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                return null;
+            }
+
+            @Override
+            public int getItemCount() {
+                return 0;
+            }
+        };
     }
 }

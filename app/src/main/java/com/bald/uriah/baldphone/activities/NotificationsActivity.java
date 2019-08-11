@@ -47,7 +47,7 @@ import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTI
 public class NotificationsActivity extends BaldActivity {
     private static final String TAG = NotificationsActivity.class.getSimpleName();
     public Bundle[] activeNotifications;
-    private RecyclerView recyclerView;
+    public RecyclerView recyclerView;
     private NotificationRecyclerViewAdapter notificationRecyclerViewAdapter;
     private final BroadcastReceiver notificationReceiver = new BroadcastReceiver() {
         @Override

@@ -127,11 +127,11 @@ public final class BPrefs {
         return context.getSharedPreferences(KEY, Context.MODE_PRIVATE);
     }
 
-    static class Themes {
-        static final int LIGHT = 0;
-        static final int ADAPTIVE = 1;
-        static final int DARK = 2;
+    public static class Themes {
+        public static final int LIGHT = 0;
+        public static final int ADAPTIVE = 1;
+        public static final int DARK = 2;
         @StyleRes
-        static final int[] THEMES = new int[]{R.style.bald_light, -1, R.style.bald_dark, R.style.bald_skin};
+        public static final int[] THEMES = new int[]{R.style.bald_light, -1, R.style.bald_dark, R.style.bald_skin};
     }
 }
