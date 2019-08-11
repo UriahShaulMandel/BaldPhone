@@ -19,36 +19,63 @@
 
 package com.bald.uriah.baldphone.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+
 import androidx.test.espresso.ViewInteraction;
 import androidx.test.filters.LargeTest;
-import androidx.test.rule.ActivityTestRule;
 import androidx.test.runner.AndroidJUnit4;
+
 import com.bald.uriah.baldphone.R;
+
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.Espresso.pressBack;
-import static androidx.test.espresso.action.ViewActions.*;
-import static androidx.test.espresso.matcher.ViewMatchers.*;
+import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
+import static androidx.test.espresso.action.ViewActions.longClick;
+import static androidx.test.espresso.action.ViewActions.replaceText;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class PhoneActivityTest extends BaseActivityTest {
-    @Rule
-    public ActivityTestRule<HomeScreenActivity> mActivityTestRule = new ActivityTestRule<>(HomeScreenActivity.class, true, false);
 
-    @Test public void phoneActivityTest() {
+    private static Matcher<View> childAtPosition(final Matcher<View> parentMatcher, final int position) {
+        return new TypeSafeMatcher<View>() {
+            @Override
+            public void describeTo(Description description) {
+                description.appendText("Child at position " + position + " in parent ");
+                parentMatcher.describeTo(description);
+            }
+
+            @Override
+            public boolean matchesSafely(View view) {
+                ViewParent parent = view.getParent();
+                return parent instanceof ViewGroup && parentMatcher.matches(parent) && view.equals(((ViewGroup) parent).getChildAt(position));
+            }
+        };
+    }
+
+    @Override
+    protected Class<? extends Activity> activity() {
+        return HomeScreenActivity.class;
+    }
+
+    @Test
+    public void phoneActivityTest() {
         mActivityTestRule.launchActivity(new Intent());
         ViewInteraction firstPageAppIcon = onView(allOf(withId(R.id.bt_dialer), childAtPosition(allOf(withId(R.id.phone_container), childAtPosition(withId(R.id.page1), 2)), 2), isDisplayed()));
         sleep();
@@ -68,7 +95,7 @@ public class PhoneActivityTest extends BaseActivityTest {
         ViewInteraction baldEditText = onView(allOf(withId(R.id.et_name), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 1), isDisplayed()));
         sleep();
         baldEditText.perform(replaceText("v"), closeSoftKeyboard());
-        ViewInteraction baldButton4 = onView(allOf(withId(R.id.save), withText("save"), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 8), isDisplayed()));
+        ViewInteraction baldButton4 = onView(allOf(withId(R.id.save), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 8), isDisplayed()));
         sleep();
         baldButton4.perform(longClick());
         try {
@@ -82,30 +109,17 @@ public class PhoneActivityTest extends BaseActivityTest {
         ViewInteraction baldEditText2 = onView(allOf(withId(R.id.et_mail), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 7), isDisplayed()));
         sleep();
         baldEditText2.perform(replaceText("hh"), closeSoftKeyboard());
-        ViewInteraction baldButton5 = onView(allOf(withId(R.id.save), withText("save"), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 8), isDisplayed()));
+        ViewInteraction baldButton5 = onView(allOf(withId(R.id.save), childAtPosition(childAtPosition(withId(android.R.id.content), 0), 8), isDisplayed()));
         sleep();
         baldButton5.perform(longClick());
         sleep();
         ViewInteraction baldLinearLayoutButton3 = onView(allOf(withId(R.id.bt_delete), childAtPosition(allOf(withId(R.id.options_bar), childAtPosition(withId(R.id.ll_info), 0)), 2), isDisplayed()));
         sleep();
         baldLinearLayoutButton3.perform(longClick());
-        ViewInteraction baldButton6 = onView(allOf(withId(R.id.dialog_box_true), withText("Yes"), childAtPosition(childAtPosition(withId(R.id.container), 1), 0), isDisplayed()));
+        ViewInteraction baldButton6 = onView(allOf(withId(R.id.dialog_box_true), childAtPosition(childAtPosition(withId(R.id.container), 1), 0), isDisplayed()));
         sleep();
         baldButton6.perform(longClick());
         pressBack();
     }
 
-    private static Matcher<View> childAtPosition(final Matcher<View> parentMatcher, final int position) {
-        return new TypeSafeMatcher<View>() {
-            @Override public void describeTo(Description description) {
-                description.appendText("Child at position " + position + " in parent ");
-                parentMatcher.describeTo(description);
-            }
-
-            @Override public boolean matchesSafely(View view) {
-                ViewParent parent = view.getParent();
-                return parent instanceof ViewGroup && parentMatcher.matches(parent) && view.equals(((ViewGroup) parent).getChildAt(position));
-            }
-        };
-    }
 }

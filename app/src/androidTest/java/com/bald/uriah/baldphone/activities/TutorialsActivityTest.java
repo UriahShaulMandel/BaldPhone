@@ -19,45 +19,67 @@
 
 package com.bald.uriah.baldphone.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+
 import androidx.test.espresso.ViewInteraction;
 import androidx.test.filters.LargeTest;
-import androidx.test.rule.ActivityTestRule;
 import androidx.test.runner.AndroidJUnit4;
+
 import com.bald.uriah.baldphone.R;
+
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.longClick;
-import static androidx.test.espresso.matcher.ViewMatchers.*;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class TutorialsActivityTest extends BaseActivityTest {
 
-    @Rule
-    public ActivityTestRule<TutorialActivity> mActivityTestRule = new ActivityTestRule<>(TutorialActivity.class, true, false);
+    private static Matcher<View> childAtPosition(final Matcher<View> parentMatcher, final int position) {
+        return new TypeSafeMatcher<View>() {
+            @Override
+            public void describeTo(Description description) {
+                description.appendText("Child at position " + position + " in parent ");
+                parentMatcher.describeTo(description);
+            }
 
-    @Test public void tutorialsActivityTest() {
+            @Override
+            public boolean matchesSafely(View view) {
+                ViewParent parent = view.getParent();
+                return parent instanceof ViewGroup && parentMatcher.matches(parent) && view.equals(((ViewGroup) parent).getChildAt(position));
+            }
+        };
+    }
+
+    @Override
+    protected Class<? extends Activity> activity() {
+        return TutorialActivity.class;
+    }
+
+    @Test
+    public void tutorialsActivityTest() {
         mActivityTestRule.launchActivity(new Intent());
         sleep();
         ViewInteraction baldImageButton = onView(allOf(withId(R.id.right_arrow), childAtPosition(childAtPosition(withId(R.id.view_pager_holder), 1), 1), isDisplayed()));
         baldImageButton.perform(longClick());
         sleep();
-        ViewInteraction appCompatTextView = onView(allOf(withId(R.id.short_presses), withText("Regular level"), childAtPosition(childAtPosition(withId(R.id.id_dummy), 1), 6), isDisplayed()));
+        ViewInteraction appCompatTextView = onView(allOf(withId(R.id.short_presses), childAtPosition(childAtPosition(withId(R.id.id_dummy), 1), 6), isDisplayed()));
         appCompatTextView.perform(click());
         sleep();
-        ViewInteraction appCompatTextView2 = onView(allOf(withId(R.id.long_presses), withText("High Level"), childAtPosition(childAtPosition(withId(R.id.id_dummy), 1), 2), isDisplayed()));
+        ViewInteraction appCompatTextView2 = onView(allOf(withId(R.id.long_presses), childAtPosition(childAtPosition(withId(R.id.id_dummy), 1), 2), isDisplayed()));
         appCompatTextView2.perform(longClick());
         sleep();
         ViewInteraction baldImageButton2 = onView(allOf(withId(R.id.right_arrow), childAtPosition(childAtPosition(withId(R.id.view_pager_holder), 1), 1), isDisplayed()));
@@ -73,17 +95,4 @@ public class TutorialsActivityTest extends BaseActivityTest {
         baldImageButton5.perform(longClick());
     }
 
-    private static Matcher<View> childAtPosition(final Matcher<View> parentMatcher, final int position) {
-        return new TypeSafeMatcher<View>() {
-            @Override public void describeTo(Description description) {
-                description.appendText("Child at position " + position + " in parent ");
-                parentMatcher.describeTo(description);
-            }
-
-            @Override public boolean matchesSafely(View view) {
-                ViewParent parent = view.getParent();
-                return parent instanceof ViewGroup && parentMatcher.matches(parent) && view.equals(((ViewGroup) parent).getChildAt(position));
-            }
-        };
-    }
 }

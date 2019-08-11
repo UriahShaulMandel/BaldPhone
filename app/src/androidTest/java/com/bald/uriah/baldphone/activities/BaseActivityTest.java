@@ -19,13 +19,32 @@
 
 package com.bald.uriah.baldphone.activities;
 
+import android.app.Activity;
+
+import androidx.test.rule.ActivityTestRule;
+
 import com.bald.uriah.baldphone.utils.BPrefs;
+
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
+import org.junit.rules.RuleChain;
+
+import java.util.Locale;
 
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 
-public class BaseActivityTest {
+public abstract class BaseActivityTest {
+    private final LocaleRule mLocaleRule = new LocaleRule(Locale.ENGLISH, Locale.FRENCH, Locale.forLanguageTag("iw-IL"));
+    private final ScreenshotWatcher mScreenshotWatcher = new ScreenshotWatcher();
+    public ActivityTestRule<HomeScreenActivity> mActivityTestRule = new ActivityTestRule(activity(), true, false);
+    @Rule
+    public final RuleChain mRuleChain = RuleChain.outerRule(mLocaleRule)
+            .around(mScreenshotWatcher)
+            .around(mActivityTestRule);
+
+    protected abstract Class<? extends Activity> activity();
+
     @Before
     public void setUp() {
         BPrefs
@@ -50,7 +69,7 @@ public class BaseActivityTest {
 
     public void sleep() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
