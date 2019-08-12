@@ -1,4 +1,7 @@
 language: android
+env:
+  global:
+
 android:
   components:
     - tools
@@ -17,6 +20,8 @@ android:
 jdk:
   - oraclejdk8
 before_script:
+  - git clone https://github.com/UriahShaulMandel/BaldPhoneScreenshots.git
+  - tree /
   - chmod +x gradlew
   - mkdir -p /home/travis/sdcard/
   - mksdcard -l baldphonesdcard 128M /home/travis/sdcard/sdcard.img
