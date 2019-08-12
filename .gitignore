@@ -30,3 +30,6 @@ run.bat
 .idea/inspectionProfiles/Project_Default.xml
 .idea/kotlinc.xml
 .idea/markdown-exported-files.xml
+app/baldUpdates/release/app-baldUpdates-release.apk
+app/baldUpdates/release/app-release.apk
+app/baldUpdates/release/output.json
