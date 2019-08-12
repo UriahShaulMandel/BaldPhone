@@ -39,7 +39,9 @@ script:
   - pwd
   - cd /home/travis
   - pwd
-  - git clone git@github.com:UriahShaulMandel/BaldPhone.git
+  - git config --global user.email "uriah.shm@outlook.com"
+  - git config --global user.name "UriahShaulMandel"
+  - git clone git@github.com:UriahShaulMandel/BaldPhoneScreenshots.git
   - pwd
   - cd BaldPhoneScreenshots
   - pwd
