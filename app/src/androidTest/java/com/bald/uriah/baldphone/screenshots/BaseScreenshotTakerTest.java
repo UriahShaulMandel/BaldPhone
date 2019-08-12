@@ -34,6 +34,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.RuleChain;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Locale;
@@ -56,7 +57,9 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
         test();
         getInstrumentation().waitForIdleSync();
         Thread.sleep(800);
-
+        File screenshotsFolder = new File("/sdcard/Pictures/screenshots");
+        if (!screenshotsFolder.exists())
+            screenshotsFolder.mkdir();
         try (FileOutputStream out = new FileOutputStream("/sdcard/Pictures/screenshots/" + getClass().getSimpleName() + "_" + locales[localeIndex++].getLanguage() + ".png")) {
             final Bitmap bitmap = screenShot(mActivityTestRule.getActivity().getWindow().getDecorView().getRootView());
             if (bitmap == null)
