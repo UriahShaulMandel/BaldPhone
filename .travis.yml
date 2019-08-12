@@ -22,7 +22,7 @@ before_script:
   - mkdir -p /home/travis/sdcard/
   - mksdcard -l baldphonesdcard 128M /home/travis/sdcard/sdcard.img
   - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
-  - emulator -avd test -no-audio -skin 1080x1920 -no-window -camera-back none -camera-front none -no-boot-anim -sdcard /home/travis/sdcard/sdcard.img -no-snapshot-save &
+  - emulator -avd test -no-audio -skin pixel -no-window -camera-back none -camera-front none -no-boot-anim -sdcard /home/travis/sdcard/sdcard.img -no-snapshot-save &
   - android-wait-for-emulator
   - adb shell settings put global window_animation_scale 0 &
   - adb shell settings put global transition_animation_scale 0 &
