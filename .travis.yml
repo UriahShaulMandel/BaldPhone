@@ -37,8 +37,9 @@ before_script:
 script:
   - ./gradlew connectedbaldUpdatesDebugAndroidTest
   - cd ..
-  - git clone https://github.com/UriahShaulMandel/BaldPhoneScreenshots.git
+  - git clone git@github.com:UriahShaulMandel/BaldPhoneScreenshots.git
   - cd BaldPhoneScreenshots
+  - mkdir -p /home/travis/sdcard/
   - adb pull /sdcard/Pictures/screenshots /home/travis/BaldPhoneScreenshots/screenshots
   - git add --all
   - git commit -am "committest1"

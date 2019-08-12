@@ -30,7 +30,7 @@ import org.junit.runner.RunWith;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class AlarmsActivityScreenshot extends BaseScreenshotTakerTest<AlarmsActivity> {
+public class AlarmsActivityEmptyScreenshot extends BaseScreenshotTakerTest<AlarmsActivity> {
 
     public void test() {
         mActivityTestRule.launchActivity(new Intent());
