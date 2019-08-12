@@ -39,8 +39,8 @@ script:
   - pwd
   - cd /home/travis
   - pwd
-  - git config --global user.email "uriah.shm@outlook.com"
-  - git config --global user.name "UriahShaulMandel"
+  - git config user.email "uriah.shm@outlook.com"
+  - git config user.name "UriahShaulMandelTravis"
   - git clone https://github.com/UriahShaulMandel/BaldPhoneScreenshots.git
   - pwd
   - cd BaldPhoneScreenshots
@@ -53,7 +53,8 @@ script:
   - pwd
   - git commit -am "committest1"
   - pwd
-  - git push
+  - git push https://UriahShaulMandel:${GITHUB_API_KEY}@${GH_REF} HEAD:master
+
 before_install:
   - echo yes | android update sdk --all --filter build-tools-28.0.3 --no-ui --force
 dd:
