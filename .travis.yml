@@ -36,14 +36,21 @@ before_script:
   - adb shell input keyevent 82 &
 script:
   - ./gradlew connectedbaldUpdatesDebugAndroidTest
-  - cd ..
-  - cd ..
+  - pwd
+  - cd /home/travis
+  - pwd
   - git clone https://github.com/UriahShaulMandel/BaldPhoneScreenshots.git
+  - pwd
   - cd BaldPhoneScreenshots
+  - pwd
   - mkdir -p /home/travis/BaldPhoneScreenshots/screenshots
+  - pwd
   - adb pull /sdcard/Pictures/screenshots /home/travis/BaldPhoneScreenshots/screenshots
+  - pwd
   - git add --all :/
+  - pwd
   - git commit -am "committest1"
+  - pwd
   - git push
 before_install:
   - echo yes | android update sdk --all --filter build-tools-28.0.3 --no-ui --force
