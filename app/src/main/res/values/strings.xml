@@ -359,4 +359,13 @@
     <string name="share_photo">Share Photo</string>
 
 
+    <string-array name="names_for_screenshots">
+        <item>Frank Jones</item>
+        <item>Bruce Oliver</item>
+        <item>Grady Mason</item>
+        <item>Bradley Dalton</item>
+        <item>Abraham Jones</item>
+        <item>Maurice Wilson</item>
+    </string-array>
+
 </resources>

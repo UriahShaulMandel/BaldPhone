@@ -22,7 +22,7 @@ before_script:
   - mkdir -p /home/travis/sdcard/
   - mksdcard -l baldphonesdcard 128M /home/travis/sdcard/sdcard.img
   - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
-  - emulator -avd test -no-audio -no-window -camera-back none -camera-front none -no-boot-anim -sdcard /home/travis/sdcard/sdcard.img -no-snapshot-save &
+  - emulator -avd test -no-audio -skin 1080x1920 -no-window -camera-back none -camera-front none -no-boot-anim -sdcard /home/travis/sdcard/sdcard.img -no-snapshot-save &
   - android-wait-for-emulator
   - adb shell settings put global window_animation_scale 0 &
   - adb shell settings put global transition_animation_scale 0 &
@@ -36,23 +36,15 @@ before_script:
   - adb shell input keyevent 82 &
 script:
   - ./gradlew connectedbaldUpdatesDebugAndroidTest
-  - pwd
   - cd /home/travis
-  - pwd
+  - git clone https://github.com/UriahShaulMandel/BaldPhoneScreenshots.git
+  - cd BaldPhoneScreenshots
   - git config user.email "uriah.shm@outlook.com"
   - git config user.name "UriahShaulMandelTravis"
-  - git clone https://github.com/UriahShaulMandel/BaldPhoneScreenshots.git
-  - pwd
-  - cd BaldPhoneScreenshots
-  - pwd
   - mkdir -p /home/travis/BaldPhoneScreenshots/screenshots
-  - pwd
   - adb pull /sdcard/Pictures/screenshots /home/travis/BaldPhoneScreenshots/screenshots
-  - pwd
   - git add --all :/
-  - pwd
   - git commit -am "committest1"
-  - pwd
   - git push https://UriahShaulMandel:${GITHUB_API_KEY}@${GH_REF} HEAD:master
 
 before_install:

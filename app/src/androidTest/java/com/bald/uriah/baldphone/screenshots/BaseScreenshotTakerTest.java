@@ -88,7 +88,7 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
                 .get(getInstrumentation().getTargetContext())
                 .edit()
                 .putBoolean(BPrefs.TEST_KEY, true)
-                .putInt(BPrefs.THEME_KEY, BPrefs.Themes.LIGHT)
+                .putInt(BPrefs.THEME_KEY, theme())
                 .putBoolean(BPrefs.VIBRATION_FEEDBACK_KEY, true)
                 .putBoolean(BPrefs.LONG_PRESSES_KEY, false)
                 .putBoolean(BPrefs.LONG_PRESSES_SHORTER_KEY, false)
@@ -112,5 +112,9 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    protected int theme() {
+        return BPrefs.Themes.LIGHT;
     }
 }

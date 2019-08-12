@@ -325,7 +325,7 @@ public class HomeScreenActivity extends BaldActivity {
                     .putExtra(PermissionActivity.EXTRA_REQUIRED_PERMISSIONS, PERMISSION_CAMERA)
             ));
 
-        } else {
+        } else if (!testing) { // For travis screenshots to show the flashlight
             flashButton.setOnClickListener(D.EMPTY_CLICK_LISTENER);
             flashButton.setVisibility(View.GONE);
         }
