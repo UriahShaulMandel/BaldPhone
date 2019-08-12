@@ -32,7 +32,7 @@ Main features:
 Feel free to contact me at baldphone.contact@gmail.com
 
 
-[<img src="https://github.com/UriahShaulMandel/BaldPhone/blob/master/logo/direct_apk_download.png?raw=true" alt="Get it on F-Droid" height="80">](http://bit.ly/BALDPHONE)
+[<img src="https://github.com/UriahShaulMandel/BaldPhone/blob/master/logo/direct_apk_download.png?raw=true" alt="Direct APK Download" height="80">](http://bit.ly/BALDPHONE)
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/com.bald.uriah.baldphone)
 
 
