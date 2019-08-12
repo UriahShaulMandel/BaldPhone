@@ -20,11 +20,15 @@
 package com.bald.uriah.baldphone.screenshots;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.util.Base64;
+import android.view.View;
 
 import androidx.test.rule.ActivityTestRule;
-import androidx.test.runner.screenshot.Screenshot;
 
 import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.utils.S;
 
 import org.junit.After;
 import org.junit.Before;
@@ -32,6 +36,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.RuleChain;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Locale;
 
@@ -53,12 +58,25 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
         test();
         getInstrumentation().waitForIdleSync();
         Thread.sleep(800);
-        try {
-            Screenshot.capture(mActivityTestRule.getActivity()).setName(locales[localeIndex++].getLanguage()).process();
-            localeIndex = localeIndex % locales.length;
-        } catch (IOException ex) {
-            throw new IllegalStateException(ex);
+
+        try (FileOutputStream out = new FileOutputStream("/sdcard/Pictures/screenshots/" + getClass().getSimpleName() + "_" + locales[localeIndex++].getLanguage() + ".png")) {
+            final Bitmap bitmap = screenShot(mActivityTestRule.getActivity().getWindow().getDecorView().getRootView());
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, out); // bmp is your Bitmap instance
+            String encoded = Base64.encodeToString(S.bitmapToByteArray(bitmap), Base64.DEFAULT);
+            System.out.println(encoded);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
+        localeIndex = localeIndex % locales.length;
+
+    }
+
+    public Bitmap screenShot(View view) {
+        final Bitmap bitmap = Bitmap.createBitmap(view.getWidth(),
+                view.getHeight(), Bitmap.Config.ARGB_8888);
+        final Canvas canvas = new Canvas(bitmap);
+        view.draw(canvas);
+        return bitmap;
     }
 
     protected abstract void test();
