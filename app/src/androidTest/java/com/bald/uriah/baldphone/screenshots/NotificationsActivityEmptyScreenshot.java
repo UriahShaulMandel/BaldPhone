@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package com.bald.uriah.baldphone.taking_screenshots;
+package com.bald.uriah.baldphone.screenshots;
 
 import android.content.Intent;
 
@@ -31,13 +31,11 @@ import org.junit.runner.RunWith;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class NotificationsActivityEmpty extends BaseScreenshotTakerTest<NotificationsActivity> {
+public class NotificationsActivityEmptyScreenshot extends BaseScreenshotTakerTest<NotificationsActivity> {
 
     public void test() {
         mActivityTestRule.launchActivity(new Intent());
-        mActivityTestRule.getActivity().runOnUiThread(() -> {
-            mActivityTestRule.getActivity().recyclerView.setAdapter(ModularRecyclerView.ModularAdapter.EMPTY_ADAPTER);
-        });
+        mActivityTestRule.getActivity().runOnUiThread(() -> mActivityTestRule.getActivity().recyclerView.setAdapter(ModularRecyclerView.ModularAdapter.EMPTY_ADAPTER));
     }
 
     @Override

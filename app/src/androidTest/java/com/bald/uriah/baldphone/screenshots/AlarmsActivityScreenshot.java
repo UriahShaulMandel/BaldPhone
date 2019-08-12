@@ -17,32 +17,27 @@
  * under the License.
  */
 
-package com.bald.uriah.baldphone.taking_screenshots;
+package com.bald.uriah.baldphone.screenshots;
 
 import android.content.Intent;
 
 import androidx.test.filters.LargeTest;
 import androidx.test.runner.AndroidJUnit4;
 
-import com.bald.uriah.baldphone.activities.NotificationsActivity;
-import com.bald.uriah.baldphone.views.ModularRecyclerView;
+import com.bald.uriah.baldphone.activities.alarms.AlarmsActivity;
 
 import org.junit.runner.RunWith;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class NotificationsActivityFull extends BaseScreenshotTakerTest<NotificationsActivity> {
+public class AlarmsActivityScreenshot extends BaseScreenshotTakerTest<AlarmsActivity> {
 
     public void test() {
         mActivityTestRule.launchActivity(new Intent());
-        mActivityTestRule.getActivity().runOnUiThread(() -> {
-            mActivityTestRule.getActivity().recyclerView.setAdapter(ModularRecyclerView.ModularAdapter.EMPTY_ADAPTER);
-        });
-
     }
 
     @Override
-    protected Class<NotificationsActivity> activity() {
-        return NotificationsActivity.class;
+    protected Class<AlarmsActivity> activity() {
+        return AlarmsActivity.class;
     }
 }

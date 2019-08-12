@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package com.bald.uriah.baldphone.taking_screenshots;
+package com.bald.uriah.baldphone.screenshots;
 
 import android.content.res.Configuration;
 import android.content.res.Resources;
