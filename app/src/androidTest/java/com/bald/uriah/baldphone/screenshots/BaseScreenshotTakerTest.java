@@ -20,7 +20,6 @@
 package com.bald.uriah.baldphone.screenshots;
 
 import android.app.Activity;
-import android.graphics.Bitmap;
 
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.runner.screenshot.Screenshot;
@@ -55,7 +54,7 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
         getInstrumentation().waitForIdleSync();
         Thread.sleep(800);
         try {
-            Screenshot.capture(mActivityTestRule.getActivity()).setFormat(Bitmap.CompressFormat.PNG).setName(locales[localeIndex++].getLanguage()).process();
+            Screenshot.capture(mActivityTestRule.getActivity()).setName(locales[localeIndex++].getLanguage()).process();
             localeIndex = localeIndex % locales.length;
         } catch (IOException ex) {
             throw new IllegalStateException(ex);
