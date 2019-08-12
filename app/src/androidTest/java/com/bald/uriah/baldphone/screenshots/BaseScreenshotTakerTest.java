@@ -55,7 +55,7 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
         getInstrumentation().waitForIdleSync();
         Thread.sleep(800);
         try {
-            Screenshot.capture().setFormat(Bitmap.CompressFormat.PNG).setName(locales[localeIndex++].getLanguage()).process();
+            Screenshot.capture(mActivityTestRule.getActivity()).setFormat(Bitmap.CompressFormat.PNG).setName(locales[localeIndex++].getLanguage()).process();
             localeIndex = localeIndex % locales.length;
         } catch (IOException ex) {
             throw new IllegalStateException(ex);
