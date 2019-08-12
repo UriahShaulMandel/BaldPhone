@@ -18,6 +18,7 @@ jdk:
   - oraclejdk8
 before_script:
   - chmod +x gradlew
+  - sudo apt-get install lib32stdc++6
   - mksdcard -l baldphonesdcard 128M /home/travis/sdcard/sdcard.img
   - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
   - emulator -avd test -no-audio -no-window -camera-back none -camera-front none -no-boot-anim -sdcard /home/travis/sdcard/sdcard.img -no-snapshot-save &
