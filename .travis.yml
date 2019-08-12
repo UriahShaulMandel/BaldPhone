@@ -41,7 +41,7 @@ script:
   - cd BaldPhoneScreenshots
   - mkdir -p /home/travis/BaldPhoneScreenshots/screenshots
   - adb pull /sdcard/Pictures/screenshots /home/travis/BaldPhoneScreenshots/screenshots
-  - git add .
+  - git add --all :/
   - git commit -am "committest1"
   - git push
 before_install:
