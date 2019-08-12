@@ -1,6 +1,4 @@
 language: android
-env:
-  global:
 
 android:
   components:
@@ -20,8 +18,6 @@ android:
 jdk:
   - oraclejdk8
 before_script:
-  - git clone https://github.com/UriahShaulMandel/BaldPhoneScreenshots.git
-  - tree /
   - chmod +x gradlew
   - mkdir -p /home/travis/sdcard/
   - mksdcard -l baldphonesdcard 128M /home/travis/sdcard/sdcard.img
@@ -40,5 +36,12 @@ before_script:
   - adb shell input keyevent 82 &
 script:
   - ./gradlew connectedbaldUpdatesDebugAndroidTest
+  - cd ..
+  - git clone https://github.com/UriahShaulMandel/BaldPhoneScreenshots.git
+  - cd BaldPhoneScreenshots
+  - adb pull /sdcard/Pictures/screenshots /home/travis/BaldPhoneScreenshots/screenshots
+  - git add --all
+  - git commit -am "committest1"
+  - git push
 before_install:
   - echo yes | android update sdk --all --filter build-tools-28.0.3 --no-ui --force
