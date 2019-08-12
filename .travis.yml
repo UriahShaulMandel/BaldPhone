@@ -39,7 +39,7 @@ script:
   - pwd
   - cd /home/travis
   - pwd
-  - git clone https://github.com/UriahShaulMandel/BaldPhoneScreenshots.git
+  - git clone git@github.com:UriahShaulMandel/BaldPhone.git
   - pwd
   - cd BaldPhoneScreenshots
   - pwd
