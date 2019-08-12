@@ -37,6 +37,7 @@ before_script:
 script:
   - ./gradlew connectedbaldUpdatesDebugAndroidTest
   - cd ..
+  - cd ..
   - git clone https://github.com/UriahShaulMandel/BaldPhoneScreenshots.git
   - cd BaldPhoneScreenshots
   - mkdir -p /home/travis/BaldPhoneScreenshots/screenshots
