@@ -331,8 +331,7 @@
     <string name="sound">Sonnerie</string>
     <string name="mute">Muet</string>
     <string name="vibrate">Vibreur</string>
-    <bool name="is_right_to_left">false</bool>
-    
+
     <string name="status_bar_settings">Barre d\'état</string>
     <string name="status_bar_settings_subtext">Où souhaitez-vous afficher la barre d\'état ?</string>
     <string name="only_home_screen">Écran d\'accueil uniquement</string>
@@ -340,5 +339,7 @@
     <string name="everywhere">Tout le temps</string>
     <string name="your_phone_doesnt_have_assistant_installed">Vous devez installer l\'application Google Assistant pour utiliser cette fonctionnalité.</string>
     <string name="share_photo">Partager Photo</string>
+
+    <bool name="is_right_to_left">false</bool>
 
 </resources>

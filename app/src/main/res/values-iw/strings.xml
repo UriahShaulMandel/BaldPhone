@@ -282,7 +282,6 @@
     <string name="write_external_storage">גישה לתמונות, סרטים וקבצים אחרים</string>
     <string name="yes">כן</string>
     <string name="yesterday">אתמול</string>
-    <bool name="is_right_to_left">true</bool>
 
     <string name="nothing">לא נמצא כלום</string>
     <string name="no_contacts_found">איש קשר לא נמצא!</string>
@@ -358,6 +357,7 @@
 
     <string name="share_photo">שיתוף תמונה</string>
 
+    <bool name="is_right_to_left">true</bool>
 
 </resources>
 

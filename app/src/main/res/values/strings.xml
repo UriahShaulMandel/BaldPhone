@@ -346,7 +346,6 @@
     <string name="mute">Mute</string>
     <string name="vibrate">Vibrate</string>
     <string name="your_phone_doesnt_have_assistant_installed">Your Phone doesn\'t have an assistant installed.</string>
-    <bool name="is_right_to_left">false</bool>
 
 
     <string name="status_bar_settings">Status bar</string>
@@ -367,5 +366,7 @@
         <item>Abraham Jones</item>
         <item>Maurice Wilson</item>
     </string-array>
+
+    <bool name="is_right_to_left">false</bool>
 
 </resources>
