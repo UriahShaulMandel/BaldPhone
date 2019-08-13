@@ -19,34 +19,44 @@
 
 package com.bald.uriah.baldphone.screenshots;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.util.DisplayMetrics;
 
 import androidx.test.filters.LargeTest;
 import androidx.test.runner.AndroidJUnit4;
 
+import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.contacts.ContactsActivity;
+import com.tomash.androidcontacts.contactgetter.main.ContactDataFactory;
+import com.tomash.androidcontacts.contactgetter.main.contactsSaver.ContactsSaverBuilder;
 
 import org.junit.runner.RunWith;
+
+import java.util.Locale;
+
+import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class ContactsActivityScreenshot extends BaseScreenshotTakerTest<ContactsActivity> {
 
     public void test() {
-//        final Context context = getInstrumentation().getTargetContext();
-//
-//        Resources resources = context.getResources();
-//        Locale.setDefault(locales[localeIndex]);
-//        Configuration config = resources.getConfiguration();
-//        config.setLocale(locales[localeIndex]);
-//        DisplayMetrics displayMetrics = resources.getDisplayMetrics();
-//        resources.updateConfiguration(config, displayMetrics);
-//
-//
-//        final String[] names = resources.getStringArray(R.array.names_for_screenshots);
-//        for (final String name : names) {
-//            new ContactsSaverBuilder(context).saveContact(ContactDataFactory.createEmpty().setCompositeName(name));
-//        }
+        final Context context = getInstrumentation().getTargetContext().getApplicationContext();
+
+        Resources resources = context.getResources();
+        Locale.setDefault(locales[localeIndex]);
+        Configuration config = resources.getConfiguration();
+        config.setLocale(locales[localeIndex]);
+        DisplayMetrics displayMetrics = resources.getDisplayMetrics();
+        resources.updateConfiguration(config, displayMetrics);
+
+        final String[] names = resources.getStringArray(R.array.names_for_screenshots);
+        for (final String name : names) {
+            new ContactsSaverBuilder(context).saveContact(ContactDataFactory.createEmpty().setCompositeName(name));
+        }
 
         mActivityTestRule.launchActivity(new Intent());
 
