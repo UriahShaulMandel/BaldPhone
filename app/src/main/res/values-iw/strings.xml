@@ -357,6 +357,15 @@
 
     <string name="share_photo">שיתוף תמונה</string>
 
+    <string-array name="names_for_screenshots">
+        <item>יונה הנביא</item>
+        <item>בנימין זאב הרצל</item>
+        <item>נורית שלם</item>
+        <item>עומר אדם</item>
+        <item>בוב הבנאי</item>
+        <item>יובל קוגוס</item>
+    </string-array>
+
     <bool name="is_right_to_left">true</bool>
 
 </resources>

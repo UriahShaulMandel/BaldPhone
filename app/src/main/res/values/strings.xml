@@ -359,12 +359,12 @@
 
 
     <string-array name="names_for_screenshots">
-        <item>Frank Jones</item>
-        <item>Bruce Oliver</item>
-        <item>Grady Mason</item>
-        <item>Bradley Dalton</item>
-        <item>Abraham Jones</item>
-        <item>Maurice Wilson</item>
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
     </string-array>
 
     <bool name="is_right_to_left">false</bool>

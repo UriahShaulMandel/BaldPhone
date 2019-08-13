@@ -340,6 +340,15 @@
     <string name="your_phone_doesnt_have_assistant_installed">Vous devez installer l\'application Google Assistant pour utiliser cette fonctionnalité.</string>
     <string name="share_photo">Partager Photo</string>
 
+    <string-array name="names_for_screenshots">
+        <item>Napoleon Bonaparte</item>
+        <item>Marie Antoinette</item>
+        <item>Louis Vitton</item>
+        <item>Georges Clemenceau</item>
+        <item>King Henry VIII</item>
+        <item>Gustave Eiffel</item>
+    </string-array>
+
     <bool name="is_right_to_left">false</bool>
 
 </resources>

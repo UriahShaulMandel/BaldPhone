@@ -338,6 +338,15 @@
     <string name="everywhere">Überall</string>
     <string name="share_photo">Foto weiterleiten</string>
 
+    <string-array name="names_for_screenshots">
+        <item>Bismarck</item>
+        <item>Bach</item>
+        <item>Mozart</item>
+        <item>Einstein</item>
+        <item>Karl Marx</item>
+        <item>Beethoven</item>
+    </string-array>
+
     <bool name="is_right_to_left">false</bool>
 
 
