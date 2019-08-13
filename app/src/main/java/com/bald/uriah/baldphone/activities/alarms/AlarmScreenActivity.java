@@ -108,14 +108,14 @@ public class AlarmScreenActivity extends TimedBaldActivity {
         cancel.setOnClickListener(v -> {
             if (vibrator != null)
                 vibrator.vibrate(D.vibetime);
-            if (alarm.getDays() == -1)//TODO change the CountDownAlarm way of working
+            if (alarm.getName().equals(getString(R.string.timer)))
                 AlarmsDatabase.getInstance(this).alarmsDatabaseDao().delete(alarm);
             finish();
         });
         cancel.setOnLongClickListener(v -> {
             if (vibrator != null)
                 vibrator.vibrate(D.vibetime);
-            if (alarm.getDays() == -1)//TODO change the CountDownAlarm way of working
+            if (alarm.getName().equals(getString(R.string.timer)))
                 AlarmsDatabase.getInstance(this).alarmsDatabaseDao().delete(alarm);
             finish();
             return true;

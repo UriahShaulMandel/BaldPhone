@@ -199,7 +199,7 @@
     <string name="pill_name">Nom du médicament</string>
     <string name="pills">Médicaments</string>
     <string name="press_longer">Appuyez plus longtemps !</string>
-    <string name="quick_alarm">Minuteur</string>
+    <string name="timer">Minuteur</string>
     <string name="read_call_log">Lire l\'historique des appels</string>
     <string name="read_call_log_subtext">Cette permission est nécessaire pour voir le journal d\'appels.</string>
     <string name="read_contacts">Lire les contacts</string>

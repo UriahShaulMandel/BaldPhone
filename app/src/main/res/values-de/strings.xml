@@ -198,7 +198,7 @@
     <string name="pill_name">Name des Medikaments</string>
     <string name="pills">Medikamente</string>
     <string name="press_longer">Länger drücken!</string>
-    <string name="quick_alarm">Eieruhr</string>
+    <string name="timer">Eieruhr</string>
     <string name="read_call_log">Anrufliste einlesen</string>
     <string name="read_call_log_subtext">Diese Erlaubnis wird benötigt, um die bisherigen Telefonate lesen zu können.</string>
     <string name="read_contacts">Kontakte einlesen</string>

@@ -198,7 +198,7 @@
     <string name="pill_name">שם תרופה</string>
     <string name="pills">תרופות</string>
     <string name="press_longer">לחיצה ארוכה</string>
-    <string name="quick_alarm">טיימר</string>
+    <string name="timer">טיימר</string>
     <string name="read_call_log">גישה לשיחות האחרונות</string>
     <string name="read_call_log_subtext">אנא אפשר לBaldPhone לגשת לשיחות האחרונות, אשר יוצגו במסך השיחות האחרונות.
     </string>

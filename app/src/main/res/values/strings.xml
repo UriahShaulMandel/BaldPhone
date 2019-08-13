@@ -205,7 +205,7 @@
     <string name="pill_name">Pill Name</string>
     <string name="pills">Pills</string>
     <string name="press_longer">Press Longer!</string>
-    <string name="quick_alarm">Timer</string>
+    <string name="timer">Timer</string>
     <string name="read_call_log">Read Call History</string>
     <string name="read_call_log_subtext">This permission is required in order to view the call history.</string>
     <string name="read_contacts">Read contacts</string>

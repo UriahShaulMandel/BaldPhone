@@ -64,7 +64,7 @@ public class AddTimerActivity extends BaldActivity {
     }
 
     private void submit() {
-        final String name = getString(R.string.quick_alarm);
+        final String name = getString(R.string.timer);
         final DateTime now = DateTime.now();
 
         final Alarm alarm = new Alarm();
