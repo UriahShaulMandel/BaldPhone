@@ -106,13 +106,6 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
 
     }
 
-    public void sleep() {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 
     protected int theme() {
         return BPrefs.Themes.LIGHT;
