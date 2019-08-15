@@ -29,7 +29,7 @@
     </string>
     <string name="accidental_touches_subtext">Eine Berührung wurde als unbeabsichtigt erkannt\ndrücke OK, um dein Handy weiter zu benutzen\nwenn diese Nachricht weiterhin angezeigt wird kannst du sie in den Einstellungen zur Barrierefreiheit ausschalten
     </string>
-    <string name="acknowledgments">Bestätigungen</string>
+    <string name="acknowledgments">Danksagungen</string>
     <string name="adaptive">Angepasst</string>
     <string name="add_alarm">Wecker hinzufügen</string>
     <string name="add_alarm_quickly">Eieruhr hinzufügen</string>
@@ -41,7 +41,7 @@
     <string name="add_to_home">Zum Startbildschirm hinzufügen</string>
     <string name="add_to_sos">Zu SOS hinzufügen</string>
     <string name="address">Adresse</string>
-    <string name="advanced_options">Erweiterte Möglichkeiten</string>
+    <string name="advanced_options">Weitere Einstellungen</string>
     <string name="afternoon">Nachmittag</string>
     <string name="airplane_mode">Flugzeugmodus</string>
     <string name="alarm_name">Benennung des Weckers</string>
@@ -63,14 +63,14 @@
     <string name="auto_brightness">Automatische\nHelligkeitsanpassung</string>
     <string name="back">Zurück</string>
     <string name="backspace">Schritt zurück</string>
-    <string name="baldphone_bla_allow_permission">Bitte bestätige die folgende Erlaubnis:</string>
+    <string name="baldphone_bla_allow_permission">Bitte erteile die folgende Berechtigung:</string>
     <string name="blocked">Blockiert</string>
     <string name="bluetooth">Bluetooth</string>
     <string name="brightness">Helligkeit</string>
     <string name="brightness_subtext">Die Helligkeit ändern.</string>
     <string name="cache_cleared_successfully">Der Cache wurde erfolgreich geleert!</string>
     <string name="call">Anrufen</string>
-    <string name="calling">Anruf läuft</string>
+    <string name="calling">Anrufen</string>
 
     <string name="call_log">Bisherige Telefonate:</string>
     <string name="call_subtext">Diese Erlaubnis wird benötigt, um Kontakte anzurufen.</string>
@@ -95,7 +95,7 @@
     <string name="clear_data_subtext3">Sicher?\nWenn du ja drückst, werden alle Daten gelöscht!</string>
     <string name="clock">Uhr</string>
     <string name="coming_soon">Kommt bald!</string>
-    <string name="connection_settings">Verbindung</string>
+    <string name="connection_settings">Verbindungseinstellungen</string>
     <string name="contact_must_has_name">Der Kontakt muss einen Namen haben!</string>
     <string name="contact_not_created">Der Kontakt wurde nicht angelegt!</string>
     <string name="contacts">Adressbuch</string>
@@ -119,7 +119,7 @@
     <string name="enter">Enter</string>
     <string name="enter_contact_or_phone_number">Trage hier den Namen des Kontaktes ein:</string>
     <string name="evening">Abend</string>
-    <string name="example_of_different_text_sizes">Beispiel verschiedener Schriftgrößen\nSollte lesbar aber nicht zu groß sein.
+    <string name="example_of_different_text_sizes">Beispiel verschiedener Schriftgrößen.\nDer Text sollte lesbar aber nicht zu groß sein.
     </string>
     <string name="external_storage_subtext">Diese Erlaubnis wird benötigt, um Bilder speichern zu können.</string>
     <string name="feedback">Rückmeldung geben</string>
@@ -127,7 +127,7 @@
     <string name="feedback_sent_successfully">Die Rückmeldung wurde erfolgreich versendet!</string>
     <string name="first_please_select_how_you_want_to_interact_with_buttons">Bitte wähle zuerst die Barrierefreiheit der Knöpfe.
     </string>
-    <string name="font">Schriftart</string>
+    <string name="font">Schriftgröße</string>
     <string name="friday">Freitag</string>
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Fällt es dir schwer, die Tastatur deines Handys zu benutzen? Benutze stattdessen Baldphone\'s GROSSE Tastatur!
     </string>
@@ -147,10 +147,10 @@
     <string name="large">Groß</string>
     <string name="left_handed">Linkshänder</string>
     <string name="light">Hell</string>
-    <string name="location">Ort</string>
+    <string name="location">Ortungsdienste</string>
     <string name="emergency_services">Notdienst</string>
     <string name="mail">Mail</string>
-    <string name="maps">Landkarten</string>
+    <string name="maps">Navigation</string>
 
 
     <string name="medium">Mittel</string>
@@ -183,10 +183,10 @@
     <string name="only_once">Nur einmal</string>
 
 
-    <string name="open">Offen</string>
+    <string name="open">Öffnen</string>
 
     <string name="outgoing">Ausgehend</string>
-    <string name="page">Seite</string>
+    <string name="page">Seite</string>//page 1 of 2
     <string name="permissions_part">Berechtigungen</string>
     <string name="personalization_settings">Personalisierung</string>
     <string name="phone">Handy</string>
@@ -203,7 +203,7 @@
     <string name="read_call_log_subtext">Diese Erlaubnis wird benötigt, um die bisherigen Telefonate lesen zu können.</string>
     <string name="read_contacts">Kontakte einlesen</string>
     <string name="received">Erhalten</string>
-    <string name="recent">Zueltzt</string>
+    <string name="recent">Letzte Telefonate</string>
     <string name="regular_level">Reguläres Niveau</string>
 
     <string name="remove_from_favorite">Aus den Favoriten entfernen</string>
@@ -226,13 +226,13 @@
     <string name="set_keyboard">Die Tastatur festlegen</string>
     <string name="setting_does_not_exist">Die Einstellung existiert nicht</string>
     <string name="settings">Einstellungen</string>
-    <string name="settings_permission">Einstellungen zu den Berechtigungen</string>
+    <string name="settings_permission">Berechtigung, Einstellungen vorzunehmen</string>
     <string name="share">Weiterleiten</string>
     <string name="share_actual_text">Hallo, Ich benutze diese Platform, die sich "BaldPhone" nennt und die Bedienoberfläche des Handys durch eine größere, leichter und netter zu bedienende ersetzt.\nInteressiert dich das auch?\nDu kannst sie kostenlos herunterladen!\nFolge unten stehendem Link für mehr Informationen:\n\nhttps://sites.google.com/view/baldphone
     </string>
     <string name="share_bald_phone_subtext">Hallo, kennst du jemanden, der sich vielleicht für BaldPhone interessieren könnte?\nDu kannst es ihm weitersagen!"
     </string>
-    <string name="share_baldphone">BaldPhone weitersagen</string>
+    <string name="share_baldphone">Anderen von BaldPhone erzählen</string>
     <string name="share_contact">Kontakt weiterleiten</string>
     <string name="share_differently">Mit einer anderen App weiterleiten</string>
     <string name="share_via_whatsapp">Über Whatsapp weiterleiten</string>
@@ -276,12 +276,12 @@
     <string name="will_repeat_only_once">Wird nur einmal wiederholt!</string>
     <string name="write">Schreiben</string>
     <string name="write_contacts">Kontakte speichern</string>
-    <string name="write_external_storage">Externen Speicher speichern</string>
+    <string name="write_external_storage">Externen Speicher beschreiben</string>
     <string name="yes">Ja</string>
     <string name="yesterday">Gestern</string>
     <string name="nothing">Nichts</string>
     <string name="no_contacts_found">Es wurden keine Kontakte gefunden!</string>
-    <string name="no_alarms">Keine Wecker vorhanden\nLege einen Wecker an, indem auf\n\"Alarm hinzufügen\"\nOder\n\"Eieruhr hinzufügen\" drückst</string>
+    <string name="no_alarms">Keine Wecker vorhanden.\nLege einen Wecker an, indem du auf\n\"Alarm hinzufügen\"\nOder\n\"Eieruhr hinzufügen\" drückst.</string>
     <string name="no_pills">Keine Medikamente vorhanden\nLege welche an, indem du auf\n\"Medikamente hinzufügen\" drückst</string>
     <string name="clear_all_notifications">Alle Benachrichtigungen löschen</string>
     <string name="clear_cache_subtext">Bist du dir sicher, dass du den gesamten Cache leeren willst?\nAuch die Schnellwahltasten für die Apps werden gelöscht!
@@ -310,7 +310,6 @@
     <string name="could_not_start_the_download">Download konnte nicht gestartet werden!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Die heruntergeladenen Aktualisierungsdatei konnte nicht gelöscht werden!</string>
     <string name="downloading">Herunterladen…</string>
-
     <string name="baldphone_is_up_to_date">BaldPhone ist aktuell.</string>
     <string name="what_s_new">Was es neues gibt</string>
     <string name="download_finished">Download abgeschlossen!</string>
@@ -320,8 +319,7 @@
     <string name="download_progress">Fortschritt des Downloads</string>
     <string name="what_do_you_want_to_do_with___">Was willst du mit %s machen?</string>
     <string name="crash_reports">Absturzberichte</string>
-    <string name="crash_reports_subtext">Absturzberichte helfen dabei, dass BaldPhone fehlerfrei funktioniert\nSie werden nur benutzt, um Fehler zu beheben, es werden darüber hinaus keine Daten gesammelt
-    </string>
+    <string name="crash_reports_subtext">Absturzberichte helfen dabei, dass BaldPhone fehlerfrei funktioniert.\nSie werden nur benutzt, um Fehler zu beheben. Es werden darüber hinaus keine Daten gesammelt.</string>
     <string name="custom_app">Benutzerdefinierte Anwendung</string>
     <string name="custom_app_subtext">Wähle die benutzerdefinierte Anwendung, die Teil des Startbildschirms sein soll.</string>
     <string name="no_app_was_found">Es wurde keine passende Anwendung gefunden!</string>
@@ -348,6 +346,5 @@
     </string-array>
 
     <bool name="is_right_to_left">false</bool>
-
 
 </resources>
