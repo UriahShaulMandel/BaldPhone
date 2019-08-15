@@ -357,6 +357,12 @@
 
     <string name="share_photo">שיתוף תמונה</string>
 
+    <!--For Tests:-->
+
+    <string name="medication_1">אלטרוקסין 100</string>
+    <string name="medication_2">אלטרוקסין 150</string>
+
+
     <string-array name="names_for_screenshots">
         <item>יונה הנביא</item>
         <item>בנימין זאב הרצל</item>

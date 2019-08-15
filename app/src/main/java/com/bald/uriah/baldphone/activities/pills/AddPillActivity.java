@@ -59,7 +59,7 @@ public class AddPillActivity extends BaldActivity {
     private EditText reminder_edit_name;
     private BaldMultipleSelection baldMultipleSelection;
     private ImageView[] colors;
-    private int[] COLORS = new int[]{
+    public static int[] COLORS = new int[]{
             R.color.blue,
             R.color.red,
             R.color.gray,
@@ -159,16 +159,11 @@ public class AddPillActivity extends BaldActivity {
             return;
         }
 
-        Reminder reminder = new Reminder();
-
+        final Reminder reminder = new Reminder();
         reminder.setStartingTime(baldMultipleSelection.getSelection());
-
         reminder.setDays(sum);
-
         reminder.setTextualContent(name);
-
         reminder.setBinaryContentType(Reminder.BINARY_RGB);
-
         reminder.setReminderType(Reminder.TYPE_PILL);
 
         if (selectedColor != INDEX_CUSTOM) {
@@ -183,8 +178,6 @@ public class AddPillActivity extends BaldActivity {
             reminder.setId(id);
         } else {
             reminder.setId(reminderIdToEdit);
-
-            //TODO!!!!!
             RemindersDatabase.getInstance(this).remindersDatabaseDao().replace(reminder);
             ReminderScheduler.scheduleReminder(reminder, this);
         }

@@ -340,6 +340,11 @@
     <string name="your_phone_doesnt_have_assistant_installed">Vous devez installer l\'application Google Assistant pour utiliser cette fonctionnalité.</string>
     <string name="share_photo">Partager Photo</string>
 
+    <!--For Tests:-->
+
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+
     <string-array name="names_for_screenshots">
         <item>Napoleon Bonaparte</item>
         <item>Marie Antoinette</item>

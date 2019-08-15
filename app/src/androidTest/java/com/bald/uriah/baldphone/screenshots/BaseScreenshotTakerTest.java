@@ -82,6 +82,11 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
 
     protected abstract void test();
 
+    protected void cleanupAfterTest() {
+    }
+
+    ;
+
     @Before
     public void setUp() {
         BPrefs
@@ -103,9 +108,8 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
                 .edit()
                 .clear()
                 .commit();
-
+        cleanupAfterTest();
     }
-
 
     protected int theme() {
         return BPrefs.Themes.LIGHT;

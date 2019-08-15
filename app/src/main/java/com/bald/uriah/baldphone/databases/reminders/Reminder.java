@@ -34,12 +34,15 @@ import com.bald.uriah.baldphone.R;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-//Large object instead of subclasses.
-//Will be improved in the future, with music reminders , with custom colored pills and more
+
 
 /**
  * using this old java getters and setters because Room requires that.
  * see {@link Entity}
+ *
+ * This Object looks like an overkill for the current system of pills, But it's because in the future
+ * I'll make a system for all types of reminders, and I wanted to avoid updating the database,
+ * Which creates problems with compatibility between versions
  */
 @Entity
 public class Reminder {

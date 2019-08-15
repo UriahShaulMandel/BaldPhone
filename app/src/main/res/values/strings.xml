@@ -357,6 +357,10 @@
 
     <string name="share_photo">Share Photo</string>
 
+    <!--For Tests:-->
+
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
 
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>

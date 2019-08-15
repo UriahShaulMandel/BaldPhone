@@ -30,6 +30,8 @@ import com.bald.uriah.baldphone.adapters.CallsRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.calls.CallLogsHelper;
 
 public class RecentActivity extends BaldActivity {
+    public RecyclerView recyclerView;
+
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +40,7 @@ public class RecentActivity extends BaldActivity {
 
         setContentView(R.layout.activity_recent);
 
-        final RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        recyclerView = findViewById(R.id.recycler_view);
         final DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
         dividerItemDecoration.setDrawable(getDrawable(R.drawable.ll_divider));
         recyclerView.addItemDecoration(dividerItemDecoration);

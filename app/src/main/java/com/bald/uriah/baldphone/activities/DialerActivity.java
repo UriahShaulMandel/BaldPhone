@@ -32,6 +32,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -110,9 +111,7 @@ public class DialerActivity extends BaldActivity {
         super.onRestoreInstanceState(savedInstanceState);
         final CharSequence charSequence = savedInstanceState.getCharSequence(NUMBER_STATE);
         if (charSequence != null) {
-            number = new StringBuilder(charSequence);
-            tv_number.setText(number);
-            searchForContact();
+            setNumber(charSequence);
         }
     }
 
@@ -200,5 +199,12 @@ public class DialerActivity extends BaldActivity {
     @Override
     protected int requiredPermissions() {
         return PERMISSION_READ_CONTACTS | PERMISSION_CALL_PHONE;
+    }
+
+    public void setNumber(@NonNull CharSequence charSequence) {
+        number = new StringBuilder(charSequence);
+        tv_number.setText(number);
+        searchForContact();
+
     }
 }

@@ -336,6 +336,10 @@
     <string name="everywhere">Überall</string>
     <string name="share_photo">Foto weiterleiten</string>
 
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+
     <string-array name="names_for_screenshots">
         <item>Bismarck</item>
         <item>Bach</item>

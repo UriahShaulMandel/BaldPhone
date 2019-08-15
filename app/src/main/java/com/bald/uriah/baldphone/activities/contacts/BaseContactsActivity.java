@@ -225,7 +225,7 @@ abstract class BaseContactsActivity extends BaldActivity {
 
     protected abstract Cursor getCursorForFilter(String filter, boolean favorite);
 
-    private void applyFilter() {
+    public void applyFilter() {
         if (contactRecyclerViewAdapter != null) {
             contactRecyclerViewAdapter.changeCursor(getCursorForFilter(filter, favorite));
         } else {
