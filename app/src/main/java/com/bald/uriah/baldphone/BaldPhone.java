@@ -41,8 +41,6 @@ import org.acra.sender.HttpSender;
 
 public class BaldPhone extends Application {
     private static final String TAG = BaldPhone.class.getSimpleName();
-
-
     // Application class should not have any fields, http://www.developerphil.com/dont-store-data-in-the-application-object/
 
     @Override
@@ -63,7 +61,6 @@ public class BaldPhone extends Application {
         }
         S.sendVersionInfo(this);
     }
-
 
     @Override
     protected void attachBaseContext(final Context base) {
