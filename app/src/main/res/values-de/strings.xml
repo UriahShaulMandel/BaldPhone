@@ -49,7 +49,7 @@
     <string name="alarm_volume_subtext">Wähle eine Lautstärke für den Wecker.\nDie Lautstärke wächst von Links nach Rechts.</string>
     <string name="alarms">Wecker</string>
 
-    <string name="alarms_repeats_every">Der Wecker kingelt jeden</string>
+    <string name="alarms_repeats_every">Der Wecker klingelt jeden</string>
     <string name="all_alarms">Alle Wecker</string>
     <string name="allow">Erlauben</string>
     <string name="already_setted">Wurde schon eingestellt!\nKlicke hier um das zu ändern</string>
@@ -72,7 +72,7 @@
     <string name="call">Anrufen</string>
     <string name="calling">Anrufen</string>
 
-    <string name="call_log">Bisherige Telefonate:</string>
+    <string name="call_log">Anrufsliste</string>
     <string name="call_subtext">Diese Erlaubnis wird benötigt, um Kontakte anzurufen.</string>
     <string name="camera">Kamera</string>
     <string name="camera_subtext">Diese Erlaubnis wird benötigt, um die Taschenlampe anzuschalten.</string>
@@ -102,7 +102,7 @@
     <string name="contacts_read_subtext">Diese Erlaubnis wird benötigt, um Kontakte lesen zu können.</string>
     <string name="contacts_subtext">Diese Erlaubnis wird benötigt, um neue Kontakte hinzuzufügen.</string>
     <string name="crash">Oops!\nBei BaldPhone ist ein Problem aufgetreten, es wird jetzt neu starten.</string>
-    <string name="current_time">Aktuelle Uhrzei</string>
+    <string name="current_time">Aktuelle Uhrzeit</string>
     <string name="custom">Benutzerdefiniert</string>
     <string name="dark">Dunkel</string>
     <string name="delete">Löschen</string>
@@ -123,7 +123,7 @@
     </string>
     <string name="external_storage_subtext">Diese Erlaubnis wird benötigt, um Bilder speichern zu können.</string>
     <string name="feedback">Rückmeldung geben</string>
-    <string name="feedback_cannot_be_empty">Die Rückmeldung kann nicht nichts enthalten!</string>
+    <string name="feedback_cannot_be_empty">Die Rückmeldung darf nicht leer sein!</string>
     <string name="feedback_sent_successfully">Die Rückmeldung wurde erfolgreich versendet!</string>
     <string name="first_please_select_how_you_want_to_interact_with_buttons">Bitte wähle zuerst die Barrierefreiheit der Knöpfe.
     </string>
@@ -242,7 +242,7 @@
     <string name="snooze">Schlummern</string>
     <string name="sos">SOS</string>
     <string name="sos_is_full">SOS ist voll belegt!</string>
-    <string name="sos_is_full_subtext">SOS ist voll belegt! Bitte entferne andere Natfallkontakte, bevor du einen anderen hinzufügst</string>
+    <string name="sos_is_full_subtext">SOS ist voll belegt! Bitte entferne einen Notfallkontakt, bevor du einen neuen hinzufügst</string>
     <string name="speak">Sprich</string>
     <string name="speech_to_text">Gesprchenes in Text umwandeln</string>
     <string name="strong_hand">Händigkeit</string>
@@ -264,7 +264,7 @@
     <string name="tuesday">Dienstag</string>
     <string name="uninstall">Deinstallieren</string>
     <string name="uninstall_subtext">Bist du dir sicher, dass du %s deinstallieren willst?\nDie Daten von %s !</string>
-    <string name="up">Hich</string>
+    <string name="up">Hoch</string>
     <string name="video">Video</string>
     <string name="video_tutorials">Video Anleitungen</string>
     <string name="videos">Videos</string>
@@ -314,14 +314,14 @@
     <string name="what_s_new">Was es neues gibt</string>
     <string name="download_finished">Download abgeschlossen!</string>
     <string name="downloading_updates">Aktualisierungen werden heruntergeladen…</string>
-    <string name="installing_doesn_t_work">Dunktioniert das Installieren nicht?</string>
+    <string name="installing_doesn_t_work">Funktioniert das Installieren nicht?</string>
     <string name="try_now">Probiere es jetzt</string>
     <string name="download_progress">Fortschritt des Downloads</string>
     <string name="what_do_you_want_to_do_with___">Was willst du mit %s machen?</string>
     <string name="crash_reports">Absturzberichte</string>
     <string name="crash_reports_subtext">Absturzberichte helfen dabei, dass BaldPhone fehlerfrei funktioniert.\nSie werden nur benutzt, um Fehler zu beheben. Es werden darüber hinaus keine Daten gesammelt.</string>
     <string name="custom_app">Benutzerdefinierte Anwendung</string>
-    <string name="custom_app_subtext">Wähle die benutzerdefinierte Anwendung, die Teil des Startbildschirms sein soll.</string>
+    <string name="custom_app_subtext">Wähle die benutzerdefinierte App, die Teil des Startbildschirms sein soll.</string>
     <string name="no_app_was_found">Es wurde keine passende Anwendung gefunden!</string>
     <string name="alarm">Wecker</string>
     <string name="no_new_notifications">Es gibt keine neuen Benachrichtigungen</string>
