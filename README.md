@@ -22,6 +22,7 @@ Main features:
  - Notification Management
  - SOS Button
  - Advanced Settings
+ - and lots of helpful other features 
  
 
 
