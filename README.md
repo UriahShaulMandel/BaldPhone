@@ -24,8 +24,9 @@ Main features:
  - Advanced Settings
  
 
-
 [Website](https://sites.google.com/view/baldphone)
+
+[Screenshots](https://github.com/UriahShaulMandel/BaldPhoneScreenshots/tree/master)
 
 [Installing Manual](https://github.com/UriahShaulMandel/BaldPhone/raw/master/manual/Manual%20hebrew.pdf)
 
