@@ -68,4 +68,13 @@
     </string-array>
 
     <string name="tt_url" translatable="false">"https://collector.tracepot.com/9fc2295e"</string>
+
+    <string-array name="phone_numbers_for_tests">
+        <item>783–412–4475</item>
+        <item>(879)507–6254</item>
+        <item>+1–202–555–0120</item>
+        <item>(479)220–1841</item>
+        <item>+1–306–585–0196</item>
+        <item>(229)230–1751</item>
+    </string-array>
 </resources>

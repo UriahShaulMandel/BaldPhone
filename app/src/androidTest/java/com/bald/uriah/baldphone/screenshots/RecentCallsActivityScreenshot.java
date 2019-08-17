@@ -25,11 +25,21 @@ import android.os.Handler;
 import androidx.test.filters.LargeTest;
 import androidx.test.runner.AndroidJUnit4;
 
+import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.RecentActivity;
 
+import org.joda.time.DateTime;
 import org.junit.runner.RunWith;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
+import static com.bald.uriah.baldphone.screenshots.FakeCallsRecyclerViewAdapter.FakeCall;
+import static com.bald.uriah.baldphone.screenshots.FakeCallsRecyclerViewAdapter.INCOMING_TYPE;
+import static com.bald.uriah.baldphone.screenshots.FakeCallsRecyclerViewAdapter.MISSED_TYPE;
+import static com.bald.uriah.baldphone.screenshots.FakeCallsRecyclerViewAdapter.OUTGOING_TYPE;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
@@ -40,24 +50,36 @@ public class RecentCallsActivityScreenshot extends BaseScreenshotTakerTest<Recen
         getInstrumentation().waitForIdleSync();
         new Handler(mActivityTestRule.getActivity().getMainLooper())
                 .post(() -> {
-//                    final RecentActivity dis = mActivityTestRule.getActivity();
-//
-//                    final String[] names = dis.getResources().getStringArray(R.array.names_for_screenshots);
-//                    final ContactData[] contacts = new ContactData[names.length];
-//                    for (int i = 0; i < names.length; i++) {
-//                        contacts[i] = new ContactsGetterBuilder(dis).getById(new ContactsSaverBuilder(dis).saveContact(ContactDataFactory.createEmpty().setCompositeName(names[i])));
-//                    }
-//
-//                    List<CallLog.Calls> callsList= new ArrayList<>();
-//                    callsList.add(new Call(contacts[0].get));
-//
-//
-//                    dis.recyclerView.setAdapter(
-//                            new CallsRecyclerViewAdapter(Arrays.asList(
-//                                    new Call()
-//                            ), dis)
-//                    );
-
+                    final RecentActivity dis = mActivityTestRule.getActivity();
+                    final String[] names = dis.getResources().getStringArray(R.array.names_for_screenshots);
+                    final String[] numbers = dis.getResources().getStringArray(R.array.phone_numbers_for_tests);
+                    final List<FakeCall> fakeCallList = new ArrayList<>();
+                    int[] types = new int[]
+                            {MISSED_TYPE, INCOMING_TYPE, INCOMING_TYPE, OUTGOING_TYPE, OUTGOING_TYPE, OUTGOING_TYPE, OUTGOING_TYPE, MISSED_TYPE};
+                    int[] actualNames = new int[]
+                            {4, 0, 2, 1, 0, 1, 3, 0};
+                    int[] minusDays = new int[]
+                            {0, 4, 2, 0, 0, 1, 2, 0};
+                    int[] minusHours = new int[]
+                            {1, 2, 0, 0, 0, 1, 2, 0};
+                    int[] minusMinutes = new int[]
+                            {23, 12, 7, 34, 2, 2, 35, 7};
+                    for (int i = 0; i < types.length; i++)
+                        fakeCallList.add(
+                                new FakeCall(
+                                        types[i],
+                                        null,
+                                        names[actualNames[i]],
+                                        numbers[0],
+                                        DateTime.now()
+                                                .minusDays(minusDays[i])
+                                                .minusHours(minusHours[i])
+                                                .minusMinutes(minusMinutes[i])
+                                                .getMillis()
+                                )
+                        );
+                    Collections.sort(fakeCallList, (o1, o2) -> Long.compare(o2.dateTime, o1.dateTime));
+                    dis.recyclerView.setAdapter(new FakeCallsRecyclerViewAdapter(fakeCallList, dis));
                 });
         getInstrumentation().waitForIdleSync();
 
