@@ -44,7 +44,7 @@ script:
   - mkdir -p /home/travis/BaldPhoneScreenshots/screenshots
   - adb pull /sdcard/Pictures/screenshots /home/travis/BaldPhoneScreenshots/screenshots
   - git add --all :/
-  - git commit -am "committest1"
+  - git commit -am "Uploading Auto Genereated Screenshots from travis"
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then git push https://UriahShaulMandel:${GITHUB_API_KEY}@${GH_REF} HEAD:master; fi'
 
 before_install:

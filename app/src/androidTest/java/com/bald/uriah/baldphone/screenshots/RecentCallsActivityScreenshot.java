@@ -55,7 +55,7 @@ public class RecentCallsActivityScreenshot extends BaseScreenshotTakerTest<Recen
                     final String[] numbers = dis.getResources().getStringArray(R.array.phone_numbers_for_tests);
                     final List<FakeCall> fakeCallList = new ArrayList<>();
                     int[] types = new int[]
-                            {MISSED_TYPE, INCOMING_TYPE, INCOMING_TYPE, OUTGOING_TYPE, OUTGOING_TYPE, OUTGOING_TYPE, OUTGOING_TYPE, MISSED_TYPE};
+                            {INCOMING_TYPE, INCOMING_TYPE, INCOMING_TYPE, OUTGOING_TYPE, OUTGOING_TYPE, OUTGOING_TYPE, INCOMING_TYPE, MISSED_TYPE};
                     int[] actualNames = new int[]
                             {4, 0, 2, 1, 0, 1, 3, 0};
                     int[] minusDays = new int[]
