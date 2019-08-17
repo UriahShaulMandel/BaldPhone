@@ -74,6 +74,8 @@ import com.bald.uriah.baldphone.views.ViewPagerHolder;
 import com.bald.uriah.baldphone.views.home.HomePage1;
 import com.bald.uriah.baldphone.views.home.NotesView;
 
+import org.acra.ACRA;
+
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
@@ -199,7 +201,14 @@ public class HomeScreenActivity extends BaldActivity {
 //                    .show();
 //        }
 
-        startService(new Intent(this, NotificationListenerService.class));
+        try {
+            startService(new Intent(this, NotificationListenerService.class));
+        } catch (Exception e) {
+            Log.e(TAG, S.str(e.getMessage()));
+            e.printStackTrace();
+            ACRA.getErrorReporter().handleSilentException(new RuntimeException("Can't start notification listener service", e));
+            BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText("Could not start Notification Listener Service!").show();
+        }
         new UpdateApps(this).execute(this.getApplicationContext());
 
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);

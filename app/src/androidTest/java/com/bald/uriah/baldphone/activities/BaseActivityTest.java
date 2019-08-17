@@ -51,6 +51,5 @@ public class BaseActivityTest {
 
     public void sleep() {
         getInstrumentation().waitForIdleSync();
-
     }
 }
