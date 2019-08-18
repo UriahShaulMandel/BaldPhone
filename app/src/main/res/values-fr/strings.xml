@@ -339,6 +339,12 @@
     <string name="everywhere">Tout le temps</string>
     <string name="your_phone_doesnt_have_assistant_installed">Vous devez installer l\'application Google Assistant pour utiliser cette fonctionnalité.</string>
     <string name="share_photo">Partager Photo</string>
+    <string name="hebrew">L\'hébreu</string>
+    <string name="english">Anglaise</string>
+
+    <!--Please make sure the following strings are translated propertly:-->
+    <string name="choose_language_for_keyboard">Choisissez la langue</string>
+
 
     <!--For Tests:-->
 

@@ -44,7 +44,7 @@ import java.util.List;
 public class BaldInputMethodService extends InputMethodService implements View.OnClickListener {//} implements KeyboardView.OnKeyboardActionListener {
     private static final String TAG = BaldInputMethodService.class.getSimpleName();
     public static final String VOICE_RECOGNITION_IMS = "com.google.android.googlequicksearchbox/com.google.android.voicesearch.ime.VoiceInputMethodService";
-    private static int lastLanguage = HebrewKeyboard.LANGUAGE_ID;
+    private static int lastLanguage = KeyboardPicker.LANGUAGE_ID;
     private boolean onNumbers = false;
     private BaldPrefsUtils baldPrefsUtils;
     private FrameLayout keyboardFrame;
@@ -57,6 +57,13 @@ public class BaldInputMethodService extends InputMethodService implements View.O
                 return true;
         }
         return false;
+    }
+
+    @Override
+    public View onCreateInputView() {
+        keyboardFrame = new FrameLayout(this);
+        changeLanguage(lastLanguage);
+        return keyboardFrame;
     }
 
     @Override
@@ -73,29 +80,26 @@ public class BaldInputMethodService extends InputMethodService implements View.O
         }
     }
 
-    private void changeLanguage(int newLanguageKeyboard) {
+    public void changeLanguage(int newLanguageKeyboard) {
         keyboardFrame.removeAllViews();
         if (newLanguageKeyboard != NumberKeyboard.LANGUAGE_ID)
             lastLanguage = newLanguageKeyboard;
         final Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
         final Point point = new Point();
         display.getSize(point);
-        keyboard = BaldKeyboard.newInstance(newLanguageKeyboard, this, this, this::backspace);
-        keyboardFrame.addView(keyboard, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, point.x > point.y ? (int) (point.y * 0.8) : ViewGroup.LayoutParams.MATCH_PARENT));
-    }
 
-    @Override
-    public View onCreateInputView() {
-        keyboardFrame = new FrameLayout(this);
-        changeLanguage(lastLanguage);
-        return keyboardFrame;
+        final View view =
+                newLanguageKeyboard != KeyboardPicker.LANGUAGE_ID ?
+                        keyboard = BaldKeyboard.newInstance(newLanguageKeyboard, this, this, this::backspace)
+                        :
+                        new KeyboardPicker(this);
+        keyboardFrame.addView(view, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, point.x > point.y ? (int) (point.y * 0.8) : ViewGroup.LayoutParams.MATCH_PARENT));
     }
 
     @Override
     public void onClick(View v) {
         final char code = (char) v.getTag();
         final InputConnection ic = getCurrentInputConnection();
-        //playClick(primaryCode);
         final int actualCode = keyboard.codes()[code];
         switch (actualCode) {
             case BaldKeyboard.BACKSPACE:

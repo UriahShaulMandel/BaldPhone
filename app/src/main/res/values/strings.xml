@@ -357,10 +357,16 @@
 
     <string name="share_photo">Share Photo</string>
 
+    <string name="choose_language_for_keyboard">Choose Language</string>
+    <string name="hebrew">Hebrew</string>
+    <string name="english">English</string>
+
+
     <!--For Tests:-->
 
     <string name="medication_1">Eltroxin 100</string>
     <string name="medication_2">Eltroxin 150</string>
+
 
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>

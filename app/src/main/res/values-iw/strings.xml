@@ -357,6 +357,12 @@
 
     <string name="share_photo">שיתוף תמונה</string>
 
+
+    <string name="choose_language_for_keyboard">בחר שפת מקלדת</string>
+    <string name="hebrew">עברית</string>
+    <string name="english">אנגלית</string>
+
+
     <!--For Tests:-->
 
     <string name="medication_1">אלטרוקסין 100</string>
