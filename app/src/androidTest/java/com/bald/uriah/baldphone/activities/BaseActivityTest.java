@@ -24,6 +24,7 @@ import com.bald.uriah.baldphone.utils.BPrefs;
 import org.junit.After;
 import org.junit.Before;
 
+
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 
 public class BaseActivityTest {
