@@ -344,7 +344,9 @@
 
     <!--Please make sure the following strings are translated propertly:-->
     <string name="choose_language_for_keyboard">Choisissez la langue</string>
-
+    <string name="search">Chercher</string>
+    <string name="next">Prochaine</string>
+    <string name="go">Aller à</string>
 
     <!--For Tests:-->
 

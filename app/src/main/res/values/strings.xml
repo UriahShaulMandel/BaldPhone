@@ -361,6 +361,9 @@
     <string name="hebrew">Hebrew</string>
     <string name="english">English</string>
 
+    <string name="search">Search</string>
+    <string name="next">Next</string>
+    <string name="go">Go</string>
 
     <!--For Tests:-->
 

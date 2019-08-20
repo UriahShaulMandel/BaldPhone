@@ -44,8 +44,8 @@ public class EnglishKeyboard extends BaldKeyboard implements BaldKeyboard.Capita
     };
     private boolean caps;
 
-    public EnglishKeyboard(Context context, OnClickListener onClickListener, Runnable backspace) {
-        super(context, onClickListener, backspace);
+    public EnglishKeyboard(Context context, OnClickListener onClickListener, Runnable backspace, int imeOptions) {
+        super(context, onClickListener, backspace, imeOptions);
     }
 
     public void setCaps() {
@@ -75,8 +75,4 @@ public class EnglishKeyboard extends BaldKeyboard implements BaldKeyboard.Capita
         return caps ? usKeyboardCodesCAPS : usKeyboardCodes;
     }
 
-    @Override
-    protected int backspaceIndex() {
-        return 29;
-    }
 }

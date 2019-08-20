@@ -34,8 +34,8 @@ public class NumberKeyboard extends BaldKeyboard {
             NUMBERS, SPEECH_TO_TEXT, ' ', HIDE, '.', ENTER,
     };
 
-    public NumberKeyboard(Context context, OnClickListener onClickListener, Runnable backspace) {
-        super(context, onClickListener, backspace);
+    public NumberKeyboard(Context context, OnClickListener onClickListener, Runnable backspace, int imeOptions) {
+        super(context, onClickListener, backspace, imeOptions);
     }
 
     @Override
@@ -53,8 +53,4 @@ public class NumberKeyboard extends BaldKeyboard {
         return numbersKeyboardsCodes;
     }
 
-    @Override
-    protected int backspaceIndex() {
-        return 29;
-    }
 }

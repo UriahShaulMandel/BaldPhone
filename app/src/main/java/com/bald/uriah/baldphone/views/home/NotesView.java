@@ -52,11 +52,7 @@ public class NotesView extends HomeView {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {
         homeScreen.recognizerManager.setNotesFragment(this);
-
-        sharedPreferences =
-                getContext()
-                        .getSharedPreferences(BPrefs.KEY, Context.MODE_PRIVATE);
-        if (sharedPreferences == null) throw new AssertionError();
+        sharedPreferences = BPrefs.get(getContext());
         final View view = inflater.inflate(R.layout.notes_fragment, container, false);
         editText = view.findViewById(R.id.edit_text);
         editText.setText(sharedPreferences.getString(BPrefs.NOTE_KEY, ""));
@@ -135,5 +131,4 @@ public class NotesView extends HomeView {
             this.notesFragment = new WeakReference<>(notesFragment);
         }
     }
-
 }

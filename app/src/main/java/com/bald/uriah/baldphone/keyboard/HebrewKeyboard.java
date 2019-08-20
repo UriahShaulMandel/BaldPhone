@@ -36,8 +36,8 @@ public class HebrewKeyboard extends BaldKeyboard {
 
     };
 
-    public HebrewKeyboard(Context context, OnClickListener onClickListener, Runnable backspace) {
-        super(context, onClickListener, backspace);
+    public HebrewKeyboard(Context context, OnClickListener onClickListener, Runnable backspace, int imeOptions) {
+        super(context, onClickListener, backspace, imeOptions);
     }
 
     @Override
@@ -55,8 +55,4 @@ public class HebrewKeyboard extends BaldKeyboard {
         return hebrewKeyboardCodes;
     }
 
-    @Override
-    protected int backspaceIndex() {
-        return 9;
-    }
 }

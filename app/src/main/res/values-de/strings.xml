@@ -341,7 +341,9 @@
 
     <!--Please make sure the following strings are translated propertly:-->
     <string name="choose_language_for_keyboard">Wählen Sie die Tastatursprache</string>
-
+    <string name="search">Suche</string>
+    <string name="next">Nächster</string>
+    <string name="go">Gehe zu</string>
 
     <!--For Tests:-->
     <string name="medication_1">Eltroxin 100</string>

@@ -26,13 +26,25 @@ import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.Keep;
 import androidx.annotation.LayoutRes;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.S;
+
+import static android.view.inputmethod.EditorInfo.IME_ACTION_DONE;
+import static android.view.inputmethod.EditorInfo.IME_ACTION_GO;
+import static android.view.inputmethod.EditorInfo.IME_ACTION_NEXT;
+import static android.view.inputmethod.EditorInfo.IME_ACTION_NONE;
+import static android.view.inputmethod.EditorInfo.IME_ACTION_SEARCH;
+import static android.view.inputmethod.EditorInfo.IME_ACTION_SEND;
+import static android.view.inputmethod.EditorInfo.IME_ACTION_UNSPECIFIED;
 
 public abstract class BaldKeyboard extends FrameLayout {
     public static final char SHIFT = (char) 1;
@@ -46,40 +58,51 @@ public abstract class BaldKeyboard extends FrameLayout {
     protected final ConstraintLayout keyboard;
     protected final View[] children;
     protected final View backspace;
+
+    private final View enter;
+    private final TextView tv_enter;
+    private final ImageView iv_enter;
     private final Vibrator vibrator;
     private final Runnable backspaceRunnable;
+
     private Thread backspaceThread;
 
     @Keep
-    public BaldKeyboard(Context context, View.OnClickListener onClickListener, Runnable backspaceRunnable) {
+    public BaldKeyboard(final Context context, final View.OnClickListener onClickListener, final Runnable backspaceRunnable, final int imeOptions) {
         super(context);
         vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
         this.backspaceRunnable = backspaceRunnable;
         final ContextThemeWrapper contextThemeWrapper = new ContextThemeWrapper(context, S.getTheme(context));
         keyboard = (ConstraintLayout) LayoutInflater.from(contextThemeWrapper).inflate(layout(), this, false);
         children = new View[keyboard.getChildCount()];
+        final char[] codes = codes();
         for (int i = 0; i < children.length - 1/*cause of space view...*/; i++) {
             final View view = keyboard.getChildAt(i + 1/*cause of space view...*/);
             view.setOnClickListener(onClickListener);
-            view.setTag((char) i);
+            view.setTag(codes[i]);
             children[i] = view;
         }
-        backspace = keyboard.getChildAt(backspaceIndex());
+        backspace = keyboard.findViewById(R.id.backspace);
         backspace.setOnTouchListener(getBackSpaceListener());
+        enter = keyboard.findViewById(R.id.enter);
+        tv_enter = keyboard.findViewById(R.id.tv_enter);
+        iv_enter = keyboard.findViewById(R.id.iv_enter);
+        imeOptionsChanged(imeOptions);
         addView(keyboard);
     }
 
-    public static BaldKeyboard newInstance(int language, Context context, View.OnClickListener onClickListener, Runnable backspaceRunnable) {
+    public static BaldKeyboard newInstance(int language, Context context, View.OnClickListener onClickListener, Runnable backspaceRunnable, int imeOptions) {
         switch (language) {
             case HebrewKeyboard.LANGUAGE_ID:
-                return new HebrewKeyboard(context, onClickListener, backspaceRunnable);
+                return new HebrewKeyboard(context, onClickListener, backspaceRunnable, imeOptions);
             case EnglishKeyboard.LANGUAGE_ID:
-                return new EnglishKeyboard(context, onClickListener, backspaceRunnable);
+                return new EnglishKeyboard(context, onClickListener, backspaceRunnable, imeOptions);
             case NumberKeyboard.LANGUAGE_ID:
-                return new NumberKeyboard(context, onClickListener, backspaceRunnable);
+                return new NumberKeyboard(context, onClickListener, backspaceRunnable, imeOptions);
             default:
                 throw new IllegalArgumentException("language must be 0/1/2, it is currently:" + language);
         }
+
     }
 
     @LayoutRes
@@ -87,8 +110,46 @@ public abstract class BaldKeyboard extends FrameLayout {
 
     abstract char[] codes();
 
-    protected abstract int backspaceIndex();
+    protected void imeOptionsChanged(int imeOptions) {
+        final int relevantImeOptions = imeOptions & EditorInfo.IME_MASK_ACTION;
+        if (BaldInputMethodService.defaultEditorActionExists(imeOptions)) {
+            switch (relevantImeOptions) {
+                case IME_ACTION_SEARCH:
+                    tv_enter.setText(R.string.search);
+                    iv_enter.setImageResource(R.drawable.search_on_button);
+                    break;
+                case IME_ACTION_DONE:
+                    tv_enter.setText(R.string.done);
+                    iv_enter.setImageResource(R.drawable.check_on_button);
+                    break;
+                case IME_ACTION_GO:
+                    tv_enter.setText(R.string.go);
+                    iv_enter.setImageResource(R.drawable.check_on_button);
+                    break;
+                case IME_ACTION_SEND:
+                    tv_enter.setText(R.string.send);
+                    iv_enter.setImageResource(R.drawable.send_on_button);
+                    break;
+                case IME_ACTION_NEXT:
+                    tv_enter.setText(R.string.next);
+                    iv_enter.setImageResource(R.drawable.arrow_end_on_background);
+                    break;
+                //should never be here
+                case IME_ACTION_NONE:
+                case IME_ACTION_UNSPECIFIED:
+                default:
+                    tv_enter.setText(R.string.enter);
+                    iv_enter.setImageResource(R.drawable.enter_on_keyboard);
+                    break;
+            }
+        } else {
+            tv_enter.setText(R.string.enter);
+            iv_enter.setImageResource(R.drawable.enter_on_keyboard);
+        }
 
+    }
+
+    //    protected abstract View
     abstract int nextLanguage();
 
     private View.OnTouchListener getBackSpaceListener() {

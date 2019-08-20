@@ -80,6 +80,12 @@ public class BaldInputMethodService extends InputMethodService implements View.O
         }
     }
 
+    public static boolean defaultEditorActionExists(final int imeOptions) {
+        return ((imeOptions & EditorInfo.IME_FLAG_NO_ENTER_ACTION) == 0) &&
+                (imeOptions & EditorInfo.IME_MASK_ACTION) != EditorInfo.IME_ACTION_NONE;
+
+    }
+
     public void changeLanguage(int newLanguageKeyboard) {
         keyboardFrame.removeAllViews();
         if (newLanguageKeyboard != NumberKeyboard.LANGUAGE_ID)
@@ -90,17 +96,36 @@ public class BaldInputMethodService extends InputMethodService implements View.O
 
         final View view =
                 newLanguageKeyboard != KeyboardPicker.LANGUAGE_ID ?
-                        keyboard = BaldKeyboard.newInstance(newLanguageKeyboard, this, this, this::backspace)
+                        keyboard = BaldKeyboard.newInstance(newLanguageKeyboard, this, this, this::backspace, getCurrentInputEditorInfo().imeOptions)
                         :
                         new KeyboardPicker(this);
         keyboardFrame.addView(view, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, point.x > point.y ? (int) (point.y * 0.8) : ViewGroup.LayoutParams.MATCH_PARENT));
     }
 
     @Override
+    public void onStartInput(EditorInfo attribute, boolean restarting) {
+        super.onStartInput(attribute, restarting);
+        if (keyboard != null)
+            keyboard.imeOptionsChanged(getCurrentInputEditorInfo().imeOptions);
+    }
+
+    public void startVoiceListening() {
+        final InputMethodManager imeManager = (InputMethodManager) getApplicationContext().getSystemService(INPUT_METHOD_SERVICE);
+        if (voiceExists(imeManager)) {
+            final IBinder token = getWindow().getWindow().getAttributes().token;
+            imeManager.setInputMethod(token, VOICE_RECOGNITION_IMS);
+        }
+    }
+
+    public void backspace() {
+        getCurrentInputConnection().deleteSurroundingText(1, 0);
+    }
+
+    @Override
     public void onClick(View v) {
-        final char code = (char) v.getTag();
+        final char actualCode = (char) v.getTag();
         final InputConnection ic = getCurrentInputConnection();
-        final int actualCode = keyboard.codes()[code];
+        final EditorInfo editorInfo = getCurrentInputEditorInfo();
         switch (actualCode) {
             case BaldKeyboard.BACKSPACE:
                 backspace();
@@ -114,17 +139,11 @@ public class BaldInputMethodService extends InputMethodService implements View.O
                 }
                 break;
             case BaldKeyboard.ENTER:
-                final boolean search = getCurrentInputEditorInfo().imeOptions == EditorInfo.IME_ACTION_SEARCH;
-                ic.sendKeyEvent(
-                        new KeyEvent(KeyEvent.ACTION_DOWN,
-                                search ? KeyEvent.KEYCODE_SEARCH : KeyEvent.KEYCODE_ENTER
-                        )
-                );
-                ic.sendKeyEvent(
-                        new KeyEvent(KeyEvent.ACTION_UP,
-                                search ? KeyEvent.KEYCODE_SEARCH : KeyEvent.KEYCODE_ENTER
-                        )
-                );
+                if (defaultEditorActionExists(editorInfo.imeOptions)) {
+                    ic.performEditorAction(editorInfo.imeOptions & EditorInfo.IME_MASK_ACTION);
+                } else {
+                    sendDownUpKeyEvents(KeyEvent.KEYCODE_ENTER);
+                }
                 break;
             case BaldKeyboard.HIDE:
                 hideWindow();
@@ -140,20 +159,8 @@ public class BaldInputMethodService extends InputMethodService implements View.O
                 startVoiceListening();
                 break;
             default:
-                final String str = String.valueOf(keyboard.codes()[code]);
+                final String str = String.valueOf(actualCode);
                 ic.commitText(str, 1);
         }
-    }
-
-    public void startVoiceListening() {
-        final InputMethodManager imeManager = (InputMethodManager) getApplicationContext().getSystemService(INPUT_METHOD_SERVICE);
-        if (voiceExists(imeManager)) {
-            final IBinder token = getWindow().getWindow().getAttributes().token;
-            imeManager.setInputMethod(token, VOICE_RECOGNITION_IMS);
-        }
-    }
-
-    public void backspace() {
-        getCurrentInputConnection().deleteSurroundingText(1, 0);
     }
 }

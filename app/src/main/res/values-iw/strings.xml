@@ -362,6 +362,9 @@
     <string name="hebrew">עברית</string>
     <string name="english">אנגלית</string>
 
+    <string name="search">חפש</string>
+    <string name="next">עבור הלאה</string>
+    <string name="go">עבור אל</string>
 
     <!--For Tests:-->
 
