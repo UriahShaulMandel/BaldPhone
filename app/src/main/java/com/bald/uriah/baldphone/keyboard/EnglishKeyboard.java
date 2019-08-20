@@ -33,15 +33,14 @@ public class EnglishKeyboard extends BaldKeyboard implements BaldKeyboard.Capita
             , 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ',',
             SHIFT, 'z', 'x', 'c', 'v', 'b', 'n', 'm', BACKSPACE,
             NUMBERS, LANGUAGE, SPEECH_TO_TEXT, ' ', HIDE, '.', ENTER,
-
     };
     public static final char[] usKeyboardCodesCAPS = new char[]{
             'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'
             , 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ',',
             SHIFT, 'Z', 'X', 'C', 'V', 'B', 'N', 'M', BACKSPACE,
             NUMBERS, LANGUAGE, SPEECH_TO_TEXT, ' ', HIDE, '.', ENTER,
-
     };
+
     private boolean caps;
 
     public EnglishKeyboard(Context context, OnClickListener onClickListener, Runnable backspace, int imeOptions) {
@@ -52,12 +51,10 @@ public class EnglishKeyboard extends BaldKeyboard implements BaldKeyboard.Capita
         caps = !caps;
         final char[] codes = codes();
         for (int i = 0; i < children.length; i++) {
-            if (children[i] instanceof TextView) {
+            children[i].setTag(codes[i]);
+            if (children[i] instanceof TextView)
                 ((TextView) children[i]).setText(new char[]{codes[i]}, 0, 1);
-            }
-
         }
-
     }
 
     @Override
@@ -74,5 +71,4 @@ public class EnglishKeyboard extends BaldKeyboard implements BaldKeyboard.Capita
     protected char[] codes() {
         return caps ? usKeyboardCodesCAPS : usKeyboardCodes;
     }
-
 }
