@@ -9,24 +9,26 @@
 A platform which replaces the phone's interface to a bigger, simpler and friendlier one.
 
 
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20white.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20white.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20black.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20black.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/contacts.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/contacts.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/tony.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/tony.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/dialer.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/dialer.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/recents.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/recents.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/sos.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/sos.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/keyboard.jpg" width=505.68>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/keyboard.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/alarms.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/alarms.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/alarms%20empty.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/alarms%20empty.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/pills.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/pills.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/settings.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/settings.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/video%20tutorials.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/video%20tutorials.jpg)
 
-Main features:
- - Home Launcher
- - Keyboard
- - Video Tutorials
- - Reminders For Pills
- - Contacts and Phone Applications
- - Voice Assistant
- - Alarms
- - Photos and Videos Viewer
- - Notification Management
- - SOS Button
- - Advanced Settings
- 
+
+[More Screenshots](https://github.com/UriahShaulMandel/BaldPhoneScreenshots)
+
 
 [Website](https://sites.google.com/view/baldphone)
 
-[Screenshots](https://github.com/UriahShaulMandel/BaldPhoneScreenshots/tree/master)
 
 [Installing Manual](https://github.com/UriahShaulMandel/BaldPhone/raw/master/manual/Manual%20hebrew.pdf)
 
