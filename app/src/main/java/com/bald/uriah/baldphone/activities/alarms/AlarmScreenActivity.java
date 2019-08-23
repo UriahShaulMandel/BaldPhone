@@ -177,6 +177,7 @@ public class AlarmScreenActivity extends TimedBaldActivity {
     }
 
     private void scheduleNextAlarm() {
+        AlarmScheduler.cancelAlarm(alarm.getKey(), this);
         new Handler().postDelayed(() -> {
             if (alarm.isEnabled()) {
                 if (alarm.getDays() == -1) {

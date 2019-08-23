@@ -28,6 +28,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
+import com.bald.uriah.baldphone.activities.alarms.AlarmsActivity;
 import com.bald.uriah.baldphone.broadcast_receivers.AlarmReceiver;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
@@ -151,12 +152,13 @@ public class AlarmScheduler {
 
     public static void scheduleAlarm(@NonNull Alarm alarm, @NonNull Context context) throws IllegalArgumentException {
         synchronized (LOCK) {
+            S.logImportant("Scheduling an alarm!");
             final AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
             final long nextTimeAlarmWillWorkInMs = nextTimeAlarmWillWorkInMs(alarm);
             alarmManager.setAlarmClock(
                     new AlarmManager.AlarmClockInfo(
                             nextTimeAlarmWillWorkInMs,
-                            PendingIntent.getActivity(context, 0, new Intent(context, HomeScreenActivity.class), 0)//TODO??
+                            PendingIntent.getActivity(context, 0, new Intent(context, AlarmsActivity.class), 0)
                     ),
                     getIntent(context, alarm.getKey())
             );

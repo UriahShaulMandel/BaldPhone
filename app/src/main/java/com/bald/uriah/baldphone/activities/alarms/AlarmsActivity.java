@@ -238,19 +238,15 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
                 alarm_name.setText(alarm.getName());
                 alarm_switch.setChecked(alarm.isEnabled());
                 alarm_switch.setOnChangeListener(isChecked -> {
+                    AlarmsDatabase.getInstance(AlarmsActivity.this)
+                            .alarmsDatabaseDao().update(alarm.getKey(), isChecked);
+                    alarm.setEnabled(isChecked);
+
                     if (isChecked) {
-                        AlarmsDatabase.getInstance(AlarmsActivity.this)
-                                .alarmsDatabaseDao().update(alarm.getKey(), true);
-                        alarm.setEnabled(true);
                         AlarmScheduler.scheduleAlarm(alarm, AlarmsActivity.this);
                     } else {
-                        AlarmsDatabase.getInstance(AlarmsActivity.this)
-                                .alarmsDatabaseDao().update(alarm.getKey(), false);
-                        alarm.setEnabled(false);
                         AlarmScheduler.cancelAlarm(alarm.getKey(), AlarmsActivity.this);
-
                     }
-
                 });
 
                 bt_edit.setOnClickListener((v) ->

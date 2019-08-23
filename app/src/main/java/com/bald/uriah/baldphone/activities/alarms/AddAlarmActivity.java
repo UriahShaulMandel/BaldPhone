@@ -84,7 +84,7 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
                 for (int i = 0; i < daysCheckBoxes.length; i++)
                     daysCheckBoxes[i].setChecked((alarmDays | (D.Days.SUNDAY << i)) == alarmDays);
         } else {
-            DateTime now = DateTime.now();
+            final DateTime now = DateTime.now();
             chooser_hours.setNumber(now.getHourOfDay());
             chooser_minutes.setNumber(now.getMinuteOfHour());
         }
