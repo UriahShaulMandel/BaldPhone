@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
+import android.os.Build.VERSION;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +46,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import static android.os.Build.VERSION_CODES;
 
 public class HomePage2 extends HomeView {
     public static final String TAG = HomePage2.class.getSimpleName();
@@ -93,7 +96,11 @@ public class HomePage2 extends HomeView {
 
     private void clickListenerForAbstractOpener(@NonNull final Uri uri, @NonNull final View bt, @NonNull final ImageView iv, @NonNull final TextView tv) {
         final Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-        final List<ResolveInfo> resolveInfosWithDups = packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+        final List<ResolveInfo> resolveInfosWithDups =
+                packageManager.queryIntentActivities(
+                        intent,
+                        VERSION.SDK_INT >= VERSION_CODES.M ?
+                                PackageManager.MATCH_ALL : PackageManager.MATCH_DEFAULT_ONLY);
 
         //Removing dups
         final Set<String> packagesSet = new HashSet<>();

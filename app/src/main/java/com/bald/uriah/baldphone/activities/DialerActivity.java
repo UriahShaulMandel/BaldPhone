@@ -101,7 +101,7 @@ public class DialerActivity extends BaldActivity {
     }
 
     @Override
-    protected void onSaveInstanceState(final Bundle outState) {
+    protected void onSaveInstanceState(@NonNull final Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putCharSequence(NUMBER_STATE, number);
     }
