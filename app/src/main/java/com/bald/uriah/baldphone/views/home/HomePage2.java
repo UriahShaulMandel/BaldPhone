@@ -19,15 +19,10 @@
 
 package com.bald.uriah.baldphone.views.home;
 
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +31,6 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
@@ -47,7 +41,10 @@ import com.bald.uriah.baldphone.utils.DropDownRecyclerViewAdapter;
 import com.bald.uriah.baldphone.utils.S;
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class HomePage2 extends HomeView {
     public static final String TAG = HomePage2.class.getSimpleName();
@@ -86,7 +83,7 @@ public class HomePage2 extends HomeView {
         bt_settings.setOnClickListener(v ->
                 homeScreen.startActivity(new Intent(getContext(), SettingsActivity.class)));
 
-        clickListenerForAbstractOpener(Uri.parse("about:blank"), bt_internet, iv_internet, tv_internet);
+        clickListenerForAbstractOpener(Uri.parse("http://www.google.com"), bt_internet, iv_internet, tv_internet);
         clickListenerForAbstractOpener(Uri.parse("geo:0,0"), bt_maps, iv_maps, tv_maps);
 
         bt_help.setOnClickListener(v ->
@@ -95,54 +92,57 @@ public class HomePage2 extends HomeView {
     }
 
     private void clickListenerForAbstractOpener(@NonNull final Uri uri, @NonNull final View bt, @NonNull final ImageView iv, @NonNull final TextView tv) {
-        final Intent browserIntent = new Intent(Intent.ACTION_VIEW, uri);
-        @Nullable final ComponentName browserComponentName = browserIntent.resolveActivity(packageManager);
-        if (browserComponentName == null) {
-            bt.setOnClickListener(this::showErrorMessage);
-        } else if (browserComponentName.getClassName().equals("com.android.internal.app.ResolverActivity")) {
-            final List<ResolveInfo> browsers = packageManager.queryIntentActivities(browserIntent, PackageManager.MATCH_DEFAULT_ONLY);
-            if (!browsers.isEmpty()) {
-                bt.setOnClickListener(v -> {
-                    S.showDropDownPopup(
-                            homeScreen,
-                            getWidth(),
-                            new DropDownRecyclerViewAdapter.DropDownListener() {
-                                @Override
-                                public void onUpdate(DropDownRecyclerViewAdapter.ViewHolder viewHolder, int position, PopupWindow popupWindow) {
-                                    final ResolveInfo resolveInfo = browsers.get(position);
-                                    if (S.isValidContextForGlide(viewHolder.pic.getContext()))
-                                        Glide.with(viewHolder.pic)
-                                                .load(resolveInfo.loadIcon(packageManager))
-                                                .into(viewHolder.pic);
-                                    viewHolder.text.setText(resolveInfo.loadLabel(packageManager));
-                                    viewHolder.itemView.setOnClickListener(v1 -> {
-                                        homeScreen.startActivity(packageManager.getLaunchIntentForPackage(resolveInfo.activityInfo.applicationInfo.packageName));
-                                        popupWindow.dismiss();
-                                    });
-                                }
+        final Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        final List<ResolveInfo> resolveInfosWithDups = packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
 
-                                @Override
-                                public int size() {
-                                    return browsers.size();
-                                }
-
-                            }, bt);
-                });
-            } else {
-                bt.setOnClickListener(this::showErrorMessage);
+        //Removing dups
+        final Set<String> packagesSet = new HashSet<>();
+        for (final ResolveInfo resolveInfo : resolveInfosWithDups)
+            packagesSet.add(resolveInfo.activityInfo.applicationInfo.packageName);
+        final List<ResolveInfo> resolveInfos = new ArrayList<>(packagesSet.size());
+        for (final ResolveInfo resolveInfo : resolveInfosWithDups) {
+            final String packageName = resolveInfo.activityInfo.applicationInfo.packageName;
+            if (packagesSet.contains(packageName)) {
+                packagesSet.remove(packageName);
+                resolveInfos.add(resolveInfo);
             }
+        }
+
+        if (resolveInfos.size() > 1) {
+            bt.setOnClickListener(v -> S.showDropDownPopup(
+                    homeScreen,
+                    getWidth(),
+                    new DropDownRecyclerViewAdapter.DropDownListener() {
+                        @Override
+                        public void onUpdate(DropDownRecyclerViewAdapter.ViewHolder viewHolder, int position, PopupWindow popupWindow) {
+                            final ResolveInfo resolveInfo = resolveInfos.get(position);
+                            if (S.isValidContextForGlide(viewHolder.pic.getContext()))
+                                Glide.with(viewHolder.pic)
+                                        .load(resolveInfo.loadIcon(packageManager))
+                                        .into(viewHolder.pic);
+                            viewHolder.text.setText(resolveInfo.loadLabel(packageManager));
+                            viewHolder.itemView.setOnClickListener(v1 -> {
+                                homeScreen.startActivity(packageManager.getLaunchIntentForPackage(resolveInfo.activityInfo.applicationInfo.packageName));
+                                popupWindow.dismiss();
+                            });
+                        }
+
+                        @Override
+                        public int size() {
+                            return resolveInfos.size();
+                        }
+
+                    }, bt));
+        } else if (resolveInfos.size() == 1) {
+            final ResolveInfo resolveInfo = resolveInfos.get(0);
+            if (S.isValidContextForGlide(iv.getContext()))
+                Glide.with(iv)
+                        .load(resolveInfo.loadIcon(packageManager))
+                        .into(iv);
+            tv.setText(resolveInfo.loadLabel(packageManager));
+            bt.setOnClickListener(v1 -> homeScreen.startActivity(packageManager.getLaunchIntentForPackage(resolveInfo.activityInfo.applicationInfo.packageName)));
         } else {
-            bt.setOnClickListener(v -> homeScreen.startActivity(packageManager.getLaunchIntentForPackage(browserComponentName.getPackageName())));
-            try {
-                final ActivityInfo activityInfo = packageManager.getActivityInfo(browserComponentName, PackageManager.MATCH_DEFAULT_ONLY);
-                final ApplicationInfo applicationInfo = activityInfo.applicationInfo;
-                final Drawable drawable = applicationInfo.loadIcon(packageManager);
-                iv.setImageDrawable(drawable);
-                tv.setText(applicationInfo.loadLabel(packageManager));
-            } catch (PackageManager.NameNotFoundException e) {
-                Log.e(TAG, S.str(e.getMessage()));
-                e.printStackTrace();
-            }
+            bt.setOnClickListener(this::showErrorMessage);
         }
     }
 
