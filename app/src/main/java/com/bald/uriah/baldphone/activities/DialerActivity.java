@@ -181,6 +181,13 @@ public class DialerActivity extends BaldActivity {
         getContactsByNumberFilter();
     }
 
+    public void setNumber(@NonNull CharSequence charSequence) {
+        number = new StringBuilder(charSequence);
+        tv_number.setText(number);
+        searchForContact();
+
+    }
+
     private class DialerClickListener implements View.OnClickListener {
         private final char c;
 
@@ -199,12 +206,5 @@ public class DialerActivity extends BaldActivity {
     @Override
     protected int requiredPermissions() {
         return PERMISSION_READ_CONTACTS | PERMISSION_CALL_PHONE;
-    }
-
-    public void setNumber(@NonNull CharSequence charSequence) {
-        number = new StringBuilder(charSequence);
-        tv_number.setText(number);
-        searchForContact();
-
     }
 }

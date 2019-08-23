@@ -51,14 +51,6 @@ public class AddPillActivity extends BaldActivity {
     private static final String TAG = AddPillActivity.class.getSimpleName();
     public static final int INDEX_CUSTOM = 5;
     static final String REMINDER_KEY_AS_EXTRA_KEY = "reminder";
-    private int reminderIdToEdit = -1;
-
-    private Vibrator vibrator;
-    private BaldButton bt_submit;
-    private BaldTitleBar baldTitleBar;
-    private EditText reminder_edit_name;
-    private BaldMultipleSelection baldMultipleSelection;
-    private ImageView[] colors;
     public static int[] COLORS = new int[]{
             R.color.blue,
             R.color.red,
@@ -66,6 +58,13 @@ public class AddPillActivity extends BaldActivity {
             R.color.yellow,
             R.color.green,
     };
+    private int reminderIdToEdit = -1;
+    private Vibrator vibrator;
+    private BaldButton bt_submit;
+    private BaldTitleBar baldTitleBar;
+    private EditText reminder_edit_name;
+    private BaldMultipleSelection baldMultipleSelection;
+    private ImageView[] colors;
     private int selectedColor = 0;
     private byte[] customColor;
     private CheckBox[] daysCheckBoxes;

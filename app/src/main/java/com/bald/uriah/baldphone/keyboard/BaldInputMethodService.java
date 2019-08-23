@@ -59,6 +59,12 @@ public class BaldInputMethodService extends InputMethodService implements View.O
         return false;
     }
 
+    public static boolean defaultEditorActionExists(final int imeOptions) {
+        return ((imeOptions & EditorInfo.IME_FLAG_NO_ENTER_ACTION) == 0) &&
+                (imeOptions & EditorInfo.IME_MASK_ACTION) != EditorInfo.IME_ACTION_NONE;
+
+    }
+
     @Override
     public View onCreateInputView() {
         keyboardFrame = new FrameLayout(this);
@@ -78,12 +84,6 @@ public class BaldInputMethodService extends InputMethodService implements View.O
                 changeLanguage(lastLanguage);
             }
         }
-    }
-
-    public static boolean defaultEditorActionExists(final int imeOptions) {
-        return ((imeOptions & EditorInfo.IME_FLAG_NO_ENTER_ACTION) == 0) &&
-                (imeOptions & EditorInfo.IME_MASK_ACTION) != EditorInfo.IME_ACTION_NONE;
-
     }
 
     public void changeLanguage(int newLanguageKeyboard) {

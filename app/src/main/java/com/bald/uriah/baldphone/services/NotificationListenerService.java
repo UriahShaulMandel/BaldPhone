@@ -190,7 +190,6 @@ public class NotificationListenerService extends android.service.notification.No
         }
     }
 
-
     @IntDef({ACTIVITY_NONE, NOTIFICATIONS_ACTIVITY, NOTIFICATIONS_HOME_SCREEN})
     @Retention(RetentionPolicy.SOURCE)
     private @interface SupportedActivitys {

@@ -34,12 +34,10 @@ import com.bald.uriah.baldphone.R;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-
-
 /**
  * using this old java getters and setters because Room requires that.
  * see {@link Entity}
- *
+ * <p>
  * This Object looks like an overkill for the current system of pills, But it's because in the future
  * I'll make a system for all types of reminders, and I wanted to avoid updating the database,
  * Which creates problems with compatibility between versions

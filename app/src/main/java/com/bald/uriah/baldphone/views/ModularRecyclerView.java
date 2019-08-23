@@ -73,12 +73,6 @@ public class ModularRecyclerView extends RecyclerView implements Modular {
     }
 
     public static abstract class ModularAdapter<T extends ViewHolder> extends RecyclerView.Adapter<T> {
-        //For the future
-        @Override
-        public void onBindViewHolder(@NonNull T holder, int position) {
-
-        }
-
         public static final ModularAdapter EMPTY_ADAPTER = new ModularAdapter() {
             @NonNull
             @Override
@@ -91,5 +85,11 @@ public class ModularRecyclerView extends RecyclerView implements Modular {
                 return 0;
             }
         };
+
+        //For the future
+        @Override
+        public void onBindViewHolder(@NonNull T holder, int position) {
+
+        }
     }
 }
