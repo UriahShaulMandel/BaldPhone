@@ -9,22 +9,7 @@
 A platform which replaces the phone's interface to a bigger, simpler and friendlier one.
 
 
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20white.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20white.jpg)
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20black.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20black.jpg)
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/contacts.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/contacts.jpg)
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/tony.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/tony.jpg)
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/dialer.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/dialer.jpg)
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/recents.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/recents.jpg)
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/sos.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/sos.jpg)
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/keyboard.jpg" width=505.68>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/keyboard.jpg)
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/alarms.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/alarms.jpg)
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/alarms%20empty.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/alarms%20empty.jpg)
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/pills.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/pills.jpg)
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/settings.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/settings.jpg)
-[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/video%20tutorials.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/video%20tutorials.jpg)
-
-
-[More Screenshots](https://github.com/UriahShaulMandel/BaldPhoneScreenshots)
+[Screenshots](https://github.com/UriahShaulMandel/BaldPhoneScreenshots)
 
 
 [Website](https://sites.google.com/view/baldphone)
@@ -41,6 +26,22 @@ Feel free to contact me at baldphone.contact@gmail.com
 
 
 ## [Contributing](https://github.com/UriahShaulMandel/BaldPhone/blob/master/CONTRIBUTING.md)
+
+## Screenshots
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20white.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20white.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20black.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20black.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/contacts.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/contacts.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/tony.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/tony.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/dialer.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/dialer.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/recents.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/recents.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/sos.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/sos.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/keyboard.jpg" width=505.68>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/keyboard.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/alarms.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/alarms.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/alarms%20empty.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/alarms%20empty.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/pills.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/pills.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/settings.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/settings.jpg)
+[<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/video%20tutorials.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/video%20tutorials.jpg)
+
 
 ## Shortcuts (for developers)
  - [Home Screen Activity](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/java/com/bald/uriah/baldphone/activities/HomeScreenActivity.java)
