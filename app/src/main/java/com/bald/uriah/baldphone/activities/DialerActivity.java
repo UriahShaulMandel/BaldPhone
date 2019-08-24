@@ -25,6 +25,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.media.ToneGenerator;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -43,7 +44,11 @@ import com.bald.uriah.baldphone.activities.contacts.AddContactActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 import com.bald.uriah.baldphone.databases.contacts.MiniContact;
+import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.utils.D;
+
+import static android.media.AudioManager.STREAM_SYSTEM;
 
 public class DialerActivity extends BaldActivity {
     private static final String TAG = DialerActivity.class.getSimpleName();
@@ -52,7 +57,10 @@ public class DialerActivity extends BaldActivity {
     private final static String[] PROJECTION =
             {ContactsContract.Data.DISPLAY_NAME, ContactsContract.Data._ID, ContactsContract.Contacts.PHOTO_URI, ContactsContract.Data.LOOKUP_KEY, ContactsContract.Data.STARRED};
     private static final String NUMBER_STATE = "NUMBER_STATE";
+    private static final int TONE_DURATION = 300 * D.MILLISECOND;
+    private static final int TONE_VOLUME = 75; // 0-100
 
+    private ToneGenerator dtmfGenerator;
     private ContentResolver contentResolver;
     private ContactRecyclerViewAdapter contactRecyclerViewAdapter;
     private RecyclerView recyclerView;
@@ -60,6 +68,7 @@ public class DialerActivity extends BaldActivity {
     private View b_call, b_clear, b_hash, b_sulamit, b_backspace, empty_view;
     private View[] numpad;
     private StringBuilder number = new StringBuilder();
+    private boolean playDialSounds;
 
     public static void call(final CharSequence number, final Context context) {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
@@ -93,7 +102,9 @@ public class DialerActivity extends BaldActivity {
             return;
         setContentView(R.layout.dialer);
         contentResolver = getContentResolver();
-
+        playDialSounds = BPrefs.get(this).getBoolean(BPrefs.DIALER_SOUNDS_KEY, BPrefs.DIALER_SOUNDS_DEFAULT_VALUE);
+        if (playDialSounds)
+            dtmfGenerator = new ToneGenerator(STREAM_SYSTEM, TONE_VOLUME);
         attachXml();
         setOnClickListeners();
         setupYoutube(2);
@@ -155,9 +166,9 @@ public class DialerActivity extends BaldActivity {
 
     private void setOnClickListeners() {
         for (char i = '0'; i <= '9'; i++)
-            numpad[i - '0'].setOnClickListener(new DialerClickListener(i));
-        b_sulamit.setOnClickListener(new DialerClickListener('*'));
-        b_hash.setOnClickListener(new DialerClickListener('#'));
+            numpad[i - '0'].setOnClickListener(new DialerClickListener(i, i - '0'));
+        b_sulamit.setOnClickListener(new DialerClickListener('*', ToneGenerator.TONE_DTMF_S));
+        b_hash.setOnClickListener(new DialerClickListener('#', ToneGenerator.TONE_DTMF_P));
 
         b_call.setOnClickListener(v -> call(number, this));
         b_clear.setOnClickListener(v -> {
@@ -190,9 +201,11 @@ public class DialerActivity extends BaldActivity {
 
     private class DialerClickListener implements View.OnClickListener {
         private final char c;
+        private final int tone;
 
-        DialerClickListener(final char c) {
+        DialerClickListener(final char c, final int tone) {
             this.c = c;
+            this.tone = tone;
         }
 
         @Override
@@ -200,6 +213,8 @@ public class DialerActivity extends BaldActivity {
             number.append(c);
             tv_number.setText(number);
             searchForContact();
+            if (playDialSounds)
+                dtmfGenerator.startTone(tone, TONE_DURATION);
         }
     }
 

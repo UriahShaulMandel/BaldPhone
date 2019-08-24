@@ -18,6 +18,7 @@
   -->
 
 <resources>
+    <bool name="is_right_to_left">true</bool>
     <string name="about">אודות</string>
     <string name="about_subtext">הפרוייקט נולד מפגישה עם חבר שחלה בפרקינסון. עזרתי לו עם בעיה כלשהי בטלפון, והבחנתי עד
         כמה הוא מתקשה לבצע פעולות, שעד אז חשבתי שהן פשוטות ומובנות מאליהן.\nהייתי בן 15, תלמיד במגמת מחשבים בכפר הירוק,
@@ -281,8 +282,8 @@
     <string name="write_contacts">יצירת אנשי קשר</string>
     <string name="write_external_storage">גישה לתמונות, סרטים וקבצים אחרים</string>
     <string name="yes">כן</string>
-    <string name="yesterday">אתמול</string>
 
+    <string name="yesterday">אתמול</string>
     <string name="nothing">לא נמצא כלום</string>
     <string name="no_contacts_found">איש קשר לא נמצא!</string>
     <string name="no_alarms">אין שעונים\nהוסף אחד על ידי לחיצה על\n\"הוסף שעון מעורר\"\nאו\n\"הוסף טיימר\"</string>
@@ -291,6 +292,7 @@
     <string name="clear_cache_subtext">האם אתה בטוח שאתה רוצה למחוק את כל המטמון?\nיישומים מוצמדים יפסיקו להיות
         מוצמדים
     </string>
+
     <string name="permissions_calm">הי, BaldPhone חייב לקבל את ההרשאות הבאות בשביל לרוץ. חלק נשמעות מפחיד, אבל זוהי הדרך
         היחידה שבה BaldPhone יכול להחליף את ממשק הטלפון. שום מידע לא נלקח ומתן ההרשאות לא גורם לשום נזק. לחץ אישור על
         מנת לאפשר את ההרשאות או לא בשביל לצאת מBaldPhone.
@@ -299,7 +301,6 @@
     <string name="also_available_at">ניתן גם לשלוח מייל ל\nbaldphone.contact@gmail.com</string>
 
     <string name="calling">ביצוע שיחות</string>
-
     <string name="pending_update">עדכון מחכה</string>
     <string name="download">הורד</string>
     <string name="install_updates">התקן עדכונים</string>
@@ -324,53 +325,56 @@
     <string name="downloading">מוריד…</string>
     <string name="baldphone_is_up_to_date">BaldPhone כבר מעודכן!</string>
     <string name="what_s_new">מה חדש</string>
-    <string name="what_do_you_want_to_do_with___">מה ברצונך לעשות עם %s?</string>
 
+    <string name="what_do_you_want_to_do_with___">מה ברצונך לעשות עם %s?</string>
     <string name="download_finished">הורדה הסתיימה!</string>
     <string name="downloading_updates">מוריד עדכונים…</string>
     <string name="installing_doesn_t_work">התקנה לא עובדת?</string>
     <string name="try_now">נסה עכשיו</string>
-    <string name="download_progress">תהליך הורדה</string>
 
+    <string name="download_progress">תהליך הורדה</string>
     <string name="crash_reports">דיווח על קריסות</string>
     <string name="crash_reports_subtext">דיווח על קריסות עוזר לי לתקן אותן במהירות\nnהמידע שנשלח הוא רק המידע ההכרחי על
         מנת לתקן את התקלה, ולא נלקח שום מידע אישי
     </string>
     <string name="custom_app">יישום מועדף</string>
+
     <string name="custom_app_subtext">בחר יישום מועדף להצמדה למסך הבית.</string>
-
     <string name="no_app_was_found">לא נמצא יישום מתאים!</string>
-    <string name="alarm">שעון מעורר</string>
 
+    <string name="alarm">שעון מעורר</string>
     <string name="no_new_notifications">אין התראות חדשות</string>
     <string name="sound">שמע</string>
     <string name="mute">שקט</string>
     <string name="vibrate">רטט</string>
+
+
     <string name="your_phone_doesnt_have_assistant_installed">אין במכשיר זה סיוע קולי</string>
-
-
     <string name="status_bar_settings">שורת מצב</string>
     <string name="status_bar_settings_subtext">איפה להראות את שורת המצב?</string>
     <string name="only_home_screen">רק במסך הבית</string>
     <string name="nowhere">בשום מסך</string>
+
     <string name="everywhere">בכל מסך</string>
 
+
     <string name="share_photo">שיתוף תמונה</string>
-
-
     <string name="choose_language_for_keyboard">בחר שפת מקלדת</string>
     <string name="hebrew">עברית</string>
-    <string name="english">אנגלית</string>
 
+    <string name="english">אנגלית</string>
     <string name="search">חפש</string>
     <string name="next">עבור הלאה</string>
-    <string name="go">עבור אל</string>
 
+    <string name="go">עבור אל</string>
+    <string name="dialer_sounds">צלילי חייגן</string>
     <!--For Tests:-->
 
+    <string name="dialer_sounds_subtext">בחר האם בלחיצה על כפתורי החייגן יישמע צליל</string>
     <string name="medication_1">אלטרוקסין 100</string>
-    <string name="medication_2">אלטרוקסין 150</string>
 
+
+    <string name="medication_2">אלטרוקסין 150</string>
 
     <string-array name="names_for_screenshots">
         <item>יונה הנביא</item>
@@ -380,8 +384,6 @@
         <item>בוב הבנאי</item>
         <item>יובל קוגוס</item>
     </string-array>
-
-    <bool name="is_right_to_left">true</bool>
 
 </resources>
 

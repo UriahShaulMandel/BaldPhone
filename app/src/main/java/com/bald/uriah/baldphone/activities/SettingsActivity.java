@@ -308,6 +308,20 @@ public class SettingsActivity extends BaldActivity {
                         .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.NOTE_VISIBLE_KEY, BPrefs.NOTE_VISIBLE_DEFAULT_VALUE) ? 0 : 1),
                 R.drawable.note_on_button
         ));
+        personalizationSettingsList.add(new BDBSettingsItem(R.string.dialer_sounds,
+                BDB.from(this)
+                        .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
+                        .setTitle(R.string.dialer_sounds)
+                        .setSubText(R.string.dialer_sounds_subtext)
+                        .setOptions(R.string.yes, R.string.no)
+                        .setPositiveButtonListener(params -> {
+                            editor.putBoolean(BPrefs.DIALER_SOUNDS_KEY, (Integer) params[0] == 0).apply();
+                            this.recreate();
+                            return true;
+                        })
+                        .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.DIALER_SOUNDS_KEY, BPrefs.DIALER_SOUNDS_DEFAULT_VALUE) ? 0 : 1),
+                R.drawable.phone_on_button
+        ));
         SettingsItem fontSettingsItem = new RunnableSettingsItem(R.string.font, v -> {
             startActivity(new Intent(this, FontChangerActivity.class));
         }, R.drawable.font_on_button);

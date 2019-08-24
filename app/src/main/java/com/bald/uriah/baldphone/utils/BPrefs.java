@@ -59,6 +59,9 @@ public final class BPrefs {
     public static final String NOTE_VISIBLE_KEY = "NOTE_VISIBLE_KEY";
     public static final boolean NOTE_VISIBLE_DEFAULT_VALUE = true;
 
+    public static final String DIALER_SOUNDS_KEY = "DIALER_SOUNDS_KEY";
+    public static final boolean DIALER_SOUNDS_DEFAULT_VALUE = true;
+
     public static final String NOTE_KEY = "NOTE_KEY";
     public static final String AFTER_TUTORIAL_KEY = "AFTER_TUTORIAL_KEY";
 
