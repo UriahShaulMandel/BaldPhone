@@ -102,7 +102,7 @@ public class DialerActivity extends BaldActivity {
             return;
         setContentView(R.layout.dialer);
         contentResolver = getContentResolver();
-        playDialSounds = BPrefs.get(this).getBoolean(BPrefs.DIALER_SOUNDS_KEY, BPrefs.DIALER_SOUNDS_DEFAULT_VALUE);
+        playDialSounds = BPrefs.get(this).getBoolean(BPrefs.DIALER_SOUNDS_KEY, BPrefs.DIALER_SOUNDS_DEFAULT_VALUE) && !testing;
         if (playDialSounds)
             dtmfGenerator = new ToneGenerator(STREAM_SYSTEM, TONE_VOLUME);
         attachXml();
