@@ -346,8 +346,8 @@
     <string name="go">Gehe zu</string>
 
     <!--    Please Add The following Strings-->
-    <!--    <string name="dialer_sounds">Dialer Sounds</string>-->
-    <!--    <string name="dialer_sounds_subtext">Choose if you want to have Dialer Sounds.</string>-->
+    <string name="dialer_sounds">Wähltastentöne</string>
+    <string name="dialer_sounds_subtext">Wählen Sie, ob Sie Wähltastentöne haben möchten.</string>
 
 
     <!--For Tests:-->
