@@ -363,7 +363,7 @@ public class S {
             Volley.newRequestQueue(context).add(
                     new StringRequest(
                             Request.Method.GET,
-                            String.format(Locale.US, "http://baldphone.co.nf/insert_new_install.php?uuid=%s&vcode=%d", sharedPreferences.getString(BPrefs.UUID_KEY, null), BuildConfig.VERSION_CODE),
+                            String.format(Locale.US, "http://baldphone.c1.biz/insert_new_install.php?uuid=%s&vcode=%d", sharedPreferences.getString(BPrefs.UUID_KEY, null), BuildConfig.VERSION_CODE),
                             response -> {
                             },
                             error -> {
