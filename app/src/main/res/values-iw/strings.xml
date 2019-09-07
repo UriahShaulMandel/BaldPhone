@@ -306,7 +306,7 @@
     <string name="install_updates">התקן עדכונים</string>
     <string name="install_updates_subtext">אנא אפשר לBaldPhone להתקין עדכונים.</string>
     <string name="a_new_update_is_available">עדכון חדש מחכה!\nעדכונים הם חשובים על מנת ש-BaldPhone ירוץ בצורה חלקה.\nלחץ
-        על אוקיי על מנת להוריד
+        על אישור על מנת לעדכן
     </string>
     <string name="current_version">גרסה נוכחית:\n</string>
     <string name="new_version">גרסה חדשה:\n</string>
