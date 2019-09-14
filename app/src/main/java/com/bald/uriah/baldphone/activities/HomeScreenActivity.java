@@ -29,6 +29,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
@@ -46,7 +47,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.PopupWindow;
 
-import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
@@ -117,6 +117,7 @@ public class HomeScreenActivity extends BaldActivity {
     private ViewPagerHolder viewPagerHolder;
     private BatteryView batteryView;
     private boolean lowBatteryAlert;
+    private int notificationCount = 0;
 
     /**
      * Listens to changes in battery {@value Intent#ACTION_BATTERY_CHANGED}
@@ -151,7 +152,8 @@ public class HomeScreenActivity extends BaldActivity {
             if (d instanceof AnimatedVectorDrawable) {
                 final AnimatedVectorDrawable animatedVectorDrawable = (AnimatedVectorDrawable) d;
                 animatedVectorDrawable.start();
-                handler.postDelayed(this, 10 * D.SECOND);
+                final int minusSeconds = Math.min((int) (Math.max((notificationCount - NOTIFICATIONS_ALOT) * 0.5f, 0)), 7);
+                handler.postDelayed(this, (10 - minusSeconds) * D.SECOND);
             }
         }
     };
@@ -163,22 +165,22 @@ public class HomeScreenActivity extends BaldActivity {
     public final BroadcastReceiver notificationReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            final int amount = intent.getIntExtra("amount", -1);
-            final @DrawableRes int drawable;
-            switch (amount) {
-                case NOTIFICATIONS_NONE:
-                    drawable = R.drawable.notification_none_on_background;
-                    break;
-                case NOTIFICATIONS_SOME:
-                    drawable = R.drawable.notification_some_on_background;
-                    break;
-                case NOTIFICATIONS_ALOT:
-                    drawable = R.drawable.notification_alot_on_background;
-                    break;
-                default:
-                    throw new AssertionError();
+            notificationCount = intent.getIntExtra("amount", -1);
+            if (notificationCount >= NOTIFICATIONS_ALOT) {
+                final Drawable drawable = getDrawable(R.drawable.notification_alot_on_background);
+                final float opacity = Math.min(((notificationCount - NOTIFICATIONS_ALOT) / 10.0f), 1.0f);
+                drawable.setTint(
+                        Color.rgb(255, (int) (255 * (1.f - opacity)), (int) (255 * (1.f - opacity)))
+                );
+
+                notificationsButton.setImageDrawable(drawable);
+            } else if (notificationCount >= NOTIFICATIONS_SOME) {
+                notificationsButton.setImageResource(R.drawable.notification_some_on_background);
+            } else if (notificationCount >= NOTIFICATIONS_NONE) {
+                notificationsButton.setImageResource(R.drawable.notification_none_on_background);
+            } else {
+                notificationsButton.setImageResource(R.drawable.error_on_background);
             }
-            notificationsButton.setImageResource(drawable);
 
             handler.removeCallbacks(shakeIt);
             handler.postDelayed(shakeIt, 5 * D.SECOND);
@@ -349,10 +351,10 @@ public class HomeScreenActivity extends BaldActivity {
         LocalBroadcastManager.getInstance(this).
                 registerReceiver(notificationReceiver,
                         new IntentFilter(NotificationListenerService.HOME_SCREEN_ACTIVITY_BROADCAST));
-        LocalBroadcastManager.getInstance(this).
+        handler.postDelayed(() -> LocalBroadcastManager.getInstance(this).
                 sendBroadcast(
                         new Intent(ACTION_REGISTER_ACTIVITY)
-                                .putExtra(KEY_EXTRA_ACTIVITY, NOTIFICATIONS_HOME_SCREEN));
+                                .putExtra(KEY_EXTRA_ACTIVITY, NOTIFICATIONS_HOME_SCREEN)), 200 * D.MILLISECOND);
 
         registerReceiver(batteryReceiver, BATTERY_FILTER);
     }
@@ -374,6 +376,7 @@ public class HomeScreenActivity extends BaldActivity {
             unregisterReceiver(batteryReceiver);
         } catch (IllegalArgumentException ignore) {
         }
+        handler.removeCallbacks(shakeIt);
         super.onPause();
     }
 

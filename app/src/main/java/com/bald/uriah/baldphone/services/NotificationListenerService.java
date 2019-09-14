@@ -175,11 +175,7 @@ public class NotificationListenerService extends android.service.notification.No
 
             }
             final Intent intent = new Intent(HOME_SCREEN_ACTIVITY_BROADCAST)
-                    .putExtra("amount", statusBarNotifications.length < NOTIFICATIONS_ALOT ?
-                            statusBarNotifications.length < NOTIFICATIONS_SOME ?
-                                    NOTIFICATIONS_NONE :
-                                    NOTIFICATIONS_SOME :
-                            NOTIFICATIONS_ALOT)
+                    .putExtra("amount", statusBarNotifications.length)
                     .putStringArrayListExtra("packages", packages);
 
             LocalBroadcastManager.getInstance(this)
