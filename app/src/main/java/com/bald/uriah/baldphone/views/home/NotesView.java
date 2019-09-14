@@ -77,10 +77,8 @@ public class NotesView extends HomeView {
                 }),
                 (v -> editText.setEnabled(false))
         );
-        view.findViewById(R.id.bt_speak).setOnClickListener((v) -> {
-            if (homeScreen.recognizerManager != null)
-                homeScreen.recognizerManager.displaySpeechRecognizer();
-        });
+        view.findViewById(R.id.bt_speak).setOnClickListener((v) -> homeScreen.recognizerManager.displaySpeechRecognizer());
+
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
