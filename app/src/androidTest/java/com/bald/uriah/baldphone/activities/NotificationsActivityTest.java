@@ -70,7 +70,7 @@ public class NotificationsActivityTest extends BaseActivityTest {
     @Test
     public void notificationsActivityTest() {
         mActivityTestRule.launchActivity(new Intent());
-        ViewInteraction baldImageButton2 = onView(allOf(withId(R.id.notifications), childAtPosition(allOf(withId(R.id.top_bar), childAtPosition(withId(R.id.container), 0)), 4), isDisplayed()));
+        ViewInteraction baldImageButton2 = onView(allOf(withId(R.id.notifications), isDisplayed()));
         sleep();
         baldImageButton2.perform(longClick());
         pressBack();
