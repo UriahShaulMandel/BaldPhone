@@ -26,6 +26,8 @@ import java.util.Objects;
 
 import static com.bald.uriah.baldphone.utils.BPrefs.LONG_PRESSES_DEFAULT_VALUE;
 import static com.bald.uriah.baldphone.utils.BPrefs.LONG_PRESSES_KEY;
+import static com.bald.uriah.baldphone.utils.BPrefs.LOW_BATTERY_ALERT_DEFAULT_VALUE;
+import static com.bald.uriah.baldphone.utils.BPrefs.LOW_BATTERY_ALERT_KEY;
 import static com.bald.uriah.baldphone.utils.BPrefs.NOTE_VISIBLE_DEFAULT_VALUE;
 import static com.bald.uriah.baldphone.utils.BPrefs.NOTE_VISIBLE_KEY;
 import static com.bald.uriah.baldphone.utils.BPrefs.PAGE_TRANSFORMERS_DEFAULT_VALUE;
@@ -39,11 +41,11 @@ import static com.bald.uriah.baldphone.utils.BPrefs.VIBRATION_FEEDBACK_KEY;
 
 public class BaldPrefsUtils {
     private final int theme;
-    private final boolean vibrationFeedback, touchNoHard, longPresses, notes;
+    private final boolean vibrationFeedback, touchNoHard, longPresses, notes, lowBatteryAlert;
     private final int swipingEffect, statusBar;
     private final String customApp;
 
-    private BaldPrefsUtils(int theme, boolean vibrationFeedback, boolean touchNoHard, boolean longPresses, int swipingEffect, boolean notes, String customApp, int statusBar) {
+    private BaldPrefsUtils(int theme, boolean vibrationFeedback, boolean touchNoHard, boolean longPresses, int swipingEffect, boolean notes, String customApp, int statusBar, boolean lowBatteryAlert) {
         this.theme = theme;
         this.vibrationFeedback = vibrationFeedback;
         this.touchNoHard = touchNoHard;
@@ -52,6 +54,7 @@ public class BaldPrefsUtils {
         this.notes = notes;
         this.customApp = customApp;
         this.statusBar = statusBar;
+        this.lowBatteryAlert = lowBatteryAlert;
     }
 
     public static BaldPrefsUtils newInstance(Context context) {
@@ -70,7 +73,8 @@ public class BaldPrefsUtils {
                         .getBoolean(NOTE_VISIBLE_KEY, NOTE_VISIBLE_DEFAULT_VALUE),
                 sharedPreferences.getString(BPrefs.CUSTOM_APP_KEY, null),
                 sharedPreferences
-                        .getInt(STATUS_BAR_KEY, STATUS_BAR_DEFAULT_VALUE)
+                        .getInt(STATUS_BAR_KEY, STATUS_BAR_DEFAULT_VALUE),
+                sharedPreferences.getBoolean(LOW_BATTERY_ALERT_KEY, LOW_BATTERY_ALERT_DEFAULT_VALUE)
         );
     }
 
@@ -88,8 +92,14 @@ public class BaldPrefsUtils {
                 touchNoHard == that.touchNoHard &&
                 longPresses == that.longPresses &&
                 notes == that.notes &&
+                lowBatteryAlert == that.lowBatteryAlert &&
                 swipingEffect == that.swipingEffect &&
                 statusBar == that.statusBar &&
                 Objects.equals(customApp, that.customApp);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(theme, vibrationFeedback, touchNoHard, longPresses, notes, lowBatteryAlert, swipingEffect, statusBar, customApp);
     }
 }

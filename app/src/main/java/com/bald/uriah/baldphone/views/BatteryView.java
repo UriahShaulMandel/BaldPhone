@@ -20,7 +20,6 @@
 package com.bald.uriah.baldphone.views;
 
 import android.content.Context;
-import android.os.BatteryManager;
 import android.util.AttributeSet;
 
 import androidx.annotation.DrawableRes;
@@ -43,10 +42,10 @@ public class BatteryView extends BaldImageButton {
         super(context, attrs, defStyleAttr);
     }
 
-    public void setLevel(int level, int chargePlug) {
+    public void setLevel(int level, boolean charged) {
         percentage = level;
         @DrawableRes int drawableRes = R.drawable.battery_unknown_on_background;
-        if (chargePlug == BatteryManager.BATTERY_PLUGGED_AC || chargePlug == BatteryManager.BATTERY_PLUGGED_WIRELESS || chargePlug == BatteryManager.BATTERY_PLUGGED_USB) {
+        if (charged) {
             if (level < 20) {
                 drawableRes = R.drawable.battery_20_c_on_background;
             } else if (level < 30) {

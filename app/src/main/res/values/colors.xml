@@ -36,6 +36,8 @@
     <color name="toast_foreground_error">#000000</color>
     <color name="toast_foreground_informative">#000000</color>
 
+    <color name="battery_low">#d50000</color>
+
 
     <color name="outgoing">#80388ba3</color>
     <color name="received">#802e7d32</color>

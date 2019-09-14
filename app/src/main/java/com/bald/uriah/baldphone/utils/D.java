@@ -19,8 +19,11 @@
 
 package com.bald.uriah.baldphone.utils;
 
+import android.graphics.Color;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.annotation.ColorInt;
 
 import com.bald.uriah.baldphone.R;
 
@@ -34,6 +37,8 @@ public class D {
             DAY = 24 * HOUR;
     public static final int vibetime = 100;
     public static final String BALD_PREFS = BPrefs.KEY;//default device settings
+    @ColorInt
+    public static final int DEFAULT_STATUS_BAR_COLOR = Color.BLACK;
     public final static View.OnClickListener longer = v -> Toast.makeText(v.getContext(), R.string.press_longer, Toast.LENGTH_LONG).show();
     public static final View.OnClickListener EMPTY_CLICK_LISTENER = v -> {
     };

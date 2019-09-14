@@ -368,9 +368,12 @@
 
     <string name="go">עבור אל</string>
     <string name="dialer_sounds">צלילי חייגן</string>
+    <string name="dialer_sounds_subtext">בחר האם בלחיצה על כפתורי החייגן יישמע צליל</string>
+    <string name="low_battery_alert">חיווי סוללה נמוכה</string>
+    <string name="low_battery_alert_subtext">בחר האם במסך הבית, כאשר הבטרייה מתחת לעשרים אחוזים, שורת המצב תיראה אדומה\nחשוב לציין שלא ניתן יהיה לראות את השינוי אם שורת המצב מוסתרת.</string>
+
     <!--For Tests:-->
 
-    <string name="dialer_sounds_subtext">בחר האם בלחיצה על כפתורי החייגן יישמע צליל</string>
     <string name="medication_1">אלטרוקסין 100</string>
 
 

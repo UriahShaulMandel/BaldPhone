@@ -322,6 +322,21 @@ public class SettingsActivity extends BaldActivity {
                         .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.DIALER_SOUNDS_KEY, BPrefs.DIALER_SOUNDS_DEFAULT_VALUE) ? 0 : 1),
                 R.drawable.phone_on_button
         ));
+
+        personalizationSettingsList.add(new BDBSettingsItem(R.string.low_battery_alert,
+                BDB.from(this)
+                        .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
+                        .setTitle(R.string.low_battery_alert)
+                        .setSubText(R.string.low_battery_alert_subtext)
+                        .setOptions(R.string.yes, R.string.no)
+                        .setPositiveButtonListener(params -> {
+                            editor.putBoolean(BPrefs.LOW_BATTERY_ALERT_KEY, (Integer) params[0] == 0).apply();
+                            this.recreate();
+                            return true;
+                        })
+                        .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.LOW_BATTERY_ALERT_KEY, BPrefs.LOW_BATTERY_ALERT_DEFAULT_VALUE) ? 0 : 1),
+                R.drawable.low_battery_alert_on_button
+        ));
         SettingsItem fontSettingsItem = new RunnableSettingsItem(R.string.font, v -> {
             startActivity(new Intent(this, FontChangerActivity.class));
         }, R.drawable.font_on_button);

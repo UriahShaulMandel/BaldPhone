@@ -50,6 +50,7 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.bald.uriah.baldphone.BuildConfig;
@@ -115,6 +116,8 @@ public class HomeScreenActivity extends BaldActivity {
     private BaldPrefsUtils baldPrefsUtils;
     private ViewPagerHolder viewPagerHolder;
     private BatteryView batteryView;
+    private boolean lowBatteryAlert;
+
     /**
      * Listens to changes in battery {@value Intent#ACTION_BATTERY_CHANGED}
      */
@@ -125,7 +128,11 @@ public class HomeScreenActivity extends BaldActivity {
                 final int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
                 final int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
                 final int batteryPct = Math.round(level / (float) scale * 100);
-                batteryView.setLevel(batteryPct, intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1));
+                final int chargePlug = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
+                final boolean charged = chargePlug == BatteryManager.BATTERY_PLUGGED_AC || chargePlug == BatteryManager.BATTERY_PLUGGED_WIRELESS || chargePlug == BatteryManager.BATTERY_PLUGGED_USB;
+                batteryView.setLevel(batteryPct, charged);
+                if (lowBatteryAlert)
+                    getWindow().setStatusBarColor((batteryPct < 20 && !charged) ? ContextCompat.getColor(context, R.color.battery_low) : D.DEFAULT_STATUS_BAR_COLOR);
             }
         }
     };
@@ -210,7 +217,7 @@ public class HomeScreenActivity extends BaldActivity {
             BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText("Could not start Notification Listener Service!").show();
         }
         new UpdateApps(this).execute(this.getApplicationContext());
-
+        lowBatteryAlert = sharedPreferences.getBoolean(BPrefs.LOW_BATTERY_ALERT_KEY, BPrefs.LOW_BATTERY_ALERT_DEFAULT_VALUE);
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         final Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
         screenSize = new Point();

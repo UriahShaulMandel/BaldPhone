@@ -364,8 +364,12 @@
     <string name="search">Search</string>
     <string name="next">Next</string>
     <string name="go">Go</string>
+
+
     <string name="dialer_sounds">Dialer Sounds</string>
     <string name="dialer_sounds_subtext">Choose if you want to have Dialer Sounds.</string>
+    <string name="low_battery_alert">Low battery alert</string>
+    <string name="low_battery_alert_subtext">Choose if you want the status bar to be red in the home screen when battery is under 20%\nNotice It won\'t be shown if the system status bar is hidden.</string>
 
 
     <!--For Tests:-->
