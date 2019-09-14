@@ -338,16 +338,20 @@
     <string name="english">Englisch</string>
     <string name="hebrew">Hebräisch</string>
 
-
-    <!--Please make sure the following strings are translated propertly:-->
     <string name="choose_language_for_keyboard">Wähle die Tastatursprache</string>
     <string name="search">Suche</string>
     <string name="next">Nächster</string>
     <string name="go">Gehe zu</string>
 
-    <!--    Please Add The following Strings-->
+
     <string name="dialer_sounds">Wähltastentöne</string>
     <string name="dialer_sounds_subtext">Entscheide, ob du Wähltastentöne haben möchtest.</string>
+    <string name="low_battery_alert">Akku-Warnung</string>
+    <string name="low_battery_alert_subtext">Entscheide, ob die Statusleiste des Startbildschirms rot gefärbt werden soll, wenn die Akkuladung unter 20% sinkt.\nHinweis: Es wird nicht angezeigt, wenn die Statusleiste des Systems versteckt ist.</string>
+
+
+    <!--Please Add The following Strings:-->
+    <!--Please make sure the following strings are translated propertly:-->
 
 
     <!--For Tests:-->
