@@ -39,7 +39,7 @@ import org.acra.config.HttpSenderConfigurationBuilder;
 import org.acra.data.StringFormat;
 import org.acra.sender.HttpSender;
 
-public class BaldPhone extends Application {
+public cass BaldPhone extends Application {
     private static final String TAG = BaldPhone.class.getSimpleName();
     // Application class should not have any fields, http://www.developerphil.com/dont-store-data-in-the-application-object/
 
