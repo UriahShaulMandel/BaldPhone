@@ -20,9 +20,9 @@
 <resources>
     <string name="about">Über</string>
     <string name="about_subtext">Hi!\nIch heiße Uriah Shaul Mandel, und ich bin der Entwickler dieser Platform.\n
-        Seid ich erwachsen bin, habe ich die meiste Zeit meines Lebens investiert, um an dieser Platform zu arbeiten. Ich habe sie frei veröffentlicht, so dass sie jeder benutzen kann.\nDu bist mehr als nur eingeladen mir zu schreiben: email:\nbaldphone.contact@gmail.com
+        Seit ich erwachsen bin, habe ich die meiste Zeit meines Lebens investiert, um an dieser Platform zu arbeiten. Ich habe sie frei veröffentlicht, so dass sie jeder benutzen kann.\nDu bist mehr als nur eingeladen mir zu schreiben: email:\nbaldphone.contact@gmail.com
     </string>
-    <string name="accessibility_level">Level der Barrierefreiheit</string>
+    <string name="accessibility_level">Stufe der Barrierefreiheit</string>
     <string name="accessibility_settings">Barrierefreiheit</string>
     <string name="accidental_touches">Schutz vor versehentlichem Berühren</string>
     <string name="accidental_touches_settings_subtext">Der Schutz verhindert, dass dein Handy auf Berührungen reagiert, wenn es zugedeckt ist.\nWenn er Probleme macht kannst du ihn ausschalten.
@@ -46,7 +46,7 @@
     <string name="airplane_mode">Flugzeugmodus</string>
     <string name="alarm_name">Benennung des Weckers</string>
     <string name="alarm_volume">Lautstärke des Weckers</string>
-    <string name="alarm_volume_subtext">Wähle eine Lautstärke für den Wecker.\nDie Lautstärke wächst von Links nach Rechts.</string>
+    <string name="alarm_volume_subtext">Wähle die Lautstärke für den Wecker.\nDie Lautstärke steigt von Links nach Rechts an.</string>
     <string name="alarms">Wecker</string>
 
     <string name="alarms_repeats_every">Der Wecker klingelt jeden</string>
@@ -75,7 +75,7 @@
     <string name="call_log">Anrufsliste</string>
     <string name="call_subtext">Diese Erlaubnis wird benötigt, um Kontakte anzurufen.</string>
     <string name="camera">Kamera</string>
-    <string name="camera_subtext">Diese Erlaubnis wird benötigt, um die Taschenlampe anzuschalten.</string>
+    <string name="camera_subtext">Diese Erlaubnis wird benötigt, um die Taschenlampe einzuschalten.</string>
     <string name="cancel">Abbrechen</string>
     <string name="change_pills_time">Ändern der Uhrzeit für die Tabletten</string>
     <string name="change_system_settings_subtext">Bitte erlaube BaldPhone die Einstellungen zu ändern, wie z.B. eine größere Schriftgröße oder eine höhere Helligkeit zu setzen.
@@ -114,8 +114,8 @@
     <string name="down">Abwärts</string>
     <string name="edit">Bearbeiten</string>
     <string name="email">Email:</string>
-    <string name="enable_notification_access">Zugang zu Benachrichtigungen aktivieren</string>
-    <string name="enable_notification_access_subtext">Bitte gewähre BaldPhone Zugang zu den Bachrichtigungen.</string>
+    <string name="enable_notification_access">Zugriff auf Benachrichtigungen aktivieren</string>
+    <string name="enable_notification_access_subtext">Bitte gewähre BaldPhone Zugriff auf die Bachrichtigungen.</string>
     <string name="enter">Enter</string>
     <string name="enter_contact_or_phone_number">Trage hier den Namen des Kontaktes ein:</string>
     <string name="evening">Abend</string>
@@ -148,7 +148,7 @@
     <string name="left_handed">Linkshänder</string>
     <string name="light">Hell</string>
     <string name="location">Ortungsdienste</string>
-    <string name="emergency_services">Notdienst</string>
+    <string name="emergency_services">Notruf</string>
     <string name="mail">Mail</string>
     <string name="maps">Navigation</string>
 
@@ -235,7 +235,7 @@
     <string name="share_baldphone">Anderen von BaldPhone erzählen</string>
     <string name="share_contact">Kontakt weiterleiten</string>
     <string name="share_differently">Mit einer anderen App weiterleiten</string>
-    <string name="share_via_whatsapp">Über Whatsapp weiterleiten</string>
+    <string name="share_via_whatsapp">Über WhatsApp weiterleiten</string>
     <string name="shift">wechseln</string>
     <string name="show">Zeigen</string>
     <string name="small">Klein</string>
@@ -244,7 +244,7 @@
     <string name="sos_is_full">SOS ist voll belegt!</string>
     <string name="sos_is_full_subtext">SOS ist voll belegt! Bitte entferne einen Notfallkontakt, bevor du einen neuen hinzufügst</string>
     <string name="speak">Sprich</string>
-    <string name="speech_to_text">Gesprchenes in Text umwandeln</string>
+    <string name="speech_to_text">Gesprochenes in Text umwandeln</string>
     <string name="strong_hand">Händigkeit</string>
     <string name="strong_hand_subtext">Wähle deine Händigkeit, um die Benutzeroberfläche anzupassen.</string>
     <string name="submit">festlegen</string>
@@ -272,7 +272,7 @@
     <string name="voice_mail">Sprachnachricht</string>
     <string name="wednesday">Mittwoch</string>
     <string name="whatsapp">WhatsApp</string>
-    <string name="wifi">W-Lan</string>
+    <string name="wifi">W-LAN</string>
     <string name="will_repeat_only_once">Wird nur einmal wiederholt!</string>
     <string name="write">Schreiben</string>
     <string name="write_contacts">Kontakte speichern</string>
@@ -300,7 +300,7 @@
     <string name="new_updates_are_ready_to_be_downloaded">Neue Aktualisierungen können heruntergeladen werden.</string>
     <string name="install">Installiern</string>
     <string name="data_warning">Datenwarnung</string>
-    <string name="data_warning_subtext">Hallo, du bist nicht mit einem W-Lan verbunden.\nDer Download ist ungefähr 3MB groß,
+    <string name="data_warning_subtext">Hallo, du bist nicht via W-LAN verbunden.\nDer Download ist ungefähr 3MB groß,
         falls du unterwegs bist können Kosten entstehen.\nMöchtest du mit dem Download fortdahren?
     </string>
     <string name="update_message_is_corrupted">Die Aktualisierungsnachricht ist fehlerhaft.</string>
@@ -338,16 +338,20 @@
     <string name="english">Englisch</string>
     <string name="hebrew">Hebräisch</string>
 
-
-    <!--Please make sure the following strings are translated propertly:-->
-    <string name="choose_language_for_keyboard">Wählen Sie die Tastatursprache</string>
+    <string name="choose_language_for_keyboard">Wähle die Tastatursprache</string>
     <string name="search">Suche</string>
     <string name="next">Nächster</string>
     <string name="go">Gehe zu</string>
 
-    <!--    Please Add The following Strings-->
+
     <string name="dialer_sounds">Wähltastentöne</string>
-    <string name="dialer_sounds_subtext">Wählen Sie, ob Sie Wähltastentöne haben möchten.</string>
+    <string name="dialer_sounds_subtext">Entscheide, ob du Wähltastentöne haben möchtest.</string>
+    <string name="low_battery_alert">Akku-Warnung</string>
+    <string name="low_battery_alert_subtext">Entscheide, ob die Statusleiste des Startbildschirms rot gefärbt werden soll, wenn die Akkuladung unter 20% sinkt.\nHinweis: Es wird nicht angezeigt, wenn die Statusleiste des Systems versteckt ist.</string>
+
+
+    <!--Please Add The following Strings:-->
+    <!--Please make sure the following strings are translated propertly:-->
 
 
     <!--For Tests:-->
