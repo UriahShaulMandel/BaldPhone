@@ -29,7 +29,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
+import android.content.res.Resources;
 import android.graphics.Point;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
@@ -40,6 +40,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.speech.RecognizerIntent;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +48,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.PopupWindow;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
@@ -118,6 +120,8 @@ public class HomeScreenActivity extends BaldActivity {
     private BatteryView batteryView;
     private boolean lowBatteryAlert;
     private int notificationCount = 0;
+    @ColorInt
+    private int decorationColorOnBackground;
 
     /**
      * Listens to changes in battery {@value Intent#ACTION_BATTERY_CHANGED}
@@ -169,9 +173,10 @@ public class HomeScreenActivity extends BaldActivity {
             if (notificationCount >= NOTIFICATIONS_ALOT) {
                 final Drawable drawable = getDrawable(R.drawable.notification_alot_on_background);
                 final float opacity = Math.min(((notificationCount - NOTIFICATIONS_ALOT) / 10.0f), 1.0f);
-                drawable.setTint(
-                        Color.rgb(255, (int) (255 * (1.f - opacity)), (int) (255 * (1.f - opacity)))
-                );
+                drawable.setTint(S.blendColors(decorationColorOnBackground, getResources().getColor(R.color.battery_low), 1 - opacity));
+//                drawable.setTint(
+//                        Color.rgb(255, (int) (255 * (1.f - opacity)), (int) (255 * (1.f - opacity)))
+//                );
 
                 notificationsButton.setImageDrawable(drawable);
             } else if (notificationCount >= NOTIFICATIONS_SOME) {
@@ -224,6 +229,11 @@ public class HomeScreenActivity extends BaldActivity {
         final Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
         screenSize = new Point();
         display.getSize(screenSize);
+
+        final TypedValue typedValue = new TypedValue();
+        final Resources.Theme theme = getTheme();
+        theme.resolveAttribute(R.attr.bald_decoration_on_background, typedValue, true);
+        decorationColorOnBackground = typedValue.data;
 
         if ((sharedPreferences.getInt(BPrefs.STATUS_BAR_KEY, BPrefs.STATUS_BAR_DEFAULT_VALUE) == 1)) {
             getWindow().requestFeature(Window.FEATURE_NO_TITLE);

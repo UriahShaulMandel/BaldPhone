@@ -371,4 +371,12 @@ public class S {
                     ).setTag("baldphone_server"));
         }
     }
+
+    public static int blendColors(final int color1, final int color2, final float ratio) {
+        final float inverseRation = 1f - ratio;
+        final float r = (Color.red(color1) * ratio) + (Color.red(color2) * inverseRation);
+        final float g = (Color.green(color1) * ratio) + (Color.green(color2) * inverseRation);
+        final float b = (Color.blue(color1) * ratio) + (Color.blue(color2) * inverseRation);
+        return Color.rgb((int) r, (int) g, (int) b);
+    }
 }
