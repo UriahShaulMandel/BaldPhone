@@ -18,7 +18,7 @@
     - [German](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-de/strings.xml) translated by [Caibot](https://github.com/Caibot)
  2. Click "Raw" and copy the text to your text editor (Notepad++ is great for this specific task) 
  3. Change all the Values* to the new language (long texts like abouts can remain in english)
- 4. Please make sure all the words are correct, obviously I can't check it
+ 4. Please make sure all the words are correct, obviously I can't check it :)
  5. Send me the file, and your name
  6. The new language together with credit will be added in the next release
  7. When the next release is published, please make sure the translations match
