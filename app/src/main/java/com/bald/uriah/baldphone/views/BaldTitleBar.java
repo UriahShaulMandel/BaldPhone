@@ -96,12 +96,11 @@ public class BaldTitleBar extends LinearLayout {
             textColorBeforeGold = tv_title.getCurrentTextColor();
         }
         setBackgroundTintList(gold ? ColorStateList.valueOf(getContext().getResources().getColor(R.color.gold)) : null);
-        int onGoldColorInt = getContext().getResources().getColor(R.color.on_gold);
-        ColorStateList onGold = gold ? ColorStateList.valueOf(onGoldColorInt) : null;
+        final int onGoldColorInt = getContext().getResources().getColor(R.color.on_gold);
+        final ColorStateList onGold = gold ? ColorStateList.valueOf(onGoldColorInt) : null;
         bt_back.setImageTintList(onGold);
         bt_help.setImageTintList(onGold);
         tv_title.setTextColor(gold ? onGoldColorInt : textColorBeforeGold);
-
     }
 
     //public on purpose, because of settings app... trust me
