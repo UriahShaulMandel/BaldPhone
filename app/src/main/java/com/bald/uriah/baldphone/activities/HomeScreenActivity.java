@@ -119,10 +119,6 @@ public class HomeScreenActivity extends BaldActivity {
     private ViewPagerHolder viewPagerHolder;
     private BatteryView batteryView;
     private boolean lowBatteryAlert;
-    private int notificationCount = 0;
-    @ColorInt
-    private int decorationColorOnBackground;
-
     /**
      * Listens to changes in battery {@value Intent#ACTION_BATTERY_CHANGED}
      */
@@ -137,10 +133,13 @@ public class HomeScreenActivity extends BaldActivity {
                 final boolean charged = chargePlug == BatteryManager.BATTERY_PLUGGED_AC || chargePlug == BatteryManager.BATTERY_PLUGGED_WIRELESS || chargePlug == BatteryManager.BATTERY_PLUGGED_USB;
                 batteryView.setLevel(batteryPct, charged);
                 if (lowBatteryAlert)
-                    getWindow().setStatusBarColor((batteryPct < 20 && !charged) ? ContextCompat.getColor(context, R.color.battery_low) : D.DEFAULT_STATUS_BAR_COLOR);
+                    getWindow().setStatusBarColor((batteryPct < D.LOW_BATTERY_LEVEL && !charged) ? ContextCompat.getColor(context, R.color.battery_low) : D.DEFAULT_STATUS_BAR_COLOR);
             }
         }
     };
+    private int notificationCount = 0;
+    @ColorInt
+    private int decorationColorOnBackground;
     private BaldImageButton notificationsButton, sosButton, soundButton, flashButton;
     private AudioManager audioManager;
     private BaldHomeWatcher baldHomeWatcher;
@@ -174,10 +173,6 @@ public class HomeScreenActivity extends BaldActivity {
                 final Drawable drawable = getDrawable(R.drawable.notification_alot_on_background);
                 final float opacity = Math.min(((notificationCount - NOTIFICATIONS_ALOT) / 10.0f), 1.0f);
                 drawable.setTint(S.blendColors(decorationColorOnBackground, getResources().getColor(R.color.battery_low), 1 - opacity));
-//                drawable.setTint(
-//                        Color.rgb(255, (int) (255 * (1.f - opacity)), (int) (255 * (1.f - opacity)))
-//                );
-
                 notificationsButton.setImageDrawable(drawable);
             } else if (notificationCount >= NOTIFICATIONS_SOME) {
                 notificationsButton.setImageResource(R.drawable.notification_some_on_background);
