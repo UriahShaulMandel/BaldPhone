@@ -47,7 +47,7 @@ public class BatteryView extends BaldImageButton {
         percentage = level;
         @DrawableRes int drawableRes = R.drawable.battery_unknown_on_background;
         if (charged) {
-            if (level < D.LOW_BATTERY_LEVEL) {
+            if (level < 20) {
                 drawableRes = R.drawable.battery_20_c_on_background;
             } else if (level < 30) {
                 drawableRes = R.drawable.battery_30_c_on_background;
