@@ -42,7 +42,7 @@ import java.util.Locale;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 
 public abstract class BaseScreenshotTakerTest<T extends Activity> {
-    protected static final Locale[] locales = new Locale[]{Locale.ENGLISH, Locale.FRENCH, Locale.GERMAN, Locale.forLanguageTag("es"), Locale.forLanguageTag("iw-IL"), Locale.forLanguageTag("pt")};
+    protected static final Locale[] locales = new Locale[]{Locale.ENGLISH, Locale.FRENCH, Locale.GERMAN, Locale.forLanguageTag("es"), Locale.forLanguageTag("iw-IL"), Locale.forLanguageTag("pt"), Locale.forLanguageTag("cs")};
     protected static int localeIndex = 0;
     private final LocaleRule mLocaleRule = new LocaleRule(locales);
     public ActivityTestRule<T> mActivityTestRule = new ActivityTestRule<T>(activity(), true, false);

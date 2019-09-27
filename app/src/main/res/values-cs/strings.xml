@@ -1,0 +1,391 @@
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<resources>
+    <bool name="is_right_to_left">false</bool>
+    <string name="about">O aplikaci</string>
+    <string name="about_subtext">Ahoj!\nMoje jméno je Uriah Shaul Mandel a jsem vývojář této platformy.\n
+        Většinu svého \"dospělého\" života výrobou této platformy a rozhodl jsem se ji vydat zadarmo a to pro
+        všechny.\nMůžete mě kontaktovat přes email:\nbaldphone.contact@gmail.com
+    </string>
+    <string name="accessibility_level">Úroveň přistupnosti</string>
+    <string name="accessibility_settings">Přístupnost</string>
+    <string name="accidental_touches">Ochrana proti nechtěnému dotyku</string>
+    <string name="accidental_touches_settings_subtext">Ochrana blokuje telefon před dotykovým vstupem, pokud je telefon
+        zakrytý\nPokud máte problémy můžete vypnout
+    </string>
+    <string name="accidental_touches_subtext">Nechtěný dotyk byl detekován\nZmáčkněte ok pro pokračování používání telefonu\n
+        Pokud se tato zpráva neustále zobrazuje, můžete ji vypnout v nastavení přístupnosti
+    </string>
+    <string name="acknowledgments">Poděkování</string>
+    <string name="adaptive">Adaptivní</string>
+    <string name="add_alarm">Přidat budík</string>
+    <string name="add_alarm_quickly">Přidat časovač</string>
+    <string name="add_contact">Přidat kontakt</string>
+    <string name="add_emergency_contact">Přidat</string>
+    <string name="add_pill">Přidat pilulku</string>
+    <string name="add_shortcut">Přidat zkratku</string>
+    <string name="add_to_favorite">Přidat do oblíbených</string>
+    <string name="add_to_home">Přidat na domovskou obrazovku</string>
+    <string name="add_to_sos">Přidat do SOS</string>
+    <string name="address">Adresa</string>
+    <string name="advanced_options">Pokročilé nastavení</string>
+    <string name="afternoon">Odpoledne</string>
+    <string name="airplane_mode">Režim letadlo</string>
+    <string name="alarm_name">Název budíku</string>
+    <string name="alarm_volume">Hlasitost budíku</string>
+    <string name="alarm_volume_subtext">Vyberte hlasitost budíku\nHlasitost se zvyšuje od leva do prava</string>
+
+    <string name="alarms">Budíky</string>
+    <string name="alarms_repeats_every">Budíky se opakují každý</string>
+    <string name="all_alarms">Všechny budíky</string>
+    <string name="allow">Povolit</string>
+    <string name="already_setted">Již nastaveno!\nKlikněte zde pro změnu</string>
+    <string name="an_error_has_occurred">Nastala chyba!</string>
+
+    <string name="and_welcome_to_baldphone">A vítejte u BaldPhone</string>
+    <string name="apps">Aplikace</string>
+    <string name="are_you_sure_you_want_to_delete___">Jste si jisté že chcete smazat %s?</string>
+    <string name="assistant">Asistent</string>
+    <string name="at_least_one_day_must_be_selected">Aspoň jedno musí být vybráno!</string>
+    <string name="auto_brightness">Automatický\njas</string>
+    <string name="back">Zpátky</string>
+    <string name="backspace">backspace</string>
+    <string name="baldphone_bla_allow_permission">Prosím povolte následující oprávnění:</string>
+    <string name="blocked">Zablokováno</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="brightness">Jas</string>
+    <string name="brightness_subtext">Změnit jas.</string>
+    <string name="cache_cleared_successfully">Mezipaměť vyčištěna úspěšně!</string>
+    <string name="call">Zavolat</string>
+
+    <string name="calling">Volám</string>
+    <string name="call_log">Historie hovorů:</string>
+    <string name="call_subtext">Toto oprávnění je nutné k volání kontaktů.</string>
+    <string name="camera">Fotoaparát</string>
+    <string name="camera_subtext">Toto oprávnění je nutné k používání svítilny.</string>
+    <string name="cancel">Zrušit</string>
+    <string name="change_pills_time">Změnit čas pilulky</string>
+    <string name="change_system_settings_subtext">Prosím povolte BaldPhone změnu nastavení, jako například
+    zvětšení písma a změnu jasu.
+    </string>
+    <string name="choose_friday">Pát</string>
+    <string name="choose_monday">Pon</string>
+    <string name="choose_saturday">Sob</string>
+    <string name="choose_sunday">Ned</string>
+    <string name="choose_thursday">Čtv</string>
+    <string name="choose_tuesday">Út</string>
+    <string name="choose_wednesday">Stř</string>
+    <string name="clear">Vyčistit</string>
+    <string name="clear_cache">Vyčistit mezipaměť</string>
+    <string name="clear_data">Vymazat všechny data</string>
+    <string name="clear_data_subtext">Jste si jistí, že chcete vymazat všechny data?</string>
+    <string name="clear_data_subtext2">100%?</string>
+    <string name="clear_data_subtext3">Opravdu?\nZmáčknutí tlačítka ano vymaže všechny data</string>
+    <string name="clock">Hodiny</string>
+    <string name="coming_soon">Brzy!</string>
+    <string name="connection_settings">Připojení</string>
+    <string name="contact_must_has_name">Kontakt musí mít jméno!</string>
+    <string name="contact_not_created">Kontakt nebyl vytvořen!</string>
+    <string name="contacts">Kontakty</string>
+    <string name="contacts_read_subtext">Toto oprávnění je nutné ke čtení kontaktů.</string>
+    <string name="contacts_subtext">Toto oprávnění je nutné k přidání nových kontaktů.</string>
+    <string name="crash">Ale ne!\nBaldPhone narazil na problém a nyní se restartuje.</string>
+    <string name="current_time">Čas nyní</string>
+    <string name="custom">Vlastní</string>
+    <string name="dark">Tmavý</string>
+    <string name="delete">Smazat</string>
+    <string name="delete___">Smazat %s?</string>
+    <string name="delete_all_alarms">Smazat všechny budíky</string>
+    <string name="dialer">Vytáčení</string>
+    <string name="display_settings">Displej</string>
+    <string name="done">Hotovo</string>
+    <string name="down">Dolů</string>
+    <string name="edit">Upravit</string>
+    <string name="email">Email:</string>
+    <string name="enable_notification_access">Povolit Přístup K Upozorněním</string>
+    <string name="enable_notification_access_subtext">Prosím povolte BaldPhone přístup k upozorněním.</string>
+    <string name="enter">Zadat</string>
+    <string name="enter_contact_or_phone_number">Zadejte jméno kontaktu:</string>
+    <string name="evening">Večer</string>
+    <string name="example_of_different_text_sizes">Příklad různých velikostí textu\nMěl by být
+    čitelný a nepřetíkat
+    </string>
+    <string name="external_storage_subtext">Toto oprávnění je nutné k ukládání obrázků.</string>
+    <string name="feedback">Poslat zpětnou vazbu</string>
+    <string name="feedback_cannot_be_empty">Zpětná vazba nemůže být prázdná!</string>
+    <string name="feedback_sent_successfully">Zpětná vazba poslána úspěšně!</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Vyberte úroveň přístupnosti
+    </string>
+    <string name="font">Písmo</string>
+    <string name="friday">Pátek</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Máte potíže s používáním klávesnice telefonu?
+    Použijte velkou klávesnici BaldPhone.
+    </string>
+    <string name="hello">Dobrý den</string>
+    <string name="help">Video tutoriál</string>
+    <string name="hide">Skrýt</string>
+    <string name="high_level">Vysoká úroveň</string>
+    <string name="home_phone_number">Číslo telefonu domů</string>
+    <string name="hour">Hodina</string>
+    <string name="huge">Obrovský</string>
+    <string name="internet">Internet</string>
+    <string name="invoked_in">Vyvoláno v:</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Jedna poslední věc:
+    \nJe velice doboručeno, že použijete BaldPhone jako výchozí domovskou obrazovku
+    </string>
+    <string name="language">Jazyk</string>
+    <string name="language_settings">Jazyk</string>
+    <string name="large">Velký</string>
+    <string name="left_handed">Levoruký</string>
+    <string name="light">Světlý</string>
+    <string name="location">Umístění</string>
+    <string name="emergency_services">Tísňové služby</string>
+    <string name="mail">Zprávy</string>
+
+
+    <string name="maps">Mapy</string>
+    <string name="medium">Střední</string>
+    <string name="medium_level">Střední úroveň</string>
+    <string name="message">Zpráva</string>
+    <string name="messages">Zprávy</string>
+    <string name="minute">Minuta</string>
+    <string name="minutes">Minuty</string>
+
+    <string name="missed">Zmeškané</string>
+    <string name="mobile_phone_number">Mobilní telefoní číslo</string>
+    <string name="monday">Pondělí</string>
+    <string name="more">více</string>
+    <string name="morning">Ráno</string>
+    <string name="name">Jméno</string>
+    <string name="named__">pojmenován</string>
+    <string name="new_alarm___was_created">Nový alarm %s byl vytvořen!</string>
+    <string name="nfc">NFC</string>
+    <string name="no">Ne</string>
+    <string name="notes">Poznámky</string>
+    <string name="notes_settings">Poznámky</string>
+    <string name="notes_settings_subtext">Vyberte jestli chcete mít stránku s poznámkami na domovské obrazovce.</string>
+
+    <string name="notifications">Upozornění</string>
+    <string name="of">z</string>
+    <string name="off">Vypnutý</string>
+    <string name="ok">OK</string>
+
+    <string name="on">Zapnutý</string>
+
+
+    <string name="only_once">Pouze jednou</string>
+
+    <string name="open">Otevřít</string>
+    <string name="outgoing">Odchozí</string>//stránka 1 ze 2
+    <string name="page">Stránka</string>
+    <string name="permissions_part">Oprávnění</string>
+    <string name="personalization_settings">Personalizace</string>
+    <string name="phone">Telefon</string>
+    <string name="phone_ask_permission_subtext">
+        <![CDATA[Please go to settings -> permissions -> enable call permission]]></string>
+    <string name="photo">Obrázek</string>
+    <string name="photos">Obrázky</string>
+    <string name="pill_added">Pilulka přidána!</string>
+    <string name="pill_name">Jméno pilulky</string>
+    <string name="pills">Pilulky</string>
+    <string name="press_longer">Držte déle!</string>
+    <string name="timer">Časovač</string>
+    <string name="read_call_log">Přečíst historii telefonátů</string>
+    <string name="read_call_log_subtext">Toto oprávnění je nutné k zobrazení historii telefonátů</string>
+    <string name="read_contacts">Přečíst kontakty</string>
+    <string name="received">Přijaté</string>
+    <string name="recent">Nedávné</string>
+
+    <string name="regular_level">Normální úroveň</string>
+    <string name="remove_from_favorite">Odebrat z oblíbených</string>
+    <string name="remove_from_home">Odebrat z domu</string>
+    <string name="remove_from_sos">Odebrat z SOS</string>
+    <string name="remove_shortcut">Odstaranit zkratku</string>
+    <string name="removed_all_alarms">Všechny alarmy byly odstraněny!</string>
+    <string name="repeats_every_day">každý den</string>
+
+    <string name="right_handed">pravoruký</string>
+    <string name="saturday">Sobota</string>
+    <string name="save">Uložit</string>
+    <string name="selected">Vybraný</string>
+    <string name="send">Poslat</string>
+    <string name="set_default_dialer">Nastavit výchozí telefoní aplikaci</string>
+    <string name="set_default_dialer_subtext">BaldPhone musí být nasteven jako výchozí aplikace pro telefonování.</string>
+    <string name="set_home_screen">Nastavit domovskou obrazovku</string>
+    <string name="set_home_screen_subtext">Aby jste mohli používat BaldPhone, měli by jste ho nastavit jako domovskou obrazovku.\nJde
+        to vrátit a může být změněno v nastavení.
+    </string>
+    <string name="set_keyboard">Nastavit klávesnici</string>
+    <string name="setting_does_not_exist">Nastavení neexistuje</string>
+    <string name="settings">Nastavení</string>
+    <string name="settings_permission">Nastavení oprávnění</string>
+    <string name="share">Sdílet</string>
+    <string name="share_actual_text">Ahoj, používám platformu BaldPhone, která nahrazuje rozhraní telefonu
+        za jedno, co je velké a jednoduché. Zaujat? Můžeš stáhnou zadarmo! Podívej se na odkaz
+        :\n\nhttps://sites.google.com/view/baldphone
+    </string>
+    <string name="share_bald_phone_subtext">Hej, víš o někom, kdo by chtěl používat BaldPhone?\nMůžeš to s
+    ním sdílet!"
+    </string>
+    <string name="share_baldphone">Sdílet BaldPhone</string>
+    <string name="share_contact">Sdílet kontakt</string>
+    <string name="share_differently">Sdílet přes jinou aplikaci</string>
+    <string name="share_via_whatsapp">Sdílet přes Whatsapp</string>
+    <string name="shift">shift</string>
+    <string name="show">Ukaž</string>
+    <string name="small">Malý</string>
+    <string name="snooze">Odložit</string>
+    <string name="sos">SOS</string>
+    <string name="sos_is_full">SOS je plné!</string>
+    <string name="sos_is_full_subtext">SOS je plné! Prosím odstraň nějaký SOS kontakt před přidáváním jiného.</string>
+    <string name="speak">Mluvit</string>
+    <string name="speech_to_text">Řeč do textu</string>
+    <string name="strong_hand">Dominantní ruka</string>
+    <string name="strong_hand_subtext">Vyberte dominantní ruku pro úpravu uživatelského prostředí.</string>
+    <string name="submit">Potvrdit</string>
+    <string name="sunday">Neděle</string>
+    <string name="technical_information">Technické informace</string>
+    <string name="theme_settings">Téma</string>
+
+    <string name="theme_settings_subtext">Vyberte téma</string>
+    <string name="thursday">Čtvrtek</string>
+    <string name="time_changer">Měnič času pilulky</string>
+    <string name="tiny">Malinký</string>
+    <string name="to___days_and___hours_from_now">Do %d dnů a %d hodin od nyní</string>
+    <string name="to___hours_and___minutes_from_now">do %d hodin a %d minut od nyní</string>
+    <string name="to___minuets_from_now">do %d minut od nyní</string>
+    <string name="today">Dnes</string>
+    <string name="took">Měl jsem!</string>
+    <string name="tuesday">Úterý</string>
+    <string name="uninstall">Odinstalovat</string>
+    <string name="uninstall_subtext">Jste si jistí, že chcete odistalovat %s?\n%s\'s data budou smazány!</string>
+    <string name="up">Nahoru</string>
+    <string name="video">Video</string>
+    <string name="video_tutorials">Video Tutoriál</string>
+
+    <string name="videos">Videa</string>
+    <string name="voice_mail">Hlasová pošta</string>
+    <string name="wednesday">Středa</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="wifi">Wifi</string>
+    <string name="will_repeat_only_once">Bude se opakovat pouze jednou!</string>
+    <string name="write">Napsat</string>
+    <string name="write_contacts">Zapsat kontakty</string>
+    <string name="write_external_storage">Zapsat externí úložiště</string>
+    <string name="yes">Ano</string>
+    <string name="yesterday">Včera</string>
+    <string name="nothing">Nic</string>
+    <string name="no_contacts_found">Žádné kontakty nebyly nalezeny!</string>
+    <string name="no_alarms">Žádné alarmy nejsou!\nVytvořte jeden kliknutím na\n\"Přidat alarm\"\nNebo\n\"Přidat časovač\"</string>
+    <string name="no_pills">Žádné pilulky nejsou!\nVytvořte kliknutím na\n\"Přidat pilulku\"</string>
+    <string name="clear_all_notifications">Vyčistit všechna upozornění</string>
+    <string name="clear_cache_subtext">Jste si jistí že chcete smazat všechna dočastná data?\nZkratky aplikací budou smazány také!
+    </string>
+    <string name="permissions_calm">Ahoj, BaldPhone potřebuje následující oprávnění k funkci. Některá z nich
+        zní strašidelně, ale je to jediný způsob, jak může BaldPhone nahradit prostředí vašeho telefonu. Žádné data nejsou sebrány a nezpůsobuje
+        žádné škody. Zmáčkněte OK pro udělení oprávnění, nebo ne pro opuštění BaldPhone.
+    </string>
+    <string name="also_available_at">Také dostupné na\nbaldphone.contact@gmail.com</string>
+    <string name="pending_update">Čeká na aktualizaci</string>
+    <string name="download">Stáhnout</string>
+    <string name="install_updates">Instalovat aktualizace</string>
+    <string name="install_updates_subtext">Toto oprávnění je nutné k aktualizaci BaldPhone.</string>
+    <string name="a_new_update_is_available">Nová aktualizace je dostupná!\nAktualizace jsou důležité, aby BaldPhone běžel
+        plynule.\nZmáčkněte OK pro stažení.
+    </string>
+    <string name="current_version">Současná verze:\n</string>
+    <string name="new_version">Nová verze:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">Nové aktualizace jsou připraveny ke stažení.</string>
+    <string name="install">Instalovat</string>
+    <string name="data_warning">Varování dat</string>
+    <string name="data_warning_subtext">Ahoj, nejsi připojený k WIFI.\nVelikost této aktualizace je přibližně 3MB,
+        pokud jste v zahraničí, muže vás to stát peníze.\nChcete pokračovat se stahováním?
+    </string>
+    <string name="update_message_is_corrupted">Zpráva aktualizace je poškozená.</string>
+    <string name="check_for_updates">Zkontrolovat pro aktualizace</string>
+    <string name="could_not_connect_to_server">Nemůžu se připojit k serveru!</string>
+    <string name="could_not_connect_to_internet">Nemůžu se připojit k internetu!</string>
+    <string name="could_not_start_the_download">Nemůžu začit stahovat!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">Stažený aktualizační soubor nemůže být smazán!</string>
+
+    <string name="downloading">Stahuji…</string>
+    <string name="baldphone_is_up_to_date">BaldPhone je aktuální.</string>
+    <string name="what_s_new">Co je nového</string>
+    <string name="download_finished">Stahování dokončeno!</string>
+    <string name="downloading_updates">Stahuji aktualizace…</string>
+    <string name="installing_doesn_t_work">Instalování nefunguje?</string>
+    <string name="try_now">Zkuste nyní</string>
+    <string name="download_progress">Pokrok stahování</string>
+    <string name="what_do_you_want_to_do_with___">Co chcete dělat s %s?</string>
+    <string name="crash_reports">Zprávy o havárii</string>
+    <string name="crash_reports_subtext">Zprávy o havárii pomáhají dělat prostředí BaldPhone bezchybné\nJsou používány pouze
+        k opravě chyb a žádné jiné informace, než to co je potřeba k opravě chyb je bráno
+    </string>
+    <string name="custom_app">Vlastní aplikace</string>
+    <string name="custom_app_subtext">Vyberte vlastní aplikace, která bude na domovské obrazovce.</string>
+    <string name="no_app_was_found">Nebyla nalezena žádná odpovídající aplikace!</string>
+    <string name="alarm">Alarm</string>
+    <string name="no_new_notifications">Žádná nová upozornění</string>
+    <string name="sound">Zvuk</string>
+    <string name="mute">Ztlumený</string>
+    <string name="vibrate">Vibrace</string>
+
+
+    <string name="your_phone_doesnt_have_assistant_installed">Váš telefon nemá naistalovaného asistenta</string>
+    <string name="status_bar_settings">Stavový řádek</string>
+    <string name="status_bar_settings_subtext">Kde chcete ukázat stavový řádek?</string>
+    <string name="only_home_screen">Pouze domovská obrazovka</string>
+    <string name="nowhere">Nikde</string>
+
+
+    <string name="everywhere">Všude</string>
+
+    <string name="share_photo">Sdílet fotku</string>
+    <string name="choose_language_for_keyboard">Vybrat jazyk</string>
+    <string name="hebrew">Hebrew</string>
+
+    <string name="english">Angličtina</string>
+    <string name="search">Hledat</string>
+    <string name="next">Další</string>
+
+
+    <string name="go">Jít</string>
+    <string name="dialer_sounds">Zvuky vytáčení</string>
+    <string name="dialer_sounds_subtext">Zvolte pokud chcete zvuk vytáčení.</string>
+    <string name="low_battery_alert">Pozor, nízká baterie</string>
+
+
+    <!--For Tests:-->
+    <string name="low_battery_alert_subtext">Zvolte, pokud chcete, aby stavový řádek byl na domovské obrazovce červený, když je baterie méně než 20% \nPoznámka se nezobrazí, pokud je stavový řádek systému skrytý.</string>
+    <string name="medication_1">Eltroxin 100</string>
+
+
+    <string name="medication_2">Eltroxin 150</string>
+
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+</resources>
