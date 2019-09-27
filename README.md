@@ -14,6 +14,7 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 
 [Website](https://sites.google.com/view/baldphone)
 
+[BaldPhone's Subreddit](https://www.reddit.com/r/BaldPhone/)
 
 [Installing Manual](https://github.com/UriahShaulMandel/BaldPhone/raw/master/manual/Manual%20hebrew.pdf)
 
