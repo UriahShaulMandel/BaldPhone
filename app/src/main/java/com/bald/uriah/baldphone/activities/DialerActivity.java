@@ -73,11 +73,7 @@ public class DialerActivity extends BaldActivity {
     public static void call(final CharSequence number, final Context context) {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
             try {
-                final CharSequence finalNumber = // In order to handle USSD
-                        (number.charAt(number.length() - 1) == '#') ?
-                                number.subSequence(0, number.length() - 1) + Uri.encode("#") : number;
-
-                context.startActivity(new Intent(Intent.ACTION_CALL).setData(Uri.parse("tel:" + finalNumber)));
+                context.startActivity(new Intent(Intent.ACTION_CALL).setData(Uri.parse(("tel:" + number).replace("#", Uri.encode("#")))));
             } catch (SecurityException e) {
                 Log.e(TAG, e.getMessage());
                 e.printStackTrace();
