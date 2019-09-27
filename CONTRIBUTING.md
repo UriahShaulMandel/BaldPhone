@@ -7,5 +7,3 @@ You can contribute by:
   - Using BaldPhone and sending feedback
   - Sharing BaldPhone with others
   - Starring this project :)
-  - Donating small amounts of money (It can allow me to buy faster, more reliable equipment)
-  - Creating video tutorials in different languages
