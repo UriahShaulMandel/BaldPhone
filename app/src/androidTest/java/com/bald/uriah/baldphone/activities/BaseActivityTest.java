@@ -24,7 +24,6 @@ import com.bald.uriah.baldphone.utils.BPrefs;
 import org.junit.After;
 import org.junit.Before;
 
-
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 
 public class BaseActivityTest {
@@ -51,6 +50,12 @@ public class BaseActivityTest {
     }
 
     public void sleep() {
-        getInstrumentation().waitForIdleSync();
+        try {
+            Thread.sleep(50);
+            getInstrumentation().waitForIdleSync();
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
