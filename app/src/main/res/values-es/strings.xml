@@ -46,11 +46,11 @@
     <string name="add_pill">Añadir Pastilla</string>
     <string name="add_shortcut">Añadir acceso directo</string>
     <string name="add_to_favorite">Añadir a Favoritos</string>
-    <string name="add_to_home">Añadir a Home</string>
+    <string name="add_to_home">Añadir a Inicio</string>
     <string name="add_to_sos">Añadir a SOS</string>
     <string name="address">Dirección</string>
     <string name="advanced_options">Opciones Avanzadas</string>
-    <string name="afternoon">Tarde</string>
+    <string name="afternoon">A la Tarde</string>
     <string name="airplane_mode">Modo Avión</string>
     <string name="alarm_name">Nombre Alarma</string>
     <string name="alarm_volume">Volumen Alarma</string>
@@ -61,7 +61,7 @@
     <string name="alarms_repeats_every">Alarma se repite cada</string>
     <string name="all_alarms">Todas las Alarmas</string>
     <string name="allow">Permitir</string>
-    <string name="already_setted">Ya definido!\nPulse aquí para cambiarlo</string>
+    <string name="already_setted">¡Ya definido!\nPulse aquí para cambiarlo</string>
     <string name="an_error_has_occurred">Ha ocurrido un error!</string>
     <string name="and_welcome_to_baldphone">y bienvenido a Baldphone</string>
 
@@ -78,8 +78,8 @@
     <string name="brightness">Brillo</string>
     <string name="brightness_subtext">Cambiar Brillo.</string>
     <string name="cache_cleared_successfully">¡Cache limpiada exitosamente!</string>
-    <string name="call">Llamada</string>
-    <string name="calling">Llamando</string>
+    <string name="call">Llamar</string>
+    <string name="calling">Llamada</string>
 
     <string name="call_log">Historial de llamadas:</string>
     <string name="call_subtext">Este permiso es necesario para poder llamar a sus contactos.</string>
@@ -128,7 +128,7 @@
     <string name="enable_notification_access_subtext">Por favor, conceda a BaldPhone acceso a las notificaciones.</string>
     <string name="enter">Enter</string>
     <string name="enter_contact_or_phone_number">Introduzca el nombre del contacto:</string>
-    <string name="evening">Noche</string>
+    <string name="evening">A la Noche</string>
     <string name="example_of_different_text_sizes">Ejemplo de diferentes tamaños de texto\n
         Debe ser legible y no salirse.
     </string>
@@ -178,7 +178,7 @@
     <string name="mobile_phone_number">Número de teléfono movil</string>
     <string name="monday">Lunes</string>
     <string name="more">más</string>
-    <string name="morning">Mañana</string>
+    <string name="morning">A la Mañana</string>
     <string name="name">Nombre</string>
     <string name="named__">llamado</string>
     <string name="new_alarm___was_created">nueva alarma %s creada!</string>
@@ -216,22 +216,22 @@
     <string name="read_call_log">Leer historial de Llamadas</string>
     <string name="read_call_log_subtext">Este permiso es necesario para ver el historial de llamadas.</string>
     <string name="read_contacts">Leer contactos</string>
-    <string name="received">Recibido</string>
-    <string name="recent">Reciente</string>
+    <string name="received">Recibida</string>
+    <string name="recent">Recientes</string>
     <string name="regular_level">Nivel Normal</string>
 
     <string name="remove_from_favorite">Quitar de Favoritos</string>
-    <string name="remove_from_home">Quitar de Home</string>
+    <string name="remove_from_home">Quitar de Inicio</string>
     <string name="remove_from_sos">Quitar de SOS</string>
     <string name="remove_shortcut">Quitar acceso directo</string>
     <string name="removed_all_alarms">¡Eliminadas todas las alarmas!</string>
-    <string name="repeats_every_day">Repetir todos los días</string>
+    <string name="repeats_every_day">Todos los días</string>
     <string name="right_handed">Diestro</string>
 
     <string name="saturday">Sabado</string>
     <string name="save">guardar</string>
     <string name="selected">Seleccionada</string>
-    <string name="send">Enviar</string>
+    <string name="send">confirmar</string>
     <string name="set_default_dialer">Establecer como aplicación de Llamadas por defecto</string>
     <string name="set_default_dialer_subtext">BaldPhone necesita ser definida como aplicación de llamadas por defecto.</string>
     <string name="set_home_screen">Establecer como Pantalla de Inicio</string>
@@ -306,58 +306,64 @@
     <string name="no_contacts_found">No se encontraron contactos!</string>
     <string name="no_alarms">Sin Alarmas\nCrea una pulsando\n\"Añadir Alarma\"\no\n\"Añadir Temporizador\"</string>
     <string name="no_pills">Sin Pastillas\nCrea una pulsando\n\"Añadir Pastilla\"</string>
-    <string name="clear_all_notifications">Clear All Notifications</string>
-    <string name="clear_cache_subtext">Are you sure you want to delete all cache?\nApps shortcuts will be removed too!
+    <string name="clear_all_notifications">Quitar todas las Notificaciones</string>
+    <string name="clear_cache_subtext">¿De verdad quiere borrar por completo la caché?\nLos enlaces directos también se borrarán!
     </string>
-    <string name="permissions_calm">Hi, BaldPhone must have the following permissions in order to run. some of them
-        sound scary, but it is the only way BaldPhone can replace the phone\'s interface. No data is taken and it causes
-        no harm. press OK to grant the permissions or no to exit BaldPhone.
+    <string name="permissions_calm">
+		Hola, BaldPhone debe tener los siguientes permisos para ejecutarse. Algunos
+        pueden asustar, pero es la única forma en que BaldPhone puede reemplazar la interfaz del teléfono.
+		BaldPhone no usará sus datos personales ni dañará su teléfono.
+		Presione OK para otorgar los permisos o no para salir de BaldPhone.
     </string>
-    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com</string>
+    <string name="also_available_at">También disponible en\nbaldphone.contact@gmail.com</string>
     <string name="pending_update">Actualización pendiente</string>
     <string name="download">Descargar</string>
     <string name="install_updates">Instalar actualizaciones</string>
-    <string name="install_updates_subtext">This Permission is required in order to update BaldPhone</string>
-    <string name="a_new_update_is_available">A new update is available!\nUpdates are important to keep BaldPhone running
-        smoothly.\nPress OK to download.
+    <string name="install_updates_subtext">Este permiso es necesario para poder actualizar BaldPhone</string>
+    <string name="a_new_update_is_available">¡Nueva actualiación disponible!\n
+		Las actualizaciones son importantes para mejorar la App.\n
+		Pulse OK para descargarla.
     </string>
     <string name="current_version">Versión actual:\n</string>
     <string name="new_version">Nueva Versión:\n</string>
-    <string name="new_updates_are_ready_to_be_downloaded">New updates are ready to be downloaded.</string>
+    <string name="new_updates_are_ready_to_be_downloaded">Actualización lista para ser descargada.</string>
     <string name="install">Instalar</string>
-    <string name="data_warning">Data Warning</string>
-    <string name="data_warning_subtext">Hi, you\'re not connected to WIFI.\nThe size of the download is approximately 3MB,
-        if you\'re abroad it may cost you money.\nDo you want to continue with the download?
+    <string name="data_warning">¡Aviso de uso de Datos!</string>
+    <string name="data_warning_subtext">
+		Hola, no estás conectado a una red WIFI.\n
+		El tamaño de la descarga es de aproximadamente 3MB, si está en el extranjero, puede costarle dinero.\n
+		¿Desea continuar con la descarga?
     </string>
-    <string name="update_message_is_corrupted">Update message is corrupted.</string>
+    <string name="update_message_is_corrupted">El mensaje de actualización está corrupto.</string>
     <string name="check_for_updates">Comprobar actualizaciones</string>
-    <string name="could_not_connect_to_server">Could not connect to server!</string>
-    <string name="could_not_connect_to_internet">Could not connect to internet!</string>
-    <string name="could_not_start_the_download">Could not start the download!</string>
-    <string name="downloaded_update_file_could_not_be_deleted">Downloaded update file could not be deleted!</string>
+    <string name="could_not_connect_to_server">¡No se pudo conectar al servidor!</string>
+    <string name="could_not_connect_to_internet">¡No se pudo conectar a internet!</string>
+    <string name="could_not_start_the_download">¡No se pudo empezar la descarga!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">El archivo de actualización descargado no pudo ser borrado!</string>
     <string name="downloading">Descargando...</string>
 
-    <string name="baldphone_is_up_to_date">BaldPhone is up to date.</string>
-    <string name="what_s_new">What\'s new</string>
-    <string name="download_finished">Download finished!</string>
-    <string name="downloading_updates">Downloading Updates…</string>
-    <string name="installing_doesn_t_work">Installing doesn\'t work?</string>
-    <string name="try_now">Try Now</string>
-    <string name="download_progress">Download Progress</string>
-    <string name="what_do_you_want_to_do_with___">What do you want to do with %s?</string>
-    <string name="crash_reports">Crash Reports</string>
-    <string name="crash_reports_subtext">Crash reports help to make BaldPhone\'s experience flawless\nThey are used only
-        to fix bugs, and no info other than what\'s necessary to fix the bug is taken
+    <string name="baldphone_is_up_to_date">BaldPhone está actualizado.</string>
+    <string name="what_s_new">Novedades</string>
+    <string name="download_finished">¡Descarga finalizada!</string>
+    <string name="downloading_updates">Descargando actualizaciones…</string>
+    <string name="installing_doesn_t_work">¿La inslatación no funciona?</string>
+    <string name="try_now">Probar ahora</string>
+    <string name="download_progress">Progreso de descarga</string>
+    <string name="what_do_you_want_to_do_with___">Qué quiere hacer con %s?</string>
+    <string name="crash_reports">Reportar errores</string>
+    <string name="crash_reports_subtext">
+		Los informes de errores ayudan a hacer que la experiencia de BaldPhone sea perfecta.\n
+		Se usan únicamente para corregir errores, y no se toma más información que la necesaria para corregir el error.
     </string>
     <string name="custom_app">App personalizada</string>
     <string name="custom_app_subtext">Elija otra App como Pantalla de Inicio.</string>
-    <string name="no_app_was_found">No matching app was found!</string>
+    <string name="no_app_was_found">Búsqueda de App sin resultados</string>
     <string name="alarm">Alarma</string>
     <string name="no_new_notifications">No hay nuevas Notificationes</string>
     <string name="sound">Sonido</string>
     <string name="mute">Silencio</string>
     <string name="vibrate">Vibración</string>
-    <string name="your_phone_doesnt_have_assistant_installed">Your Phone doesn\'t have an assistant installed.</string>
+    <string name="your_phone_doesnt_have_assistant_installed">Su teléfono no tiene un asistente instalado.</string>
 
 
     <string name="status_bar_settings">Barra de estado</string>
