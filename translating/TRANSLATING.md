@@ -1,4 +1,5 @@
 # Translating BaldPhone to other languages
+## [Auto generated multilingual screenshots](https://github.com/UriahShaulMandel/BaldPhoneScreenshots)
 ## Fixing\changing existing translations
  1. Go to your desired language file: 
     - [Hebrew](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-iw/strings.xml)
