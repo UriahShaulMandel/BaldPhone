@@ -413,7 +413,7 @@ public class SettingsActivity extends BaldActivity {
         linearLayout.addView(pic);
         Glide.with(pic).load(R.drawable.me).into(pic);
 
-        settingsList.add(
+        mainSettingsItemList.add(
                 new BDBSettingsItem(R.string.about,
                         BDB.from(this)
                                 .addFlag(BDialog.FLAG_OK)
@@ -424,21 +424,27 @@ public class SettingsActivity extends BaldActivity {
 
                         , R.drawable.info_on_button)
         );
-        settingsList.add(
+        mainSettingsItemList.add(
                 new RunnableSettingsItem(R.string.technical_information,
                         v -> startActivity(new Intent(this, TechnicalInfoActivity.class)),
                         R.drawable.tech_info_on_button)
         );
-        settingsList.add(
+        mainSettingsItemList.add(
                 new RunnableSettingsItem(R.string.share_baldphone, v -> S.shareBaldPhone(this), R.drawable.share_on_background)
         );
 
-        settingsList.add(
+        mainSettingsItemList.add(
                 new RunnableSettingsItem(R.string.feedback,
                         v -> startActivity(new Intent(this, FeedbackActivity.class)),
                         R.drawable.feedback_on_button)
         );
-        settingsList.add(
+        if (!checkPermissions(this, -1))
+            mainSettingsItemList.add(
+                    new RunnableSettingsItem(R.string.grant_all_permissions,
+                            v -> startActivity(new Intent(this, PermissionActivity.class)),
+                            R.drawable.grant_all_permissions_on_button)
+            );
+        mainSettingsItemList.add(
                 new BDBSettingsItem(R.string.crash_reports,
                         BDB.from(this)
                                 .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL).setTitle(R.string.crash_reports)
@@ -452,7 +458,7 @@ public class SettingsActivity extends BaldActivity {
                                 .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.CRASH_REPORTS_KEY, BPrefs.CRASH_REPORTS_DEFAULT_VALUE) ? 0 : 1),
                         R.drawable.upload_on_button));
         if (BuildConfig.FLAVOR.equals("baldUpdates"))
-            settingsList.add(
+            mainSettingsItemList.add(
                     new RunnableSettingsItem(R.string.check_for_updates,
                             v -> UpdatingUtil.checkForUpdates(this, true),
                             R.drawable.updates_on_button)
