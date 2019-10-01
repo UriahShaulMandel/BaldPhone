@@ -18,23 +18,22 @@
   -->
 
 <resources>
-    <bool name="is_right_to_left">false</bool>
     <string name="about">O aplikaciji</string>
-    <string name="about_subtext">Zdravo!\nMoje ime je Uriah Shaul Mandel in sem razvijalec te platforme.\n
-        Večino svojega odraslega življenja sem preživel z ustvarjanjem te platforme in sem jo izdal brezplačno za vse.
-        \nSte več kot dobrodošli, da me kontaktirate na e-pošto:\nbaldphone.contact@gmail.com
-    </string>
+    <bool name="is_right_to_left">false</bool>
     <string name="accessibility_level">Stopnja dostopnosti</string>
     <string name="accessibility_settings">Nastavitve dostopnosti</string>
     <string name="accidental_touches">Zaščita pred neželenim dotikom</string>
     <string name="accidental_touches_settings_subtext">Zaščita prepreči telefonu vnos preko dotika, ko je telefon pokrit.
         \nČe imate s tem težave, lahko zaščito izklopite.
     </string>
-    <string name="accidental_touches_subtext">Nenamerni dotik je bil zaznan\nPritisni OK da nadaljuješ z uporabo telefona\nČe
-        se to sporočilo pojavlja znova, ga lahko izključite v nastavitvah dostopnosti.
+    <string name="about_subtext">Zdravo!\nMoje ime je Uriah Shaul Mandel in sem razvijalec te platforme.
+		\nVečino svojega odraslega življenja sem preživel z ustvarjanjem te platforme in sem jo izdal brezplačno za vse.
+        \nSte več kot dobrodošli, da me kontaktirate na e-pošto:\nbaldphone.contact@gmail.com
     </string>
     <string name="acknowledgments">Priznanja</string>
-    <string name="adaptive">Prilagodljiv</string>
+    <string name="accidental_touches_subtext">Nenamerni dotik je bil zaznan\nPritisni Ok da nadaljuješ z uporabo telefona\nČe
+        se to sporočilo pojavlja znova, ga lahko izključite v nastavitvah dostopnosti.
+    </string>
     <string name="add_alarm">Dodaj budilko</string>
     <string name="add_alarm_quickly">Dodaj štoparico</string>
     <string name="add_contact">Dodaj stik</string>
@@ -50,7 +49,6 @@
     <string name="airplane_mode">Način za letalo</string>
     <string name="alarm_name">Ime budilke</string>
     <string name="alarm_volume">Glasnost budilke</string>
-
     <string name="alarm_volume_subtext"> Izberi glasnost za budilke.\nGlasnost se zvišuje z leve proti desni.</string>
     <string name="alarms">Budilke</string>
     <string name="alarms_repeats_every">Budilka se ponovi vsak</string>
@@ -58,13 +56,12 @@
     <string name="allow">Dovoli</string>
     <string name="already_setted">Že nastavljeno!\nPritisni tukaj da spremeniš</string>
     <string name="an_error_has_occurred">Pojavila se je napaka!</string>
-
-    <string name="and_welcome_to_baldphone">In dobrodošli v Baldphone</string>
+    <string name="adaptive">Prilagodljivo</string>
     <string name="apps">Aplikacije</string>
     <string name="are_you_sure_you_want_to_delete___">Ali ste prepričani da želite izbrisati %s?</string>
     <string name="assistant">Pomočnik</string>
     <string name="at_least_one_day_must_be_selected">Izbran mora biti vsaj en dan!</string>
-    <string name="auto_brightness">Samodejna\nSvetlost</string>
+    <string name="and_welcome_to_baldphone">In dobrodošli v BaldPhone</string>
     <string name="back">Nazaj</string>
     <string name="backspace">vračalka</string>
     <string name="baldphone_bla_allow_permission">Prosimo odobrite sledeča dovoljenja:</string>
@@ -74,7 +71,6 @@
     <string name="brightness_subtext">Spremeni svetlost</string>
     <string name="cache_cleared_successfully">Predpomnilnik uspešno očiščen!</string>
     <string name="call">Klic</string>
-
     <string name="calling">Klicanje</string>
     <string name="call_log">Dnevnik klicev:</string>
     <string name="call_subtext">Ta odobritev je potrebna, da se lahko pokliče stike.</string>
@@ -82,9 +78,7 @@
     <string name="camera_subtext">Ta odobritev je potrebna, da se lahko vključi svetilko.</string>
     <string name="cancel">Prekliči</string>
     <string name="change_pills_time">Spremeni čas za tablete</string>
-    <string name="change_system_settings_subtext">Prosimo odobrite Baldphone, da lahko spreminja nastavitve, kot je povečanje velikosti besedila
-        in spreminjanje svetlosti
-    </string>
+    <string name="auto_brightness">Samodejna\nsvetlost</string>
     <string name="choose_friday">Pet</string>
     <string name="choose_monday">Pon</string>
     <string name="choose_saturday">Sob</string>
@@ -93,7 +87,9 @@
     <string name="choose_tuesday">Tor</string>
     <string name="choose_wednesday">Sre</string>
     <string name="clear">Počisti</string>
-    <string name="clear_cache">Počisti predpomnilnik</string>
+    <string name="change_system_settings_subtext">Prosimo odobrite aplikaciji BaldPhone, da lahko spreminja nastavitve, kot je povečanje velikosti besedila
+        in spreminjanje svetlosti
+    </string>
     <string name="clear_data">Počisti vse podatke</string>
     <string name="clear_data_subtext">Ali ste prepričani, da želite počistiti vse podatke?</string>
     <string name="clear_data_subtext2">100%?</string>
@@ -118,13 +114,13 @@
     <string name="done">Končano</string>
     <string name="down">Dol</string>
     <string name="edit">Uredi</string>
-    <string name="email">e-pošta:</string>
+    <string name="clear_cache">Počisti \npredpomnilnik</string>
     <string name="enable_notification_access">Omogoči dostop do obvestil</string>
-    <string name="enable_notification_access_subtext">Prosimo omogočite Baldphone dostop do obvestil.</string>
+    <string name="email">E-pošta:</string>
     <string name="enter">Vnesi</string>
     <string name="enter_contact_or_phone_number">Vnesi ime stika:</string>
-    <string name="evening">Večer</string>
-    <string name="example_of_different_text_sizes">Primer različnih velikosti besedila\nMora biti bralno brez prekrivanja.</string>
+    <string name="enable_notification_access_subtext">Prosimo omogočite BaldPhone dostop do obvestil.</string>
+    <string name="evening">Zvečer</string>
     <string name="external_storage_subtext">Ta odobritev je potrebna, da lahko shranite slike.</string>
     <string name="feedback">Pošlji povratne informacije</string>
     <string name="feedback_cannot_be_empty">Povratne informacije ne morejo biti prazne!</string>
@@ -132,8 +128,7 @@
     <string name="first_please_select_how_you_want_to_interact_with_buttons">Prosimo izberite stopnjo dostopnosti</string>
     <string name="font">Pisava</string>
     <string name="friday">Petek</string>
-    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Ali uporabljate privzeto tipkovnico s težavo?
-	 Uporabite veliko Baldphone tipkovnico!</string>
+    <string name="example_of_different_text_sizes">Primer različnih velikosti besedila.\nMora ostati bralno brez prekrivanja.</string>
     <string name="hello">Pozdravljeni</string>
     <string name="help">Video vodič</string>
     <string name="hide">Skrij</string>
@@ -142,32 +137,30 @@
     <string name="hour">Ura</string>
     <string name="huge">Ogromno</string>
     <string name="internet">Splet</string>
-    <string name="invoked_in">Priklican v:</string>
-    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Še ena stvar:\nZelo priporočljivo je uporabiti
-	 Baldphone kot privzet domač zaslon.</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Ali uporabljate privzeto tipkovnico s težavo?
+	 Uporabite veliko BaldPhone tipkovnico!</string>
+    <string name="invoked_in">Priklicana v:</string>
     <string name="language">Jezik</string>
     <string name="language_settings">Jezik</string>
     <string name="large">Veliko</string>
     <string name="left_handed">Levičar</string>
-    <string name="light">Lahko</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Še ena stvar:\nZelo priporočljivo je uporabiti
+	 BaldPhone kot privzet domač zaslon.</string>
     <string name="location">Lokacija</string>
     <string name="emergency_services">Storitve v sili</string>
     <string name="mail">Pošta</string>
-
-
     <string name="maps">Zemljevidi</string>
     <string name="medium">Srednje</string>
     <string name="medium_level">Srednja stopnja</string>
     <string name="message">Sporočilo</string>
     <string name="messages">Sporočila</string>
-    <string name="minute">Minuta</string>
-    <string name="minutes">Minute</string>
-
+    <string name="light">Svetlo</string>
+    <string name="minute">Minut</string>
     <string name="missed">Zgrešeno</string>
     <string name="mobile_phone_number">Telefonska številka</string>
     <string name="monday">Ponedeljek</string>
     <string name="more">Več</string>
-    <string name="morning">Jutro</string>
+    <string name="minutes">Minut</string>
     <string name="name">Ime</string>
     <string name="named__">Imenovan</string>
     <string name="new_alarm___was_created">Nov alarm %s je bil ustvarjen!</string>
@@ -176,20 +169,15 @@
     <string name="notes">Zapiski</string>
     <string name="notes_settings">Zapiski</string>
     <string name="notes_settings_subtext">Izberi ali želiš imeti zapiske na domačem zaslonu.</string>
-
     <string name="notifications">Obvestila</string>
     <string name="of">od</string>
     <string name="off">Izklopljeno</string>
-    <string name="ok">OK</string>
-
+    <string name="morning">Zjutraj</string>
     <string name="on">Vklopljeno</string>
-
-
     <string name="only_once">Le enkrat</string>
-
     <string name="open">Odpri</string>
-    <string name="outgoing">Odhodni</string>//page 1 of 2
-    <string name="page">Stran</string>
+    <string name="ok">Ok</string>
+    <string name="outgoing">Odhodno</string>//page 1 of 2
     <string name="permissions_part">Dovoljenja</string>
     <string name="personalization_settings">Prilagoditev</string>
     <string name="phone">Telefon</string>
@@ -207,15 +195,13 @@
     <string name="read_contacts">Preberi stike</string>
     <string name="received">Prejeto</string>
     <string name="recent">Nedavno</string>
-
     <string name="regular_level">Običajna stopnja</string>
     <string name="remove_from_favorite">Odstrani od priljubljenih</string>
     <string name="remove_from_home">Odstrani z domačega zaslona</string>
     <string name="remove_from_sos">Odstrani iz SOS</string>
     <string name="remove_shortcut">odstrani bližnjico</string>
-    <string name="removed_all_alarms">Odstrani vse budilke!</string>
+    <string name="page">Stran</string>
     <string name="repeats_every_day">Vsak dan</string>
-
     <string name="right_handed">Desničar</string>
     <string name="saturday">Sobota</string>
     <string name="save">Shrani</string>
@@ -224,22 +210,23 @@
     <string name="set_default_dialer">Nastavi privzeto klicalno aplikacijo</string>
     <string name="set_default_dialer_subtext">BaldPhone mora biti označen kot privzeta klicalna aplikacija.</string>
     <string name="set_home_screen">Nastavi domač zaslon</string>
-    <string name="set_home_screen_subtext">Da uporabljaš BaldPhone, ga moraš nastaviti kot domač zaslon.\nTo se da
-		razveljaviti in spremeniti v nastavitvah.</string>
+    <string name="removed_all_alarms">Izbriši vse budilke!</string>
     <string name="set_keyboard">Nastavi tipkovnico</string>
     <string name="setting_does_not_exist">Nastavitev ne obstaja.</string>
     <string name="settings">Nastavitve</string>
     <string name="settings_permission">Dovoljenja nastavitev</string>
     <string name="share">Deli</string>
-    <string name="share_actual_text">Zdravi, uporabljam platformo imenovano BaldPhone, katera nadomesti telefonski vmesnik
+    <string name="set_home_screen_subtext">Da lahko uporabljaš BaldPhone, ga moraš nastaviti za domač zaslon.
+		\nTo se da razveljaviti in spremeniti v nastavitvah.
+	</string>
+    <string name="share_actual_text">Zdravo, uporabljam platformo imenovano BaldPhone, katera nadomesti telefonski vmesnik
 		v velikega, enostavnega in prijaznega za uporabo.\nZainteresirani?\nLahko jo prenesete brezplačno!\nPreveri spodnjo povezavo za več
 		informacij:\n\nhttps://sites.google.com/view/baldphone
     </string>
-    <string name="share_bald_phone_subtext">Hej, morda poznaš koga, ki bi želel spoznati Baldphone ?\nLahko ga deliš z njimi!"</string>
     <string name="share_baldphone">Deli BaldPhone</string>
-    <string name="share_contact">Deli stike</string>
+    <string name="share_bald_phone_subtext">Hej, morda poznaš koga, ki bi želel spoznati BaldPhone ?\nLahko ga deliš z njimi!"</string>
     <string name="share_differently">Deli preko druge aplikacije</string>
-    <string name="share_via_whatsapp">Deli preko Whatsapp</string>
+    <string name="share_contact">Deli stik</string>
     <string name="shift">Premakni</string>
     <string name="show">Prikaži</string>
     <string name="small">Majhno</string>
@@ -251,11 +238,10 @@
     <string name="speech_to_text">Govor v besedilo</string>
     <string name="strong_hand">Prevladujoča roka</string>
     <string name="strong_hand_subtext">Izberi svojo prevladujočo roko, da prilagodiš uporabniški vmesnik.</string>
-    <string name="submit">Objavi</string>
+    <string name="share_via_whatsapp">Deli preko WhatsApp</string>
     <string name="sunday">Nedelja</string>
     <string name="technical_information">Tehnične informacije</string>
     <string name="theme_settings">Tema</string>
-
     <string name="theme_settings_subtext">Izberi temo</string>
     <string name="thursday">Četrtek</string>
     <string name="time_changer">Spreminjanje časa za tablete</string>
@@ -271,13 +257,12 @@
     <string name="up">Gor</string>
     <string name="video">Video</string>
     <string name="video_tutorials">Video vodiči</string>
-
     <string name="videos">Video posnetki</string>
     <string name="voice_mail">Glasovna pošta</string>
     <string name="wednesday">Sreda</string>
-    <string name="whatsapp">Whatsapp</string>
+    <string name="submit">Dodaj</string>
     <string name="wifi">Wifi</string>
-    <string name="will_repeat_only_once">Bo ponovilo le enkrat!</string>
+    <string name="whatsapp">WhatsApp</string>
     <string name="write">Zapiši</string>
     <string name="write_contacts">Zapiši stike</string>
     <string name="write_external_storage">Zapiši na zunanjo shrambo</string>
@@ -286,19 +271,18 @@
     <string name="nothing">Nič</string>
     <string name="no_contacts_found">Stiki niso bili najdeni!</string>
     <string name="no_alarms">Ni budilk\nUstvari jo tako, da klikneš\n\"Dodaj alarm\"\nAli\n\"Dodaj štoparico\"</string>
-    <string name="no_pills">Ni tablet\nUstvari novo s tem, da klikneš\n\"Dodaj tableto\"</string>
+    <string name="will_repeat_only_once">Ponovila se bo le enkrat!</string>
     <string name="clear_all_notifications">Počisti vsa obvestila</string>
-    <string name="clear_cache_subtext">Ali ste prepričani, da želite odstraniti celoten predpomnilnik?\nOdstranjene bodo tudi bližnjice aplikacij!</string>
-    <string name="permissions_calm">Pozdravljeni, Baldphone potrebuje sledeča dovoljenja da lahko deluje pravilno. Nekatera izmed teh zvenijo
-        strašljivo, ampak so edini način, da lahko Bladphone zamenja telefonski vmesnik. Nič podatkov ne bo pobranih in ne bo povzročene nobene škode.
-        Pritisni OK, da odobriš dovoljenja, ali "ne" da zapustiš BaldPhone.
-    </string>
+    <string name="no_pills">Ni tablet.\nDodaj novo s tem, da klikneš n\"Dodaj tableto"</string>
+    <string name="clear_cache_subtext">Ali ste prepričani, da želite počistiti celoten predpomnilnik?\nOdstranjene bodo tudi bližnjice aplikacij!</string>
     <string name="also_available_at">Tudi na voljo na\nbaldphone.contact@gmail.com</string>
     <string name="pending_update">Čakajoča posodobitev</string>
     <string name="download">Prenesi</string>
     <string name="install_updates">Namesti posodobitve</string>
     <string name="install_updates_subtext">Ta odobritev je potrebna, da posodobite BaldPhone</string>
-    <string name="a_new_update_is_available">Nova posodobitev je na voljo!\nPosodobitve so pomembne, da BaldPhone tekoče deluje.\nPritisni OK da preneseš.
+    <string name="permissions_calm">Pozdravljeni, BaldPhone potrebuje sledeča dovoljenja da lahko deluje pravilno. Nekatera izmed teh zvenijo
+        strašljivo, ampak so edini način, da lahko Bladphone zamenja telefonski vmesnik. Nič podatkov ne bo pobranih in ne bo povzročene nobene škode.
+        Pritisni Ok, da odobriš dovoljenja, ali "ne" da zapustiš BaldPhone.
     </string>
     <string name="current_version">Trenutna različica:\n</string>
     <string name="new_version">Nova različica:\n</string>
@@ -314,9 +298,10 @@
     <string name="could_not_connect_to_internet">Povezava s spletom je bila neuspešna!</string>
     <string name="could_not_start_the_download">Začetek prenosa je neuspešen!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Prenešene posodobitve ni bilo mogoče odstraniti!</string>
-
     <string name="downloading">Prenašanje…</string>
-    <string name="baldphone_is_up_to_date">Baldphone je posodobljen.</string>
+
+    <string name="a_new_update_is_available">Nova posodobitev je na voljo!\nPosodobitve so pomembne, da BaldPhone tekoče deluje.\nPritisni Ok da preneseš.
+    </string>
     <string name="what_s_new">Kaj je novega</string>
     <string name="download_finished">Prenos končan!</string>
     <string name="downloading_updates">Prenašanje posodobitev…</string>
@@ -325,9 +310,7 @@
     <string name="download_progress">Napredek prenosa</string>
     <string name="what_do_you_want_to_do_with___">Kaj želiš storiti s %s?</string>
     <string name="crash_reports">Poročilo zrušitve</string>
-    <string name="crash_reports_subtext">Poročila zrušitev pomagajo, da je uporabniška izkušnja z BaldPhone brezhibna\nPoročila so potrebna samo za
-		popravljanje programskih napak in nobena informacija razen nujno potrebnih za popravilo napak ni vzeta.
-    </string>
+    <string name="baldphone_is_up_to_date">BaldPhone je posodobljen.</string>
     <string name="custom_app">Aplikacija po meri</string>
     <string name="custom_app_subtext">Izberi aplikacijo po meri za na domač zaslon.</string>
     <string name="no_app_was_found">Nobena aplikacija se ne ujema z izbiro!</string>
@@ -336,48 +319,42 @@
     <string name="sound">Zvok</string>
     <string name="mute">Utišaj</string>
     <string name="vibrate">Vibriranje</string>
-
-
     <string name="your_phone_doesnt_have_assistant_installed">Vaš telefon nima nameščenega pomočnika.</string>
     <string name="status_bar_settings">Opravilna vrstica</string>
     <string name="status_bar_settings_subtext">Kje želiš prikazati opravilno vrstico?</string>
-    <string name="only_home_screen">Samo domač zaslon.</string>
+    <string name="crash_reports_subtext">Poročila zrušitev pomagajo, da je uporabniška izkušnja z BaldPhone brezhibna\nPoročila so potrebna le za
+		popravljanje programskih napak in nobena dodatna informacija ni vzeta, razen nujno potrebnih za popravilo napak.
+    </string>
     <string name="nowhere">Nikjer</string>
-
-
     <string name="everywhere">Povsod</string>
-
     <string name="share_photo">Deli sliko</string>
     <string name="choose_language_for_keyboard">Izberi jezik</string>
     <string name="hebrew">Hebrew</string>
-
     <string name="english">English</string>
     <string name="search">Išči</string>
     <string name="next">Naslednje</string>
-
-
     <string name="go">Pojdi</string>
     <string name="dialer_sounds">Zvoki klicalnika</string>
     <string name="dialer_sounds_subtext">Izberi ali želiš zvoke klicalnika.</string>
     <string name="low_battery_alert">Baterija je skoraj prazna</string>
+    <string name="only_home_screen">Samo domač zaslon</string>
 
 
     <!--For Tests:-->
-    <string name="low_battery_alert_subtext">Izberi, ali želiš opravilno vrstico v rdeči barvi na domačem zaslonu, ko je baterija pod
-		20%\nV vednost, to ne bo prikazano, če je opravilna vrstica skrita.</string>
-    <string name="medication_1">Eltroxin 100</string>
+    <string name="low_battery_alert_subtext">Izberi, ali želiš opravilno vrstico v rdeči barvi na domačem zaslonu,
+		ko je zmogljivost baterije pod 20%.\nV vednost: to ne bo vidno, če je opravilna vrstica skrita.</string>
+    <string name="medication_1">Lekadol 500</string>
 
 
-    <string name="medication_2">Eltroxin 150</string>
-    <string name="grant_all_permissions">Grant All Permissions</string>
+    <string name="medication_2">Naklofen 75</string>
 
     <string-array name="names_for_screenshots">
-        <item>The Godfather</item>
-        <item>Abraham Lincoln</item>
-        <item>Paul McCartney</item>
-        <item>Tyrion Lannister</item>
-        <item>The Rock</item>
-        <item>Robert Downey Jr.</item>
+        <item>Primož Peterka</item>
+        <item>Marjana Deržaj</item>
+        <item>Ivan Minatti</item>
+        <item>Viktorija Kraus</item>
+        <item>Rudolf Maister</item>
+        <item>Kristina Gorišek</item>
     </string-array>
 
 </resources>
