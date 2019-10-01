@@ -109,7 +109,7 @@
     <string name="delete">Izbriši</string>
     <string name="delete___">Izbriši %s?</string>
     <string name="delete_all_alarms">Odstrani vse budilke.</string>
-    <string name="dialer">Klicnik</string>
+    <string name="dialer">Telefon</string>
     <string name="display_settings">Zaslon</string>
     <string name="done">Končano</string>
     <string name="down">Dol</string>
@@ -273,7 +273,7 @@
     <string name="no_alarms">Ni budilk\nUstvari jo tako, da klikneš\n\"Dodaj alarm\"\nAli\n\"Dodaj štoparico\"</string>
     <string name="will_repeat_only_once">Ponovila se bo le enkrat!</string>
     <string name="clear_all_notifications">Počisti vsa obvestila</string>
-    <string name="no_pills">Ni tablet.\nDodaj novo s tem, da klikneš n\"Dodaj tableto"</string>
+    <string name="no_pills">Ni tablet.\nDodaj novo s tem, da klikneš\n\"Dodaj tableto\"</string>
     <string name="clear_cache_subtext">Ali ste prepričani, da želite počistiti celoten predpomnilnik?\nOdstranjene bodo tudi bližnjice aplikacij!</string>
     <string name="also_available_at">Tudi na voljo na\nbaldphone.contact@gmail.com</string>
     <string name="pending_update">Čakajoča posodobitev</string>
