@@ -181,8 +181,6 @@
     <string name="permissions_part">Dovoljenja</string>
     <string name="personalization_settings">Prilagoditev</string>
     <string name="phone">Telefon</string>
-    <string name="phone_ask_permission_subtext">
-   <![CDATA[Prosimo odprite nastavitve -> dovoljenja -> omogoči klicna dovoljenja]]></string>
     <string name="photo">Slika</string>
     <string name="photos">Slike</string>
     <string name="pill_added">Tableta dodana!</string>
@@ -349,6 +347,7 @@
     <string name="medication_2">Naklofen 75</string>
 
     <string-array name="names_for_screenshots">
+
         <item>Primož Peterka</item>
         <item>Marjana Deržaj</item>
         <item>Ivan Minatti</item>

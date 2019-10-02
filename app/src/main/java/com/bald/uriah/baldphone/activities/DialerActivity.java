@@ -80,10 +80,7 @@ public class DialerActivity extends BaldActivity {
                 throw new RuntimeException(e);
             }
         } else
-            BaldToast.from(context) // should NEVER occur, but in case..
-                    .setType(BaldToast.TYPE_ERROR)
-                    .setText(R.string.phone_ask_permission_subtext)
-                    .show();
+            BaldToast.error(context);
 
     }
 

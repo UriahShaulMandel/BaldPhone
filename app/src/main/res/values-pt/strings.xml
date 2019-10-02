@@ -189,8 +189,6 @@
     <string name="permissions_part">Permissões</string>
     <string name="personalization_settings">Personalização</string>
     <string name="phone">Telefone</string>
-    <string name="phone_ask_permission_subtext">
-        <![CDATA[Navegue até definições -> Permissões -> Permitir Chamadas]]></string>
     <string name="photo">Fotografia</string>
     <string name="photos">Fotografias</string>
     <string name="pill_added">Medicação Adicionada!</string>

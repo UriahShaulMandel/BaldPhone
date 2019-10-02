@@ -198,8 +198,6 @@
     <string name="permissions_part">Oprávnění</string>
     <string name="personalization_settings">Personalizace</string>
     <string name="phone">Telefon</string>
-    <string name="phone_ask_permission_subtext">
-        <![CDATA[Please go to settings -> permissions -> enable call permission]]></string>
     <string name="photo">Obrázek</string>
     <string name="photos">Obrázky</string>
     <string name="pill_added">Pilulka přidána!</string>

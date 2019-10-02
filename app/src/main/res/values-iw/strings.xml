@@ -191,8 +191,6 @@
     <string name="permissions_part">הרשאות</string>
     <string name="personalization_settings">התאמה אישית</string>
     <string name="phone">טלפון</string>
-    <string name="phone_ask_permission_subtext">
-        <![CDATA[Please go to settings -> permissions -> enable call permission]]></string>
     <string name="photo">תמונה</string>
     <string name="photos">תמונות</string>
     <string name="pill_added">תרופה הוספה!</string>

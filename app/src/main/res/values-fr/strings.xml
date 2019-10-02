@@ -191,8 +191,6 @@
     <string name="permissions_part">Permissions</string>
     <string name="personalization_settings">Personnalisation</string>
     <string name="phone">Téléphone</string>
-    <string name="phone_ask_permission_subtext">
-        <![CDATA[Please go to settings -> permissions -> enable call permission]]></string>
     <string name="photo">Photo</string>
     <string name="photos">Photos</string>
     <string name="pill_added">Médicament ajouté !</string>
