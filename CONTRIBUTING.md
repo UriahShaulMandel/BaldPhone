@@ -3,7 +3,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 You can contribute by:
   - Adding features and fixing bugs.
-  - Translating BaldPhone to other languages, check out [this](https://github.com/UriahShaulMandel/BaldPhone/blob/master/translating/TRANSLATING.md)
+  - [Translating BaldPhone to other languages](https://github.com/UriahShaulMandel/BaldPhone/blob/master/translating/TRANSLATING.md)
   - Using BaldPhone and sending feedback
   - Sharing BaldPhone with others
   - Starring this project :)
