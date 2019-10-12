@@ -129,7 +129,9 @@
     <string name="feedback">Pošlji povratne informacije</string>
     <string name="feedback_cannot_be_empty">Povratne informacije ne morejo biti prazne!</string>
     <string name="feedback_sent_successfully">Povratne informacije uspešno poslane!</string>
-    <string name="first_please_select_how_you_want_to_interact_with_buttons">Prosimo izberite stopnjo dostopnosti</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Prosimo izberite stopnjo dostopnosti.\nTo lahko spremenite
+		v nastavitvah.
+	</string>
     <string name="font">Pisava</string>
     <string name="friday">Petek</string>
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Ali uporabljate privzeto tipkovnico s težavo?
@@ -285,7 +287,7 @@
     <string name="yesterday">Včeraj</string>
     <string name="nothing">Nič</string>
     <string name="no_contacts_found">Stiki niso bili najdeni!</string>
-    <string name="no_alarms">Ni budilk\nUstvari jo tako, da klikneš\n\"Dodaj alarm\"\nAli\n\"Dodaj štoparico\"</string>
+    <string name="no_alarms">Ni budilk\nUstvari jo tako, da klikneš\n\"Dodaj budilko\"\nAli\n\"Dodaj štoparico\"</string>
     <string name="no_pills">Ni tablet\nUstvari novo s tem, da klikneš\n\"Dodaj tableto\"</string>
     <string name="clear_all_notifications">Počisti vsa obvestila</string>
     <string name="clear_cache_subtext">Ali ste prepričani, da želite odstraniti celoten predpomnilnik?\nOdstranjene bodo tudi bližnjice aplikacij!</string>
@@ -297,7 +299,7 @@
     <string name="pending_update">Čakajoča posodobitev</string>
     <string name="download">Prenesi</string>
     <string name="install_updates">Namesti posodobitve</string>
-    <string name="install_updates_subtext">Ta odobritev je potrebna, da posodobite BaldPhone</string>
+    <string name="install_updates_subtext">Ta odobritev je potrebna, da lahko BaldPhone posodobite.</string>
     <string name="a_new_update_is_available">Nova posodobitev je na voljo!\nPosodobitve so pomembne, da BaldPhone tekoče deluje.\nPritisni OK da preneseš.
     </string>
     <string name="current_version">Trenutna različica:\n</string>
@@ -325,8 +327,8 @@
     <string name="download_progress">Napredek prenosa</string>
     <string name="what_do_you_want_to_do_with___">Kaj želiš storiti s %s?</string>
     <string name="crash_reports">Poročilo zrušitve</string>
-    <string name="crash_reports_subtext">Poročila zrušitev pomagajo, da je uporabniška izkušnja z BaldPhone brezhibna\nPoročila so potrebna samo za
-		popravljanje programskih napak in nobena informacija razen nujno potrebnih za popravilo napak ni vzeta.
+    <string name="crash_reports_subtext">Poročila zrušitev pomagajo, da je uporabniška izkušnja z BaldPhone brezhibna.\nPoročila so potrebna le za
+		popravila programskih napak in poslani so le nujno potrebni podatki o delovanju aplikacije.
     </string>
     <string name="custom_app">Aplikacija po meri</string>
     <string name="custom_app_subtext">Izberi aplikacijo po meri za na domač zaslon.</string>
