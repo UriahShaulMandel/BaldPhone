@@ -100,7 +100,7 @@
     <string name="clock">Clock</string>
     <string name="coming_soon">Coming Soon!</string>
     <string name="connection_settings">Connection</string>
-    <string name="contact_must_has_name">Contact must has a Name!</string>
+    <string name="contact_must_has_name">Contact must have a a Name!</string>
     <string name="contact_not_created">Contact not created!</string>
     <string name="contacts">Contacts</string>
     <string name="contacts_read_subtext">This permission is required in order to read contacts.</string>
@@ -119,11 +119,11 @@
     <string name="edit">Edit</string>
     <string name="email">Email:</string>
     <string name="enable_notification_access">Enable Notification Access</string>
-    <string name="enable_notification_access_subtext">Please give BaldPhone access to notification.</string>
+    <string name="enable_notification_access_subtext">Please give BaldPhone access to notifications.</string>
     <string name="enter">Enter</string>
     <string name="enter_contact_or_phone_number">Enter contact name:</string>
     <string name="evening">Evening</string>
-    <string name="example_of_different_text_sizes">Example of different text sizes\nShould be readable and not to
+    <string name="example_of_different_text_sizes">Example of different text sizes\nShould be readable and not
         overflow.
     </string>
     <string name="external_storage_subtext">This permission is required in order to save pictures.</string>
@@ -179,7 +179,7 @@
     <string name="no">No</string>
     <string name="notes">Notes</string>
     <string name="notes_settings">Notes</string>
-    <string name="notes_settings_subtext">Choose if you want to have a Note page in the home screen.</string>
+    <string name="notes_settings_subtext">Choose if you want to have a Notes page on the home screen.</string>
     <string name="notifications">Notifications</string>
 
     <string name="of">of</string>
@@ -236,7 +236,7 @@
     <string name="share">Share</string>
     <string name="share_actual_text">Hi, I\'m using this platform named "BaldPhone" which replaces the phone\'s
         interface to a big, simple and friendly one.\nInterested?\nYou can download it for free!\ncheck out the link
-        bellow for more information:\n\nhttps://sites.google.com/view/baldphone
+        below for more information:\n\nhttps://sites.google.com/view/baldphone
     </string>
     <string name="share_bald_phone_subtext">Hey, know anyone who may want to know about BaldPhone?\nYou can
         share it with them!"
@@ -251,7 +251,7 @@
     <string name="snooze">Snooze</string>
     <string name="sos">SOS</string>
     <string name="sos_is_full">SOS is full!</string>
-    <string name="sos_is_full_subtext">SOS is full! please remove other sos contacts before adding another one</string>
+    <string name="sos_is_full_subtext">SOS is full! please remove other SOS contacts before adding a new one</string>
     <string name="speak">Speak</string>
     <string name="speech_to_text">Speech to Text</string>
     <string name="strong_hand">Dominant Hand</string>
@@ -293,11 +293,11 @@
     <string name="no_alarms">No Alarms\nCreate one by clicking\n\"Add Alarm\"\nOr\n\"Add Timer\"</string>
     <string name="no_pills">No Pills\nCreate one by clicking\n\"Add Pill\"</string>
     <string name="clear_all_notifications">Clear All Notifications</string>
-    <string name="clear_cache_subtext">Are you sure you want to delete all cache?\nApps shortcuts will be removed too!
+    <string name="clear_cache_subtext">Are you sure you want to clear the cache?\nApp shortcuts will be removed too!
     </string>
-    <string name="permissions_calm">Hi, BaldPhone must have the following permissions in order to run. some of them
+    <string name="permissions_calm">Hi, BaldPhone must have the following permissions in order to run. Some of them
         sound scary, but it is the only way BaldPhone can replace the phone\'s interface. No data is taken and it causes
-        no harm. press OK to grant the permissions or no to exit BaldPhone.
+        no harm. Press OK to grant the permissions or no to exit BaldPhone.
     </string>
     <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com</string>
     <string name="pending_update">Pending Update</string>
@@ -336,7 +336,7 @@
         to fix bugs, and no info other than what\'s necessary to fix the bug is taken
     </string>
     <string name="custom_app">Custom App</string>
-    <string name="custom_app_subtext">Choose custom app to be in the home screen.</string>
+    <string name="custom_app_subtext">Choose custom app to be on the home screen.</string>
     <string name="no_app_was_found">No matching app was found!</string>
     <string name="alarm">Alarm</string>
     <string name="no_new_notifications">No New Notifications</string>
@@ -367,7 +367,7 @@
     <string name="dialer_sounds">Dialer Sounds</string>
     <string name="dialer_sounds_subtext">Choose if you want to have Dialer Sounds.</string>
     <string name="low_battery_alert">Low battery alert</string>
-    <string name="low_battery_alert_subtext">Choose if you want the status bar to be red in the home screen when battery is under 20%\nNotice It won\'t be shown if the system status bar is hidden.</string>
+    <string name="low_battery_alert_subtext">Choose if you want the status bar to be red on the home screen when battery is under 20%\nNotice It won\'t be shown if the system status bar is hidden.</string>
 
 
     <!--For Tests:-->
