@@ -58,6 +58,7 @@ import static android.Manifest.permission.CALL_PHONE;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.READ_CALL_LOG;
 import static android.Manifest.permission.READ_CONTACTS;
+import static android.Manifest.permission.WRITE_CALL_LOG;
 import static android.Manifest.permission.WRITE_CONTACTS;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
@@ -75,11 +76,13 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
             PERMISSION_READ_CONTACTS = 0b100 | PERMISSION_DEFAULT_PHONE_HANDLER,
             PERMISSION_WRITE_CONTACTS = 0b1000 | PERMISSION_DEFAULT_PHONE_HANDLER,
             PERMISSION_CALL_PHONE = 0b10000 | PERMISSION_DEFAULT_PHONE_HANDLER,
-            PERMISSION_READ_CALL_LOG = 0b100000 | PERMISSION_DEFAULT_PHONE_HANDLER,
+            PERMISSION_READ_CALL_LOG = 0b10000000000 | PERMISSION_DEFAULT_PHONE_HANDLER,
+            PERMISSION_WRITE_CALL_LOG = 0b100000 | PERMISSION_DEFAULT_PHONE_HANDLER | PERMISSION_READ_CALL_LOG,
             PERMISSION_CAMERA = 0b1000000,
             PERMISSION_WRITE_EXTERNAL_STORAGE = 0b10000000,
             PERMISSION_NOTIFICATION_LISTENER = 0b100000000 | PERMISSION_WRITE_SETTINGS,
             PERMISSION_REQUEST_INSTALL_PACKAGES = 0b1000000000;
+
     public boolean testing = false;
     protected Vibrator vibrator;
     @StyleRes
@@ -124,6 +127,10 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
         }
         if ((requiredPermissions & PERMISSION_CALL_PHONE) != 0) {
             if (ActivityCompat.checkSelfPermission(activity, CALL_PHONE) != PERMISSION_GRANTED)
+                return false;
+        }
+        if ((requiredPermissions & PERMISSION_WRITE_CALL_LOG) != 0) {
+            if (ActivityCompat.checkSelfPermission(activity, WRITE_CALL_LOG) != PERMISSION_GRANTED)
                 return false;
         }
         if ((requiredPermissions & PERMISSION_READ_CALL_LOG) != 0) {

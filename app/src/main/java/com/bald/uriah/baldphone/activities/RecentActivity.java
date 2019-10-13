@@ -44,13 +44,15 @@ public class RecentActivity extends BaldActivity {
         final DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
         dividerItemDecoration.setDrawable(getDrawable(R.drawable.ll_divider));
         recyclerView.addItemDecoration(dividerItemDecoration);
-        recyclerView.setAdapter(new CallsRecyclerViewAdapter(CallLogsHelper.getAllCalls(getContentResolver()), this));
+        final CallsRecyclerViewAdapter callsRecyclerViewAdapter = new CallsRecyclerViewAdapter(CallLogsHelper.getAllCalls(getContentResolver()), this);
+        CallLogsHelper.markAllAsRead(getContentResolver());
+        recyclerView.setAdapter(callsRecyclerViewAdapter);
 
         setupYoutube(3);
     }
 
     @Override
     protected int requiredPermissions() {
-        return PERMISSION_READ_CALL_LOG | PERMISSION_READ_CONTACTS;
+        return PERMISSION_WRITE_CALL_LOG | PERMISSION_READ_CONTACTS;
     }
 }

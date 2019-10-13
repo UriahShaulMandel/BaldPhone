@@ -24,7 +24,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.provider.CallLog;
 import android.provider.ContactsContract;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -37,21 +36,24 @@ public class Call {
             CallLog.Calls.DURATION,
             CallLog.Calls.DATE,
             CallLog.Calls.TYPE,
-            CallLog.Calls.CACHED_LOOKUP_URI
+            CallLog.Calls.CACHED_LOOKUP_URI,
+//            CallLog.Calls.NEW, Currently it's commented because new calls are not marked in any way
+//            CallLog.Calls.IS_READ,
     };
     public final String phoneNumber;
     public final int lengthInSeconds;
     public final long dateTime;
     public final int callType;
     public final String contactUri;
+//    public final boolean neW; Currently it's commented because new calls are not marked in any way
 
-    public Call(String phoneNumber, int lengthInSeconds, long dateTime, int callType, String contactUri) {
+    public Call(String phoneNumber, int lengthInSeconds, long dateTime, int callType, String contactUri/*, boolean neW*/) {
         this.phoneNumber = phoneNumber;
         this.lengthInSeconds = lengthInSeconds;
         this.dateTime = dateTime;
         this.callType = callType;
-        Log.e(TAG, "Call: contactUri=" + contactUri);
         this.contactUri = contactUri;
+//        this.neW = neW;
     }
 
     public Call(final Cursor cursor) {
@@ -61,6 +63,7 @@ public class Call {
                 cursor.getLong(cursor.getColumnIndex(CallLog.Calls.DATE)),
                 cursor.getInt(cursor.getColumnIndex(CallLog.Calls.TYPE)),
                 cursor.getString(cursor.getColumnIndex(CallLog.Calls.CACHED_LOOKUP_URI))
+//                ,(cursor.getInt(cursor.getColumnIndex(CallLog.Calls.NEW)) == 1) && (cursor.getInt(cursor.getColumnIndex(CallLog.Calls.IS_READ)) == 0)
         );
     }
 
@@ -100,16 +103,5 @@ public class Call {
                 cursor.close();
 
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Call{" +
-                "phoneNumber='" + phoneNumber + '\'' +
-                ", lengthInSeconds=" + lengthInSeconds +
-                ", dateTime=" + dateTime +
-                ", callType=" + callType +
-                ", contactUri='" + contactUri + '\'' +
-                '}';
     }
 }

@@ -61,14 +61,14 @@ import java.util.List;
 public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<CallsRecyclerViewAdapter.ViewHolder> {
     private static final String TAG = CallsRecyclerViewAdapter.class.getSimpleName();
 
-    private static final int INCOMING_TYPE = 1;
-    private static final int OUTGOING_TYPE = 2;
-    private static final int MISSED_TYPE = 3;
-    private static final int VOICEMAIL_TYPE = 4;
+    public static final int INCOMING_TYPE = 1;
+    public static final int OUTGOING_TYPE = 2;
+    public static final int MISSED_TYPE = 3;
+    public static final int VOICEMAIL_TYPE = 4;
 
-    private static final int REJECTED_TYPE = 5;
-    private static final int BLOCKED_TYPE = 6;
-    private static final int ANSWERED_EXTERNALLY_TYPE = 7;
+    public static final int REJECTED_TYPE = 5;
+    public static final int BLOCKED_TYPE = 6;
+    public static final int ANSWERED_EXTERNALLY_TYPE = 7;
 
     @ColorInt
     private final int textColorOnRegular;

@@ -50,6 +50,7 @@ import com.bald.uriah.baldphone.activities.media.VideosActivity;
 import com.bald.uriah.baldphone.activities.pills.PillsActivity;
 import com.bald.uriah.baldphone.databases.apps.App;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabase;
+import com.bald.uriah.baldphone.databases.calls.CallLogsHelper;
 import com.bald.uriah.baldphone.services.NotificationListenerService;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
@@ -89,6 +90,8 @@ public class HomePage1 extends HomeView {
                 bt_whatsapp.setBadgeVisibility(packagesSet.contains(D.WHATSAPP_PACKAGE_NAME));
             } else
                 bt_whatsapp.setBadgeVisibility(packagesSet.contains(Objects.requireNonNull(ComponentName.unflattenFromString(app.getFlattenComponentName())).getPackageName()));
+            bt_recent.setBadgeVisibility(!CallLogsHelper.isAllReadSafe(getContext().getContentResolver()));
+
         }
     };
 

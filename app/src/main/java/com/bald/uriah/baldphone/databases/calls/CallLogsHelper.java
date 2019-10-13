@@ -20,15 +20,22 @@
 package com.bald.uriah.baldphone.databases.calls;
 
 import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.CallLog;
 import android.provider.ContactsContract;
 
+import com.bald.uriah.baldphone.adapters.CallsRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+
+import static android.provider.CallLog.Calls.IS_READ;
+import static android.provider.CallLog.Calls.NEW;
+import static android.provider.CallLog.Calls.TYPE;
 
 /**
  * Simple Helper to get the call log.
@@ -56,6 +63,25 @@ public class CallLogsHelper {
             return calls;
         } catch (SecurityException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    public static void markAllAsRead(ContentResolver contentResolver) {
+        final ContentValues values = new ContentValues();
+        values.put(IS_READ, true);
+        values.put(CallLog.Calls.NEW, false);
+        try {
+            contentResolver.update(CallLog.Calls.CONTENT_URI, values, null, null);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static boolean isAllReadSafe(ContentResolver contentResolver) {
+        try (final Cursor cursor = contentResolver.query(CallLog.Calls.CONTENT_URI, new String[]{TYPE, IS_READ, NEW}, String.format(Locale.US, "%s=0 AND %s=1 AND %s=%d", IS_READ, NEW, TYPE, CallsRecyclerViewAdapter.MISSED_TYPE), null, null)) {
+            return cursor.getCount() == 0;
+        } catch (SecurityException ignore) {
+            return true;
         }
     }
 }

@@ -51,6 +51,7 @@ import static android.Manifest.permission.CALL_PHONE;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.READ_CALL_LOG;
 import static android.Manifest.permission.READ_CONTACTS;
+import static android.Manifest.permission.WRITE_CALL_LOG;
 import static android.Manifest.permission.WRITE_CONTACTS;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
@@ -160,8 +161,11 @@ public class PermissionActivity extends BaldActivity {
                     permissionItemList.add(
                             new SimplePermissionItem(CALL_PHONE, getString(R.string.calling), getString(R.string.call_subtext)));
             }
-            if ((requiredPermissions & PERMISSION_READ_CALL_LOG) != 0) {
-                if (ActivityCompat.checkSelfPermission(this, READ_CALL_LOG) != PERMISSION_GRANTED)
+            if ((requiredPermissions & PERMISSION_WRITE_CALL_LOG) != 0 || (requiredPermissions & PERMISSION_READ_CALL_LOG) != 0) {
+                if (ActivityCompat.checkSelfPermission(this, WRITE_CALL_LOG) != PERMISSION_GRANTED)
+                    permissionItemList.add(
+                            new SimplePermissionItem(WRITE_CALL_LOG, getString(R.string.read_call_log), getString(R.string.read_call_log_subtext)));
+                else if (ActivityCompat.checkSelfPermission(this, READ_CALL_LOG) != PERMISSION_GRANTED)
                     permissionItemList.add(
                             new SimplePermissionItem(READ_CALL_LOG, getString(R.string.read_call_log), getString(R.string.read_call_log_subtext)));
             }

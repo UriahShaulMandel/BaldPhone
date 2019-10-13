@@ -494,6 +494,6 @@ public class SingleContactActivity extends BaldActivity {
 
     @Override
     protected int requiredPermissions() {
-        return PERMISSION_WRITE_CONTACTS | PERMISSION_READ_CONTACTS | PERMISSION_CALL_PHONE | PERMISSION_READ_CALL_LOG;
+        return PERMISSION_WRITE_CONTACTS | PERMISSION_READ_CONTACTS | PERMISSION_CALL_PHONE | PERMISSION_WRITE_CALL_LOG;
     }
 }
