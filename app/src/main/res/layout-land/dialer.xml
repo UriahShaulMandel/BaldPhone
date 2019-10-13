@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Licensed to the Apache Software Foundation (ASF) under one
   ~ or more contributor license agreements.  See the NOTICE file
   ~ distributed with this work for additional information
@@ -19,75 +18,77 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   android:background="?bald_background"
-                                                   android:gravity="bottom|center"
-                                                   android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?bald_background"
+    android:gravity="bottom|center"
+    android:orientation="vertical">
 
     <com.bald.uriah.baldphone.views.BaldTitleBar
-            android:id="@+id/bald_title_bar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:backgroundTint="@color/color_1"
+        android:id="@+id/bald_title_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:backgroundTint="@color/color_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
 
-            app:title="@string/dialer"/>
+        app:title="@string/dialer" />
 
 
     <TextView
-            android:id="@+id/tv_number"
-            style="@style/BackgroundText.Huge"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical|center_horizontal"
-            android:maxLines="3"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/include"
-            app:layout_constraintEnd_toEndOf="@+id/include"
-            app:layout_constraintStart_toStartOf="@+id/include"
-            app:layout_constraintTop_toBottomOf="@+id/bald_title_bar"/>
+        android:id="@+id/tv_number"
+        style="@style/BackgroundText.Huge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialer_input_background"
+        android:gravity="center_vertical|center_horizontal"
+        android:maxLines="3"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/include"
+        app:layout_constraintEnd_toEndOf="@+id/include"
+        app:layout_constraintStart_toStartOf="@+id/include"
+        app:layout_constraintTop_toBottomOf="@+id/bald_title_bar"
+        app:layout_constraintWidth_percent="0.475" />
 
     <include
-            android:id="@+id/include"
-            layout="@layout/dial_pad"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+        android:id="@+id/include"
+        layout="@layout/dial_pad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
-            android:layout_weight="0.1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/scrolling_helper"
-            app:layout_constraintTop_toBottomOf="@+id/tv_number"/>
+        android:layout_weight="0.1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scrolling_helper"
+        app:layout_constraintTop_toBottomOf="@+id/tv_number" />
 
     <com.bald.uriah.baldphone.views.ScrollingHelper
-            android:id="@+id/scrolling_helper"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/include"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bald_title_bar"
-            app:where_bar="-3">
+        android:id="@+id/scrolling_helper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/include"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bald_title_bar"
+        app:where_bar="-3">
 
         <com.bald.uriah.baldphone.views.ModularRecyclerView
-                android:id="@+id/contacts_recycler_view"
-                style="@style/ScrollStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            android:id="@+id/contacts_recycler_view"
+            style="@style/ScrollStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
         <include
-                android:id="@+id/empty_view"
-                layout="@layout/add_contact"/>
+            android:id="@+id/empty_view"
+            layout="@layout/add_contact" />
     </com.bald.uriah.baldphone.views.ScrollingHelper>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
