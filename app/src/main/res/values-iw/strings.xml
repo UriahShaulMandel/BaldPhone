@@ -296,8 +296,6 @@
         מנת לאפשר את ההרשאות או לא בשביל לצאת מBaldPhone.
     </string>
 
-    <string name="also_available_at">ניתן גם לשלוח מייל ל\nbaldphone.contact@gmail.com</string>
-
     <string name="calling">ביצוע שיחות</string>
     <string name="pending_update">עדכון מחכה</string>
     <string name="download">הורד</string>
@@ -370,13 +368,13 @@
     <string name="low_battery_alert">חיווי סוללה נמוכה</string>
     <string name="low_battery_alert_subtext">בחר האם במסך הבית, כאשר הבטרייה מתחת לעשרים אחוזים, שורת המצב תיראה אדומה\nחשוב לציין שלא ניתן יהיה לראות את השינוי אם שורת המצב מוסתרת.</string>
 
+    <string name="also_available_at">ניתן ליצור קשר גם ב\nbaldphone.contact@gmail.com</string>
+    <string name="grant_all_permissions">אפשר את כל ההרשאות</string>
+
+
     <!--For Tests:-->
-
     <string name="medication_1">אלטרוקסין 100</string>
-
-
     <string name="medication_2">אלטרוקסין 150</string>
-    <string name="grant_all_permissions">Grant All Permissions</string>
 
     <string-array name="names_for_screenshots">
         <item>יונה הנביא</item>

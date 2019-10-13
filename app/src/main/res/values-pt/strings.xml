@@ -282,7 +282,6 @@
     <string name="clear_cache_subtext">Tem a certeza que pretende apagar a cashe?\nAplicações e Atalhos serão removidos também!
     </string>
     <string name="permissions_calm">Olá, o BaldPhone necessita das seguintes permissões para poder substituir a interface do telefone. Algumas soam assustadoramente mas nenhuns dados são recolhidos e não causará problemas. Pressione OK para ceder as permissões ou Não para saír do BaldPhone.</string>
-    <string name="also_available_at">Também contactável em:\nbaldphone.contact@gmail.com</string>
     <string name="pending_update">Actualização Pendente</string>
     <string name="download">Download</string>
     <string name="install_updates">Instalar Actualizações</string>
@@ -346,14 +345,15 @@
     <string name="low_battery_alert">Pouca Bateria</string>
 
 
+    <!--Please Add The Following Strings:-->
+    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
+    <string name="grant_all_permissions">Grant All Permissions</string>
+
     <!--For Tests:-->
     <string name="low_battery_alert_subtext">
         Escolha se quer a barra de notificações em vermelho quando a bateria está abaixo de 20%\nNão será mostrado se a barra de notificações estiver escondida.</string>
     <string name="medication_1">Eltroxin 100</string>
-
-
     <string name="medication_2">Eltroxin 150</string>
-    <string name="grant_all_permissions">Grant All Permissions</string>
 
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>

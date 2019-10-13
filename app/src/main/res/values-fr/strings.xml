@@ -287,7 +287,6 @@
     </string>
     <string name="permissions_calm">Bonjour, BaldPhone doit avoir les permissions suivantes pour fonctionner. Certaines font peur mais c\'est la seule manière pour BaldPhone de remplacer l\'interface de votre téléphone. Aucune donnée n\'est prise et vous n\'encourez aucun risque. Appuyez sur OK pour accorder les permissions, sinon vous pouvez fermer BaldPhone.
     </string>
-    <string name="also_available_at">Également joinable via\nbaldphone.contact@gmail.com</string>
     <string name="pending_update">Mise à jour en attente</string>
     <string name="download">Télécharger</string>
     <string name="install_updates">Installer les mises à jour</string>
@@ -346,18 +345,19 @@
     <string name="next">Prochaine</string>
     <string name="go">Aller à</string>
 
-    <!--    Please Add The following Strings-->
-    <!--    <string name="dialer_sounds">Dialer Sounds</string>-->
-    <!--    <string name="dialer_sounds_subtext">Choose if you want to have Dialer Sounds.</string>-->
-    <!--    <string name="low_battery_alert">Low battery alert</string>-->
-    <!--    <string name="low_battery_alert_subtext">Choose if you want the status bar to be red in the home screen when battery is under 20%\nNotice It won\'t be shown if the system status bar is hidden.</string>-->
-  
-  
-    <!--For Tests:-->
+    <!--Please Add The following Strings-->
+    <string name="dialer_sounds">Dialer Sounds</string>
+    <string name="dialer_sounds_subtext">Choose if you want to have Dialer Sounds.</string>
+    <string name="low_battery_alert">Low battery alert</string>
+    <string name="low_battery_alert_subtext">Choose if you want the status bar to be red on the home screen when battery is under 20%\nNotice It won\'t be shown if the system status bar is hidden.</string>
 
+    <!--Please Add The Following Strings:-->
+    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
+    <string name="grant_all_permissions">Grant All Permissions</string>
+
+    <!--For Tests:-->
     <string name="medication_1">Eltroxin 100</string>
     <string name="medication_2">Eltroxin 150</string>
-    <string name="grant_all_permissions">Grant All Permissions</string>
 
     <string-array name="names_for_screenshots">
         <item>Napoleon Bonaparte</item>

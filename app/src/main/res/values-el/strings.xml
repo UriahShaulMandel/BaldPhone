@@ -300,7 +300,6 @@
       φαίνονται τρομακτικές αλλα το BaldPhone μπορεί να αντικαταστήσει τη διεπαφή του τηλεφώνου. Δεν λαμβάνονται δεδομένα που προκαλούν
          καθόλου ζημιά. πατήστε OK για να χορηγήσετε τα δικαιώματα ή όχι για να βγείτε από το BaldPhone.
     </string>
-    <string name="also_available_at">Διατίθεται καί στο \nbaldphone.contact@gmail.com</string>
     <string name="pending_update">Ενημέρωση εκκρεμής</string>
     <string name="download">Λήψη</string>
     <string name="install_updates">Εγκατάσταση Ενημερώσεων</string>
@@ -369,14 +368,15 @@
     <string name="dialer_sounds_subtext">Επιλέξτε αν θέλετε ήχους στο πληκτρολόγιο κλήσης</string>
     <string name="low_battery_alert">Ειδοποίηση Χαμηλής Μπαταρίας</string>
 
+    <!--Please Add The Following Strings:-->
+    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
+    <string name="grant_all_permissions">Grant All Permissions</string>
 
     <!--For Tests:-->
     <string name="low_battery_alert_subtext">Επιλέξτε αν θελετε η γραμμής κατάστασης να είναι κόκκινη στην αρχική οθόνη οταν η μπαταρία είναι κάτω τού 20%\nΣημείωση: Δεν θα φαίνεται αν η γραμμή κατάστασης είναι κρυμμένη .</string>
     <string name="medication_1">Eltroxin 100</string>
     <string name="medication_2">Eltroxin 150</string>
 
-
-    <string name="grant_all_permissions">Grant All Permissions</string>
 
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
