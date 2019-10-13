@@ -273,7 +273,6 @@
     <string name="clear_all_notifications">Počisti vsa obvestila</string>
     <string name="no_pills">Ni tablet.\nDodaj novo s tem, da klikneš\n\"Dodaj tableto\"</string>
     <string name="clear_cache_subtext">Ali ste prepričani, da želite počistiti celoten predpomnilnik?\nOdstranjene bodo tudi bližnjice aplikacij!</string>
-    <string name="also_available_at">Tudi na voljo na\nbaldphone.contact@gmail.com</string>
     <string name="pending_update">Čakajoča posodobitev</string>
     <string name="download">Prenesi</string>
     <string name="install_updates">Namesti posodobitve</string>
@@ -336,6 +335,11 @@
     <string name="dialer_sounds_subtext">Izberi ali želiš zvoke klicalnika.</string>
     <string name="low_battery_alert">Baterija je skoraj prazna</string>
     <string name="only_home_screen">Samo domač zaslon</string>
+
+
+    <!--Please Add The Following Strings:-->
+    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
+    <string name="grant_all_permissions">Grant All Permissions</string>
 
 
     <!--For Tests:-->

@@ -299,7 +299,6 @@
         sound scary, but it is the only way BaldPhone can replace the phone\'s interface. No data is taken and it causes
         no harm. Press OK to grant the permissions or no to exit BaldPhone.
     </string>
-    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com</string>
     <string name="pending_update">Pending Update</string>
     <string name="download">Download</string>
     <string name="install_updates">Install Updates</string>
@@ -369,11 +368,13 @@
     <string name="low_battery_alert">Low battery alert</string>
     <string name="low_battery_alert_subtext">Choose if you want the status bar to be red on the home screen when battery is under 20%\nNotice It won\'t be shown if the system status bar is hidden.</string>
 
+    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
+    <string name="grant_all_permissions">Grant All Permissions</string>
+
 
     <!--For Tests:-->
     <string name="medication_1">Eltroxin 100</string>
     <string name="medication_2">Eltroxin 150</string>
-    <string name="grant_all_permissions">Grant All Permissions</string>
 
 
     <string-array name="names_for_screenshots">

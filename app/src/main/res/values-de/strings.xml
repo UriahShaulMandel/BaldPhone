@@ -286,7 +286,6 @@
     </string>
     <string name="permissions_calm">Hi, BaldPhone benötigt folgende Berechtigungen, um zu funktionieren. Manche klingen beängstigend, aber das ist die einzige Möglichkeit, wie BaldPhone die Bedienoberfläche des Handys ersetzen kann. Es werden keine Daten gesamelt und kein Schaden verursacht. Drücke OK, um die Berechtigungen zu erteilen, oder Nein, um BaldPhone zu verlassen.
     </string>
-    <string name="also_available_at">Auch erreichbar über\nbaldphone.contact@gmail.com</string>
     <string name="pending_update">Ausstehende Aktualisierung</string>
     <string name="download">Download</string>
     <string name="install_updates">Aktualisierung installieren</string>
@@ -348,14 +347,13 @@
     <string name="low_battery_alert_subtext">Entscheide, ob die Statusleiste des Startbildschirms rot gefärbt werden soll, wenn die Akkuladung unter 20% sinkt.\nHinweis: Es wird nicht angezeigt, wenn die Statusleiste des Systems versteckt ist.</string>
 
 
-    <!--Please Add The following Strings:-->
-    <!--Please make sure the following strings are translated propertly:-->
-
+    <!--Please Add The Following Strings:-->
+    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
+    <string name="grant_all_permissions">Grant All Permissions</string>
 
     <!--For Tests:-->
     <string name="medication_1">Eltroxin 100</string>
     <string name="medication_2">Eltroxin 150</string>
-    <string name="grant_all_permissions">Grant All Permissions</string>
 
     <string-array name="names_for_screenshots">
         <item>Bismarck</item>

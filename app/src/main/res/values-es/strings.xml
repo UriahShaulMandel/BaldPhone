@@ -313,7 +313,6 @@
 		BaldPhone no usará sus datos personales ni dañará su teléfono.
 		Presione OK para otorgar los permisos o no para salir de BaldPhone.
     </string>
-    <string name="also_available_at">También disponible en\nbaldphone.contact@gmail.com</string>
     <string name="pending_update">Actualización pendiente</string>
     <string name="download">Descargar</string>
     <string name="install_updates">Instalar actualizaciones</string>
@@ -389,12 +388,13 @@
         Nótese que no se verán cambios si la barra de estado está oculta.
     </string>
 
+    <!--Please Add The Following Strings:-->
+    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
+    <string name="grant_all_permissions">Grant All Permissions</string>
 
     <!--For Tests:-->
     <string name="medication_1">Eltroxin 100</string>
     <string name="medication_2">Eltroxin 150</string>
-    <string name="grant_all_permissions">Grant All Permissions</string>
-
 
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
