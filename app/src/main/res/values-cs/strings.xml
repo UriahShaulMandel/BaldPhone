@@ -367,17 +367,16 @@
     <string name="dialer_sounds">Zvuky vytáčení</string>
     <string name="dialer_sounds_subtext">Zvolte pokud chcete zvuk vytáčení.</string>
     <string name="low_battery_alert">Pozor, nízká baterie</string>
+    <string name="low_battery_alert_subtext">Zvolte, pokud chcete, aby stavový řádek byl na domovské obrazovce červený, když je baterie méně než 20% \nPoznámka se nezobrazí, pokud je stavový řádek systému skrytý.</string>
 
     <!--Please Add The Following Strings:-->
     <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
     <string name="grant_all_permissions">Grant All Permissions</string>
+    <string name="donate">Donate</string>
 
 
     <!--For Tests:-->
-    <string name="low_battery_alert_subtext">Zvolte, pokud chcete, aby stavový řádek byl na domovské obrazovce červený, když je baterie méně než 20% \nPoznámka se nezobrazí, pokud je stavový řádek systému skrytý.</string>
     <string name="medication_1">Eltroxin 100</string>
-
-
     <string name="medication_2">Eltroxin 150</string>
 
     <string-array name="names_for_screenshots">

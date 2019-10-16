@@ -332,6 +332,9 @@
     <string name="next">Naslednje</string>
     <string name="go">Pojdi</string>
     <string name="dialer_sounds">Zvoki klicalnika</string>
+    <string name="low_battery_alert_subtext">Izberi, ali želiš opravilno vrstico v rdeči barvi na domačem zaslonu,
+		ko je zmogljivost baterije pod 20%.\nV vednost: to ne bo vidno, če je opravilna vrstica skrita.</string>
+    <string name="donate">Donate</string>
     <string name="dialer_sounds_subtext">Izberi ali želiš zvoke klicalnika.</string>
     <string name="low_battery_alert">Baterija je skoraj prazna</string>
     <string name="only_home_screen">Samo domač zaslon</string>
@@ -341,13 +344,8 @@
     <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
     <string name="grant_all_permissions">Grant All Permissions</string>
 
-
     <!--For Tests:-->
-    <string name="low_battery_alert_subtext">Izberi, ali želiš opravilno vrstico v rdeči barvi na domačem zaslonu,
-		ko je zmogljivost baterije pod 20%.\nV vednost: to ne bo vidno, če je opravilna vrstica skrita.</string>
     <string name="medication_1">Lekadol 500</string>
-
-
     <string name="medication_2">Naklofen 75</string>
 
     <string-array name="names_for_screenshots">

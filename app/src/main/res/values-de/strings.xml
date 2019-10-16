@@ -350,6 +350,7 @@
     <!--Please Add The Following Strings:-->
     <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
     <string name="grant_all_permissions">Grant All Permissions</string>
+    <string name="donate">Donate</string>
 
     <!--For Tests:-->
     <string name="medication_1">Eltroxin 100</string>
