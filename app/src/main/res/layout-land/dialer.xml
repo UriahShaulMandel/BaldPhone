@@ -47,6 +47,7 @@
         style="@style/BackgroundText.Huge"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:background="@drawable/dialer_input_background"
         android:gravity="center_vertical|center_horizontal"
         android:maxLines="3"
