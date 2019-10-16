@@ -22,4 +22,5 @@
     <stroke
         android:width="?bald_stroke_size"
         android:color="?bald_decoration_on_background" />
+    <corners android:radius="?bald_button_corners_radius" />
 </shape>
