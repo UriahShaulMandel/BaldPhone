@@ -2,7 +2,7 @@
  - Click the image above or click [this](https://www.youtube.com/watch?v=G33E4XQp_Xw) to watch the video
 
 
-# BaldPhone [![Build Status](https://travis-ci.com/UriahShaulMandel/BaldPhone.svg?branch=master)](https://travis-ci.com/UriahShaulMandel/BaldPhone) [![GitHub version](https://img.shields.io/github/tag/UriahShaulMandel/BaldPhone.svg)](https://github.com/UriahShaulMandel/BaldPhone/releases/latest) ![Users](https://img.shields.io/endpoint?url=https%3A%2F%2Fbpbadge.000webhostapp.com%2Fget_badge.php) ![Users on Latest](https://img.shields.io/endpoint?url=https%3A%2F%2Fbpbadge.000webhostapp.com%2Fget_badge_latest.php) [![GitHub repo size](https://img.shields.io/github/repo-size/UriahShaulMandel/BaldPhone)](https://github.com/UriahShaulMandel/BaldPhone) [![Maintenance](https://img.shields.io/maintenance/yes/2022)](https://github.com/UriahShaulMandel/BaldPhone)
+# BaldPhone [![Build Status](https://travis-ci.com/UriahShaulMandel/BaldPhone.svg?branch=master)](https://travis-ci.com/UriahShaulMandel/BaldPhone) [![GitHub version](https://img.shields.io/github/tag/UriahShaulMandel/BaldPhone.svg)](https://github.com/UriahShaulMandel/BaldPhone/releases/latest) ![Users](https://img.shields.io/endpoint?url=https%3A%2F%2Fbpbadge.000webhostapp.com%2Fget_badge.php) ![Users on Latest](https://img.shields.io/endpoint?url=https%3A%2F%2Fbpbadge.000webhostapp.com%2Fget_badge_latest.php) [![GitHub repo size](https://img.shields.io/github/repo-size/UriahShaulMandel/BaldPhone)](https://github.com/UriahShaulMandel/BaldPhone) [![Maintenance](https://img.shields.io/maintenance/yes/2022)](https://github.com/UriahShaulMandel/BaldPhone) ![Discord](https://img.shields.io/discord/633644055779213362)
 
 
 
