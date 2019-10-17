@@ -308,7 +308,7 @@
     <string name="install">Installa</string>
     <string name="data_warning">Avviso Dati</string>
     <string name="data_warning_subtext">Ciao, non sei connesso al WIFI.\nLe dimensioni del download sono circa 3MB,
-        se sei all'\estero potrebbe costarti del credito.\nVuoi procedere con il Download?
+        se sei all\'estero potrebbe costarti del credito.\nVuoi procedere con il Download?
     </string>
     <string name="update_message_is_corrupted">Il messaggio di aggiornamento è corrotto.</string>
     <string name="check_for_updates">Controlla per aggiornamenti</string>
