@@ -38,5 +38,4 @@
  6. The new language together with credit will be added in the next release
  7. When the next release is published, please make sure the translations match
  
- If you encounter any problem when translating, please contact me via baldphone.contact@gmail.com 
-slovenian
+ If you encounter any problem when translating, please contact me via baldphone.contact@gmail.com
