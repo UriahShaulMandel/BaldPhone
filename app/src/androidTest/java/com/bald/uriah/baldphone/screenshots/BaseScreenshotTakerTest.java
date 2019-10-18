@@ -63,9 +63,7 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
         File screenshotsFolder = new File("/sdcard/Pictures/screenshots");
         if (!screenshotsFolder.exists())
             screenshotsFolder.mkdir();
-        try (FileOutputStream out = new FileOutputStream("/sdcard/Pictures/screenshots/" + getClass().getSimpleName() + "_" +
-                locales[localeIndex++].getLanguage()
-                + ".png")) {
+        try (FileOutputStream out = new FileOutputStream("/sdcard/Pictures/screenshots/" + getClass().getSimpleName() + "_" + localesStr[localeIndex++] + ".png")) {
             final Bitmap bitmap = screenShot(mActivityTestRule.getActivity().getWindow().getDecorView().getRootView());
             if (bitmap == null)
                 throw new AssertionError("Bitmap literally can't be null wtf");
