@@ -39,7 +39,7 @@ import java.util.Locale;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 
 public abstract class BaseScreenshotTakerTest<T extends Activity> {
-    protected static final String[] localesStr = new String[]{"en", "fr", "de", "es", "iw-IL", "pt", "cs", "sl", "el", "it", "pt-br"};
+    protected static final String[] localesStr = new String[]{"en", "fr", "de", "es", "iw", "pt", "cs", "sl", "el", "it", "pt-br"};
     protected static final Locale[] locales = new Locale[localesStr.length];
     protected static int localeIndex = 0;
 
@@ -65,7 +65,9 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
         File screenshotsFolder = new File("/sdcard/Pictures/screenshots");
         if (!screenshotsFolder.exists())
             screenshotsFolder.mkdir();
-        try (FileOutputStream out = new FileOutputStream("/sdcard/Pictures/screenshots/" + getClass().getSimpleName() + "_" + localesStr[localeIndex++] + ".png")) {
+        try (FileOutputStream out = new FileOutputStream("/sdcard/Pictures/screenshots/" + getClass().getSimpleName() + "_" +
+                (localesStr[localeIndex++].equals("pt-br") ? "pt-rBR" : localesStr[localeIndex++])
+                + ".png")) {
             final Bitmap bitmap = screenShot(mActivityTestRule.getActivity().getWindow().getDecorView().getRootView());
             if (bitmap == null)
                 throw new AssertionError("Bitmap literally can't be null wtf");
