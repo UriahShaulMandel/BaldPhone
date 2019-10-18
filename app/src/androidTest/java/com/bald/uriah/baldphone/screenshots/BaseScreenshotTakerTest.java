@@ -39,8 +39,15 @@ import java.util.Locale;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 
 public abstract class BaseScreenshotTakerTest<T extends Activity> {
-    protected static final Locale[] locales = new Locale[]{Locale.ENGLISH, Locale.FRENCH, Locale.GERMAN, Locale.forLanguageTag("es"), Locale.forLanguageTag("iw-IL"), Locale.forLanguageTag("pt"), Locale.forLanguageTag("cs"), Locale.forLanguageTag("sl"), Locale.forLanguageTag("el"), Locale.ITALIAN, Locale.forLanguageTag("pt-br")};
+    protected static final String[] localesStr = new String[]{"en", "fr", "de", "es", "iw-IL", "pt", "cs", "sl", "el", "it", "pt-br"};
+    protected static final Locale[] locales = new Locale[localesStr.length];
     protected static int localeIndex = 0;
+
+    static {
+        for (int i = 0; i < localesStr.length; i++)
+            locales[i] = Locale.forLanguageTag(localesStr[i]);
+    }
+
     private final LocaleRule mLocaleRule = new LocaleRule(locales);
     public ActivityTestRule<T> mActivityTestRule = new ActivityTestRule<T>(activity(), true, false);
     @Rule
@@ -56,7 +63,9 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
         File screenshotsFolder = new File("/sdcard/Pictures/screenshots");
         if (!screenshotsFolder.exists())
             screenshotsFolder.mkdir();
-        try (FileOutputStream out = new FileOutputStream("/sdcard/Pictures/screenshots/" + getClass().getSimpleName() + "_" + locales[localeIndex++].getLanguage() + ".png")) {
+        try (FileOutputStream out = new FileOutputStream("/sdcard/Pictures/screenshots/" + getClass().getSimpleName() + "_" +
+                locales[localeIndex++].getLanguage()
+                + ".png")) {
             final Bitmap bitmap = screenShot(mActivityTestRule.getActivity().getWindow().getDecorView().getRootView());
             if (bitmap == null)
                 throw new AssertionError("Bitmap literally can't be null wtf");
@@ -80,8 +89,6 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
 
     protected void cleanupAfterTest() {
     }
-
-    ;
 
     @Before
     public void setUp() {
