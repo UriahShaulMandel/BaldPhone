@@ -39,6 +39,7 @@ import androidx.annotation.StyleRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BDB;
 import com.bald.uriah.baldphone.utils.BDialog;
@@ -143,7 +144,10 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
                 return false;
         }
         if ((requiredPermissions & PERMISSION_REQUEST_INSTALL_PACKAGES) != 0) {
-            return Build.VERSION.SDK_INT < Build.VERSION_CODES.O || activity.getPackageManager().canRequestPackageInstalls();
+            return
+                    Build.VERSION.SDK_INT < Build.VERSION_CODES.O ||
+                            (!BuildConfig.FLAVOR.equals("baldUpdates")) ||
+                            activity.getPackageManager().canRequestPackageInstalls();
         }
         return true;
     }

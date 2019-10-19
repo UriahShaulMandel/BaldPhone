@@ -33,6 +33,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BDB;
 import com.bald.uriah.baldphone.utils.BDialog;
@@ -174,7 +175,7 @@ public class PermissionActivity extends BaldActivity {
                         new SimplePermissionItem(CAMERA, getString(R.string.camera), getString(R.string.camera_subtext)));
         }
         if ((requiredPermissions & PERMISSION_REQUEST_INSTALL_PACKAGES) != 0) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && BuildConfig.FLAVOR.equals("baldUpdates")) {
                 if (!getPackageManager().canRequestPackageInstalls())
                     permissionItemList.add(
                             new PermissionItem(v -> startActivityForResult(new Intent(
