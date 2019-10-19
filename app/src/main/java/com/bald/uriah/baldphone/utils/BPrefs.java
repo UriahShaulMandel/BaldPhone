@@ -76,7 +76,7 @@ public final class BPrefs {
     public static final boolean CRASH_REPORTS_DEFAULT_VALUE = true;
 
     public static final String LAST_CRASH_KEY = "LAST_CRASH_KEY";
-    public static final long LAST_CRASH_TIME_OK = 6 * D.SECOND;
+    public static final long LAST_CRASH_TIME_OK = 12 * D.SECOND;
 
     public static final String LAST_APK_VERSION_KEY = "LAST_APK_VERSION_KEY";
 
