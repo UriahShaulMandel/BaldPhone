@@ -172,7 +172,7 @@
     <string name="morning">Jutro</string>
     <string name="name">Ime</string>
     <string name="named__">Imenovan</string>
-    <string name="new_alarm___was_created">Nov alarm %s je bil ustvarjen!</string>
+    <string name="new_alarm___was_created">Nova budilka %s je bila ustvarjena!</string>
     <string name="nfc">NFC</string>
     <string name="no">Ne</string>
     <string name="notes">Zapiski</string>
@@ -269,7 +269,7 @@
     <string name="took">Vzel!</string>
     <string name="tuesday">Torek</string>
     <string name="uninstall">Odstranite</string>
-    <string name="uninstall_subtext">Ali ste prepričani, da želite odstraniti Are you sure you want to uninstall %s?\n%s\ podatki bodo izbrisani za vedno!</string>
+    <string name="uninstall_subtext">Ali ste prepričani, da želite odstraniti %s?\n%s\ podatki bodo izbrisani za vedno!</string>
     <string name="up">Gor</string>
     <string name="video">Video</string>
     <string name="video_tutorials">Video vodiči</string>
@@ -279,7 +279,7 @@
     <string name="wednesday">Sreda</string>
     <string name="whatsapp">Whatsapp</string>
     <string name="wifi">Wifi</string>
-    <string name="will_repeat_only_once">Bo ponovilo le enkrat!</string>
+    <string name="will_repeat_only_once">Ponovilo se bo le enkrat!</string>
     <string name="write">Zapiši</string>
     <string name="write_contacts">Zapiši stike</string>
     <string name="write_external_storage">Zapiši na zunanjo shrambo</string>
@@ -295,7 +295,7 @@
         strašljivo, ampak so edini način, da lahko Bladphone zamenja telefonski vmesnik. Nič podatkov ne bo pobranih in ne bo povzročene nobene škode.
         Pritisni OK, da odobriš dovoljenja, ali "ne" da zapustiš BaldPhone.
     </string>
-    <string name="also_available_at">Tudi na voljo na\nbaldphone.contact@gmail.com</string>
+    <string name="also_available_at">Tudi na voljo na\nbaldphone.contact@gmail.com \nPovratne informacije morajo biti v angleškem jeziku!</string></string>
     <string name="pending_update">Čakajoča posodobitev</string>
     <string name="download">Prenesi</string>
     <string name="install_updates">Namesti posodobitve</string>
@@ -367,19 +367,17 @@
     <!--For Tests:-->
     <string name="low_battery_alert_subtext">Izberi, ali želiš opravilno vrstico v rdeči barvi na domačem zaslonu, ko je baterija pod
 		20%\nV vednost, to ne bo prikazano, če je opravilna vrstica skrita.</string>
-    <string name="medication_1">Eltroxin 100</string>
-
-
-    <string name="medication_2">Eltroxin 150</string>
-    <string name="grant_all_permissions">Grant All Permissions</string>
+    <string name="medication_1">Lekadol 500</string>
+	<string name="medication_2">Naklofen 75</string>
+    <string name="grant_all_permissions">Potrdi vsa dovoljenja</string>
 
     <string-array name="names_for_screenshots">
-        <item>The Godfather</item>
-        <item>Abraham Lincoln</item>
-        <item>Paul McCartney</item>
-        <item>Tyrion Lannister</item>
-        <item>The Rock</item>
-        <item>Robert Downey Jr.</item>
+        <item>Rudolf Maister</item>
+        <item>Marjana Deržaj</item>
+        <item>Primož Peterka</item>
+        <item>Ivan Minatti</item>
+        <item>Kristina Gorišek</item>
+        <item>Mario Špinel</item>
     </string-array>
 
 </resources>
