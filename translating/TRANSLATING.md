@@ -6,7 +6,7 @@
     - [English](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values/strings.xml)
     - [French](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-fr/strings.xml) translated by [Primokorn](https://github.com/Primokorn)
     - [Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt/strings.xml) translated by Vladyslav Rudakevych
-    - [Brazilian Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt-rBR/strings.xml) translated by 
+    - [Brazilian Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt-rBR/strings.xml) translated by [Kellyson Antunes](https://github.com/kellysonantunes)
     - [German](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-de/strings.xml) translated by [Caibot](https://github.com/Caibot)
     - [Spanish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-es/strings.xml) translated by [Victor Arribas](https://github.com/varhub)
     - [Czech](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-cs/strings.xml) translated by Tadeáš Horák
@@ -24,7 +24,7 @@
     - [English](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values/strings.xml)
     - [French](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-fr/strings.xml) translated by [Primokorn](https://github.com/Primokorn)    
     - [Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt/strings.xml) translated by Vladyslav Rudakevych
-    - [Brazilian Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt-rBR/strings.xml) translated by Kellyson Antunes
+    - [Brazilian Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt-rBR/strings.xml) translated by [Kellyson Antunes](https://github.com/kellysonantunes)
     - [German](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-de/strings.xml) translated by [Caibot](https://github.com/Caibot)
     - [Spanish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-es/strings.xml) translated by [Victor Arribas](https://github.com/varhub)
     - [Czech](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-cs/strings.xml) translated by Tadeáš Horák
