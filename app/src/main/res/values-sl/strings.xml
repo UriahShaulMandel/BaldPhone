@@ -50,7 +50,6 @@
     <string name="airplane_mode">Način za letalo</string>
     <string name="alarm_name">Ime budilke</string>
     <string name="alarm_volume">Glasnost budilke</string>
-
     <string name="alarm_volume_subtext"> Izberi glasnost za budilke.\nGlasnost se zvišuje z leve proti desni.</string>
     <string name="alarms">Budilke</string>
     <string name="alarms_repeats_every">Budilka se ponovi vsak</string>
@@ -58,7 +57,6 @@
     <string name="allow">Dovoli</string>
     <string name="already_setted">Že nastavljeno!\nPritisni tukaj da spremeniš</string>
     <string name="an_error_has_occurred">Pojavila se je napaka!</string>
-
     <string name="and_welcome_to_baldphone">In dobrodošli v Baldphone</string>
     <string name="apps">Aplikacije</string>
     <string name="are_you_sure_you_want_to_delete___">Ali ste prepričani da želite izbrisati %s?</string>
@@ -74,7 +72,6 @@
     <string name="brightness_subtext">Spremeni svetlost</string>
     <string name="cache_cleared_successfully">Predpomnilnik uspešno očiščen!</string>
     <string name="call">Klic</string>
-
     <string name="calling">Klicanje</string>
     <string name="call_log">Dnevnik klicev:</string>
     <string name="call_subtext">Ta odobritev je potrebna, da se lahko pokliče stike.</string>
@@ -155,8 +152,6 @@
     <string name="location">Lokacija</string>
     <string name="emergency_services">Storitve v sili</string>
     <string name="mail">Pošta</string>
-
-
     <string name="maps">Zemljevidi</string>
     <string name="medium">Srednje</string>
     <string name="medium_level">Srednja stopnja</string>
@@ -164,7 +159,6 @@
     <string name="messages">Sporočila</string>
     <string name="minute">Minuta</string>
     <string name="minutes">Minute</string>
-
     <string name="missed">Zgrešeno</string>
     <string name="mobile_phone_number">Telefonska številka</string>
     <string name="monday">Ponedeljek</string>
@@ -178,17 +172,12 @@
     <string name="notes">Zapiski</string>
     <string name="notes_settings">Zapiski</string>
     <string name="notes_settings_subtext">Izberi ali želiš imeti zapiske na domačem zaslonu.</string>
-
     <string name="notifications">Obvestila</string>
     <string name="of">od</string>
     <string name="off">Izklopljeno</string>
     <string name="ok">OK</string>
-
     <string name="on">Vklopljeno</string>
-
-
     <string name="only_once">Le enkrat</string>
-
     <string name="open">Odpri</string>
     <string name="outgoing">Odhodni</string>//page 1 of 2
     <string name="page">Stran</string>
@@ -209,7 +198,6 @@
     <string name="read_contacts">Preberi stike</string>
     <string name="received">Prejeto</string>
     <string name="recent">Nedavno</string>
-
     <string name="regular_level">Običajna stopnja</string>
     <string name="remove_from_favorite">Odstrani od priljubljenih</string>
     <string name="remove_from_home">Odstrani z domačega zaslona</string>
@@ -217,7 +205,6 @@
     <string name="remove_shortcut">odstrani bližnjico</string>
     <string name="removed_all_alarms">Odstrani vse budilke!</string>
     <string name="repeats_every_day">Vsak dan</string>
-
     <string name="right_handed">Desničar</string>
     <string name="saturday">Sobota</string>
     <string name="save">Shrani</string>
@@ -257,7 +244,6 @@
     <string name="sunday">Nedelja</string>
     <string name="technical_information">Tehnične informacije</string>
     <string name="theme_settings">Tema</string>
-
     <string name="theme_settings_subtext">Izberi temo</string>
     <string name="thursday">Četrtek</string>
     <string name="time_changer">Spreminjanje časa za tablete</string>
@@ -273,7 +259,6 @@
     <string name="up">Gor</string>
     <string name="video">Video</string>
     <string name="video_tutorials">Video vodiči</string>
-
     <string name="videos">Video posnetki</string>
     <string name="voice_mail">Glasovna pošta</string>
     <string name="wednesday">Sreda</string>
@@ -316,7 +301,6 @@
     <string name="could_not_connect_to_internet">Povezava s spletom je bila neuspešna!</string>
     <string name="could_not_start_the_download">Začetek prenosa je neuspešen!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Prenešene posodobitve ni bilo mogoče odstraniti!</string>
-
     <string name="downloading">Prenašanje…</string>
     <string name="baldphone_is_up_to_date">Baldphone je posodobljen.</string>
     <string name="what_s_new">Kaj je novega</string>
@@ -338,33 +322,24 @@
     <string name="sound">Zvok</string>
     <string name="mute">Utišaj</string>
     <string name="vibrate">Vibriranje</string>
-
-
     <string name="your_phone_doesnt_have_assistant_installed">Vaš telefon nima nameščenega pomočnika.</string>
     <string name="status_bar_settings">Opravilna vrstica</string>
     <string name="status_bar_settings_subtext">Kje želiš prikazati opravilno vrstico?</string>
     <string name="only_home_screen">Samo domač zaslon.</string>
     <string name="nowhere">Nikjer</string>
-
-
     <string name="everywhere">Povsod</string>
-
     <string name="share_photo">Deli sliko</string>
     <string name="choose_language_for_keyboard">Izberi jezik</string>
     <string name="hebrew">Hebrew</string>
-
     <string name="english">English</string>
     <string name="search">Išči</string>
     <string name="next">Naslednje</string>
-
-
     <string name="go">Pojdi</string>
     <string name="dialer_sounds">Zvoki klicalnika</string>
     <string name="dialer_sounds_subtext">Izberi ali želiš zvoke klicalnika.</string>
     <string name="low_battery_alert">Baterija je skoraj prazna</string>
-
-
-    <!--For Tests:-->
+    
+	<!--For Tests:-->
     <string name="low_battery_alert_subtext">Izberi, ali želiš opravilno vrstico v rdeči barvi na domačem zaslonu, ko je baterija pod
 		20%\nV vednost, to ne bo prikazano, če je opravilna vrstica skrita.</string>
     <string name="medication_1">Lekadol 500</string>
