@@ -276,7 +276,7 @@
     <string name="install_updates_subtext">Ta potrditev je potrebna, da lahko BaldPhone posodobite na novejšo različico.</string>
     <string name="permissions_calm">Pozdravljeni, BaldPhone potrebuje sledeča dovoljenja da lahko deluje pravilno. Nekatera izmed teh zvenijo
         veliko, ampak so edini način, da lahko BaldPhone zamenja telefonski vmesnik. Poslanih ne bo nič podatkov in povzročene ne bo nobene škode.
-        Pritisni 'Ok', da odobriš dovoljenja, ali 'ne' da zapustiš BaldPhone.
+        Pritisni \'Ok\', da odobriš dovoljenja, ali \'ne\' da zapustiš BaldPhone.
     </string>
     <string name="current_version">Trenutna različica:\n</string>
     <string name="new_version">Nova različica:\n</string>
