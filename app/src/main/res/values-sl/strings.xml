@@ -288,7 +288,7 @@
     </string>
     <string name="update_message_is_corrupted">Posodobilno sporočilo se je pokvarilo.</string>
     <string name="check_for_updates">Preveri za posodobitve</string>
-    <string name="could_not_connect_to_server">Povezava s serverjem je bila neuspešna!</string>
+    <string name="could_not_connect_to_server">Povezava s strežnikom je bila neuspešna!</string>
     <string name="could_not_connect_to_internet">Povezava s spletom je bila neuspešna!</string>
     <string name="could_not_start_the_download">Začetek prenosa je neuspešen!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Prenešene posodobitve ni bilo mogoče odstraniti!</string>
