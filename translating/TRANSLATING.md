@@ -13,6 +13,7 @@
     - [Slovenian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-sl/strings.xml) translated by Klemen Skerbiš
     - [Greek](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-el/strings.xml) translated by Zafeiris Ganas
     - [Italian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-it/strings.xml) translated by Dario Mastromattei
+    - [Polish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pl/strings.xml) translated by Qik
  2. Click "edit this file" 
  3. find the word you want to change
  4. change it
@@ -31,6 +32,7 @@
     - [Slovenian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-sl/strings.xml) translated by Klemen Skerbiš
     - [Greek](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-el/strings.xml) translated by Zafeiris Ganas
     - [Italian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-it/strings.xml) translated by Dario Mastromattei
+    - [Polish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pl/strings.xml) translated by Qik
  2. Click "Raw" and copy the text to your text editor (Notepad++ is great for this specific task) 
  3. Change all the Values* to the new language (long texts like abouts can remain in english)
  4. Please make sure all the words are correct, obviously I can't check it :)
