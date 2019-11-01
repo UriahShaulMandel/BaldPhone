@@ -66,7 +66,7 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
         if (!screenshotsFolder.exists())
             screenshotsFolder.mkdir();
         try (FileOutputStream out = new FileOutputStream("/sdcard/Pictures/screenshots/" + getClass().getSimpleName() + "_" +
-                (localesStr[localeIndex++].equals("pt-br") ? "pt-rBR" : localesStr[localeIndex++])
+                (localesStr[localeIndex].equals("pt-br") ? "pt-rBR" : localesStr[localeIndex])
                 + ".png")) {
             final Bitmap bitmap = screenShot(mActivityTestRule.getActivity().getWindow().getDecorView().getRootView());
             if (bitmap == null)
@@ -74,6 +74,8 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, out); // bmp is your Bitmap instance
         } catch (IOException e) {
             throw new RuntimeException(e);
+        } finally {
+            localeIndex++;
         }
         localeIndex = localeIndex % locales.length;
 
