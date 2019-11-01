@@ -44,6 +44,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.PopupWindow;
+import android.widget.Toast;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
@@ -193,18 +194,6 @@ public class HomeScreenActivity extends BaldActivity {
             finish();
             return;
         }
-        //this is the way to inform user on updates that changes things.
-//        if (!sharedPreferences.getBoolean("6.1.0", false)) {
-//            sharedPreferences.edit().putBoolean("6.1.0", true).apply();
-//            BDB
-//                    .from(this)
-//                    .setTitle(R.string.baldphone_updated)
-//                    .setSubText(R.string.last_update_subtext)
-//                    .setCancelable(true)
-//                    .setDialogState(BDialog.DialogState.OK)
-//                    .show();
-//        }
-
         try {
             startService(new Intent(this, NotificationListenerService.class));
         } catch (Exception e) {
@@ -494,7 +483,11 @@ public class HomeScreenActivity extends BaldActivity {
 
         @Override
         protected Void doInBackground(Context... contexts) {
-            AppsDatabaseHelper.updateDB(contexts[0]);
+            try {
+                AppsDatabaseHelper.updateDB(contexts[0]);
+            } catch (Exception e) {
+                BaldToast.from(contexts[0].getApplicationContext()).setType(BaldToast.TYPE_ERROR).setLength(Toast.LENGTH_LONG).setText(e.getMessage());
+            }
             return null;
         }
 
