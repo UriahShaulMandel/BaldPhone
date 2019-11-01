@@ -39,7 +39,7 @@ import java.util.Locale;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 
 public abstract class BaseScreenshotTakerTest<T extends Activity> {
-    protected static final String[] localesStr = new String[]{"en", "fr", "de", "es", "iw", "pt", "cs", "sl", "el", "it", "pt-br"};
+    protected static final String[] localesStr = new String[]{"en", "fr", "de", "es", "iw", "pt", "cs", "sl", "el", "it", "pt-br", "pl"};
     protected static final Locale[] locales = new Locale[localesStr.length];
     protected static int localeIndex = 0;
 
@@ -58,10 +58,10 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
 
     @Test
     public void actualTest() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(800);
         test();
         getInstrumentation().waitForIdleSync();
-        Thread.sleep(1000);
+        Thread.sleep(800);
         File screenshotsFolder = new File("/sdcard/Pictures/screenshots");
         if (!screenshotsFolder.exists())
             screenshotsFolder.mkdir();
