@@ -58,10 +58,10 @@ public abstract class BaseScreenshotTakerTest<T extends Activity> {
 
     @Test
     public void actualTest() throws InterruptedException {
-        Thread.sleep(800);
+        Thread.sleep(1000);
         test();
         getInstrumentation().waitForIdleSync();
-        Thread.sleep(800);
+        Thread.sleep(1000);
         File screenshotsFolder = new File("/sdcard/Pictures/screenshots");
         if (!screenshotsFolder.exists())
             screenshotsFolder.mkdir();

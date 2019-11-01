@@ -32,7 +32,6 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.StringRes;
-import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.content.ContextCompat;
 
 import com.bald.uriah.baldphone.R;
@@ -111,7 +110,7 @@ public class BaldMultipleSelection extends LinearLayout {
     }
 
     @Override
-    public void setOrientation(@LinearLayoutCompat.OrientationMode int orientation) {
+    public void setOrientation(int orientation) {
         super.setOrientation(orientation);
         for (BaldButton button : buttons) {
             final LayoutParams layoutParams = new LayoutParams(orientation == VERTICAL ? ViewGroup.LayoutParams.MATCH_PARENT : 0, orientation != VERTICAL ? ViewGroup.LayoutParams.MATCH_PARENT : 0);

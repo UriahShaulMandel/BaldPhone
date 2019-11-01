@@ -376,4 +376,9 @@ public class S {
         final float b = (Color.blue(color1) * ratio) + (Color.blue(color2) * inverseRation);
         return Color.rgb((int) r, (int) g, (int) b);
     }
+
+    public static void sendMessage(final String number, final Context context) {
+        context.startActivity(new Intent(Intent.ACTION_SENDTO)
+                .setData(Uri.parse("smsto:" + Uri.encode(number))));
+    }
 }

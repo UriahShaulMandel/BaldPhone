@@ -261,7 +261,7 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
 
                 BDB.from(activity)
                         .setSubText(String.format(activity.getString(R.string.what_do_you_want_to_do_with___), call.phoneNumber))
-                        .setOptions(R.string.call, R.string.add_contact)
+                        .setOptions(R.string.call, R.string.add_contact, R.string.message)
                         .addFlag(BDialog.FLAG_OK)
                         .setPositiveButtonListener(params -> {
                             final int option = (int) params[0];
@@ -271,6 +271,9 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                                     return true;
                                 case 1:
                                     activity.startActivity(new Intent(activity, AddContactActivity.class).putExtra(AddContactActivity.CONTACT_NUMBER, call.phoneNumber));
+                                    return true;
+                                case 2:
+                                    S.sendMessage(call.phoneNumber, activity);
                                     return true;
                             }
                             throw new IllegalArgumentException("option must be 0 or 1");

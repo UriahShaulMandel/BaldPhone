@@ -44,6 +44,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
+import com.bald.uriah.baldphone.activities.DialerActivity;
 import com.bald.uriah.baldphone.activities.SOSActivity;
 import com.bald.uriah.baldphone.adapters.CallsRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.calls.Call;
@@ -224,18 +225,8 @@ public class SingleContactActivity extends BaldActivity {
                     pair.first,
                     "Custom"));
             tv_value.setText(pair.second);
-            call.setOnClickListener(v -> {
-                Intent intent = new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse("tel:" + pair.second));
-                try {
-                    startActivity(intent);
-                } catch (SecurityException e) {
-                    Log.e(TAG, e.getMessage());
-                    e.printStackTrace();
-                }
-            });
-            message.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_SENDTO)
-                    .setData(Uri.parse("smsto:" + Uri.encode(pair.second)))));
+            call.setOnClickListener(v -> DialerActivity.call(pair.second, this));
+            message.setOnClickListener(v -> S.sendMessage(pair.second, this));
 
             ll.addView(layout);
         }
