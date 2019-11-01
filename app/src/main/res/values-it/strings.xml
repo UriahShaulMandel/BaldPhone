@@ -15,6 +15,20 @@
   -->
 
 <resources>
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+    <string-array name="names_for_screenshots">
+        <item>Il Padrino</item>
+        <item>Abramo Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+    <bool name="is_right_to_left">false</bool>
+    <!--For Tests:-->
+
     <string name="about">Informazioni</string>
     <string name="about_subtext">Ciao!\nIl mio nome è Uriah Shaul Mandel, e s/ ono lo sviluppatore di questa piattaforma.\n
         Ho\ passato gran parte della mia vita \"adulta\" realizzando questa piattaforma, e l\'ho rilasciata per essere usata gratis da tutti.\nSei più che benvenuto di contattarmi via email:\nbaldphone.contact@gmail.com
@@ -366,23 +380,9 @@
 
     <string name="also_available_at">È disponibile anche a\nbaldphone.contact@gmail.com\nFeedback devono essere in Inglese/Ebraico!</string>
     <string name="grant_all_permissions">Dai tutti i permessi</string>
-
-
-    <!--For Tests:-->
-    <string name="medication_1">Eltroxin 100</string>
-    <string name="medication_2">Eltroxin 150</string>
     <string name="donate">Dona</string>
+    <string name="emergency_button">Emergency Button</string>
+    <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
 
-
-    <string-array name="names_for_screenshots">
-        <item>Il Padrino</item>
-        <item>Abramo Lincoln</item>
-        <item>Paul McCartney</item>
-        <item>Tyrion Lannister</item>
-        <item>The Rock</item>
-        <item>Robert Downey Jr.</item>
-    </string-array>
-
-    <bool name="is_right_to_left">false</bool>
 
 </resources>

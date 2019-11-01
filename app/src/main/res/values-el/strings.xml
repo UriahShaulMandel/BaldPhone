@@ -15,6 +15,21 @@
   -->
 
 <resources>
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+
+
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+    <!--For Tests:-->
+
     <bool name="is_right_to_left">false</bool>
     <string name="about">Σχετικά</string>
     <string name="about_subtext">Γειά σας!\nΤο ονομα μου ειναι Uriah Shaul Mandel, καί είμαι ο προγραμματιστής αυτής της πλατφόρμας\n
@@ -370,19 +385,8 @@
     <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
     <string name="grant_all_permissions">Grant All Permissions</string>
     <string name="donate">Donate</string>
+    <string name="emergency_button">Emergency Button</string>
+    <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
 
-    <!--For Tests:-->
-    <string name="medication_1">Eltroxin 100</string>
-    <string name="medication_2">Eltroxin 150</string>
-
-
-    <string-array name="names_for_screenshots">
-        <item>The Godfather</item>
-        <item>Abraham Lincoln</item>
-        <item>Paul McCartney</item>
-        <item>Tyrion Lannister</item>
-        <item>The Rock</item>
-        <item>Robert Downey Jr.</item>
-    </string-array>
 
 </resources>

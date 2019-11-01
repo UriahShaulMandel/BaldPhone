@@ -15,6 +15,22 @@
   -->
 
 <resources>
+
+    <!--For Tests:-->
+    <string name="medication_1">אלטרוקסין 100</string>
+    <string name="medication_2">אלטרוקסין 150</string>
+
+    <string-array name="names_for_screenshots">
+        <item>יונה הנביא</item>
+        <item>בנימין זאב הרצל</item>
+        <item>נורית שלם</item>
+        <item>עומר אדם</item>
+        <item>בוב הבנאי</item>
+        <item>יובל קוגוס</item>
+    </string-array>
+    <!--For Tests:-->
+
+
     <bool name="is_right_to_left">true</bool>
     <string name="about">אודות</string>
     <string name="about_subtext">הפרוייקט נולד מפגישה עם חבר שחלה בפרקינסון. עזרתי לו עם בעיה כלשהי בטלפון, והבחנתי עד
@@ -368,20 +384,8 @@
     <string name="also_available_at">ניתן ליצור קשר גם ב\nbaldphone.contact@gmail.com</string>
     <string name="grant_all_permissions">אפשר את כל ההרשאות</string>
     <string name="donate">תרומה</string>
-
-
-    <!--For Tests:-->
-    <string name="medication_1">אלטרוקסין 100</string>
-    <string name="medication_2">אלטרוקסין 150</string>
-
-    <string-array name="names_for_screenshots">
-        <item>יונה הנביא</item>
-        <item>בנימין זאב הרצל</item>
-        <item>נורית שלם</item>
-        <item>עומר אדם</item>
-        <item>בוב הבנאי</item>
-        <item>יובל קוגוס</item>
-    </string-array>
+    <string name="emergency_button">כפתור חירום</string>
+    <string name="emergency_settings_subtext">בחר האם להוסיף כפתור חירום למסך הבית</string>
 
 </resources>
 

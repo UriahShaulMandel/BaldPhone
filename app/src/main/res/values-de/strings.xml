@@ -15,6 +15,21 @@
   -->
 
 <resources>
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+
+    <string-array name="names_for_screenshots">
+        <item>Bismarck</item>
+        <item>Bach</item>
+        <item>Mozart</item>
+        <item>Einstein</item>
+        <item>Karl Marx</item>
+        <item>Beethoven</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
     <string name="about">Über</string>
     <string name="about_subtext">Hi!\nIch heiße Uriah Shaul Mandel, und ich bin der Entwickler dieser Platform.\n
         Seit ich erwachsen bin, habe ich die meiste Zeit meines Lebens investiert, um an dieser Platform zu arbeiten. Ich habe sie frei veröffentlicht, so dass sie jeder benutzen kann.\nDu bist mehr als nur eingeladen mir zu schreiben: email:\nbaldphone.contact@gmail.com
@@ -348,20 +363,7 @@
     <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
     <string name="grant_all_permissions">Grant All Permissions</string>
     <string name="donate">Donate</string>
-
-    <!--For Tests:-->
-    <string name="medication_1">Eltroxin 100</string>
-    <string name="medication_2">Eltroxin 150</string>
-
-    <string-array name="names_for_screenshots">
-        <item>Bismarck</item>
-        <item>Bach</item>
-        <item>Mozart</item>
-        <item>Einstein</item>
-        <item>Karl Marx</item>
-        <item>Beethoven</item>
-    </string-array>
-
-    <bool name="is_right_to_left">false</bool>
+    <string name="emergency_button">Emergency Button</string>
+    <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
 
 </resources>

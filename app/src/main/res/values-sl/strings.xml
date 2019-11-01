@@ -15,6 +15,19 @@
   -->
 
 <resources>
+    <!--For Tests:-->
+    <string name="medication_1">Lekadol 500</string>
+    <string name="medication_2">Naklofen 75</string>
+
+    <string-array name="names_for_screenshots">
+        <item>Rudolf Maister</item>
+        <item>Marjana Deržaj</item>
+        <item>Ivan Minatti</item>
+        <item>Viktorija Kraus</item>
+        <item>Primož Peterka</item>
+        <item>Kristina Gorišek</item>
+    </string-array>
+
     <string name="about">O aplikaciji</string>
     <bool name="is_right_to_left">false</bool>
     <string name="accessibility_level">Stopnja dostopnosti</string>
@@ -336,18 +349,6 @@
     <string name="only_home_screen">Samo domač zaslon.</string>
     <string name="also_available_at">Tudi na voljo na \nbaldphone.contact@gmail.com\nPovratne informacije morajo biti v angleščini!</string>
     <string name="grant_all_permissions">Potrdi vsa dovoljenja</string>
-
-    <!--For Tests:-->
-    <string name="medication_1">Lekadol 500</string>
-    <string name="medication_2">Naklofen 75</string>
-
-    <string-array name="names_for_screenshots">
-        <item>Rudolf Maister</item>
-        <item>Marjana Deržaj</item>
-        <item>Ivan Minatti</item>
-        <item>Viktorija Kraus</item>
-        <item>Primož Peterka</item>
-        <item>Kristina Gorišek</item>
-    </string-array>
-
+    <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
+    <string name="emergency_button">Emergency Button</string>
 </resources>

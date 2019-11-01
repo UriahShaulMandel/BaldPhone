@@ -212,9 +212,21 @@ public class SettingsActivity extends BaldActivity {
             }
         }, R.drawable.translate_on_button));
 
+        personalizationSettingsList.add(
+                new BDBSettingsItem(R.string.emergency_button, BDB.from(this)
+                        .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL).setTitle(R.string.emergency_button)
+                        .setSubText(R.string.emergency_settings_subtext)
+                        .setOptions(R.string.yes, R.string.no)
+                        .setPositiveButtonListener(params -> {
+                            editor.putBoolean(BPrefs.EMERGENCY_BUTTON_VISIBLE_KEY, params[0].equals(0)).apply();
+                            this.recreate();
+                            return true;
+                        })
+                        .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.EMERGENCY_BUTTON_VISIBLE_KEY, BPrefs.EMERGENCY_BUTTON_VISIBLE_DEFAULT_VALUE) ? 0 : 1),
+                        R.drawable.emergency));
         personalizationSettingsList.add(new RunnableSettingsItem(R.string.time_changer, v -> startActivity(new Intent(this, PillTimeSetterActivity.class)), R.drawable.pill));
         personalizationSettingsList.add(
-                // !!dont change string without changing it too in onActivityResult!!
+                // !! Don't change string without changing it too in onActivityResult!!
                 new BDBSettingsItem(R.string.custom_app,
                         BDB.from(this)
                                 .setTitle(R.string.custom_app)

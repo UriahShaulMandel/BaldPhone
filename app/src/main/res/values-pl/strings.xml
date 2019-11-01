@@ -1,23 +1,37 @@
 <!--
-  ~ Licensed to the Apache Software Foundation (ASF) under one
-  ~ or more contributor license agreements.  See the NOTICE file
-  ~ distributed with this work for additional information
-  ~ regarding copyright ownership.  The ASF licenses this file
-  ~ to you under the Apache License, Version 2.0 (the
-  ~ "License"); you may not use this file except in compliance
-  ~ with the License.  You may obtain a copy of the License at
+  ~ Copyright 2019 Uriah Shaul Mandel
   ~
-  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
   ~
-  ~ Unless required by applicable law or agreed to in writing,
-  ~ software distributed under the License is distributed on an
-  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-  ~ KIND, either express or implied.  See the License for the
-  ~ specific language governing permissions and limitations
-  ~ under the License.
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
   -->
 
 <resources>
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+
+
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+    <!--For Tests:-->
+
+    <bool name="is_right_to_left">false</bool>
+
     <string name="about">O programie</string>
     <string name="about_subtext">Cześć !\nMam na imie Uriah Shaul Mandel, jestem developerem tej platformy.\n
         Spędziłem większość swojego \"dorosłego\" życia tworząc tą platformę, i wypuściłem ją za darmo, dla każdego do użytku.
@@ -188,8 +202,6 @@
     <string name="permissions_part">Zezwolenia</string>
     <string name="personalization_settings">Personalizacja</string>
     <string name="phone">Telfon</string>
-    <string name="phone_ask_permission_subtext">
-        <![CDATA[Idż to ustawień -> zezwolenia -> włącz zezwolenie wykonywania połączeń]]></string>
     <string name="photo">Zdięcie</string>
     <string name="photos">Zdięcia</string>
     <string name="pill_added">PTabletka dodana</string>
@@ -344,11 +356,10 @@
     <string name="choose_language_for_keyboard">Wybbierz język</string>
     <string name="hebrew">Hebrajski</string>
     <string name="english">Angielski</string>
-    <string name="polish">Polski</string> <!-- Added "polish" -->
 
     <string name="search">Szukaj</string>
     <string name="next">Następny</string>
-    <string name="go">Zatwierdź</string> <!-- NEED CONTEXT -->
+    <string name="go">Zatwierdź</string>
 
 
     <string name="dialer_sounds">Dzwięki dialeras</string>
@@ -358,22 +369,9 @@
 
     <string name="also_available_at">Dostępny także pod adresem\nbaldphone.contact@gmail.com\nWiadomość musi być po Anglelsku lub Hebraksju!</string>
     <string name="grant_all_permissions">Przyznaj wszystkie dozwolenia</string>
+    <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
+    <string name="emergency_button">Emergency Button</string>
+    <string name="donate">Donate</string>
 
-
-    <!--For Tests:-->
-    <string name="medication_1">Eltroxin 100</string>
-    <string name="medication_2">Eltroxin 150</string>
-
-
-    <string-array name="names_for_screenshots">
-        <item>The Godfather</item>
-        <item>Abraham Lincoln</item>
-        <item>Paul McCartney</item>
-        <item>Tyrion Lannister</item>
-        <item>The Rock</item>
-        <item>Robert Downey Jr.</item>
-    </string-array>
-
-    <bool name="is_right_to_left">false</bool>
 
 </resources>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,6 +15,22 @@
   -->
 
 <resources>
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+
+    <string-array name="names_for_screenshots">
+        <item>Napoleon Bonaparte</item>
+        <item>Marie Antoinette</item>
+        <item>Louis Vitton</item>
+        <item>Georges Clemenceau</item>
+        <item>King Henry VIII</item>
+        <item>Gustave Eiffel</item>
+    </string-array>
+    <!--For Tests:-->
+
+    <bool name="is_right_to_left">false</bool>
+
     <string name="about">À propos</string>
     <string name="about_subtext">Bonjour\nJe m\'appelle Uriah Shaul Mandel et je suis le développeur de cette plateforme.\nJe vis à
         Tel Aviv.\nBeaucoup de temps et d\'efforts ont été nécessaires pour créer cette plateforme et pour qu\'elle soit gratuite à utiliser pour tout le monde.\nVous pouvez me contacter avec plaisir par e-mail :\nbaldphone.contact@gmail.com
@@ -352,20 +367,8 @@
     <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
     <string name="grant_all_permissions">Grant All Permissions</string>
     <string name="donate">Donate</string>
+    <string name="emergency_button">Emergency Button</string>
+    <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
 
-    <!--For Tests:-->
-    <string name="medication_1">Eltroxin 100</string>
-    <string name="medication_2">Eltroxin 150</string>
-
-    <string-array name="names_for_screenshots">
-        <item>Napoleon Bonaparte</item>
-        <item>Marie Antoinette</item>
-        <item>Louis Vitton</item>
-        <item>Georges Clemenceau</item>
-        <item>King Henry VIII</item>
-        <item>Gustave Eiffel</item>
-    </string-array>
-
-    <bool name="is_right_to_left">false</bool>
 
 </resources>

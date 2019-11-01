@@ -240,10 +240,13 @@ public class HomeScreenActivity extends BaldActivity {
             flashInited = lantern.initTorch();
         }
 
-        sosButton.setOnClickListener((v) -> {
-            startActivity(new Intent(this, SOSActivity.class));
-            overridePendingTransition(R.anim.slide_in_down, R.anim.nothing);
-        });
+        if (sharedPreferences.getBoolean(BPrefs.EMERGENCY_BUTTON_VISIBLE_KEY, BPrefs.EMERGENCY_BUTTON_VISIBLE_DEFAULT_VALUE))
+            sosButton.setOnClickListener((v) -> {
+                startActivity(new Intent(this, SOSActivity.class));
+                overridePendingTransition(R.anim.slide_in_down, R.anim.nothing);
+            });
+        else
+            sosButton.setVisibility(View.GONE);
         notificationsButton.setOnClickListener((v) -> {
             startActivity(new Intent(this, NotificationsActivity.class));
             overridePendingTransition(R.anim.slide_in_down, R.anim.nothing);
@@ -416,6 +419,7 @@ public class HomeScreenActivity extends BaldActivity {
 
     private void attachToXml() {
         setContentView(R.layout.home_screen);
+        viewPagerHolder = findViewById(R.id.view_pager_holder);
 
         final ViewGroup top_bar = findViewById(R.id.top_bar);
         int tmpPadding = Math.min(screenSize.x, screenSize.y) / 45;
@@ -423,12 +427,11 @@ public class HomeScreenActivity extends BaldActivity {
             top_bar.getChildAt(i).setPadding(tmpPadding, tmpPadding, tmpPadding, tmpPadding);
         }
 
-        viewPagerHolder = findViewById(R.id.view_pager_holder);
-        sosButton = findViewById(R.id.sos);
-        soundButton = findViewById(R.id.sound);
-        batteryView = findViewById(R.id.battery);
-        notificationsButton = findViewById(R.id.notifications);
-        flashButton = findViewById(R.id.flash);
+        sosButton = top_bar.findViewById(R.id.sos);
+        soundButton = top_bar.findViewById(R.id.sound);
+        batteryView = top_bar.findViewById(R.id.battery);
+        notificationsButton = top_bar.findViewById(R.id.notifications);
+        flashButton = top_bar.findViewById(R.id.flash);
     }
 
     @Override

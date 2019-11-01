@@ -56,6 +56,9 @@ public final class BPrefs {
     public static final String NOTE_VISIBLE_KEY = "NOTE_VISIBLE_KEY";
     public static final boolean NOTE_VISIBLE_DEFAULT_VALUE = true;
 
+    public static final String EMERGENCY_BUTTON_VISIBLE_KEY = "EMERGENCY_BUTTON_VISIBLE_KEY";
+    public static final boolean EMERGENCY_BUTTON_VISIBLE_DEFAULT_VALUE = true;
+
     public static final String LOW_BATTERY_ALERT_KEY = "LOW_BATTERY_ALERT_KEY";
     public static final boolean LOW_BATTERY_ALERT_DEFAULT_VALUE = true;
 

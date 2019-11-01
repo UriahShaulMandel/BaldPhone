@@ -15,6 +15,22 @@
   -->
 
 <resources>
+    <!--For Tests:-->
+    <string name="low_battery_alert_subtext">
+        Escolha se deseja a barra de notificações em vermelho quando a bateria estiver abaixo de 20%\nNão será mostrado se a barra de notificações estiver oculta.</string>
+    <string name="medication_1">Eltroxina 100</string>
+    <string name="medication_2">Eltroxina 150</string>
+
+    <string-array name="names_for_screenshots">
+        <item>O Poderoso Chefão</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+    <!--For Tests:-->
+
     <bool name="is_right_to_left">false</bool>
     <string name="about">Sobre</string>
     <string name="about_subtext">Olá!\nMeu nome é Uriah Shaul Mandel, e sou o desenvolvedor deste aplicativo.\n Moro na cidade de Tel Aviv, em Israel. \nFoi necessário muito tempo e esforço para criar este aplicativo e agora estou o disponibilizando de forma gratuita para que qualquer pessoa possa utilizá-lo.\n Sinta-se livre para me contatar através do meu e-mail:\nbaldphone.contact@gmail.com
@@ -342,20 +358,9 @@
 
     <string name="also_available_at">Também disponível em\nbaldphone.contact@gmail.com\nOs comentários devem ser em Inglês ou Hebraico!</string>
     <string name="grant_all_permissions">Conceder Todas Permissões</string>
+    <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
+    <string name="donate">Donate</string>
+    <string name="emergency_button">Emergency Button</string>
 
-    <!--For Tests:-->
-    <string name="low_battery_alert_subtext">
-        Escolha se deseja a barra de notificações em vermelho quando a bateria estiver abaixo de 20%\nNão será mostrado se a barra de notificações estiver oculta.</string>
-    <string name="medication_1">Eltroxina 100</string>
-    <string name="medication_2">Eltroxina 150</string>
-
-    <string-array name="names_for_screenshots">
-        <item>O Poderoso Chefão</item>
-        <item>Abraham Lincoln</item>
-        <item>Paul McCartney</item>
-        <item>Tyrion Lannister</item>
-        <item>The Rock</item>
-        <item>Robert Downey Jr.</item>
-    </string-array>
 
 </resources>
