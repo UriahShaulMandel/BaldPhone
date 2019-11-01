@@ -269,7 +269,7 @@
     <string name="took">Took!</string>
     <string name="tuesday">Terça-feira</string>
     <string name="uninstall">Desintalar</string>
-    <string name="uninstall_subtext">Tem a certeza que pretende desinstalar %s?\nTodos os dados serão eliminados!</string>
+    <string name="uninstall_subtext">Tem a certeza que pretende desinstalar %s?\n%sTodos os dados serão eliminados!</string>
     <string name="up">Cima</string>
     <string name="video">Vídeo</string>
     <string name="video_tutorials">Demonstração em Vídeo</string>

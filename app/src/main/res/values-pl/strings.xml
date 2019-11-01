@@ -274,7 +274,7 @@
 
     <string name="tuesday">Wtorek</string>
     <string name="uninstall">Odinstaluj</string>
-    <string name="uninstall_subtext">Napewno chcesz odinstalować %s?\n%s\ ?</string>
+    <string name="uninstall_subtext">Napewno chcesz odinstalować %s?\n%s\?</string>
     <string name="up">w górę</string>
     <string name="video">Wideo</string>
     <string name="video_tutorials">Wideo Poradniki</string>
