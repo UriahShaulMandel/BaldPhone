@@ -70,8 +70,7 @@
         android:layout_height="141dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bald_title_bar"
-        app:where_bar="-3">
+        app:layout_constraintTop_toBottomOf="@+id/bald_title_bar">
 
         <com.bald.uriah.baldphone.views.ModularRecyclerView
             android:id="@+id/contacts_recycler_view"
