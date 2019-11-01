@@ -25,6 +25,7 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.provider.Telephony;
@@ -67,9 +68,10 @@ import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTI
 public class HomePage1 extends HomeView {
     public static final String TAG = HomePage1.class.getSimpleName();
     private final static String WHATSAPP_PACKAGE_NAME = "com.whatsapp";
+    private final static ComponentName WHATSAPP_COMPONENT_NAME =
+            new ComponentName(WHATSAPP_PACKAGE_NAME, WHATSAPP_PACKAGE_NAME + ".Main");
     private View view;
     private FirstPageAppIcon bt_clock, bt_camera, bt_videos, bt_assistant, bt_messages, bt_photos, bt_contacts, bt_dialer, bt_whatsapp, bt_apps, bt_reminders, bt_recent;
-    private PackageManager packageManager;
     private boolean registered = false;
     private App app;
     /**
@@ -102,7 +104,6 @@ public class HomePage1 extends HomeView {
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
             view.findViewById(R.id.clock).setVisibility(View.GONE);
 
-        packageManager = homeScreen.getPackageManager();
         attachXml();
         genOnClickListeners();
         return view;
@@ -148,9 +149,8 @@ public class HomePage1 extends HomeView {
     }
 
     private Intent getCameraIntent() {
-        PackageManager localPackageManager = homeScreen.getPackageManager();
         final Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-        final ActivityInfo activity = localPackageManager.resolveActivity(intent,
+        final ActivityInfo activity = homeScreen.getPackageManager().resolveActivity(intent,
                 PackageManager.MATCH_DEFAULT_ONLY).activityInfo;
         final ComponentName name = new ComponentName(activity.applicationInfo.packageName, activity.name);
         return new Intent(Intent.ACTION_MAIN)
@@ -172,11 +172,7 @@ public class HomePage1 extends HomeView {
 
         if (app == null) {
             if (S.isPackageInstalled(homeScreen, WHATSAPP_PACKAGE_NAME))
-                bt_whatsapp.setOnClickListener(v -> homeScreen.startActivity(
-                        new Intent(Intent.ACTION_MAIN)
-                                .addCategory(Intent.CATEGORY_LAUNCHER)
-                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)// | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
-                                .setComponent(new ComponentName(WHATSAPP_PACKAGE_NAME, "com.whatsapp.Main"))));
+                bt_whatsapp.setOnClickListener(v -> S.startComponentName(homeScreen, WHATSAPP_COMPONENT_NAME));
             else
                 bt_whatsapp.setOnClickListener(v -> {
                     try {
@@ -208,7 +204,16 @@ public class HomePage1 extends HomeView {
         bt_videos.setOnClickListener(v -> homeScreen.startActivity(new Intent(homeScreen, VideosActivity.class)));
         bt_messages.setOnClickListener(v -> {
             try {
-                homeScreen.startActivity(packageManager.getLaunchIntentForPackage(Telephony.Sms.getDefaultSmsPackage(homeScreen)));
+                final ResolveInfo resolveInfo =
+                        homeScreen.getPackageManager()
+                                .queryIntentActivities(
+                                        new Intent("android.intent.action.MAIN", null)
+                                                .setPackage(Telephony.Sms.getDefaultSmsPackage(homeScreen))
+                                        , 0)
+                                .iterator()
+                                .next();
+                S.startComponentName(homeScreen, new ComponentName(resolveInfo.activityInfo.packageName, resolveInfo.activityInfo.name));
+
             } catch (Exception e) {
                 BaldToast.from(homeScreen).setType(BaldToast.TYPE_ERROR).setText(R.string.an_error_has_occurred).show();
             }
@@ -221,5 +226,4 @@ public class HomePage1 extends HomeView {
             }
         });
     }
-
 }

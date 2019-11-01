@@ -48,7 +48,6 @@ public class HomeScreenAppView {
 
     public void setIntent(final ComponentName componentName) {
         child.setOnClickListener(v -> S.startComponentName(v.getContext(), componentName));
-
     }
 
     public void setIntent(final String contactLookupKey) {
