@@ -349,6 +349,6 @@
     <string name="only_home_screen">Samo domač zaslon.</string>
     <string name="also_available_at">Tudi na voljo na \nbaldphone.contact@gmail.com\nPovratne informacije morajo biti v angleščini!</string>
     <string name="grant_all_permissions">Potrdi vsa dovoljenja</string>
-    <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
-    <string name="emergency_button">Emergency Button</string>
+    <string name="emergency_settings_subtext">Ali želite na domačem zaslonu imeti gumb za klic v sili?</string>
+    <string name="emergency_button">Gumb za klic v sili</string>
 </resources>
