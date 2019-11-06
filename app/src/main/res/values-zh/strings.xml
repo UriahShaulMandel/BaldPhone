@@ -1,0 +1,377 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about">About</string>
+    <string name="about_subtext">Hi!\nMy name is Uriah Shaul Mandel, and I\'m the developer of this platform.\n
+        I\'ve spent most of my \"adult\" life making this platform, and I\'ve released it for free, for all to
+        use.\nYou are more than welcome to contact me by email:\nbaldphone.contact@gmail.com
+    </string>
+    <string name="accessibility_level">輔助功能程度</string>
+    <string name="accessibility_settings">輔助功能設定</string>
+    <string name="accidental_touches">防誤觸功能</string>
+    <string name="accidental_touches_settings_subtext">此功能可以在你電話蓋上時阻止任何輸入\n如果正常使用時有問題的話，可以把這個功能關上
+    </string>
+    <string name="accidental_touches_subtext">防誤觸功能已啓動\n按確定以繼續使用電話\n如果常常看到這個訊息，你可以到輔助功能設定關掉它
+    </string>
+    <string name="acknowledgments">鳴謝</string>
+    <string name="adaptive">自動適應</string>
+    <string name="add_alarm">新增鬧鐘</string>
+    <string name="add_alarm_quickly">新增倒數計時器</string>
+    <string name="add_contact">新增聯絡人</string>
+    <string name="add_emergency_contact">新增</string>
+    <string name="add_pill">新增藥物</string>
+    <string name="add_shortcut">新增捷徑</string>
+    <string name="add_to_favorite">加至我的最愛</string>
+    <string name="add_to_home">加至主頁</string>
+    <string name="add_to_sos">加至緊急聯絡</string>
+    <string name="address">地址</string>
+    <string name="advanced_options">進階功能</string>
+    <string name="afternoon">下午</string>
+    <string name="airplane_mode">飛行模式</string>
+    <string name="alarm_name">鬧鐘名稱</string>
+    <string name="alarm_volume">鬧鐘音量</string>
+    <string name="alarm_volume_subtext">選擇鬧鐘音量。\n音量左邊最小，右邊最大。</string>
+    <string name="alarms">鬧鐘</string>
+
+    <string name="alarms_repeats_every">鬧鐘重複：</string>
+    <string name="all_alarms">所有鬧鐘</string>
+    <string name="allow">允許</string>
+    <string name="already_setted">已設定!\n按此再更改</string>
+    <string name="an_error_has_occurred">發生了錯誤!</string>
+    <string name="and_welcome_to_baldphone">還有，歡迎來到清風電話</string>
+
+    <string name="apps">程式</string>
+    <string name="are_you_sure_you_want_to_delete___">你肯定要移除%s?</string>
+    <string name="assistant">智能助手</string>
+    <string name="at_least_one_day_must_be_selected">最少要選擇一日!</string>
+    <string name="auto_brightness">自動調校亮度</string>
+    <string name="back">返回</string>
+    <string name="backspace">退格鍵</string>
+    <string name="baldphone_bla_allow_permission">請允許一下權限:</string>
+    <string name="blocked">已封鎖</string>
+    <string name="bluetooth">藍牙</string>
+    <string name="brightness">亮度</string>
+    <string name="brightness_subtext">改變亮度。</string>
+    <string name="cache_cleared_successfully">成功清楚暫存!</string>
+    <string name="call">來電</string>
+    <string name="calling">致電中</string>
+
+    <string name="call_log">來電記錄:</string>
+    <string name="call_subtext">需要以下權限才可致電聯絡人。</string>
+    <string name="camera">相機</string>
+    <string name="camera_subtext">需要以下權限才可開啓閃光燈。</string>
+    <string name="cancel">取消</string>
+    <string name="change_pills_time">更改服藥時間</string>
+    <string name="change_system_settings_subtext">請允許清風電話更改系統設定，包括放大字體及改變亮度。
+    </string>
+    <string name="choose_friday">周五</string>
+    <string name="choose_monday">周一</string>
+    <string name="choose_saturday">周六</string>
+    <string name="choose_sunday">周日</string>
+    <string name="choose_thursday">周四</string>
+    <string name="choose_tuesday">周二</string>
+    <string name="choose_wednesday">周三</string>
+    <string name="clear">清除</string>
+    <string name="clear_cache">清理暫存</string>
+    <string name="clear_data">清除所有資料</string>
+    <string name="clear_data_subtext">你肯定要移除所有資料?</string>
+    <string name="clear_data_subtext2">100%?</string>
+    <string name="clear_data_subtext3">肯定嗎?\n按確定之後會移除所有資料!</string>
+    <string name="clock">時鐘</string>
+    <string name="coming_soon">即將推出!</string>
+    <string name="connection_settings">連接</string>
+    <string name="contact_must_has_name">聯絡人必須有名稱!</string>
+    <string name="contact_not_created">沒有建立聯絡人!</string>
+    <string name="contacts">聯絡人</string>
+    <string name="contacts_read_subtext">需要以下權限才可查看聯絡人。</string>
+    <string name="contacts_subtext">需要以下權限才可增加聯絡人。</string>
+    <string name="crash">噢!\n清風電話遇上錯誤，需要重啓。</string>
+    <string name="current_time">現在時間</string>
+    <string name="custom">自訂</string>
+    <string name="dark">暗色</string>
+    <string name="delete">移除</string>
+    <string name="delete___">移除 %s?</string>
+    <string name="delete_all_alarms">移除所有鬧鐘</string>
+    <string name="dialer">電話撥號盤</string>
+    <string name="display_settings">顯示</string>
+    <string name="done">完成</string>
+    <string name="down">向下</string>
+    <string name="edit">編輯</string>
+    <string name="email">電郵:</string>
+    <string name="enable_notification_access">開啓通知存取</string>
+    <string name="enable_notification_access_subtext">請給與清風電話通知存取。</string>
+    <string name="enter">確定</string>
+    <string name="enter_contact_or_phone_number">輸入聯絡人名稱:</string>
+    <string name="evening">晚上</string>
+    <string name="example_of_different_text_sizes">不同字體示範\n應該看得見，又不出界。
+    </string>
+    <string name="external_storage_subtext">需要以下權限才可儲存照片。</string>
+    <string name="feedback">傳送回饋</string>
+    <string name="feedback_cannot_be_empty">不能傳送空白回饋!</string>
+    <string name="feedback_sent_successfully">成功傳送回饋!</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">請選擇輔助功能程度
+    </string>
+    <string name="font">字型</string>
+    <string name="friday">星期五</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">覺得電話鍵盤字太小?轉用清風電話的大字鍵盤吧!
+    </string>
+    <string name="hello">你好</string>
+    <string name="help">影片教學</string>
+    <string name="hide">隱藏</string>
+    <string name="high_level">強勁</string>
+    <string name="home_phone_number">家居電話號碼</string>
+    <string name="hour">小時</string>
+    <string name="huge">巨大</string>
+    <string name="internet">互聯網</string>
+    <string name="invoked_in">啓動於:</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">最後:\n我們強烈建議你使用清風電話為預設桌面
+    </string>
+    <string name="language">語言</string>
+    <string name="language_settings">語言</string>
+    <string name="large">大</string>
+    <string name="left_handed">左手</string>
+    <string name="light">淺色</string>
+    <string name="location">位置</string>
+    <string name="emergency_services">緊急服務</string>
+    <string name="mail">電郵</string>
+    <string name="maps">地圖</string>
+
+
+    <string name="medium">中度</string>
+    <string name="medium_level">中等</string>
+    <string name="message">訊息</string>
+    <string name="messages">訊息</string>
+    <string name="minute">分鐘</string>
+    <string name="minutes">分鐘</string>
+    <string name="missed">未讀</string>
+
+    <string name="mobile_phone_number">手提電話號碼</string>
+    <string name="monday">星期一</string>
+    <string name="more">更多</string>
+    <string name="morning">早上</string>
+    <string name="name">姓名</string>
+    <string name="named__">名為</string>
+    <string name="new_alarm___was_created">新鬧鐘 %s 已建立!</string>
+    <string name="nfc">NFC</string>
+    <string name="no">否</string>
+    <string name="notes">筆記</string>
+    <string name="notes_settings">筆記</string>
+    <string name="notes_settings_subtext">選擇要否放筆記頁到主頁。</string>
+    <string name="notifications">通知</string>
+
+    <string name="of">總共</string>
+    <string name="off">關閉</string>
+    <string name="ok">確定</string>
+    <string name="on">於</string>
+
+    <string name="only_once">單次</string>
+
+
+    <string name="open">開啓</string>
+
+    <string name="outgoing">外傳</string>
+    <string name="page">頁</string>//page 1 of 2
+    <string name="permissions_part">權限</string>
+    <string name="personalization_settings">個人化</string>
+    <string name="phone">電話</string>
+    <string name="photo">相片</string>
+    <string name="photos">相片</string>
+    <string name="pill_added">藥物已添加!</string>
+    <string name="pill_name">藥名</string>
+    <string name="pills">藥物</string>
+    <string name="press_longer">按久一點!</string>
+    <string name="timer">倒數計時器</string>
+    <string name="read_call_log">查看通話記錄</string>
+    <string name="read_call_log_subtext">需要以下權限才可查看通話記錄。</string>
+    <string name="read_contacts">查看聯絡人</string>
+    <string name="received">已接收</string>
+    <string name="recent">最近</string>
+    <string name="regular_level">普通</string>
+
+    <string name="remove_from_favorite">從我的最愛移除</string>
+    <string name="remove_from_home">從桌面移除</string>
+    <string name="remove_from_sos">從緊急聯絡移除</string>
+    <string name="remove_shortcut">移除捷徑</string>
+    <string name="removed_all_alarms">移除所有鬧鐘!</string>
+    <string name="repeats_every_day">每日</string>
+    <string name="right_handed">右手寫字</string>
+
+    <string name="saturday">星期六</string>
+    <string name="save">儲存</string>
+    <string name="selected">已選取</string>
+    <string name="send">傳送</string>
+    <string name="set_default_dialer">設為預設撥號程式</string>
+    <string name="set_default_dialer_subtext">清風電話需要成為預設撥號程式。</string>
+    <string name="set_home_screen">設為預設桌面</string>
+    <string name="set_home_screen_subtext">你應該將清風電話列為預設桌面。\n你可事後改變主意，到設定再更改。
+    </string>
+    <string name="set_keyboard">鍵盤設定</string>
+    <string name="setting_does_not_exist">設定不存在</string>
+    <string name="settings">設定</string>
+    <string name="settings_permission">設定權限</string>
+    <string name="share">分享</string>
+    <string name="share_actual_text">你好！我正使用清風電話，電話的字體現在又大又簡單易用！\n立即免費下載!\n到這個網址下載:\n\nhttps://sites.google.com/view/baldphone
+    </string>
+    <string name="share_bald_phone_subtext">你認識其他會喜歡清風電話的人嗎?與他們分享吧!"
+    </string>
+    <string name="share_baldphone">分享清風電話</string>
+    <string name="share_contact">分享聯絡人</string>
+    <string name="share_differently">通過其他程式分享</string>
+    <string name="share_via_whatsapp">通過 Whatsapp 分享</string>
+    <string name="shift">shift</string>
+    <string name="show">Show</string>
+    <string name="small">小</string>
+    <string name="snooze">貪睡按鈕</string>
+    <string name="sos">緊急聯絡</string>
+    <string name="sos_is_full">緊急聯絡已滿!</string>
+    <string name="sos_is_full_subtext">緊急聯絡已滿!請先移除不需要的緊急聯絡人，再新增緊急聯絡</string>
+    <string name="speak">通話</string>
+    <string name="speech_to_text">語音轉文字</string>
+    <string name="strong_hand">常用寫字手</string>
+    <string name="strong_hand_subtext">選擇你最常用的一邊手，界面會因而調整。</string>
+    <string name="submit">提交</string>
+    <string name="sunday">星期日</string>
+    <string name="technical_information">詳細技術資料</string>
+    <string name="theme_settings">佈景主題</string>
+    <string name="theme_settings_subtext">選擇主題</string>
+
+    <string name="thursday">星期四</string>
+    <string name="time_changer">更改服藥時間</string>
+    <string name="tiny">最小</string>
+    <string name="to___days_and___hours_from_now">%d 天 %d 小時之後</string>
+    <string name="to___hours_and___minutes_from_now">%d 小時 and %d 分鐘之後</string>
+    <string name="to___minuets_from_now">%d 分鐘之後</string>
+    <string name="today">今天</string>
+    <string name="took">已服食!</string>
+    <string name="tuesday">星期二</string>
+    <string name="uninstall">移除</string>
+    <string name="uninstall_subtext">你肯定要移除 %s?\n%s\的所有資料將會刪除!</string>
+    <string name="up">上</string>
+    <string name="video">影片</string>
+    <string name="video_tutorials">影片教學</string>
+    <string name="videos">影片</string>
+
+    <string name="voice_mail">電話留言</string>
+    <string name="wednesday">星期三</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="wifi">Wifi</string>
+    <string name="will_repeat_only_once">只會發生一次!</string>
+    <string name="write">寫入</string>
+    <string name="write_contacts">寫入聯絡人</string>
+    <string name="write_external_storage">寫入外置儲存</string>
+    <string name="yes">是</string>
+    <string name="yesterday">昨天</string>
+    <string name="nothing">無</string>
+    <string name="no_contacts_found">找不到聯絡人!</string>
+    <string name="no_alarms">無任何鬧鐘\n按一下\n\"新增鬧鐘\"\n或者\n\"新增倒數計時器\"新增鬧鐘</string>
+    <string name="no_pills">無藥物\n按一下\n\"新增藥物\"新增記錄</string>
+    <string name="clear_all_notifications">清除所有通知</string>
+    <string name="clear_cache_subtext">你肯定要清除緩存？\n所有捷徑也會移除!
+    </string>
+    <string name="permissions_calm">你好，清風電話需要以下權限才可運作。有部分聽起來很嚴重，但清風電話需要它們才可以正常運作。清風電話不會偷取資料或者損害你的電話。按確定以給予清風電話這些權限，或按否退出清風電話。
+    </string>
+    <string name="pending_update">等待更新</string>
+    <string name="download">下載</string>
+    <string name="install_updates">下載更新</string>
+    <string name="install_updates_subtext">需要以下權限才可更新清風電話。</string>
+    <string name="a_new_update_is_available">有更新可用！\n更新以確保清風電話運作暢順。\n按確定以下載。
+    </string>
+    <string name="current_version">目前版本:\n</string>
+    <string name="new_version">新版本:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">新版本準備好下載。</string>
+    <string name="install">安裝</string>
+    <string name="data_warning">數據提示</string>
+    <string name="data_warning_subtext">你好，你目前不是使用 WIFI。\n下載的檔案大概是 3MB,
+        中途停止的話仍然會計算進數據下載流量。\n繼續使用流動數據下載?
+    </string>
+    <string name="update_message_is_corrupted">更新資料出錯。</string>
+    <string name="check_for_updates">檢查更新</string>
+    <string name="could_not_connect_to_server">不能連接伺服器!</string>
+    <string name="could_not_connect_to_internet">不能連接互聯網!</string>
+    <string name="could_not_start_the_download">不能開始下載!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">已下載的更新檔不能移除!</string>
+    <string name="downloading">下載中…</string>
+
+    <string name="baldphone_is_up_to_date">清風電話已是最新版本。</string>
+    <string name="what_s_new">新功能</string>
+    <string name="download_finished">下載完成!</string>
+    <string name="downloading_updates">下載更新中…</string>
+    <string name="installing_doesn_t_work">安裝不成功?</string>
+    <string name="try_now">現在嘗試</string>
+    <string name="download_progress">下載進度</string>
+    <string name="what_do_you_want_to_do_with___">你想拿 %s 做什麽?</string>
+    <string name="crash_reports">當機報告</string>
+    <string name="crash_reports_subtext">當機報告幫助清風電話更加穩定\n他們只用作移除程式問題，而不會包括其他無關資料。
+    </string>
+    <string name="custom_app">自訂程式</string>
+    <string name="custom_app_subtext">選擇自訂程式以顯示到桌面。</string>
+    <string name="no_app_was_found">無符合的程式!</string>
+    <string name="alarm">鬧鐘</string>
+    <string name="no_new_notifications">無新鬧鐘</string>
+    <string name="sound">發聲</string>
+    <string name="mute">無聲</string>
+    <string name="vibrate">震動</string>
+    <string name="your_phone_doesnt_have_assistant_installed">你的電話沒有安裝智能助手。</string>
+
+
+    <string name="status_bar_settings">狀態列</string>
+    <string name="status_bar_settings_subtext">你想在哪裏顯示狀態列?</string>
+    <string name="only_home_screen">只在主頁</string>
+    <string name="nowhere">不顯示</string>
+    <string name="everywhere">所有頁面</string>
+
+
+    <string name="share_photo">分享圖片</string>
+
+    <string name="choose_language_for_keyboard">選擇語言</string>
+    <string name="hebrew">希伯來文</string>
+    <string name="english">英文</string>
+
+    <string name="search">搜尋</string>
+    <string name="next">下頁</string>
+    <string name="go">前往</string>
+
+
+    <string name="dialer_sounds">鈴聲</string>
+    <string name="dialer_sounds_subtext">選擇你的鈴聲。</string>
+    <string name="low_battery_alert">低電量警告</string>
+    <string name="low_battery_alert_subtext">你可以選擇電量低於 20% 時，讓狀態列轉紅\n注意，如果狀態列不顯示時，紅色效果也不會顯示。</string>
+
+    <string name="also_available_at">也可聯絡\nbaldphone.contact@gmail.com\n反饋需以英文或希伯來文寫成。</string>
+    <string name="grant_all_permissions">允許所有權限</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">昂特欣錠 100微克</string>
+    <string name="medication_2">昂特欣錠 150微克</string>
+    <string name="donate">贊助</string>
+    <string name="emergency_button">緊急按鈕</string>
+    <string name="emergency_settings_subtext">你可以選擇添加緊急按鈕到桌面。</string>
+
+
+    <string-array name="names_for_screenshots">
+        <item>教父</item>
+        <item>亞伯拉罕·林肯</item>
+        <item>保羅·麥卡尼</item>
+        <item>提利昂·蘭尼斯特</item>
+        <item>巨石強森</item>
+        <item>小羅拔·唐尼</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
+</resources>
