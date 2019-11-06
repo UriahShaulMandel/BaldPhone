@@ -62,7 +62,7 @@
     <string name="alarm_volume_subtext"> Izberi glasnost za budilke.\nGlasnost se zvišuje z leve proti desni.</string>
     <string name="alarms">Budilke</string>
     <string name="alarms_repeats_every">Budilka se ponovi vsak:</string>
-    <string name="all_alarms">Vse budilke</string>
+    <string name="all_alarms">vse budilke</string>
     <string name="allow">Dovoli</string>
     <string name="already_setted">Že nastavljeno!\nPritisni tukaj da spremeniš</string>
     <string name="an_error_has_occurred">Pojavila se je napaka!</string>
