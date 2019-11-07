@@ -39,7 +39,8 @@ import java.util.Locale;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 
 public abstract class BaseScreenshotTakerTest<T extends Activity> {
-    protected static final String[] localesStr = new String[]{"en", "fr", "de", "es", "iw", "pt", "cs", "sl", "el", "it", "pt-br", "pl"};
+    protected static final String[] localesStr = new String[]{"en"};
+    //            , "fr", "de", "es", "iw", "pt", "cs", "sl", "el", "it", "pt-br", "pl"};
     protected static final Locale[] locales = new Locale[localesStr.length];
     protected static int localeIndex = 0;
 
