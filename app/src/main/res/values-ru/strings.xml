@@ -1,0 +1,375 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about">О программе</string>
+    <string name="about_subtext">Привет!\nМеня зовут Uriah Shaul Mandel и я являюсь разработчиком этой платформы.\n
+        Я провел большую часть своей «взрослой» жизни создавая эту платформу и я выпустил ее бесплатной, для всех.\nВы можете связаться со мной по электронной почте:\nbaldphone.contact@gmail.com
+    </string>
+    <string name="accessibility_level">Уровень доступа</string>
+    <string name="accessibility_settings">Специальные возможности</string>
+    <string name="accidental_touches">Защита от случайных нажатий</string>
+    <string name="accidental_touches_settings_subtext">Защита блокирует ваш телефон от случайных нажатий когда телефон накрыт,\nесли у вас возникли проблемы с ним, вы можете его выключить.
+    </string>
+    <string name="accidental_touches_subtext">Обнаруженно случайное нажатие\nнажмите OK чтобы продолжить пользоваться телефоном\nесли это сообщение продолжает появляться, вы можете его отключить в специальных возможностях.
+    </string>
+    -<string name="acknowledgments">Acknowledgments</string>
+    -<string name="adaptive">Adaptive</string>
+    <string name="add_alarm">Добавить Будильник</string>
+    <string name="add_alarm_quickly">Добавить Таймер</string>
+    <string name="add_contact">Добавить Контакт</string>
+    <string name="add_emergency_contact">Добваить</string>
+    <string name="add_pill">Добавить Таблетку</string>
+    <string name="add_shortcut">Добавить Ярлык</string>
+    <string name="add_to_favorite">Добавить в Избранное</string>
+    <string name="add_to_home">Добавить на Главный Экран</string>
+    <string name="add_to_sos">Добавить в SOS</string>
+    <string name="address">Адрес</string>
+    <string name="advanced_options">Дополнительные Параметры</string>
+    <string name="afternoon">После полудня</string>
+    <string name="airplane_mode">Режим Полета</string>
+    <string name="alarm_name">Название Будильника</string>
+    <string name="alarm_volume">Громкость Будильника</string>
+    <string name="alarm_volume_subtext">Выберите громкость будильника.\nГромкость увеличивается с лева на право.</string>
+    <string name="alarms">Будильники</string>
+
+    <string name="alarms_repeats_every">Повторять каждые</string>
+    <string name="all_alarms">Все Будильники</string>
+    <string name="allow">Разрешить</string>
+    <string name="already_setted">Уже Установлен!\nНажмите сюда что бы поменять на него</string>
+    <string name="an_error_has_occurred">Произошла ошибка!</string>
+    <string name="and_welcome_to_baldphone">и добро пожаловать в Baldphone</string>
+
+    <string name="apps">Приложения</string>
+    <string name="are_you_sure_you_want_to_delete___">Вы уверенны что хотите удалить %s?</string>
+    <string name="assistant">Ассистент</string>
+    <string name="at_least_one_day_must_be_selected">Не меньше одного дня должно быть выбранно!</string>
+    <string name="auto_brightness">Автоматическая\nЯркость</string>
+    <string name="back">Назад</string>
+    <string name="backspace">удалить</string>
+    <string name="baldphone_bla_allow_permission">Пожалуйста предоставьте следующие разрешения:</string>
+    <string name="blocked">Заблокирован</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="brightness">Яркость</string>
+    <string name="brightness_subtext">Изменить Яркость.</string>
+    <string name="cache_cleared_successfully">Кэш успешно удален!</string>
+    <string name="call">Позвонить</string>
+    <string name="calling">Звоню</string>
+
+    <string name="call_log">Журнал Вызовов:</string>
+    <string name="call_subtext">Это разрешение требуется для вызова контактов.</string>
+    <string name="camera">Камера</string>
+    <string name="camera_subtext">Это разрешение требуется для включения фонарика.</string>
+    <string name="cancel">Отмена</string>
+    <string name="change_pills_time">Изменить время Приема Таблеток</string>
+    <string name="change_system_settings_subtext">Пожалуйста, разрешите BaldPhone изменять настройки, такие как увеличение размера шрифта и изменение яркости.
+    </string>
+    <string name="choose_friday">Пт</string>
+    <string name="choose_monday">Пн</string>
+    <string name="choose_saturday">Сб</string>
+    <string name="choose_sunday">Вс</string>
+    <string name="choose_thursday">Чт</string>
+    <string name="choose_tuesday">Вт</string>
+    <string name="choose_wednesday">Ср</string>
+    <string name="clear">Очистить</string>
+    <string name="clear_cache">Очистить Кэш</string>
+    <string name="clear_data">Удалить все Данные</string>
+    <string name="clear_data_subtext">Вы уверенычто хотите удалить все данные?</string>
+    <string name="clear_data_subtext2">100%?</string>
+    <string name="clear_data_subtext3">точно?\nнажатие кнопки да удалит все данне!</string>
+    <string name="clock">Часы</string>
+    <string name="coming_soon">Скоро!</string>
+    <string name="connection_settings">Поключение</string>
+    <string name="contact_must_has_name">Контакт должен иметь Имя!</string>
+    <string name="contact_not_created">Контакт не создан!</string>
+    <string name="contacts">Контакты</string>
+    <string name="contacts_read_subtext">Это разрешение требуется для чтения контактов.</string>
+    <string name="contacts_subtext">Это разрешение требуется для добавления новых контактов.</string>
+    <string name="crash">Упс!\nBaldPhone столкнулся с проблемой и теперь перезапустится.</string>
+    <string name="current_time">Текущее время</string>
+    <string name="custom">Свой</string>
+    <string name="dark">Темный</string>
+    <string name="delete">Удалить</string>
+    <string name="delete___">Удалить %s?</string>
+    <string name="delete_all_alarms">Удалить все будильники</string>
+    <string name="dialer">Номеронабиратель</string>
+    -<string name="display_settings">Display</string>
+    <string name="done">Готово</string>
+    -<string name="down">Down</string>
+    <string name="edit">Изменить</string>
+    <string name="email">Email:</string>
+    <string name="enable_notification_access">Включить Доступ к Уведомлениям</string>
+    <string name="enable_notification_access_subtext">Пожалуйста, предоставьте BaldPhone доступ к уведомлениям.</string>
+    <string name="enter">Войти</string>
+    <string name="enter_contact_or_phone_number">Введите имя контакта:</string>
+    <string name="evening">Вечер</string>
+    <string name="example_of_different_text_sizes">Пример текста разных размеров\nДолжен быть читаемым и не слишком большим.
+    </string>
+    <string name="external_storage_subtext">Это разрешение требуется для сохранения изображений.</string>
+    <string name="feedback">Отправить Отзыв</string>
+    <string name="feedback_cannot_be_empty">Отзыв не может быть пустым!</string>
+    <string name="feedback_sent_successfully">Отзыв успешно отправлен!</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Пожалуйста выберите уровень доступности
+    </string>
+    <string name="font">Шрифт</string>
+    <string name="friday">Пятница</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Трудно использовать клавиатуру телефона? Вместо этого используйте БОЛЬШУЮ клавиатуру Baldphone!
+    </string>
+    <string name="hello">Привет</string>
+    <string name="help">Видео Инструкция</string>
+    <string name="hide">Скрыть</string>
+    <string name="high_level">Высокий Уровень</string>
+    <string name="home_phone_number">Номер домашнего телефона</string>
+    <string name="hour">Час</string>
+    <string name="huge">Огромный</string>
+    <string name="internet">Интернет</string>
+    <string name="invoked_in">Включен в:</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Последняя вещь:\nНастоятельно рекомендуется использовать домашний экран Baldphone в кочестве основной панели запуска
+    </string>
+    <string name="language">язык</string>
+    <string name="language_settings">Язык</string>
+    <string name="large">Большой</string>
+    <string name="left_handed">Левша</string>
+    <string name="light">Свет</string>
+    <string name="location">Место нахождения</string>
+    <string name="emergency_services">Аварийные Службы</string>
+    <string name="mail">Почта</string>
+    <string name="maps">Карты</string>
+
+
+    <string name="medium">Средний</string>
+    <string name="medium_level">Средний Уровень</string>
+    <string name="message">Сообщение</string>
+    <string name="messages">Сообщения</string>
+    <string name="minute">Минута</string>
+    <string name="minutes">Минуты</string>
+    <string name="missed">Пропущен</string>
+
+    <string name="mobile_phone_number">Мобильный номер телефона</string>
+    <string name="monday">Понедельник</string>
+    <string name="more">юольше</string>
+    <string name="morning">Утро</string>
+    <string name="name">Имя</string>
+    <string name="named__">названный</string>
+    <string name="new_alarm___was_created">новый будильник %s создан!</string>
+    <string name="nfc">NFC</string>
+    <string name="no">Нет</string>
+    <string name="notes">Заметки</string>
+    <string name="notes_settings">Заметки</string>
+    <string name="notes_settings_subtext">Выберите, хотите ли вы иметь страницу Заметок на главном экране.</string>
+    <string name="notifications">Уведомления</string>
+
+    -<string name="of">of</string>
+    <string name="off">Выключить</string>
+    <string name="ok">OK</string>
+    <string name="on">Включить</string>
+
+    <string name="only_once">Только один раз</string>
+
+
+    <string name="open">Открыть</string>
+
+    <string name="outgoing">Исходящий</string>
+    <string name="page">Страница</string>//page 1 of 2
+    <string name="permissions_part">Разрешения</string>
+    <string name="personalization_settings">Персонализация</string>
+    <string name="phone">Телефон</string>
+    <string name="photo">Фотограция</string>
+    <string name="photos">Фотографии</string>
+    <string name="pill_added">Таблетка добавлена!</string>
+    <string name="pill_name">Название Таблетки</string>
+    <string name="pills">Таблетки</string>
+    <string name="press_longer">Нажмите и удерживайте Дольше!</string>
+    <string name="timer">Таймер</string>
+    <string name="read_call_log">Чтение Истории Вызовов</string>
+    <string name="read_call_log_subtext">Это разрешение требуется для просмотра журнала звонков.</string>
+    <string name="read_contacts">Чтение контактов</string>
+    <string name="received">Получен</string>
+    <string name="recent">Недавние</string>
+    <string name="regular_level">Обычный уровень</string>
+
+    <string name="remove_from_favorite">Удалить из Избранного</string>
+    <string name="remove_from_home">Удалить с Домашнего экрана</string>
+    <string name="remove_from_sos">Удалить из SOS</string>
+    <string name="remove_shortcut">Удалить ярлык</string>
+    <string name="removed_all_alarms">Удалены все будильники!</string>
+    <string name="repeats_every_day">Каждый день</string>
+    <string name="right_handed">Правша</string>
+
+    <string name="saturday">Суббота</string>
+    <string name="save">ыохранить</string>
+    <string name="selected">Выбран</string>
+    <string name="send">Отпрвлено</string>
+    <string name="set_default_dialer">Установить приложение для вызова по умолчанию</string>
+    <string name="set_default_dialer_subtext">BaldPhone должен быть отмечен как приложение для вызова по умолчанию.</string>
+    <string name="set_home_screen">Установить Домашний Экран</string>
+    <string name="set_home_screen_subtext">Чтобы использовать BaldPhone, вы должны установить его в качестве домашнего экрана.\nЭто обратимо и может быть изменено в настройках.
+    </string>
+    <string name="set_keyboard">Установить клавиатуру</string>
+    <string name="setting_does_not_exist">Настройки не существуют</string>
+    <string name="settings">Настройки</string>
+    <string name="settings_permission">Настройка Разрешений</string>
+    <string name="share">Поделиться</string>
+    <string name="share_actual_text">Привет, Я использую платформу названную "BaldPhone" которая заменяет интерфейс телефона на более крупный, простой и дружелюбный.\nЗаинтересовался?\nВы можете скачать его бесплатно!\nоткройте ссылку ниже для получения дополнительной информации:\n\nhttps://sites.google.com/view/baldphone
+    </string>
+    <string name="share_bald_phone_subtext">Эй, знаете кого-нибудь, кто хотел бы узнать о BaldPhone?\nВы можете поделиться им с ними!"
+    </string>
+    <string name="share_baldphone">Поделиться BaldPhone</string>
+    <string name="share_contact">Поделиться Контактом</string>
+    <string name="share_differently">Поделиться Другим Приложением</string>
+    <string name="share_via_whatsapp">Поделиться в Whatsapp</string>
+    -<string name="shift">shift</string>
+    <string name="show">Показать</string>
+    <string name="small">Маленький</string>
+    <string name="snooze">Отложить</string>
+    <string name="sos">SOS</string>
+    <string name="sos_is_full">SOS заполнен!</string>
+    <string name="sos_is_full_subtext">SOS заполнен! пожалуйста удалите другие SOS контакты перед добавление новых</string>
+    <string name="speak">Говорить</string>
+    <string name="speech_to_text">Речь в Текст</string>
+    <string name="strong_hand">Преобладающая рука</string>
+    <string name="strong_hand_subtext">Выберите свою преобладающую руку, чтобы настроить пользовательский интерфейс.</string>
+    <string name="submit">подтвердить</string>
+    <string name="sunday">Воскресенье</string>
+    <string name="technical_information">Техническая Информация</string>
+    <string name="theme_settings">Тема</string>
+    <string name="theme_settings_subtext">Выберите тему</string>
+
+    <string name="thursday">Четверг</string>
+    <string name="time_changer">Изменение времени приема таблеток</string>
+    <string name="tiny">Крошечный</string>
+    <string name="to___days_and___hours_from_now">%d дней и %d часов с текущего момента</string>
+    <string name="to___hours_and___minutes_from_now">%d часов и %d минут с текущего момента</string>
+    <string name="to___minuets_from_now">%d минут с текущего момента</string>
+    <string name="today">Сегодня</string>
+    <string name="took">Взял!</string>
+    <string name="tuesday">Вторник</string>
+    <string name="uninstall">Удалить</string>
+    <string name="uninstall_subtext">Вы уверены что хотите удалить %s?\n%s данные пропадут навсегда!</string>
+    <string name="up">Вверх</string>
+    <string name="video">Видео</string>
+    <string name="video_tutorials">Видео Инструкции</string>
+    <string name="videos">Видео</string>
+
+    <string name="voice_mail">Голосовая Почта</string>
+    <string name="wednesday">Среда</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="wifi">Wifi</string>
+    <string name="will_repeat_only_once">повторю только один раз!</string>
+    <string name="write">Записать</string>
+    <string name="write_contacts">Записать контакты</string>
+    <string name="write_external_storage">Записать на внешнее хранилище</string>
+    <string name="yes">Да</string>
+    <string name="yesterday">Вчера</string>
+    <string name="nothing">Ничего</string>
+    <string name="no_contacts_found">Контактов не найденно!</string>
+    <string name="no_alarms">Нет Будильников\nСоздайте его нажав на\n\"Добавить Будильник\"\nИли\n\"Добавить Таймер\"</string>
+    <string name="no_pills">Нет Таблеток\nСоздайте ее нажав на\n\"Добавить Таблетку\"</string>
+    <string name="clear_all_notifications">Очистить Все Оповещения</string>
+    <string name="clear_cache_subtext">Вы уверенны что хотите очистить кэш?\nЯрлык программы будет удален тоже!
+    </string>
+    <string name="permissions_calm">Привет, BaldPhone должны быть предоставленны следующие разрешения для запуска. Некоторые из них, звучат страшно, но это единственный способ для BaldPhone заменить интерфейс телефона. Это не причинит вреда и не украдет ваши данные. Нажмите OK для предоставления разрешений или Нет что бы выйти из BaldPhone.
+    </string>
+    <string name="pending_update">Ожидание Обновления</string>
+    <string name="download">Загрузка</string>
+    <string name="install_updates">Установка Обновлений</string>
+    <string name="install_updates_subtext">Это Разрешение необходимо для обновления BaldPhone</string>
+    <string name="a_new_update_is_available">Доступно обновление!\nОбновления важны для обеспечения бесперебойной работы BaldPhone.\nНажмите OK для загрузки.
+    </string>
+    <string name="current_version">Текущая Версия:\n</string>
+    <string name="new_version">Новая Версия:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">Обновления готовы к загрузке.</string>
+    <string name="install">Установить</string>
+    <string name="data_warning">Предупреждение о Данных</string>
+    <string name="data_warning_subtext">Привет, вы не подключенны к WIFI.\nРазмер загрузкипримерно 3MB, если вы находитесь за границей, это может стоить вам денег.\nХотите продолжить загрузку?
+    </string>
+    <string name="update_message_is_corrupted">Сообщение об обновлении повреждено.</string>
+    <string name="check_for_updates">Проверить наличие обновлений</string>
+    <string name="could_not_connect_to_server">Не удалось подключиться к серверу!</string>
+    <string name="could_not_connect_to_internet">Не удалось подключиться к Интернету!</string>
+    <string name="could_not_start_the_download">Не удалось начать загрузку!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">Загруженный файл обновления не может быть удален!</string>
+    <string name="downloading">Загрузка…</string>
+
+    <string name="baldphone_is_up_to_date">BaldPhone обновлен.</string>
+    <string name="what_s_new">Что нового</string>
+    <string name="download_finished">Загрузка завершена!</string>
+    <string name="downloading_updates">Загрузка Обновлений…</string>
+    <string name="installing_doesn_t_work">Установка не работает?</string>
+    <string name="try_now">Попробуйте сейчас</string>
+    <string name="download_progress">Процесс загрузки</string>
+    <string name="what_do_you_want_to_do_with___">Что вы хотите сделать %s?</string>
+    <string name="crash_reports">Отчеты о сбоях</string>
+    <string name="crash_reports_subtext">Отчеты о сбоях помогают сделать использованние BaldPhone безупречным\nОни используются только что бы исправлять ошибки и никакая информация, кроме той, что необходима для исправления ошибок, не принимается.
+    </string>
+    <string name="custom_app">Пользовательское приложение</string>
+    <string name="custom_app_subtext">Выберите пользовательское приложение для установки на домашний экран.</string>
+    <string name="no_app_was_found">Не найдено подходящего приложения!</string>
+    <string name="alarm">Будильник</string>
+    <string name="no_new_notifications">Нет новых уведомлений</string>
+    <string name="sound">Звук</string>
+    <string name="mute">Беззвучный</string>
+    <string name="vibrate">Вибро</string>
+    <string name="your_phone_doesnt_have_assistant_installed">В вашем телефоне не установлен голосовой помощник.</string>
+
+
+    <string name="status_bar_settings">Строка состояния</string>
+    <string name="status_bar_settings_subtext">Где вы хотите отобразить строку состояния?</string>
+    <string name="only_home_screen">Только домашний экран</string>
+    <string name="nowhere">Нигде</string>
+    <string name="everywhere">Взде</string>
+
+
+    <string name="share_photo">Поделиться фотографией</string>
+
+    <string name="choose_language_for_keyboard">Выбор языка</string>
+    <string name="hebrew">Иврит</string>
+    <string name="english">Английский</string>
+
+    <string name="search">Поиск</string>
+    <string name="next">Дальше</string>
+    <string name="go">Go</string>
+
+
+    <string name="dialer_sounds">Звуки Номеронабирателя</string>
+    <string name="dialer_sounds_subtext">Выберите, хотите ли вы иметь Звуки Номеронабирателя.</string>
+    <string name="low_battery_alert">Предупреждение о низком заряде батареи</string>
+    <string name="low_battery_alert_subtext">Выберите, хотите ли вы, чтобы строка состояния была красной на главном экране, когда уровень заряда батареи ниже 20%\nПримечание: не будет отображаться, если строка состояния системы скрыта.</string>
+
+    <string name="also_available_at">Также доступно по адресу\nbaldphone.contact@gmail.com\nОбратная связь должна быть на английском/иврите!</string>
+    <string name="grant_all_permissions">Предоставить Все Разрешения</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">Эльтроксин 100</string>
+    <string name="medication_2">Эльтроксин 150</string>
+    <string name="donate">Пожертвовать</string>
+    <string name="emergency_button">Аварийная кнопка</string>
+    <string name="emergency_settings_subtext">Выберите, хотите ли вы, чтобы на главном экране была аварийная кнопка.</string>
+
+
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
+</resources>
