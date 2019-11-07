@@ -26,8 +26,8 @@
     </string>
     <string name="accidental_touches_subtext">Обнаруженно случайное нажатие\nнажмите OK чтобы продолжить пользоваться телефоном\nесли это сообщение продолжает появляться, вы можете его отключить в специальных возможностях.
     </string>
-    -<string name="acknowledgments">Acknowledgments</string>
-    -<string name="adaptive">Adaptive</string>
+    <string name="acknowledgments">Благодарность</string>
+    <string name="adaptive">Адаптивный</string>
     <string name="add_alarm">Добавить Будильник</string>
     <string name="add_alarm_quickly">Добавить Таймер</string>
     <string name="add_contact">Добавить Контакт</string>
@@ -106,9 +106,9 @@
     <string name="delete___">Удалить %s?</string>
     <string name="delete_all_alarms">Удалить все будильники</string>
     <string name="dialer">Номеронабиратель</string>
-    -<string name="display_settings">Display</string>
+    <string name="display_settings">Дисплей</string>
     <string name="done">Готово</string>
-    -<string name="down">Down</string>
+    <string name="down">Вниз</string>
     <string name="edit">Изменить</string>
     <string name="email">Email:</string>
     <string name="enable_notification_access">Включить Доступ к Уведомлениям</string>
@@ -172,7 +172,7 @@
     <string name="notes_settings_subtext">Выберите, хотите ли вы иметь страницу Заметок на главном экране.</string>
     <string name="notifications">Уведомления</string>
 
-    -<string name="of">of</string>
+    <string name="of">к</string>
     <string name="off">Выключить</string>
     <string name="ok">OK</string>
     <string name="on">Включить</string>
@@ -231,7 +231,7 @@
     <string name="share_contact">Поделиться Контактом</string>
     <string name="share_differently">Поделиться Другим Приложением</string>
     <string name="share_via_whatsapp">Поделиться в Whatsapp</string>
-    -<string name="shift">shift</string>
+    <string name="shift">сдвиг</string>
     <string name="show">Показать</string>
     <string name="small">Маленький</string>
     <string name="snooze">Отложить</string>
