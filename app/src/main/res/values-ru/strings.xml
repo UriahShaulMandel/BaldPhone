@@ -113,7 +113,7 @@
     <string name="email">Email:</string>
     <string name="enable_notification_access">Включить Доступ к Уведомлениям</string>
     <string name="enable_notification_access_subtext">Пожалуйста, предоставьте BaldPhone доступ к уведомлениям.</string>
-    <string name="enter">Войти</string>
+    <string name="enter">Ввод</string>
     <string name="enter_contact_or_phone_number">Введите имя контакта:</string>
     <string name="evening">Вечер</string>
     <string name="example_of_different_text_sizes">Пример текста разных размеров\nДолжен быть читаемым и не слишком большим.
@@ -231,7 +231,7 @@
     <string name="share_contact">Поделиться Контактом</string>
     <string name="share_differently">Поделиться Другим Приложением</string>
     <string name="share_via_whatsapp">Поделиться в Whatsapp</string>
-    <string name="shift">сдвиг</string>
+    <string name="shift">регистр</string>
     <string name="show">Показать</string>
     <string name="small">Маленький</string>
     <string name="snooze">Отложить</string>
