@@ -22,16 +22,16 @@
     <string name="accessibility_level">Уровень доступа</string>
     <string name="accessibility_settings">Специальные возможности</string>
     <string name="accidental_touches">Защита от случайных нажатий</string>
-    <string name="accidental_touches_settings_subtext">Защита блокирует ваш телефон от случайных нажатий когда телефон накрыт,\nесли у вас возникли проблемы с ним, вы можете его выключить.
+    <string name="accidental_touches_settings_subtext">Защита блокирует ваш телефон от случайных нажатий когда телефон накрыт, если у вас возникли проблемы с ним, вы можете его выключить.
     </string>
-    <string name="accidental_touches_subtext">Обнаруженно случайное нажатие\nнажмите OK чтобы продолжить пользоваться телефоном\nесли это сообщение продолжает появляться, вы можете его отключить в специальных возможностях.
+    <string name="accidental_touches_subtext">Обнаруженно случайное нажатие\nнажмите OK чтобы продолжить пользоваться телефоном, если это сообщение продолжает появляться, вы можете его отключить в специальных возможностях.
     </string>
     <string name="acknowledgments">Благодарность</string>
     <string name="adaptive">Адаптивный</string>
     <string name="add_alarm">Добавить Будильник</string>
     <string name="add_alarm_quickly">Добавить Таймер</string>
     <string name="add_contact">Добавить Контакт</string>
-    <string name="add_emergency_contact">Добваить</string>
+    <string name="add_emergency_contact">Добавить</string>
     <string name="add_pill">Добавить Таблетку</string>
     <string name="add_shortcut">Добавить Ярлык</string>
     <string name="add_to_favorite">Добавить в Избранное</string>
@@ -100,12 +100,12 @@
     <string name="contacts_subtext">Это разрешение требуется для добавления новых контактов.</string>
     <string name="crash">Упс!\nBaldPhone столкнулся с проблемой и теперь перезапустится.</string>
     <string name="current_time">Текущее время</string>
-    <string name="custom">Свой</string>
+    <string name="custom">Свое</string>
     <string name="dark">Темный</string>
     <string name="delete">Удалить</string>
     <string name="delete___">Удалить %s?</string>
     <string name="delete_all_alarms">Удалить все будильники</string>
-    <string name="dialer">Номеронабиратель</string>
+    <string name="dialer">Телефон</string>
     <string name="display_settings">Дисплей</string>
     <string name="done">Готово</string>
     <string name="down">Вниз</string>
@@ -132,18 +132,18 @@
     <string name="help">Видео Инструкция</string>
     <string name="hide">Скрыть</string>
     <string name="high_level">Высокий Уровень</string>
-    <string name="home_phone_number">Номер домашнего телефона</string>
+    <string name="home_phone_number">Домашний номер телефона</string>
     <string name="hour">Час</string>
     <string name="huge">Огромный</string>
     <string name="internet">Интернет</string>
-    <string name="invoked_in">Включен в:</string>
+    <string name="invoked_in">Установить на:</string>
     <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Последняя вещь:\nНастоятельно рекомендуется использовать домашний экран Baldphone в кочестве основной панели запуска
     </string>
     <string name="language">язык</string>
     <string name="language_settings">Язык</string>
     <string name="large">Большой</string>
     <string name="left_handed">Левша</string>
-    <string name="light">Свет</string>
+    <string name="light">Светлый</string>
     <string name="location">Место нахождения</string>
     <string name="emergency_services">Аварийные Службы</string>
     <string name="mail">Почта</string>
@@ -155,12 +155,12 @@
     <string name="message">Сообщение</string>
     <string name="messages">Сообщения</string>
     <string name="minute">Минута</string>
-    <string name="minutes">Минуты</string>
+    <string name="minutes">Минут</string>
     <string name="missed">Пропущен</string>
 
     <string name="mobile_phone_number">Мобильный номер телефона</string>
     <string name="monday">Понедельник</string>
-    <string name="more">юольше</string>
+    <string name="more">больше</string>
     <string name="morning">Утро</string>
     <string name="name">Имя</string>
     <string name="named__">названный</string>
@@ -187,12 +187,12 @@
     <string name="permissions_part">Разрешения</string>
     <string name="personalization_settings">Персонализация</string>
     <string name="phone">Телефон</string>
-    <string name="photo">Фотограция</string>
+    <string name="photo">Фотография</string>
     <string name="photos">Фотографии</string>
     <string name="pill_added">Таблетка добавлена!</string>
     <string name="pill_name">Название Таблетки</string>
     <string name="pills">Таблетки</string>
-    <string name="press_longer">Нажмите и удерживайте Дольше!</string>
+    <string name="press_longer">Нажмите и удерживайте!</string>
     <string name="timer">Таймер</string>
     <string name="read_call_log">Чтение Истории Вызовов</string>
     <string name="read_call_log_subtext">Это разрешение требуется для просмотра журнала звонков.</string>
@@ -210,9 +210,9 @@
     <string name="right_handed">Правша</string>
 
     <string name="saturday">Суббота</string>
-    <string name="save">ыохранить</string>
+    <string name="save">сохранить</string>
     <string name="selected">Выбран</string>
-    <string name="send">Отпрвлено</string>
+    <string name="send">Отправить</string>
     <string name="set_default_dialer">Установить приложение для вызова по умолчанию</string>
     <string name="set_default_dialer_subtext">BaldPhone должен быть отмечен как приложение для вызова по умолчанию.</string>
     <string name="set_home_screen">Установить Домашний Экран</string>
@@ -238,11 +238,11 @@
     <string name="sos">SOS</string>
     <string name="sos_is_full">SOS заполнен!</string>
     <string name="sos_is_full_subtext">SOS заполнен! пожалуйста удалите другие SOS контакты перед добавление новых</string>
-    <string name="speak">Говорить</string>
+    <string name="speak">Продиктовать</string>
     <string name="speech_to_text">Речь в Текст</string>
     <string name="strong_hand">Преобладающая рука</string>
     <string name="strong_hand_subtext">Выберите свою преобладающую руку, чтобы настроить пользовательский интерфейс.</string>
-    <string name="submit">подтвердить</string>
+    <string name="submit">Подтвердить</string>
     <string name="sunday">Воскресенье</string>
     <string name="technical_information">Техническая Информация</string>
     <string name="theme_settings">Тема</string>
@@ -251,9 +251,9 @@
     <string name="thursday">Четверг</string>
     <string name="time_changer">Изменение времени приема таблеток</string>
     <string name="tiny">Крошечный</string>
-    <string name="to___days_and___hours_from_now">%d дней и %d часов с текущего момента</string>
-    <string name="to___hours_and___minutes_from_now">%d часов и %d минут с текущего момента</string>
-    <string name="to___minuets_from_now">%d минут с текущего момента</string>
+    <string name="to___days_and___hours_from_now">%d дней и %d час(ов) с текущего момента</string>
+    <string name="to___hours_and___minutes_from_now">%d час(ов) и %d минут с текущего момента</string>
+    <string name="to___minuets_from_now">%d минут(ы) с текущего момента</string>
     <string name="today">Сегодня</string>
     <string name="took">Взял!</string>
     <string name="tuesday">Вторник</string>
@@ -268,15 +268,15 @@
     <string name="wednesday">Среда</string>
     <string name="whatsapp">Whatsapp</string>
     <string name="wifi">Wifi</string>
-    <string name="will_repeat_only_once">повторю только один раз!</string>
+    <string name="will_repeat_only_once">повторить только один раз!</string>
     <string name="write">Записать</string>
     <string name="write_contacts">Записать контакты</string>
     <string name="write_external_storage">Записать на внешнее хранилище</string>
     <string name="yes">Да</string>
     <string name="yesterday">Вчера</string>
-    <string name="nothing">Ничего</string>
-    <string name="no_contacts_found">Контактов не найденно!</string>
-    <string name="no_alarms">Нет Будильников\nСоздайте его нажав на\n\"Добавить Будильник\"\nИли\n\"Добавить Таймер\"</string>
+    <string name="nothing">Пусто</string>
+    <string name="no_contacts_found">Контакты не найденны!</string>
+    <string name="no_alarms">Нет Будильника\nСоздайте его нажав на\n\"Добавить Будильник\"\nИли\n\"Добавить Таймер\"</string>
     <string name="no_pills">Нет Таблеток\nСоздайте ее нажав на\n\"Добавить Таблетку\"</string>
     <string name="clear_all_notifications">Очистить Все Оповещения</string>
     <string name="clear_cache_subtext">Вы уверенны что хотите очистить кэш?\nЯрлык программы будет удален тоже!
@@ -313,7 +313,7 @@
     <string name="download_progress">Процесс загрузки</string>
     <string name="what_do_you_want_to_do_with___">Что вы хотите сделать %s?</string>
     <string name="crash_reports">Отчеты о сбоях</string>
-    <string name="crash_reports_subtext">Отчеты о сбоях помогают сделать использованние BaldPhone безупречным\nОни используются только что бы исправлять ошибки и никакая информация, кроме той, что необходима для исправления ошибок, не принимается.
+    <string name="crash_reports_subtext">Отчеты о сбоях помогают сделать использованние BaldPhone безупречным\nОни используются только что бы исправлять ошибки и никакая информация, кроме той, что необходима для исправления ошибок, не применяется.
     </string>
     <string name="custom_app">Пользовательское приложение</string>
     <string name="custom_app_subtext">Выберите пользовательское приложение для установки на домашний экран.</string>
@@ -321,16 +321,16 @@
     <string name="alarm">Будильник</string>
     <string name="no_new_notifications">Нет новых уведомлений</string>
     <string name="sound">Звук</string>
-    <string name="mute">Беззвучный</string>
-    <string name="vibrate">Вибро</string>
+    <string name="mute">Без звука</string>
+    <string name="vibrate">Вибрация</string>
     <string name="your_phone_doesnt_have_assistant_installed">В вашем телефоне не установлен голосовой помощник.</string>
 
 
     <string name="status_bar_settings">Строка состояния</string>
     <string name="status_bar_settings_subtext">Где вы хотите отобразить строку состояния?</string>
-    <string name="only_home_screen">Только домашний экран</string>
+    <string name="only_home_screen">Домашний экран</string>
     <string name="nowhere">Нигде</string>
-    <string name="everywhere">Взде</string>
+    <string name="everywhere">Везде</string>
 
 
     <string name="share_photo">Поделиться фотографией</string>
