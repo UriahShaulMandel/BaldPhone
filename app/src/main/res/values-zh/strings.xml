@@ -28,7 +28,7 @@
     <string name="accidental_touches_subtext">防誤觸功能已啓動\n按確定以繼續使用電話\n如果常常看到這個訊息，你可以到輔助功能設定關掉它
     </string>
     <string name="acknowledgments">鳴謝</string>
-    <string name="adaptive">自動適應</string>
+    <string name="adaptive">自動轉換</string>
     <string name="add_alarm">新增鬧鐘</string>
     <string name="add_alarm_quickly">新增倒數計時器</string>
     <string name="add_contact">新增聯絡人</string>
@@ -52,7 +52,7 @@
     <string name="allow">允許</string>
     <string name="already_setted">已設定!\n按此再更改</string>
     <string name="an_error_has_occurred">發生了錯誤!</string>
-    <string name="and_welcome_to_baldphone">還有，歡迎來到清風電話</string>
+    <string name="and_welcome_to_baldphone">歡迎來到清風電話</string>
 
     <string name="apps">程式</string>
     <string name="are_you_sure_you_want_to_delete___">你肯定要移除%s?</string>
@@ -61,17 +61,17 @@
     <string name="auto_brightness">自動調校亮度</string>
     <string name="back">返回</string>
     <string name="backspace">退格鍵</string>
-    <string name="baldphone_bla_allow_permission">請允許一下權限:</string>
+    <string name="baldphone_bla_allow_permission">請允許以下權限:</string>
     <string name="blocked">已封鎖</string>
     <string name="bluetooth">藍牙</string>
     <string name="brightness">亮度</string>
     <string name="brightness_subtext">改變亮度。</string>
     <string name="cache_cleared_successfully">成功清楚暫存!</string>
     <string name="call">來電</string>
-    <string name="calling">致電中</string>
+    <string name="calling">致電</string>
 
     <string name="call_log">來電記錄:</string>
-    <string name="call_subtext">需要以下權限才可致電聯絡人。</string>
+    <string name="call_subtext">需要以下權限才可致電其他人。</string>
     <string name="camera">相機</string>
     <string name="camera_subtext">需要以下權限才可開啓閃光燈。</string>
     <string name="cancel">取消</string>
@@ -89,8 +89,8 @@
     <string name="clear_cache">清理暫存</string>
     <string name="clear_data">清除所有資料</string>
     <string name="clear_data_subtext">你肯定要移除所有資料?</string>
-    <string name="clear_data_subtext2">100%?</string>
-    <string name="clear_data_subtext3">肯定嗎?\n按確定之後會移除所有資料!</string>
+    <string name="clear_data_subtext2">百分百肯定要刪除所有資料?</string>
+    <string name="clear_data_subtext3">肯定嗎?\n按確定之後真的會移除所有資料!</string>
     <string name="clock">時鐘</string>
     <string name="coming_soon">即將推出!</string>
     <string name="connection_settings">連接</string>
@@ -98,7 +98,7 @@
     <string name="contact_not_created">沒有建立聯絡人!</string>
     <string name="contacts">聯絡人</string>
     <string name="contacts_read_subtext">需要以下權限才可查看聯絡人。</string>
-    <string name="contacts_subtext">需要以下權限才可增加聯絡人。</string>
+    <string name="contacts_subtext">需要以下權限才可編輯聯絡人。</string>
     <string name="crash">噢!\n清風電話遇上錯誤，需要重啓。</string>
     <string name="current_time">現在時間</string>
     <string name="custom">自訂</string>
@@ -137,8 +137,8 @@
     <string name="hour">小時</string>
     <string name="huge">巨大</string>
     <string name="internet">互聯網</string>
-    <string name="invoked_in">啓動於:</string>
-    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">最後:\n我們強烈建議你使用清風電話為預設桌面
+    <string name="invoked_in">倒數計時:</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">最後:\n我們強烈建議你使用清風電話為預設主螢幕
     </string>
     <string name="language">語言</string>
     <string name="language_settings">語言</string>
@@ -151,13 +151,13 @@
     <string name="maps">地圖</string>
 
 
-    <string name="medium">中度</string>
+    <string name="medium">普通</string>
     <string name="medium_level">中等</string>
     <string name="message">訊息</string>
     <string name="messages">訊息</string>
     <string name="minute">分鐘</string>
     <string name="minutes">分鐘</string>
-    <string name="missed">未讀</string>
+    <string name="missed">未接</string>
 
     <string name="mobile_phone_number">手提電話號碼</string>
     <string name="monday">星期一</string>
@@ -176,14 +176,14 @@
     <string name="of">總共</string>
     <string name="off">關閉</string>
     <string name="ok">確定</string>
-    <string name="on">於</string>
+    <string name="on">開啟</string>
 
     <string name="only_once">單次</string>
 
 
     <string name="open">開啓</string>
 
-    <string name="outgoing">外傳</string>
+    <string name="outgoing">撥出</string>
     <string name="page">頁</string>//page 1 of 2
     <string name="permissions_part">權限</string>
     <string name="personalization_settings">個人化</string>
@@ -198,7 +198,7 @@
     <string name="read_call_log">查看通話記錄</string>
     <string name="read_call_log_subtext">需要以下權限才可查看通話記錄。</string>
     <string name="read_contacts">查看聯絡人</string>
-    <string name="received">已接收</string>
+    <string name="received">已接聽</string>
     <string name="recent">最近</string>
     <string name="regular_level">普通</string>
 
@@ -216,8 +216,8 @@
     <string name="send">傳送</string>
     <string name="set_default_dialer">設為預設撥號程式</string>
     <string name="set_default_dialer_subtext">清風電話需要成為預設撥號程式。</string>
-    <string name="set_home_screen">設為預設桌面</string>
-    <string name="set_home_screen_subtext">你應該將清風電話列為預設桌面。\n你可事後改變主意，到設定再更改。
+    <string name="set_home_screen">設為預設主螢幕</string>
+    <string name="set_home_screen_subtext">你應該將清風電話列為預設主螢幕。\n你可事後改變主意，到設定再更改。
     </string>
     <string name="set_keyboard">鍵盤設定</string>
     <string name="setting_does_not_exist">設定不存在</string>
@@ -239,11 +239,11 @@
     <string name="sos">緊急聯絡</string>
     <string name="sos_is_full">緊急聯絡已滿!</string>
     <string name="sos_is_full_subtext">緊急聯絡已滿!請先移除不需要的緊急聯絡人，再新增緊急聯絡</string>
-    <string name="speak">通話</string>
+    <string name="speak">錄音轉文字</string>
     <string name="speech_to_text">語音轉文字</string>
     <string name="strong_hand">常用寫字手</string>
     <string name="strong_hand_subtext">選擇你最常用的一邊手，界面會因而調整。</string>
-    <string name="submit">提交</string>
+    <string name="submit">開始</string>
     <string name="sunday">星期日</string>
     <string name="technical_information">詳細技術資料</string>
     <string name="theme_settings">佈景主題</string>
@@ -253,7 +253,7 @@
     <string name="time_changer">更改服藥時間</string>
     <string name="tiny">最小</string>
     <string name="to___days_and___hours_from_now">%d 天 %d 小時之後</string>
-    <string name="to___hours_and___minutes_from_now">%d 小時 and %d 分鐘之後</string>
+    <string name="to___hours_and___minutes_from_now">%d 小時 %d 分鐘之後</string>
     <string name="to___minuets_from_now">%d 分鐘之後</string>
     <string name="today">今天</string>
     <string name="took">已服食!</string>
@@ -269,15 +269,15 @@
     <string name="wednesday">星期三</string>
     <string name="whatsapp">Whatsapp</string>
     <string name="wifi">Wifi</string>
-    <string name="will_repeat_only_once">只會發生一次!</string>
-    <string name="write">寫入</string>
-    <string name="write_contacts">寫入聯絡人</string>
+    <string name="will_repeat_only_once">只會響鬧一次</string>
+    <string name="write">新增筆記</string>
+    <string name="write_contacts">編輯聯絡人</string>
     <string name="write_external_storage">寫入外置儲存</string>
     <string name="yes">是</string>
     <string name="yesterday">昨天</string>
     <string name="nothing">無</string>
     <string name="no_contacts_found">找不到聯絡人!</string>
-    <string name="no_alarms">無任何鬧鐘\n按一下\n\"新增鬧鐘\"\n或者\n\"新增倒數計時器\"新增鬧鐘</string>
+    <string name="no_alarms">無任何鬧鐘\n按一下\n\"新增鬧鐘\"\n或者\n\"新增倒數計時器\"\n新增鬧鐘</string>
     <string name="no_pills">無藥物\n按一下\n\"新增藥物\"新增記錄</string>
     <string name="clear_all_notifications">清除所有通知</string>
     <string name="clear_cache_subtext">你肯定要清除緩存？\n所有捷徑也會移除!
