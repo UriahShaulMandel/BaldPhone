@@ -155,9 +155,8 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                 tv_time.setTextColor(textColor);
                 tv_type.setTextColor(textColor);
             } else {
-                image_letter.setVisibility(View.VISIBLE);
-                profile_pic.setImageDrawable(letterContactBackground);
-                image_letter.setText(call.phoneNumber.length() > 0 ? call.phoneNumber.substring(0, 1) : "");
+                image_letter.setVisibility(View.INVISIBLE);
+                profile_pic.setImageResource(R.drawable.face_in_recent_calls);
                 contact_name.setText(call.phoneNumber);
             }
 
