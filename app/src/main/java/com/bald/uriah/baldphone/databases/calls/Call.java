@@ -28,6 +28,7 @@ import com.bald.uriah.baldphone.databases.contacts.MiniContact;
 
 public class Call {
     private static final String TAG = Call.class.getSimpleName();
+    public static final String[] PRIVATE_NUMBERS = {"-1", "-2"};
     static final String[] PROJECTION = new String[]{
             CallLog.Calls.NUMBER,
             CallLog.Calls.DURATION,
@@ -66,6 +67,8 @@ public class Call {
 
     @Nullable
     public MiniContact getMiniContact(Context context) {
+        if (contactUri == null) // private call
+            return null;
         Cursor cursor = null;
         try {
             if (contactUri != null)
@@ -100,5 +103,13 @@ public class Call {
                 cursor.close();
 
         }
+    }
+
+    public boolean isPrivate() {
+        for (final String privateNumber : PRIVATE_NUMBERS) {
+            if (privateNumber.equals(phoneNumber))
+                return true;
+        }
+        return false;
     }
 }

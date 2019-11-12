@@ -156,8 +156,13 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                 tv_type.setTextColor(textColor);
             } else {
                 image_letter.setVisibility(View.INVISIBLE);
-                profile_pic.setImageResource(R.drawable.face_in_recent_calls);
-                contact_name.setText(call.phoneNumber);
+                if (call.isPrivate()) {
+                    profile_pic.setImageResource(R.drawable.private_face_in_recent_calls);
+                    contact_name.setText(R.string.private_number);
+                } else {
+                    profile_pic.setImageResource(R.drawable.face_in_recent_calls);
+                    contact_name.setText(call.phoneNumber);
+                }
             }
 
             setType(call.callType);
@@ -257,27 +262,27 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                                 .putExtra(SingleContactActivity.CONTACT_LOOKUP_KEY, miniContact.lookupKey)
                 );
             } else {
-
-                BDB.from(activity)
-                        .setSubText(String.format(activity.getString(R.string.what_do_you_want_to_do_with___), call.phoneNumber))
-                        .setOptions(R.string.call, R.string.add_contact, R.string.message)
-                        .addFlag(BDialog.FLAG_OK)
-                        .setPositiveButtonListener(params -> {
-                            final int option = (int) params[0];
-                            switch (option) {
-                                case 0:
-                                    DialerActivity.call(call.phoneNumber, activity);
-                                    return true;
-                                case 1:
-                                    activity.startActivity(new Intent(activity, AddContactActivity.class).putExtra(AddContactActivity.CONTACT_NUMBER, call.phoneNumber));
-                                    return true;
-                                case 2:
-                                    S.sendMessage(call.phoneNumber, activity);
-                                    return true;
-                            }
-                            throw new IllegalArgumentException("option must be 0 or 1");
-                        })
-                        .show();
+                if (!call.isPrivate())
+                    BDB.from(activity)
+                            .setSubText(String.format(activity.getString(R.string.what_do_you_want_to_do_with___), call.phoneNumber))
+                            .setOptions(R.string.call, R.string.add_contact, R.string.message)
+                            .addFlag(BDialog.FLAG_OK)
+                            .setPositiveButtonListener(params -> {
+                                final int option = (int) params[0];
+                                switch (option) {
+                                    case 0:
+                                        DialerActivity.call(call.phoneNumber, activity);
+                                        return true;
+                                    case 1:
+                                        activity.startActivity(new Intent(activity, AddContactActivity.class).putExtra(AddContactActivity.CONTACT_NUMBER, call.phoneNumber));
+                                        return true;
+                                    case 2:
+                                        S.sendMessage(call.phoneNumber, activity);
+                                        return true;
+                                }
+                                throw new IllegalArgumentException("option must be 0 or 1");
+                            })
+                            .show();
             }
         }
     }

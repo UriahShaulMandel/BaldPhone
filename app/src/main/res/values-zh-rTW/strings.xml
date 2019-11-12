@@ -361,6 +361,7 @@
     <string name="donate">贊助</string>
     <string name="emergency_button">緊急按鈕</string>
     <string name="emergency_settings_subtext">你可以選擇添加緊急按鈕到桌面。</string>
+    <string name="private_number">Private Number</string>
 
 
     <string-array name="names_for_screenshots">

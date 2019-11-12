@@ -372,6 +372,7 @@
     <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
     <string name="emergency_button">Emergency Button</string>
     <string name="donate">Donate</string>
+    <string name="private_number">Private Number</string>
 
 
 </resources>
