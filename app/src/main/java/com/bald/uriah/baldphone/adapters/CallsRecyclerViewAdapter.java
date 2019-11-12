@@ -139,7 +139,7 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                 if (miniContact.photo == null) {
                     image_letter.setText(miniContact.name != null ?
                             miniContact.name.length() >= 1 ?
-                                    miniContact.name.substring(0, 1) :
+                                    miniContact.name.substring(0, 1).toUpperCase() :
                                     null :
                             null);
                     image_letter.setVisibility(View.VISIBLE);
