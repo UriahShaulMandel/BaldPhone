@@ -72,7 +72,7 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
     private final List<Call> callList;
     private final BaldActivity activity;
     private final LayoutInflater inflater;
-    private final Drawable letterContactBackground;
+    private final Drawable letterContactBackground, privateFace, face;
 
     public CallsRecyclerViewAdapter(List<Call> callList, BaldActivity activity) {
         this.callList = callList;
@@ -85,7 +85,8 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
         textColorOnRegular = typedValue.data;
         theme.resolveAttribute(R.attr.bald_background, typedValue, true);
         this.letterContactBackground = new ColorDrawable(typedValue.data);
-
+        this.privateFace = activity.getDrawable(R.drawable.private_face_in_recent_calls);
+        this.face = activity.getDrawable(R.drawable.face_in_recent_calls);
     }
 
     @NonNull
@@ -143,7 +144,7 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                                     null :
                             null);
                     image_letter.setVisibility(View.VISIBLE);
-                    profile_pic.setImageDrawable(letterContactBackground);
+                    Glide.with(profile_pic).load(letterContactBackground).into(profile_pic);
                 } else {
                     if (S.isValidContextForGlide(profile_pic.getContext()))
                         Glide.with(profile_pic).load(miniContact.photo).into(profile_pic);
@@ -157,10 +158,10 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
             } else {
                 image_letter.setVisibility(View.INVISIBLE);
                 if (call.isPrivate()) {
-                    profile_pic.setImageResource(R.drawable.private_face_in_recent_calls);
+                    Glide.with(profile_pic).load(privateFace).into(profile_pic);
                     contact_name.setText(R.string.private_number);
                 } else {
-                    profile_pic.setImageResource(R.drawable.face_in_recent_calls);
+                    Glide.with(profile_pic).load(face).into(profile_pic);
                     contact_name.setText(call.phoneNumber);
                 }
             }
