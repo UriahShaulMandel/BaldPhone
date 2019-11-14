@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,14 +16,9 @@
   ~ limitations under the License.
   -->
 
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <corners android:radius="?attr/bald_button_corners_radius" />
-
-    <solid android:color="@color/missed" />
-
-
-    <stroke
-        android:width="?attr/bald_stroke_size"
-        android:color="?attr/bald_stroke_color" />
-</shape>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/btn_disabled" android:state_enabled="false" />
+    <item android:drawable="@drawable/btn_clicked" android:state_enabled="true" android:state_pressed="true" />
+    <item android:drawable="@drawable/btn_enabled" android:state_enabled="true" android:state_focused="true" />
+    <item android:drawable="@drawable/btn_blue" android:state_enabled="true" />
+</selector>

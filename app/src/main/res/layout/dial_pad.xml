@@ -244,7 +244,7 @@
             style="@style/ButtonsText.Auto"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@drawable/style_for_buttons"
+        android:background="@drawable/style_for_buttons_blue"
             android:padding="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHeight_percent="0.18"
