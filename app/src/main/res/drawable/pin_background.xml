@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,16 +24,16 @@
 
     <!--</item>-->
     <item
-            android:top="1dp"
-            android:bottom="1dp"
-            android:right="1dp"
-            android:left="1dp">
+        android:bottom="1dp"
+        android:left="1dp"
+        android:right="1dp"
+        android:top="1dp">
         <shape android:shape="rectangle">
-            <solid android:color="?bald_background"/>
-            <corners android:radius="@dimen/pin_radius"/>
+            <solid android:color="?bald_background" />
+            <corners android:radius="@dimen/pin_radius" />
             <stroke
-                    android:color="?bald_decoration_on_background"
-                    android:width="1dp"/>
+                android:width="1dp"
+                android:color="?bald_decoration_on_background" />
 
         </shape>
 

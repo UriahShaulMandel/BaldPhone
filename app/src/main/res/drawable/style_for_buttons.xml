@@ -17,8 +17,8 @@
   -->
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="false" android:drawable="@drawable/btn_disabled"/>
-    <item android:state_pressed="true" android:state_enabled="true" android:drawable="@drawable/btn_clicked"/>
-    <item android:state_focused="true" android:state_enabled="true" android:drawable="@drawable/btn_enabled"/>
-    <item android:state_enabled="true" android:drawable="@drawable/btn_enabled"/>
+    <item android:drawable="@drawable/btn_disabled" android:state_enabled="false" />
+    <item android:drawable="@drawable/btn_clicked" android:state_enabled="true" android:state_pressed="true" />
+    <item android:drawable="@drawable/btn_enabled" android:state_enabled="true" android:state_focused="true" />
+    <item android:drawable="@drawable/btn_enabled" android:state_enabled="true" />
 </selector>

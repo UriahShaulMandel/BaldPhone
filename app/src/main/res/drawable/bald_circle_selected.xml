@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,9 +15,9 @@
   -->
 
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-       android:innerRadius="0dp"
-       android:shape="ring"
-       android:thickness="8dp"
-       android:useLevel="false">
-    <solid android:color="?bald_selected_on_background"/>
+    android:innerRadius="0dp"
+    android:shape="ring"
+    android:thickness="8dp"
+    android:useLevel="false">
+    <solid android:color="?bald_selected_on_background" />
 </shape>

@@ -17,8 +17,8 @@
   -->
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="false" android:drawable="@drawable/btn_disabled_no_border"/>
-    <item android:state_pressed="true" android:state_enabled="true" android:drawable="@drawable/btn_clicked_no_border"/>
-    <item android:state_focused="true" android:state_enabled="true" android:drawable="@drawable/btn_enabled_no_border"/>
-    <item android:state_enabled="true" android:drawable="@drawable/btn_enabled_no_border"/>
+    <item android:drawable="@drawable/btn_disabled_no_border" android:state_enabled="false" />
+    <item android:drawable="@drawable/btn_clicked_no_border" android:state_enabled="true" android:state_pressed="true" />
+    <item android:drawable="@drawable/btn_enabled_no_border" android:state_enabled="true" android:state_focused="true" />
+    <item android:drawable="@drawable/btn_enabled_no_border" android:state_enabled="true" />
 </selector>

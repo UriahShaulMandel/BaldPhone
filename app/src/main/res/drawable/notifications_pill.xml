@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,10 +15,10 @@
   -->
 
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-       android:shape="rectangle">
-    <corners android:radius="?bald_button_pill_corners_radius"/>
+    android:shape="rectangle">
+    <corners android:radius="?bald_button_pill_corners_radius" />
     <solid android:color="@color/battery_low" />
     <stroke
-            android:width="?bald_stroke_size"
-            android:color="?bald_stroke_color"/>
+        android:width="?bald_stroke_size"
+        android:color="?bald_stroke_color" />
 </shape>
