@@ -67,7 +67,7 @@ public class Call {
 
     @Nullable
     public MiniContact getMiniContact(Context context) {
-        if (contactUri == null) // private call
+        if (isPrivate())
             return null;
         Cursor cursor = null;
         try {
