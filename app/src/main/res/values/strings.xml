@@ -97,7 +97,7 @@
     <string name="clock">Clock</string>
     <string name="coming_soon">Coming Soon!</string>
     <string name="connection_settings">Connection</string>
-    <string name="contact_must_has_name">Contact must have a a Name!</string>
+    <string name="contact_must_has_name">Contact must have a Name!</string>
     <string name="contact_not_created">Contact not created!</string>
     <string name="contacts">Contacts</string>
     <string name="contacts_read_subtext">This permission is required in order to read contacts.</string>
