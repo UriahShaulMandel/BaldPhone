@@ -30,4 +30,6 @@
     <dimen name="padding_dividers">14dp</dimen>
     <dimen name="divider">2dp</dimen>
     <dimen name="key_radius">7dp</dimen>
+    <dimen name="dialer_suggestions_space">100dp</dimen>
+    <dimen name="dialer_suggestions_space_extended">170dp</dimen>
 </resources>

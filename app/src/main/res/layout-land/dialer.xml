@@ -20,6 +20,7 @@
     android:layout_height="match_parent"
     android:background="?bald_background"
     android:gravity="bottom|center"
+    android:id="@+id/constraint_layout"
     android:orientation="vertical">
 
     <com.bald.uriah.baldphone.views.BaldTitleBar

@@ -37,7 +37,6 @@ import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
@@ -108,18 +107,7 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
         this.cursor = cursor;
         applyToCursor();
         notifyDataSetChanged();
-
-        if (getItemCount() > 0) {
-            RecyclerView.SmoothScroller smoothScroller = new LinearSmoothScroller(activity) {
-                @Override
-                protected int getVerticalSnapPreference() {
-                    return LinearSmoothScroller.SNAP_TO_START;
-                }
-            };
-            smoothScroller.setTargetPosition(0);
-            recyclerView.getLayoutManager().startSmoothScroll(smoothScroller);
-        }
-
+        recyclerView.scrollToPosition(0);
     }
 
     @NonNull

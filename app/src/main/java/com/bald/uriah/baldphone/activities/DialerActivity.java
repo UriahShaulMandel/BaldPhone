@@ -32,9 +32,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.transition.TransitionManager;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.contacts.AddContactActivity;
@@ -61,11 +64,14 @@ public class DialerActivity extends BaldActivity {
     private ContentResolver contentResolver;
     private ContactRecyclerViewAdapter contactRecyclerViewAdapter;
     private RecyclerView recyclerView;
+    private ConstraintLayout constraintLayout;
+    private ConstraintSet defaultConstraintSet, extendedConstraintSet;
     private TextView tv_number;
     private View b_call, b_clear, b_hash, b_sulamit, b_backspace, empty_view;
     private View[] numpad;
     private StringBuilder number = new StringBuilder();
     private boolean playDialSounds;
+    private boolean isLandscape;
 
     public static void call(final CharSequence number, final Context context) {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
@@ -95,6 +101,7 @@ public class DialerActivity extends BaldActivity {
         if (!checkPermissions(this, requiredPermissions()))
             return;
         setContentView(R.layout.dialer);
+        isLandscape = getResources().getBoolean(R.bool.is_landscape);
         contentResolver = getContentResolver();
         playDialSounds = BPrefs.get(this).getBoolean(BPrefs.DIALER_SOUNDS_KEY, BPrefs.DIALER_SOUNDS_DEFAULT_VALUE) && !testing;
         if (playDialSounds)
@@ -129,15 +136,38 @@ public class DialerActivity extends BaldActivity {
             contactRecyclerViewAdapter = new ContactRecyclerViewAdapter(this, contactsCursor, recyclerView, ContactRecyclerViewAdapter.MODE_DEFAULT);
             recyclerView.setAdapter(contactRecyclerViewAdapter);
         }
+        if (!isLandscape) {
+            if (contactsCursor.getCount() > 0) {
+                constraintLayout.post(() -> {
+                    TransitionManager.beginDelayedTransition(constraintLayout);
+                    extendedConstraintSet.applyTo(constraintLayout);
+                });
+
+            } else {
+                constraintLayout.post(() -> {
+                    TransitionManager.beginDelayedTransition(constraintLayout);
+                    defaultConstraintSet.applyTo(constraintLayout);
+                });
+            }
+        }
     }
 
     private void attachXml() {
-        recyclerView = findViewById(R.id.contacts_recycler_view);
+        constraintLayout = findViewById(R.id.constraint_layout);
+        if (!isLandscape) {
+            defaultConstraintSet = new ConstraintSet();
+            defaultConstraintSet.clone(constraintLayout);
+            extendedConstraintSet = new ConstraintSet();
+            extendedConstraintSet.clone(constraintLayout);
+            extendedConstraintSet.constrainHeight(R.id.scrolling_helper, (int) getResources().getDimension(R.dimen.dialer_suggestions_space_extended));
+        }
+
+        recyclerView = constraintLayout.findViewById(R.id.contacts_recycler_view);
         final DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
         dividerItemDecoration.setDrawable(getDrawable(R.drawable.ll_divider));
         recyclerView.addItemDecoration(dividerItemDecoration);
 
-        tv_number = findViewById(R.id.tv_number);
+        tv_number = constraintLayout.findViewById(R.id.tv_number);
         numpad = new View[]{
                 findViewById(R.id.b_0),
                 findViewById(R.id.b_1),
