@@ -159,7 +159,7 @@ public class DialerActivity extends BaldActivity {
             defaultConstraintSet.clone(constraintLayout);
             extendedConstraintSet = new ConstraintSet();
             extendedConstraintSet.clone(constraintLayout);
-            extendedConstraintSet.constrainHeight(R.id.scrolling_helper, (int) getResources().getDimension(R.dimen.dialer_suggestions_space_extended));
+            extendedConstraintSet.setVerticalWeight(R.id.scrolling_helper, getResources().getInteger(R.integer.dialer_suggestions_space_extended));
         }
 
         recyclerView = constraintLayout.findViewById(R.id.contacts_recycler_view);
