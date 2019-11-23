@@ -29,17 +29,15 @@
 
     <TextClock
             android:id="@+id/clock"
-            style="@style/ButtonsText.Huge"
+        style="@style/ButtonsText.Auto"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1.2"
-            android:autoSizeTextType="uniform"
             android:background="@drawable/style_for_buttons"
             android:includeFontPadding="false"
             android:maxLines="1"
             android:textSize="70sp"
-            android:visibility="visible"
-            tools:ignore="UnusedAttribute"/>
+        android:visibility="visible" />
 
     <android.widget.Space
             android:layout_width="0dp"
