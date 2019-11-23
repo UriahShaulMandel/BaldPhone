@@ -31,6 +31,7 @@ import android.os.Handler;
 import android.os.Vibrator;
 import android.provider.Settings;
 import android.util.Log;
+import android.util.SparseArray;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -79,20 +80,31 @@ public class SettingsActivity extends BaldActivity {
     public static final int REQUEST_SELECT_CUSTOM_APP = 88;
     public static final float[] FONT_SIZES = new float[]{0.8f, 0.9f, 1.0f, 1.1f, 1.3f, 1.5f, 1.7f};
     public static final String SAVEABLE_HISTORY_KEY = "SAVEABLE_HISTORY_KEY";
-    private final List<SettingsItem>
-            mainSettingsItemList = new ArrayList<>(),
-            connectionSettingsList = new ArrayList<>(),
-            accessibilitySettingsList = new ArrayList<>(),
-            displaySettingsList = new ArrayList<>(),
-            personalizationSettingsList = new ArrayList<>();
+
+    private final Category
+            mainCategory = new Category(R.string.settings, R.drawable.settings_on_button, -1),
+            connectionCategory = new Category(R.string.connection_settings, R.drawable.wifi_on_button, 0),
+            accessibilityCategory = new Category(R.string.accessibility_settings, R.drawable.accessibility_on_button, 1),
+            displayCategory = new Category(R.string.display_settings, R.drawable.screen_on_button, 2),
+            personalizationCategory = new Category(R.string.personalization_settings, R.drawable.brush_on_button, 3);
+    private final Category[] categoriesArray = new Category[]{mainCategory, connectionCategory, accessibilityCategory, displayCategory, displayCategory, personalizationCategory};
+    private final SparseArray<Category> categorySparseArray;
+    private Category currentCategory = mainCategory;
+
     private Ringtone ringtone;
     private Vibrator vibrator;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
     private RecyclerView recyclerView;
-    private int section = -1;
     private BaldPrefsUtils baldPrefsUtils;
-    private List<SettingsItem> settingsList = mainSettingsItemList;
+    private BaldTitleBar baldTitleBar;
+
+    {
+        categorySparseArray = new SparseArray<>();
+        for (final Category category : categoriesArray) {
+            categorySparseArray.append(category.id, category);
+        }
+    }
 
     @SuppressLint("CommitPrefEdits")
     @Override
@@ -106,9 +118,8 @@ public class SettingsActivity extends BaldActivity {
         editor = sharedPreferences.edit();
 
         vibrator = (sharedPreferences.getBoolean(BPrefs.VIBRATION_FEEDBACK_KEY, BPrefs.VIBRATION_FEEDBACK_DEFAULT_VALUE)) ? (Vibrator) getSystemService(VIBRATOR_SERVICE) : null;
-        ((BaldTitleBar) findViewById(R.id.bald_title_bar)).getBt_back().setOnClickListener((v) -> {
-            onBackPressed();
-        });
+        baldTitleBar = findViewById(R.id.bald_title_bar);
+        baldTitleBar.getBt_back().setOnClickListener((v) -> onBackPressed());
 
         recyclerView = findViewById(R.id.child);
 
@@ -141,52 +152,30 @@ public class SettingsActivity extends BaldActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt(SAVEABLE_HISTORY_KEY, section);
+        outState.putInt(SAVEABLE_HISTORY_KEY, currentCategory.id);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        this.section = savedInstanceState.getInt(SAVEABLE_HISTORY_KEY);
-        if (section != -1)
-            settingsList.get(section).onClick(null);
+        int id = savedInstanceState.getInt(SAVEABLE_HISTORY_KEY);
+        if (id != -1)
+            newCategory(categorySparseArray.get(id));
     }
 
     private void populateSettingsList() {
-        final SettingsItem back =
-                new RunnableSettingsItem(R.string.back, ((v) -> goBack()), R.drawable.close_on_button);
-        connectionSettingsList.add(back);
-        accessibilitySettingsList.add(back);
-        displaySettingsList.add(back);
-        personalizationSettingsList.add(back);
-        mainSettingsItemList.add(new RunnableSettingsItem(
-                R.string.connection_settings,
-                (v) -> newList(connectionSettingsList, 0),
-                R.drawable.wifi_on_button
-        ));
-        mainSettingsItemList.add(new RunnableSettingsItem(
-                R.string.accessibility_settings,
-                (v) -> newList(accessibilitySettingsList, 1),
-                R.drawable.accessibility_on_button
-        ));
-        mainSettingsItemList.add(new RunnableSettingsItem(
-                R.string.display_settings,
-                (v) -> newList(displaySettingsList, 2),
-                R.drawable.screen_on_button
-        ));
-        mainSettingsItemList.add(new RunnableSettingsItem(
-                R.string.personalization_settings,
-                (v) -> newList(personalizationSettingsList, 3),
-                R.drawable.brush_on_button
-        ));
+        mainCategory.add(connectionCategory);
+        mainCategory.add(accessibilityCategory);
+        mainCategory.add(displayCategory);
+        mainCategory.add(personalizationCategory);
 
-        mainSettingsItemList.add(
+        mainCategory.add(
                 new RunnableSettingsItem(R.string.set_home_screen,
                         v -> FakeLauncherActivity.resetPreferredLauncherAndOpenChooser(this)
                         , R.drawable.home_on_button)
         );
 
-        mainSettingsItemList.add(new RunnableSettingsItem(R.string.advanced_options, v -> {
+        mainCategory.add(new RunnableSettingsItem(R.string.advanced_options, v -> {
             try {
                 startActivity(new Intent(android.provider.Settings.ACTION_SETTINGS));
             } catch (ActivityNotFoundException e) {
@@ -198,10 +187,10 @@ public class SettingsActivity extends BaldActivity {
         }, R.drawable.settings_on_button));
 
         final SettingsItem keyboard = new RunnableSettingsItem(R.string.set_keyboard, v -> startActivity(new Intent(this, KeyboardChangerActivity.class)), R.drawable.keyboard_on_button);
-        accessibilitySettingsList.add(keyboard);
-        personalizationSettingsList.add(keyboard);
+        accessibilityCategory.add(keyboard);
+        personalizationCategory.add(keyboard);
 
-        personalizationSettingsList.add(new RunnableSettingsItem(R.string.language_settings, v -> {
+        personalizationCategory.add(new RunnableSettingsItem(R.string.language_settings, v -> {
             try {
                 startActivity(new Intent(Settings.ACTION_LOCALE_SETTINGS));
             } catch (ActivityNotFoundException e) {
@@ -212,7 +201,7 @@ public class SettingsActivity extends BaldActivity {
             }
         }, R.drawable.translate_on_button));
 
-        personalizationSettingsList.add(
+        personalizationCategory.add(
                 new BDBSettingsItem(R.string.emergency_button, BDB.from(this)
                         .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL).setTitle(R.string.emergency_button)
                         .setSubText(R.string.emergency_settings_subtext)
@@ -224,8 +213,8 @@ public class SettingsActivity extends BaldActivity {
                         })
                         .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.EMERGENCY_BUTTON_VISIBLE_KEY, BPrefs.EMERGENCY_BUTTON_VISIBLE_DEFAULT_VALUE) ? 0 : 1),
                         R.drawable.emergency));
-        personalizationSettingsList.add(new RunnableSettingsItem(R.string.time_changer, v -> startActivity(new Intent(this, PillTimeSetterActivity.class)), R.drawable.pill));
-        personalizationSettingsList.add(
+        personalizationCategory.add(new RunnableSettingsItem(R.string.time_changer, v -> startActivity(new Intent(this, PillTimeSetterActivity.class)), R.drawable.pill));
+        personalizationCategory.add(
                 // !! Don't change string without changing it too in onActivityResult!!
                 new BDBSettingsItem(R.string.custom_app,
                         BDB.from(this)
@@ -244,8 +233,8 @@ public class SettingsActivity extends BaldActivity {
 
                 )
         );
-        accessibilitySettingsList.add(new RunnableSettingsItem(R.string.accessibility_level, v -> startActivity(new Intent(this, AccessibilityLevelChangerActivity.class)), R.drawable.accessibility_on_button));
-        accessibilitySettingsList.add(
+        accessibilityCategory.add(new RunnableSettingsItem(R.string.accessibility_level, v -> startActivity(new Intent(this, AccessibilityLevelChangerActivity.class)), R.drawable.accessibility_on_button));
+        accessibilityCategory.add(
                 new BDBSettingsItem(R.string.accidental_touches, BDB.from(this)
                         .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL).setTitle(R.string.accidental_touches)
                         .setSubText(R.string.accidental_touches_settings_subtext)
@@ -256,7 +245,7 @@ public class SettingsActivity extends BaldActivity {
                             return true;
                         })
                         .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.USE_ACCIDENTAL_GUARD_KEY, BPrefs.USE_ACCIDENTAL_GUARD_DEFAULT_VALUE) ? 0 : 1), R.drawable.blocked_on_button));
-        accessibilitySettingsList.add(
+        accessibilityCategory.add(
                 new BDBSettingsItem(R.string.strong_hand,
                         BDB.from(this)
                                 .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
@@ -285,10 +274,10 @@ public class SettingsActivity extends BaldActivity {
                         .setOptionsStartingIndex(() -> sharedPreferences.getInt(BPrefs.THEME_KEY, BPrefs.THEME_DEFAULT_VALUE)), R.drawable.brush_on_button
 
         );
-        displaySettingsList.add(themeSettingsItem);
-        personalizationSettingsList.add(themeSettingsItem);
+        displayCategory.add(themeSettingsItem);
+        personalizationCategory.add(themeSettingsItem);
 
-        personalizationSettingsList.add(new BDBSettingsItem(R.string.status_bar_settings,
+        personalizationCategory.add(new BDBSettingsItem(R.string.status_bar_settings,
                 BDB.from(this)
                         .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
                         .setTitle(R.string.status_bar_settings)
@@ -303,7 +292,7 @@ public class SettingsActivity extends BaldActivity {
                 R.drawable.status_bar_on_button
         ));
 
-        personalizationSettingsList.add(new BDBSettingsItem(R.string.notes_settings,
+        personalizationCategory.add(new BDBSettingsItem(R.string.notes_settings,
                 BDB.from(this)
                         .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
                         .setTitle(R.string.notes_settings)
@@ -317,7 +306,7 @@ public class SettingsActivity extends BaldActivity {
                         .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.NOTE_VISIBLE_KEY, BPrefs.NOTE_VISIBLE_DEFAULT_VALUE) ? 0 : 1),
                 R.drawable.note_on_button
         ));
-        personalizationSettingsList.add(new BDBSettingsItem(R.string.dialer_sounds,
+        personalizationCategory.add(new BDBSettingsItem(R.string.dialer_sounds,
                 BDB.from(this)
                         .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
                         .setTitle(R.string.dialer_sounds)
@@ -332,7 +321,7 @@ public class SettingsActivity extends BaldActivity {
                 R.drawable.phone_on_button
         ));
 
-        personalizationSettingsList.add(new BDBSettingsItem(R.string.low_battery_alert,
+        personalizationCategory.add(new BDBSettingsItem(R.string.low_battery_alert,
                 BDB.from(this)
                         .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
                         .setTitle(R.string.low_battery_alert)
@@ -349,15 +338,15 @@ public class SettingsActivity extends BaldActivity {
         SettingsItem fontSettingsItem = new RunnableSettingsItem(R.string.font, v -> {
             startActivity(new Intent(this, FontChangerActivity.class));
         }, R.drawable.font_on_button);
-        personalizationSettingsList.add(fontSettingsItem);
-        displaySettingsList.add(fontSettingsItem);
-        accessibilitySettingsList.add(fontSettingsItem);
+        personalizationCategory.add(fontSettingsItem);
+        displayCategory.add(fontSettingsItem);
+        accessibilityCategory.add(fontSettingsItem);
 
         setupBrightness();
         setupAlarmVolume();
 
         //connections
-        connectionSettingsList.add(new RunnableSettingsItem(R.string.airplane_mode, v -> {
+        connectionCategory.add(new RunnableSettingsItem(R.string.airplane_mode, v -> {
             try {
                 startActivity(new Intent(Settings.ACTION_AIRPLANE_MODE_SETTINGS));
             } catch (ActivityNotFoundException e) {
@@ -367,7 +356,7 @@ public class SettingsActivity extends BaldActivity {
 
             }
         }, R.drawable.airplane_mode_on_button));
-        connectionSettingsList.add(new RunnableSettingsItem(R.string.wifi, v -> {
+        connectionCategory.add(new RunnableSettingsItem(R.string.wifi, v -> {
             try {
                 startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT));
             } catch (ActivityNotFoundException e) {
@@ -377,7 +366,7 @@ public class SettingsActivity extends BaldActivity {
 
             }
         }, R.drawable.wifi_on_button));
-        connectionSettingsList.add(new RunnableSettingsItem(R.string.bluetooth, v -> {
+        connectionCategory.add(new RunnableSettingsItem(R.string.bluetooth, v -> {
             try {
                 startActivity(new Intent(Settings.ACTION_BLUETOOTH_SETTINGS));
             } catch (ActivityNotFoundException e) {
@@ -391,7 +380,7 @@ public class SettingsActivity extends BaldActivity {
         NfcManager manager = (NfcManager) getSystemService(Context.NFC_SERVICE);
         NfcAdapter adapter = manager.getDefaultAdapter();
         if (adapter != null)
-            connectionSettingsList.add(new RunnableSettingsItem(R.string.nfc, v -> {
+            connectionCategory.add(new RunnableSettingsItem(R.string.nfc, v -> {
                 try {
                     startActivity(new Intent(Settings.ACTION_NFC_SETTINGS));
                 } catch (ActivityNotFoundException e) {
@@ -401,7 +390,7 @@ public class SettingsActivity extends BaldActivity {
 
                 }
             }, R.drawable.nfc_on_button));
-        connectionSettingsList.add(new RunnableSettingsItem(R.string.location, v -> {
+        connectionCategory.add(new RunnableSettingsItem(R.string.location, v -> {
             try {
                 startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
             } catch (ActivityNotFoundException e) {
@@ -422,7 +411,7 @@ public class SettingsActivity extends BaldActivity {
         linearLayout.addView(pic);
         Glide.with(pic).load(R.drawable.me).into(pic);
 
-        mainSettingsItemList.add(
+        mainCategory.add(
                 new BDBSettingsItem(R.string.about,
                         BDB.from(this)
                                 .addFlag(BDialog.FLAG_OK)
@@ -433,32 +422,32 @@ public class SettingsActivity extends BaldActivity {
 
                         , R.drawable.info_on_button)
         );
-        mainSettingsItemList.add(
+        mainCategory.add(
                 new RunnableSettingsItem(R.string.donate,
                         v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.patreon.com/baldphone"))),
                         R.drawable.donate_on_button)
         );
-        mainSettingsItemList.add(
+        mainCategory.add(
                 new RunnableSettingsItem(R.string.technical_information,
                         v -> startActivity(new Intent(this, TechnicalInfoActivity.class)),
                         R.drawable.tech_info_on_button)
         );
-        mainSettingsItemList.add(
+        mainCategory.add(
                 new RunnableSettingsItem(R.string.share_baldphone, v -> S.shareBaldPhone(this), R.drawable.share_on_background)
         );
 
-        mainSettingsItemList.add(
+        mainCategory.add(
                 new RunnableSettingsItem(R.string.feedback,
                         v -> startActivity(new Intent(this, FeedbackActivity.class)),
                         R.drawable.feedback_on_button)
         );
         if (!checkPermissions(this, -1))
-            mainSettingsItemList.add(
+            mainCategory.add(
                     new RunnableSettingsItem(R.string.grant_all_permissions,
                             v -> startActivity(new Intent(this, PermissionActivity.class)),
                             R.drawable.grant_all_permissions_on_button)
             );
-        mainSettingsItemList.add(
+        mainCategory.add(
                 new BDBSettingsItem(R.string.crash_reports,
                         BDB.from(this)
                                 .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL).setTitle(R.string.crash_reports)
@@ -472,7 +461,7 @@ public class SettingsActivity extends BaldActivity {
                                 .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.CRASH_REPORTS_KEY, BPrefs.CRASH_REPORTS_DEFAULT_VALUE) ? 0 : 1),
                         R.drawable.upload_on_button));
         if (BuildConfig.FLAVOR.equals("baldUpdates"))
-            mainSettingsItemList.add(
+            mainCategory.add(
                     new RunnableSettingsItem(R.string.check_for_updates,
                             v -> UpdatingUtil.checkForUpdates(this, true),
                             R.drawable.updates_on_button)
@@ -483,23 +472,21 @@ public class SettingsActivity extends BaldActivity {
      * @return true if succeeded
      */
     private boolean goBack() {
-        if (section == -1)
+        if (currentCategory == mainCategory)
             return false;
         if (vibrator != null)
             vibrator.vibrate(D.vibetime);
 
-        section = -1;
-        settingsList = mainSettingsItemList;
-        recyclerView.getAdapter().notifyDataSetChanged();
-        recyclerView.scheduleLayoutAnimation();
+        newCategory(mainCategory);
         return true;
     }
 
-    private void newList(List<SettingsItem> newList, int section) {
-        this.section = section;
-        settingsList = newList;
+    private void newCategory(Category category) {
+        this.currentCategory = category;
         recyclerView.getAdapter().notifyDataSetChanged();
         recyclerView.scheduleLayoutAnimation();
+        baldTitleBar.setTitle(category.textResId);
+
     }
 
     private void setupAlarmVolume() {
@@ -546,7 +533,7 @@ public class SettingsActivity extends BaldActivity {
                         .setExtraView(volumeSeekBar), R.drawable.clock_on_background
 
         );
-        personalizationSettingsList.add(alarmVolumeSettingsItem);
+        personalizationCategory.add(alarmVolumeSettingsItem);
 
     }
 
@@ -610,7 +597,7 @@ public class SettingsActivity extends BaldActivity {
                         .setPositiveButtonListener(params -> true)
                         .setExtraView(brightnessSeekBarHolder), R.drawable.brightness_on_button
         );
-        displaySettingsList.add(brightnessSettingsItem);
+        displayCategory.add(brightnessSettingsItem);
     }
 
     @Override
@@ -642,13 +629,13 @@ public class SettingsActivity extends BaldActivity {
 
         @Override
         public int getItemCount() {
-            return settingsList.size();
+            return currentCategory.size();
         }
 
         @Override
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
             super.onBindViewHolder(holder, position);
-            holder.update(settingsList.get(position));
+            holder.update(currentCategory.get(position));
         }
 
         public class ViewHolder extends RecyclerView.ViewHolder {
@@ -708,6 +695,34 @@ public class SettingsActivity extends BaldActivity {
         @Override
         public void onClick(View v) {
             onClickListener.onClick(v);
+        }
+    }
+
+    public class Category extends SettingsItem {
+        public final List<SettingsItem> settingsItemList;
+        public final int id;
+
+        public Category(int stringRes, int drawableRes, int id) {
+            super(stringRes, drawableRes);
+            this.settingsItemList = new ArrayList<>();
+            this.id = id;
+        }
+
+        public void add(SettingsItem settingsItem) {
+            settingsItemList.add(settingsItem);
+        }
+
+        public SettingsItem get(int index) {
+            return settingsItemList.get(index);
+        }
+
+        public int size() {
+            return settingsItemList.size();
+        }
+
+        @Override
+        public void onClick(View v) {
+            newCategory(this);
         }
     }
 

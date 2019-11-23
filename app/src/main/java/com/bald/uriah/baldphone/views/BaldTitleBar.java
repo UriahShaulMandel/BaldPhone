@@ -29,6 +29,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.annotation.StringRes;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BPrefs;
@@ -120,11 +121,14 @@ public class BaldTitleBar extends LinearLayout {
 
     }
 
+    public void setTitle(@StringRes int resId) {
+        this.title = getResources().getString(resId);
+        tv_title.setText(title);
+    }
+
     public void setTitle(CharSequence title) {
         this.title = title;
-        if (tv_title != null) {
-            tv_title.setText(title);
-        }
+        tv_title.setText(title);
     }
 
     /**
