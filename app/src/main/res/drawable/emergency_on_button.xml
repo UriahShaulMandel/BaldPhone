@@ -1,0 +1,43 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="52"
+    android:viewportHeight="52">
+    <path
+        android:fillColor="?bald_decoration_on_background"
+        android:pathData="M25,2.4979h2v6h-2z" />
+    <path
+        android:fillColor="?bald_decoration_on_background"
+        android:pathData="M3,24.4979h6v2h-6z" />
+    <path
+        android:fillColor="?bald_decoration_on_background"
+        android:pathData="M43,24.4979h6v2h-6z" />
+    <path
+        android:fillColor="?bald_decoration_on_background"
+        android:pathData="M40.1719,9.912l4.2427,-4.2427l1.4141,1.4141l-4.2427,4.2427z" />
+    <path
+        android:fillColor="?bald_decoration_on_background"
+        android:pathData="M6.1719,7.0833l1.4141,-1.4141l4.2427,4.2427l-1.4141,1.4141z" />
+    <path
+        android:fillColor="?bald_decoration_on_background"
+        android:pathData="M10,39.4222h14.9995V27.9121L22.5,30.412l-4.2427,-4.2427l1.4141,-1.4141L22.5,27.5838l3.4995,-3.5l3.5005,3.5l2.8286,-2.8286l1.4141,1.4141L29.5,30.412l-2.5005,-2.5001v11.5104H42v-11.9201c0,-8.83 -7.18,-16 -16,-16s-16,7.17 -16,16V39.4222z" />
+    <path
+        android:fillColor="?bald_decoration_on_background"
+        android:pathData="M42.92,41.4221H9.08C5.17,41.4221 2,44.5921 2,48.5021v1h48v-1C50,44.5921 46.83,41.4221 42.92,41.4221z" />
+</vector>
