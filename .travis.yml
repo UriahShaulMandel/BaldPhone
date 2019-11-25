@@ -18,6 +18,7 @@ android:
 jdk:
   - oraclejdk8
 before_script:
+  - pwd
   - chmod +x gradlew
   - mkdir -p /home/travis/sdcard/
   - mksdcard -l baldphonesdcard 128M /home/travis/sdcard/sdcard.img
