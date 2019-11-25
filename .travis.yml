@@ -28,6 +28,7 @@ before_script:
   - adb shell settings put global transition_animation_scale 0 &
   - adb shell settings put global animator_duration_scale 0 &
   - adb shell pm disable com.android.launcher
+  - ./gradlew assemblebaldUpdatesDebug
   - ./gradlew installbaldUpdatesDebug
   - adb shell settings put secure enabled_notification_listeners %nlisteners:com.bald.uriah.baldphone/com.bald.uriah.baldphone.services.NotificationListenerService
   - adb shell ime enable com.bald.uriah.baldphone/.keyboard.BaldInputMethodService
@@ -43,6 +44,11 @@ script:
   - git config user.name "UriahShaulMandelTravis"
   - mkdir -p /home/travis/BaldPhoneScreenshots/screenshots
   - adb pull /sdcard/Pictures/screenshots /home/travis/BaldPhoneScreenshots/screenshots
+  - branch_name=`git branch | grep \* | cut -d ' ' -f2`
+  - folder_name="/home/travis/BaldPhoneScreenshots/apks/$branch_name"
+  - file_name="/home/travis/BaldPhoneScreenshots/apks/$branch_name/tmp_apk.apk"
+  - mkdir -p "$folder_name"
+  - cp home/travis/BaldPhone/app/build/outputs/apk/baldUpdates/debug/app-baldUpdates-debug.apk "$file_name"
   - git add --all :/
   - git commit -am "Uploading Auto Genereated Screenshots from travis"
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then git push https://UriahShaulMandel:${GITHUB_API_KEY}@${GH_REF} HEAD:master; fi'
