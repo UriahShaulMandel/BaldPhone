@@ -35,7 +35,7 @@ import com.bald.uriah.baldphone.utils.D;
 public class TutorialFragment2 extends TutorialFragment {
     private Vibrator vibrator;
     private TextView[] presses = new TextView[3];
-    private TextView[] selected = new TextView[3];
+    private View[] selected = new View[3];
 
     private SharedPreferences sharedPreferences;
     @ColorInt

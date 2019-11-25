@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,113 +15,268 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-            android:id="@+id/bald"
-            style="@style/BackgroundText.Huge"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="80dp"
-            android:layout_marginBottom="8dp"
-            android:gravity="center"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:text="@string/first_please_select_how_you_want_to_interact_with_buttons"
-            app:layout_constraintBottom_toTopOf="@+id/long_presses"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+    <Space
+        android:id="@+id/middle"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
 
-    <TextView
-            android:id="@+id/long_presses_selected"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="@string/selected"
-            android:textColor="@color/black"
-            android:textSize="@dimen/medium"
-            app:layout_constraintBottom_toTopOf="@+id/long_presses"
-            app:layout_constraintEnd_toEndOf="@+id/long_presses"
-            app:layout_constraintStart_toStartOf="@+id/long_presses"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/table"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toTopOf="@id/long_presses_selected"
+        app:layout_constraintEnd_toEndOf="@+id/short_presses"
+        app:layout_constraintStart_toStartOf="@+id/long_presses"
+        app:layout_constraintTop_toTopOf="@id/middle">
 
-    <TextView
-            android:id="@+id/long_presses"
-            style="@style/ButtonsText.Medium"
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/BackgroundText"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="48dp"
-            android:background="@drawable/btn_selected"
-            android:padding="5dp"
+            android:background="?bald_button"
+            android:gravity="center"
             android:text="@string/high_level"
-            android:textColor="?bald_text_on_selected"
+            app:layout_constraintBottom_toTopOf="@+id/textView9"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/BackgroundText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?bald_button"
+            android:gravity="center"
+            android:text="@string/medium_level"
+            app:layout_constraintBottom_toTopOf="@+id/textView10"
+            app:layout_constraintEnd_toStartOf="@+id/textView7"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView7"
+            style="@style/BackgroundText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?bald_button"
+            android:gravity="center"
+            android:text="@string/regular_level"
+            app:layout_constraintBottom_toTopOf="@+id/textView11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView8"
+            style="@style/BackgroundText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?bald_button"
+
+            android:gravity="center"
+            android:text="@string/click_delay"
+            app:layout_constraintBottom_toTopOf="@+id/textView12"
+            app:layout_constraintEnd_toStartOf="@+id/textView9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView9"
+            style="@style/BackgroundText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/_long"
+            app:layout_constraintBottom_toTopOf="@+id/textView13"
+            app:layout_constraintEnd_toStartOf="@+id/textView10"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView10"
+            style="@style/BackgroundText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/_short"
+            app:layout_constraintBottom_toTopOf="@+id/textView14"
+            app:layout_constraintEnd_toStartOf="@+id/textView11"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView11"
+            style="@style/BackgroundText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/no_delay"
+            app:layout_constraintBottom_toTopOf="@+id/textView15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+        <TextView
+            android:id="@+id/textView12"
+            style="@style/BackgroundText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?bald_button"
+            android:gravity="center"
+            android:text="@string/scrolling"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="1"
-            app:layout_constraintEnd_toStartOf="@+id/medium_presses"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@+id/textView13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView13"
+            style="@style/BackgroundText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/arrows"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView14"
+            app:layout_constraintStart_toEndOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/textView14"
+            style="@style/BackgroundText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/arrows"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView15"
+            app:layout_constraintStart_toEndOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView15"
+            style="@style/BackgroundText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/touch"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-            android:id="@+id/medium_presses_selected"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="@string/selected"
-            android:textColor="@color/black"
-            android:textSize="@dimen/medium"
-            app:layout_constraintBottom_toTopOf="@+id/medium_presses"
-            app:layout_constraintEnd_toEndOf="@+id/medium_presses"
-            app:layout_constraintStart_toStartOf="@+id/medium_presses"/>
+        android:id="@+id/bald"
+        style="@style/BackgroundText.Auto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="@string/first_please_select_how_you_want_to_interact_with_buttons"
+        app:layout_constraintBottom_toTopOf="@id/middle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/long_presses_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:src="@drawable/arrow_down_on_background"
+        app:layout_constraintBottom_toTopOf="@+id/long_presses"
+        app:layout_constraintEnd_toEndOf="@+id/long_presses"
+        app:layout_constraintStart_toStartOf="@+id/long_presses" />
+
+    <TextView
+        android:id="@+id/long_presses"
+        style="@style/ButtonsText.Medium"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/btn_selected"
+        android:padding="5dp"
+        android:text="@string/high_level"
+        android:textColor="?bald_text_on_selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/medium_presses"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/medium_presses_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:src="@drawable/arrow_down_on_background"
+        app:layout_constraintBottom_toTopOf="@+id/medium_presses"
+        app:layout_constraintEnd_toEndOf="@+id/medium_presses"
+        app:layout_constraintStart_toStartOf="@+id/medium_presses" />
 
     <com.bald.uriah.baldphone.views.MediumBaldButtonForTutorial
-            android:id="@+id/medium_presses"
-            style="@style/ButtonsText.Medium"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="48dp"
-            android:background="@drawable/style_for_buttons"
-            android:padding="5dp"
-            android:text="@string/medium_level"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="1"
-            app:layout_constraintEnd_toStartOf="@+id/short_presses"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/long_presses"/>
+        android:id="@+id/medium_presses"
+        style="@style/ButtonsText.Medium"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/style_for_buttons"
+        android:padding="5dp"
+        android:text="@string/medium_level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/short_presses"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/long_presses" />
+
+    <ImageView
+        android:id="@+id/short_presses_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:src="@drawable/arrow_down_on_background"
+        app:layout_constraintBottom_toTopOf="@+id/short_presses"
+        app:layout_constraintEnd_toEndOf="@+id/short_presses"
+        app:layout_constraintStart_toStartOf="@+id/short_presses" />
 
     <TextView
-            android:id="@+id/short_presses_selected"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="@string/selected"
-            android:textColor="@color/black"
-            android:textSize="@dimen/medium"
-            app:layout_constraintBottom_toTopOf="@+id/short_presses"
-            app:layout_constraintEnd_toEndOf="@+id/short_presses"
-            app:layout_constraintStart_toStartOf="@+id/short_presses"/>
-
-    <TextView
-            android:id="@+id/short_presses"
-            style="@style/ButtonsText.Medium"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="48dp"
-            android:background="@drawable/style_for_buttons"
-            android:padding="5dp"
-            android:text="@string/regular_level"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/medium_presses"/>
+        android:id="@+id/short_presses"
+        style="@style/ButtonsText.Medium"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/style_for_buttons"
+        android:padding="5dp"
+        android:text="@string/regular_level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/medium_presses" />
 </androidx.constraintlayout.widget.ConstraintLayout>
