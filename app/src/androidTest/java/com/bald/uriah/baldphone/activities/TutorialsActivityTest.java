@@ -39,7 +39,6 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.longClick;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
-import static org.hamcrest.Matchers.allOf;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
@@ -68,25 +67,25 @@ public class TutorialsActivityTest extends BaseActivityTest {
     public void tutorialsActivityTest() {
         mActivityTestRule.launchActivity(new Intent());
         sleep();
-        ViewInteraction baldImageButton = onView(allOf(withId(R.id.right_arrow), childAtPosition(childAtPosition(withId(R.id.view_pager_holder), 1), 1)));
+        ViewInteraction baldImageButton = onView(withId(R.id.right_arrow));
         baldImageButton.perform(longClick());
         sleep();
-        ViewInteraction appCompatTextView = onView(allOf(withId(R.id.short_presses), childAtPosition(childAtPosition(withId(R.id.id_dummy), 1), 6)));
+        ViewInteraction appCompatTextView = onView(withId(R.id.short_presses));
         appCompatTextView.perform(click());
         sleep();
-        ViewInteraction appCompatTextView2 = onView(allOf(withId(R.id.long_presses), childAtPosition(childAtPosition(withId(R.id.id_dummy), 1), 2)));
+        ViewInteraction appCompatTextView2 = onView(withId(R.id.long_presses));
         appCompatTextView2.perform(longClick());
         sleep();
-        ViewInteraction baldImageButton2 = onView(allOf(withId(R.id.right_arrow), childAtPosition(childAtPosition(withId(R.id.view_pager_holder), 1), 1)));
+        ViewInteraction baldImageButton2 = onView(withId(R.id.right_arrow));
         baldImageButton2.perform(longClick());
         sleep();
-        ViewInteraction baldImageButton3 = onView(allOf(withId(R.id.left_arrow), childAtPosition(childAtPosition(withId(R.id.view_pager_holder), 1), 0)));
+        ViewInteraction baldImageButton3 = onView(withId(R.id.left_arrow));
         baldImageButton3.perform(longClick());
         sleep();
-        ViewInteraction baldImageButton4 = onView(allOf(withId(R.id.right_arrow), childAtPosition(childAtPosition(withId(R.id.view_pager_holder), 1), 1)));
+        ViewInteraction baldImageButton4 = onView(withId(R.id.right_arrow));
         baldImageButton4.perform(longClick());
         sleep();
-        ViewInteraction baldImageButton5 = onView(allOf(withId(R.id.right_arrow), childAtPosition(childAtPosition(withId(R.id.view_pager_holder), 1), 1)));
+        ViewInteraction baldImageButton5 = onView(withId(R.id.right_arrow));
         baldImageButton5.perform(longClick());
     }
 }
