@@ -18,6 +18,7 @@ android:
 jdk:
   - oraclejdk8
 before_script:
+  - find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"
   - chmod +x gradlew
   - mkdir -p /home/travis/sdcard/
   - mksdcard -l baldphonesdcard 128M /home/travis/sdcard/sdcard.img
