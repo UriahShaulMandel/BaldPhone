@@ -84,6 +84,8 @@
     <declare-styleable name="ViewPagerHolder">
         <attr name="item_type" format="string"/>
         <attr name="use_circles" format="boolean"/>
+        <attr name="show_hints" format="boolean" />
+
     </declare-styleable>
 
     <declare-styleable name="BaldMultipleSelection">

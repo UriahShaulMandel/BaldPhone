@@ -57,6 +57,7 @@ public class ViewPagerHolder extends LinearLayout {
 
     private boolean noArrows = false;
     private boolean useCircle = false;
+    private boolean showHints = false;
 
     private int pageIndex;
 
@@ -90,12 +91,27 @@ public class ViewPagerHolder extends LinearLayout {
         if (itemType == null)
             itemType = context.getString(R.string.page);
         useCircle = typedArray.getBoolean(R.styleable.ViewPagerHolder_use_circles, false);
+        showHints = typedArray.getBoolean(R.styleable.ViewPagerHolder_show_hints, false);
+
         typedArray.recycle();
         of = String.valueOf(context.getText(R.string.of));
         this.setOrientation(VERTICAL);
 
         viewPager = noArrows ? new RtlViewPager(context) : new NonSwipeableViewPager(context);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
 
+            @Override
+            public void onPageSelected(int position) {
+                pageChangeHandler(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
         viewPager.setId(R.id.id_dummy);
         addView(viewPager, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f));
         setup();
@@ -109,9 +125,15 @@ public class ViewPagerHolder extends LinearLayout {
     @SuppressLint("ClickableViewAccessibility")
     private void setup() {
         final LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View arrowHolder = null;
+
+        if (showHints) {
+            final TextView textView = (TextView) layoutInflater.inflate(R.layout.view_pager_holder_hint, this, false);
+            textView.setText(noArrows ? R.string.swipe_left_or_right : R.string.press_next_or_back_buton);
+            addView(textView);
+        }
+
         if (!noArrows) {
-            arrowHolder = layoutInflater.inflate(R.layout.view_pager_scroller_helper_arrows, this, false);
+            final View arrowHolder = layoutInflater.inflate(R.layout.view_pager_holder_arrows, this, false);
             right = arrowHolder.findViewById(R.id.right_arrow);
             left = arrowHolder.findViewById(R.id.left_arrow);
             right.setOnClickListener(D.longer);
@@ -128,31 +150,12 @@ public class ViewPagerHolder extends LinearLayout {
                     viewPager.setCurrentItem(currentItem - 1);
 
             });
-
-        }
-
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                pageChangeHandler(position);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-            }
-        });
-
-        if (!noArrows)
             addView(arrowHolder, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, HEIGHT, context.getResources().getDisplayMetrics())));
+        }
 
         if (useCircle) {
             circles = layoutInflater.inflate(R.layout.circles, this, false);
             ((TabLayout) circles.findViewById(R.id.tab)).setupWithViewPager(viewPager);
-
         } else {
             page_of_ = (TextView) layoutInflater.inflate(R.layout.page_of_, this, false);
         }

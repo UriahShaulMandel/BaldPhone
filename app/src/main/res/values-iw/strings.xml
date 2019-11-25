@@ -387,6 +387,8 @@
     <string name="emergency_button">כפתור חירום</string>
     <string name="emergency_settings_subtext">בחר האם להוסיף כפתור חירום למסך הבית</string>
     <string name="private_number">Private Number</string>
+    <string name="swipe_left_or_right">Swipe left or right</string>
+    <string name="press_next_or_back_buton">Press next or back arrow</string>
 
 </resources>
 

@@ -14,12 +14,8 @@
   ~ limitations under the License.
   -->
 
-<com.bald.uriah.baldphone.views.ViewPagerHolder xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/view_pager_holder"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/BackgroundText.Medium"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?bald_background"
-    android:orientation="vertical"
-    app:show_hints="true"
-    app:use_circles="true" />
+    android:layout_height="wrap_content"
+    android:gravity="center" />

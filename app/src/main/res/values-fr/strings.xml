@@ -370,6 +370,8 @@
     <string name="emergency_button">Emergency Button</string>
     <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
     <string name="private_number">Private Number</string>
+    <string name="swipe_left_or_right">Swipe left or right</string>
+    <string name="press_next_or_back_buton">Press next or back arrow</string>
 
 
 </resources>
