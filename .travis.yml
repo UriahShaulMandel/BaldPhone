@@ -29,6 +29,7 @@ before_script:
   - adb shell settings put global animator_duration_scale 0 &
   - adb shell pm disable com.android.launcher
   - ./gradlew assemblebaldUpdatesDebug
+  - ./gradlew installbaldUpdatesDebug
   - adb shell settings put secure enabled_notification_listeners %nlisteners:com.bald.uriah.baldphone/com.bald.uriah.baldphone.services.NotificationListenerService
   - adb shell ime enable com.bald.uriah.baldphone/.keyboard.BaldInputMethodService
   - adb shell ime set com.bald.uriah.baldphone/.keyboard.BaldInputMethodService
