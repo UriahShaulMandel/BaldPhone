@@ -48,7 +48,7 @@
             android:paddingBottom="5dp"
             app:layout_constraintHorizontal_weight="1"
             android:visibility="visible"
-            android:src="@drawable/keyboard_on_button"
+        android:src="@drawable/search_on_button"
             app:layout_constraintBottom_toBottomOf="@id/bt_speak"
             app:layout_constraintTop_toTopOf="@id/bt_speak"
             app:layout_constraintEnd_toStartOf="@+id/bt_favorite"

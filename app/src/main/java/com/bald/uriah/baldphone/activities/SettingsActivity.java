@@ -212,9 +212,10 @@ public class SettingsActivity extends BaldActivity {
                             return true;
                         })
                         .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.EMERGENCY_BUTTON_VISIBLE_KEY, BPrefs.EMERGENCY_BUTTON_VISIBLE_DEFAULT_VALUE) ? 0 : 1),
-                        R.drawable.emergency));
+                        R.drawable.emergency_on_button));
         personalizationCategory.add(new RunnableSettingsItem(R.string.time_changer, v -> startActivity(new Intent(this, PillTimeSetterActivity.class)), R.drawable.pill));
         personalizationCategory.add(
+
                 // !! Don't change string without changing it too in onActivityResult!!
                 new BDBSettingsItem(R.string.custom_app,
                         BDB.from(this)
