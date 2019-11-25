@@ -4,20 +4,19 @@ android:
   components:
     - tools
     - tools
-    - platform-tools
-    - build-tools-28.0.3
-    - android-28
-    - extra
-    - addon
-    - android-22
-    - extra-google-google_play_services
-    - extra-google-m2repository
-    - extra-android-m2repository
-    - sys-img-armeabi-v7a-android-22
+
 
 jdk:
   - oraclejdk8
 before_script:
+  - cd ..
+  - cd ..
+  - cd ..
+  - cd ..
+  - cd ..
+  - cd ..
+  - cd ..
+  - cd ..
   - find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"
   - chmod +x gradlew
   - mkdir -p /home/travis/sdcard/
