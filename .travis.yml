@@ -4,20 +4,20 @@ android:
   components:
     - tools
     - tools
-
+    - platform-tools
+    - build-tools-28.0.3
+    - android-28
+    - extra
+    - addon
+    - android-22
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - sys-img-armeabi-v7a-android-22
 
 jdk:
   - oraclejdk8
 before_script:
-  - cd ..
-  - cd ..
-  - cd ..
-  - cd ..
-  - cd ..
-  - cd ..
-  - cd ..
-  - cd ..
-  - find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"
   - chmod +x gradlew
   - mkdir -p /home/travis/sdcard/
   - mksdcard -l baldphonesdcard 128M /home/travis/sdcard/sdcard.img
@@ -29,7 +29,6 @@ before_script:
   - adb shell settings put global animator_duration_scale 0 &
   - adb shell pm disable com.android.launcher
   - ./gradlew assemblebaldUpdatesDebug
-  - ./gradlew installbaldUpdatesDebug
   - adb shell settings put secure enabled_notification_listeners %nlisteners:com.bald.uriah.baldphone/com.bald.uriah.baldphone.services.NotificationListenerService
   - adb shell ime enable com.bald.uriah.baldphone/.keyboard.BaldInputMethodService
   - adb shell ime set com.bald.uriah.baldphone/.keyboard.BaldInputMethodService
@@ -48,7 +47,7 @@ script:
   - folder_name="/home/travis/BaldPhoneScreenshots/apks/$branch_name"
   - file_name="/home/travis/BaldPhoneScreenshots/apks/$branch_name/tmp_apk.apk"
   - mkdir -p "$folder_name"
-  - cp home/travis/UriahShaulMandel/BaldPhone/app/build/outputs/apk/baldUpdates/debug/app-baldUpdates-debug.apk "$file_name"
+  - cp home/travis/build/UriahShaulMandel/BaldPhone/app/build/outputs/apk/baldUpdates/debug/app-baldUpdates-debug.apk "$file_name"
   - git add --all :/
   - git commit -am "Uploading Auto Genereated Screenshots from travis"
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then git push https://UriahShaulMandel:${GITHUB_API_KEY}@${GH_REF} HEAD:master; fi'
