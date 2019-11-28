@@ -351,12 +351,12 @@
     <string name="grant_all_permissions">Potrdi vsa dovoljenja</string>
     <string name="emergency_settings_subtext">Ali želite na domačem zaslonu imeti gumb za klic v sili?</string>
     <string name="emergency_button">Gumb za klic v sili</string>
-    <string name="private_number">Private Number</string>
-    <string name="swipe_left_or_right">Swipe left or right</string>
-    <string name="press_next_or_back_buton">Press next or back arrow</string>
-    <string name="click_delay">Click Delay</string>
-    <string name="no_delay">No Delay</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="arrows">Arrows</string>
-    <string name="touch">Touch</string>
+    <string name="private_number">Zasebna številka</string>
+    <string name="swipe_left_or_right">Podrsaj levo ali desno</string>
+    <string name="press_next_or_back_buton">Pritisni puščico za naprej ali nazaj</string>
+    <string name="click_delay">Zakasnitev pritiska</string>
+    <string name="no_delay">Brez zakasnitve</string>
+    <string name="scrolling">Pomikanje</string>
+    <string name="arrows">Puščice</string>
+    <string name="touch">Dotik</string>
 </resources>
