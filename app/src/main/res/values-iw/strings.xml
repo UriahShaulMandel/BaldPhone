@@ -394,6 +394,8 @@
     <string name="scrolling">גלילה</string>
     <string name="arrows">חצים</string>
     <string name="touch">מגע</string>
+    <string name="_long">Long</string>
+    <string name="_short">Short</string>
 
 </resources>
 

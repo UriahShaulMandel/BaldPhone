@@ -391,6 +391,8 @@
     <string name="scrolling">Scrolling</string>
     <string name="arrows">Arrows</string>
     <string name="touch">Touch</string>
+    <string name="_long">Long</string>
+    <string name="_short">Short</string>
 
 
 </resources>
