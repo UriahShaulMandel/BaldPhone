@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,225 +15,225 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:id="@+id/page1"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:paddingLeft="@dimen/home_screen_padding"
-              android:paddingRight="@dimen/home_screen_padding"
-              android:visibility="visible"
-              tools:ignore="NestedWeights">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/page1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/home_screen_padding"
+    android:paddingRight="@dimen/home_screen_padding"
+    android:visibility="visible"
+    tools:ignore="NestedWeights">
 
     <TextClock
-            android:id="@+id/clock"
-        style="@style/ButtonsText.Auto"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.2"
-            android:background="@drawable/style_for_buttons"
-            android:includeFontPadding="false"
-            android:maxLines="1"
-            android:textSize="70sp"
+        android:id="@+id/clock"
+        style="@style/ButtonsText.Huge"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:background="@drawable/style_for_buttons"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textSize="70sp"
         android:visibility="visible" />
 
     <android.widget.Space
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0.07"/>
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.07" />
 
     <LinearLayout
-            android:id="@+id/phone_container"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+        android:id="@+id/phone_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/home_item_1"
+        android:orientation="horizontal">
+
+        <com.bald.uriah.baldphone.views.FirstPageAppIcon
+            android:id="@+id/bt_recent"
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/home_item_1"
-            android:orientation="horizontal">
+            android:background="@drawable/style_for_buttons_transparent"
+            android:visibility="visible"
+            app:__src="@drawable/history_on_background"
+            app:__text="@string/recent" />
+
+        <include layout="@layout/ll_divider_as_horizontal_layout" />
 
         <com.bald.uriah.baldphone.views.FirstPageAppIcon
-                android:id="@+id/bt_recent"
-                android:layout_width="0dp"
+            android:id="@+id/bt_dialer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/style_for_buttons_transparent"
+            android:visibility="visible"
+            app:__src="@drawable/phone_on_background"
+            app:__text="@string/dialer" />
 
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:visibility="visible"
-                app:__src="@drawable/history_on_background"
-                app:__text="@string/recent"/>
-
-        <include layout="@layout/ll_divider_as_horizontal_layout"/>
-
-        <com.bald.uriah.baldphone.views.FirstPageAppIcon
-                android:id="@+id/bt_dialer"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:visibility="visible"
-                app:__src="@drawable/phone_on_background"
-                app:__text="@string/dialer"/>
-
-        <include layout="@layout/ll_divider_as_horizontal_layout"/>
+        <include layout="@layout/ll_divider_as_horizontal_layout" />
 
         <com.bald.uriah.baldphone.views.FirstPageAppIcon
-                android:id="@+id/bt_contacts"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:visibility="visible"
-                app:__src="@drawable/human_on_background"
-                app:__text="@string/contacts"/>
+            android:id="@+id/bt_contacts"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/style_for_buttons_transparent"
+            android:visibility="visible"
+            app:__src="@drawable/human_on_background"
+            app:__text="@string/contacts" />
     </LinearLayout>
 
     <android.widget.Space
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0.07"/>
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.07" />
 
     <LinearLayout
-            android:id="@+id/messages_container"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+        android:id="@+id/messages_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/home_item_2"
+        android:orientation="horizontal"
+        tools:ignore="RtlHardcoded">
+
+
+        <com.bald.uriah.baldphone.views.FirstPageAppIcon
+            android:id="@+id/bt_whatsapp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/home_item_2"
-            android:orientation="horizontal"
-            tools:ignore="RtlHardcoded">
+            android:background="@drawable/style_for_buttons_transparent"
+            android:visibility="visible"
+            app:__src="@drawable/whatsapp_on_background"
+            app:__text="@string/whatsapp" />
 
-
-        <com.bald.uriah.baldphone.views.FirstPageAppIcon
-                android:id="@+id/bt_whatsapp"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:visibility="visible"
-                app:__src="@drawable/whatsapp_on_background"
-                app:__text="@string/whatsapp"/>
-
-        <include layout="@layout/ll_divider_as_horizontal_layout"/>
+        <include layout="@layout/ll_divider_as_horizontal_layout" />
 
         <com.bald.uriah.baldphone.views.FirstPageAppIcon
-                android:id="@+id/bt_assistant"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:visibility="visible"
-                app:__src="@drawable/voice_on_background"
-                app:__text="@string/assistant"/>
+            android:id="@+id/bt_assistant"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/style_for_buttons_transparent"
+            android:visibility="visible"
+            app:__src="@drawable/voice_on_background"
+            app:__text="@string/assistant" />
 
-        <include layout="@layout/ll_divider_as_horizontal_layout"/>
+        <include layout="@layout/ll_divider_as_horizontal_layout" />
 
         <com.bald.uriah.baldphone.views.FirstPageAppIcon
-                android:id="@+id/bt_messages"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:visibility="visible"
-                app:__src="@drawable/message_on_background"
-                app:__text="@string/messages"/>
+            android:id="@+id/bt_messages"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/style_for_buttons_transparent"
+            android:visibility="visible"
+            app:__src="@drawable/message_on_background"
+            app:__text="@string/messages" />
     </LinearLayout>
 
     <android.widget.Space
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0.07"/>
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.07" />
 
     <LinearLayout
-            android:id="@+id/media_container"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+        android:id="@+id/media_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/home_item_3"
+        android:orientation="horizontal"
+        tools:ignore="RtlHardcoded">
+
+        <com.bald.uriah.baldphone.views.FirstPageAppIcon
+            android:id="@+id/bt_photos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/home_item_3"
-            android:orientation="horizontal"
-            tools:ignore="RtlHardcoded">
+            android:background="@drawable/style_for_buttons_transparent"
+            android:visibility="visible"
+            app:__src="@drawable/photo_on_background"
+            app:__text="@string/photos" />
+
+        <include layout="@layout/ll_divider_as_horizontal_layout" />
 
         <com.bald.uriah.baldphone.views.FirstPageAppIcon
-                android:id="@+id/bt_photos"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:visibility="visible"
-                app:__src="@drawable/photo_on_background"
-                app:__text="@string/photos"/>
+            android:id="@+id/bt_camera"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/style_for_buttons_transparent"
+            android:visibility="visible"
+            app:__src="@drawable/camera_on_background"
+            app:__text="@string/camera" />
 
-        <include layout="@layout/ll_divider_as_horizontal_layout"/>
-
-        <com.bald.uriah.baldphone.views.FirstPageAppIcon
-                android:id="@+id/bt_camera"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:visibility="visible"
-                app:__src="@drawable/camera_on_background"
-                app:__text="@string/camera"/>
-
-        <include layout="@layout/ll_divider_as_horizontal_layout"/>
+        <include layout="@layout/ll_divider_as_horizontal_layout" />
 
         <com.bald.uriah.baldphone.views.FirstPageAppIcon
-                android:id="@+id/bt_videos"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:visibility="visible"
-                app:__src="@drawable/movie_on_background"
-                app:__text="@string/videos"/>
+            android:id="@+id/bt_videos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/style_for_buttons_transparent"
+            android:visibility="visible"
+            app:__src="@drawable/movie_on_background"
+            app:__text="@string/videos" />
 
     </LinearLayout>
 
     <android.widget.Space
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0.07"/>
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.07" />
 
     <LinearLayout
-            android:id="@+id/time_container"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+        android:id="@+id/time_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/home_item_4"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        tools:ignore="RtlHardcoded">
+
+        <com.bald.uriah.baldphone.views.FirstPageAppIcon
+            android:id="@+id/bt_reminders"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/home_item_4"
-            android:orientation="horizontal"
-            android:padding="0dp"
-            tools:ignore="RtlHardcoded">
+            android:background="@drawable/style_for_buttons_transparent"
+            android:visibility="visible"
+            app:__src="@drawable/pill"
+            app:__text="@string/pills" />
+
+        <include layout="@layout/ll_divider_as_horizontal_layout" />
 
         <com.bald.uriah.baldphone.views.FirstPageAppIcon
-                android:id="@+id/bt_reminders"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:visibility="visible"
-                app:__src="@drawable/pill"
-                app:__text="@string/pills"/>
+            android:id="@+id/bt_apps"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/style_for_buttons_transparent"
+            android:visibility="visible"
+            app:__src="@drawable/apps_on_background"
+            app:__text="@string/apps" />
 
-        <include layout="@layout/ll_divider_as_horizontal_layout"/>
-
-        <com.bald.uriah.baldphone.views.FirstPageAppIcon
-                android:id="@+id/bt_apps"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:visibility="visible"
-                app:__src="@drawable/apps_on_background"
-                app:__text="@string/apps"/>
-
-        <include layout="@layout/ll_divider_as_horizontal_layout"/>
+        <include layout="@layout/ll_divider_as_horizontal_layout" />
 
         <com.bald.uriah.baldphone.views.FirstPageAppIcon
-                android:id="@+id/bt_clock"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons_transparent"
-                android:visibility="visible"
-                app:__src="@drawable/clock_on_background"
-                app:__text="@string/alarms"/>
+            android:id="@+id/bt_clock"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/style_for_buttons_transparent"
+            android:visibility="visible"
+            app:__src="@drawable/clock_on_background"
+            app:__text="@string/alarms" />
     </LinearLayout>
 </LinearLayout>
