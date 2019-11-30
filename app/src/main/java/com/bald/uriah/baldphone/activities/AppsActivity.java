@@ -114,11 +114,10 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
     }
 
     private void uninstallApp(App app) {
-        String app_pkg_name = ComponentName.unflattenFromString(app.getFlattenComponentName()).getPackageName();
-        Intent intent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE);
-        intent.setData(Uri.parse("package:" + app_pkg_name));
-        intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
-        startActivityForResult(intent, UNINSTALL_REQUEST_CODE);
+        final String app_pkg_name = ComponentName.unflattenFromString(app.getFlattenComponentName()).getPackageName();
+        startActivityForResult(new Intent(Intent.ACTION_UNINSTALL_PACKAGE)
+                .setData(Uri.parse("package:" + app_pkg_name))
+                .putExtra(Intent.EXTRA_RETURN_RESULT, true), UNINSTALL_REQUEST_CODE);
     }
 
     @Override
@@ -142,22 +141,6 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
             public void onUpdate(DropDownRecyclerViewAdapter.ViewHolder viewHolder, int position, PopupWindow popupWindow) {
                 switch (position) {
                     case 0:
-                        viewHolder.pic.setImageResource(R.drawable.delete_on_button);
-                        viewHolder.text.setText(R.string.uninstall);
-                        viewHolder.itemView.setOnClickListener(v1 -> {
-                            BDB.from(AppsActivity.this)
-                                    .setTitle(String.format("%s %s", getText(R.string.uninstall), app.getLabel()))
-                                    .setSubText(String.format(getString(R.string.uninstall_subtext), app.getLabel(), app.getLabel()))
-                                    .addFlag(BDialog.FLAG_YES | BDialog.FLAG_CANCEL)
-                                    .setPositiveButtonListener(params -> {
-                                        uninstallApp(app);
-                                        return true;
-                                    })
-                                    .show();
-                            popupWindow.dismiss();
-                        });
-                        break;
-                    case 1:
                         if (S.isValidContextForGlide(viewHolder.pic.getContext()))
                             Glide.with(viewHolder.pic).load(app.getIcon()).into(viewHolder.pic);
                         viewHolder.text.setText(R.string.open);
@@ -167,7 +150,7 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
                             popupWindow.dismiss();
                         });
                         break;
-                    case 2:
+                    case 1:
                         viewHolder.pic.setImageResource(app.isPinned() ? R.drawable.remove_on_button : R.drawable.add_on_button);
                         viewHolder.text.setText(app.isPinned() ? R.string.remove_shortcut : R.string.add_shortcut);
                         viewHolder.itemView.setOnClickListener(v1 -> {
@@ -182,6 +165,22 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
                             }
                             popupWindow.dismiss();
                             showDropDown(index);
+                        });
+                        break;
+                    case 2:
+                        viewHolder.pic.setImageResource(R.drawable.delete_on_button);
+                        viewHolder.text.setText(R.string.uninstall);
+                        viewHolder.itemView.setOnClickListener(v1 -> {
+                            BDB.from(AppsActivity.this)
+                                    .setTitle(String.format("%s %s", getText(R.string.uninstall), app.getLabel()))
+                                    .setSubText(String.format(getString(R.string.uninstall_subtext), app.getLabel(), app.getLabel()))
+                                    .addFlag(BDialog.FLAG_YES | BDialog.FLAG_CANCEL)
+                                    .setPositiveButtonListener(params -> {
+                                        uninstallApp(app);
+                                        return true;
+                                    })
+                                    .show();
+                            popupWindow.dismiss();
                         });
                         break;
                 }
