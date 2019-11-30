@@ -114,11 +114,10 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
     }
 
     private void uninstallApp(App app) {
-        String app_pkg_name = ComponentName.unflattenFromString(app.getFlattenComponentName()).getPackageName();
-        Intent intent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE);
-        intent.setData(Uri.parse("package:" + app_pkg_name));
-        intent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
-        startActivityForResult(intent, UNINSTALL_REQUEST_CODE);
+        final String app_pkg_name = ComponentName.unflattenFromString(app.getFlattenComponentName()).getPackageName();
+        startActivityForResult(new Intent(Intent.ACTION_UNINSTALL_PACKAGE)
+                .setData(Uri.parse("package:" + app_pkg_name))
+                .putExtra(Intent.EXTRA_RETURN_RESULT, true), UNINSTALL_REQUEST_CODE);
     }
 
     @Override
