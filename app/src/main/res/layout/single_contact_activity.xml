@@ -51,10 +51,11 @@
                         android:layout_height="70dp"
                         android:layout_marginBottom="10dp"/>
 
-                <com.bald.uriah.baldphone.views.SquareImageView
+                <com.bald.uriah.baldphone.views.SquaredCircleImageView
                         android:id="@+id/contact_image"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
                         android:transitionName="prof_pic_contacts_animation"/>
             </LinearLayout>
         </com.bald.uriah.baldphone.views.ModularScrollView>
