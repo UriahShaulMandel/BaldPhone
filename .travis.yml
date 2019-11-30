@@ -44,15 +44,15 @@ script:
   - git config user.email "uriah.shm@outlook.com"
   - git config user.name "UriahShaulMandelTravis"
   - mkdir -p /home/travis/BaldPhoneScreenshots/screenshots
-  - adb pull /sdcard/Pictures/screenshots /home/travis/BaldPhoneScreenshots/screenshots
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then adb pull /sdcard/Pictures/screenshots /home/travis/BaldPhoneScreenshots/screenshots; fi'
   - branch_name=`git branch | grep \* | cut -d ' ' -f2`
   - folder_name="/home/travis/BaldPhoneScreenshots/apks/$branch_name"
   - file_name="/home/travis/BaldPhoneScreenshots/apks/$branch_name/tmp_apk.apk"
   - mkdir -p "$folder_name"
   - cp /home/travis/build/UriahShaulMandel/BaldPhone/app/build/outputs/apk/baldUpdates/debug/app-baldUpdates-debug.apk "$file_name"
   - git add --all :/
-  - git commit -am "Uploading Auto Genereated Screenshots from travis"
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then git push https://UriahShaulMandel:${GITHUB_API_KEY}@${GH_REF} HEAD:master; fi'
+  - git commit -am "Adding the automatically genereted screenshots and apks from travis"
+  - git push https://UriahShaulMandel:${GITHUB_API_KEY}@${GH_REF} HEAD:master
 
 before_install:
   - echo yes | android update sdk --all --filter build-tools-28.0.3 --no-ui --force
