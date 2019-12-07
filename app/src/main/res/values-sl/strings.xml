@@ -48,7 +48,7 @@
     <string name="add_alarm_quickly">Dodaj štoparico</string>
     <string name="add_contact">Dodaj stik</string>
     <string name="add_emergency_contact">Dodaj</string>
-    <string name="add_pill">Dodaj tableto</string>
+    <string name="add_pill">Dodaj zdravilo</string>
     <string name="add_shortcut">Dodaj bližnjico</string>
     <string name="add_to_favorite">Dodaj k priljubljenim</string>
     <string name="add_to_home">Dodaj na domač zaslon</string>
@@ -87,7 +87,7 @@
     <string name="camera">Kamera</string>
     <string name="camera_subtext">Ta odobritev je potrebna, da se lahko vključi svetilko.</string>
     <string name="cancel">Prekliči</string>
-    <string name="change_pills_time">Spremeni čas za tablete</string>
+    <string name="change_pills_time">Spremeni čas za zdravila</string>
     <string name="auto_brightness">Samodejna\nSvetlost</string>
     <string name="choose_friday">Pet</string>
     <string name="choose_monday">Pon</string>
@@ -193,9 +193,9 @@
     <string name="phone">Telefon</string>
     <string name="photo">Slika</string>
     <string name="photos">Slike</string>
-    <string name="pill_added">Tableta dodana!</string>
-    <string name="pill_name">Ime tablete</string>
-    <string name="pills">Tablete</string>
+    <string name="pill_added">Zdravilo dodano!</string>
+    <string name="pill_name">Ime zdravila</string>
+    <string name="pills">Zdravila</string>
     <string name="press_longer">drži pritisk dlje časa!</string>
     <string name="timer">Štoparica</string>
     <string name="read_call_log">Preberi dnevnik klicev</string>
@@ -252,7 +252,7 @@
     <string name="theme_settings">Tema</string>
     <string name="theme_settings_subtext">Izberi temo</string>
     <string name="thursday">Četrtek</string>
-    <string name="time_changer">Spreminjanje časa za tablete</string>
+    <string name="time_changer">Spreminjanje časa za zdravila</string>
     <string name="tiny">Majceno</string>
     <string name="to___days_and___hours_from_now">do %d dni in %d ur od sedaj</string>
     <string name="to___hours_and___minutes_from_now">do %d ur in %d minut od sedaj</string>
@@ -281,7 +281,7 @@
     <string name="no_alarms">Ni budilk.\nUstvari jih tako, da klikneš\n\'Dodaj budilko\'\nali\n\'Dodaj štoparico\'</string>
     <string name="will_repeat_only_once">Ponovila se bo le enkrat!</string>
     <string name="clear_all_notifications">Počisti vsa obvestila</string>
-    <string name="no_pills">Ni tablet.\nDodaj novo s tem, da klikneš\n\'Dodaj tableto\'</string>
+    <string name="no_pills">Ni zdravil.\nDodaj novo s tem, da klikneš\n\'Dodaj zdravilo\'</string>
     <string name="clear_cache_subtext">Ali ste prepričani, da želite počistiti celoten predpomnilnik?\nOdstranjene bodo tudi bližnjice aplikacij!</string>
     <string name="pending_update">Čakajoča posodobitev</string>
     <string name="download">Prenesi</string>
