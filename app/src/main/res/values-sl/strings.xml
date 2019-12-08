@@ -154,8 +154,8 @@
     <string name="language_settings">Jezik</string>
     <string name="large">Veliko</string>
     <string name="left_handed">Levičar</string>
-    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Še ena stvar:\nZelo priporočljivo je uporabiti
-	 BaldPhone kot privzet domač zaslon.</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Še ena stvar:\nBaldphone je zelo priporočljivo uporabiti
+	 kot privzeti začetni zaslon.</string>
     <string name="location">Lokacija</string>
     <string name="emergency_services">Klic v sili</string>
     <string name="mail">Pošta</string>
@@ -217,7 +217,7 @@
     <string name="send">Pošlji</string>
     <string name="set_default_dialer">Nastavi privzeto klicalno aplikacijo</string>
     <string name="set_default_dialer_subtext">BaldPhone mora biti označen kot privzeta klicalna aplikacija.</string>
-    <string name="set_home_screen">Nastavi domač zaslon</string>
+    <string name="set_home_screen">Spremeni začetni zaslon</string>
     <string name="removed_all_alarms">Vse budilke so bile odstranjene!</string>
     <string name="set_keyboard">Nastavi tipkovnico</string>
     <string name="setting_does_not_exist">Nastavitev ne obstaja.</string>
@@ -232,10 +232,10 @@
 		informacij:\n\nhttps://sites.google.com/view/baldphone
     </string>
     <string name="share_baldphone">Deli BaldPhone</string>
-    <string name="share_bald_phone_subtext">Hej, morda poznaš ljudi, ki bi želeli spoznati BaldPhone ?\nLahko ga deliš z njimi!"</string>
+    <string name="share_bald_phone_subtext">Hej, morda poznaš ljudi, ki bi želeli spoznati BaldPhone ?\nLahko ga deliš z njimi !"</string>
     <string name="share_differently">Deli preko druge aplikacije</string>
     <string name="share_contact">Deli stik</string>
-    <string name="shift">Premakni</string>
+    <string name="shift">Dvigovalka</string>
     <string name="show">Prikaži</string>
     <string name="small">Majhno</string>
     <string name="snooze">Utišaj</string>
