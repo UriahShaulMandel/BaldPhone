@@ -1,5 +1,6 @@
-# NOTE FROM DEVELOPER:
-BaldPhone 12.0.0 is coming real soon! It will contain a lot of UI tweaks, And I would like to hear some feedback before Uploading it. Please check out the [Open Pull Requests](https://github.com/UriahShaulMandel/BaldPhone/pulls) and let me know what you think!
+# NOTES FROM DEVELOPER:
+1. BaldPhone 12.0.0 is coming real soon! Will focus on interface and design improvements :)
+2. I'm quite busy this month (december), constant development will be back in january
 
 [![BaldPhone](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/logo/rectangle.png)](https://www.youtube.com/watch?v=G33E4XQp_Xw)
  - Click the image above or click [this](https://www.youtube.com/watch?v=G33E4XQp_Xw) to watch the video
