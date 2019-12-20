@@ -97,7 +97,7 @@
     <string name="choose_tuesday">Tor</string>
     <string name="choose_wednesday">Sre</string>
     <string name="clear">Počisti</string>
-    <string name="change_system_settings_subtext">Prosimo odobrite aplikaciji BaldPhone, da lahko spreminja nastavitve, kot sta povečanje velikosti besedila
+    <string name="change_system_settings_subtext">Prosimo odobrite aplikaciji BaldPhone, da lahko spreminja nastavitve, kot sta povečanje velikosti pisave
         in spreminjanje svetlosti.
     </string>
     <string name="clear_data">Počisti vse podatke</string>
@@ -136,9 +136,9 @@
     <string name="feedback_cannot_be_empty">Povratne informacije ne morejo biti prazne!</string>
     <string name="feedback_sent_successfully">Povratne informacije uspešno poslane!</string>
     <string name="first_please_select_how_you_want_to_interact_with_buttons">Prosimo izberite stopnjo dostopnosti.\nTo lahko spremenite v nastavitvah.</string>
-    <string name="font">Pisava</string>
+    <string name="font">Velikost pisave</string>
     <string name="friday">Petek</string>
-    <string name="example_of_different_text_sizes">Primer različnih velikosti besedila.\nBesedilo mora ostati vidljivo in brez prekrivanja.</string>
+    <string name="example_of_different_text_sizes">Primer različnih velikosti pisave.\nBesedilo mora ostati vidljivo in brez prekrivanja.</string>
     <string name="hello">Pozdravljeni</string>
     <string name="help">Video vodič</string>
     <string name="hide">Skrij</string>
@@ -358,7 +358,7 @@
     <string name="no_delay">Brez zakasnitve</string>
     <string name="scrolling">Pomikanje</string>
     <string name="arrows">Puščice</string>
-    <string name="touch">Dotik</string>
+    <string name="touch">Drsenje</string>
     <string name="_long">Dolgo</string>
     <string name="_short">Kratko</string>
 </resources>
