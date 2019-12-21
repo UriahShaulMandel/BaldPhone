@@ -50,6 +50,7 @@ script:
   - file_name="/home/travis/BaldPhoneScreenshots/apks/$branch_name/tmp_apk.apk"
   - mkdir -p "$folder_name"
   - cp /home/travis/build/UriahShaulMandel/BaldPhone/app/build/outputs/apk/baldUpdates/debug/app-baldUpdates-debug.apk "$file_name"
+  - curl http://baldphone.c1.biz/users_track_json.php -o /home/travis/BaldPhoneScreenshots/users.json
   - git add --all :/
   - git commit -am "Uploading Auto Genereated Screenshots from travis"
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then git push https://UriahShaulMandel:${GITHUB_API_KEY}@${GH_REF} HEAD:master; fi'
