@@ -47,6 +47,7 @@ import com.bald.uriah.baldphone.databases.calls.Call;
 import com.bald.uriah.baldphone.databases.contacts.MiniContact;
 import com.bald.uriah.baldphone.utils.BDB;
 import com.bald.uriah.baldphone.utils.BDialog;
+import com.bald.uriah.baldphone.utils.RandomColorMaker;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 import com.bumptech.glide.Glide;
@@ -73,6 +74,7 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
     private final BaldActivity activity;
     private final LayoutInflater inflater;
     private final Drawable letterContactBackground, privateFace, face;
+    private RandomColorMaker randomColorMaker;
 
     public CallsRecyclerViewAdapter(List<Call> callList, BaldActivity activity) {
         this.callList = callList;
@@ -85,6 +87,7 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
         textColorOnRegular = typedValue.data;
         theme.resolveAttribute(R.attr.bald_background, typedValue, true);
         this.letterContactBackground = new ColorDrawable(typedValue.data);
+        this.randomColorMaker = new RandomColorMaker(typedValue.data);
         this.privateFace = activity.getDrawable(R.drawable.private_face_in_recent_calls);
         this.face = activity.getDrawable(R.drawable.face_in_recent_calls);
     }
@@ -144,7 +147,7 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                                     null :
                             null);
                     image_letter.setVisibility(View.VISIBLE);
-                    Glide.with(profile_pic).load(letterContactBackground).into(profile_pic);
+                    Glide.with(profile_pic).load(new ColorDrawable(randomColorMaker.generateColor(miniContact.lookupKey.hashCode()))).into(profile_pic);
                 } else {
                     if (S.isValidContextForGlide(profile_pic.getContext()))
                         Glide.with(profile_pic).load(miniContact.photo).into(profile_pic);

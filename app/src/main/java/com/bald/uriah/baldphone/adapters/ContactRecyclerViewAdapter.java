@@ -46,6 +46,7 @@ import com.bald.uriah.baldphone.activities.SOSActivity;
 import com.bald.uriah.baldphone.activities.contacts.ShareActivity;
 import com.bald.uriah.baldphone.activities.contacts.SingleContactActivity;
 import com.bald.uriah.baldphone.fragments_and_dialogs.LetterChooserDialog;
+import com.bald.uriah.baldphone.utils.RandomColorMaker;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<ContactRecyclerViewAdapter.ViewHolder> {
@@ -64,6 +65,7 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
     private final SparseIntArray letterToPosition;
     private final RecyclerView recyclerView;
     private final int mode;
+    private RandomColorMaker randomColorMaker;
     @ColorInt
     private final int textColorOnGold, textColorOnButton;
     private Cursor cursor;
@@ -74,18 +76,18 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
         this.layoutInflater = LayoutInflater.from(activity);
         this.cursor = cursor;
         this.recyclerView = recyclerView;
-
         final TypedValue typedValue = new TypedValue();
         final Resources.Theme theme = activity.getTheme();
         theme.resolveAttribute(R.attr.bald_background, typedValue, true);
         this.letterContactBackground = new ColorDrawable(typedValue.data);
+        this.randomColorMaker = new RandomColorMaker(typedValue.data);
         letterToPosition = new SparseIntArray();
         theme.resolveAttribute(R.attr.bald_text_on_gold, typedValue, true);
         textColorOnGold = typedValue.data;
         theme.resolveAttribute(R.attr.bald_text_on_button, typedValue, true);
         textColorOnButton = typedValue.data;
-        applyToCursor();
 
+        applyToCursor();
     }
 
     private void applyToCursor() {
@@ -161,7 +163,7 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
             holder.iv_contact_pic.setImageURI(Uri.parse(cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.PHOTO_URI))));
             holder.tv_image_letter.setVisibility(View.GONE);
         } else {
-            drawText(holder, letter);
+            drawText(holder, letter, holder.lookupKey.hashCode());
         }
 
     }
@@ -171,10 +173,10 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
         return cursor.getCount();
     }
 
-    private void drawText(ViewHolder viewHolder, String chr) {
+    private void drawText(ViewHolder viewHolder, String chr, int hash) {
         viewHolder.tv_image_letter.setVisibility(View.VISIBLE);
         viewHolder.tv_image_letter.setText(chr);
-        viewHolder.iv_contact_pic.setImageDrawable(letterContactBackground);//can be the same drawable because its black only
+        viewHolder.iv_contact_pic.setImageDrawable(new ColorDrawable(randomColorMaker.generateColor(hash)));//can be the same drawable because its black only
     }
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
