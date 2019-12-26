@@ -399,6 +399,10 @@
     <string name="do_you_want_to_save_your_changes">האם ברצונך לשמור את השינויים?</string>
     <string name="discard">התעלם</string>
     <string name="no_recent_calls">אין שיחות אחרונות</string>
+    <string name="apps_sort_method">סידור יישומים</string>
+    <string name="apps_sort_method_subtext">בחר האם ברצונך לסדר את היישומים בטבלה אחת או בקבוצות שונות ע\"פ הא\"ב</string>
+    <string name="groups">קבוצות</string>
+    <string name="one_grid">טבלה אחת</string>
 
 </resources>
 

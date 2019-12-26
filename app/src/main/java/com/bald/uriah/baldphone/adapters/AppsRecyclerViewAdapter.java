@@ -37,6 +37,7 @@ import com.bald.uriah.baldphone.activities.AppsActivity;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.apps.App;
 import com.bald.uriah.baldphone.fragments_and_dialogs.LetterChooserDialog;
+import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
@@ -58,6 +59,7 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
     private final SparseIntArray letterToPosition;
     public int index = -1;
     public AppViewHolder lastView;
+    private boolean appsOneGrid;
 
     public AppsRecyclerViewAdapter(List<App> appList, BaldActivity activity, AppsActivity.ChangeAppListener changeAppListener, RecyclerView caller) {
         this.caller = caller;
@@ -70,14 +72,14 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
                         16,
                         activity.getResources().getDisplayMetrics());
         this.changeAppListener = changeAppListener;
-
+        this.appsOneGrid = BPrefs.get(activity).getBoolean(BPrefs.APPS_ONE_GRID_KEY, BPrefs.APPS_ONE_GRID_DEFAULT_VALUE);
         letterToPosition = new SparseIntArray();
         dataList = new ArrayList<>((int) (appList.size() * 1.5));
         String lastChar = "";
         String disChar;
         for (int i = 0; i < appList.size(); i++) {
             disChar = appList.get(i).getLabel().substring(0, 1).toUpperCase();
-            if (!disChar.equals(lastChar)) {
+            if (!appsOneGrid && !disChar.equals(lastChar)) {
                 dataList.add(new AppStickyHeader(disChar));
                 letterToPosition.append(disChar.charAt(0), dataList.size() - 1);
             }
