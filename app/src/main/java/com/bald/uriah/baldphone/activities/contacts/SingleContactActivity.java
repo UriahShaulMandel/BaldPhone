@@ -33,7 +33,6 @@ import android.util.Log;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -463,10 +462,6 @@ public class SingleContactActivity extends BaldActivity {
     private void loadPhoto(String uriToLoad) {
         if (S.isValidContextForGlide(contact_image.getContext()))
             Glide.with(contact_image).load(uriToLoad).into(contact_image);
-        final int width = ((ViewGroup) contact_image.getParent()).getWidth();
-        contact_image.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, width));
-        contact_image.setScaleType(ImageView.ScaleType.FIT_XY);
-        ll.setMinimumHeight(width * 3); //TODO
     }
 
     @Override
