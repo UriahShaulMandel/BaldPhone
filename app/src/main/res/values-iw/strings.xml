@@ -147,7 +147,7 @@
     <string name="feedback_cannot_be_empty">המשוב אינו יכול להיות ריק!</string>
     <string name="feedback_sent_successfully">המשוב נשלח בהצלחה!</string>
     <string name="first_please_select_how_you_want_to_interact_with_buttons">יש לבחור רמת נגישות</string>
-    <string name="font">גופן</string>
+    <string name="font_size">גודל גופן</string>
     <string name="friday">שישי</string>
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">מתקשה בתפעול המקלדת?
         עבור למקלדת הגדולה והמותאמת!
@@ -393,11 +393,12 @@
     <string name="no_delay">ללא השהייה</string>
     <string name="scrolling">גלילה</string>
     <string name="arrows">חצים</string>
-    <string name="touch">מגע</string>
-    <string name="_long">Long</string>
-    <string name="_short">Short</string>
-    <string name="do_you_want_to_save_your_changes">Do you want to save your changes?</string>
-    <string name="discard">Discard</string>
+    <string name="swipe">החלק</string>
+    <string name="_long">ארוכה</string>
+    <string name="_short">קצרה</string>
+    <string name="do_you_want_to_save_your_changes">האם ברצונך לשמור את השינויים?</string>
+    <string name="discard">התעלם</string>
+    <string name="no_recent_calls">אין שיחות אחרונות</string>
 
 </resources>
 

@@ -336,7 +336,7 @@ public class SettingsActivity extends BaldActivity {
                         .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.LOW_BATTERY_ALERT_KEY, BPrefs.LOW_BATTERY_ALERT_DEFAULT_VALUE) ? 0 : 1),
                 R.drawable.low_battery_alert_on_button
         ));
-        SettingsItem fontSettingsItem = new RunnableSettingsItem(R.string.font, v -> {
+        SettingsItem fontSettingsItem = new RunnableSettingsItem(R.string.font_size, v -> {
             startActivity(new Intent(this, FontChangerActivity.class));
         }, R.drawable.font_on_button);
         personalizationCategory.add(fontSettingsItem);

@@ -39,6 +39,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bald_title_bar"
+        app:empty_text="@string/no_recent_calls"
             >
 
         <com.bald.uriah.baldphone.views.ModularRecyclerView

@@ -143,7 +143,7 @@
     <string name="feedback_sent_successfully">Отзыв успешно отправлен!</string>
     <string name="first_please_select_how_you_want_to_interact_with_buttons">Пожалуйста выберите уровень доступности
     </string>
-    <string name="font">Шрифт</string>
+    <string name="font_size">Шрифт</string>
     <string name="friday">Пятница</string>
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Трудно использовать клавиатуру телефона? Вместо этого используйте БОЛЬШУЮ клавиатуру Baldphone!
     </string>
@@ -378,11 +378,12 @@
     <string name="no_delay">No Delay</string>
     <string name="scrolling">Scrolling</string>
     <string name="arrows">Arrows</string>
-    <string name="touch">Touch</string>
+    <string name="swipe">Touch</string>
     <string name="_long">Long</string>
     <string name="_short">Short</string>
     <string name="do_you_want_to_save_your_changes">Do you want to save your changes?</string>
     <string name="discard">Discard</string>
+    <string name="no_recent_calls">No Recent Calls</string>
 
 
 </resources>

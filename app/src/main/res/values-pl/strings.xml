@@ -141,7 +141,7 @@
     <string name="feedback_cannot_be_empty">Opinia nie może być pusta</string>
     <string name="feedback_sent_successfully">Opinia pomyślnie wysłana</string>
     <string name="first_please_select_how_you_want_to_interact_with_buttons">Proszę wybrac poziom dostępności</string>
-    <string name="font">Czcionka</string>
+    <string name="font_size">Czcionka</string>
     <string name="friday">Piątek</string>
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Trudności w używaniu klawiatury telefonu ? przełącz na DUŻĄ klawiaturę BaldPhone</string>
     <string name="hello">Witaj</string>
@@ -379,11 +379,12 @@
     <string name="no_delay">No Delay</string>
     <string name="scrolling">Scrolling</string>
     <string name="arrows">Arrows</string>
-    <string name="touch">Touch</string>
+    <string name="swipe">Touch</string>
     <string name="_long">Long</string>
     <string name="_short">Short</string>
     <string name="do_you_want_to_save_your_changes">Do you want to save your changes?</string>
     <string name="discard">Discard</string>
+    <string name="no_recent_calls">No Recent Calls</string>
 
 
 </resources>

@@ -136,7 +136,7 @@
     <string name="feedback_cannot_be_empty">Povratne informacije ne morejo biti prazne!</string>
     <string name="feedback_sent_successfully">Povratne informacije uspešno poslane!</string>
     <string name="first_please_select_how_you_want_to_interact_with_buttons">Prosimo izberite stopnjo dostopnosti.\nTo lahko spremenite v nastavitvah.</string>
-    <string name="font">Velikost pisave</string>
+    <string name="font_size">Velikost pisave</string>
     <string name="friday">Petek</string>
     <string name="example_of_different_text_sizes">Primer različnih velikosti pisave.\nBesedilo mora ostati vidljivo in brez prekrivanja.</string>
     <string name="hello">Pozdravljeni</string>
@@ -358,9 +358,10 @@
     <string name="no_delay">Brez zakasnitve</string>
     <string name="scrolling">Pomikanje</string>
     <string name="arrows">Puščice</string>
-    <string name="touch">Drsenje</string>
+    <string name="swipe">Drsenje</string>
     <string name="_long">Dolgo</string>
     <string name="_short">Kratko</string>
     <string name="do_you_want_to_save_your_changes">Do you want to save your changes?</string>
     <string name="discard">Discard</string>
+    <string name="no_recent_calls">No Recent Calls</string>
 </resources>

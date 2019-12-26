@@ -125,7 +125,7 @@
     <string name="feedback_sent_successfully">成功傳送回饋!</string>
     <string name="first_please_select_how_you_want_to_interact_with_buttons">請選擇輔助功能程度
     </string>
-    <string name="font">字型</string>
+    <string name="font_size">字型</string>
     <string name="friday">星期五</string>
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">覺得電話鍵盤字太小?轉用清風電話的大字鍵盤吧!
     </string>
@@ -368,11 +368,12 @@
     <string name="no_delay">No Delay</string>
     <string name="scrolling">Scrolling</string>
     <string name="arrows">Arrows</string>
-    <string name="touch">Touch</string>
+    <string name="swipe">Touch</string>
     <string name="_long">Long</string>
     <string name="_short">Short</string>
     <string name="do_you_want_to_save_your_changes">Do you want to save your changes?</string>
     <string name="discard">Discard</string>
+    <string name="no_recent_calls">No Recent Calls</string>
 
 
     <string-array name="names_for_screenshots">

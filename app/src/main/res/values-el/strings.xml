@@ -145,7 +145,7 @@
     <string name="feedback_sent_successfully">Feedback sent successfully!</string>
     <string name="first_please_select_how_you_want_to_interact_with_buttons">Παρακαλώ επιλέξτε το επίπεδο Προσβασιμότητα Please select the level of accessibility
     </string>
-    <string name="font">Γραμματοσειρά</string>
+    <string name="font_size">Γραμματοσειρά</string>
     <string name="friday">Παρασκευή</string>
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Δυσκολεύεστε να χρησιμοποιήσετε το
        πληκτρολόγιο του τηλεφώνου; Χρησιμοποιήστε το μεγάλο πληκτρολόγιο του Baldphone!
@@ -394,11 +394,12 @@
     <string name="no_delay">No Delay</string>
     <string name="scrolling">Scrolling</string>
     <string name="arrows">Arrows</string>
-    <string name="touch">Touch</string>
+    <string name="swipe">Touch</string>
     <string name="_long">Long</string>
     <string name="_short">Short</string>
     <string name="do_you_want_to_save_your_changes">Do you want to save your changes?</string>
     <string name="discard">Discard</string>
+    <string name="no_recent_calls">No Recent Calls</string>
 
 
 </resources>

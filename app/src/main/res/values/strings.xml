@@ -129,7 +129,7 @@
     <string name="feedback_sent_successfully">Feedback sent successfully!</string>
     <string name="first_please_select_how_you_want_to_interact_with_buttons">Please select the level of accessibility
     </string>
-    <string name="font">Font</string>
+    <string name="font_size">Font Size</string>
     <string name="friday">Friday</string>
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Having a hard time using
         the phone\'s keyboard? use Baldphone\'s BIG keyboard instead!
@@ -382,11 +382,12 @@
     <string name="no_delay">No Delay</string>
     <string name="scrolling">Scrolling</string>
     <string name="arrows">Arrows</string>
-    <string name="touch">Touch</string>
+    <string name="swipe">Swipe</string>
     <string name="_long">Long</string>
     <string name="_short">Short</string>
     <string name="do_you_want_to_save_your_changes">Do you want to save your changes?</string>
     <string name="discard">Discard</string>
+    <string name="no_recent_calls">No Recent Calls</string>
 
 
     <string-array name="names_for_screenshots">
