@@ -371,6 +371,8 @@
     <string name="touch">Touch</string>
     <string name="_long">Long</string>
     <string name="_short">Short</string>
+    <string name="do_you_want_to_save_your_changes">Do you want to save your changes?</string>
+    <string name="discard">Discard</string>
 
 
     <string-array name="names_for_screenshots">

@@ -361,4 +361,6 @@
     <string name="touch">Drsenje</string>
     <string name="_long">Dolgo</string>
     <string name="_short">Kratko</string>
+    <string name="do_you_want_to_save_your_changes">Do you want to save your changes?</string>
+    <string name="discard">Discard</string>
 </resources>

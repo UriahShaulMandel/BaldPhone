@@ -43,9 +43,13 @@ import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.activities.media.PhotosActivity;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
+import com.bald.uriah.baldphone.utils.BDB;
+import com.bald.uriah.baldphone.utils.BDialog;
 import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldImageButton;
+import com.bald.uriah.baldphone.views.BaldTitleBar;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.SimpleTarget;
@@ -56,6 +60,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * simple activity which can Add\Edit a simple contact.
@@ -120,26 +125,33 @@ public class AddContactActivity extends BaldActivity {
             newPhoto = null;
             v.setVisibility(View.INVISIBLE);
         });
-        save.setOnClickListener(v -> {
-            final String name = String.valueOf(et_name.getText());
-            if (TextUtils.isEmpty(name.replace(" ", ""))) {
-                BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.contact_must_has_name).show();
-            } else if (!(currentContact != null ? update() : insert())) {
-                BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.contact_not_created).show();
-            } else {
-                finishAffinity();
-                SingleContactActivity.newPictureAdded = true;//static vars are simpler and more rational in this case
-
-                startActivity(new Intent(this, HomeScreenActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
-                startActivity(new Intent(this, ContactsActivity.class));
-                startActivity(
-                        new Intent(this, SingleContactActivity.class)
-                                .putExtra(SingleContactActivity.CONTACT_ID, String.valueOf(currentContact.getId()))
-                                .putExtra(SingleContactActivity.PIC_URI_EXTRA, newPhoto)
-                );
-            }
+        save.setOnClickListener(v -> save());
+        ((BaldTitleBar) findViewById(R.id.bald_title_bar)).getBt_back().setOnClickListener(v -> {
+            if (safeToExit())
+                finish();
+            else
+                showExitMessage();
         });
+    }
 
+    private void save() {
+        final String name = String.valueOf(et_name.getText());
+        if (TextUtils.isEmpty(name.replace(" ", ""))) {
+            BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.contact_must_has_name).show();
+        } else if (!(currentContact != null ? update() : insert())) {
+            BaldToast.from(this).setType(BaldToast.TYPE_ERROR).setText(R.string.contact_not_created).show();
+        } else {
+            finishAffinity();
+            SingleContactActivity.newPictureAdded = true;//static vars are simpler and more rational in this case
+
+            startActivity(new Intent(this, HomeScreenActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+            startActivity(new Intent(this, ContactsActivity.class));
+            startActivity(
+                    new Intent(this, SingleContactActivity.class)
+                            .putExtra(SingleContactActivity.CONTACT_ID, String.valueOf(currentContact.getId()))
+                            .putExtra(SingleContactActivity.PIC_URI_EXTRA, newPhoto)
+            );
+        }
     }
 
     private void attachXml() {
@@ -443,6 +455,53 @@ public class AddContactActivity extends BaldActivity {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (safeToExit())
+            super.onBackPressed();
+        else {
+            if (vibrator != null)
+                vibrator.vibrate(D.vibetime);
+            showExitMessage();
+        }
+    }
+
+    private boolean safeToExit() {
+        final String mobile_number = S.str(et_mobile_number.getText().toString());
+        final String home_number = S.str(et_home_number.getText().toString());
+        final String address = S.str(et_address.getText().toString());
+        final String name = S.str(et_name.getText().toString());
+        final String mail = S.str(et_mail.getText().toString());
+
+        final String _mobile_number = S.str(currentContact.getMobilePhone());
+        final String _home_number = S.str(currentContact.getHomePhone());
+        final String _address = S.str(currentContact.getAddress());
+        final String _name = S.str(currentContact.getName());
+        final String _mail = S.str(currentContact.getMail());
+
+        return (et_mobile_number.length() == 0 && et_home_number.length() == 0 && et_address.length() == 0 && et_name.length() == 0 && et_mail.length() == 0)
+                || (Objects.equals(newPhoto, currentContact.getPhoto())
+                && mobile_number.equals(_mobile_number)
+                && home_number.equals(_home_number)
+                && address.equals(_address)
+                && name.equals(_name)
+                && mail.equals(_mail));
+    }
+
+    private void showExitMessage() {
+        BDB.from(this)
+                .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
+                .setSubText(R.string.do_you_want_to_save_your_changes)
+                .setOptions(R.string.save, R.string.discard)
+                .setPositiveButtonListener(params -> {
+                    if (params[0].equals(1))
+                        finish();
+                    else
+                        save();
+                    return true;
+                }).show();
     }
 
     @Override
