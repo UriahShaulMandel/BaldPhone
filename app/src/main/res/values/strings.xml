@@ -16,19 +16,12 @@
 
 <resources>
     <string name="about">About</string>
-    <string name="about_subtext">Hi!\nMy name is Uriah Shaul Mandel, and I\'m the developer of this platform.\n
-        I\'ve spent most of my \"adult\" life making this platform, and I\'ve released it for free, for all to
-        use.\nYou are more than welcome to contact me by email:\nbaldphone.contact@gmail.com
-    </string>
+    <string name="about_subtext">Hi! My name is Uriah Shaul Mandel, and I\'m the developer of this platform.  I\'ve spent most of my adult life making this platform, and I\'ve released it for free, for all to use. You are more than welcome to contact me by email: baldphone.contact@gmail.com</string>
     <string name="accessibility_level">Accessibility Level</string>
     <string name="accessibility_settings">Accessibility</string>
     <string name="accidental_touches">Accidental Touch Guard</string>
-    <string name="accidental_touches_settings_subtext">The guard blocks your phone from touch input when the phone is
-        covered\nif you have problems with it you can turn it off
-    </string>
-    <string name="accidental_touches_subtext">Accidental touch was detected\npress OK to continue using the phone\nif
-        this message keeps appearing you can disable it in the accessibility settings
-    </string>
+    <string name="accidental_touches_settings_subtext">The guard blocks your phone from touch input when the phone is covered if you have problems with it you can turn it off</string>
+    <string name="accidental_touches_subtext">Accidental touch was detected press OK to continue using the phone if this message keeps appearing you can disable it in the accessibility settings</string>
     <string name="acknowledgments">Acknowledgments</string>
     <string name="adaptive">Adaptive</string>
     <string name="add_alarm">Add Alarm</string>
@@ -93,7 +86,7 @@
     <string name="clear_data">Clear All Data</string>
     <string name="clear_data_subtext">Are you sure you want to delete all data?</string>
     <string name="clear_data_subtext2">100%?</string>
-    <string name="clear_data_subtext3">sure?\npressing yes will delete all data!</string>
+    <string name="clear_data_subtext3">sure? pressing yes will delete all data!</string>
     <string name="clock">Clock</string>
     <string name="coming_soon">Coming Soon!</string>
     <string name="connection_settings">Connection</string>
@@ -120,9 +113,7 @@
     <string name="enter">Enter</string>
     <string name="enter_contact_or_phone_number">Enter contact name:</string>
     <string name="evening">Evening</string>
-    <string name="example_of_different_text_sizes">Example of different text sizes\nShould be readable and not
-        overflow.
-    </string>
+    <string name="example_of_different_text_sizes">Example of different text sizes Should be readable and not overflow.</string>
     <string name="external_storage_subtext">This permission is required in order to save pictures.</string>
     <string name="feedback">Send Feedback</string>
     <string name="feedback_cannot_be_empty">Feedback cannot be empty!</string>
@@ -143,9 +134,7 @@
     <string name="huge">Huge</string>
     <string name="internet">Internet</string>
     <string name="invoked_in">Invoked in:</string>
-    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">One last
-        thing:\nIt\'s highly recommended to use Baldphone\'s home screen as the default home launcher
-    </string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">One last thing: It\'s highly recommended to use Baldphone\'s home screen as the default home launcher</string>
     <string name="language">language</string>
     <string name="language_settings">Language</string>
     <string name="large">Large</string>
@@ -223,21 +212,14 @@
     <string name="set_default_dialer">Set Default Calling App</string>
     <string name="set_default_dialer_subtext">BaldPhone needs to be marked as the default calling app.</string>
     <string name="set_home_screen">Set Home Screen</string>
-    <string name="set_home_screen_subtext">In order to use BaldPhone, you should set it as home screen.\nIt is
-        reversible and can be changed in the settings.
-    </string>
+    <string name="set_home_screen_subtext">In order to use BaldPhone, you should set it as home screen. It is reversible and can be changed in the settings.</string>
     <string name="set_keyboard">Set keyboard</string>
     <string name="setting_does_not_exist">Setting Does Not Exist</string>
     <string name="settings">Settings</string>
     <string name="settings_permission">Settings Permission</string>
     <string name="share">Share</string>
-    <string name="share_actual_text">Hi, I\'m using this platform named "BaldPhone" which replaces the phone\'s
-        interface to a big, simple and friendly one.\nInterested?\nYou can download it for free!\ncheck out the link
-        below for more information:\n\nhttps://sites.google.com/view/baldphone
-    </string>
-    <string name="share_bald_phone_subtext">Hey, know anyone who may want to know about BaldPhone?\nYou can
-        share it with them!"
-    </string>
+    <string name="share_actual_text">Hi, I\'m using this platform named BaldPhonewhich replaces the phone\'s interface to a big, simple and friendly one. Interested? You can download it for free! check out the link below for more information:  https://sites.google.com/view/baldphone</string>
+    <string name="share_bald_phone_subtext">Hey, know anyone who may want to know about BaldPhone? You can share it with them!</string>
     <string name="share_baldphone">Share BaldPhone</string>
     <string name="share_contact">Share Contact</string>
     <string name="share_differently">Share Via Other App</string>
@@ -279,7 +261,6 @@
     <string name="wednesday">Wednesday</string>
     <string name="whatsapp">Whatsapp</string>
     <string name="wifi">Wifi</string>
-    <string name="will_repeat_only_once">will repeat only once!</string>
     <string name="write">Write</string>
     <string name="write_contacts">Write Contacts</string>
     <string name="write_external_storage">Write external storage</string>
@@ -287,15 +268,10 @@
     <string name="yesterday">Yesterday</string>
     <string name="nothing">Nothing</string>
     <string name="no_contacts_found">No Contacts Found!</string>
-    <string name="no_alarms">No Alarms\nCreate one by clicking\n\"Add Alarm\"\nOr\n\"Add Timer\"</string>
-    <string name="no_pills">No Pills\nCreate one by clicking\n\"Add Pill\"</string>
+    <string name="no_alarms">No Alarms Create one by clicking Add Alarm Or Add Timer</string>
+    <string name="no_pills">No Pills Create one by clicking Add Pill</string>
     <string name="clear_all_notifications">Clear All Notifications</string>
-    <string name="clear_cache_subtext">Are you sure you want to clear the cache?\nApp shortcuts will be removed too!
-    </string>
-    <string name="permissions_calm">Hi, BaldPhone must have the following permissions in order to run. Some of them
-        sound scary, but it is the only way BaldPhone can replace the phone\'s interface. No data is taken and it causes
-        no harm. Press OK to grant the permissions or no to exit BaldPhone.
-    </string>
+    <string name="clear_cache_subtext">Are you sure you want to clear the cache? App shortcuts will be removed too!</string>
     <string name="pending_update">Pending Update</string>
     <string name="download">Download</string>
     <string name="install_updates">Install Updates</string>
@@ -308,9 +284,7 @@
     <string name="new_updates_are_ready_to_be_downloaded">New updates are ready to be downloaded.</string>
     <string name="install">Install</string>
     <string name="data_warning">Data Warning</string>
-    <string name="data_warning_subtext">Hi, you\'re not connected to WIFI.\nThe size of the download is approximately 3MB,
-        if you\'re abroad it may cost you money.\nDo you want to continue with the download?
-    </string>
+    <string name="data_warning_subtext">Hi, you\'re not connected to WIFI. The size of the download is approximately 3MB, if you\'re abroad it may cost you money. Do you want to continue with the download?</string>
     <string name="update_message_is_corrupted">Update message is corrupted.</string>
     <string name="check_for_updates">Check for updates</string>
     <string name="could_not_connect_to_server">Could not connect to server!</string>
@@ -328,10 +302,7 @@
     <string name="download_progress">Download Progress</string>
     <string name="what_do_you_want_to_do_with___">What do you want to do with %s?</string>
     <string name="crash_reports">Crash Reports</string>
-    <string name="crash_reports_subtext">Crash reports help to make BaldPhone\'s experience flawless\nThey are used only
-        to fix bugs, and no info other than what\'s necessary to fix the bug is taken
-    </string>
-    <string name="custom_app">Custom App</string>
+    <string name="crash_reports_subtext">Crash reports help to make BaldPhone\'s experience flawless They are used only to fix bugs, and no info other than what\'s necessary to fix the bug is taken</string>
     <string name="custom_app_subtext">Choose custom app to be on the home screen.</string>
     <string name="no_app_was_found">No matching app was found!</string>
     <string name="alarm">Alarm</string>
@@ -363,9 +334,9 @@
     <string name="dialer_sounds">Dialer Sounds</string>
     <string name="dialer_sounds_subtext">Choose if you want to have Dialer Sounds.</string>
     <string name="low_battery_alert">Low battery alert</string>
-    <string name="low_battery_alert_subtext">Choose if you want the status bar to be red on the home screen when battery is under 20%\nNotice It won\'t be shown if the system status bar is hidden.</string>
+    <string name="low_battery_alert_subtext">Choose if you want the status bar to be red on the home screen when battery is under 20% Notice It won\'t be shown if the system status bar is hidden.</string>
 
-    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
+    <string name="also_available_at">Also available at baldphone.contact@gmail.com Feedback must be in English/Hebrew!</string>
     <string name="grant_all_permissions">Grant All Permissions</string>
 
 
@@ -404,5 +375,10 @@
     </string-array>
 
     <bool name="is_right_to_left">false</bool>
+    <string name="custom_app">Custom App</string>
+    <string name="custom_app">C</string>
+    <string name="permissions_calm">Hi, BaldPhone must have the following permissions in order to run. Some of them sound scary, but it is the only way BaldPhone can replace the phone\'s interface. No data is taken and it causes no harm. Press OK to grant the permissions or no to exit BaldPhone.</string>
+    <string name="will_repeat_only_once">will repeat only once!</string>
+    <string name="korean">korean</string>
 
 </resources>
