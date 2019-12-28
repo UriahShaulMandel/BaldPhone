@@ -91,7 +91,7 @@
     <string name="clear_data">Ștergeti toate datele</string>
     <string name="clear_data_subtext">Sunteți sigur că doriți ștergerea tuturor datelor?</string>
     <string name="clear_data_subtext2">100%?</string>
-    <string name="clear_data_subtext3">Sigur?\nVeți șterge toate datele apasând 'Yes'</string>
+    <string name="clear_data_subtext3">Sigur?\nVeți șterge toate datele apasând \'Yes\'</string>
     <string name="clock">Ceas</string>
     <string name="coming_soon">În curând</string>
     <string name="connection_settings">Conexiune</string>

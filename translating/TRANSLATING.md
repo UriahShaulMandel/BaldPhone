@@ -12,14 +12,14 @@
     - [Greek](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-el/strings.xml) translated by Zafeiris Ganas
     - [Hebrew](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-iw/strings.xml)
     - [Italian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-it/strings.xml) translated by Dario Mastromattei
+    - [Korean](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ko/strings.xml) translated by [SIMSEUNGMIN](https://https://github.com/SIMSEUNGMIN)
     - [Polish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pl/strings.xml) translated by Qik
     - [Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt/strings.xml) translated by Vladyslav Rudakevych
+    - [Romanian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ro/strings.xml) translated by Tibz Leet
     - [Russian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ru/strings.xml) translated by [Vintic](https://https://github.com/Vintic)
     - [Slovenian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-sl/strings.xml) translated by Klemen Skerbiš
     - [Spanish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-es/strings.xml) translated by [Victor Arribas](https://github.com/varhub)
     - [Turkish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-tr/strings.xml) translated by Samii571
-    - [Romanian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ro/strings.xml) translated by Tibz Leet
-    - [Korean](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ko/strings.xml) translated by [SIMSEUNGMIN](https://https://github.com/SIMSEUNGMIN)
  2. Click "edit this file" 
  3. find the word you want to change
  4. change it
@@ -36,14 +36,14 @@
     - [Greek](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-el/strings.xml) translated by Zafeiris Ganas
     - [Hebrew](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-iw/strings.xml)
     - [Italian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-it/strings.xml) translated by Dario Mastromattei
+    - [Korean](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ko/strings.xml) translated by [SIMSEUNGMIN](https://https://github.com/SIMSEUNGMIN)
     - [Polish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pl/strings.xml) translated by Qik
     - [Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt/strings.xml) translated by Vladyslav Rudakevych
+    - [Romanian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ro/strings.xml) translated by Tibz Leet
     - [Russian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ru/strings.xml) translated by [Vintic](https://https://github.com/Vintic)
     - [Slovenian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-sl/strings.xml) translated by Klemen Skerbiš
     - [Spanish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-es/strings.xml) translated by [Victor Arribas](https://github.com/varhub)
     - [Turkish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-tr/strings.xml) translated by Samii571
-    - [Romanian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ro/strings.xml) translated by Tibz Leet
-    - [Korean](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ko/strings.xml) translated by [SIMSEUNGMIN](https://https://github.com/SIMSEUNGMIN)
  2. Click "Raw" and copy the text to your text editor (Notepad++ is great for this specific task) 
  3. Change all the Values* to the new language (long texts like abouts can remain in english)
  4. Please make sure all the words are correct, obviously I can't check it :)
