@@ -1,0 +1,396 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about">Despre</string>
+    <string name="about_subtext">Hi!\nMy name is Uriah Shaul Mandel, and I\'m the developer of this platform.\n
+        I\'ve spent most of my \"adult\" life making this platform, and I\'ve released it for free, for all to
+        use.\nYou are more than welcome to contact me by email:\nbaldphone.contact@gmail.com
+    </string>
+    <string name="accessibility_level">Nivel accesibilitate</string>
+    <string name="accessibility_settings">Accesibilitate</string>
+    <string name="accidental_touches">Protecție atingere aleatorie</string>
+    <string name="accidental_touches_settings_subtext">Această protecție blochează atingerile atunci când telefonul este acoperit\n
+      Poate fi dezactivată dacă întâmpinați dificultăți.
+    </string>
+    <string name="accidental_touches_subtext">O atingere accidentală a fost detectată\nApăsați OK pentru a continua\nDacă acest mesaj apare în continuare îl puteți dezactiva în setările de accesibilitate.
+    </string>
+    <string name="acknowledgments">Recunoașteri</string>
+    <string name="adaptive">Adaptiv</string>
+    <string name="add_alarm">Adaugă alarmă</string>
+    <string name="add_alarm_quickly">Adaugă temporizator </string>
+    <string name="add_contact">Adaugă contact</string>
+    <string name="add_emergency_contact">Adaugă</string>
+    <string name="add_pill">Adaugă medicant</string>
+    <string name="add_shortcut">Adaugă scurtătură </string>
+    <string name="add_to_favorite">Adaugă la favorite</string>
+    <string name="add_to_home">Adaugă la pagină principală</string>
+    <string name="add_to_sos">Adaugă la SOS</string>
+    <string name="address">Adresă</string>
+    <string name="advanced_options">Opțiuni avansate</string>
+    <string name="afternoon">Dupa-amiaza</string>
+    <string name="airplane_mode">Mod Avion</string>
+    <string name="alarm_name">Nume alarmă</string>
+    <string name="alarm_volume">Volum alarmă</string>
+    <string name="alarm_volume_subtext">Alege volum pentru alarme.\nVolumul crește de la stânga la dreapta.</string>
+    <string name="alarms">Alarme</string>
+
+    <string name="alarms_repeats_every">Alarmele se repetă la fiecare</string>
+    <string name="all_alarms">Toate alarmele</string>
+    <string name="allow">Permite</string>
+    <string name="already_setted">Deja stabilit!\nAtinge aici pentru a schimba</string>
+    <string name="an_error_has_occurred">S-a ivit o eroare!</string>
+    <string name="and_welcome_to_baldphone">și bine ați venit la Baldphone</string>
+
+    <string name="apps">Aplicații</string>
+    <string name="are_you_sure_you_want_to_delete___">Sunteți sigur că vreți să ștergeți %s?</string>
+    <string name="assistant">Asistent</string>
+    <string name="at_least_one_day_must_be_selected">Cel puțin o zi trebuie selectată!</string>
+    <string name="auto_brightness">Luminiozitate\auto</string>
+    <string name="back">Înapoi</string>
+    <string name="backspace">Șterge</string>
+    <string name="baldphone_bla_allow_permission">Vă rugăm să acceptați urmatoarele permisiuni:</string>
+    <string name="blocked">Blocat</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="brightness">Luminiozitate</string>
+    <string name="brightness_subtext">Schimbă luminiozitate.</string>
+    <string name="cache_cleared_successfully">Datele cache au fost șterse cu sucess!</string>
+    <string name="call">Apeleaza</string>
+    <string name="calling">Se apelează</string>
+
+    <string name="call_log">Istoric apeluri:</string>
+    <string name="call_subtext">Această permisiune este necesară pentru a plasa apeluri.</string>
+    <string name="camera">Cameră</string>
+    <string name="camera_subtext">Această permisiune este necesară pentru a porni lanterna</string>
+    <string name="cancel">Anuleaza</string>
+    <string name="change_pills_time">Schimbă orele medicamentelor</string>
+    <string name="change_system_settings_subtext">Va rugăm să permiteți schimbarea setărilor, cum ar fi creșterea textului sau schimbarea luminiozității.
+    </string>
+    <string name="choose_friday">Vin</string>
+    <string name="choose_monday">Lun</string>
+    <string name="choose_saturday">Sâm</string>
+    <string name="choose_sunday">Dum</string>
+    <string name="choose_thursday">Joi</string>
+    <string name="choose_tuesday">Mar</string>
+    <string name="choose_wednesday">Mie</string>
+    <string name="clear">Șterge</string>
+    <string name="clear_cache">Șterge Cache</string>
+    <string name="clear_data">Ștergeti toate datele</string>
+    <string name="clear_data_subtext">Sunteți sigur că doriți ștergerea tuturor datelor?</string>
+    <string name="clear_data_subtext2">100%?</string>
+    <string name="clear_data_subtext3">Sigur?\nVeți șterge toate datele apasând 'Yes'</string>
+    <string name="clock">Ceas</string>
+    <string name="coming_soon">În curând</string>
+    <string name="connection_settings">Conexiune</string>
+    <string name="contact_must_has_name">Contactul trebuie să aibe un nume!</string>
+    <string name="contact_not_created">Contactul nu s-a creat!</string>
+    <string name="contacts">Contacte</string>
+    <string name="contacts_read_subtext">Această permisiune este necesară pentru a citi contacte.</string>
+    <string name="contacts_subtext">Această permisiune este necesară pentru a adauga contacte noi.</string>
+    <string name="crash">Oops!\nBaldPhone a întâmpinat o problema și se va restarta</string>
+    <string name="current_time">Ora curentă</string>
+    <string name="custom">Personalizat</string>
+    <string name="dark">Întuneric</string>
+    <string name="delete">Șterge</string>
+    <string name="delete___">Ștergeți %s?</string>
+    <string name="delete_all_alarms">Ștergeți toate alarmele</string>
+    <string name="dialer">Telefon</string>
+    <string name="display_settings">Ecran</string>
+    <string name="done">Gata</string>
+    <string name="down">Jos</string>
+    <string name="edit">Edit</string>
+    <string name="email">Email:</string>
+    <string name="enable_notification_access">Permiteți accesul la notificări</string>
+    <string name="enable_notification_access_subtext">Vă rugam permiteti accesul la notificări</string>
+    <string name="enter">Introdu</string>
+    <string name="enter_contact_or_phone_number">Introduceți numele contactului:</string>
+    <string name="evening">Seară</string>
+    <string name="example_of_different_text_sizes">Exemple de diferite dimensiuni ale textului\nAr trebui sa fie lizibil și să nu treacă peste margini
+    </string>
+    <string name="external_storage_subtext">Această permisiune este necesară pentru a salva poze</string>
+    <string name="feedback">Trimite feedback </string>
+    <string name="feedback_cannot_be_empty">Feedback-ul nu poate fii gol!</string>
+    <string name="feedback_sent_successfully">Feedback trimis cu succes</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Vă rugam selectați nivelul de accesibilitate
+    </string>
+    <string name="font_size">Dimensiune text</string>
+    <string name="friday">Vineri</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Aveți probleme folosind tastatura telefonului? Folosiți tasatura mare a lui BaldPhone în schimb!
+    </string>
+    <string name="hello">Salut!</string>
+    <string name="help">Tutoriale video</string>
+    <string name="hide">Ascunde</string>
+    <string name="high_level">Nivel înalt</string>
+    <string name="home_phone_number">Număr de telefon fix</string>
+    <string name="hour">Oră</string>
+    <string name="huge">Imens</string>
+    <string name="internet">Internet</string>
+    <string name="invoked_in">Invocat în:</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Încă un lucru:\n este recomandat să setați BaldPhone ca lansator implicit
+    </string>
+    <string name="language">Limbă</string>
+    <string name="language_settings">Limbă</string>
+    <string name="large">Mare</string>
+    <string name="left_handed">Stângaci</string>
+    <string name="light">Luminos</string>
+    <string name="location">Locație</string>
+    <string name="emergency_services">Servicii de urgență</string>
+    <string name="mail">Mail</string>
+    <string name="maps">Hărți</string>
+
+
+    <string name="medium">Mediu</string>
+    <string name="medium_level">Nivel mediu</string>
+    <string name="message">Mesaj</string>
+    <string name="messages">Mesaje</string>
+    <string name="minute">Minut</string>
+    <string name="minutes">Minute</string>
+    <string name="missed">Ratat</string>
+
+    <string name="mobile_phone_number">Număr de telefon mobil</string>
+    <string name="monday">Luni</string>
+    <string name="more">mai mult</string>
+    <string name="morning">Dimineața</string>
+    <string name="name">Nume</string>
+    <string name="named__">numit</string>
+    <string name="new_alarm___was_created">Alarma %s a fost creată!</string>
+    <string name="nfc">NFC</string>
+    <string name="no">Nu</string>
+    <string name="notes">Notițe</string>
+    <string name="notes_settings">Notițe</string>
+    <string name="notes_settings_subtext">Alegeți dacă doriți o filă pentru notițe pe pagina principală  </string>
+    <string name="notifications">Notificări</string>
+
+    <string name="off">Off</string>
+    <string name="ok">OK</string>
+    <string name="on">On</string>
+
+    <string name="only_once">Doar o dată</string>
+
+
+    <string name="open">Deschide</string>
+
+    <string name="outgoing">Ieșire</string>
+    <string name="page">Pagina</string>//page 1 of 2
+    <string name="permissions_part">Permisiun</string>
+    <string name="personalization_settings">Personalizare</string>
+    <string name="phone">Telefon</string>
+    <string name="photo">Poză</string>
+    <string name="photos">Poze</string>
+    <string name="pill_added">Medicament adăugat!</string>
+    <string name="pill_name">Nume medicament</string>
+    <string name="pills">Medicamente</string>
+    <string name="press_longer">Ține apăsat!</string>
+    <string name="timer">Temporizator</string>
+    <string name="read_call_log">Citește istoric apeluriy</string>
+    <string name="read_call_log_subtext">Această permisiune este necesară pentru a citi istoricul apelurilor.</string>
+    <string name="read_contacts">Citește contacte</string>
+    <string name="received">Primit</string>
+    <string name="recent">Trimis</string>
+    <string name="regular_level">Nivel normal</string>
+
+    <string name="remove_from_favorite">Șterge de la favorite</string>
+    <string name="remove_from_home">Șterge de pe pagina principală</string>
+    <string name="remove_from_sos">Șterge de la SOS</string>
+    <string name="remove_shortcut">Șterga scurtăturăt</string>
+    <string name="removed_all_alarms">Toate alarmele au fost șterse!</string>
+    <string name="repeats_every_day">În fiecare zi!</string>
+    <string name="right_handed">Dreptaci</string>
+
+    <string name="saturday">Sâmbată</string>
+    <string name="save">Salvează</string>
+    <string name="selected">Selectat</string>
+    <string name="send">Trimite</string>
+    <string name="set_default_dialer">Setează aplicație implicită pentru apelat</string>
+    <string name="set_default_dialer_subtext">BaldPhone trebuie sa fie aplicația implicită pentru apelat</string>
+    <string name="set_home_screen">Setează pagină principală</string>
+    <string name="set_home_screen_subtext">Pentru a folosi BaldPhone, trebuie sa îl setați ca pagină principală\nAceastă setare este reversibilă.
+    </string>
+    <string name="set_keyboard">Setează tasatură</string>
+    <string name="setting_does_not_exist">Setarea nu există</string>
+    <string name="settings">Setări</string>
+    <string name="settings_permission">Permisiune setări</string>
+    <string name="share">Share</string>
+    <string name="share_actual_text">Hi, I\'m using this platform named "BaldPhone" which replaces the phone\'s
+        interface to a big, simple and friendly one.\nInterested?\nYou can download it for free!\ncheck out the link
+        below for more information:\n\nhttps://sites.google.com/view/baldphone
+    </string>
+    <string name="share_bald_phone_subtext">Hey, know anyone who may want to know about BaldPhone?\nYou can
+        share it with them!"
+    </string>
+    <string name="share_baldphone">Share BaldPhone</string>
+    <string name="share_contact">Share Contact</string>
+    <string name="share_differently">Share prin altă aplicație</string>
+    <string name="share_via_whatsapp">Share Via Whatsapp</string>
+    <string name="shift">shift</string>
+    <string name="show">Arată</string>
+    <string name="small">Mic</string>
+    <string name="snooze">Amană</string>
+    <string name="sos">SOS</string>
+    <string name="sos_is_full">SOS este full</string>
+    <string name="sos_is_full_subtext">SOS este full! Vă rugăm să ștergeti contacte SOS înainte să adaugați altele</string>
+    <string name="speak">Vorbiți</string>
+    <string name="speech_to_text">Vorbire-text</string>
+    <string name="strong_hand">Mână dominantă</string>
+    <string name="strong_hand_subtext">Alegeți mâna dominanta.</string>
+    <string name="submit">Trimiteți</string>
+    <string name="sunday">Duminică</string>
+    <string name="technical_information">Informații tehnice.</string>
+    <string name="theme_settings">Temă</string>
+    <string name="theme_settings_subtext">Alegeți o temă</string>
+
+    <string name="thursday">Joi</string>
+    <string name="time_changer">Schimbare timp medicamente</string>
+    <string name="tiny">Mic</string>
+    <string name="to___days_and___hours_from_now">la %d zile și %d ore de acum</string>
+    <string name="to___hours_and___minutes_from_now">la %d ore și %d minute de acum</string>
+    <string name="to___minuets_from_now">la %d minute de acum</string>
+    <string name="today">Asțazi</string>
+    <string name="took">Luat!</string>
+    <string name="tuesday">Marți</string>
+    <string name="uninstall">Dezinstalare</string>
+    <string name="uninstall_subtext">Sunteți sigur că vreți să dezinstalați %s?\n Datele %s vor fii șterse pentru totdeauna!</string>
+    <string name="up">Sus</string>
+    <string name="video">Video</string>
+    <string name="video_tutorials">Tutoriale video</string>
+    <string name="videos">Videoclipuri</string>
+
+    <string name="voice_mail">Căsută poștala vocală</string>
+    <string name="wednesday">Miercuri</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="will_repeat_only_once">se va repeta o singură dată!</string>
+    <string name="write">Scrieți</string>
+    <string name="write_contacts">Scrieți in lista de contacte</string>
+    <string name="write_external_storage">Scrieți în mediul de stocare externă </string>
+    <string name="yes">Da</string>
+    <string name="yesterday">Ieri</string>
+    <string name="nothing">Nimic</string>
+    <string name="no_contacts_found">Nici un conctact nu a fost găsit!</string>
+    <string name="no_alarms">Nici o alarmă\nCreați una apasând pe\n\"Adaugă alarmă\"\nsau\n\"Adaugă temporizator\"</string>
+    <string name="no_pills">Nici un medicament\nAdaugă unul apasând pe\n\"Adaugă medicament\"</string>
+    <string name="clear_all_notifications">Stergeți toate notificările</string>
+    <string name="clear_cache_subtext">Sunteți sigur că vreți să stergeți datele cache?\nScurtăturilor vor fi de asemenea șterse!
+    </string>
+    <string name="permissions_calm">Hei, BaldPhone are nevoie de urmatoarele permisuni pentru a funcțion\n
+        Unele pot suna înspăimântător dar altfel nu îti vom putea înlocui interfața telefonului\nNu îți vom gestiona datele.  Apasă OK pentru a permite sau No pentru a inchide BaldPhone</string>
+    <string name="pending_update">Actualizare în așteptare</string>
+    <string name="download">Download</string>
+    <string name="install_updates">Actualizează</string>
+    <string name="install_updates_subtext">Această permisiune este necesară pentru a actualiza BaldPhone</string>
+    <string name="a_new_update_is_available">A aparut o nouă actualizare! Apasă OK pentru a actualiza BaldPhone!
+    </string>
+    <string name="current_version">Versiune curentă:\n</string>
+    <string name="new_version">Versiune nouă:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">Actualizări sunt gata de download</string>
+    <string name="install">Instalează</string>
+    <string name="data_warning">Atenționare date</string>
+    <string name="data_warning_subtext">Hei, nu sunteti conectat la Wi-Fi\nAr putea aparea costuri suplimentare. Continuați?
+    </string>
+    <string name="update_message_is_corrupted">Mesajul este corupt.</string>
+    <string name="check_for_updates">Verifică actualizări</string>
+    <string name="could_not_connect_to_server">Nu s-a putut conecta la server!</string>
+    <string name="could_not_connect_to_internet">Nu s-a putut conecta la internet!</string>
+    <string name="could_not_start_the_download">Nu s-a putut începe descărcarea!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">Fișierul descărcat nu a putut fii șters!</string>
+    <string name="downloading">Se descarcă…</string>
+
+    <string name="baldphone_is_up_to_date">BaldPhone este actualizat.</string>
+    <string name="what_s_new">Ce este nou</string>
+    <string name="download_finished">Descarcare terminată</string>
+    <string name="downloading_updates">Se descarcă actualizări</string>
+    <string name="installing_doesn_t_work">Nu se poate instala?</string>
+    <string name="try_now">Încearca acum</string>
+    <string name="download_progress">Progres descărcare</string>
+    <string name="what_do_you_want_to_do_with___">Ce doriți să faceți cu %s?</string>
+    <string name="crash_reports">Report erori</string>
+    <string name="crash_reports_subtext">Aceste reporturi ajuta la dezvoltarea aplicației. Sunt împartășite doar date aferente erorii.
+    </string>
+    <string name="custom_app">Aplicație personalizată</string>
+    <string name="custom_app_subtext">Alegeți o aplicație pentru a fii prezentată pe pagina principală</string>
+    <string name="no_app_was_found">Nici o aplicație de genul nu a fost găsită!</string>
+    <string name="alarm">Alarmă</string>
+    <string name="no_new_notifications">Nici o notificare nouă</string>
+    <string name="sound">Sunet</string>
+    <string name="mute">Silențios</string>
+    <string name="vibrate">Vibrații</string>
+    <string name="your_phone_doesnt_have_assistant_installed">Telefonl dvs. nu are instalat un asistent.</string>
+
+
+    <string name="status_bar_settings">Bară status</string>
+    <string name="status_bar_settings_subtext">Unde doriți sa fie afișată bara de status?</string>
+    <string name="only_home_screen">Doar pe pagina principală</string>
+    <string name="nowhere">Nicăieri</string>
+    <string name="everywhere">Peste tot</string>
+
+
+    <string name="share_photo">Împartășiți poza</string>
+
+    <string name="choose_language_for_keyboard">Alegeți limba</string>
+    <string name="hebrew">Hebrew</string>
+    <string name="english">English</string>
+
+    <string name="search">Căutați</string>
+    <string name="next">Urmatorul</string>
+    <string name="go">Mergeți</string>
+
+
+    <string name="dialer_sounds">Sunete butoane telefon</string>
+    <string name="dialer_sounds_subtext">Alegeți dacă doriți sunete</string>
+    <string name="low_battery_alert">Alertă nivel scăzut baterie</string>
+    <string name="low_battery_alert_subtext">Alegeți dacă doriți ca bara de status sa apară roșie atunci când bateria scade sub 20%.</string>
+
+    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
+    <string name="grant_all_permissions">Acordați toate permisiunile</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+    <string name="donate">Donati</string>
+    <string name="emergency_button">Buton urgența</string>
+    <string name="emergency_settings_subtext">Alegeți dacă doriți un buton de urgență pe pagina principală.</string>
+    <string name="private_number">Număr privat</string>
+    <string name="swipe_left_or_right">Trageți în stânga sau în dreaptat</string>
+    <string name="press_next_or_back_buton">Press următorul sau înapoi</string>
+    <string name="click_delay">Întarziere atingere</string>
+    <string name="no_delay">Fară așteptare</string>
+    <string name="scrolling">Defilare</string>
+    <string name="arrows">Săgeți</string>
+    <string name="swipe">Trageți</string>
+    <string name="_long">Lung</string>
+    <string name="_short">Scurt</string>
+    <string name="do_you_want_to_save_your_changes">Doriți să salvați schimbările?</string>
+    <string name="discard">Înlaturați</string>
+    <string name="no_recent_calls">Nici un apel recent</string>
+    <string name="apps_sort_method">Metodă sortare aplicații</string>
+    <string name="apps_sort_method_subtext">Alegeți dacă vreți ca aplicațiile sa fie sortate in grupe sau alfabetic.</string>
+    <string name="groups">Grupe</string>
+    <string name="one_grid">Alfabetic</string>
+
+
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
+</resources>
