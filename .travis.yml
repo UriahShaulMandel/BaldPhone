@@ -39,21 +39,21 @@ before_script:
 script:
   - ./gradlew connectedbaldUpdatesDebugAndroidTest
   - cd /home/travis
-  - git clone https://github.com/UriahShaulMandel/BaldPhoneScreenshots.git
-  - cd BaldPhoneScreenshots
-  - git config user.email "uriah.shm@outlook.com"
-  - git config user.name "UriahShaulMandelTravis"
-  - mkdir -p /home/travis/BaldPhoneScreenshots/screenshots
-  - adb pull /sdcard/Pictures/screenshots /home/travis/BaldPhoneScreenshots/screenshots
+  - git clone https://github.com/UriahShaulMandel/BaldPhoneCompanion.git
+  - cd BaldPhoneCompanion
+  - git config user.email "baldphone.contact@gmail.com"
+  - git config user.name "BaldPhoneTravis"
+  - mkdir -p /home/travis/BaldPhoneCompanion/screenshots
+  - adb pull /sdcard/Pictures/screenshots /home/travis/BaldPhoneCompanion/screenshots
   - branch_name=`git branch | grep \* | cut -d ' ' -f2`
-  - folder_name="/home/travis/BaldPhoneScreenshots/apks/$branch_name"
-  - file_name="/home/travis/BaldPhoneScreenshots/apks/$branch_name/tmp_apk.apk"
+  - folder_name="/home/travis/BaldPhoneCompanion/apks/$branch_name"
+  - file_name="/home/travis/BaldPhoneCompanion/apks/$branch_name/tmp_apk.apk"
   - mkdir -p "$folder_name"
   - cp /home/travis/build/UriahShaulMandel/BaldPhone/app/build/outputs/apk/baldUpdates/debug/app-baldUpdates-debug.apk "$file_name"
-  - curl http://baldphone.c1.biz/users_track_json.php -o /home/travis/BaldPhoneScreenshots/users.json
-  - curl http://baldphone.c1.biz/downloads_track_json.php -o /home/travis/BaldPhoneScreenshots/users_track.json
+  - curl http://baldphone.c1.biz/users_track_json.php -o /home/travis/BaldPhoneCompanion/users.json
+  - curl http://baldphone.c1.biz/downloads_track_json.php -o /home/travis/BaldPhoneCompanion/users_track.json
   - git add --all :/
-  - git commit -am "Uploading Auto Genereated Screenshots from travis"
+  - git commit -am "$TRAVIS_COMMIT"
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then git push https://UriahShaulMandel:${GITHUB_API_KEY}@${GH_REF} HEAD:master; fi'
 
 before_install:

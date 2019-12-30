@@ -12,14 +12,14 @@
 A platform which replaces the phone's interface to a bigger, simpler and friendlier one.
 
 
-[Screenshots](https://github.com/UriahShaulMandel/BaldPhoneScreenshots)
+[Companion Repository (Auto generated screenshots, test apks and db backups)](https://github.com/UriahShaulMandel/BaldPhoneCompanion)
 
 
 [Website](https://sites.google.com/view/baldphone)
 
 [BaldPhone's Subreddit](https://www.reddit.com/r/BaldPhone/)
 
-[Installing Manual](https://github.com/UriahShaulMandel/BaldPhone/raw/master/manual/Manual%20hebrew.pdf)
+[Installing Manual (Hebrew)](https://github.com/UriahShaulMandel/BaldPhone/raw/master/manual/Manual%20hebrew.pdf)
 
 Feel free to contact me at baldphone.contact@gmail.com
 
@@ -52,4 +52,3 @@ Feel free to contact me at baldphone.contact@gmail.com
  - [Application Class](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/java/com/bald/uriah/baldphone/BaldPhone.java)
  - [Main Manifest](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/AndroidManifest.xml)
  - [build.gradle (app)](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/build.gradle)
-

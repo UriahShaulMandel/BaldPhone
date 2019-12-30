@@ -1,5 +1,5 @@
 # Translating BaldPhone to other languages
-## [Auto generated multilingual screenshots](https://github.com/UriahShaulMandel/BaldPhoneScreenshots)
+## [Auto generated multilingual screenshots](https://github.com/UriahShaulMandel/BaldPhoneCompanion)
 ### Sometimes more strings are added, in order to be notified, please join one of the following: [![Discord](https://img.shields.io/discord/633644055779213362?label=Chat%20%28Discord%29)](https://discord.gg/K4XTNWN) [![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/baldphone?color=orange)](https://reddit.com/r/baldphone) [![GitHub watchers](https://img.shields.io/github/watchers/UriahShaulMandel/BaldPhone)](https://github.com/UriahShaulMandel/BaldPhone/watchers)
 ## Fixing\changing existing translations
  1. Go to your desired language file: 
