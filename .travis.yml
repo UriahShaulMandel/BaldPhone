@@ -1,4 +1,6 @@
 language: android
+git:
+  depth: 3
 
 android:
   components:
@@ -39,7 +41,7 @@ before_script:
 script:
   - ./gradlew connectedbaldUpdatesDebugAndroidTest
   - cd /home/travis
-  - git clone https://github.com/UriahShaulMandel/BaldPhoneCompanion.git --depth 1
+  - git clone https://github.com/UriahShaulMandel/BaldPhoneCompanion.git --depth 3
   - cd BaldPhoneCompanion
   - git config user.email "baldphone.contact@gmail.com"
   - git config user.name "BaldPhoneTravis"
