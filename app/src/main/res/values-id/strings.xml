@@ -1,0 +1,404 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about">Tentang</string>
+    <string name="about_subtext">Hai!\nNama saya Uriah Shaul Mandel, pengembang piranti lunak ini.\n
+        Saya menghabiskan sebagian besar masa \"dewasa\" saya untuk membuat BaldPhone, dan merilisnya secara gratis agar Anda semua bisa menggunakannya.\nAnda bisa menghubungi saya melalui email:\nbaldphone.contact@gmail.com
+    </string>
+    <string name="accessibility_level">Tingkat Aksesibilitas</string>
+    <string name="accessibility_settings">Aksesibilitas</string>
+    <string name="accidental_touches">Pencegah Sentuhan Tidak Disengaja</string>
+    <string name="accidental_touches_settings_subtext">Pencegah menjaga telepon Anda dari sentuhan tidak disengaja ketika telepon ditutup.
+        \nJika Anda keberatan dengan hal ini, Anda dapat menonaktifkannya.
+    </string>
+    <string name="accidental_touches_subtext">Sentuhan tidak disengaja terdeteksi\ntekan OK untuk terus menggunakan telepon\nJika
+        pesan ini terus muncul Anda dapat menonaktifkannya di pengaturan aksesibilitas
+    </string>
+    <string name="acknowledgments">Ucapan Terima Kasih</string>
+    <string name="adaptive">Adaptif</string>
+    <string name="add_alarm">Tambah Alarm</string>
+    <string name="add_alarm_quickly">Tambah Pewaktu</string>
+    <string name="add_contact">Tambah Kontak</string>
+    <string name="add_emergency_contact">Tambah</string>
+    <string name="add_pill">Tambah Pil</string>
+    <string name="add_shortcut">Tambah Pintasan</string>
+    <string name="add_to_favorite">Tambah ke Favorit</string>
+    <string name="add_to_home">Tambah ke Beranda</string>
+    <string name="add_to_sos">Tambah ke SOS</string>
+    <string name="address">Alamat</string>
+    <string name="advanced_options">Pilihan Tingkat Lanjut</string>
+    <string name="afternoon">Sore</string>
+    <string name="airplane_mode">Moda Pesawat</string>
+    <string name="alarm_name">Nama Alarm</string>
+    <string name="alarm_volume">Kenyaringan Alarm</string>
+    <string name="alarm_volume_subtext">Pilih Tingkat Kenyaringan Alarm.\nKenyaringan meningkat dari kiri ke kanan..</string>
+    <string name="alarms">Alarm</string>
+
+    <string name="alarms_repeats_every">Ulangi alarm tiap</string>
+    <string name="all_alarms">Semua Alarm</string>
+    <string name="allow">Izinkan</string>
+    <string name="already_setted">Sudah diatur!\nKlik di sini untuk mengubahnya</string>
+    <string name="an_error_has_occurred">Terjadi kesalahan!</string>
+    <string name="and_welcome_to_baldphone">dan selamat datang di Baldphone</string>
+
+    <string name="apps">Aplikasi</string>
+    <string name="are_you_sure_you_want_to_delete___">Anda yakin ingin menghapus %s?</string>
+    <string name="assistant">Asisten</string>
+    <string name="at_least_one_day_must_be_selected">Setidaknya pilih satu hari!</string>
+    <string name="auto_brightness">Kecerahan\nOtomatis</string>
+    <string name="back">Kembali</string>
+    <string name="backspace">menghapus</string>
+    <string name="baldphone_bla_allow_permission">Harap izinkan perizinan berikut:</string>
+    <string name="blocked">Diblokir</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="brightness">Kecerahan</string>
+    <string name="brightness_subtext">Ubah Kecerahan.</string>
+    <string name="cache_cleared_successfully">Cache Berhasil Dibersihkan!</string>
+    <string name="call">Panggilan</string>
+    <string name="calling">Memanggil</string>
+
+    <string name="call_log">Catatan Panggilan:</string>
+    <string name="call_subtext">Izin ini diperlukan untuk memanggil kontak.</string>
+    <string name="camera">Kamera</string>
+    <string name="camera_subtext">Izin ini diperlukan unutk menyalakan lampu senter.</string>
+    <string name="cancel">Batal</string>
+    <string name="change_pills_time">Ubah Waktu Pil</string>
+    <string name="change_system_settings_subtext">Izinkan BaldPhone untuk mengubah pengaturan, seperti memperbesar ukuran huruf dan mengubah kecerahan.</string>
+    <string name="choose_friday">Jum</string>
+    <string name="choose_monday">sen</string>
+    <string name="choose_saturday">Sab</string>
+    <string name="choose_sunday">Min</string>
+    <string name="choose_thursday">Kam</string>
+    <string name="choose_tuesday">Sel</string>
+    <string name="choose_wednesday">Rab</string>
+    <string name="clear">Bersihkan</string>
+    <string name="clear_cache">Bersihkan Cache</string>
+    <string name="clear_data">Hapus Semua Data</string>
+    <string name="clear_data_subtext">Apakah Anda yakin ingin menghapus semua data?</string>
+    <string name="clear_data_subtext2">100%?</string>
+    <string name="clear_data_subtext3">yakin?\nMenekan ya akan menghapus semua data!</string>
+    <string name="clock">Jam</string>
+    <string name="coming_soon">Segera Hadir!</string>
+    <string name="connection_settings">Sambungan</string>
+    <string name="contact_must_has_name">Kontak harus memiliki nama!</string>
+    <string name="contact_not_created">Kontak tidak dibuat!</string>
+    <string name="contacts">Kontak</string>
+    <string name="contacts_read_subtext">Izin ini diperlukan untuk membaca kontak.</string>
+    <string name="contacts_subtext">Izin ini diperlukan untuk menambahkan kontak.</string>
+    <string name="crash">Ups!\nBaldPhone bermasalah dan sekarang akan dimulai ulang.</string>
+    <string name="current_time">Waktu Saat Ini</string>
+    <string name="custom">Khusus</string>
+    <string name="dark">Gelap</string>
+    <string name="delete">Hapus</string>
+    <string name="delete___">Hapus %s?</string>
+    <string name="delete_all_alarms">Hapus semua alarm</string>
+    <string name="dialer">Pemanggil</string>
+    <string name="display_settings">Tampilan</string>
+    <string name="done">Selesai</string>
+    <string name="down">Turun</string>
+    <string name="edit">Sunting</string>
+    <string name="email">Email:</string>
+    <string name="enable_notification_access">Aktifkan Akses Pemberitahuan</string>
+    <string name="enable_notification_access_subtext">Harap beri BaldPhone akses ke pemberitahuan.</string>
+    <string name="enter">Enter</string>
+    <string name="enter_contact_or_phone_number">Masukkan nama kontak:</string>
+    <string name="evening">Malam</string>
+    <string name="example_of_different_text_sizes">Contoh ukuran teks yang berbeda\nSemestinya bisa dibaca dan tidak tumpang-tindih..
+    </string>
+    <string name="external_storage_subtext">Izin ini diperlukan untuk menyimpan gambar.</string>
+    <string name="feedback">Kirim Umpan Balik</string>
+    <string name="feedback_cannot_be_empty">Umpan balik tidak boleh kosong!</string>
+    <string name="feedback_sent_successfully">Umpan balik berhasil dikirim!</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Silakan  pilih tingkat aksesibilitas
+    </string>
+    <string name="font_size">Ukuran Huruf</string>
+    <string name="friday">Jumat</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Kesulitan menggunakan
+        papan ketik telepon? Gunakan papan ketik BESAR Baldphone sebagai gantinya!
+    </string>
+    <string name="hello">Halo</string>
+    <string name="help">Video Tutorial</string>
+    <string name="hide">Sembunyikan</string>
+    <string name="high_level">Tingkat Tinggi</string>
+    <string name="home_phone_number">Nomor telepon rumah</string>
+    <string name="hour">Jam</string>
+    <string name="huge">Sangat Besar</string>
+    <string name="internet">Internet</string>
+    <string name="invoked_in">Dipanggil dalam:</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Satu hal
+        terakhir:\nSangat disarankan untuk menggunakan layar Beranda Baldphone sebagai peluncur Beranda asali
+    </string>
+    <string name="language">bahasa</string>
+    <string name="language_settings">Bahasa</string>
+    <string name="large">Besar</string>
+    <string name="left_handed">Kidal</string>
+    <string name="light">Cahaya</string>
+    <string name="location">Lokasi</string>
+    <string name="emergency_services">Layanan Darurat</string>
+    <string name="mail">Surat</string>
+    <string name="maps">Peta</string>
+
+
+    <string name="medium">Sedang</string>
+    <string name="medium_level">Tingkat Sedang</string>
+    <string name="message">Pesan</string>
+    <string name="messages">Pesan-pesan</string>
+    <string name="minute">Menit</string>
+    <string name="minutes">Menit-menit</string>
+    <string name="missed">Tidak Terjawab</string>
+
+    <string name="mobile_phone_number">Nomor Telepon</string>
+    <string name="monday">Senin</string>
+    <string name="more">lebih banyak</string>
+    <string name="morning">Pagi</string>
+    <string name="name">Nama</string>
+    <string name="named__">nama</string>
+    <string name="new_alarm___was_created">alarm baru %s telah dibuat!</string>
+    <string name="nfc">NFC</string>
+    <string name="no">Tidak</string>
+    <string name="notes">Catatan</string>
+    <string name="notes_settings">Catatan-catatan</string>
+    <string name="notes_settings_subtext">Pilih jika Anda ingin laman Catatan berada di layar Beranda.</string>
+    <string name="notifications">Pemberitahuan</string>
+
+    <string name="of">dari</string>
+    <string name="off">Mati</string>
+    <string name="ok">OK</string>
+    <string name="on">Hidup</string>
+
+    <string name="only_once">Hanya sekali</string>
+
+
+    <string name="open">Buka</string>
+
+    <string name="outgoing">Keluar</string>
+    <string name="page">Halaman</string>//halaman 1 dari 2
+    <string name="permissions_part">Izin</string>
+    <string name="personalization_settings">Personalisasi</string>
+    <string name="phone">Telepon</string>
+    <string name="photo">Foto</string>
+    <string name="photos">Foto-foto</string>
+    <string name="pill_added">Pil ditambahkan!</string>
+    <string name="pill_name">Nama Pil</string>
+    <string name="pills">Pil-pil</string>
+    <string name="press_longer">Tekan Lebih Lama!</string>
+    <string name="timer">Pewaktu</string>
+    <string name="read_call_log">Baca Riwayat Panggilan</string>
+    <string name="read_call_log_subtext">Izin ini diperlukan untuk menampilkan riwayat panggilan.</string>
+    <string name="read_contacts">Baca kontak</string>
+    <string name="received">Diterima</string>
+    <string name="recent">Terkini</string>
+    <string name="regular_level">Tingkat biasa</string>
+
+    <string name="remove_from_favorite">Hapus dari Favorit</string>
+    <string name="remove_from_home">Hapus dari Beranda</string>
+    <string name="remove_from_sos">Hapus dari SOS</string>
+    <string name="remove_shortcut">Hapus pintasan</string>
+    <string name="removed_all_alarms">Hapus semua alarm!</string>
+    <string name="repeats_every_day">Tiap hari</string>
+    <string name="right_handed">Tangan Kanan</string>
+
+    <string name="saturday">Sabtu</string>
+    <string name="save">Simpan</string>
+    <string name="selected">Terpilih</string>
+    <string name="send">Kirim</string>
+    <string name="set_default_dialer">Setel Aplikasi Panggilan Asali</string>
+    <string name="set_default_dialer_subtext">BaldPhone perlu ditandai sebagai aplikasi panggilan asali.</string>
+    <string name="set_home_screen">Setel Layar Beranda</string>
+    <string name="set_home_screen_subtext">Untuk menggunakan BaldPhone, Anda harus mengaturnya sebagai layar beranda.\nPengaturan ini
+        bisa dikembalikan dan diubah dalam pengaturan.
+    </string>
+    <string name="set_keyboard">Setel papan ketik</string>
+    <string name="setting_does_not_exist">Pengaturan Tidak Ada</string>
+    <string name="settings">Pengaturan</string>
+    <string name="settings_permission">Pengaturan Perizinan</string>
+    <string name="share">Bagikan</string>
+    <string name="share_actual_text">Hai, Saya menggunakan aplikasi bernama "BaldPhone" yang menggantikan antarmuka telepon
+        menjadi besar, sederhana dan ramah.\nTertarik?\nAnda bisa mengunduhnya secara gratis!\nPeriksa tautan
+        di bawah untuk keterangan lebih lanjut:\n\nhttps://sites.google.com/view/baldphone
+    </string>
+    <string name="share_bald_phone_subtext">Hai, kenal seseorang yang mungkin tertarik dengan BaldPhone?\nAnda bisa
+        berbagi dengan mereka!"
+    </string>
+    <string name="share_baldphone">Bagikan BaldPhone</string>
+    <string name="share_contact">Bagikan Kontak</string>
+    <string name="share_differently">Bagikan Melalui Aplikasi Lain</string>
+    <string name="share_via_whatsapp">Bagikan Melalui Whatsapp</string>
+    <string name="shift">geser</string>
+    <string name="show">Tampilkan</string>
+    <string name="small">Kecil</string>
+    <string name="snooze">Tunda</string>
+    <string name="sos">SOS</string>
+    <string name="sos_is_full">SOS telah penuh!</string>
+    <string name="sos_is_full_subtext">SOS telah penuh! hapus kontak SOS lain sebelum menambahkan yang baru</string>
+    <string name="speak">Bicara</string>
+    <string name="speech_to_text">Ucapan ke Tulisan</string>
+    <string name="strong_hand">Tangan Dominan</string>
+    <string name="strong_hand_subtext">Pilih tangan dominan Anda untuk menyesuaikan antarmuka pengguna.</string>
+    <string name="submit">kirim</string>
+    <string name="sunday">Minggu</string>
+    <string name="technical_information">Informasi Teknis</string>
+    <string name="theme_settings">Tema</string>
+    <string name="theme_settings_subtext">Pilih tema</string>
+
+    <string name="thursday">Kamis</string>
+    <string name="time_changer">Pengubah Waktu Pil</string>
+    <string name="tiny">Sangat Kecil</string>
+    <string name="to___days_and___hours_from_now">ke %d hari dan %d jam dari sekarang</string>
+    <string name="to___hours_and___minutes_from_now">ke %d jam dan %d menit dari sekarang</string>
+    <string name="to___minuets_from_now">ke %d menit dari sekarang</string>
+    <string name="today">hari ini</string>
+    <string name="took">Ambil!</string>
+    <string name="tuesday">Selasa</string>
+    <string name="uninstall">Copot pemasangan</string>
+    <string name="uninstall_subtext">Anda yakin ingin mencopot %s?\nData %s akan hilang selamanya!</string>
+    <string name="up">Naik</string>
+    <string name="video">Video</string>
+    <string name="video_tutorials">Video Tutorial</string>
+    <string name="videos">Video-video</string>
+
+    <string name="voice_mail">Pesan Suara</string>
+    <string name="wednesday">Rabu</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="wifi">Wifi</string>
+    <string name="will_repeat_only_once">hanya diulang sekali!</string>
+    <string name="write">Tulis</string>
+    <string name="write_contacts">Tulis Kontak</string>
+    <string name="write_external_storage">Tulis penyimpanan eksternal</string>
+    <string name="yes">Ya</string>
+    <string name="yesterday">Kemarin</string>
+    <string name="nothing">Tidak Ada</string>
+    <string name="no_contacts_found">Kontak Tidak Ditemukan!</string>
+    <string name="no_alarms">Tidak Ada Alarm\nBuat dengan mengklik\n\"Tambah Alarm\"\nAtau\n\"Tambah Pewaktu\"</string>
+    <string name="no_pills">Tidak Ada Pil\nBuat dengan cara mengklik\n\"Tambah Pil\"</string>
+    <string name="clear_all_notifications">Kosongkan Semua Pemberitahuan</string>
+    <string name="clear_cache_subtext">Anda yakin ingin menghapus cache?\nAplikasi pintasan juga akan dihapus!
+    </string>
+    <string name="permissions_calm">Hai, BaldPhone membutuhkan perizinan berikut agar bisa berjalan. Beberapa
+        mungkin terdengar menakutkan, namun ini satu-satunya cara agar BaldPhone bisa menggantikan antarmuka telepon. Tidak ada data yang diambil dan akan menyebabkan
+        masalah. Tekan OK untuk mengizinkan atau TIDAK untuk keluar dari BaldPhone.
+    </string>
+    <string name="pending_update">Pembaruan Tertunda</string>
+    <string name="download">Unduh</string>
+    <string name="install_updates">Pasang Pembaruan</string>
+    <string name="install_updates_subtext">Izin ini diperlukan untuk memperbarui BaldPhone</string>
+    <string name="a_new_update_is_available">Pembaruan tersedia!\nPembaruan penting untuk untuk menjaga BaldPhone berjalan
+        dengan lancar.\nTekan OK untuk mengunduh.
+    </string>
+    <string name="current_version">Versi Sekarang:\n</string>
+    <string name="new_version">Versi Baru:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">Pembaruan siap diunduh.</string>
+    <string name="install">Pasang</string>
+    <string name="data_warning">Peringatan Data</string>
+    <string name="data_warning_subtext">Hai, Anda tidak terhubung dengan WIFI.\nUkuran unduhan sekitar 3MB,
+        jika Anda di luar area mungkin akan dikenai biaya.\nApakah Anda ingin tetap mengunduh?
+    </string>
+    <string name="update_message_is_corrupted">Pesan pembaruan rusak.</string>
+    <string name="check_for_updates">Memeriksa pembaruan</string>
+    <string name="could_not_connect_to_server">Tidak bisa terhubung ke peladen!</string>
+    <string name="could_not_connect_to_internet">Tidak bisa terhubung ke internet!</string>
+    <string name="could_not_start_the_download">Tidak bisa memulai pengunduhan!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">Berkas pembaruan yang telah diunduh tidak bisa dihapus!</string>
+    <string name="downloading">Mengunduh…</string>
+
+    <string name="baldphone_is_up_to_date">BaldPhone sudah terbaru.</string>
+    <string name="what_s_new">Apa yang baru</string>
+    <string name="download_finished">Pengunduhan selesai!</string>
+    <string name="downloading_updates">Mengunduh pembaruan…</string>
+    <string name="installing_doesn_t_work">Pemasangan tidak berhasil?</string>
+    <string name="try_now">Coba Sekarang</string>
+    <string name="download_progress">Laju Pengunduhan</string>
+    <string name="what_do_you_want_to_do_with___">Apa yang ingin Anda lakukan dengan %s?</string>
+    <string name="crash_reports">Laporan Kerusakan</string>
+    <string name="crash_reports_subtext">Laporan kerusakan membantu menjadikan pengalaman menggunakan BaldPhone tanpa cela\nLaporan hanya digunakan
+        untuk memperbaiki kutu, dan tidak ada info selain apa yang diperlukan untuk memperbaiki kutu
+    </string>
+    <string name="custom_app">Aplikasi Khusus</string>
+    <string name="custom_app_subtext">Pilih aplikasi khusus untuk berada di layar beranda.</string>
+    <string name="no_app_was_found">Tidak ada aplikasi yang cocok ditemukan!</string>
+    <string name="alarm">Alarm</string>
+    <string name="no_new_notifications">Tidak Ada Pemberitahuan Baru</string>
+    <string name="sound">Bunyi</string>
+    <string name="mute">Bisu</string>
+    <string name="vibrate">Getar</string>
+    <string name="your_phone_doesnt_have_assistant_installed">Telepon Anda tidak terpasang aplikasi asisten.</string>
+
+
+    <string name="status_bar_settings">Bilah status</string>
+    <string name="status_bar_settings_subtext">Di mana Anda ingin menampilkan bilah status?</string>
+    <string name="only_home_screen">Hanya di Layar Beranda</string>
+    <string name="nowhere">Tidak di mana-mana</string>
+    <string name="everywhere">Di mana-mana</string>
+
+
+    <string name="share_photo">Bagikan Foto</string>
+
+    <string name="choose_language_for_keyboard">Pilih Bahasa</string>
+    <string name="hebrew">Ibrani</string>
+    <string name="english">Inggris</string>
+
+    <string name="search">Cari</string>
+    <string name="next">Berikutnya</string>
+    <string name="go">Pergi</string>
+
+
+    <string name="dialer_sounds">Suara Pemanggil</string>
+    <string name="dialer_sounds_subtext">Pilih jika Anda menginginkan Suara Pemanggil.</string>
+    <string name="low_battery_alert">Peringatan Baterai Rendah</string>
+    <string name="low_battery_alert_subtext">Pilih jika Anda ingin bilah status menjadi merah di layar beranda ketika baterai di bawah 20%\nPerhatikan ia tidak akan ditampilkan jika bilah status disembunyikan.</string>
+
+    <string name="also_available_at">Juga tersedia di\nbaldphone.contact@gmail.com\nUmpan balik harus dalam bahasa Inggris atau Ibrani!</string>
+    <string name="grant_all_permissions">Berikan semua perizinan</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+    <string name="donate">Sumbangan</string>
+    <string name="emergency_button">Tombol Darurat</string>
+    <string name="emergency_settings_subtext">Pilih jika Anda menginginkan tombol darurat di layar beranda.</string>
+    <string name="private_number">Nomor Pribadi</string>
+    <string name="swipe_left_or_right">Geser ke kiri atau kanan</string>
+    <string name="press_next_or_back_buton">Tekan panah berikutnya atau kembali</string>
+    <string name="click_delay">Jeda Klik</string>
+    <string name="no_delay">Tanpa Jeda</string>
+    <string name="scrolling">Menggulung</string>
+    <string name="arrows">Panah</string>
+    <string name="swipe">Geser</string>
+    <string name="_long">Panjang</string>
+    <string name="_short">Pendek</string>
+    <string name="do_you_want_to_save_your_changes">Apakah Anda ingin menyimpan perubahan?</string>
+    <string name="discard">Buang</string>
+    <string name="no_recent_calls">Tidak Ada Panggilan Terbaru</string>
+    <string name="apps_sort_method">Metode Pengurutan Aplikasi</string>
+    <string name="apps_sort_method_subtext">Pilih apakah Anda ingin mengurutkan aplikasi dalam satu kotak atau membaginya menjadi beberapa kelompok berbeda berdasar huruf</string>
+    <string name="groups">Kelompok</string>
+    <string name="one_grid">Satu Kotak</string>
+
+
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
+</resources>
