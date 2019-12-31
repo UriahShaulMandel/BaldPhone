@@ -43,7 +43,7 @@ public class NotesView extends HomeView {
     private SharedPreferences sharedPreferences;
 
     public NotesView(@NonNull HomeScreenActivity activity) {
-        super(activity);
+        super(activity, activity);
     }
 
     @Override

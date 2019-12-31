@@ -17,6 +17,7 @@
 package com.bald.uriah.baldphone.views.home;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -29,6 +30,8 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.provider.Telephony;
+import android.util.ArrayMap;
+import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +43,7 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.AppsActivity;
 import com.bald.uriah.baldphone.activities.DialerActivity;
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
+import com.bald.uriah.baldphone.activities.Page1EditorActivity;
 import com.bald.uriah.baldphone.activities.RecentActivity;
 import com.bald.uriah.baldphone.activities.alarms.AlarmsActivity;
 import com.bald.uriah.baldphone.activities.contacts.ContactsActivity;
@@ -48,8 +52,11 @@ import com.bald.uriah.baldphone.activities.media.VideosActivity;
 import com.bald.uriah.baldphone.activities.pills.PillsActivity;
 import com.bald.uriah.baldphone.databases.apps.App;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabase;
+import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
 import com.bald.uriah.baldphone.databases.calls.CallLogsHelper;
 import com.bald.uriah.baldphone.services.NotificationListenerService;
+import com.bald.uriah.baldphone.utils.BDB;
+import com.bald.uriah.baldphone.utils.BDialog;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
@@ -57,7 +64,7 @@ import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.FirstPageAppIcon;
 
 import java.util.HashSet;
-import java.util.Objects;
+import java.util.Map;
 import java.util.Set;
 
 import static com.bald.uriah.baldphone.services.NotificationListenerService.ACTION_REGISTER_ACTIVITY;
@@ -73,7 +80,7 @@ public class HomePage1 extends HomeView {
     private View view;
     private FirstPageAppIcon bt_clock, bt_camera, bt_videos, bt_assistant, bt_messages, bt_photos, bt_contacts, bt_dialer, bt_whatsapp, bt_apps, bt_reminders, bt_recent;
     private boolean registered = false;
-    private App app;
+    public Map<App, FirstPageAppIcon> viewsToApps;
     /**
      * Listens to broadcasts from {@link NotificationListenerService}
      * This listener only checks if there are new messages\whatsapps,
@@ -84,22 +91,32 @@ public class HomePage1 extends HomeView {
         @Override
         public void onReceive(Context context, Intent intent) {
             final Set<String> packagesSet = new HashSet<>(intent.getStringArrayListExtra("packages"));
-            bt_messages.setBadgeVisibility(packagesSet.contains(Telephony.Sms.getDefaultSmsPackage(homeScreen)));
-            if (app == null) {
+            if (!viewsToApps.containsValue(bt_whatsapp))
                 bt_whatsapp.setBadgeVisibility(packagesSet.contains(D.WHATSAPP_PACKAGE_NAME));
-            } else
-                bt_whatsapp.setBadgeVisibility(packagesSet.contains(Objects.requireNonNull(ComponentName.unflattenFromString(app.getFlattenComponentName())).getPackageName()));
-            bt_recent.setBadgeVisibility(!CallLogsHelper.isAllReadSafe(getContext().getContentResolver()));
+            if (!viewsToApps.containsValue(bt_recent))
+                bt_recent.setBadgeVisibility(!CallLogsHelper.isAllReadSafe(getContext().getContentResolver()));
+            if (!viewsToApps.containsValue(bt_messages))
+                bt_messages.setBadgeVisibility(packagesSet.contains(Telephony.Sms.getDefaultSmsPackage(context)));
+            for (final App app : viewsToApps.keySet()) {
+                viewsToApps.get(app).setBadgeVisibility(packagesSet.contains(ComponentName.unflattenFromString(app.getFlattenComponentName()).getPackageName()));
+            }
 
         }
     };
+    private SharedPreferences sharedPreferences;
 
-    public HomePage1(@NonNull HomeScreenActivity homeScreen) {
-        super(homeScreen);
+    public HomePage1(@NonNull Context context) {
+        super((context instanceof HomeScreenActivity) ? (HomeScreenActivity) context : null, (Activity) context);
+        sharedPreferences = BPrefs.get(activity);
+    }
+
+    public HomePage1(@NonNull Context context, AttributeSet attributeSet) {
+        this(context);
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container) {
+        viewsToApps = new ArrayMap<>();
         view = inflater.inflate(R.layout.fragment_home_page1, container, false);
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
             view.findViewById(R.id.clock).setVisibility(View.GONE);
@@ -113,11 +130,11 @@ public class HomePage1 extends HomeView {
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
         if (!registered) {
-            LocalBroadcastManager.getInstance(homeScreen)
+            LocalBroadcastManager.getInstance(activity)
                     .registerReceiver(notificationReceiver,
                             new IntentFilter(NotificationListenerService.HOME_SCREEN_ACTIVITY_BROADCAST));
             registered = true;
-            LocalBroadcastManager.getInstance(homeScreen).sendBroadcast(
+            LocalBroadcastManager.getInstance(activity).sendBroadcast(
                     new Intent(ACTION_REGISTER_ACTIVITY)
                             .putExtra(KEY_EXTRA_ACTIVITY, NOTIFICATIONS_HOME_SCREEN));
         }
@@ -127,7 +144,7 @@ public class HomePage1 extends HomeView {
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
         if (registered) {
-            LocalBroadcastManager.getInstance(homeScreen)
+            LocalBroadcastManager.getInstance(activity)
                     .unregisterReceiver(notificationReceiver);
             registered = false;
         }
@@ -150,9 +167,9 @@ public class HomePage1 extends HomeView {
 
     private Intent getCameraIntent() {
         final Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-        final ActivityInfo activity = homeScreen.getPackageManager().resolveActivity(intent,
+        final ActivityInfo activityInfo = activity.getPackageManager().resolveActivity(intent,
                 PackageManager.MATCH_DEFAULT_ONLY).activityInfo;
-        final ComponentName name = new ComponentName(activity.applicationInfo.packageName, activity.name);
+        final ComponentName name = new ComponentName(activityInfo.applicationInfo.packageName, activityInfo.name);
         return new Intent(Intent.ACTION_MAIN)
                 .addCategory(Intent.CATEGORY_LAUNCHER)
                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
@@ -162,47 +179,28 @@ public class HomePage1 extends HomeView {
     }
 
     private void genOnClickListeners() {
-        final SharedPreferences sharedPreferences = BPrefs.get(homeScreen);
-        if (sharedPreferences.contains(BPrefs.CUSTOM_APP_KEY)) {
-            app = AppsDatabase.getInstance(homeScreen).appsDatabaseDao().findByFlattenComponentName(sharedPreferences.getString(BPrefs.CUSTOM_APP_KEY, null));
-            if (app == null)
-                sharedPreferences.edit().remove(BPrefs.CUSTOM_APP_KEY).apply();
-        } else
-            app = null;
-
-        if (app == null) {
+        sharedPreferences = BPrefs.get(activity);
+        setupButton(BPrefs.CUSTOM_RECENTS_KEY, bt_recent, v -> homeScreen.startActivity(new Intent(homeScreen, RecentActivity.class)));
+        setupButton(BPrefs.CUSTOM_DIALER_KEY, bt_dialer, v -> homeScreen.startActivity(new Intent(homeScreen, DialerActivity.class)));
+        setupButton(BPrefs.CUSTOM_CONTACTS_KEY, bt_contacts, v -> homeScreen.startActivity(new Intent(homeScreen, ContactsActivity.class)));
+        setupButton(BPrefs.CUSTOM_APP_KEY, bt_whatsapp, v -> {
             if (S.isPackageInstalled(homeScreen, WHATSAPP_PACKAGE_NAME))
-                bt_whatsapp.setOnClickListener(v -> S.startComponentName(homeScreen, WHATSAPP_COMPONENT_NAME));
+                S.startComponentName(homeScreen, WHATSAPP_COMPONENT_NAME);
             else
-                bt_whatsapp.setOnClickListener(v -> {
-                    try {
-                        homeScreen.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + WHATSAPP_PACKAGE_NAME)));
-                    } catch (android.content.ActivityNotFoundException e) {
-                        homeScreen.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + WHATSAPP_PACKAGE_NAME)));
-                    }
-                });
-        } else {
-            bt_whatsapp.setText(app.getLabel());
-            bt_whatsapp.setImageBitmap(S.byteArrayToBitmap(app.getIcon()));
-            bt_whatsapp.setOnClickListener(v -> S.startComponentName(homeScreen, ComponentName.unflattenFromString(app.getFlattenComponentName())));
-        }
-
-        bt_apps.setOnClickListener(v -> {
-            if (!homeScreen.finishedUpdatingApps)
-                homeScreen.launchAppsActivity = true;
-            else
-                homeScreen.startActivity(new Intent(HomePage1.this.homeScreen, AppsActivity.class));
+                try {
+                    homeScreen.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + WHATSAPP_PACKAGE_NAME)));
+                } catch (android.content.ActivityNotFoundException e) {
+                    homeScreen.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + WHATSAPP_PACKAGE_NAME)));
+                }
         });
-
-        bt_clock.setOnClickListener(v -> homeScreen.startActivity(new Intent(homeScreen, AlarmsActivity.class)));
-        bt_contacts.setOnClickListener(v -> homeScreen.startActivity(new Intent(HomePage1.this.homeScreen, ContactsActivity.class)));
-        bt_dialer.setOnClickListener(v -> homeScreen.startActivity(new Intent(homeScreen, DialerActivity.class)));
-        bt_recent.setOnClickListener(v -> homeScreen.startActivity(new Intent(homeScreen, RecentActivity.class)));
-        bt_reminders.setOnClickListener(v -> homeScreen.startActivity(new Intent(homeScreen, PillsActivity.class)));
-        bt_camera.setOnClickListener(v -> homeScreen.startActivity(getCameraIntent()));
-        bt_photos.setOnClickListener(v -> homeScreen.startActivity(new Intent(homeScreen, PhotosActivity.class)));
-        bt_videos.setOnClickListener(v -> homeScreen.startActivity(new Intent(homeScreen, VideosActivity.class)));
-        bt_messages.setOnClickListener(v -> {
+        setupButton(BPrefs.CUSTOM_ASSISTANT_KEY, bt_assistant, v -> {
+            try {
+                homeScreen.startActivity(new Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            } catch (Exception e) {
+                BaldToast.from(homeScreen).setType(BaldToast.TYPE_ERROR).setText(R.string.your_phone_doesnt_have_assistant_installed).show();
+            }
+        });
+        setupButton(BPrefs.CUSTOM_MESSAGES_KEY, bt_messages, v -> {
             try {
                 final ResolveInfo resolveInfo =
                         homeScreen.getPackageManager()
@@ -218,12 +216,62 @@ public class HomePage1 extends HomeView {
                 BaldToast.from(homeScreen).setType(BaldToast.TYPE_ERROR).setText(R.string.an_error_has_occurred).show();
             }
         });
-        bt_assistant.setOnClickListener(v -> {
-            try {
-                homeScreen.startActivity(new Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-            } catch (Exception e) {
-                BaldToast.from(homeScreen).setType(BaldToast.TYPE_ERROR).setText(R.string.your_phone_doesnt_have_assistant_installed).show();
-            }
+        setupButton(BPrefs.CUSTOM_PHOTOS_KEY, bt_photos, v -> homeScreen.startActivity(new Intent(homeScreen, PhotosActivity.class)));
+        setupButton(BPrefs.CUSTOM_CAMERA_KEY, bt_camera, v -> homeScreen.startActivity(getCameraIntent()));
+        setupButton(BPrefs.CUSTOM_VIDEOS_KEY, bt_videos, v -> homeScreen.startActivity(new Intent(homeScreen, VideosActivity.class)));
+        setupButton(BPrefs.CUSTOM_PILLS_KEY, bt_reminders, v -> homeScreen.startActivity(new Intent(homeScreen, PillsActivity.class)));
+        setupButton(BPrefs.CUSTOM_APPS_KEY, bt_apps, v -> {
+            if (!homeScreen.finishedUpdatingApps)
+                homeScreen.launchAppsActivity = true;
+            else
+                homeScreen.startActivity(new Intent(HomePage1.this.homeScreen, AppsActivity.class));
         });
+        setupButton(BPrefs.CUSTOM_ALARMS_KEY, bt_clock, v -> homeScreen.startActivity(new Intent(homeScreen, AlarmsActivity.class)));
+    }
+
+    private void setupButton(String bPrefsKey, FirstPageAppIcon bt, View.OnClickListener onClickListener) {
+        final App app;
+        if (sharedPreferences.contains(bPrefsKey)) {
+            app = AppsDatabase.getInstance(homeScreen).appsDatabaseDao().findByFlattenComponentName(sharedPreferences.getString(bPrefsKey, null));
+            if (app == null)
+                sharedPreferences.edit().remove(bPrefsKey).apply();
+        } else app = null;
+        if (homeScreen != null) {
+            if (app == null) {
+                bt.setOnClickListener(onClickListener);
+            } else {
+                bt.setText(app.getLabel());
+                AppsDatabaseHelper.loadPic(app, bt.imageView);
+                bt.setOnClickListener(v -> S.startComponentName(homeScreen, ComponentName.unflattenFromString(app.getFlattenComponentName())));
+                viewsToApps.put(app, bt);
+            }
+        } else {
+            final Page1EditorActivity page1EditorActivity = (Page1EditorActivity) activity;
+            final BDB bdb = BDB.from(activity)
+                    .setTitle(R.string.custom_app)
+                    .setSubText(R.string.custom_app_subtext)
+                    .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
+                    .setOptions(bt.getText(), activity.getText(R.string.custom))
+                    .setOptionsStartingIndex(() -> sharedPreferences.contains(bPrefsKey) ? 1 : 0)
+                    .setPositiveButtonListener(params -> {
+                        if (params[0].equals(0)) {
+                            sharedPreferences.edit().remove(bPrefsKey).apply();
+                        } else
+                            activity.startActivityForResult(new Intent(activity, AppsActivity.class).putExtra(AppsActivity.CHOOSE_MODE, bPrefsKey), AppsActivity.REQUEST_SELECT_CUSTOM_APP);
+                        return true;
+                    });
+
+            bt.setOnClickListener(v -> bdb.show().setOnDismissListener(dialog -> {
+                if (page1EditorActivity.baldPrefsUtils.hasChanged(page1EditorActivity)) {
+                    page1EditorActivity.recreate();
+                }
+            }));
+
+            if (app != null) {
+                bt.setText(app.getLabel());
+                bt.setImageBitmap(S.byteArrayToBitmap(app.getIcon()));
+                viewsToApps.put(app, bt);
+            }
+        }
     }
 }

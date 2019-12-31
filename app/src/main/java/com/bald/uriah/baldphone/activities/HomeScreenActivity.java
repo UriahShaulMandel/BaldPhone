@@ -308,7 +308,7 @@ public class HomeScreenActivity extends BaldActivity {
 
     /* the security exception will happen only after api 23 so Lint please shush*/
     @SuppressLint("InlinedApi")
-    protected void onResume() {
+    protected void onResume() { // remember to change in Page1EditorActivity.java too!
         super.onResume();
         if (baldPrefsUtils.hasChanged(this)) {
             viewPagerHolder.getViewPager().removeAllViews();//android auto saves fragments, not good for us in this case

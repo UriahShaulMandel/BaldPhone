@@ -68,30 +68,46 @@
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.DialerActivity">
+        <activity
+            android:name=".activities.DialerActivity"
+            android:label="@string/dialer">
             <intent-filter>
                 <action android:name="android.intent.action.DIAL" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.alarms.AlarmsActivity" />
+        <activity
+            android:name=".activities.alarms.AlarmsActivity"
+            android:label="@string/alarms" />
         <activity
             android:name=".activities.alarms.AlarmScreenActivity"
+            android:label="@string/alarm"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.alarms.AddAlarmActivity"
+            android:label="@string/add_alarm"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.contacts.ContactsActivity"
+            android:label="@string/contacts"
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".activities.contacts.SingleContactActivity" />
-        <activity android:name=".activities.media.SingleVideoActivity" />
+        <activity
+            android:name=".activities.media.SingleVideoActivity"
+            android:label="@string/video" />
         <activity
             android:name=".activities.TutorialActivity"
+            android:label="@string/video_tutorials"
             android:screenOrientation="portrait" />
-        <activity android:name=".activities.SOSActivity" />
+        <activity
+            android:name=".activities.SOSActivity"
+            android:label="@string/sos" />
 
-        <activity android:name=".activities.SettingsActivity" />
-        <activity android:name=".activities.NotificationsActivity" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/settings" />
+        <activity
+            android:name=".activities.NotificationsActivity"
+            android:label="@string/notifications" />
         <activity
             android:name=".activities.FakeLauncherActivity"
             android:enabled="false">
@@ -103,9 +119,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.PermissionActivity" />
-        <activity android:name=".activities.RecentActivity" />
-        <activity android:name=".activities.media.PhotosActivity" />
-        <activity android:name=".activities.media.VideosActivity">
+        <activity
+            android:name=".activities.RecentActivity"
+            android:label="@string/recent" />
+        <activity
+            android:name=".activities.media.PhotosActivity"
+            android:label="@string/photos" />
+        <activity
+            android:name=".activities.media.VideosActivity"
+            android:label="@string/videos">
             <intent-filter>
                 <action android:name="android.intent.action.GET_CONTENT" />
                 <data android:mimeType="video/*" />
@@ -117,8 +139,12 @@
         <activity
             android:name=".activities.alarms.AddTimerActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activities.AppsActivity" />
-        <activity android:name=".activities.pills.PillsActivity" />
+        <activity
+            android:name=".activities.AppsActivity"
+            android:label="@string/apps" />
+        <activity
+            android:name=".activities.pills.PillsActivity"
+            android:label="@string/pills" />
         <activity
             android:name=".activities.pills.AddPillActivity"
             android:screenOrientation="portrait" />
@@ -138,8 +164,12 @@
         <activity
             android:name=".activities.YoutubeActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activities.VideoTutorialsActivity" />
-        <activity android:name=".activities.CrashActivity" />
+        <activity
+            android:name=".activities.VideoTutorialsActivity"
+            android:label="@string/video_tutorials" />
+        <activity
+            android:name=".activities.CrashActivity"
+            android:label="@string/crash" />
         <activity android:name=".activities.KeyboardChangerActivity" />
         <activity android:name=".activities.pills.PillTimeSetterActivity" />
         <activity
@@ -157,6 +187,7 @@
             android:screenOrientation="portrait" />
         <activity android:name=".activities.FeedbackActivity" />
         <activity android:name=".activities.UpdatesActivity" />
+        <activity android:name=".activities.Page1EditorActivity" />
 
 
         <service

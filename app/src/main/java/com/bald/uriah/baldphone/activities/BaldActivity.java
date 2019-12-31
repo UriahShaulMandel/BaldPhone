@@ -330,5 +330,4 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     }
 
     protected abstract int requiredPermissions();
-
 }
