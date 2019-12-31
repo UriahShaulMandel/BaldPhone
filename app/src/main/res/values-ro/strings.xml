@@ -380,6 +380,8 @@
     <string name="apps_sort_method_subtext">Alegeți dacă vreți ca aplicațiile sa fie sortate in grupe sau alfabetic.</string>
     <string name="groups">Grupe</string>
     <string name="one_grid">Alfabetic</string>
+    <string name="colorful">Colorful</string>
+    <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
 
 
     <string-array name="names_for_screenshots">

@@ -81,6 +81,9 @@ public final class BPrefs {
     public static final String APPS_ONE_GRID_KEY = "APPS_ONE_GRID_KEY";
     public static final boolean APPS_ONE_GRID_DEFAULT_VALUE = false;
 
+    public static final String COLORFUL_KEY = "COLORFUL_KEY";
+    public static final boolean COLORFUL_DEFAULT_VALUE = false;
+
     public static final String LAST_CRASH_KEY = "LAST_CRASH_KEY";
     public static final long LAST_CRASH_TIME_OK = 12 * D.SECOND;
 

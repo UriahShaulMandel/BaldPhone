@@ -378,6 +378,8 @@
     <string name="apps_sort_method_subtext">Choose whether you want to sort the apps in one grid or to have them divided into different groups via letters</string>
     <string name="groups">Groups</string>
     <string name="one_grid">One Grid</string>
+    <string name="colorful">Colorful</string>
+    <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
 
 
     <string-array name="names_for_screenshots">

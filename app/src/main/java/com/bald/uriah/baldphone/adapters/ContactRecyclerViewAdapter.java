@@ -48,6 +48,7 @@ import com.bald.uriah.baldphone.activities.contacts.SingleContactActivity;
 import com.bald.uriah.baldphone.fragments_and_dialogs.LetterChooserDialog;
 import com.bald.uriah.baldphone.utils.RandomColorMaker;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
+import com.bumptech.glide.Glide;
 
 public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<ContactRecyclerViewAdapter.ViewHolder> {
     public final static String[] PROJECTION = {
@@ -176,7 +177,11 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
     private void drawText(ViewHolder viewHolder, String chr, int hash) {
         viewHolder.tv_image_letter.setVisibility(View.VISIBLE);
         viewHolder.tv_image_letter.setText(chr);
-        viewHolder.iv_contact_pic.setImageDrawable(new ColorDrawable(randomColorMaker.generateColor(hash)));//can be the same drawable because its black only
+        Glide.with(viewHolder.iv_contact_pic).load(
+                activity.colorful ?
+                        new ColorDrawable(randomColorMaker.generateColor(hash)) :
+                        letterContactBackground
+        ).into(viewHolder.iv_contact_pic);
     }
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

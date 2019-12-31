@@ -403,6 +403,8 @@
     <string name="apps_sort_method_subtext">בחר האם ברצונך לסדר את היישומים בטבלה אחת או בקבוצות שונות ע\"פ הא\"ב</string>
     <string name="groups">קבוצות</string>
     <string name="one_grid">טבלה אחת</string>
+    <string name="colorful">צבעים</string>
+    <string name="colorful_subtext">האם ברצונך להפוך את BaldPhone ליותר צבעוני?</string>
 
 </resources>
 

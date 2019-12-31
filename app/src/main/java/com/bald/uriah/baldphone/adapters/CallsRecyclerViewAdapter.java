@@ -147,7 +147,11 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                                     null :
                             null);
                     image_letter.setVisibility(View.VISIBLE);
-                    Glide.with(profile_pic).load(new ColorDrawable(randomColorMaker.generateColor(miniContact.lookupKey.hashCode()))).into(profile_pic);
+                    Glide.with(profile_pic).load(
+                            activity.colorful ?
+                                    new ColorDrawable(randomColorMaker.generateColor(miniContact.lookupKey.hashCode())) :
+                                    letterContactBackground
+                    ).into(profile_pic);
                 } else {
                     if (S.isValidContextForGlide(profile_pic.getContext()))
                         Glide.with(profile_pic).load(miniContact.photo).into(profile_pic);

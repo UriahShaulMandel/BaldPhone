@@ -334,6 +334,21 @@ public class SettingsActivity extends BaldActivity {
                                 })
                                 .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.APPS_ONE_GRID_KEY, BPrefs.APPS_ONE_GRID_DEFAULT_VALUE) ? 0 : 1),
                         R.drawable.apps_on_button));
+
+        personalizationCategory.add(
+                new BDBSettingsItem(R.string.colorful,
+                        BDB.from(this)
+                                .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL).setTitle(R.string.apps_sort_method)
+                                .setSubText(R.string.colorful_subtext)
+                                .setOptions(R.string.yes, R.string.no)
+                                .setPositiveButtonListener(params -> {
+                                    editor.putBoolean(BPrefs.COLORFUL_KEY, params[0].equals(0)).apply();
+                                    this.recreate();
+                                    return true;
+                                })
+                                .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.COLORFUL_KEY, BPrefs.COLORFUL_DEFAULT_VALUE) ? 0 : 1),
+                        R.drawable.colors_on_button));
+
         personalizationCategory.add(new BDBSettingsItem(R.string.low_battery_alert,
                 BDB.from(this)
                         .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)

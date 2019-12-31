@@ -331,4 +331,6 @@
     <string name="go">Go</string>
     <string name="huge">거대한</string>
     <string name="of">of</string>
+    <string name="colorful">Colorful</string>
+    <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
 </resources>

@@ -388,6 +388,8 @@
     <string name="apps_sort_method_subtext">Pilih apakah Anda ingin mengurutkan aplikasi dalam satu kotak atau membaginya menjadi beberapa kelompok berbeda berdasar huruf</string>
     <string name="groups">Kelompok</string>
     <string name="one_grid">Satu Kotak</string>
+    <string name="colorful">Colorful</string>
+    <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
 
 
     <string-array name="names_for_screenshots">

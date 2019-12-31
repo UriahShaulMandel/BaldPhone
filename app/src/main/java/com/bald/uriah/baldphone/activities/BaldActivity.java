@@ -83,6 +83,7 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
 
     public boolean testing = false;
     protected Vibrator vibrator;
+    public boolean colorful;
     @StyleRes
     private int themeIndex;
     private List<WeakReference<Dialog>> dialogsToClose = new ArrayList<>(1);
@@ -194,6 +195,7 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
         vibrator = sharedPreferences
                 .getBoolean(BPrefs.VIBRATION_FEEDBACK_KEY, BPrefs.VIBRATION_FEEDBACK_DEFAULT_VALUE)
                 ? (Vibrator) getSystemService(VIBRATOR_SERVICE) : null;
+        colorful = sharedPreferences.getBoolean(BPrefs.COLORFUL_KEY, BPrefs.COLORFUL_DEFAULT_VALUE);
         themeIndex = S.getTheme(this);
         setTheme(themeIndex);
 
