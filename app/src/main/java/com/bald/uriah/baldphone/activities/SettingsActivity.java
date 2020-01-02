@@ -77,7 +77,6 @@ import static android.content.Intent.ACTION_VIEW;
  */
 public class SettingsActivity extends BaldActivity {
     private static final String TAG = SettingsActivity.class.getSimpleName();
-    public static final int REQUEST_SELECT_CUSTOM_APP = 88;
     public static final float[] FONT_SIZES = new float[]{0.8f, 0.9f, 1.0f, 1.1f, 1.3f, 1.5f, 1.7f};
     public static final String SAVEABLE_HISTORY_KEY = "SAVEABLE_HISTORY_KEY";
 
@@ -175,31 +174,13 @@ public class SettingsActivity extends BaldActivity {
                         , R.drawable.home_on_button)
         );
 
-        mainCategory.add(new RunnableSettingsItem(R.string.advanced_options, v -> {
-            try {
-                startActivity(new Intent(android.provider.Settings.ACTION_SETTINGS));
-            } catch (ActivityNotFoundException e) {
-                Log.e(TAG, e.getMessage());
-                e.printStackTrace();
-                BaldToast.from(this).setText(R.string.setting_does_not_exist).setType(BaldToast.TYPE_ERROR).show();
-
-            }
-        }, R.drawable.settings_on_button));
+        mainCategory.add(new RunnableSettingsItem(R.string.advanced_options, v -> startActivity(new Intent(Settings.ACTION_SETTINGS)), R.drawable.settings_on_button));
 
         final SettingsItem keyboard = new RunnableSettingsItem(R.string.set_keyboard, v -> startActivity(new Intent(this, KeyboardChangerActivity.class)), R.drawable.keyboard_on_button);
         accessibilityCategory.add(keyboard);
         personalizationCategory.add(keyboard);
 
-        personalizationCategory.add(new RunnableSettingsItem(R.string.language_settings, v -> {
-            try {
-                startActivity(new Intent(Settings.ACTION_LOCALE_SETTINGS));
-            } catch (ActivityNotFoundException e) {
-                Log.e(TAG, e.getMessage());
-                e.printStackTrace();
-                BaldToast.from(this).setText(R.string.setting_does_not_exist).setType(BaldToast.TYPE_ERROR).show();
-
-            }
-        }, R.drawable.translate_on_button));
+        personalizationCategory.add(new RunnableSettingsItem(R.string.language_settings, v -> startActivity(new Intent(Settings.ACTION_LOCALE_SETTINGS)), R.drawable.translate_on_button));
 
         personalizationCategory.add(
                 new BDBSettingsItem(R.string.emergency_button, BDB.from(this)
@@ -214,26 +195,8 @@ public class SettingsActivity extends BaldActivity {
                         .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.EMERGENCY_BUTTON_VISIBLE_KEY, BPrefs.EMERGENCY_BUTTON_VISIBLE_DEFAULT_VALUE) ? 0 : 1),
                         R.drawable.emergency_on_button));
         personalizationCategory.add(new RunnableSettingsItem(R.string.time_changer, v -> startActivity(new Intent(this, PillTimeSetterActivity.class)), R.drawable.pill));
-        personalizationCategory.add(
+        personalizationCategory.add(new RunnableSettingsItem(R.string.edit_home_screen, v -> startActivity(new Intent(this, Page1EditorActivity.class)), R.drawable.edit_on_button));
 
-                // !! Don't change string without changing it too in onActivityResult!!
-                new BDBSettingsItem(R.string.custom_app,
-                        BDB.from(this)
-                                .setTitle(R.string.custom_app)
-                                .setSubText(R.string.custom_app_subtext)
-                                .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
-                                .setOptions(R.string.whatsapp, R.string.custom)
-                                .setOptionsStartingIndex(() -> sharedPreferences.contains(BPrefs.CUSTOM_APP_KEY) ? 1 : 0)
-                                .setPositiveButtonListener(params -> {
-                                    if (params[0].equals(0)) {
-                                        editor.remove(BPrefs.CUSTOM_APP_KEY).apply();
-                                    } else
-                                        startActivityForResult(new Intent(this, AppsActivity.class).putExtra(AppsActivity.EXTRA_MODE, AppsActivity.MODE_CHOOSE_ONE), REQUEST_SELECT_CUSTOM_APP);
-                                    return true;
-                                }), R.drawable.whatsapp_on_button
-
-                )
-        );
         accessibilityCategory.add(new RunnableSettingsItem(R.string.accessibility_level, v -> startActivity(new Intent(this, AccessibilityLevelChangerActivity.class)), R.drawable.accessibility_on_button));
         accessibilityCategory.add(
                 new BDBSettingsItem(R.string.accidental_touches, BDB.from(this)
@@ -363,9 +326,7 @@ public class SettingsActivity extends BaldActivity {
                         .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.LOW_BATTERY_ALERT_KEY, BPrefs.LOW_BATTERY_ALERT_DEFAULT_VALUE) ? 0 : 1),
                 R.drawable.low_battery_alert_on_button
         ));
-        SettingsItem fontSettingsItem = new RunnableSettingsItem(R.string.font_size, v -> {
-            startActivity(new Intent(this, FontChangerActivity.class));
-        }, R.drawable.font_on_button);
+        SettingsItem fontSettingsItem = new RunnableSettingsItem(R.string.font_size, v -> startActivity(new Intent(this, FontChangerActivity.class)), R.drawable.font_on_button);
         personalizationCategory.add(fontSettingsItem);
         displayCategory.add(fontSettingsItem);
         accessibilityCategory.add(fontSettingsItem);
@@ -374,36 +335,9 @@ public class SettingsActivity extends BaldActivity {
         setupAlarmVolume();
 
         //connections
-        connectionCategory.add(new RunnableSettingsItem(R.string.airplane_mode, v -> {
-            try {
-                startActivity(new Intent(Settings.ACTION_AIRPLANE_MODE_SETTINGS));
-            } catch (ActivityNotFoundException e) {
-                Log.e(TAG, e.getMessage());
-                e.printStackTrace();
-                BaldToast.from(this).setText(R.string.setting_does_not_exist).setType(BaldToast.TYPE_ERROR).show();
-
-            }
-        }, R.drawable.airplane_mode_on_button));
-        connectionCategory.add(new RunnableSettingsItem(R.string.wifi, v -> {
-            try {
-                startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT));
-            } catch (ActivityNotFoundException e) {
-                Log.e(TAG, e.getMessage());
-                e.printStackTrace();
-                BaldToast.from(this).setText(R.string.setting_does_not_exist).setType(BaldToast.TYPE_ERROR).show();
-
-            }
-        }, R.drawable.wifi_on_button));
-        connectionCategory.add(new RunnableSettingsItem(R.string.bluetooth, v -> {
-            try {
-                startActivity(new Intent(Settings.ACTION_BLUETOOTH_SETTINGS));
-            } catch (ActivityNotFoundException e) {
-                Log.e(TAG, e.getMessage());
-                e.printStackTrace();
-                BaldToast.from(this).setText(R.string.setting_does_not_exist).setType(BaldToast.TYPE_ERROR).show();
-
-            }
-        }, R.drawable.bluetooth_on_button));
+        connectionCategory.add(new RunnableSettingsItem(R.string.airplane_mode, v -> startActivity(new Intent(Settings.ACTION_AIRPLANE_MODE_SETTINGS)), R.drawable.airplane_mode_on_button));
+        connectionCategory.add(new RunnableSettingsItem(R.string.wifi, v -> startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT)), R.drawable.wifi_on_button));
+        connectionCategory.add(new RunnableSettingsItem(R.string.bluetooth, v -> startActivity(new Intent(Settings.ACTION_BLUETOOTH_SETTINGS)), R.drawable.bluetooth_on_button));
 
         NfcManager manager = (NfcManager) getSystemService(Context.NFC_SERVICE);
         NfcAdapter adapter = manager.getDefaultAdapter();
@@ -418,16 +352,7 @@ public class SettingsActivity extends BaldActivity {
 
                 }
             }, R.drawable.nfc_on_button));
-        connectionCategory.add(new RunnableSettingsItem(R.string.location, v -> {
-            try {
-                startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-            } catch (ActivityNotFoundException e) {
-                Log.e(TAG, e.getMessage());
-                e.printStackTrace();
-                BaldToast.from(this).setText(R.string.setting_does_not_exist).setType(BaldToast.TYPE_ERROR).show();
-
-            }
-        }, R.drawable.location_on_button));
+        connectionCategory.add(new RunnableSettingsItem(R.string.location, v -> startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)), R.drawable.location_on_button));
 
         final LinearLayout linearLayout = new LinearLayout(this);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
@@ -629,14 +554,6 @@ public class SettingsActivity extends BaldActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_SELECT_CUSTOM_APP && resultCode == RESULT_OK && data != null && data.getComponent() != null) {
-            editor.putString(BPrefs.CUSTOM_APP_KEY, data.getComponent().flattenToString()).apply();
-        }
-    }
-
-    @Override
     public void onBackPressed() {
         if (!goBack())
             super.onBackPressed();
@@ -722,7 +639,18 @@ public class SettingsActivity extends BaldActivity {
 
         @Override
         public void onClick(View v) {
-            onClickListener.onClick(v);
+            try {
+                onClickListener.onClick(v);
+            } catch (ActivityNotFoundException e) {
+                Log.e(TAG, e.getMessage());
+                e.printStackTrace();
+                BaldToast.from(v.getContext()).setText(R.string.setting_does_not_exist).setType(BaldToast.TYPE_ERROR).show();
+            } catch (Exception e) {
+                Log.e(TAG, e.getMessage());
+                e.printStackTrace();
+                BaldToast.from(v.getContext()).setText(R.string.an_error_has_occurred).setType(BaldToast.TYPE_ERROR).show();
+                BaldToast.from(v.getContext()).setText(e.getMessage()).setType(BaldToast.TYPE_ERROR).show();
+            }
         }
     }
 

@@ -44,11 +44,12 @@ import java.util.List;
 import java.util.Objects;
 
 import static com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter.TYPE_HEADER;
+import static com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper.baldComponentNameBeginning;
 
 public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivity {
     private static final String TAG = AppsActivity.class.getSimpleName();
-    public static final String EXTRA_MODE = "EXTRA_MODE";
-    public static final String MODE_CHOOSE_ONE = "MODE_CHOOSE_ONE ";
+    public static final int REQUEST_SELECT_CUSTOM_APP = 88;
+    public static final String CHOOSE_MODE = "CHOOSE_MODE";
     public static final int UNINSTALL_REQUEST_CODE = 52;
     private static final String SELECTED_APP_INDEX = "SELECTED_APP_INDEX";
 
@@ -58,6 +59,7 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
     private RecyclerView recyclerView;
 
     private AppsRecyclerViewAdapter appsRecyclerViewAdapter;
+    private String chooseKey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,8 +71,8 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
         appsDatabase = AppsDatabase.getInstance(AppsActivity.this);
         final List<App> appList = appsDatabase.appsDatabaseDao().getAllOrderedByABC();
         recyclerView = findViewById(R.id.rc_apps);
-        final boolean modeChoose = MODE_CHOOSE_ONE.equals(getIntent().getStringExtra(EXTRA_MODE));
-        appsRecyclerViewAdapter = new AppsRecyclerViewAdapter(appList, this, modeChoose ? this::appChosen : this::showDropDown, recyclerView);
+        chooseKey = getIntent().getStringExtra(CHOOSE_MODE);
+        appsRecyclerViewAdapter = new AppsRecyclerViewAdapter(appList, this, chooseKey != null ? this::appChosen : this::showDropDown, recyclerView);
 
         final WindowManager windowManager = getWindowManager();
         final Point point = new Point();
@@ -188,7 +190,7 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
 
             @Override
             public int size() {
-                return 3;
+                return app.getFlattenComponentName().startsWith(baldComponentNameBeginning) ? 2 : 3;
             }
 
             @Override
@@ -209,7 +211,7 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
     private void appChosen(int index) {
         if (index != -1) {
             final App app = (App) appsRecyclerViewAdapter.dataList.get(index);
-            setResult(RESULT_OK, new Intent().setComponent(ComponentName.unflattenFromString(app.getFlattenComponentName())));
+            setResult(RESULT_OK, new Intent().setComponent(ComponentName.unflattenFromString(app.getFlattenComponentName())).putExtra(CHOOSE_MODE, chooseKey));
             finish();
         }
     }

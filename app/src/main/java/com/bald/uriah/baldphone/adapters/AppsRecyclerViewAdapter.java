@@ -36,9 +36,9 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.AppsActivity;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.apps.App;
+import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
 import com.bald.uriah.baldphone.fragments_and_dialogs.LetterChooserDialog;
 import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 import java.util.ArrayList;
@@ -181,7 +181,8 @@ public class AppsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
         public void update(final int index) {
             final App app = (App) AppsRecyclerViewAdapter.this.dataList.get(index);
             this.app_name.setText(app.getLabel());
-            app_icon.setImageBitmap(S.byteArrayToBitmap(app.getIcon()));
+            AppsDatabaseHelper.loadPic(app, app_icon);
+
             if (this.pinned) {
                 if (!app.isPinned()) {
                     setPinned(false);

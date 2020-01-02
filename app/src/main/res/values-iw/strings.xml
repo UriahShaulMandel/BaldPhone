@@ -405,6 +405,7 @@
     <string name="one_grid">טבלה אחת</string>
     <string name="colorful">צבעים</string>
     <string name="colorful_subtext">האם ברצונך להפוך את BaldPhone ליותר צבעוני?</string>
+    <string name="edit_home_screen">Edit Home Screen</string>
 
 </resources>
 

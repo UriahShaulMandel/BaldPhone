@@ -26,14 +26,27 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.Log;
+import android.widget.ImageView;
 
 import com.bald.uriah.baldphone.BuildConfig;
+import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.activities.AppsActivity;
+import com.bald.uriah.baldphone.activities.DialerActivity;
+import com.bald.uriah.baldphone.activities.RecentActivity;
+import com.bald.uriah.baldphone.activities.alarms.AlarmsActivity;
+import com.bald.uriah.baldphone.activities.contacts.ContactsActivity;
+import com.bald.uriah.baldphone.activities.media.PhotosActivity;
+import com.bald.uriah.baldphone.activities.media.VideosActivity;
+import com.bald.uriah.baldphone.activities.pills.PillsActivity;
 import com.bald.uriah.baldphone.utils.S;
+import com.bumptech.glide.Glide;
 
 import org.acra.ACRA;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * static class of useful methods when using the Apps Database
@@ -41,11 +54,25 @@ import java.util.List;
 public class AppsDatabaseHelper {
     private static final String TAG = AppsDatabaseHelper.class.getSimpleName();
 
+    public static final String baldComponentNameBeginning = BuildConfig.APPLICATION_ID + "/";
+    public static Map<String, Integer> baldComponentNames = new HashMap<>(9);
+
+    static {
+        baldComponentNames.put(baldComponentNameBeginning + RecentActivity.class.getName(), R.drawable.history_on_background);
+        baldComponentNames.put(baldComponentNameBeginning + ContactsActivity.class.getName(), R.drawable.human_on_background);
+        baldComponentNames.put(baldComponentNameBeginning + DialerActivity.class.getName(), R.drawable.phone_on_background);
+        baldComponentNames.put(baldComponentNameBeginning + PhotosActivity.class.getName(), R.drawable.photo_on_background);
+        baldComponentNames.put(baldComponentNameBeginning + VideosActivity.class.getName(), R.drawable.movie_on_background);
+        baldComponentNames.put(baldComponentNameBeginning + PillsActivity.class.getName(), R.drawable.pill);
+        baldComponentNames.put(baldComponentNameBeginning + AppsActivity.class.getName(), R.drawable.apps_on_background);
+        baldComponentNames.put(baldComponentNameBeginning + AlarmsActivity.class.getName(), R.drawable.clock_on_background);
+    }
+
     private static List<String> getInstalledAppsFlattenComponentNames(Context context) {
         final PackageManager pm = context.getPackageManager();
         final Intent intent = new Intent(Intent.ACTION_MAIN, null).addCategory(Intent.CATEGORY_LAUNCHER);
         final List<ResolveInfo> resolveInfos = pm.queryIntentActivities(intent, 0);
-        final List<String> componentNames = new ArrayList<>(resolveInfos.size());
+        final List<String> componentNames = new ArrayList<>(resolveInfos.size() + baldComponentNames.size());
 
         ActivityInfo activityInfo;
         ComponentName componentName;
@@ -57,6 +84,7 @@ public class AppsDatabaseHelper {
                 continue;
             componentNames.add(componentName.flattenToString());
         }
+        componentNames.addAll(baldComponentNames.keySet());
         return componentNames;
     }
 
@@ -128,5 +156,12 @@ public class AppsDatabaseHelper {
             }
             appsDatabase.appsDatabaseDao().deleteByIds(idsToDelete);
         }
+    }
+
+    public static void loadPic(App app, ImageView imageView) {
+        if (app.getFlattenComponentName().startsWith(baldComponentNameBeginning))
+            imageView.setImageResource(AppsDatabaseHelper.baldComponentNames.get(app.getFlattenComponentName()));
+        else
+            Glide.with(imageView).load(S.byteArrayToBitmap(app.getIcon())).into(imageView);
     }
 }

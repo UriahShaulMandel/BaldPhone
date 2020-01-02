@@ -55,7 +55,7 @@ public class HomePage2 extends HomeView {
     private PackageManager packageManager;
 
     public HomePage2(@NonNull HomeScreenActivity homeScreen) {
-        super(homeScreen);
+        super(homeScreen, homeScreen);
     }
 
     @Override

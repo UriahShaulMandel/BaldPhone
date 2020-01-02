@@ -35,9 +35,9 @@ import com.bald.uriah.baldphone.R;
 public class FirstPageAppIcon extends BaldFrameLayoutButton {
     protected final Context context;
     protected final LayoutInflater layoutInflater;
-    protected ImageView imageView;
-    protected TextView textView;
-    protected View badge;
+    public ImageView imageView;
+    public TextView textView;
+    public View badge;
 
     public FirstPageAppIcon(Context context) {
         super(context);
@@ -97,5 +97,9 @@ public class FirstPageAppIcon extends BaldFrameLayoutButton {
 
     public void setBadgeVisibility(boolean visible) {
         badge.setVisibility(visible ? VISIBLE : INVISIBLE);
+    }
+
+    public CharSequence getText() {
+        return textView.getText();
     }
 }

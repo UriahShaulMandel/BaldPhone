@@ -33,7 +33,18 @@ public final class BPrefs {
     public static final String RIGHT_HANDED_KEY = "RIGHT_HANDED_KEY";
     public static final boolean RIGHT_HANDED_DEFAULT_VALUE = true;
 
-    public static final String CUSTOM_APP_KEY = "CUSTOM_APP_KEY";
+    public static final String CUSTOM_APP_KEY = "CUSTOM_APP_KEY"; // Backward Compatible
+    public static final String CUSTOM_RECENTS_KEY = "CUSTOM_RECENTS_KEY";
+    public static final String CUSTOM_DIALER_KEY = "CUSTOM_DIALER_KEY";
+    public static final String CUSTOM_CONTACTS_KEY = "CUSTOM_CONTACTS_KEY";
+    public static final String CUSTOM_ASSISTANT_KEY = "CUSTOM_ASSISTANT_KEY";
+    public static final String CUSTOM_MESSAGES_KEY = "CUSTOM_MESSAGES_KEY";
+    public static final String CUSTOM_PHOTOS_KEY = "CUSTOM_PHOTOS_KEY";
+    public static final String CUSTOM_CAMERA_KEY = "CUSTOM_CAMERA_KEY";
+    public static final String CUSTOM_VIDEOS_KEY = "CUSTOM_VIDEOS_KEY";
+    public static final String CUSTOM_PILLS_KEY = "CUSTOM_PILLS_KEY";
+    public static final String CUSTOM_APPS_KEY = "CUSTOM_APPS_KEY";
+    public static final String CUSTOM_ALARMS_KEY = "CUSTOM_ALARMS_KEY";
 
     public static final String LONG_PRESSES_KEY = "LONG_PRESSES_KEY";
     public static final boolean LONG_PRESSES_DEFAULT_VALUE = true;

@@ -36,7 +36,7 @@ public class HomeViewFactory extends HomeView {
     public ConstraintLayout child;
 
     public HomeViewFactory(@NonNull HomeScreenActivity homeScreen) {
-        super(homeScreen);
+        super(homeScreen, homeScreen);
     }
 
     @Nullable
