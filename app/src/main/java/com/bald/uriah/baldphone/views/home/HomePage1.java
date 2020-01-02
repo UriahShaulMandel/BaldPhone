@@ -269,7 +269,7 @@ public class HomePage1 extends HomeView {
 
             if (app != null) {
                 bt.setText(app.getLabel());
-                bt.setImageBitmap(S.byteArrayToBitmap(app.getIcon()));
+                AppsDatabaseHelper.loadPic(app, bt.imageView);
                 viewsToApps.put(app, bt);
             }
         }
