@@ -475,6 +475,9 @@ public class AddContactActivity extends BaldActivity {
         final String name = S.str(et_name.getText().toString());
         final String mail = S.str(et_mail.getText().toString());
 
+        if (currentContact == null)
+            return mobile_number == home_number && address == name && mail == mobile_number; // check all of them are empty
+
         final String _mobile_number = S.str(currentContact.getMobilePhone());
         final String _home_number = S.str(currentContact.getHomePhone());
         final String _address = S.str(currentContact.getAddress());

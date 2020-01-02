@@ -227,13 +227,14 @@ public class S {
         return resIds;
     }
 
+    private static final String EMPTY = "";
     /**
      * @param o an object to find its string value
      * @return the object's {@link Object#toString()}; Empty string if the object is null
      */
     @NonNull
     public static String str(@Nullable Object o) {
-        return o == null ? "" : o.toString();
+        return o == null ? EMPTY : o.toString();
     }
 
     //iterates via old fashioned for and not via foreach, because on most android devices its faster.
