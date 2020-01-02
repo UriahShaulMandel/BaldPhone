@@ -368,7 +368,7 @@
     <string name="apps_sort_method_subtext">Izberite, ali želite aplikacije razvrstiti v mrežo, ali v skupine, ločene po začetnicah imen.</string>
     <string name="groups">Skupine</string>
     <string name="one_grid">Mreža</string>
-    <string name="colorful">Colorful</string>
-    <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
-    <string name="edit_home_screen">Edit Home Screen</string>
+    <string name="colorful">Barvito</string>
+    <string name="colorful_subtext">Ali želite, da je BaldPhone bolj barvit?</string>
+    <string name="edit_home_screen">Uredi elemente na domačem zaslonu</string>
 </resources>
