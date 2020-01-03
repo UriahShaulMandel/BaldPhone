@@ -24,7 +24,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.util.Log;
 import android.widget.ImageView;
 
@@ -123,9 +122,9 @@ public class AppsDatabaseHelper {
                     final Drawable drawable = activityInfo.loadIcon(packageManager);
                     if (drawable instanceof BitmapDrawable)
                         app.setIcon(S.bitmapToByteArray(((BitmapDrawable) drawable).getBitmap()));
-                    else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    else
                         app.setIcon(S.bitmapToByteArray(S.getBitmapFromDrawable(drawable)));
-                    }
+
                 } catch (PackageManager.NameNotFoundException e) {
                     Log.e(TAG, e.getMessage());
                     e.printStackTrace();
