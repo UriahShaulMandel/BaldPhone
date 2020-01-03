@@ -135,7 +135,7 @@
     <string name="feedback">Pošlji povratne informacije</string>
     <string name="feedback_cannot_be_empty">Povratne informacije ne morejo biti prazne!</string>
     <string name="feedback_sent_successfully">Povratne informacije uspešno poslane!</string>
-    <string name="first_please_select_how_you_want_to_interact_with_buttons">Prosimo izberite stopnjo dostopnosti.\nTo lahko spremenite v nastavitvah.</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Izberite stopnjo dostopnosti.\nTo lahko spremenite v nastavitvah.</string>
     <string name="font_size">Velikost pisave</string>
     <string name="friday">Petek</string>
     <string name="example_of_different_text_sizes">Primer različnih velikosti pisave.\nBesedilo mora ostati vidljivo in brez prekrivanja.</string>
@@ -144,7 +144,7 @@
     <string name="hide">Skrij</string>
     <string name="high_level">Visoka stopnja</string>
     <string name="home_phone_number">Domača telefonska številka</string>
-    <string name="hour">Ure</string>
+    <string name="hour">Ura</string>
     <string name="huge">Ogromno</string>
     <string name="internet">Splet</string>
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Ali s težavo uporabljate privzeto tipkovnico?
