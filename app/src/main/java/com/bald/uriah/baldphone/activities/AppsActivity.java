@@ -38,7 +38,6 @@ import com.bald.uriah.baldphone.utils.BDB;
 import com.bald.uriah.baldphone.utils.BDialog;
 import com.bald.uriah.baldphone.utils.DropDownRecyclerViewAdapter;
 import com.bald.uriah.baldphone.utils.S;
-import com.bumptech.glide.Glide;
 
 import java.util.List;
 import java.util.Objects;
@@ -144,7 +143,7 @@ public class AppsActivity extends com.bald.uriah.baldphone.activities.BaldActivi
                 switch (position) {
                     case 0:
                         if (S.isValidContextForGlide(viewHolder.pic.getContext()))
-                            Glide.with(viewHolder.pic).load(app.getIcon()).into(viewHolder.pic);
+                            AppsDatabaseHelper.loadPic(app, viewHolder.pic);
                         viewHolder.text.setText(R.string.open);
                         viewHolder.itemView.setOnClickListener(v1 -> {
                             final ComponentName componentName = ComponentName.unflattenFromString(app.getFlattenComponentName());
