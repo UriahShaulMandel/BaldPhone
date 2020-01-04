@@ -1,0 +1,2 @@
+- name: Android Emulator
+  uses: vgaidarji/android-github-actions-emulator@v1.0.1
