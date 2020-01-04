@@ -47,7 +47,7 @@ script:
   - git config user.name "BaldPhoneTravis"
   - mkdir -p /home/travis/BaldPhoneCompanion/screenshots
   - adb pull /sdcard/Pictures/screenshots /home/travis/BaldPhoneCompanion/screenshots
-  - branch_name=TRAVIS_BRANCH
+  - branch_name="$TRAVIS_BRANCH"
   - folder_name="/home/travis/BaldPhoneCompanion/apks/$branch_name"
   - file_name="/home/travis/BaldPhoneCompanion/apks/$branch_name/tmp_apk.apk"
   - mkdir -p "$folder_name"
