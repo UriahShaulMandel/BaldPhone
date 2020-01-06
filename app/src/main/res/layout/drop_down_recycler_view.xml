@@ -15,17 +15,17 @@
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/drop_down_container_background"
-                android:paddingStart="4dp"
-                android:paddingTop="7dp"
-                android:paddingEnd="4dp"
-                android:paddingBottom="7dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drop_down_container_background"
+    android:paddingStart="4dp"
+    android:paddingTop="7dp"
+    android:paddingEnd="4dp"
+    android:paddingBottom="7dp">
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            style="@style/ScrollStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        android:id="@+id/recycler_view"
+        style="@style/ScrollStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,9 +14,8 @@
   ~ limitations under the License.
   -->
 
-<TextView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        style="@style/ButtonsText"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical"/>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ButtonsText"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical" />

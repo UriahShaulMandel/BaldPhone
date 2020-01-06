@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,80 +15,80 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="280dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="280dp">
 
     <TextView
-            android:id="@+id/alarm_time"
-            style="@style/BackgroundText.Huge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
-            android:textSize="50dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:id="@+id/alarm_time"
+        style="@style/BackgroundText.Huge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textSize="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-            android:id="@+id/alarm_name"
-            style="@style/BackgroundText.Medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/alarm_time"
-            app:layout_constraintTop_toBottomOf="@id/alarm_time"/>
+        android:id="@+id/alarm_name"
+        style="@style/BackgroundText.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/alarm_time"
+        app:layout_constraintTop_toBottomOf="@id/alarm_time" />
 
     <TextView
-            android:id="@+id/repeating_days"
-            style="@style/BackgroundText"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:textSize="@dimen/small"
-            app:layout_constraintBottom_toTopOf="@+id/alarm_switch"
-            app:layout_constraintEnd_toStartOf="@+id/bt_edit"
-            app:layout_constraintStart_toStartOf="@+id/alarm_time"
-            app:layout_constraintTop_toBottomOf="@+id/alarm_name"/>    <!--<com.bald.uriah.baldphone.views.BaldFrameLayoutButton-->    <!--android:id="@+id/bt_edit"-->    <!--android:layout_width="80dp"-->    <!--android:layout_height="0dp"-->    <!--android:layout_marginBottom="10dp"-->    <!--android:layout_marginEnd="10dp"-->    <!--android:background="@drawable/style_for_buttons_half_transparent"-->    <!--android:orientation="vertical"-->    <!--android:padding="5dp"-->    <!--app:layout_constraintBottom_toBottomOf="parent"-->    <!--app:layout_constraintEnd_toEndOf="parent">-->    <!--<ImageView-->    <!--android:layout_width="match_parent"-->    <!--android:layout_height="match_parent"-->    <!--android:layout_gravity="center"-->    <!--android:layout_marginBottom="10dp"-->    <!--android:layout_marginTop="5dp"-->    <!--android:foregroundGravity="center"-->    <!--android:padding="5dp"-->    <!--android:src="@drawable/edit_on_button" />-->    <!--<TextView-->    <!--style="@style/ButtonsText"-->    <!--android:layout_width="match_parent"-->    <!--android:layout_height="wrap_content"-->    <!--android:layout_gravity="bottom|center_horizontal"-->    <!--android:gravity="center"-->    <!--android:text="@string/edit" />-->    <!--</com.bald.uriah.baldphone.views.BaldFrameLayoutButton>-->
+        android:id="@+id/repeating_days"
+        style="@style/BackgroundText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="@dimen/small"
+        app:layout_constraintBottom_toTopOf="@+id/alarm_switch"
+        app:layout_constraintEnd_toStartOf="@+id/bt_edit"
+        app:layout_constraintStart_toStartOf="@+id/alarm_time"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_name" />    <!--<com.bald.uriah.baldphone.views.BaldFrameLayoutButton-->    <!--android:id="@+id/bt_edit"-->    <!--android:layout_width="80dp"-->    <!--android:layout_height="0dp"-->    <!--android:layout_marginBottom="10dp"-->    <!--android:layout_marginEnd="10dp"-->    <!--android:background="@drawable/style_for_buttons_half_transparent"-->    <!--android:orientation="vertical"-->    <!--android:padding="5dp"-->    <!--app:layout_constraintBottom_toBottomOf="parent"-->    <!--app:layout_constraintEnd_toEndOf="parent">-->    <!--<ImageView-->    <!--android:layout_width="match_parent"-->    <!--android:layout_height="match_parent"-->    <!--android:layout_gravity="center"-->    <!--android:layout_marginBottom="10dp"-->    <!--android:layout_marginTop="5dp"-->    <!--android:foregroundGravity="center"-->    <!--android:padding="5dp"-->    <!--android:src="@drawable/edit_on_button" />-->    <!--<TextView-->    <!--style="@style/ButtonsText"-->    <!--android:layout_width="match_parent"-->    <!--android:layout_height="wrap_content"-->    <!--android:layout_gravity="bottom|center_horizontal"-->    <!--android:gravity="center"-->    <!--android:text="@string/edit" />-->    <!--</com.bald.uriah.baldphone.views.BaldFrameLayoutButton>-->
     <com.bald.uriah.baldphone.views.BaldPictureTextButton
-            android:id="@+id/bt_edit"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/style_for_buttons"
-            app:_src="@drawable/edit_on_button"
-            app:_text="@string/edit"
-            app:layout_constraintBottom_toTopOf="@+id/repeating_days"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bt_delete"/>
+        android:id="@+id/bt_edit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/style_for_buttons"
+        app:_src="@drawable/edit_on_button"
+        app:_text="@string/edit"
+        app:layout_constraintBottom_toTopOf="@+id/repeating_days"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_delete" />
 
     <com.bald.uriah.baldphone.views.BaldSwitch
-            android:id="@+id/alarm_switch"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/alarm_time"
-            app:no="@string/off"
-            app:size="@dimen/small"
-            app:yes="@string/on"/>
+        android:id="@+id/alarm_switch"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/alarm_time"
+        app:no="@string/off"
+        app:size="@dimen/small"
+        app:yes="@string/on" />
 
     <com.bald.uriah.baldphone.views.BaldPictureTextButton
-            android:id="@+id/bt_delete"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/style_for_buttons"
-            app:_src="@drawable/delete_on_button"
-            app:_text="@string/delete"
-            app:layout_constraintBottom_toTopOf="@+id/bt_edit"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:id="@+id/bt_delete"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/style_for_buttons"
+        app:_src="@drawable/delete_on_button"
+        app:_text="@string/delete"
+        app:layout_constraintBottom_toTopOf="@+id/bt_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

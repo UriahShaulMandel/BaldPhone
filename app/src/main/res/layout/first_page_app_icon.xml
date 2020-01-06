@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,56 +15,54 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   android:id="@+id/bt"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   android:orientation="vertical"
-                                                   android:visibility="visible">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
 
     <ImageView
-            android:id="@+id/iv"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/tv"
-            app:layout_constraintDimensionRatio="1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:id="@+id/iv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-            android:id="@+id/tv"
-            style="@style/BackgroundText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+        android:id="@+id/tv"
+        style="@style/BackgroundText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Space
-            android:id="@+id/space"
-            android:layout_width="1dp"
-            android:layout_height="1dp"
-            app:layout_constraintBottom_toTopOf="@id/iv"
-            app:layout_constraintStart_toEndOf="@id/iv"
-            android:layout_marginBottom="5dp"
-            android:layout_marginStart="5dp"
-            />
+        android:id="@+id/space"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@id/iv"
+        app:layout_constraintStart_toEndOf="@id/iv" />
 
     <View
-            android:id="@+id/notifications_counter"
-            app:layout_constraintTop_toBottomOf="@id/space"
-            app:layout_constraintEnd_toStartOf="@id/space"
-            android:layout_width="@dimen/small"
-            android:layout_height="@dimen/small"
-            android:background="@drawable/notifications_pill"
-            android:visibility="invisible"
-            />
+        android:id="@+id/notifications_counter"
+        android:layout_width="@dimen/small"
+        android:layout_height="@dimen/small"
+        android:background="@drawable/notifications_pill"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@id/space"
+        app:layout_constraintTop_toBottomOf="@id/space" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,118 +15,118 @@
   -->
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:id="@+id/container"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:background="#00000000"
-             android:orientation="vertical">
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical">
 
     <LinearLayout
-            android:id="@+id/ll"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-            android:background="@drawable/rounded_background"
-            android:orientation="vertical"
-            android:paddingBottom="70dp">
+        android:background="@drawable/rounded_background"
+        android:orientation="vertical"
+        android:paddingBottom="70dp">
 
         <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
 
             <TextView
-                    android:id="@+id/dialog_box_title"
-                    style="@style/BackgroundText.Auto"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="60dp"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                android:id="@+id/dialog_box_title"
+                style="@style/BackgroundText.Auto"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="60dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp" />
 
             <View
-                    android:id="@+id/imageView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="7dp"
-                    android:background="?bald_stroke_color"/>
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="?bald_stroke_color" />
         </LinearLayout>
 
         <ScrollView
-                style="@style/ScrollStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            style="@style/ScrollStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <LinearLayout
-                    android:id="@+id/ll_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <TextView
-                        android:id="@+id/dialog_box_text"
-                        style="@style/BackgroundText.Medium"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:lineSpacingMultiplier="1.2"
-                        android:singleLine="false"/>
+                    android:id="@+id/dialog_box_text"
+                    style="@style/BackgroundText.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:lineSpacingMultiplier="1.2"
+                    android:singleLine="false" />
 
                 <EditText
-                        android:id="@+id/edit_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:imeOptions="actionNext"
-                        android:textColor="?bald_text_on_background"
-                        android:textColorHint="?bald_hint_on_background"
-                        android:visibility="gone"/>
+                    android:id="@+id/edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:imeOptions="actionNext"
+                    android:textColor="?bald_text_on_background"
+                    android:textColorHint="?bald_hint_on_background"
+                    android:visibility="gone" />
 
                 <FrameLayout
-                        android:id="@+id/frame_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="10dp"/>
+                    android:id="@+id/frame_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal|bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <com.bald.uriah.baldphone.views.BaldButton
+            android:id="@+id/dialog_box_true"
+            style="@style/ButtonsText.Medium"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginStart="20dp"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/style_for_buttons"
+            android:text="@string/yes" />
+
+        <com.bald.uriah.baldphone.views.BaldButton
+            android:id="@+id/dialog_box_false"
+            style="@style/ButtonsText.Medium"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="2dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal">
-
-        <com.bald.uriah.baldphone.views.BaldButton
-                android:id="@+id/dialog_box_true"
-                style="@style/ButtonsText.Medium"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="2dp"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons"
-                android:text="@string/yes"/>
-
-        <com.bald.uriah.baldphone.views.BaldButton
-                android:id="@+id/dialog_box_false"
-                style="@style/ButtonsText.Medium"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="2dp"
-                android:layout_marginEnd="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/style_for_buttons"
-                android:text="@string/no"/>
+            android:layout_weight="1"
+            android:background="@drawable/style_for_buttons"
+            android:text="@string/no" />
     </LinearLayout>
 </FrameLayout>

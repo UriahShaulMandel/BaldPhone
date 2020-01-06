@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,19 +18,19 @@
     <item>
         <shape>
             <size
-                    android:width="10dp"
-                    android:height="1dp"/>
-            <solid android:color="?bald_button"/>
+                android:width="10dp"
+                android:height="1dp" />
+            <solid android:color="?bald_button" />
         </shape>
     </item>
     <item
-            android:right="@dimen/recycler_view_margin_left_size"
-            android:left="@dimen/recycler_view_margin_right_size">
+        android:left="@dimen/recycler_view_margin_right_size"
+        android:right="@dimen/recycler_view_margin_left_size">
         <shape>
             <size
-                    android:width="8dp"
-                    android:height="1dp"/>
-            <solid android:color="?bald_stroke_color"/>
+                android:width="8dp"
+                android:height="1dp" />
+            <solid android:color="?bald_stroke_color" />
         </shape>
     </item>
 </layer-list>

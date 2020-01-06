@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,74 +15,73 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   android:paddingBottom="20dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp">
 
     <Space
-            android:layout_width="1dp"
-            android:layout_height="1dp"
-            android:id="@+id/middle"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.65"
-            />
+        android:id="@+id/middle"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
 
     <ImageView
-            android:padding="10dp"
-            android:id="@+id/up"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@drawable/style_for_buttons"
-            android:contentDescription="@string/down"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/middle"
-            app:srcCompat="@drawable/add_on_button"/>
+        android:id="@+id/up"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/style_for_buttons"
+        android:contentDescription="@string/down"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/middle"
+        app:srcCompat="@drawable/add_on_button" />
 
     <ImageView
-            android:padding="10dp"
-            android:id="@+id/down"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/style_for_buttons"
-            android:contentDescription="@string/down"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/middle"
-            app:srcCompat="@drawable/remove_on_button"/>
+        android:id="@+id/down"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/style_for_buttons"
+        android:contentDescription="@string/down"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/middle"
+        app:srcCompat="@drawable/remove_on_button" />
 
     <TextView
-            android:id="@+id/tv_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:padding="0dp"
-            android:text="@string/current_time"
-            android:textColor="?bald_text_on_background"
-            android:textSize="@dimen/large"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="0dp"
+        android:text="@string/current_time"
+        android:textColor="?bald_text_on_background"
+        android:textSize="@dimen/large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-            android:id="@+id/number"
-            style="@style/ButtonsText.Huge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1"
-            android:text="5"
-            app:layout_constraintBottom_toTopOf="@+id/up"
-            app:layout_constraintEnd_toStartOf="@+id/up"
-            app:layout_constraintStart_toEndOf="@+id/down"
-            app:layout_constraintTop_toBottomOf="@+id/tv_description"/>
+        android:id="@+id/number"
+        style="@style/ButtonsText.Huge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/up"
+        app:layout_constraintEnd_toStartOf="@+id/up"
+        app:layout_constraintStart_toEndOf="@+id/down"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

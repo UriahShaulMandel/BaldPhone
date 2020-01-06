@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,12 +15,11 @@
   -->
 
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-          android:id="@+id/bar_title"
-          android:layout_width="0dp"
-          android:layout_height="match_parent"
-          android:layout_weight="4"
-          android:gravity="center"
-          android:transitionName="bald_bar_title_animation"
-          style="@style/BackgroundText.Medium"
-          android:alpha="0.75"
-        />
+    android:id="@+id/bar_title"
+    style="@style/BackgroundText.Medium"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="4"
+    android:alpha="0.75"
+    android:gravity="center"
+    android:transitionName="bald_bar_title_animation" />

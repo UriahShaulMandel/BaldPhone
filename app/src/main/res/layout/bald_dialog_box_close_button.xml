@@ -14,13 +14,12 @@
   ~ limitations under the License.
   -->
 
-<com.bald.uriah.baldphone.views.BaldImageButton
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/iv_close"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+<com.bald.uriah.baldphone.views.BaldImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/iv_close"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:layout_gravity="end"
     android:layout_marginEnd="10dp"
-        android:layout_gravity="end"
-        app:srcCompat="@drawable/close_on_background"
-        android:background="@drawable/style_for_buttons_transparent"/>
+    android:background="@drawable/style_for_buttons_transparent"
+    app:srcCompat="@drawable/close_on_background" />

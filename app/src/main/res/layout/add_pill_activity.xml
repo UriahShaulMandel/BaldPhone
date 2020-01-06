@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,249 +15,249 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="?bald_background"
-              android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?bald_background"
+    android:orientation="vertical">
 
     <com.bald.uriah.baldphone.views.BaldTitleBar
-            android:id="@+id/bald_title_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/color_4"
-            app:title="@string/add_pill"/>
+        android:id="@+id/bald_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/color_4"
+        app:title="@string/add_pill" />
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingLeft="35dp"
-            android:paddingRight="35dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp">
 
 
         <com.bald.uriah.baldphone.views.BaldEditText
-                android:id="@+id/reminder_edit_name"
-                style="@style/EditText"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.4"
-                android:hint="@string/pill_name"
-                android:inputType="text"
-                android:imeOptions="actionDone"
-                android:gravity="center"
-                android:layout_marginBottom="10dp"
-                android:textSize="@dimen/huge"/>
+            android:id="@+id/reminder_edit_name"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:hint="@string/pill_name"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textSize="@dimen/huge" />
 
         <com.bald.uriah.baldphone.views.BaldMultipleSelection
-                android:id="@+id/multiple_selection"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.4"
-                app:text_size="@dimen/medium"/>
+            android:id="@+id/multiple_selection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            app:text_size="@dimen/medium" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.8"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp">
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.8">
 
             <CheckBox
-                    android:id="@+id/sunday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:buttonTint="?bald_decoration_on_background"
-                    android:text="@string/choose_sunday"
-                    android:textColor="?bald_text_on_button"
-                    android:textSize="@dimen/small"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="spread_inside"/>
+                android:id="@+id/sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:buttonTint="?bald_decoration_on_background"
+                android:text="@string/choose_sunday"
+                android:textColor="?bald_text_on_button"
+                android:textSize="@dimen/small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread_inside" />
 
             <CheckBox
-                    android:id="@+id/monday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:buttonTint="?bald_decoration_on_background"
-                    android:text="@string/choose_monday"
-                    android:textColor="?bald_text_on_button"
-                    android:textSize="@dimen/small"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                android:id="@+id/monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:buttonTint="?bald_decoration_on_background"
+                android:text="@string/choose_monday"
+                android:textColor="?bald_text_on_button"
+                android:textSize="@dimen/small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <CheckBox
-                    android:id="@+id/tuesday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="0"
-                    android:layout_column="2"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:buttonTint="?bald_decoration_on_background"
-                    android:text="@string/choose_tuesday"
-                    android:textColor="?bald_text_on_button"
-                    android:textSize="@dimen/small"
-                    app:layout_constraintBottom_toBottomOf="@+id/monday"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                android:id="@+id/tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:buttonTint="?bald_decoration_on_background"
+                android:text="@string/choose_tuesday"
+                android:textColor="?bald_text_on_button"
+                android:textSize="@dimen/small"
+                app:layout_constraintBottom_toBottomOf="@+id/monday"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <CheckBox
-                    android:id="@+id/wednesday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="1"
-                    android:layout_column="0"
-                    android:layout_marginStart="8dp"
-                    android:buttonTint="?bald_decoration_on_background"
-                    android:text="@string/choose_wednesday"
-                    android:textColor="?bald_text_on_button"
-                    android:textSize="@dimen/small"
-                    app:layout_constraintBottom_toTopOf="@+id/saturday"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/sunday"/>
+                android:id="@+id/wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_marginStart="8dp"
+                android:buttonTint="?bald_decoration_on_background"
+                android:text="@string/choose_wednesday"
+                android:textColor="?bald_text_on_button"
+                android:textSize="@dimen/small"
+                app:layout_constraintBottom_toTopOf="@+id/saturday"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sunday" />
 
             <CheckBox
-                    android:id="@+id/thursday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="1"
-                    android:layout_column="1"
-                    android:buttonTint="?bald_decoration_on_background"
-                    android:text="@string/choose_thursday"
-                    android:textColor="?bald_text_on_button"
-                    android:textSize="@dimen/small"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                android:id="@+id/thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:buttonTint="?bald_decoration_on_background"
+                android:text="@string/choose_thursday"
+                android:textColor="?bald_text_on_button"
+                android:textSize="@dimen/small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <CheckBox
-                    android:id="@+id/friday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:buttonTint="?bald_decoration_on_background"
-                    android:text="@string/choose_friday"
-                    android:textColor="?bald_text_on_button"
-                    android:textSize="@dimen/small"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                android:id="@+id/friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:buttonTint="?bald_decoration_on_background"
+                android:text="@string/choose_friday"
+                android:textColor="?bald_text_on_button"
+                android:textSize="@dimen/small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <CheckBox
-                    android:id="@+id/saturday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="2"
-                    android:layout_column="0"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:buttonTint="?bald_decoration_on_background"
-                    android:text="@string/choose_saturday"
-                    android:textColor="?bald_text_on_button"
-                    android:textSize="@dimen/small"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                android:id="@+id/saturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:buttonTint="?bald_decoration_on_background"
+                android:text="@string/choose_saturday"
+                android:textColor="?bald_text_on_button"
+                android:textSize="@dimen/small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <RadioButton
-                    android:id="@+id/rb_once"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:buttonTint="?bald_decoration_on_background"
-                    android:checked="true"
-                    android:text="@string/repeats_every_day"
-                    android:textColor="?bald_text_on_button"
-                    android:textSize="@dimen/small"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                android:id="@+id/rb_once"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:buttonTint="?bald_decoration_on_background"
+                android:checked="true"
+                android:text="@string/repeats_every_day"
+                android:textColor="?bald_text_on_button"
+                android:textSize="@dimen/small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.5">
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
 
             <com.bald.uriah.baldphone.views.BaldImageButton
-                    android:id="@+id/blue"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_selected"
-                    android:src="@drawable/pill"
-                    android:tint="@color/blue"/>
+                android:id="@+id/blue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_selected"
+                android:src="@drawable/pill"
+                android:tint="@color/blue" />
 
             <com.bald.uriah.baldphone.views.BaldImageButton
-                    android:id="@+id/red"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/style_for_buttons_transparent"
-                    android:src="@drawable/pill"
-                    android:tint="@color/red"/>
+                android:id="@+id/red"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/style_for_buttons_transparent"
+                android:src="@drawable/pill"
+                android:tint="@color/red" />
 
             <com.bald.uriah.baldphone.views.BaldImageButton
-                    android:id="@+id/gray"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/style_for_buttons_transparent"
-                    android:src="@drawable/pill"
-                    android:tint="@color/gray"/>
+                android:id="@+id/gray"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/style_for_buttons_transparent"
+                android:src="@drawable/pill"
+                android:tint="@color/gray" />
 
             <com.bald.uriah.baldphone.views.BaldImageButton
-                    android:id="@+id/yellow"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/style_for_buttons_transparent"
-                    android:src="@drawable/pill"
-                    android:tint="@color/yellow"/>
+                android:id="@+id/yellow"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/style_for_buttons_transparent"
+                android:src="@drawable/pill"
+                android:tint="@color/yellow" />
 
             <com.bald.uriah.baldphone.views.BaldImageButton
-                    android:id="@+id/green"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/style_for_buttons_transparent"
-                    android:src="@drawable/pill"
-                    android:tint="@color/green"/>
+                android:id="@+id/green"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/style_for_buttons_transparent"
+                android:src="@drawable/pill"
+                android:tint="@color/green" />
 
             <com.bald.uriah.baldphone.views.BaldImageButton
-                    android:id="@+id/custom"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/style_for_buttons_transparent"
-                    android:src="@drawable/pill"
-                    android:visibility="gone"/>
+                android:id="@+id/custom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/style_for_buttons_transparent"
+                android:src="@drawable/pill"
+                android:visibility="gone" />
 
         </LinearLayout>
 
         <com.bald.uriah.baldphone.views.BaldButton
-                android:id="@+id/bt_submit"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="0.5"
-                android:background="@drawable/style_for_buttons_pill"
-                android:gravity="center"
-                android:text="@string/submit"
-                android:textColor="?bald_text_on_button"
-                android:textSize="@dimen/large"/>
+            android:id="@+id/bt_submit"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/style_for_buttons_pill"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textColor="?bald_text_on_button"
+            android:textSize="@dimen/large" />
     </LinearLayout>
 </LinearLayout>
 

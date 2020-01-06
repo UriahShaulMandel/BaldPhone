@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,12 +15,12 @@
   -->
 
 <SeekBar xmlns:android="http://schemas.android.com/apk/res/android"
-         android:id="@+id/font_seek_bar"
-         style="@style/Widget.AppCompat.SeekBar.Discrete"
-         android:thumbTint="?bald_decoration_on_background"
-         android:progressTint="?bald_selected_on_background"
-         android:progressBackgroundTint="?bald_decoration_on_background"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:max="5"
-         android:progress="4"/>
+    android:id="@+id/font_seek_bar"
+    style="@style/Widget.AppCompat.SeekBar.Discrete"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:max="5"
+    android:progress="4"
+    android:progressBackgroundTint="?bald_decoration_on_background"
+    android:progressTint="?bald_selected_on_background"
+    android:thumbTint="?bald_decoration_on_background" />

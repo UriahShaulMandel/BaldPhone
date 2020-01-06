@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,14 +14,12 @@
   ~ limitations under the License.
   -->
 
-<com.bald.uriah.baldphone.views.BaldButton
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/bald_switch_yes"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/style_for_buttons_no_border"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="@string/yes"
-        style="@style/ButtonsText.Tiny"
-        />
+<com.bald.uriah.baldphone.views.BaldButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bald_switch_yes"
+    style="@style/ButtonsText.Tiny"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@drawable/style_for_buttons_no_border"
+    android:gravity="center_vertical|center_horizontal"
+    android:text="@string/yes" />

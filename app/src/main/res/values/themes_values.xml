@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,7 +34,8 @@
     <color name="bald_hint_on_button_light">#585858</color>
     <color name="bald_hint_on_background_light">@color/bald_hint_on_button_light</color>
     <color name="bald_keyboard_key_background_light">@color/bald_button_light</color>
-    <color name="bald_keyboard_key_pressed_background_light">@color/bald_button_clicked_light</color>
+    <color name="bald_keyboard_key_pressed_background_light">@color/bald_button_clicked_light
+    </color>
     <color name="bald_selected_on_background_light">#212121</color>
     <color name="bald_text_on_selected_light">#fff</color>
     <color name="bald_stroke_color_light">#84000000</color>

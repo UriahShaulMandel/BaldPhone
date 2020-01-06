@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,102 +15,99 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <com.bald.uriah.baldphone.views.BaldImageButton
-            android:id="@+id/bt_speak"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="8dp"
-            android:background="@drawable/style_for_buttons"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:layout_marginBottom="3dp"
-            android:src="@drawable/voice_on_background"
-            app:layout_constraintEnd_toStartOf="@id/bt_type"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
+        android:id="@+id/bt_speak"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/style_for_buttons"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:src="@drawable/voice_on_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bt_type"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.bald.uriah.baldphone.views.BaldImageButton
-            android:id="@+id/bt_type"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/style_for_buttons"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            app:layout_constraintHorizontal_weight="1"
-            android:visibility="visible"
+        android:id="@+id/bt_type"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/style_for_buttons"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:src="@drawable/search_on_button"
-            app:layout_constraintBottom_toBottomOf="@id/bt_speak"
-            app:layout_constraintTop_toTopOf="@id/bt_speak"
-            app:layout_constraintEnd_toStartOf="@+id/bt_favorite"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/bt_speak"/>
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/bt_speak"
+        app:layout_constraintEnd_toStartOf="@+id/bt_favorite"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/bt_speak"
+        app:layout_constraintTop_toTopOf="@id/bt_speak" />
 
     <com.bald.uriah.baldphone.views.BaldImageButton
-            android:id="@+id/bt_favorite"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/style_for_buttons"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:src="@drawable/star_gold"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/bt_speak"
-            app:layout_constraintEnd_toStartOf="@id/edit_text"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/bt_type"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintTop_toTopOf="@+id/bt_speak"
-            />
+        android:id="@+id/bt_favorite"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/style_for_buttons"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:src="@drawable/star_gold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_speak"
+        app:layout_constraintEnd_toStartOf="@id/edit_text"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/bt_type"
+        app:layout_constraintTop_toTopOf="@+id/bt_speak" />
 
 
     <com.bald.uriah.baldphone.views.BaldEditText
-            android:id="@+id/edit_text"
-            style="@style/EditText"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:drawableEnd="@drawable/search_on_background"
-            android:hint="@string/enter_contact_or_phone_number"
-            android:imeOptions="actionSearch"
-            android:inputType="text"
-            android:paddingStart="10dp"
-            android:paddingEnd="0dp"
-            android:textColorHint="?bald_hint_on_background"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_weight="5"
-            app:layout_constraintStart_toEndOf="@id/bt_favorite"
-            app:layout_constraintTop_toTopOf="@+id/bt_speak"/>
+        android:id="@+id/edit_text"
+        style="@style/EditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:drawableEnd="@drawable/search_on_background"
+        android:hint="@string/enter_contact_or_phone_number"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:textColorHint="?bald_hint_on_background"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toEndOf="@id/bt_favorite"
+        app:layout_constraintTop_toTopOf="@+id/bt_speak" />
 
     <com.bald.uriah.baldphone.views.ScrollingHelper
-            android:id="@+id/scrollingHelper"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:horizontal_scrolling="false"
-            app:layout_constraintBottom_toTopOf="@+id/bt_speak"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:empty_text="@string/no_contacts_found"
-            >
+        android:id="@+id/scrollingHelper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:empty_text="@string/no_contacts_found"
+        app:horizontal_scrolling="false"
+        app:layout_constraintBottom_toTopOf="@+id/bt_speak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.bald.uriah.baldphone.views.ModularRecyclerView
-                android:id="@+id/contacts_recycler_view"
-                style="@style/ScrollStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            android:id="@+id/contacts_recycler_view"
+            style="@style/ScrollStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 
     </com.bald.uriah.baldphone.views.ScrollingHelper>

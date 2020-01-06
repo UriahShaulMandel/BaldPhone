@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,68 +15,68 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="160dp"
-                                                   android:layout_marginTop="10dp"
-                                                   android:background="@drawable/list_shape">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/list_shape">
 
     <TextView
-            android:id="@+id/tv_type"
-            style="@style/BackgroundText.Medium"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginStart="10dp"
+        android:id="@+id/tv_type"
+        style="@style/BackgroundText.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
-            android:gravity="center"
-            app:layout_constraintBottom_toTopOf="@+id/call"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/call"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-            android:id="@+id/tv_value"
-            style="@style/BackgroundText.Medium"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginStart="10dp"
+        android:id="@+id/tv_value"
+        style="@style/BackgroundText.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
-            android:gravity="center"
-            app:layout_constraintBottom_toTopOf="@+id/call"
-            app:layout_constraintStart_toEndOf="@+id/tv_type"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/call"
+        app:layout_constraintStart_toEndOf="@+id/tv_type"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.bald.uriah.baldphone.views.BaldPictureTextButton
-            android:id="@+id/message"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/style_for_buttons"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:_src="@drawable/message_on_button"
-            app:_text="@string/message"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/call"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/call"/>
+        android:id="@+id/message"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/style_for_buttons"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:_src="@drawable/message_on_button"
+        app:_text="@string/message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/call"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/call" />
 
     <com.bald.uriah.baldphone.views.BaldPictureTextButton
-            android:id="@+id/call"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/style_for_buttons"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:_src="@drawable/phone_on_button"
-            app:_text="@string/call"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/message"/>
+        android:id="@+id/call"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/style_for_buttons"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:_src="@drawable/phone_on_button"
+        app:_text="@string/call"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/message" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,150 +15,150 @@
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent"
-                                                   android:background="?bald_background">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?bald_background">
 
     <com.bald.uriah.baldphone.views.BaldTitleBar
-            android:id="@+id/bald_title_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:id="@+id/bald_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-            android:id="@+id/tv_sos"
+        android:id="@+id/tv_sos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="@string/sos"
+        android:textColor="?bald_text_on_background"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/ec1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bald_title_bar"
+        app:layout_constraintVertical_weight="1.5" />
+
+    <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
+        android:id="@+id/ec1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/style_for_buttons_pill"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/ec2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sos"
+        app:layout_constraintVertical_weight="1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center"
-            android:text="@string/sos"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/add_on_button" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="start|center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/add_emergency_contact"
             android:textColor="?bald_text_on_background"
-            android:textSize="50dp"
-            app:layout_constraintBottom_toTopOf="@+id/ec1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bald_title_bar"
-            app:layout_constraintVertical_weight="1.5"/>
-
-    <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-            android:id="@+id/ec1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/style_for_buttons_pill"
-            android:gravity="center"
-            android:paddingStart="10dp"
-            android:paddingEnd="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/ec2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_sos"
-            app:layout_constraintVertical_weight="1">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_weight="1"
-                android:src="@drawable/add_on_button"/>
-
-        <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2.5"
-                android:gravity="start|center"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:text="@string/add_emergency_contact"
-                android:textColor="?bald_text_on_background"
-                android:textSize="@dimen/huge"/>
+            android:textSize="@dimen/huge" />
 
 
     </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
 
     <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-            android:id="@+id/ec2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="16dp"
+        android:id="@+id/ec2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
 
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/style_for_buttons_pill"
-            android:gravity="center"
-            android:paddingStart="10dp"
-            android:paddingEnd="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/ec_real"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ec1"
-            app:layout_constraintVertical_weight="1">
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/style_for_buttons_pill"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/ec_real"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ec1"
+        app:layout_constraintVertical_weight="1">
 
         <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_weight="1"
-                android:src="@drawable/add_on_button"/>
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/add_on_button" />
 
         <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2.5"
-                android:gravity="start|center"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:text="@string/add_emergency_contact"
-                android:textColor="?bald_text_on_background"
-                android:textSize="@dimen/huge"/>
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="start|center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/add_emergency_contact"
+            android:textColor="?bald_text_on_background"
+            android:textSize="@dimen/huge" />
     </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
 
     <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-            android:id="@+id/ec_real"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/style_for_buttons_pill"
-            android:gravity="center"
-            android:paddingStart="10dp"
-            android:paddingEnd="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ec2"
-            app:layout_constraintVertical_weight="1">
+        android:id="@+id/ec_real"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/style_for_buttons_pill"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ec2"
+        app:layout_constraintVertical_weight="1">
 
         <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_weight="1"
-                android:src="@drawable/emergency"/>
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/emergency" />
 
         <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2.5"
-                android:gravity="start|center"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:text="@string/emergency_services"
-                android:textColor="?bald_text_on_background"
-                android:textSize="@dimen/huge"/>
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="start|center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/emergency_services"
+            android:textColor="?bald_text_on_background"
+            android:textSize="@dimen/huge" />
     </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
 </androidx.constraintlayout.widget.ConstraintLayout>

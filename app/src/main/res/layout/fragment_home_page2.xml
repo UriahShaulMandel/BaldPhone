@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,138 +15,138 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:paddingLeft="@dimen/home_screen_padding"
-              android:paddingRight="@dimen/home_screen_padding">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/home_screen_padding"
+    android:paddingRight="@dimen/home_screen_padding">
 
     <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-            android:id="@+id/bt_settings"
-            style="@android:style/Widget.Button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/style_for_buttons"
-            android:orientation="horizontal">
+        android:id="@+id/bt_settings"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/style_for_buttons"
+        android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:paddingLeft="22dp"
-                android:paddingRight="22dp"
-                app:srcCompat="@drawable/settings_on_button"/>
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            app:srcCompat="@drawable/settings_on_button" />
 
         <TextView
-                android:id="@+id/tv_settings"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:gravity="center_vertical"
-                android:paddingEnd="20dp"
-                android:text="@string/settings"
-                android:textColor="?bald_text_on_button"
-                android:textSize="@dimen/huge"/>
+            android:id="@+id/tv_settings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:paddingEnd="20dp"
+            android:text="@string/settings"
+            android:textColor="?bald_text_on_button"
+            android:textSize="@dimen/huge" />
     </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
 
     <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-            android:id="@+id/bt_apps"
-            style="@android:style/Widget.Button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/style_for_buttons"
-            android:orientation="horizontal">
+        android:id="@+id/bt_apps"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/style_for_buttons"
+        android:orientation="horizontal">
 
         <ImageView
-                android:id="@+id/iv_internet"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:paddingLeft="22dp"
-                android:paddingRight="22dp"
-                android:src="@drawable/web_on_button"/>
+            android:id="@+id/iv_internet"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:src="@drawable/web_on_button" />
 
         <TextView
-                android:id="@+id/tv_internet"
-                style="@style/ButtonsText.Large"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:gravity="center_vertical"
-                android:paddingEnd="20dp"
-                android:text="@string/internet"
-                android:textSize="@dimen/huge"/>
+            android:id="@+id/tv_internet"
+            style="@style/ButtonsText.Large"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:paddingEnd="20dp"
+            android:text="@string/internet"
+            android:textSize="@dimen/huge" />
 
     </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
 
     <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-            android:id="@+id/bt_maps"
-            style="@android:style/Widget.Button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/style_for_buttons"
-            android:orientation="horizontal">
+        android:id="@+id/bt_maps"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/style_for_buttons"
+        android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/iv_maps"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:paddingLeft="22dp"
-                android:paddingRight="22dp"
-                app:srcCompat="@drawable/map_on_button"/>
+            android:id="@+id/iv_maps"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            app:srcCompat="@drawable/map_on_button" />
 
         <TextView
-                android:id="@+id/tv_maps"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:gravity="center_vertical"
-                android:paddingEnd="20dp"
-                android:text="@string/maps"
-                android:textColor="?bald_text_on_button"
-                android:textSize="@dimen/huge"/>
+            android:id="@+id/tv_maps"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:paddingEnd="20dp"
+            android:text="@string/maps"
+            android:textColor="?bald_text_on_button"
+            android:textSize="@dimen/huge" />
     </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
 
     <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-            android:id="@+id/bt_help"
-            style="@android:style/Widget.Button"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/style_for_buttons"
-            android:orientation="horizontal">
+        android:id="@+id/bt_help"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/style_for_buttons"
+        android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:paddingLeft="22dp"
-                android:paddingRight="22dp"
-                app:srcCompat="@drawable/help_on_button"/>
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            app:srcCompat="@drawable/help_on_button" />
 
         <TextView
-                android:id="@+id/tv_help"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:gravity="center_vertical"
-                android:paddingEnd="20dp"
-                android:text="@string/video_tutorials"
-                android:textColor="?bald_text_on_button"
-                android:textSize="@dimen/huge"/>
+            android:id="@+id/tv_help"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:paddingEnd="20dp"
+            android:text="@string/video_tutorials"
+            android:textColor="?bald_text_on_button"
+            android:textSize="@dimen/huge" />
 
     </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
 </LinearLayout>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,79 +15,77 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:id="@+id/contact_row_linear_layout"
-              android:layout_width="match_parent"
-              android:layout_height="100dp"
-              android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contact_row_linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="vertical">
 
     <com.bald.uriah.baldphone.views.BaldButton
-            android:id="@+id/letter"
-            style="@style/BackgroundText.Medium"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/style_for_buttons_transparent"
-            android:gravity="center_vertical|start"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:visibility="gone"/>
+        android:id="@+id/letter"
+        style="@style/BackgroundText.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/style_for_buttons_transparent"
+        android:gravity="center_vertical|start"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:visibility="gone" />
 
     <View
-            android:id="@+id/line"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginBottom="2dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="2dp"
-            android:background="?bald_decoration_on_background"
-            android:visibility="gone"/>
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="2dp"
+        android:background="?bald_decoration_on_background"
+        android:visibility="gone" />
 
     <com.bald.uriah.baldphone.views.BaldLinearLayoutButton
-            android:id="@+id/ll_contact_only"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@drawable/style_for_buttons_rectangle"
-            android:orientation="horizontal">
+        android:id="@+id/ll_contact_only"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/style_for_buttons_rectangle"
+        android:orientation="horizontal">
 
         <FrameLayout
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp">
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/profile_pic"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:transitionName="prof_pic_contacts_animation"
-                    app:civ_border_color="#DD000000"
-                    app:civ_border_width="2dp"
-                    android:src="@drawable/face_on_button"
-                    />
+                android:id="@+id/profile_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/face_on_button"
+                android:transitionName="prof_pic_contacts_animation"
+                app:civ_border_color="#DD000000"
+                app:civ_border_width="2dp" />
 
             <TextView
-                    android:id="@+id/image_letter"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:textColor="?bald_text_on_background"
-                    android:textSize="50dp"
-                    />
+                android:id="@+id/image_letter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="?bald_text_on_background"
+                android:textSize="50dp" />
         </FrameLayout>
 
         <TextView
-                android:id="@+id/contact_name"
-                style="@style/ButtonsText.Large"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="8dp"
-                android:gravity="center_vertical"
-                android:text="Contact Name:"
-                android:transitionName="bald_bar_title_animation"/>
+            android:id="@+id/contact_name"
+            style="@style/ButtonsText.Large"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
+            android:text="Contact Name:"
+            android:transitionName="bald_bar_title_animation" />
     </com.bald.uriah.baldphone.views.BaldLinearLayoutButton>
 </LinearLayout>
