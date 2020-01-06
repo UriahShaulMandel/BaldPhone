@@ -306,7 +306,7 @@
     <string name="could_not_start_the_download">Začetek prenosa je neuspešen!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Prenešene posodobitve ni bilo mogoče odstraniti!</string>
     <string name="downloading">Prenašanje…</string>
-    <string name="a_new_update_is_available">Nova posodobitev je na voljo!\nPosodobitve so pomembne, da lahko BaldPhone deluje tekoče.\nPritisni Ok da preneseš novo posodobitev..
+    <string name="a_new_update_is_available">Nova posodobitev je na voljo!\nPosodobitve so pomembne, da lahko BaldPhone deluje tekoče.\nPritisni Ok da preneseš novo posodobitev.
     </string>
     <string name="what_s_new">Kaj je novega</string>
     <string name="download_finished">Prenos končan!</string>
