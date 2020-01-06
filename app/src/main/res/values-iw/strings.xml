@@ -79,7 +79,6 @@
     <string name="assistant">סיוע קולי</string>
     <string name="at_least_one_day_must_be_selected">לפחות יום אחד חייב להיות מסומן!</string>
     <string name="auto_brightness">בהירות אוטומטית</string>
-    <string name="back">חזור</string>
     <string name="backspace">מחיקה</string>
     <string name="baldphone_bla_allow_permission">אנא אפשר את ההרשאות הבאות\nהאפליקציה אינה אוספת מידע אישי וצריכה את
         הרשאות אלו על מנת לתפקד
@@ -227,7 +226,6 @@
     <string name="right_handed">לימניים</string>
     <string name="saturday">שבת</string>
     <string name="save">שמור</string>
-    <string name="selected">נבחר</string>
     <string name="send">שלח</string>
     <string name="set_default_dialer">יישום שיחות</string>
     <string name="set_default_dialer_subtext">אנא אפשר לBaldPhone להיות יישום השיחות, על מנת שיוכל לגשת לשיחות אחרונות,

@@ -60,7 +60,6 @@
     <string name="assistant">Asisten</string>
     <string name="at_least_one_day_must_be_selected">Setidaknya pilih satu hari!</string>
     <string name="auto_brightness">Kecerahan\nOtomatis</string>
-    <string name="back">Kembali</string>
     <string name="backspace">menghapus</string>
     <string name="baldphone_bla_allow_permission">Harap izinkan perizinan berikut:</string>
     <string name="blocked">Diblokir</string>
@@ -214,7 +213,6 @@
 
     <string name="saturday">Sabtu</string>
     <string name="save">Simpan</string>
-    <string name="selected">Terpilih</string>
     <string name="send">Kirim</string>
     <string name="set_default_dialer">Setel Aplikasi Panggilan Asali</string>
     <string name="set_default_dialer_subtext">BaldPhone perlu ditandai sebagai aplikasi panggilan asali.</string>

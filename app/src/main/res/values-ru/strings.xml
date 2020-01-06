@@ -77,7 +77,6 @@
     <string name="assistant">Ассистент</string>
     <string name="at_least_one_day_must_be_selected">Не меньше одного дня должно быть выбранно!</string>
     <string name="auto_brightness">Автоматическая\nЯркость</string>
-    <string name="back">Назад</string>
     <string name="backspace">удалить</string>
     <string name="baldphone_bla_allow_permission">Пожалуйста предоставьте следующие разрешения:</string>
     <string name="blocked">Заблокирован</string>
@@ -230,7 +229,6 @@
 
     <string name="saturday">Суббота</string>
     <string name="save">сохранить</string>
-    <string name="selected">Выбран</string>
     <string name="send">Отправить</string>
     <string name="set_default_dialer">Установить приложение для вызова по умолчанию</string>
     <string name="set_default_dialer_subtext">BaldPhone должен быть отмечен как приложение для вызова по умолчанию.</string>

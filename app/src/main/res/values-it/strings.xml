@@ -74,7 +74,6 @@
     <string name="assistant">Assistente</string>
     <string name="at_least_one_day_must_be_selected">Devi selezionare almeno un giorno!</string>
     <string name="auto_brightness">Luminosità\nAutomatica</string>
-    <string name="back">Indietro</string>
     <string name="backspace">Cancella</string>
     <string name="baldphone_bla_allow_permission">Per favore concedi i seguenti permessi:</string>
     <string name="blocked">Bloccato</string>
@@ -231,7 +230,6 @@
 
     <string name="saturday">Sabato</string>
     <string name="save">salva</string>
-    <string name="selected">Selezionato</string>
     <string name="send">Invia</string>
     <string name="set_default_dialer">Imposta come App predefinita per la chiamata</string>
     <string name="set_default_dialer_subtext">BaldPhone ha bisogno di essere impostata come app predefinita per la chiamata.</string>

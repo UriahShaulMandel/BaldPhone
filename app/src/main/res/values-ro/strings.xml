@@ -60,7 +60,6 @@
     <string name="assistant">Asistent</string>
     <string name="at_least_one_day_must_be_selected">Cel puțin o zi trebuie selectată!</string>
     <string name="auto_brightness">Luminiozitate\auto</string>
-    <string name="back">Înapoi</string>
     <string name="backspace">Șterge</string>
     <string name="baldphone_bla_allow_permission">Vă rugăm să acceptați urmatoarele permisiuni:</string>
     <string name="blocked">Blocat</string>
@@ -212,7 +211,6 @@
 
     <string name="saturday">Sâmbată</string>
     <string name="save">Salvează</string>
-    <string name="selected">Selectat</string>
     <string name="send">Trimite</string>
     <string name="set_default_dialer">Setează aplicație implicită pentru apelat</string>
     <string name="set_default_dialer_subtext">BaldPhone trebuie sa fie aplicația implicită pentru apelat</string>

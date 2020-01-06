@@ -77,7 +77,6 @@
     <string name="assistant">Βοηθός Assistant</string>
     <string name="at_least_one_day_must_be_selected">Τουλάχιστον μια μερα πρεπει να εχει επιλέγει!</string>
     <string name="auto_brightness">Αυτόματη\nΦωτεινότητα</string>
-    <string name="back">πίσω</string>
     <string name="backspace">backspace</string>
     <string name="baldphone_bla_allow_permission">Παρακαλώ επιτρέψτε τις ακόλουθες άδειες</string>
     <string name="blocked">Μπλοκαρίστηκε!</string>
@@ -234,7 +233,6 @@
     <string name="right_handed">Δεξιόχειρες</string>
     <string name="saturday">Σάββατο</string>
     <string name="save">αποθήκευση</string>
-    <string name="selected">επιλεγμένο</string>
     <string name="send">Αποστολή</string>
     <string name="set_default_dialer">Επιλογη εφαρμογης τηλεφώνου</string>
     <string name="set_default_dialer_subtext">Το BaldPhone πρέπει να επιλέγει ως εφαρμογή τηλεφώνου.</string>

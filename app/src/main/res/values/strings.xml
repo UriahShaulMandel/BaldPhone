@@ -61,7 +61,6 @@
     <string name="assistant">Assistant</string>
     <string name="at_least_one_day_must_be_selected">At least one day must be selected!</string>
     <string name="auto_brightness">Auto\nBrightness</string>
-    <string name="back">Back</string>
     <string name="backspace">backspace</string>
     <string name="baldphone_bla_allow_permission">Please allow the following permissions:</string>
     <string name="blocked">Blocked</string>
@@ -218,7 +217,6 @@
 
     <string name="saturday">Saturday</string>
     <string name="save">Save</string>
-    <string name="selected">Selected</string>
     <string name="send">Send</string>
     <string name="set_default_dialer">Set Default Calling App</string>
     <string name="set_default_dialer_subtext">BaldPhone needs to be marked as the default calling app.</string>

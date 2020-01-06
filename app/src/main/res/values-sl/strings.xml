@@ -72,7 +72,6 @@
     <string name="assistant">Pomočnik</string>
     <string name="at_least_one_day_must_be_selected">Izbran mora biti vsaj en dan!</string>
     <string name="and_welcome_to_baldphone">In dobrodošli v BaldPhone.</string>
-    <string name="back">Nazaj</string>
     <string name="backspace">vračalka</string>
     <string name="baldphone_bla_allow_permission">Prosimo odobrite sledeča dovoljenja:</string>
     <string name="blocked">Blokiran</string>
@@ -213,7 +212,6 @@
     <string name="right_handed">Desničar</string>
     <string name="saturday">Sobota</string>
     <string name="save">Shrani</string>
-    <string name="selected">Izbrano</string>
     <string name="send">Pošlji</string>
     <string name="set_default_dialer">Nastavi privzeto klicalno aplikacijo</string>
     <string name="set_default_dialer_subtext">BaldPhone mora biti označen kot privzeta klicalna aplikacija.</string>

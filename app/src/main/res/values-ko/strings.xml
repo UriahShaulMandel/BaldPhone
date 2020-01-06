@@ -53,7 +53,6 @@
     <string name="assistant">보조</string>
     <string name="at_least_one_day_must_be_selected">하루 이상의 날짜가 선택되었습니다!</string>
     <string name="auto_brightness">자동 밝기</string>
-    <string name="back">뒤로 가기</string>
     <string name="baldphone_bla_allow_permission">다음 권한을 사용하십시오:</string>
     <string name="baldphone_is_up_to_date">BaldPhone가 최신입니다.</string>
     <string name="blocked">잠금</string>
@@ -245,7 +244,6 @@
     <string name="save">저장</string>
     <string name="scrolling">Scrolling</string>
     <string name="search">검색</string>
-    <string name="selected">선택</string>
     <string name="send">보내기</string>
     <string name="set_default_dialer">기본 통화 앱 설정</string>
     <string name="set_default_dialer_subtext">BaldPhone은 기본 통화 앱으로 표시되어야합니다.</string>
