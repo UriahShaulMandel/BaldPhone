@@ -75,14 +75,6 @@ public class FirstPageAppIcon extends BaldFrameLayoutButton {
 
     }
 
-    public void setText(CharSequence text) {
-        textView.setText(text);
-    }
-
-    public void setText(@StringRes int resId) {
-        textView.setText(resId);
-    }
-
     public void setImageDrawable(@Nullable Drawable drawable) {
         imageView.setImageDrawable(drawable);
     }
@@ -101,5 +93,13 @@ public class FirstPageAppIcon extends BaldFrameLayoutButton {
 
     public CharSequence getText() {
         return textView.getText();
+    }
+
+    public void setText(CharSequence text) {
+        textView.setText(text);
+    }
+
+    public void setText(@StringRes int resId) {
+        textView.setText(resId);
     }
 }

@@ -82,8 +82,8 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
             PERMISSION_REQUEST_INSTALL_PACKAGES = 0b1000000000;
 
     public boolean testing = false;
-    protected Vibrator vibrator;
     public boolean colorful;
+    protected Vibrator vibrator;
     @StyleRes
     private int themeIndex;
     private List<WeakReference<Dialog>> dialogsToClose = new ArrayList<>(1);

@@ -79,6 +79,7 @@ public class S {
     private static final String TAG = S.class.getSimpleName();
     public static final String BALD_IMPORTANT_MESSAGE = "Bald Important Message";
     private static final float DIM_AMOUNT = 0.5f;
+    private static final String EMPTY = "";
 
     public static void logImportant(@Nullable CharSequence charSequence) {
         Log.e(BALD_IMPORTANT_MESSAGE, String.valueOf(charSequence));
@@ -227,7 +228,6 @@ public class S {
         return resIds;
     }
 
-    private static final String EMPTY = "";
     /**
      * @param o an object to find its string value
      * @return the object's {@link Object#toString()}; Empty string if the object is null

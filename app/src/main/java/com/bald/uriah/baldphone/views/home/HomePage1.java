@@ -77,9 +77,6 @@ public class HomePage1 extends HomeView {
     private final static String WHATSAPP_PACKAGE_NAME = "com.whatsapp";
     private final static ComponentName WHATSAPP_COMPONENT_NAME =
             new ComponentName(WHATSAPP_PACKAGE_NAME, WHATSAPP_PACKAGE_NAME + ".Main");
-    private View view;
-    private FirstPageAppIcon bt_clock, bt_camera, bt_videos, bt_assistant, bt_messages, bt_photos, bt_contacts, bt_dialer, bt_whatsapp, bt_apps, bt_reminders, bt_recent;
-    private boolean registered = false;
     public Map<App, FirstPageAppIcon> viewsToApps;
     /**
      * Listens to broadcasts from {@link NotificationListenerService}
@@ -103,6 +100,9 @@ public class HomePage1 extends HomeView {
 
         }
     };
+    private View view;
+    private FirstPageAppIcon bt_clock, bt_camera, bt_videos, bt_assistant, bt_messages, bt_photos, bt_contacts, bt_dialer, bt_whatsapp, bt_apps, bt_reminders, bt_recent;
+    private boolean registered = false;
     private SharedPreferences sharedPreferences;
 
     public HomePage1(@NonNull Context context) {

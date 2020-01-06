@@ -66,9 +66,9 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
     private final SparseIntArray letterToPosition;
     private final RecyclerView recyclerView;
     private final int mode;
-    private RandomColorMaker randomColorMaker;
     @ColorInt
     private final int textColorOnGold, textColorOnButton;
+    private RandomColorMaker randomColorMaker;
     private Cursor cursor;
 
     public ContactRecyclerViewAdapter(BaldActivity activity, Cursor cursor, RecyclerView recyclerView, @IntRange(from = MODE_DEFAULT, to = MODE_SHARE) int mode) {

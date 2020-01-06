@@ -430,33 +430,6 @@ public class AddContactActivity extends BaldActivity {
             setImage(data.getData());
     }
 
-    static class PhotoAdder extends SimpleTarget<Bitmap> {
-        private final int rawId;
-        private final ContentResolver contentResolver;
-        private final boolean cropped;
-
-        PhotoAdder(int rawId, Context context, boolean cropped) {
-            this.cropped = cropped;
-            this.rawId = rawId;
-            this.contentResolver = context.getApplicationContext().getContentResolver();
-        }
-
-        @Override
-        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-            if (!cropped) {
-                final int dimension = Math.min(resource.getWidth(), resource.getHeight());
-                resource = ThumbnailUtils.extractThumbnail(resource, dimension, dimension);
-            }
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            resource.compress(Bitmap.CompressFormat.JPEG, 30, stream);
-            try {
-                addFullSizePhoto(rawId, stream.toByteArray(), contentResolver);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
     @Override
     public void onBackPressed() {
         if (safeToExit())
@@ -505,6 +478,33 @@ public class AddContactActivity extends BaldActivity {
                         save();
                     return true;
                 }).show();
+    }
+
+    static class PhotoAdder extends SimpleTarget<Bitmap> {
+        private final int rawId;
+        private final ContentResolver contentResolver;
+        private final boolean cropped;
+
+        PhotoAdder(int rawId, Context context, boolean cropped) {
+            this.cropped = cropped;
+            this.rawId = rawId;
+            this.contentResolver = context.getApplicationContext().getContentResolver();
+        }
+
+        @Override
+        public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+            if (!cropped) {
+                final int dimension = Math.min(resource.getWidth(), resource.getHeight());
+                resource = ThumbnailUtils.extractThumbnail(resource, dimension, dimension);
+            }
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            resource.compress(Bitmap.CompressFormat.JPEG, 30, stream);
+            try {
+                addFullSizePhoto(rawId, stream.toByteArray(), contentResolver);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override
