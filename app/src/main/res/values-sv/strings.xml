@@ -74,9 +74,6 @@
     <string name="camera_subtext">Den här rättigheten krävs för att använda ficklampan.</string>
     <string name="cancel">Avbryt</string>
     <string name="change_pills_time">Ändra tid för tablett</string>
-    <string name="change_system_settings_subtext">Please allow BaldPhone to change settings, such as increasing the font
-        size and changing the brightness.
-    </string>
     <string name="change_system_settings_subtext">Vänligen tillåt Baldphone att ändra inställningar som teckenstorlek
         och ljusstyrka.</string>
     <string name="choose_friday">Fre</string>
