@@ -1,0 +1,416 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about">Information</string>
+    <string name="about_subtext">Hej!\nJag heter Uriah Shaul Mandel och det är jag som utvecklar den här appen.\n
+        Jag har spenderat merparten av mitt "vuxna" liv på arbetet med appen och har låtit den vara fri att använda
+        kostnadsfritt.\nDu får gärna kontakta mig via epost:\nbaldphone.contact@gmail.com</string>
+    <string name="accessibility_level">Tillgängligetsgrad</string>
+    <string name="accessibility_settings">Tillgänglighet</string>
+    <string name="accidental_touches">Skydd mot oavsiktligt pekande</string>
+    <string name="accidental_touches_settings_subtext">Skyddet förhindrar pekningar när telefonen är övertäckt. Den går
+        att\nstänga av om den orsakar problem.</string>
+    <string name="accidental_touches_subtext">Pekning upptäcktes\nTryck på OK för att fortsätta använda telefonen.\n
+        om detta meddelande upprepas kan du stänga av funktionen i inställningarna tillgänglighet</string>
+    <string name="acknowledgments">Utvecklarens tack</string>
+    <string name="adaptive">Anpassad</string>
+    <string name="add_alarm">Lätt till Alarm</string>
+    <string name="add_alarm_quickly">Lägg till Timer</string>
+    <string name="add_contact">Lägg till Kontakt</string>
+    <string name="add_emergency_contact">Ny Nödkontakt</string>
+    <string name="add_pill">Lägg till tablett</string>
+    <string name="add_shortcut">Lägg till genväg</string>
+    <string name="add_to_favorite">Lägg till som favorit</string>
+    <string name="add_to_home">Fäst på hemskärmen</string>
+    <string name="add_to_sos">Ange som nödkontakt</string>
+    <string name="address">Adress</string>
+    <string name="advanced_options">Avancerade alternativ</string>
+    <string name="afternoon">Eftermiddag</string>
+    <string name="airplane_mode">Flygplansläge</string>
+    <string name="alarm_name">Namn på alarm</string>
+    <string name="alarm_volume">Volum på alarm</string>
+    <string name="alarm_volume_subtext">Ange Volym för Alarm.\nHögre volym åt höger.</string>
+    <string name="alarms">Alarm</string>
+
+    <string name="alarms_repeats_every">Alarmet är aktivt</string>
+    <string name="all_alarms">Alla alarm</string>
+    <string name="allow">Tillåt</string>
+    <string name="already_setted">Redan inställt!\nKlicka här för att aktivera</string>
+    <string name="an_error_has_occurred">Ett fel uppstod!</string>
+    <string name="and_welcome_to_baldphone">och välkommen till Baldphone</string>
+
+    <string name="apps">Appar</string>
+    <string name="are_you_sure_you_want_to_delete___">Är du säker på att du vill ta bort %s?</string>
+    <string name="assistant">Assistent</string>
+    <string name="at_least_one_day_must_be_selected">Minst en dag måste anges!</string>
+    <string name="auto_brightness">Automatisk Ljusstyrka</string>
+    <string name="backspace">backsteg</string>
+    <string name="baldphone_bla_allow_permission">Vänligen, tillåt följande rättigheter:</string>
+    <string name="blocked">Blockerad</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="brightness">Ljusstyrka</string>
+    <string name="brightness_subtext">Ändra Ljusstyrka.</string>
+    <string name="cache_cleared_successfully">Cachen rensades!</string>
+    <string name="call">Ring</string>
+    <string name="calling">Ringer</string>
+
+    <string name="call_log">Samtalslista:</string>
+    <string name="call_subtext">Den här rättigheten krävs för att ringa kontakter.</string>
+    <string name="camera">Kamera</string>
+    <string name="camera_subtext">Den här rättigheten krävs för att använda ficklampan.</string>
+    <string name="cancel">Avbryt</string>
+    <string name="change_pills_time">Ändra tid för tablett</string>
+    <string name="change_system_settings_subtext">Vänligen tillåt Baldphone att ändra inställningar som teckenstorlek
+        och ljusstyrka.</string>
+    <string name="choose_friday">Fre</string>
+    <string name="choose_monday">Mån</string>
+    <string name="choose_saturday">Lör</string>
+    <string name="choose_sunday">Sön</string>
+    <string name="choose_thursday">Tor</string>
+    <string name="choose_tuesday">Tis</string>
+    <string name="choose_wednesday">Ons</string>
+    <string name="clear">Rensa</string>
+    <string name="clear_cache">Rensa Cache</string>
+    <string name="clear_data">Rensa All Data</string>
+    <string name="clear_data_subtext">Vill du rensa all data?</string>
+    <string name="clear_data_subtext2">Säker?</string>
+    <string name="clear_data_subtext3">Bombsäker?\nOm du klickar på ja försvinner all data!</string>
+    <string name="clock">Klocka</string>
+    <string name="coming_soon">På gång!</string>
+    <string name="connection_settings">Anslutningar</string>
+    <string name="contact_must_has_name">Ett namn måste anges för kontakten!</string>
+    <string name="contact_not_created">Ingen kontakt skapades!</string>
+    <string name="contacts">Kontakter</string>
+    <string name="contacts_read_subtext">Den här rättigheten krävs för att läsa kontakter.</string>
+    <string name="contacts_subtext">Den här rättigheten krävs för att lägga till nya kontakter.</string>
+    <string name="crash">Oj!\nBaldPhone stötte på ett problem och startas nu om.</string>
+    <string name="current_time">Nuvarande Tid</string>
+    <string name="custom">Anpassad</string>
+    <string name="dark">Mörk</string>
+    <string name="delete">Ta bort</string>
+    <string name="delete___">Ta bort %s?</string>
+    <string name="delete_all_alarms">Ta bort alla alarm</string>
+    <string name="dialer">Ring</string>
+    <string name="display_settings">Skärm</string>
+    <string name="done">Klar</string>
+    <string name="down">Ner</string>
+    <string name="edit">Ändra</string>
+    <string name="email">Epost:</string>
+    <string name="enable_notification_access">Tillåt hantering av notifieringar</string>
+    <string name="enable_notification_access_subtext">Vänligen tillåt Baldphone att hantera notifieringar.</string>
+    <string name="enter">Ange</string>
+    <string name="enter_contact_or_phone_number">Ange namn på kontakt:</string>
+    <string name="evening">Kväll</string>
+    <string name="example_of_different_text_sizes">Exempel på olika teckenstorlekar\n
+      Bör vara läsbara och inte försvinna ur synligt fält:
+    </string>
+    <string name="external_storage_subtext">Den här rättigheten krävs för att spara bilder.</string>
+    <string name="feedback">Skicka återkoppling</string>
+    <string name="feedback_cannot_be_empty">Återkoppling kan inte vara tom!</string>
+    <string name="feedback_sent_successfully">Återkoppling skickades!</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Ange behov av tillgänglighetsgrad
+    </string>
+    <string name="font_size">Teckenstorlek</string>
+    <string name="friday">Fredag</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">
+      Har du svårt att använda telefonens tangentbord? Prova Baldphones STORA tangentbord istället!
+    </string>
+    <string name="hello">Hej</string>
+    <string name="help">Videobeskrivning</string>
+    <string name="hide">Göm</string>
+    <string name="high_level">Hög grad</string>
+    <string name="home_phone_number">Hemnummer</string>
+    <string name="hour">Timma</string>
+    <string name="huge">Jättestor</string>
+    <string name="internet">Internet</string>
+    <string name="invoked_in">Invoked in:</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Till sist:\n
+      Det är högst rekommenderat att låta Baldphone köras när telefonen startar upp.
+    </string>
+    <string name="language">språk</string>
+    <string name="language_settings">Språk</string>
+    <string name="large">Stor</string>
+    <string name="left_handed">Vänsterhänt</string>
+    <string name="light">Ljus</string>
+    <string name="location">Plats</string>
+    <string name="emergency_services">Nödtjänster</string>
+    <string name="mail">Epost</string>
+    <string name="maps">Kartor</string>
+
+
+    <string name="medium">Mellan</string>
+    <string name="medium_level">Mellangrad</string>
+    <string name="message">Meddelande</string>
+    <string name="messages">Meddelanden</string>
+    <string name="minute">Minut</string>
+    <string name="minutes">Minuter</string>
+    <string name="missed">Missat</string>
+
+    <string name="mobile_phone_number">Mobilnummer</string>
+    <string name="monday">Måndag</string>
+    <string name="more">mer</string>
+    <string name="morning">Morgon</string>
+    <string name="name">Namn</string>
+    <string name="named__">med namn</string>
+    <string name="new_alarm___was_created">Nytt alarm %s skapades!</string>
+    <string name="nfc">NFC</string>
+    <string name="no">Nej</string>
+    <string name="notes">Anteckningar</string>
+    <string name="notes_settings">Anteckningar</string>
+    <string name="notes_settings_subtext">Välj on du vill ha en skärm för anteckningar på hemmaskärmen.</string>
+    <string name="notifications">Notifieringar</string>
+
+    <string name="of">av</string>
+    <string name="off">Av</string>
+    <string name="ok">OK</string>
+    <string name="on">På</string>
+
+    <string name="only_once">Enstaka gång</string>
+
+
+    <string name="open">Öppna</string>
+
+    <string name="outgoing">Utgående</string>
+    <string name="page">Sida</string>//page 1 of 2
+    <string name="permissions_part">Rättigheter</string>
+    <string name="personalization_settings">Personligt</string>
+    <string name="phone">Telefon</string>
+    <string name="photo">Foto</string>
+    <string name="photos">Foton</string>
+    <string name="pill_added">Tablett tillagd!</string>
+    <string name="pill_name">Tablettnamn</string>
+    <string name="pills">Tabletter</string>
+    <string name="press_longer">Tryck längre!</string>
+    <string name="timer">Timer</string>
+    <string name="read_call_log">Se samtalshistorik</string>
+    <string name="read_call_log_subtext">Den här rättigheten krävs för att se samtalshistoriken.</string>
+    <string name="read_contacts">Läsa Kontakter</string>
+    <string name="received">Inkommande</string>
+    <string name="recent">Senaste</string>
+    <string name="regular_level">Normalgrad</string>
+
+    <string name="remove_from_favorite">Ta bort från favoriter</string>
+    <string name="remove_from_home">Ta bort från hemskärmen</string>
+    <string name="remove_from_sos">Ta bort från nödkontakt</string>
+    <string name="remove_shortcut">Ta bort genväg</string>
+    <string name="removed_all_alarms">Alla alarm togs bort!</string>
+    <string name="repeats_every_day">Dagligen</string>
+    <string name="right_handed">Högerhänt</string>
+
+    <string name="saturday">Lördag</string>
+    <string name="save">Spara</string>
+    <string name="send">Skicka</string>
+    <string name="set_default_dialer">Ange standardapp för att samtal</string>
+    <string name="set_default_dialer_subtext">BaldPhone måste anges som standardapp för samtal.</string>
+    <string name="set_home_screen">Använd som startapp</string>
+    <string name="set_home_screen_subtext">När du använder Baldphone bör den anges som startapp\n
+      Det går att korrigera senare i telefonens inställningar.
+    </string>
+    <string name="set_keyboard">Ange som tangentbord</string>
+    <string name="setting_does_not_exist">Inställningen finns inte</string>
+    <string name="settings">Inställningar</string>
+    <string name="settings_permission">Rättigheter för inställningar</string>
+    <string name="share">Dela</string>
+    <string name="share_actual_text">Hej, jag använder appen "BaldPhone" som ersätter
+      telefonens ursprungliga användargränssnitt mot ett som är större, tydligare och enklare.\n
+      Låter det intressant?\nDu kan ladda ner det gratis!\n
+      Besök länken nedan för mer information:\n\nhttps://sites.google.com/view/baldphone
+    </string>
+    <string name="share_bald_phone_subtext">Känner du till någon som kan ha nytta av BaldPhone\n
+      Du kan berätta för dem om appen!"
+    </string>
+    <string name="share_baldphone">Berätta om BaldPhone</string>
+    <string name="share_contact">Dela Kontakt</string>
+    <string name="share_differently">via en annan app</string>
+    <string name="share_via_whatsapp">via WhatsApp</string>
+    <string name="shift">shift</string>
+    <string name="show">Visa</string>
+    <string name="small">Liten</string>
+    <string name="snooze">Snooza</string>
+    <string name="sos">SOS</string>
+    <string name="sos_is_full">Nödlistan är full!</string>
+    <string name="sos_is_full_subtext">Nödlistan är full! Ta bort en nödkontakt för att
+      lägga till en annan</string>
+    <string name="speak">Prata</string>
+    <string name="speech_to_text">Tal Till Text</string>
+    <string name="strong_hand">Dominant Hand</string>
+    <string name="strong_hand_subtext">Välj din dominanta hand för att anpassa appen</string>
+    <string name="submit">verkställ</string>
+    <string name="sunday">Söndag</string>
+    <string name="technical_information">Teknisk Information</string>
+    <string name="theme_settings">Teman</string>
+    <string name="theme_settings_subtext">Välj ett tema</string>
+
+    <string name="thursday">Torsdag</string>
+    <string name="time_changer">Ändra tablettid</string>
+    <string name="tiny">Mini</string>
+    <string name="to___days_and___hours_from_now">om %d dagar och %d timmar</string>
+    <string name="to___hours_and___minutes_from_now">om %d timmar och %d minuter</string>
+    <string name="to___minuets_from_now">om %d minuter</string>
+    <string name="today">Idag</string>
+    <string name="took">Took!</string>
+    <string name="tuesday">Tisdag</string>
+    <string name="uninstall">Avinstallera</string>
+    <string name="uninstall_subtext">Är du säker på att du vill avinstallera %s?\n%s data rensas!</string>
+    <string name="up">Upp</string>
+    <string name="video">Video</string>
+    <string name="video_tutorials">Videobeskrivningar</string>
+    <string name="videos">Video</string>
+
+    <string name="voice_mail">Röstbrevlåda</string>
+    <string name="wednesday">Onsdag</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="wifi">Wifi</string>
+    <string name="will_repeat_only_once">upprepas inte!</string>
+    <string name="write">Skapa</string>
+    <string name="write_contacts">Skapa Kontakter</string>
+    <string name="write_external_storage">Skriva till externt lagringsmedium</string>
+    <string name="yes">Ja</string>
+    <string name="yesterday">Igår</string>
+    <string name="nothing">Ingenting</string>
+    <string name="no_contacts_found">Inga Kontakter Hittades!</string>
+    <string name="no_alarms">Inga alarm\nSkapa ett genom att klicka på\n\"Lägg till alarm"\neller\n\"Lägg till Timer\"</string>
+    <string name="no_pills">Inga tabletter\nLägg till genom att klicka på \n\"Lägg till tablett\"</string>
+    <string name="clear_all_notifications">Rensa alla notifieringar</string>
+    <string name="clear_cache_subtext">Är du säker på att du vill rensa cachen?\n
+      Även appgenvägar kommer att rensas!
+    </string>
+    <string name="permissions_calm">BaldPhone behöver följande rättigheter för att köras.
+      Några av dem kan låta skrämmande, men det är det enda sättet för BaldPhone att ersätta
+      telefonens ursprungliga användargränssnitt. Detta är ofarligt och ingen data samlas in.
+      Tryck på OK för att tillåta eller Nej för att avsluta BaldPhone.
+    </string>
+    <string name="pending_update">Väntar på uppdatering</string>
+    <string name="download">Hämta</string>
+    <string name="install_updates">Hämta uppdateringar</string>
+    <string name="install_updates_subtext">Den här rättigheten krävs för att uppdatera BaldPhone</string>
+    <string name="a_new_update_is_available">En ny uppdatering är tillgänglig!\n Uppdateringar är viktiga
+      för att BaldPhone ska köras stabilt. Tryck på OK för att ladda ner uppdateringen.
+    </string>
+    <string name="current_version">Nuvarande Version:\n</string>
+    <string name="new_version">Ny Version:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">Nya uppdateringar är klara att hämtas.</string>
+    <string name="install">Installera</string>
+    <string name="data_warning">Datavarning</string>
+    <string name="data_warning_subtext">Du är inte ansluten till WiFi.\nStorleken på hämtningen är cirka
+      3MB, om du är utomlands kan det kosta pengar.\nVill du fortsätta med hämtningen?
+    </string>
+    <string name="update_message_is_corrupted">Updatteringsmeddelande är korrupt.</string>
+    <string name="check_for_updates">Leta efter uppdateringar</string>
+    <string name="could_not_connect_to_server">Kunde inte ansluta till servern!</string>
+    <string name="could_not_connect_to_internet">Kunde inte ansluta till Internet!</string>
+    <string name="could_not_start_the_download">Kunde inte påbörja hämtningen!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">Den hämtade uppdateringen kunde inte tas bort!</string>
+    <string name="downloading">Hämtar...</string>
+
+    <string name="baldphone_is_up_to_date">Använder senaste versionen av BaldPhone.</string>
+    <string name="what_s_new">Vad som är nytt</string>
+    <string name="download_finished">Hämtning färdig!</string>
+    <string name="downloading_updates">Hämtar Uppdateringar…</string>
+    <string name="installing_doesn_t_work">Gick det inte att installera?</string>
+    <string name="try_now">Försök Nu</string>
+    <string name="download_progress">Hämtningsstatus</string>
+    <string name="what_do_you_want_to_do_with___">Vad vill du göra med %s?</string>
+    <string name="crash_reports">Krashrapporter</string>
+    <string name="crash_reports_subtext">Krashrapporter hjälper till att göra upplevelsen med BaldPhone
+      smidigare.\nDe används endast för att åtgärda fel och endast nödvändig information används.
+    </string>
+    <string name="custom_app">Annan App</string>
+    <string name="custom_app_subtext">Välj en annan app att placera på hemskärmen.</string>
+    <string name="no_app_was_found">Hittade ingen app som matchar!</string>
+    <string name="alarm">Alarm</string>
+    <string name="no_new_notifications">Inga nya notifieringar</string>
+    <string name="sound">Ljud</string>
+    <string name="mute">Tyst</string>
+    <string name="vibrate">Vibrera</string>
+    <string name="your_phone_doesnt_have_assistant_installed">Din telefon har ingen assistent installerad.</string>
+
+
+    <string name="status_bar_settings">Statuslist</string>
+    <string name="status_bar_settings_subtext">Var ska statuslisten visas?</string>
+    <string name="only_home_screen">Endast på hemskärmen</string>
+    <string name="nowhere">Ingenstans</string>
+    <string name="everywhere">Överallt</string>
+
+
+    <string name="share_photo">Dela Foto</string>
+
+    <string name="choose_language_for_keyboard">Välj Språk</string>
+    <string name="hebrew">Hebreiska</string>
+    <string name="english">Engelska</string>
+    <string name="swedish">Svenska</string>
+    <string name="french">Franska</string>
+    <string name="german">Tyska</string>
+    <string name="spanish">Spanska</string>
+
+    <string name="search">Sök</string>
+    <string name="next">Nästa</string>
+    <string name="go">Kör</string>
+
+
+    <string name="dialer_sounds">Knappljud Telefon</string>
+    <string name="dialer_sounds_subtext">Välj om du vill höra knappljud när du slår ett nummer för att ringa.</string>
+    <string name="low_battery_alert">Batterivarning</string>
+    <string name="low_battery_alert_subtext">Välj om du vill att statuslisten ska visas röd när batterinivån är lägre än 20%\n
+      Observera att statuslisten måste vara synlig för att det ska märkas.
+    </string>
+
+    <string name="also_available_at">Du kan även skicka ett epost till\nbaldphone.contact@gmail.com\nÅterkoppling måste skrivas
+      på engelska eller hebreiska!</string>
+    <string name="grant_all_permissions">Tillåt alla rättigheter</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+    <string name="donate">Donera</string>
+    <string name="emergency_button">Nödknapp</string>
+    <string name="emergency_settings_subtext">Välj om du vill visa en nödknapp på hemskärmen.</string>
+    <string name="private_number">Privat nummer</string>
+    <string name="swipe_left_or_right">Svep åt vänster eller höger</string>
+    <string name="press_next_or_back_buton">Tryck på pilen nästa eller tillbaka</string>
+    <string name="click_delay">Pekfördröjning</string>
+    <string name="no_delay">Ingen fördröjning</string>
+    <string name="scrolling">Bläddrande</string>
+    <string name="arrows">Pilar</string>
+    <string name="swipe">Svep</string>
+    <string name="_long">Lång</string>
+    <string name="_short">Kort</string>
+    <string name="do_you_want_to_save_your_changes">Vill du spara dina ändringar?</string>
+    <string name="discard">Avfärda</string>
+    <string name="no_recent_calls">Inga Nya Samtal</string>
+    <string name="apps_sort_method">Sorteringsmetod för appar</string>
+    <string name="apps_sort_method_subtext">Ange om du vill sortera appar i ett rutmönster eller gruppera dem alfabetiskt.</string>
+    <string name="groups">Gruppera</string>
+    <string name="one_grid">Rutmönster</string>
+    <string name="colorful">Färgglad</string>
+    <string name="colorful_subtext">Vill du att BaldPhone ska visas i mer Färger?</string>
+    <string name="edit_home_screen">Anpassa Hemskärmen</string>
+
+
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
+</resources>
