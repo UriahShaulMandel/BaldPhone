@@ -20,6 +20,7 @@
     - [Russian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ru/strings.xml) translated by [Vintic](https://https://github.com/Vintic)
     - [Slovenian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-sl/strings.xml) translated by Klemen Skerbiš
     - [Spanish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-es/strings.xml) translated by [Victor Arribas](https://github.com/varhub)
+    - [Swedish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-sv/strings.xml) translated by [Patrik Bogren](https://github.com/mmFooD)
     - [Turkish (Not Finished)](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-tr/strings.xml) translated by Samii571
  2. Click "edit this file" 
  3. find the word you want to change
@@ -45,6 +46,7 @@
     - [Russian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ru/strings.xml) translated by [Vintic](https://https://github.com/Vintic)
     - [Slovenian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-sl/strings.xml) translated by Klemen Skerbiš
     - [Spanish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-es/strings.xml) translated by [Victor Arribas](https://github.com/varhub)
+    - [Swedish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-sv/strings.xml) translated by [Patrik Bogren](https://github.com/mmFooD)
     - [Turkish (Not Finished)](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-tr/strings.xml) translated by Samii571
  2. Click "Raw" and copy the text to your text editor (Notepad++ is great for this specific task) 
  3. Change all the Values* to the new language (long texts like abouts can remain in english)

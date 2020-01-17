@@ -97,7 +97,7 @@
     <string name="contacts_subtext">Den här rättigheten krävs för att lägga till nya kontakter med BaldPhone.</string>
     <string name="crash">Oj!\nBaldPhone stötte på ett problem och startas nu om.</string>
     <string name="current_time">Klockan är nu:</string>
-    <string name="custom">annan...</string>
+    <string name="custom">annan…</string>
     <string name="dark">Mörk</string>
     <string name="delete">Ta bort</string>
     <string name="delete___">Ta bort %s?</string>
@@ -303,7 +303,7 @@
     <string name="could_not_start_the_download">Kunde inte påbörja hämtningen!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Den hämtade uppdateringen kunde inte tas bort!
     </string>
-    <string name="downloading">Hämtar...</string>
+    <string name="downloading">Hämtar…</string>
 
     <string name="baldphone_is_up_to_date">Använder den senaste versionen av BaldPhone.</string>
     <string name="what_s_new">Vad som är nytt</string>
@@ -340,10 +340,6 @@
     <string name="choose_language_for_keyboard">Välj Språk</string>
     <string name="hebrew">Hebreiska</string>
     <string name="english">Engelska</string>
-    <string name="swedish">Svenska</string>
-    <string name="french">Franska</string>
-    <string name="german">Tyska</string>
-    <string name="spanish">Spanska</string>
 
     <string name="search">Sök</string>
     <string name="next">Nästa</string>
