@@ -90,7 +90,7 @@
     <string name="clear">Clear</string>
     <string name="clear_cache">Clear Cache</string>
     <string name="clear_data">Clear All Data</string>
-    <string name="clear_data_subtext">Are you sure you want to delete all data?</string>
+    <string name="clear_data_subtext">Are you sure you want to delete all user data? The BaldPhone app will revert in a fresh-new state, as if it were just installed.</string>
     <string name="clear_data_subtext2">100%?</string>
     <string name="clear_data_subtext3">sure?\npressing yes will delete all data!</string>
     <string name="clock">Clock</string>
@@ -288,8 +288,7 @@
     <string name="no_alarms">No Alarms\nCreate one by clicking\n\"Add Alarm\"\nOr\n\"Add Timer\"</string>
     <string name="no_pills">No Pills\nCreate one by clicking\n\"Add Pill\"</string>
     <string name="clear_all_notifications">Clear All Notifications</string>
-    <string name="clear_cache_subtext">Are you sure you want to clear the cache?\nApp shortcuts will be removed too!
-    </string>
+    <string name="clear_cache_subtext">Are you sure you want to delete the cache contents? Deleting temporary files may solve some BaldPhone app malfunctions, but also shortcuts created in the Home screen will be removed.</string>
     <string name="permissions_calm">Hi, BaldPhone must have the following permissions in order to run. Some of them
         sound scary, but it is the only way BaldPhone can replace the phone\'s interface. No data is taken and it causes
         no harm. Press OK to grant the permissions or no to exit BaldPhone.
