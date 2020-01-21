@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright 2019 Uriah Shaul Mandel
-  ~ Contributors:
-  ~   * Dario Mastromattei
-  ~   * Niccolo Rigacci <niccolo@rigacci.org>
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -87,7 +84,7 @@
 
     <string name="call_log">Chiamate recenti</string>
     <string name="call_subtext">Autorizzazione necessaria per effettuare telefonate.</string>
-    <string name="camera">Fotocamera</string> // Used both as permission and as icon label in the Home page.
+    <string name="camera">Fotocamera</string>
     <string name="camera_subtext">Autorizzazione necessaria per accendere la torcia.</string>
     <string name="cancel">Annulla</string>
     <string name="change_pills_time">Modifica orari pillole</string>
@@ -195,7 +192,7 @@
     <string name="open">Apri</string>
 
     <string name="outgoing">In uscita</string>
-    <string name="page">Page</string> // Pagina 1 di 2
+    <string name="page">Page</string>
     <string name="permissions_part">Autorizzazioni</string>
     <string name="personalization_settings">Personalizza</string>
     <string name="phone">Telefono</string>
@@ -210,7 +207,7 @@
     <string name="read_call_log_subtext">Autorizzazione necessaria per mostrare l\'elenco delle chiamate recenti.</string>
     <string name="read_contacts">Lettura contatti</string>
     <string name="received">Ricevuto</string>
-    <string name="recent">Chiamate</string> // Alternativa: Recenti
+    <string name="recent">Chiamate</string>
     <string name="regular_level">Normale</string>
 
     <string name="remove_from_favorite">Rimuovi dai preferiti</string>
