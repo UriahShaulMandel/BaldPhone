@@ -15,22 +15,6 @@
   -->
 
 <resources>
-
-    <!--For Tests:-->
-    <string name="medication_1">Eltroxin 100</string>
-    <string name="medication_2">Eltroxin 150</string>
-
-    <string-array name="names_for_screenshots">
-        <item>The Godfather</item>
-        <item>Abraham Lincoln</item>
-        <item>Paul McCartney</item>
-        <item>Tyrion Lannister</item>
-        <item>The Rock</item>
-        <item>Robert Downey Jr.</item>
-    </string-array>
-    <!--For Tests:-->
-
-    <bool name="is_right_to_left">false</bool>
     <string name="about">O aplikaci</string>
     <string name="about_subtext">Ahoj!\nMoje jméno je Uriah Shaul Mandel a jsem vývojář této platformy.\n
         Většinu svého \"dospělého\" života výrobou této platformy a rozhodl jsem se ji vydat zadarmo a to pro
@@ -63,15 +47,15 @@
     <string name="alarm_name">Název budíku</string>
     <string name="alarm_volume">Hlasitost budíku</string>
     <string name="alarm_volume_subtext">Vyberte hlasitost budíku\nHlasitost se zvyšuje od leva do prava</string>
-
     <string name="alarms">Budíky</string>
+
     <string name="alarms_repeats_every">Budíky se opakují každý</string>
     <string name="all_alarms">Všechny budíky</string>
     <string name="allow">Povolit</string>
     <string name="already_setted">Již nastaveno!\nKlikněte zde pro změnu</string>
     <string name="an_error_has_occurred">Nastala chyba!</string>
-
     <string name="and_welcome_to_baldphone">A vítejte u BaldPhone</string>
+
     <string name="apps">Aplikace</string>
     <string name="are_you_sure_you_want_to_delete___">Jste si jisté že chcete smazat %s?</string>
     <string name="assistant">Asistent</string>
@@ -85,8 +69,8 @@
     <string name="brightness_subtext">Změnit jas.</string>
     <string name="cache_cleared_successfully">Mezipaměť vyčištěna úspěšně!</string>
     <string name="call">Zavolat</string>
-
     <string name="calling">Volám</string>
+
     <string name="call_log">Historie hovorů:</string>
     <string name="call_subtext">Toto oprávnění je nutné k volání kontaktů.</string>
     <string name="camera">Fotoaparát</string>
@@ -169,17 +153,17 @@
     <string name="location">Umístění</string>
     <string name="emergency_services">Tísňové služby</string>
     <string name="mail">Zprávy</string>
-
-
     <string name="maps">Mapy</string>
+
+
     <string name="medium">Střední</string>
     <string name="medium_level">Střední úroveň</string>
     <string name="message">Zpráva</string>
     <string name="messages">Zprávy</string>
     <string name="minute">Minuta</string>
     <string name="minutes">Minuty</string>
-
     <string name="missed">Zmeškané</string>
+
     <string name="mobile_phone_number">Mobilní telefoní číslo</string>
     <string name="monday">Pondělí</string>
     <string name="more">více</string>
@@ -192,18 +176,18 @@
     <string name="notes">Poznámky</string>
     <string name="notes_settings">Poznámky</string>
     <string name="notes_settings_subtext">Vyberte jestli chcete mít stránku s poznámkami na domovské obrazovce.</string>
-
     <string name="notifications">Upozornění</string>
+
     <string name="of">z</string>
     <string name="off">Vypnutý</string>
     <string name="ok">OK</string>
-
     <string name="on">Zapnutý</string>
-
 
     <string name="only_once">Pouze jednou</string>
 
+
     <string name="open">Otevřít</string>
+
     <string name="outgoing">Odchozí</string>
     <string name="page">Stránka</string>
     <string name="permissions_part">Oprávnění</string>
@@ -221,16 +205,16 @@
     <string name="read_contacts">Přečíst kontakty</string>
     <string name="received">Přijaté</string>
     <string name="recent">Nedávné</string>
-
     <string name="regular_level">Normální úroveň</string>
+
     <string name="remove_from_favorite">Odebrat z oblíbených</string>
     <string name="remove_from_home">Odebrat z domu</string>
     <string name="remove_from_sos">Odebrat z SOS</string>
     <string name="remove_shortcut">Odstaranit zkratku</string>
     <string name="removed_all_alarms">Všechny alarmy byly odstraněny!</string>
     <string name="repeats_every_day">každý den</string>
-
     <string name="right_handed">pravoruký</string>
+
     <string name="saturday">Sobota</string>
     <string name="save">Uložit</string>
     <string name="send">Poslat</string>
@@ -271,8 +255,8 @@
     <string name="sunday">Neděle</string>
     <string name="technical_information">Technické informace</string>
     <string name="theme_settings">Téma</string>
-
     <string name="theme_settings_subtext">Vyberte téma</string>
+
     <string name="thursday">Čtvrtek</string>
     <string name="time_changer">Měnič času pilulky</string>
     <string name="tiny">Malinký</string>
@@ -287,8 +271,8 @@
     <string name="up">Nahoru</string>
     <string name="video">Video</string>
     <string name="video_tutorials">Video Tutoriál</string>
-
     <string name="videos">Videa</string>
+
     <string name="voice_mail">Hlasová pošta</string>
     <string name="wednesday">Středa</string>
     <string name="whatsapp">Whatsapp</string>
@@ -331,8 +315,8 @@
     <string name="could_not_connect_to_internet">Nemůžu se připojit k internetu!</string>
     <string name="could_not_start_the_download">Nemůžu začit stahovat!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Stažený aktualizační soubor nemůže být smazán!</string>
-
     <string name="downloading">Stahuji…</string>
+
     <string name="baldphone_is_up_to_date">BaldPhone je aktuální.</string>
     <string name="what_s_new">Co je nového</string>
     <string name="download_finished">Stahování dokončeno!</string>
@@ -353,37 +337,40 @@
     <string name="sound">Zvuk</string>
     <string name="mute">Ztlumený</string>
     <string name="vibrate">Vibrace</string>
-
-
     <string name="your_phone_doesnt_have_assistant_installed">Váš telefon nemá naistalovaného asistenta</string>
+
+
     <string name="status_bar_settings">Stavový řádek</string>
     <string name="status_bar_settings_subtext">Kde chcete ukázat stavový řádek?</string>
     <string name="only_home_screen">Pouze domovská obrazovka</string>
     <string name="nowhere">Nikde</string>
-
-
     <string name="everywhere">Všude</string>
 
+
     <string name="share_photo">Sdílet fotku</string>
+
     <string name="choose_language_for_keyboard">Vybrat jazyk</string>
     <string name="hebrew">Hebrew</string>
-
     <string name="english">Angličtina</string>
+
     <string name="search">Hledat</string>
     <string name="next">Další</string>
-
-
     <string name="go">Jít</string>
+
+
     <string name="dialer_sounds">Zvuky vytáčení</string>
     <string name="dialer_sounds_subtext">Zvolte pokud chcete zvuk vytáčení.</string>
     <string name="low_battery_alert">Pozor, nízká baterie</string>
     <string name="low_battery_alert_subtext">Zvolte, pokud chcete, aby stavový řádek byl na domovské obrazovce červený, když je baterie méně než 20% \nPoznámka se nezobrazí, pokud je stavový řádek systému skrytý.</string>
 
-    <!--Please Add The Following Strings:-->
     <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
     <string name="grant_all_permissions">Grant All Permissions</string>
-    <string name="donate">Donate</string>
 
+
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+    <string name="donate">Donate</string>
     <string name="emergency_button">Emergency Button</string>
     <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
     <string name="private_number">Private Number</string>
@@ -407,5 +394,16 @@
     <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
     <string name="edit_home_screen">Edit Home Screen</string>
 
+
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
 
 </resources>
