@@ -15,25 +15,6 @@
   -->
 
 <resources>
-    <!--For Tests:-->
-    <string name="medication_1">Эльтроксин 100</string>
-    <string name="medication_2">Эльтроксин 150</string>
-    <string name="donate">Пожертвовать</string>
-    <string name="emergency_button">Аварийная кнопка</string>
-    <string name="emergency_settings_subtext">Выберите, хотите ли вы, чтобы на главном экране была аварийная кнопка.</string>
-
-
-    <string-array name="names_for_screenshots">
-        <item>The Godfather</item>
-        <item>Abraham Lincoln</item>
-        <item>Paul McCartney</item>
-        <item>Tyrion Lannister</item>
-        <item>The Rock</item>
-        <item>Robert Downey Jr.</item>
-    </string-array>
-
-    <bool name="is_right_to_left">false</bool>
-
     <string name="about">О программе</string>
     <string name="about_subtext">Привет!\nМеня зовут Uriah Shaul Mandel и я являюсь разработчиком этой платформы.\n
         Я провел большую часть своей «взрослой» жизни создавая эту платформу и я выпустил ее бесплатной, для всех.\nВы можете связаться со мной по электронной почте:\nbaldphone.contact@gmail.com
@@ -369,6 +350,13 @@
     <string name="also_available_at">Также доступно по адресу\nbaldphone.contact@gmail.com\nОбратная связь должна быть на английском/иврите!</string>
     <string name="grant_all_permissions">Предоставить Все Разрешения</string>
 
+
+    <!--For Tests:-->
+    <string name="medication_1">Эльтроксин 100</string>
+    <string name="medication_2">Эльтроксин 150</string>
+    <string name="donate">Пожертвовать</string>
+    <string name="emergency_button">Аварийная кнопка</string>
+    <string name="emergency_settings_subtext">Выберите, хотите ли вы, чтобы на главном экране была аварийная кнопка.</string>
     <string name="private_number">Private Number</string>
     <string name="swipe_left_or_right">Swipe left or right</string>
     <string name="press_next_or_back_buton">Press next or back arrow</string>
@@ -390,5 +378,16 @@
     <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
     <string name="edit_home_screen">Edit Home Screen</string>
 
+
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
 
 </resources>
