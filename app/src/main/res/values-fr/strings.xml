@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,22 +15,6 @@
   -->
 
 <resources>
-    <!--For Tests:-->
-    <string name="medication_1">Eltroxin 100</string>
-    <string name="medication_2">Eltroxin 150</string>
-
-    <string-array name="names_for_screenshots">
-        <item>Napoleon Bonaparte</item>
-        <item>Marie Antoinette</item>
-        <item>Louis Vitton</item>
-        <item>Georges Clemenceau</item>
-        <item>King Henry VIII</item>
-        <item>Gustave Eiffel</item>
-    </string-array>
-    <!--For Tests:-->
-
-    <bool name="is_right_to_left">false</bool>
-
     <string name="about">À propos</string>
     <string name="about_subtext">Bonjour\nJe m\'appelle Uriah Shaul Mandel et je suis le développeur de cette plateforme.\nJe vis à
         Tel Aviv.\nBeaucoup de temps et d\'efforts ont été nécessaires pour créer cette plateforme et pour qu\'elle soit gratuite à utiliser pour tout le monde.\nVous pouvez me contacter avec plaisir par e-mail :\nbaldphone.contact@gmail.com
@@ -333,37 +317,43 @@
     <string name="custom_app_subtext">Choisissez l\'application personnalisée pour l\'écran d\'accueil.</string>
     <string name="no_app_was_found">Aucune application n\'a été trouvée !</string>
     <string name="alarm">Alarme</string>
-    <string name="open_source_licenses" translatable="false">Licences Open Source</string>
     <string name="no_new_notifications">Aucune nouvelle notification</string>
     <string name="sound">Sonnerie</string>
     <string name="mute">Muet</string>
     <string name="vibrate">Vibreur</string>
+    <string name="your_phone_doesnt_have_assistant_installed">Vous devez installer l\'application Google Assistant pour utiliser cette fonctionnalité.</string>
+
 
     <string name="status_bar_settings">Barre d\'état</string>
     <string name="status_bar_settings_subtext">Où souhaitez-vous afficher la barre d\'état ?</string>
     <string name="only_home_screen">Écran d\'accueil uniquement</string>
     <string name="nowhere">Jamais</string>
     <string name="everywhere">Tout le temps</string>
-    <string name="your_phone_doesnt_have_assistant_installed">Vous devez installer l\'application Google Assistant pour utiliser cette fonctionnalité.</string>
+
+
     <string name="share_photo">Partager Photo</string>
+
+    <string name="choose_language_for_keyboard">Choisissez la langue</string>
     <string name="hebrew">L\'hébreu</string>
     <string name="english">Anglaise</string>
 
-    <!--Please make sure the following strings are translated propertly:-->
-    <string name="choose_language_for_keyboard">Choisissez la langue</string>
     <string name="search">Chercher</string>
     <string name="next">Prochaine</string>
     <string name="go">Aller à</string>
 
-    <!--Please Add The following Strings-->
+
     <string name="dialer_sounds">Dialer Sounds</string>
     <string name="dialer_sounds_subtext">Choose if you want to have Dialer Sounds.</string>
     <string name="low_battery_alert">Low battery alert</string>
     <string name="low_battery_alert_subtext">Choose if you want the status bar to be red on the home screen when battery is under 20%\nNotice It won\'t be shown if the system status bar is hidden.</string>
 
-    <!--Please Add The Following Strings:-->
     <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
     <string name="grant_all_permissions">Grant All Permissions</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
     <string name="donate">Donate</string>
     <string name="emergency_button">Emergency Button</string>
     <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
@@ -388,5 +378,16 @@
     <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
     <string name="edit_home_screen">Edit Home Screen</string>
 
+
+    <string-array name="names_for_screenshots">
+        <item>Napoleon Bonaparte</item>
+        <item>Marie Antoinette</item>
+        <item>Louis Vitton</item>
+        <item>Georges Clemenceau</item>
+        <item>King Henry VIII</item>
+        <item>Gustave Eiffel</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
 
 </resources>
