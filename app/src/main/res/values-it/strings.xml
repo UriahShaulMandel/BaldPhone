@@ -81,7 +81,6 @@
     <string name="cache_cleared_successfully">La cache è stata pulita correttamente</string>
     <string name="call">Chiama</string>
     <string name="calling">Gestione telefonate</string>
-
     <string name="call_log">Chiamate recenti</string>
     <string name="call_subtext">Autorizzazione necessaria per effettuare telefonate.</string>
     <string name="camera">Fotocamera</string>
