@@ -15,21 +15,6 @@
   -->
 
 <resources>
-    <!--For Tests:-->
-    <string name="medication_1">Eltroxin 100</string>
-    <string name="medication_2">Eltroxin 150</string>
-
-    <string-array name="names_for_screenshots">
-        <item>Bismarck</item>
-        <item>Bach</item>
-        <item>Mozart</item>
-        <item>Einstein</item>
-        <item>Karl Marx</item>
-        <item>Beethoven</item>
-    </string-array>
-
-    <bool name="is_right_to_left">false</bool>
-
     <string name="about">Über</string>
     <string name="about_subtext">Hi!\nIch heiße Uriah Shaul Mandel, und ich bin der Entwickler dieser Platform.\n
         Seit ich erwachsen bin, habe ich die meiste Zeit meines Lebens investiert, um an dieser Platform zu arbeiten. Ich habe sie frei veröffentlicht, so dass sie jeder benutzen kann.\nDu bist mehr als nur eingeladen mir zu schreiben: email:\nbaldphone.contact@gmail.com
@@ -317,6 +302,7 @@
     <string name="could_not_start_the_download">Download konnte nicht gestartet werden!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Die heruntergeladenen Aktualisierungsdatei konnte nicht gelöscht werden!</string>
     <string name="downloading">Herunterladen…</string>
+
     <string name="baldphone_is_up_to_date">BaldPhone ist aktuell.</string>
     <string name="what_s_new">Was es neues gibt</string>
     <string name="download_finished">Download abgeschlossen!</string>
@@ -336,16 +322,21 @@
     <string name="mute">Stummschaltung</string>
     <string name="vibrate">Vibration</string>
     <string name="your_phone_doesnt_have_assistant_installed">Auf deinem Handy ist kein Assistent installiert.</string>
+
+
     <string name="status_bar_settings">Statusleiste</string>
     <string name="status_bar_settings_subtext">Wo soll die Statusleiste angezeigt werden?</string>
     <string name="only_home_screen">Nur auf dem Startbildschirm</string>
     <string name="nowhere">Nirgendwo</string>
     <string name="everywhere">Überall</string>
+
+
     <string name="share_photo">Foto weiterleiten</string>
-    <string name="english">Englisch</string>
-    <string name="hebrew">Hebräisch</string>
 
     <string name="choose_language_for_keyboard">Wähle die Tastatursprache</string>
+    <string name="hebrew">Hebräisch</string>
+    <string name="english">Englisch</string>
+
     <string name="search">Suche</string>
     <string name="next">Nächster</string>
     <string name="go">Gehe zu</string>
@@ -356,10 +347,13 @@
     <string name="low_battery_alert">Akku-Warnung</string>
     <string name="low_battery_alert_subtext">Entscheide, ob die Statusleiste des Startbildschirms rot gefärbt werden soll, wenn die Akkuladung unter 20% sinkt.\nHinweis: Es wird nicht angezeigt, wenn die Statusleiste des Systems versteckt ist.</string>
 
-
-    <!--Please Add The Following Strings:-->
     <string name="also_available_at">Auch verfügbar bei\nbaldphone.contact@gmail.com\nFeedback muss auf English/Israeli sein!</string>
     <string name="grant_all_permissions">Alle Berechtigungen erlauben</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
     <string name="donate">Spenden</string>
     <string name="emergency_button">Notfall-Knopf</string>
     <string name="emergency_settings_subtext">Wählen sie aus, ob sie einen Nofall-Knopf auf ihren Startbildschirm haben wollen.</string>
@@ -383,5 +377,17 @@
     <string name="colorful">Colorful</string>
     <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
     <string name="edit_home_screen">Edit Home Screen</string>
+
+
+    <string-array name="names_for_screenshots">
+        <item>Bismarck</item>
+        <item>Bach</item>
+        <item>Mozart</item>
+        <item>Einstein</item>
+        <item>Karl Marx</item>
+        <item>Beethoven</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
 
 </resources>
