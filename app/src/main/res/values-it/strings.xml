@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,20 +15,6 @@
   -->
 
 <resources>
-    <!--For Tests:-->
-    <string name="medication_1">Eltroxin 100</string>
-    <string name="medication_2">Eltroxin 150</string>
-    <string-array name="names_for_screenshots">
-        <item>Il Padrino</item>
-        <item>Abramo Lincoln</item>
-        <item>Paul McCartney</item>
-        <item>Tyrion Lannister</item>
-        <item>The Rock</item>
-        <item>Robert Downey Jr.</item>
-    </string-array>
-    <bool name="is_right_to_left">false</bool>
-    <!--For Tests:-->
-
     <string name="about">Informazioni</string>
     <string name="about_subtext">Ciao! Il mio nome è Uriah Shaul Mandel e sono lo sviluppatore di questa app.\nHo speso una gran parte della mia vita \"adulta\" per realizzare questo software e l\'ho rilasciato come Open Source affinché tutti lo possano utilizzare liberamente.\nSe vuoi contattarmi vie email, sei il benvenuto:\nbaldphone.contact@gmail.com</string>
     <string name="accessibility_level">Livello di accessibilità</string>
@@ -81,6 +67,7 @@
     <string name="cache_cleared_successfully">La cache è stata pulita correttamente</string>
     <string name="call">Chiama</string>
     <string name="calling">Gestione telefonate</string>
+
     <string name="call_log">Chiamate recenti</string>
     <string name="call_subtext">Autorizzazione necessaria per effettuare telefonate.</string>
     <string name="camera">Fotocamera</string>
@@ -361,6 +348,11 @@
 
     <string name="also_available_at">Puoi anche scrivere a\nbaldphone.contact@gmail.com\nPer cortesia, invia feedback solo in inglese o in ebraico.</string>
     <string name="grant_all_permissions">Autorizzazioni richieste</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
     <string name="donate">Dona</string>
     <string name="emergency_button">Pulsante emergenza</string>
     <string name="emergency_settings_subtext">Scegli se vuoi avere il pulsante emergenza nella schermata Home.</string>
@@ -385,5 +377,16 @@
     <string name="colorful_subtext">Vuoi avere un BaldPhone più colorato?</string>
     <string name="edit_home_screen">Modifica schermata Home</string>
 
+
+    <string-array name="names_for_screenshots">
+        <item>Il Padrino</item>
+        <item>Abramo Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
 
 </resources>
