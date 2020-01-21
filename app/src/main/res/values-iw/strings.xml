@@ -15,23 +15,6 @@
   -->
 
 <resources>
-
-    <!--For Tests:-->
-    <string name="medication_1">אלטרוקסין 100</string>
-    <string name="medication_2">אלטרוקסין 150</string>
-
-    <string-array name="names_for_screenshots">
-        <item>יונה הנביא</item>
-        <item>בנימין זאב הרצל</item>
-        <item>נורית שלם</item>
-        <item>עומר אדם</item>
-        <item>בוב הבנאי</item>
-        <item>יובל קוגוס</item>
-    </string-array>
-    <!--For Tests:-->
-
-
-    <bool name="is_right_to_left">true</bool>
     <string name="about">אודות</string>
     <string name="about_subtext">הפרוייקט נולד מפגישה עם חבר שחלה בפרקינסון. עזרתי לו עם בעיה כלשהי בטלפון, והבחנתי עד
         כמה הוא מתקשה לבצע פעולות, שעד אז חשבתי שהן פשוטות ומובנות מאליהן.\nהייתי בן 15, תלמיד במגמת מחשבים בכפר הירוק,
@@ -68,12 +51,14 @@
     <string name="alarm_volume">עוצמת צלצול שעון</string>
     <string name="alarm_volume_subtext">בחר את עוצמת צלצול השעון.\nהעוצמה גדלה מימין לשמאל.</string>
     <string name="alarms">שעון</string>
+
     <string name="alarms_repeats_every">חוזר כל</string>
     <string name="all_alarms">כל השעונים</string>
     <string name="allow">אַפְשֵׁר</string>
     <string name="already_setted">כבר מוגדר!\nלחץ כאן לשינוי</string>
     <string name="an_error_has_occurred">אירעה שגיאה!</string>
     <string name="and_welcome_to_baldphone">וברוכים הבאים ל-BaldPhone</string>
+
     <string name="apps">יישומים</string>
     <string name="are_you_sure_you_want_to_delete___">האם ברצונך למחוק את %s?</string>
     <string name="assistant">סיוע קולי</string>
@@ -89,6 +74,8 @@
     <string name="brightness_subtext">שינוי בהירות</string>
     <string name="cache_cleared_successfully">מטמון נוקה בהצלחה!</string>
     <string name="call">התקשר</string>
+    <string name="calling">ביצוע שיחות</string>
+
     <string name="call_log">שיחות אחרונות:</string>
     <string name="call_subtext">אנא אשר ל BaldPhone לבצע שיחות טלפון</string>
     <string name="camera">מצלמה</string>
@@ -172,6 +159,8 @@
     <string name="emergency_services">מגן דוד אדום</string>
     <string name="mail">אימייל</string>
     <string name="maps">מפות</string>
+
+
     <string name="medium">בינוני</string>
     <string name="medium_level">רמה מתונה</string>
     <string name="message">הודעה</string>
@@ -179,6 +168,7 @@
     <string name="minute">דקה</string>
     <string name="minutes">דקות</string>
     <string name="missed">לא נענתה</string>
+
     <string name="mobile_phone_number">נייד</string>
     <string name="monday">שני</string>
     <string name="more">עוד</string>
@@ -192,12 +182,17 @@
     <string name="notes_settings">הגדרות פתקים</string>
     <string name="notes_settings_subtext">בחר האם להוסיף מסך רשימות למסך הבית</string>
     <string name="notifications">התראות</string>
+
     <string name="of">מתוך</string>
     <string name="off">כבוי</string>
     <string name="ok">אישור</string>
     <string name="on">מופעל</string>
+
     <string name="only_once">חד פעמי</string>
+
+
     <string name="open">לפתוח</string>
+
     <string name="outgoing">יוצאת</string>
     <string name="page">עמוד</string>
     <string name="permissions_part">הרשאות</string>
@@ -217,6 +212,7 @@
     <string name="received">נענתה</string>
     <string name="recent">שיחות אחרונות</string>
     <string name="regular_level">רמה רגילה</string>
+
     <string name="remove_from_favorite">הסר ממועדפים</string>
     <string name="remove_from_home">הסר ממסך הבית</string>
     <string name="remove_from_sos">הסר מ SOS</string>
@@ -224,6 +220,7 @@
     <string name="removed_all_alarms">כל השעונים הוסרו!</string>
     <string name="repeats_every_day">כל יום</string>
     <string name="right_handed">לימניים</string>
+
     <string name="saturday">שבת</string>
     <string name="save">שמור</string>
     <string name="send">שלח</string>
@@ -267,6 +264,7 @@
     <string name="technical_information">מידע טכני</string>
     <string name="theme_settings">ערכת תצוגה</string>
     <string name="theme_settings_subtext">בחר ערכת עיצוב</string>
+
     <string name="thursday">חמישי</string>
     <string name="time_changer">שינוי זמן תרופות</string>
     <string name="tiny">קטנטן</string>
@@ -282,6 +280,7 @@
     <string name="video">סרט</string>
     <string name="video_tutorials">סרטוני הדרכה</string>
     <string name="videos">סרטים</string>
+
     <string name="voice_mail">תא קולי</string>
     <string name="wednesday">רביעי</string>
     <string name="whatsapp">ווטסאפ</string>
@@ -291,7 +290,6 @@
     <string name="write_contacts">יצירת אנשי קשר</string>
     <string name="write_external_storage">גישה לתמונות, סרטים וקבצים אחרים</string>
     <string name="yes">כן</string>
-
     <string name="yesterday">אתמול</string>
     <string name="nothing">לא נמצא כלום</string>
     <string name="no_contacts_found">איש קשר לא נמצא!</string>
@@ -301,13 +299,10 @@
     <string name="clear_cache_subtext">האם אתה בטוח שאתה רוצה למחוק את כל המטמון?\nיישומים מוצמדים יפסיקו להיות
         מוצמדים
     </string>
-
     <string name="permissions_calm">הי, BaldPhone חייב לקבל את ההרשאות הבאות בשביל לרוץ. חלק נשמעות מפחיד, אבל זוהי הדרך
         היחידה שבה BaldPhone יכול להחליף את ממשק הטלפון. שום מידע לא נלקח ומתן ההרשאות לא גורם לשום נזק. לחץ אישור על
         מנת לאפשר את ההרשאות או לא בשביל לצאת מBaldPhone.
     </string>
-
-    <string name="calling">ביצוע שיחות</string>
     <string name="pending_update">עדכון מחכה</string>
     <string name="download">הורד</string>
     <string name="install_updates">התקן עדכונים</string>
@@ -330,50 +325,48 @@
     <string name="could_not_start_the_download">לא מצליח להתחיל את ההורדה!</string>
     <string name="downloaded_update_file_could_not_be_deleted">קבצי ההורדה הקודמים לא יכולים להימחק!</string>
     <string name="downloading">מוריד…</string>
+
     <string name="baldphone_is_up_to_date">BaldPhone כבר מעודכן!</string>
     <string name="what_s_new">מה חדש</string>
-
-    <string name="what_do_you_want_to_do_with___">מה ברצונך לעשות עם %s?</string>
     <string name="download_finished">הורדה הסתיימה!</string>
     <string name="downloading_updates">מוריד עדכונים…</string>
     <string name="installing_doesn_t_work">התקנה לא עובדת?</string>
     <string name="try_now">נסה עכשיו</string>
-
     <string name="download_progress">תהליך הורדה</string>
+    <string name="what_do_you_want_to_do_with___">מה ברצונך לעשות עם %s?</string>
     <string name="crash_reports">דיווח על קריסות</string>
     <string name="crash_reports_subtext">דיווח על קריסות עוזר לי לתקן אותן במהירות\nnהמידע שנשלח הוא רק המידע ההכרחי על
         מנת לתקן את התקלה, ולא נלקח שום מידע אישי
     </string>
     <string name="custom_app">יישום מועדף</string>
-
     <string name="custom_app_subtext">בחר יישום מועדף להצמדה למסך הבית.</string>
     <string name="no_app_was_found">לא נמצא יישום מתאים!</string>
-
     <string name="alarm">שעון מעורר</string>
     <string name="no_new_notifications">אין התראות חדשות</string>
     <string name="sound">שמע</string>
     <string name="mute">שקט</string>
     <string name="vibrate">רטט</string>
-
-
     <string name="your_phone_doesnt_have_assistant_installed">אין במכשיר זה סיוע קולי</string>
+
+
     <string name="status_bar_settings">שורת מצב</string>
     <string name="status_bar_settings_subtext">איפה להראות את שורת המצב?</string>
     <string name="only_home_screen">רק במסך הבית</string>
     <string name="nowhere">בשום מסך</string>
-
     <string name="everywhere">בכל מסך</string>
 
 
     <string name="share_photo">שיתוף תמונה</string>
+
     <string name="choose_language_for_keyboard">בחר שפת מקלדת</string>
     <string name="hebrew">עברית</string>
-
     <string name="english">אנגלית</string>
+
     <string name="search">חפש</string>
     <string name="next">עבור הלאה</string>
-
     <string name="go">עבור אל</string>
+
+
     <string name="dialer_sounds">צלילי חייגן</string>
     <string name="dialer_sounds_subtext">בחר האם בלחיצה על כפתורי החייגן יישמע צליל</string>
     <string name="low_battery_alert">חיווי סוללה נמוכה</string>
@@ -381,6 +374,11 @@
 
     <string name="also_available_at">ניתן ליצור קשר גם ב\nbaldphone.contact@gmail.com</string>
     <string name="grant_all_permissions">אפשר את כל ההרשאות</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">אלטרוקסין 100</string>
+    <string name="medication_2">אלטרוקסין 150</string>
     <string name="donate">תרומה</string>
     <string name="emergency_button">כפתור חירום</string>
     <string name="emergency_settings_subtext">בחר האם להוסיף כפתור חירום למסך הבית</string>
@@ -405,5 +403,16 @@
     <string name="colorful_subtext">האם ברצונך להפוך את BaldPhone ליותר צבעוני?</string>
     <string name="edit_home_screen">עריכת מסך הבית</string>
 
-</resources>
 
+    <string-array name="names_for_screenshots">
+        <item>יונה הנביא</item>
+        <item>בנימין זאב הרצל</item>
+        <item>נורית שלם</item>
+        <item>עומר אדם</item>
+        <item>בוב הבנאי</item>
+        <item>יובל קוגוס</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
+</resources>
