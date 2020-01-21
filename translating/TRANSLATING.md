@@ -1,6 +1,11 @@
 # Translating BaldPhone to other languages
 ## [Auto generated multilingual screenshots](https://github.com/UriahShaulMandel/BaldPhoneCompanion)
 ### Sometimes more strings are added, in order to be notified, please join one of the following: [![Discord](https://img.shields.io/discord/633644055779213362?label=Chat%20%28Discord%29)](https://discord.gg/K4XTNWN) [![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/baldphone?color=orange)](https://reddit.com/r/baldphone) [![GitHub watchers](https://img.shields.io/github/watchers/UriahShaulMandel/BaldPhone)](https://github.com/UriahShaulMandel/BaldPhone/watchers)
+ If you encounter any problem when translating, please contact me via baldphone.contact@gmail.com
+
+# [New, Better Translations System - Transifex](https://www.transifex.com/baldphone/baldphone/)
+But if you have any problems with it, the old method will work just as fine
+# Old Translations System - Manual
 ## Fixing\changing existing translations
  1. Go to your desired language file: 
     - [Brazilian Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt-rBR/strings.xml) translated by [Kellyson Antunes](https://github.com/kellysonantunes)
@@ -55,5 +60,4 @@
  6. The new language together with credit will be added in the next release
  7. When the next release is published, please make sure the translations match
  
- If you encounter any problem when translating, please contact me via baldphone.contact@gmail.com
  
