@@ -15,22 +15,6 @@
   -->
 
 <resources>
-    <!--For Tests:-->
-    <string name="medication_1">Eltroxin 100</string>
-    <string name="medication_2">Eltroxin 150</string>
-
-
-    <string-array name="names_for_screenshots">
-        <item>The Godfather</item>
-        <item>Abraham Lincoln</item>
-        <item>Paul McCartney</item>
-        <item>Tyrion Lannister</item>
-        <item>The Rock</item>
-        <item>Robert Downey Jr.</item>
-    </string-array>
-    <!--For Tests:-->
-
-    <bool name="is_right_to_left">false</bool>
     <string name="about">Σχετικά</string>
     <string name="about_subtext">Γειά σας!\nΤο ονομα μου ειναι Uriah Shaul Mandel, καί είμαι ο προγραμματιστής αυτής της πλατφόρμας\n
         Έχω προσφέρει κάποια χρόνο απο την \"ενήλικη\" ζωη μου αναπτύσσοντας αυτη την πλατφόρμα, και την εδωσα σε κυκλοφορία δωρεαν, για όλους
@@ -63,15 +47,15 @@
     <string name="alarm_name">Όνομα Ξυπνητηριού</string>
     <string name="alarm_volume">Ένταση Ξυπνητηριού</string>
     <string name="alarm_volume_subtext">Επιλέξτε ενταση για τα ξυπνητήρια.\nΗ ενταση αυξάνεται απο αριστετα προς δεξιά.</string>
-
     <string name="alarms">Ξυπνητήρια</string>
+
     <string name="alarms_repeats_every">Επανάληψη ξυπνητηριού κάθε</string>
     <string name="all_alarms">Όλα τα Ξυπνητήρια</string>
     <string name="allow">Επιτρέψτε</string>
     <string name="already_setted">Έχει ήδη ρυθμιστεί!\nΠατήστε εδώ για να το αλλάξετε</string>
     <string name="an_error_has_occurred">Εντοπίστηκε σφάλμα!</string>
-
     <string name="and_welcome_to_baldphone">και καλός ήρθατε στο Baldphone</string>
+
     <string name="apps">Εφαρμογές</string>
     <string name="are_you_sure_you_want_to_delete___">Ειστε σιγουροι οτι θελετε να διαγράψετε  %s?</string>
     <string name="assistant">Βοηθός Assistant</string>
@@ -85,8 +69,8 @@
     <string name="brightness_subtext">Αλλαγή Φωτεινότητας.</string>
     <string name="cache_cleared_successfully">Η μνήμη Cache διαγράφτηκε!</string>
     <string name="call">Κλήση</string>
-
     <string name="calling">Κλήση σε εξέλιξη</string>
+
     <string name="call_log">Πρόσφατες Κλήσεις</string>
     <string name="call_subtext">Αυτή η άδεια απαιτήται για να λειτουργήσει η κλήση επαφών.</string>
     <string name="camera">Φωτογραφική Μηχανή</string>
@@ -169,17 +153,17 @@
     <string name="location">Τοποθεσία</string>
     <string name="emergency_services">Υπηρεσίες Έκτακτης Ανάγκης</string>
     <string name="mail">Αλληλογραφία</string>
-
-
     <string name="maps">Χάρτες</string>
+
+
     <string name="medium">Μέτρια</string>
     <string name="medium_level">Μέτριο επίπεδο mediumle level </string>
     <string name="message">Μύνημα</string>
     <string name="messages">Μυνήματα</string>
     <string name="minute">Λεπτό</string>
     <string name="minutes">Λεπτά</string>
-
     <string name="missed">Αναπάντητες</string>
+
     <string name="mobile_phone_number">Αριθμός Κινητού Τηλεφώνου</string>
     <string name="monday">Δευτέρα</string>
     <string name="more">περισσότερα</string>
@@ -192,18 +176,18 @@
     <string name="notes">Σημειώσεις</string>
     <string name="notes_settings">Ρυθμίσεις Σημειώσεων</string>
     <string name="notes_settings_subtext">Επιλέξτε ποια σημείωση θελετε να έχετε στην αρχική σελίδα.</string>
-
     <string name="notifications">Ειδοποιήσεις</string>
+
     <string name="of">of</string>
     <string name="off">Off</string>
     <string name="ok">OK</string>
-
     <string name="on">On</string>
-
 
     <string name="only_once">Μόνο μία φορά</string>
 
+
     <string name="open">Άνοιγμα</string>
+
     <string name="outgoing">Εξωτερική</string>
     <string name="page">Σελίδα</string>
     <string name="permissions_part">Άδειες</string>
@@ -221,16 +205,16 @@
     <string name="read_contacts">Διαβαστε τις επαφές</string>
     <string name="received">Ληφθέντα</string>
     <string name="recent">Πρόσφατα</string>
-
     <string name="regular_level">Μεσαίο επίπεδο Regular level</string>
+
     <string name="remove_from_favorite">Αφαίρεση απο τα Αγαπημένα</string>
     <string name="remove_from_home">Αφαίρεση απο την Αρχική Σελίδα</string>
     <string name="remove_from_sos">Αφαίρεση απο το SOS</string>
     <string name="remove_shortcut">Αφαιρεση Συντόμευσης</string>
     <string name="removed_all_alarms">Αφαιρεθηκαν ολα τα Ξυπνητήρια!</string>
     <string name="repeats_every_day">Καθε μέρα</string>
-
     <string name="right_handed">Δεξιόχειρες</string>
+
     <string name="saturday">Σάββατο</string>
     <string name="save">αποθήκευση</string>
     <string name="send">Αποστολή</string>
@@ -271,8 +255,8 @@
     <string name="sunday">Κυριακή</string>
     <string name="technical_information">Τεχνικές Πληροφορίες</string>
     <string name="theme_settings">Θέμα</string>
-
     <string name="theme_settings_subtext">Επιλέξτε ενα Θέμα</string>
+
     <string name="thursday">Τρίτη</string>
     <string name="time_changer">Αλλαγη Ώρας Χαπιού</string>
     <string name="tiny">Μικροσκοπικό</string>
@@ -287,8 +271,8 @@
     <string name="up">Επάνω</string>
     <string name="video">Βίντεο</string>
     <string name="video_tutorials">Βίντεο Tutorial</string>
-
     <string name="videos">Βίντεο</string>
+
     <string name="voice_mail">Τηλεφωνητής</string>
     <string name="wednesday">Τετάρτη</string>
     <string name="whatsapp">Whatsapp</string>
@@ -331,8 +315,8 @@
     <string name="could_not_connect_to_internet">Δεν μπόρεσε νά γίνει σύνδεση στο διαδίκτυο!</string>
     <string name="could_not_start_the_download">Δεν μπορεί να ξεκινήσει η λήψη!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Το αρχείο ενημέρωσης δεν μπορεί να διαγραφεί</string>
-
     <string name="downloading">Γίνεται Λήψη…</string>
+
     <string name="baldphone_is_up_to_date">Το BaldPhone είναι ενημερωμένο.</string>
     <string name="what_s_new">Νεα χαρακτηριστικά</string>
     <string name="download_finished">Η λήψη ολοκληρώθηκε</string>
@@ -353,35 +337,39 @@
     <string name="sound">Ήχος</string>
     <string name="mute">Αθόρυβο</string>
     <string name="vibrate">Δόνηση</string>
-
-
     <string name="your_phone_doesnt_have_assistant_installed">Το κινητο σας δεν εχει εγκατεστημένο assistant.</string>
+
+
     <string name="status_bar_settings">Γραμμή Κατάστασης</string>
     <string name="status_bar_settings_subtext">Που να φαίνεται η γραμμή κατάστασης;</string>
     <string name="only_home_screen">Μόνο στην Αρχική Σελίδα</string>
     <string name="nowhere">Πουθενά</string>
-
-
     <string name="everywhere">Παντού</string>
 
+
     <string name="share_photo">Κοινοποίηση Φωτογραφίας</string>
+
     <string name="choose_language_for_keyboard">Επιλέξτε Γλώσσα Πληκτρολογίου</string>
     <string name="hebrew">Hebrew</string>
-
     <string name="english">English</string>
+
     <string name="search">Αναζήτηση</string>
     <string name="next">Επόμενο</string>
-
-
     <string name="go">Go</string>
+
+
     <string name="dialer_sounds">Ηχοι Πληκτρολογίου Κλήσης</string>
     <string name="dialer_sounds_subtext">Επιλέξτε αν θέλετε ήχους στο πληκτρολόγιο κλήσης</string>
     <string name="low_battery_alert">Ειδοποίηση Χαμηλής Μπαταρίας</string>
     <string name="low_battery_alert_subtext">Επιλέξτε αν θελετε η γραμμής κατάστασης να είναι κόκκινη στην αρχική οθόνη οταν η μπαταρία είναι κάτω τού 20%\nΣημείωση: Δεν θα φαίνεται αν η γραμμή κατάστασης είναι κρυμμένη .</string>
 
-    <!--Please Add The Following Strings:-->
     <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
     <string name="grant_all_permissions">Grant All Permissions</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
     <string name="donate">Donate</string>
     <string name="emergency_button">Emergency Button</string>
     <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
@@ -406,5 +394,16 @@
     <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
     <string name="edit_home_screen">Edit Home Screen</string>
 
+
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
 
 </resources>
