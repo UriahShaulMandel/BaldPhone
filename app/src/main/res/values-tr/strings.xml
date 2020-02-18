@@ -177,29 +177,29 @@
     <string name="ok">OK</string>
     <string name="on">On</string>
 
-    <string name="only_once">Only once</string>
+    <string name="only_once">Sadece bir kere</string>
 
 
-    <string name="open">Open</string>
+    <string name="open">Aç</string>
 
-    <string name="outgoing">Outgoing</string>
-    <string name="page">Page</string>
-    <string name="permissions_part">Permissions</string>
-    <string name="personalization_settings">Personalization</string>
-    <string name="phone">Phone</string>
-    <string name="photo">Photo</string>
-    <string name="photos">Photos</string>
-    <string name="pill_added">Pill added!</string>
-    <string name="pill_name">Pill Name</string>
-    <string name="pills">Pills</string>
-    <string name="press_longer">Press Longer!</string>
-    <string name="timer">Timer</string>
-    <string name="read_call_log">Read Call History</string>
-    <string name="read_call_log_subtext">This permission is required in order to view the call history.</string>
-    <string name="read_contacts">Read contacts</string>
-    <string name="received">Received</string>
-    <string name="recent">Recent</string>
-    <string name="regular_level">Regular level</string>
+    <string name="outgoing">dışa dönük</string>
+    <string name="page">Sayfa</string>
+    <string name="permissions_part">izin</string>
+    <string name="personalization_settings">Personalization ayarları</string>
+    <string name="phone">Telefon</string>
+    <string name="photo">Resim</string>
+    <string name="photos">Resimler</string>
+    <string name="pill_added">Hap eklemdi!</string>
+    <string name="pill_name">Hap ismi</string>
+    <string name="pills">Haplar</string>
+    <string name="press_longer">Daha uzun basınız!</string>
+    <string name="timer">Kronometre</string>
+    <string name="read_call_log">Arama geçmişi</string>
+    <string name="read_call_log_subtext">Bu izin telefon aramalarınızı görmek için gereklidir.</string>
+    <string name="read_contacts">Kişiler</string>
+    <string name="received">Alınan</string>
+    <string name="recent">Geçmiş</string>
+    <string name="regular_level">Düzenli seviye</string>
 
     <string name="remove_from_favorite">Remove from Favorite</string>
     <string name="remove_from_home">Remove from Home</string>
