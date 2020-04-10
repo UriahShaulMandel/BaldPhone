@@ -26,8 +26,8 @@
     <string name="accidental_touches_settings_subtext">Ochrana blokuje telefon před dotykovým vstupem, pokud je telefon
         zakrytý\nPokud máte problémy můžete vypnout
     </string>
-    <string name="accidental_touches_subtext">Nechtěný dotyk byl detekován\nZmáčkněte ok pro pokračování používání telefonu\n
-        Pokud se tato zpráva neustále zobrazuje, můžete ji vypnout v nastavení přístupnosti
+    <string name="accidental_touches_subtext">Nechtěný dotyk byl detekován\nStiskněte OK pro pokračování v používání telefonu\n
+        Zobrazuje-li se tato zpráva neustále, můžete ji vypnout v nastavení přístupnosti
     </string>
     <string name="acknowledgments">Poděkování</string>
     <string name="adaptive">Adaptivní</string>
