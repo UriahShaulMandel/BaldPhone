@@ -16,9 +16,9 @@
 
 <resources>
     <string name="about">O aplikaci</string>
-    <string name="about_subtext">Ahoj!\nMoje jméno je Uriah Shaul Mandel a jsem vývojář této platformy.\n
-        Většinu svého \"dospělého\" života výrobou této platformy a rozhodl jsem se ji vydat zadarmo a to pro
-        všechny.\nMůžete mě kontaktovat přes email:\nbaldphone.contact@gmail.com
+    <string name="about_subtext">Ahoj!\nJmenuji se Uriah Shaul Mandel a jsem vývojář této platformy.\n
+        Většinu svého \"dospělého\" života jsem strávit tvorbou této platformy a rozhodl jsem se ji vydat zadarmo, a to pro
+        všechny.\nJste více než vítáni kontaktovat mě na email:\nbaldphone.contact@gmail.com
     </string>
     <string name="accessibility_level">Úroveň přistupnosti</string>
     <string name="accessibility_settings">Přístupnost</string>
