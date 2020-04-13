@@ -85,7 +85,7 @@ dependencies {
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
     // Only for tests
     androidTestImplementation 'androidx.test:rules:1.2.0'
-    androidTestImplementation 'com.tomash:androidcontacts:1.12.4'
+    androidTestImplementation 'com.tomash:androidcontacts:1.12.5'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     testImplementation 'junit:junit:4.13'
