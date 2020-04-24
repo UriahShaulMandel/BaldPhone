@@ -51,6 +51,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.bald.uriah.baldphone.BuildConfig;
@@ -358,15 +359,27 @@ public class S {
                 sharedPreferences.edit().putString(BPrefs.UUID_KEY, UUID.randomUUID().toString()).apply();
             }
 
-            Volley.newRequestQueue(context).add(
+            final RequestQueue requestQueue = Volley.newRequestQueue(context);
+
+            requestQueue.add(
                     new StringRequest(
                             Request.Method.GET,
-                            String.format(Locale.US, "http://baldphone.c1.biz/insert_new_install.php?uuid=%s&vcode=%d", sharedPreferences.getString(BPrefs.UUID_KEY, null), BuildConfig.VERSION_CODE),
+                            "https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/logging%20mechanism/loga.txt",
                             response -> {
+                                requestQueue.add(
+                                        new StringRequest(
+                                                Request.Method.GET,
+                                                String.format(Locale.US, "%s?uuid=%s&vcode=%d&locale=%s&flavor=%s", response, sharedPreferences.getString(BPrefs.UUID_KEY, null), BuildConfig.VERSION_CODE, String.valueOf(Locale.getDefault()), BuildConfig.FLAVOR),
+                                                response2 -> {
+                                                },
+                                                error2 -> {
+                                                }
+                                        ).setTag("baldphone_server"));
                             },
                             error -> {
                             }
-                    ).setTag("baldphone_server"));
+                    ).setTag("baldphone_get_server_info"));
+
         }
     }
 
