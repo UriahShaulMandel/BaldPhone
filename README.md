@@ -12,7 +12,7 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 [Companion Repository (Auto generated screenshots, test apks and db backups)](https://github.com/UriahShaulMandel/BaldPhoneCompanion)
 
 
-[Website](https://sites.google.com/view/baldphone)
+[Website](https://baldphone.com)
 
 [BaldPhone's Subreddit](https://www.reddit.com/r/BaldPhone/)
 
