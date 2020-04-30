@@ -18,6 +18,8 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 
 [Installing Manual (Hebrew)](https://github.com/UriahShaulMandel/BaldPhone/raw/master/manual/Manual%20hebrew.pdf)
 
+[Translating BaldPhone to other languages](https://github.com/UriahShaulMandel/BaldPhone/blob/master/translating/TRANSLATING.md)
+
 Feel free to contact me at baldphone.contact@gmail.com
 
 
