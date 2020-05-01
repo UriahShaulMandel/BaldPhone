@@ -89,13 +89,13 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     testImplementation 'junit:junit:4.13'
 
-
-}
-
-gradle.startParameter.getTaskNames().each { task ->
-    if(task.contains("Debug")) {
-        implementation 'androidx.appcompat:appcompat:1.2.0-beta01' // Updating this library may crash the automated screenshots!
-    } else{
-        implementation 'androidx.appcompat:appcompat:1.1.0' // Updating this library may crash the automated screenshots!
+    gradle.startParameter.getTaskNames().each { task ->
+        if(task.contains("Debug")) {
+            implementation 'androidx.appcompat:appcompat:1.2.0-beta01' // Updating this library may crash the automated screenshots!
+        } else{
+            implementation 'androidx.appcompat:appcompat:1.1.0' // Updating this library may crash the automated screenshots!
+        }
     }
 }
+
+
