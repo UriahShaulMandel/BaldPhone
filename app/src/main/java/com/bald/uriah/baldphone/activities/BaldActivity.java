@@ -19,6 +19,7 @@ package com.bald.uriah.baldphone.activities;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -96,6 +97,19 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     private boolean useAccidentalGuard = true;
     private Handler handler;
     private Runnable touchesDecreaser = () -> touches = (touches -= 1) < 0 ? 0 : touches;
+
+    @Override
+    public void
+    applyOverrideConfiguration(Configuration cfgOverride) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP &&
+                Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+            // add this to fix androidx.appcompat:appcompat 1.1.0 bug
+            // which happens on Android 6.x ~ 7.x
+            getResources();
+        }
+
+        super.applyOverrideConfiguration(cfgOverride);
+    }
 
     /**
      * @return true if all permissions are granted.
