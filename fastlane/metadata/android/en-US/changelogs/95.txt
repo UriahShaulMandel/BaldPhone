@@ -1,0 +1,4 @@
+* Apps Bug fixed
+* Added many new languages!
+* Small UI changes all over BaldPhone
+* Added option to customize the HomeScreen

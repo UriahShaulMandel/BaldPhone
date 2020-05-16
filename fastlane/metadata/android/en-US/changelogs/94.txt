@@ -1,0 +1,4 @@
+# New Major Release:
+* Added many new languages!
+* Small UI changes all over BaldPhone
+* Added option to customize the HomeScreen
