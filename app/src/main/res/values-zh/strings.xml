@@ -15,11 +15,10 @@
   -->
 
 <resources>
-    <string name="about">About</string>
-    <string name="about_subtext">Hi!\nMy name is Uriah Shaul Mandel, and I\'m the developer of this platform.\n
-        I\'ve spent most of my \"adult\" life making this platform, and I\'ve released it for free, for all to
-        use.\nYou are more than welcome to contact me by email:\nbaldphone.contact@gmail.com
-    </string>
+    <string name="about">关于</string>
+    <string name="about_subtext">你好!\n我的名字是乌利亚·绍尔·曼德尔，我是这个平台的开发者。\n
+             我花了我“成年”生活的大部分时间来创建这个平台，并且我已经免费发布了它，所有人
+             都可使用。\n欢迎您通过电子邮件:\nbaldphone.contact@gmail.com与我联系</string>
     <string name="accessibility_level">輔助功能程度</string>
     <string name="accessibility_settings">輔助功能設定</string>
     <string name="accidental_touches">防誤觸功能</string>
@@ -88,7 +87,7 @@
     <string name="clear_cache">清理暫存</string>
     <string name="clear_data">清除所有資料</string>
     <string name="clear_data_subtext">你肯定要移除所有資料?</string>
-    <string name="clear_data_subtext2">百分百肯定要刪除所有資料?</string>
+    <string name="clear_data_subtext2">100%确定?</string>
     <string name="clear_data_subtext3">肯定嗎?\n按確定之後真的會移除所有資料!</string>
     <string name="clock">時鐘</string>
     <string name="coming_soon">即將推出!</string>
@@ -266,7 +265,7 @@
     <string name="voice_mail">電話留言</string>
     <string name="wednesday">星期三</string>
     <string name="whatsapp">Whatsapp</string>
-    <string name="wifi">Wifi</string>
+    <string name="wifi">无线网络</string>
     <string name="will_repeat_only_once">只會響鬧一次</string>
     <string name="write">新增筆記</string>
     <string name="write_contacts">編輯聯絡人</string>
@@ -359,26 +358,26 @@
     <string name="donate">贊助</string>
     <string name="emergency_button">緊急按鈕</string>
     <string name="emergency_settings_subtext">你可以選擇添加緊急按鈕到桌面。</string>
-    <string name="private_number">Private Number</string>
-    <string name="swipe_left_or_right">Swipe left or right</string>
-    <string name="press_next_or_back_buton">Press next or back arrow</string>
-    <string name="click_delay">Click Delay</string>
-    <string name="no_delay">No Delay</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="arrows">Arrows</string>
-    <string name="swipe">Touch</string>
-    <string name="_long">Long</string>
-    <string name="_short">Short</string>
-    <string name="do_you_want_to_save_your_changes">Do you want to save your changes?</string>
-    <string name="discard">Discard</string>
-    <string name="no_recent_calls">No Recent Calls</string>
-    <string name="apps_sort_method">Apps Sort Method</string>
-    <string name="apps_sort_method_subtext">Choose whether you want to sort the apps in one grid or to have them divided into different groups via letters</string>
-    <string name="groups">Groups</string>
-    <string name="one_grid">One Grid</string>
-    <string name="colorful">Colorful</string>
-    <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
-    <string name="edit_home_screen">Edit Home Screen</string>
+    <string name="private_number">私人号码</string>
+    <string name="swipe_left_or_right">左滑或右滑</string>
+    <string name="press_next_or_back_buton">按下next或back箭头</string>
+    <string name="click_delay">点击延迟</string>
+    <string name="no_delay">无延迟</string>
+    <string name="scrolling">滚动</string>
+    <string name="arrows">箭头</string>
+    <string name="swipe">滑动</string>
+    <string name="_long">长</string>
+    <string name="_short">短</string>
+    <string name="do_you_want_to_save_your_changes">你想要保存你的更改吗 ？</string>
+    <string name="discard">放弃</string>
+    <string name="no_recent_calls">无最近通话</string>
+    <string name="apps_sort_method">应用排序方法</string>
+    <string name="apps_sort_method_subtext">选择是将应用程序排在一个网格中，还是按照字母顺序将它们分成不同的组</string>
+    <string name="groups">组别</string>
+    <string name="one_grid">一个网格</string>
+    <string name="colorful">多彩的</string>
+    <string name="colorful_subtext">你想让BaldPhone更有色彩吗?</string>
+    <string name="edit_home_screen">编辑主屏幕</string>
 
 
     <string-array name="names_for_screenshots">
