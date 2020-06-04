@@ -224,7 +224,7 @@ public class SingleContactActivity extends BaldActivity {
                     pair.first,
                     "Custom"));
             tv_value.setText(pair.second);
-            call.setOnClickListener(v -> DialerActivity.call(pair.second, this));
+            call.setOnClickListener(v -> DialerActivity.call(pair.second, this, false));
             message.setOnClickListener(v -> S.sendMessage(pair.second, this));
 
             ll.addView(layout);

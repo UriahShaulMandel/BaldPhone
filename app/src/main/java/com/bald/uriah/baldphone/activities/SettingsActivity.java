@@ -284,6 +284,20 @@ public class SettingsActivity extends BaldActivity {
                         .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.DIALER_SOUNDS_KEY, BPrefs.DIALER_SOUNDS_DEFAULT_VALUE) ? 0 : 1),
                 R.drawable.phone_on_button
         ));
+        personalizationCategory.add(new BDBSettingsItem(R.string.dual_sim,
+                BDB.from(this)
+                        .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
+                        .setTitle(R.string.dual_sim)
+                        .setSubText(R.string.dual_sim_subtext)
+                        .setOptions(R.string.show_options, R.string.use_default)
+                        .setPositiveButtonListener(params -> {
+                            editor.putBoolean(BPrefs.DUAL_SIM_KEY, (Integer) params[0] == 0).apply();
+                            this.recreate();
+                            return true;
+                        })
+                        .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.DUAL_SIM_KEY, BPrefs.DUAL_SIM_DEFAULT_VALUE) ? 0 : 1),
+                R.drawable.sim_on_button
+        ));
         personalizationCategory.add(
                 new BDBSettingsItem(R.string.apps_sort_method,
                         BDB.from(this)

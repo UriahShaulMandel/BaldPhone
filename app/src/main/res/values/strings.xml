@@ -392,6 +392,14 @@
     <string name="colorful">Colorful</string>
     <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
     <string name="edit_home_screen">Edit Home Screen</string>
+    <string name="dual_sim">Dual Sim</string>
+    <string name="dual_sim_subtext">Choose how you want to manage dual sim\nNote: If you choose Show Options, you\'ll need to allow another permission</string>
+    <string name="use_default">Use Default</string>
+    <string name="show_options">Show Options</string>
+    <string name="read_phone_state">Read Phone State</string>
+    <string name="read_phone_state_subtext">This permission is required in order to call from the second sim</string>
+    <string name="choose_sim">Choose Sim</string>
+    <string name="choose_sim_subtext">Choose the sim you want to make the call from</string>
 
 
     <string-array name="names_for_screenshots">
