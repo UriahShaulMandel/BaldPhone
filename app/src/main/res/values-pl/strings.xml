@@ -15,23 +15,6 @@
   -->
 
 <resources>
-    <!--For Tests:-->
-    <string name="medication_1">Eltroxin 100</string>
-    <string name="medication_2">Eltroxin 150</string>
-
-
-    <string-array name="names_for_screenshots">
-        <item>The Godfather</item>
-        <item>Abraham Lincoln</item>
-        <item>Paul McCartney</item>
-        <item>Tyrion Lannister</item>
-        <item>The Rock</item>
-        <item>Robert Downey Jr.</item>
-    </string-array>
-    <!--For Tests:-->
-
-    <bool name="is_right_to_left">false</bool>
-
     <string name="about">O programie</string>
     <string name="about_subtext">Cześć !\nMam na imie Uriah Shaul Mandel, jestem developerem tej platformy.\n
         Spędziłem większość swojego \"dorosłego\" życia tworząc tą platformę, i wypuściłem ją za darmo, dla każdego do użytku.
@@ -66,7 +49,7 @@
     <string name="alarm_volume_subtext">Wybierz głośność dla alarmu.\nIm dalej w prawo tym głośniej.</string>
     <string name="alarms">Alarmy</string>
 
-    <string name="alarms_repeats_every">Alarm powtarza się co:</string> <!-- This line also exists as "Alarm powtarza się każdego". This depends on what is repeating in Polish. You will need to implement that to replace this string. -->
+    <string name="alarms_repeats_every">Alarm powtarza się co:</string>
     <string name="all_alarms">Wszystkie alarmy</string>
     <string name="allow">Zezwól</string>
     <string name="already_setted">Już ustawiony!\nKliknij tutaj any się przełączyć</string>
@@ -80,7 +63,7 @@
     <string name="auto_brightness">Jasność\nAutomatyczna</string>
     <string name="backspace">Backspace</string>
     <string name="baldphone_bla_allow_permission">Proszę o następujące dozwolenia:</string>
-    <string name="blocked">Zablokowane</string> <!-- This line also depends on context: "Zablokowany", "Zablokowana" -->
+    <string name="blocked">Zablokowane</string>
     <string name="bluetooth">Bluetooth</string>
     <string name="brightness">Jasność</string>
     <string name="brightness_subtext">Zmień jasność</string>
@@ -123,7 +106,7 @@
     <string name="delete">Usuń</string>
     <string name="delete___">Usunąć %s?</string>
     <string name="delete_all_alarms">Usuń wszystkie alarmy</string>
-    <string name="dialer">Dialer</string> <!-- can also be "Wybierz numer" -->
+    <string name="dialer">Dialer</string>
     <string name="display_settings">Wyświetlacz</string>
     <string name="done">Zrobione</string>
     <string name="down">W dół</string>
@@ -157,7 +140,7 @@
     <string name="language_settings">Ustawienia języka</string>
     <string name="large">Duży</string>
     <string name="left_handed">Leworęczny</string>
-    <string name="light">Jasny</string> <!-- Translated as "bright" -->
+    <string name="light">Jasny</string>
     <string name="location">Lokalizacja</string>
     <string name="emergency_services">Służby ratownicze</string>
     <string name="mail">E-Mail</string>
@@ -186,7 +169,7 @@
     <string name="notes_settings_subtext">Czy chcesz mieć stronę notatek na ekranie głównym ?</string>
     <string name="notifications">Powiadomienia</string>
 
-    <string name="of"></string> <!-- Doesnt really exist in Polish or HIGHLY dependent on context -->
+    <string name="of">z</string>
     <string name="off">Wyłączone</string>
     <string name="ok">OK</string>
     <string name="on">Włączone</string>
@@ -267,9 +250,7 @@
     <string name="to___hours_and___minutes_from_now">na %d godzin i %d minut od teraz</string>
     <string name="to___minuets_from_now">na %d minut od teraz</string>
     <string name="today">Dziś</string>
-
-    <string name="took"></string> <!-- NEED CONTEXT -->
-
+    <string name="took">Wzięta</string>
     <string name="tuesday">Wtorek</string>
     <string name="uninstall">Odinstaluj</string>
     <string name="uninstall_subtext">Napewno chcesz odinstalować %s?\n%s\?</string>
@@ -282,7 +263,7 @@
     <string name="wednesday">Środa</string>
     <string name="whatsapp">Whatsapp</string>
     <string name="wifi">Wi-fi</string>
-    <string name="will_repeat_only_once">będzie powtórzony tylko raz!</string> <!-- NEED CONTEXT -->
+    <string name="will_repeat_only_once">będzie powtórzony tylko raz!</string>
     <string name="write">Pisz</string>
     <string name="write_contacts">Zapisz kontakty</string>
     <string name="write_external_storage">Zapisz pamięć zawnętrzną</string>
@@ -308,7 +289,7 @@
     <string name="new_version">Nowa wersja:\n</string>
     <string name="new_updates_are_ready_to_be_downloaded">Nowe aktualizacje są gotowe do pobrania.</string>
     <string name="install">Zainstaluj</string>
-    <string name="data_warning">Ostrzeżenie o danych</string> <!-- NEED CONTEXT -->
+    <string name="data_warning">Ostrzeżenie o danych</string>
     <string name="data_warning_subtext">Brak połączenia z WI-FI.\nRozmiar aktualizacji to około 3MB,
         jeśli jesteś za granicą kraju może cię to kosztować.\nCzy chcesz kontynuować pobieranie?
     </string>
@@ -367,9 +348,14 @@
 
     <string name="also_available_at">Dostępny także pod adresem\nbaldphone.contact@gmail.com\nWiadomość musi być po Anglelsku lub Hebraksju!</string>
     <string name="grant_all_permissions">Przyznaj wszystkie dozwolenia</string>
-    <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
-    <string name="emergency_button">Emergency Button</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
     <string name="donate">Donate</string>
+    <string name="emergency_button">Emergency Button</string>
+    <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
     <string name="private_number">Private Number</string>
     <string name="swipe_left_or_right">Swipe left or right</string>
     <string name="press_next_or_back_buton">Press next or back arrow</string>
@@ -391,5 +377,16 @@
     <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
     <string name="edit_home_screen">Edit Home Screen</string>
 
+
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
 
 </resources>
