@@ -17,6 +17,7 @@
 package com.bald.uriah.baldphone.activities;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -25,7 +26,12 @@ import android.database.Cursor;
 import android.media.ToneGenerator;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.provider.ContactsContract;
+import android.telecom.PhoneAccountHandle;
+import android.telecom.TelecomManager;
+import android.telephony.SubscriptionInfo;
+import android.telephony.SubscriptionManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -41,9 +47,13 @@ import com.bald.uriah.baldphone.activities.contacts.AddContactActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 import com.bald.uriah.baldphone.databases.contacts.MiniContact;
+import com.bald.uriah.baldphone.utils.BDB;
+import com.bald.uriah.baldphone.utils.BDialog;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
+
+import java.util.List;
 
 import static android.media.AudioManager.STREAM_SYSTEM;
 
@@ -67,15 +77,56 @@ public class DialerActivity extends BaldActivity {
     private StringBuilder number = new StringBuilder();
     private boolean playDialSounds;
 
-    public static void call(final CharSequence number, final Context context) {
-        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
-            try {
+    @SuppressLint("NewApi")
+    public static void call(final CharSequence number, final Context context, SubscriptionInfo subscriptionInfo) {
+        try {
+            if (subscriptionInfo == null) {
                 context.startActivity(new Intent(Intent.ACTION_CALL).setData(Uri.parse(("tel:" + number).replace("#", Uri.encode("#")))));
-            } catch (SecurityException e) {
-                Log.e(TAG, e.getMessage());
-                e.printStackTrace();
-                throw new RuntimeException(e);
+            } else {
+                final TelecomManager telecomManager = (TelecomManager) context.getSystemService(Context.TELECOM_SERVICE);
+                final List<PhoneAccountHandle> list = telecomManager.getCallCapablePhoneAccounts();
+                for (final PhoneAccountHandle phoneAccountHandle : list) {
+                    if (phoneAccountHandle.getId().contains(subscriptionInfo.getIccId())) {
+                        context.startActivity(new Intent(Intent.ACTION_CALL).setData(Uri.parse(("tel:" + number).replace("#", Uri.encode("#"))))
+                                .putExtra("android.telecom.extra.PHONE_ACCOUNT_HANDLE", (Parcelable) phoneAccountHandle));
+                        return;
+                    }
+                }
+                BaldToast.error(context);
+
             }
+        } catch (SecurityException e) {
+            Log.e(TAG, e.getMessage());
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public static void call(final CharSequence number, final Context context, final boolean directly) {
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP_MR1 && !directly && BPrefs.get(context).getBoolean(BPrefs.DUAL_SIM_KEY, BPrefs.DUAL_SIM_DEFAULT_VALUE)) {
+                final SubscriptionManager subscriptionManager = (SubscriptionManager) context
+                        .getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE);
+                final List<SubscriptionInfo> activeSubscriptionInfoList = subscriptionManager.getActiveSubscriptionInfoList();
+                if (activeSubscriptionInfoList != null && (activeSubscriptionInfoList.size() > 1)) {
+                    final CharSequence[] simNames = new CharSequence[activeSubscriptionInfoList.size()];
+                    for (int i = 0; i < activeSubscriptionInfoList.size(); i++) {
+                        simNames[i] = activeSubscriptionInfoList.get(i).getDisplayName();
+                    }
+                    BDB.from(context)
+                            .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
+                            .setTitle(R.string.choose_sim)
+                            .setSubText(R.string.choose_sim_subtext)
+                            .setOptions(simNames)
+                            .setPositiveButtonListener(params -> {
+                                call(number, context, activeSubscriptionInfoList.get((Integer) params[0]));
+                                return true;
+                            }).show();
+                } else
+                    call(number, context, null);
+            } else
+                call(number, context, null);
         } else
             BaldToast.error(context);
 
@@ -83,7 +134,7 @@ public class DialerActivity extends BaldActivity {
 
     public static void call(final MiniContact miniContact, final Context context) {
         try {
-            call(Contact.fromLookupKey(miniContact.lookupKey, context.getContentResolver()).getPhoneList().get(0).second, context);
+            call(Contact.fromLookupKey(miniContact.lookupKey, context.getContentResolver()).getPhoneList().get(0).second, context, false);
         } catch (Exception e) {
             BaldToast.error(context);
         }
@@ -164,7 +215,7 @@ public class DialerActivity extends BaldActivity {
         b_sulamit.setOnClickListener(new DialerClickListener('*', ToneGenerator.TONE_DTMF_S));
         b_hash.setOnClickListener(new DialerClickListener('#', ToneGenerator.TONE_DTMF_P));
 
-        b_call.setOnClickListener(v -> call(number, this));
+        b_call.setOnClickListener(v -> call(number, this, false));
         b_clear.setOnClickListener(v -> {
             number.setLength(0);
             tv_number.setText(number);

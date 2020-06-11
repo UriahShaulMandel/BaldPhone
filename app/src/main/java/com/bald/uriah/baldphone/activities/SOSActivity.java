@@ -88,7 +88,7 @@ public class SOSActivity extends BaldActivity {
     }
 
     private void callEmergencyNumber() {
-        DialerActivity.call("112", this);//should work 99.99% of the times
+        DialerActivity.call("112", this, true);//should work 99.99% of the times
     }
 
     @Override

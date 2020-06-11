@@ -279,7 +279,7 @@ public class CallsRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter
                                 final int option = (int) params[0];
                                 switch (option) {
                                     case 0:
-                                        DialerActivity.call(call.phoneNumber, activity);
+                                        DialerActivity.call(call.phoneNumber, activity, false);
                                         return true;
                                     case 1:
                                         activity.startActivity(new Intent(activity, AddContactActivity.class).putExtra(AddContactActivity.CONTACT_NUMBER, call.phoneNumber));

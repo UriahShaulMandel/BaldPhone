@@ -57,6 +57,7 @@ import static android.Manifest.permission.CALL_PHONE;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.READ_CALL_LOG;
 import static android.Manifest.permission.READ_CONTACTS;
+import static android.Manifest.permission.READ_PHONE_STATE;
 import static android.Manifest.permission.WRITE_CALL_LOG;
 import static android.Manifest.permission.WRITE_CONTACTS;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
@@ -70,11 +71,12 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     private static final String TAG = BaldActivity.class.getSimpleName();
     protected static final int
             PERMISSION_NONE = 0,
+            PERMISSION_READ_PHONE_STATE = 0b100000000000,
             PERMISSION_WRITE_SETTINGS = 0b1,
             PERMISSION_DEFAULT_PHONE_HANDLER = 0b10,
             PERMISSION_READ_CONTACTS = 0b100 | PERMISSION_DEFAULT_PHONE_HANDLER,
             PERMISSION_WRITE_CONTACTS = 0b1000 | PERMISSION_DEFAULT_PHONE_HANDLER,
-            PERMISSION_CALL_PHONE = 0b10000 | PERMISSION_DEFAULT_PHONE_HANDLER,
+            PERMISSION_CALL_PHONE = 0b10000 | PERMISSION_DEFAULT_PHONE_HANDLER | PERMISSION_READ_PHONE_STATE,
             PERMISSION_READ_CALL_LOG = 0b10000000000 | PERMISSION_DEFAULT_PHONE_HANDLER,
             PERMISSION_WRITE_CALL_LOG = 0b100000 | PERMISSION_DEFAULT_PHONE_HANDLER | PERMISSION_READ_CALL_LOG,
             PERMISSION_CAMERA = 0b1000000,
@@ -149,6 +151,12 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
         if ((requiredPermissions & PERMISSION_READ_CALL_LOG) != 0) {
             if (ActivityCompat.checkSelfPermission(activity, READ_CALL_LOG) != PERMISSION_GRANTED)
                 return false;
+        }
+        if ((requiredPermissions & PERMISSION_READ_PHONE_STATE) != 0) {
+            if (BPrefs.get(activity).getBoolean(BPrefs.DUAL_SIM_KEY, BPrefs.DUAL_SIM_DEFAULT_VALUE))
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP_MR1)
+                    if (ActivityCompat.checkSelfPermission(activity, READ_PHONE_STATE) != PERMISSION_GRANTED)
+                        return false;
         }
         if ((requiredPermissions & PERMISSION_CAMERA) != 0) {
             if (ActivityCompat.checkSelfPermission(activity, CAMERA) != PERMISSION_GRANTED)
