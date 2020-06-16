@@ -188,7 +188,9 @@
             android:screenOrientation="portrait" />
         <activity android:name=".activities.FeedbackActivity" />
         <activity android:name=".activities.UpdatesActivity" />
-        <activity android:name=".activities.Page1EditorActivity" />
+        <activity
+            android:name=".activities.Page1EditorActivity"
+            android:label="@string/edit_home_screen" />
 
 
         <service
@@ -238,7 +240,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="@string/authorities"
+            android:authorities="${applicationId}.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

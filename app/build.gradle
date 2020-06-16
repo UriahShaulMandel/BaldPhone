@@ -51,6 +51,10 @@ android {
         fDroid {
             dimension "updating_mechanism"
         }
+        gPlay{
+            dimension "updating_mechanism"
+            applicationIdSuffix ".gp"
+        }
     }
     compileOptions {
         targetCompatibility JavaVersion.VERSION_1_8

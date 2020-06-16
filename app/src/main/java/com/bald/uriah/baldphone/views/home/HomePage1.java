@@ -39,6 +39,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.AppsActivity;
 import com.bald.uriah.baldphone.activities.DialerActivity;
@@ -67,6 +68,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import static com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper.baldComponentNameBeginning;
 import static com.bald.uriah.baldphone.services.NotificationListenerService.ACTION_REGISTER_ACTIVITY;
 import static com.bald.uriah.baldphone.services.NotificationListenerService.KEY_EXTRA_ACTIVITY;
 import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_HOME_SCREEN;
@@ -231,7 +233,9 @@ public class HomePage1 extends HomeView {
 
     private void setupButton(String bPrefsKey, FirstPageAppIcon bt, View.OnClickListener onClickListener) {
         final App app;
-        if (sharedPreferences.contains(bPrefsKey)) {
+        if (bt == bt_whatsapp && BuildConfig.FLAVOR.equals("gPlay") && !sharedPreferences.contains(bPrefsKey)) {
+            app = AppsDatabase.getInstance(homeScreen).appsDatabaseDao().findByFlattenComponentName(baldComponentNameBeginning + Page1EditorActivity.class.getName());
+        } else if (sharedPreferences.contains(bPrefsKey)) {
             app = AppsDatabase.getInstance(homeScreen).appsDatabaseDao().findByFlattenComponentName(sharedPreferences.getString(bPrefsKey, null));
             if (app == null)
                 sharedPreferences.edit().remove(bPrefsKey).apply();
@@ -247,11 +251,14 @@ public class HomePage1 extends HomeView {
             }
         } else {
             final Page1EditorActivity page1EditorActivity = (Page1EditorActivity) activity;
+            final CharSequence initialAppName = BuildConfig.FLAVOR.equals("gPlay") && bt == bt_whatsapp ?
+                    activity.getString(R.string.edit_home_screen) :
+                    bt.getText();
             final BDB bdb = BDB.from(activity)
                     .setTitle(R.string.custom_app)
                     .setSubText(R.string.custom_app_subtext)
                     .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL)
-                    .setOptions(bt.getText(), activity.getText(R.string.custom))
+                    .setOptions(initialAppName, activity.getText(R.string.custom))
                     .setOptionsStartingIndex(() -> sharedPreferences.contains(bPrefsKey) ? 1 : 0)
                     .setPositiveButtonListener(params -> {
                         if (params[0].equals(0)) {

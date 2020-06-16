@@ -31,6 +31,7 @@ import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.AppsActivity;
 import com.bald.uriah.baldphone.activities.DialerActivity;
+import com.bald.uriah.baldphone.activities.Page1EditorActivity;
 import com.bald.uriah.baldphone.activities.RecentActivity;
 import com.bald.uriah.baldphone.activities.alarms.AlarmsActivity;
 import com.bald.uriah.baldphone.activities.contacts.ContactsActivity;
@@ -65,6 +66,7 @@ public class AppsDatabaseHelper {
         baldComponentNames.put(baldComponentNameBeginning + PillsActivity.class.getName(), R.drawable.pill);
         baldComponentNames.put(baldComponentNameBeginning + AppsActivity.class.getName(), R.drawable.apps_on_background);
         baldComponentNames.put(baldComponentNameBeginning + AlarmsActivity.class.getName(), R.drawable.clock_on_background);
+        baldComponentNames.put(baldComponentNameBeginning + Page1EditorActivity.class.getName(), R.drawable.edit_on_background);
     }
 
     private static List<String> getInstalledAppsFlattenComponentNames(Context context) {
