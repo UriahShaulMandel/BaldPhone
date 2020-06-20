@@ -296,7 +296,7 @@
         falls du unterwegs bist können Kosten entstehen.\nMöchtest du mit dem Download fortdahren?
     </string>
     <string name="update_message_is_corrupted">Die Aktualisierungsnachricht ist fehlerhaft.</string>
-    <string name="check_for_updates">Auf Aktualisiserungen überprüfen</string>
+    <string name="check_for_updates">Auf Aktualisierungen überprüfen</string>
     <string name="could_not_connect_to_server">Vebrindung zum Server nicht möglich!</string>
     <string name="could_not_connect_to_internet">Internetverbindung konnte nicht hergestellt werden!</string>
     <string name="could_not_start_the_download">Download konnte nicht gestartet werden!</string>
