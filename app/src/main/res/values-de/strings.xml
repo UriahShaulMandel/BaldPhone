@@ -376,7 +376,7 @@
     <string name="one_grid">One Grid</string>
     <string name="colorful">Colorful</string>
     <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
-    <string name="edit_home_screen">Edit Home Screen</string>
+    <string name="edit_home_screen">Startbildschirm anpassen</string>
     <string name="dual_sim">Dual SIM</string>
     <string name="dual_sim_subtext">Lege fest, wie du mit deinen beiden SIM-Karten umgehen möchtest\nBeachte: Sobald du \"Optionen anzeigen\" auswählst, musst du eine weitere Erlaubnis erteilen</string>
     <string name="use_default">Verwende Standardeinstellung</string>
