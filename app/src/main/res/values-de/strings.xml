@@ -22,7 +22,7 @@
     <string name="accessibility_level">Stufe der Barrierefreiheit</string>
     <string name="accessibility_settings">Barrierefreiheit</string>
     <string name="accidental_touches">Schutz vor versehentlichem Berühren</string>
-    <string name="accidental_touches_settings_subtext">Der Schutz verhindert, dass dein Handy auf Berührungen reagiert, wenn es zugedeckt ist.\nWenn er Probleme macht kannst du ihn ausschalten.
+    <string name="accidental_touches_settings_subtext">Der Schutz verhindert, dass dein Handy auf Berührungen reagiert, wenn es zugedeckt ist.\nWenn der Schutz Probleme bereitet, kannst du ihn ausschalten.
     </string>
     <string name="accidental_touches_subtext">Eine Berührung wurde als unbeabsichtigt erkannt\ndrücke OK, um dein Handy weiter zu benutzen\nwenn diese Nachricht weiterhin angezeigt wird kannst du sie in den Einstellungen zur Barrierefreiheit ausschalten
     </string>
