@@ -373,7 +373,7 @@
     <string name="apps_sort_method">Apps Sortierungs Modus</string>
     <string name="apps_sort_method_subtext">Entscheide, ob deine Apps in einem gemeinsamen Raster angeordnet oder nach Anfangsbuchstaben gruppiert werden sollen</string>
     <string name="groups">Gruppen</string>
-    <string name="one_grid">One Grid</string>
+    <string name="one_grid">Ein Raster</string>
     <string name="colorful">Colorful</string>
     <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
     <string name="edit_home_screen">Startbildschirm anpassen</string>
