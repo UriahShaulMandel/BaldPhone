@@ -22,7 +22,7 @@
     <string name="accessibility_level">Stufe der Barrierefreiheit</string>
     <string name="accessibility_settings">Barrierefreiheit</string>
     <string name="accidental_touches">Schutz vor versehentlichem Berühren</string>
-    <string name="accidental_touches_settings_subtext">Der Schutz verhindert, dass dein Handy auf Berührungen reagiert, wenn es zugedeckt ist.\nWenn er Probleme macht kannst du ihn ausschalten.
+    <string name="accidental_touches_settings_subtext">Der Schutz verhindert, dass dein Handy auf Berührungen reagiert, wenn es zugedeckt ist.\nWenn der Schutz Probleme bereitet, kannst du ihn ausschalten.
     </string>
     <string name="accidental_touches_subtext">Eine Berührung wurde als unbeabsichtigt erkannt\ndrücke OK, um dein Handy weiter zu benutzen\nwenn diese Nachricht weiterhin angezeigt wird kannst du sie in den Einstellungen zur Barrierefreiheit ausschalten
     </string>
@@ -216,7 +216,7 @@
     <string name="set_home_screen">Startbildschirm festlegen</string>
     <string name="set_home_screen_subtext">Um BaldPhone zu nutzen, solltest du es als Startbildschirm festlegen.\nDas kann in den Einstellungen wieder geändert werden.
     </string>
-    <string name="set_keyboard">Die Tastatur festlegen</string>
+    <string name="set_keyboard">Tastatur auswählen</string>
     <string name="setting_does_not_exist">Die Einstellung existiert nicht</string>
     <string name="settings">Einstellungen</string>
     <string name="settings_permission">Berechtigung, Einstellungen vorzunehmen</string>
@@ -296,7 +296,7 @@
         falls du unterwegs bist können Kosten entstehen.\nMöchtest du mit dem Download fortdahren?
     </string>
     <string name="update_message_is_corrupted">Die Aktualisierungsnachricht ist fehlerhaft.</string>
-    <string name="check_for_updates">Auf Aktualisiserungen überprüfen</string>
+    <string name="check_for_updates">Auf Aktualisierungen überprüfen</string>
     <string name="could_not_connect_to_server">Vebrindung zum Server nicht möglich!</string>
     <string name="could_not_connect_to_internet">Internetverbindung konnte nicht hergestellt werden!</string>
     <string name="could_not_start_the_download">Download konnte nicht gestartet werden!</string>
@@ -348,7 +348,7 @@
     <string name="low_battery_alert_subtext">Entscheide, ob die Statusleiste des Startbildschirms rot gefärbt werden soll, wenn die Akkuladung unter 20% sinkt.\nHinweis: Es wird nicht angezeigt, wenn die Statusleiste des Systems versteckt ist.</string>
 
     <string name="also_available_at">Auch verfügbar bei\nbaldphone.contact@gmail.com\nFeedback muss auf English/Israeli sein!</string>
-    <string name="grant_all_permissions">Alle Berechtigungen erlauben</string>
+    <string name="grant_all_permissions">Alle Berechtigungen erteilen</string>
 
 
     <!--For Tests:-->
@@ -356,7 +356,7 @@
     <string name="medication_2">Eltroxin 150</string>
     <string name="donate">Spenden</string>
     <string name="emergency_button">Notfall-Knopf</string>
-    <string name="emergency_settings_subtext">Wählen sie aus, ob sie einen Nofall-Knopf auf ihren Startbildschirm haben wollen.</string>
+    <string name="emergency_settings_subtext">Entscheide, ob du einen Nofall-Knopf auf dem Startbildschirm haben möchtest.</string>
     <string name="private_number">Private Nummer</string>
     <string name="swipe_left_or_right">Wischen sie nach links oder rechts.</string>
     <string name="press_next_or_back_buton">Drücken sie weiter oder zurück</string>
@@ -370,13 +370,21 @@
     <string name="do_you_want_to_save_your_changes">Wollen sie ihre Änderungen speichern?</string>
     <string name="discard">Ablehnen</string>
     <string name="no_recent_calls">Keine kürzlichen Anrufe</string>
-    <string name="apps_sort_method">Apps Sortierungs Modus</string>
-    <string name="apps_sort_method_subtext">Choose whether you want to sort the apps in one grid or to have them divided into different groups via letters</string>
-    <string name="groups">Gruppen</string>
-    <string name="one_grid">One Grid</string>
+    <string name="apps_sort_method">Anordnung Apps</string>
+    <string name="apps_sort_method_subtext">Entscheide, ob deine Apps in einem gemeinsamen Raster angeordnet oder nach Anfangsbuchstaben gruppiert werden sollen</string>
+    <string name="groups">Gruppieren</string>
+    <string name="one_grid">Ein Raster</string>
     <string name="colorful">Colorful</string>
-    <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
-    <string name="edit_home_screen">Edit Home Screen</string>
+    <string name="colorful_subtext">Möchtest du BaldPhone bunter gestalten?</string>
+    <string name="edit_home_screen">Startbildschirm anpassen</string>
+    <string name="dual_sim">Dual SIM</string>
+    <string name="dual_sim_subtext">Lege fest, wie du mit deinen beiden SIM-Karten umgehen möchtest\nBeachte: Sobald du \"Optionen anzeigen\" auswählst, musst du eine weitere Erlaubnis erteilen</string>
+    <string name="use_default">Verwende Standardeinstellung</string>
+    <string name="show_options">Optionen anzeigen</string>
+    <string name="read_phone_state">Telefonstatus auslesen</string>
+    <string name="read_phone_state_subtext">Diese Erlaubnis wird benötigt, um die zweite SIM-Karte zum Telefonieren zu nutzen</string>
+    <string name="choose_sim">Wähle SIM-Karte</string>
+    <string name="choose_sim_subtext">Wähle die SIM-Karte, welche du zum Telefonieren verwenden möchtest</string>
 
 
     <string-array name="names_for_screenshots">
