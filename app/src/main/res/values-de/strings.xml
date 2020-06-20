@@ -216,7 +216,7 @@
     <string name="set_home_screen">Startbildschirm festlegen</string>
     <string name="set_home_screen_subtext">Um BaldPhone zu nutzen, solltest du es als Startbildschirm festlegen.\nDas kann in den Einstellungen wieder geändert werden.
     </string>
-    <string name="set_keyboard">Die Tastatur festlegen</string>
+    <string name="set_keyboard">Tastatur auswählen</string>
     <string name="setting_does_not_exist">Die Einstellung existiert nicht</string>
     <string name="settings">Einstellungen</string>
     <string name="settings_permission">Berechtigung, Einstellungen vorzunehmen</string>
