@@ -72,6 +72,7 @@ import static com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper.baldCom
 import static com.bald.uriah.baldphone.services.NotificationListenerService.ACTION_REGISTER_ACTIVITY;
 import static com.bald.uriah.baldphone.services.NotificationListenerService.KEY_EXTRA_ACTIVITY;
 import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_HOME_SCREEN;
+import static com.bald.uriah.baldphone.utils.S.getPhoneDialerCompomentName;
 
 @SuppressLint("ViewConstructor")
 public class HomePage1 extends HomeView {
@@ -233,8 +234,10 @@ public class HomePage1 extends HomeView {
 
     private void setupButton(String bPrefsKey, FirstPageAppIcon bt, View.OnClickListener onClickListener) {
         final App app;
-        if (bt == bt_whatsapp && BuildConfig.FLAVOR.equals("gPlay") && !sharedPreferences.contains(bPrefsKey)) {
+        if ((bt == bt_whatsapp) && BuildConfig.FLAVOR.equals("gPlay") && !sharedPreferences.contains(bPrefsKey)) {
             app = AppsDatabase.getInstance(homeScreen).appsDatabaseDao().findByFlattenComponentName(baldComponentNameBeginning + Page1EditorActivity.class.getName());
+        } else if ((bt == bt_recent) && BuildConfig.FLAVOR.equals("gPlay") && !sharedPreferences.contains(bPrefsKey)) {
+            app = AppsDatabase.getInstance(homeScreen).appsDatabaseDao().findByFlattenComponentName(getPhoneDialerCompomentName(activity).flattenToString());
         } else if (sharedPreferences.contains(bPrefsKey)) {
             app = AppsDatabase.getInstance(homeScreen).appsDatabaseDao().findByFlattenComponentName(sharedPreferences.getString(bPrefsKey, null));
             if (app == null)
@@ -251,7 +254,7 @@ public class HomePage1 extends HomeView {
             }
         } else {
             final Page1EditorActivity page1EditorActivity = (Page1EditorActivity) activity;
-            final CharSequence initialAppName = BuildConfig.FLAVOR.equals("gPlay") && bt == bt_whatsapp ?
+            final CharSequence initialAppName = BuildConfig.FLAVOR.equals("gPlay") && (bt == bt_whatsapp || bt == bt_recent) ?
                     activity.getString(R.string.edit_home_screen) :
                     bt.getText();
             final BDB bdb = BDB.from(activity)

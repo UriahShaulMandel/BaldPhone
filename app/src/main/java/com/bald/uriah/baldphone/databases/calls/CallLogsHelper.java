@@ -23,6 +23,7 @@ import android.net.Uri;
 import android.provider.CallLog;
 import android.provider.ContactsContract;
 
+import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.adapters.CallsRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 
@@ -51,6 +52,8 @@ public class CallLogsHelper {
     }
 
     public static List<Call> getForSpecificContact(ContentResolver contentResolver, Contact contact) {
+        if (BuildConfig.FLAVOR.equals("gPlay"))
+            return new ArrayList<>();
         final Uri contactUri = ContactsContract.Contacts.getLookupUri(contact.getId(), contact.getLookupKey());
         try (Cursor cursor = contentResolver.query(CallLog.Calls.CONTENT_URI, Call.PROJECTION, CallLog.Calls.CACHED_LOOKUP_URI + "=?", new String[]{contactUri.toString()}, CallLog.Calls.DATE + " DESC")) {
             final List<Call> calls = new ArrayList<>(cursor.getCount());

@@ -29,7 +29,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.provider.Settings;
-import android.telecom.TelecomManager;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -53,7 +52,6 @@ import com.bald.uriah.baldphone.views.BaldTitleBar;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import static android.Manifest.permission.CALL_PHONE;
 import static android.Manifest.permission.CAMERA;
@@ -181,10 +179,6 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
      * not removing yet, perhaps the issue with google will be solved
      */
     static boolean defaultDialerGranted(BaldActivity activity) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            final TelecomManager telecomManager = (TelecomManager) activity.getSystemService(TELECOM_SERVICE);
-            return telecomManager != null && Objects.equals(activity.getPackageName(), telecomManager.getDefaultDialerPackage());
-        }
         return true;
     }
 

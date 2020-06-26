@@ -27,6 +27,8 @@ android {
         versionCode 98
         versionName "12.1.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [fullApp: "true", notFullApp: "false", recentCalls: "true", notRecentCalls: "false"]
+
     }
 
     buildTypes {
@@ -51,9 +53,15 @@ android {
         fDroid {
             dimension "updating_mechanism"
         }
-        gPlay{
+        gPlay {
             dimension "updating_mechanism"
             applicationIdSuffix ".gp"
+            manifestPlaceholders = [fullApp: "true", notFullApp: "false", recentCalls: "false", notRecentCalls: "true"]
+        }
+        gPlayRecentCalls {
+            dimension "updating_mechanism"
+            applicationIdSuffix ".gprc"
+            manifestPlaceholders = [fullApp: "false", notFullApp: "true", recentCalls: "true", notRecentCalls: "false"]
         }
     }
     compileOptions {
