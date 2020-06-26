@@ -24,8 +24,8 @@ android {
         applicationId "com.bald.uriah.baldphone"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 98
-        versionName "12.1.2"
+        versionCode 99
+        versionName "12.1.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [fullApp: "true", notFullApp: "false", recentCalls: "true", notRecentCalls: "false"]
 
