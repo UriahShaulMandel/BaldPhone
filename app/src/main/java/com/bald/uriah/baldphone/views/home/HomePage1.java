@@ -256,7 +256,7 @@ public class HomePage1 extends HomeView {
             final Page1EditorActivity page1EditorActivity = (Page1EditorActivity) activity;
             final CharSequence initialAppName = BuildConfig.FLAVOR.equals("gPlay") && (bt == bt_whatsapp || bt == bt_recent) ?
                     activity.getString(R.string.edit_home_screen) :
-                    bt.getText();
+                    app.getLabel();
             final BDB bdb = BDB.from(activity)
                     .setTitle(R.string.custom_app)
                     .setSubText(R.string.custom_app_subtext)
