@@ -145,12 +145,14 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
                 return false;
         }
         if ((requiredPermissions & PERMISSION_WRITE_CALL_LOG) != 0) {
-            if (ActivityCompat.checkSelfPermission(activity, WRITE_CALL_LOG) != PERMISSION_GRANTED)
-                return false;
+            if (!BuildConfig.FLAVOR.equals("gPlay"))
+                if (ActivityCompat.checkSelfPermission(activity, WRITE_CALL_LOG) != PERMISSION_GRANTED)
+                    return false;
         }
         if ((requiredPermissions & PERMISSION_READ_CALL_LOG) != 0) {
-            if (ActivityCompat.checkSelfPermission(activity, READ_CALL_LOG) != PERMISSION_GRANTED)
-                return false;
+            if (!BuildConfig.FLAVOR.equals("gPlay"))
+                if (ActivityCompat.checkSelfPermission(activity, READ_CALL_LOG) != PERMISSION_GRANTED)
+                    return false;
         }
         if ((requiredPermissions & PERMISSION_READ_PHONE_STATE) != 0) {
             if (BPrefs.get(activity).getBoolean(BPrefs.DUAL_SIM_KEY, BPrefs.DUAL_SIM_DEFAULT_VALUE))

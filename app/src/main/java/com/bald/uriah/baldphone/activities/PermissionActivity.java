@@ -162,12 +162,13 @@ public class PermissionActivity extends BaldActivity {
                             new SimplePermissionItem(CALL_PHONE, getString(R.string.calling), getString(R.string.call_subtext)));
             }
             if ((requiredPermissions & PERMISSION_WRITE_CALL_LOG) != 0 || (requiredPermissions & PERMISSION_READ_CALL_LOG) != 0) {
-                if (ActivityCompat.checkSelfPermission(this, WRITE_CALL_LOG) != PERMISSION_GRANTED)
-                    permissionItemList.add(
-                            new SimplePermissionItem(WRITE_CALL_LOG, getString(R.string.read_call_log), getString(R.string.read_call_log_subtext)));
-                else if (ActivityCompat.checkSelfPermission(this, READ_CALL_LOG) != PERMISSION_GRANTED)
-                    permissionItemList.add(
-                            new SimplePermissionItem(READ_CALL_LOG, getString(R.string.read_call_log), getString(R.string.read_call_log_subtext)));
+                if (!BuildConfig.FLAVOR.equals("gPlay"))
+                    if (ActivityCompat.checkSelfPermission(this, WRITE_CALL_LOG) != PERMISSION_GRANTED)
+                        permissionItemList.add(
+                                new SimplePermissionItem(WRITE_CALL_LOG, getString(R.string.read_call_log), getString(R.string.read_call_log_subtext)));
+                    else if (ActivityCompat.checkSelfPermission(this, READ_CALL_LOG) != PERMISSION_GRANTED)
+                        permissionItemList.add(
+                                new SimplePermissionItem(READ_CALL_LOG, getString(R.string.read_call_log), getString(R.string.read_call_log_subtext)));
             }
             if ((requiredPermissions & PERMISSION_READ_PHONE_STATE) != 0) {
                 if (BPrefs.get(this).getBoolean(BPrefs.DUAL_SIM_KEY, BPrefs.DUAL_SIM_DEFAULT_VALUE))

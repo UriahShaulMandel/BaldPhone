@@ -18,9 +18,11 @@ package com.bald.uriah.baldphone.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 
+import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.contacts.ContactsActivity;
 
@@ -36,8 +38,12 @@ public class PhoneActivity extends BaldActivity {
         findViewById(R.id.bt_dialer).
                 setOnClickListener(v -> startActivity(new Intent(this, DialerActivity.class)));
 
-        findViewById(R.id.bt_recent).
-                setOnClickListener(v -> startActivity(new Intent(this, RecentActivity.class)));
+        if (BuildConfig.FLAVOR.equals("gPlay")) {
+            findViewById(R.id.bt_recent).setVisibility(View.GONE);
+            findViewById(R.id.div_2).setVisibility(View.GONE);
+        } else
+            findViewById(R.id.bt_recent).
+                    setOnClickListener(v -> startActivity(new Intent(this, RecentActivity.class)));
 
     }
 

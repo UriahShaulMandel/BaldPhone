@@ -75,7 +75,9 @@
             app:__src="@drawable/history_on_background"
             app:__text="@string/recent" />
 
-        <include layout="@layout/ll_divider_as_vertical_layout" />
+        <include
+            android:id="@+id/div_2"
+            layout="@layout/ll_divider_as_vertical_layout" />
 
         <com.bald.uriah.baldphone.views.FirstPageAppIcon
             android:id="@+id/bt_dialer"

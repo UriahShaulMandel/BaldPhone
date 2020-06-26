@@ -396,9 +396,7 @@ public class S {
                 .setData(Uri.parse("smsto:" + Uri.encode(number))));
     }
 
-    public static ComponentName getPhoneDialerCompomentName(Context context) {
-        final Intent dialingIntent = new Intent(Intent.ACTION_DIAL).addCategory(Intent.CATEGORY_DEFAULT);
-        final List<ResolveInfo> resolveInfoList = context.getPackageManager().queryIntentActivities(dialingIntent, 0);
-        return new ComponentName(resolveInfoList.get(0).activityInfo.packageName, resolveInfoList.get(0).activityInfo.name);
+    public static Intent getPhoneIntent(Context context) {
+        return new Intent(Intent.ACTION_DIAL).addCategory(Intent.CATEGORY_DEFAULT);
     }
 }
