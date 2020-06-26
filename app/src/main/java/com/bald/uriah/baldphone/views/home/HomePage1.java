@@ -233,8 +233,12 @@ public class HomePage1 extends HomeView {
 
     private void setupButton(String bPrefsKey, FirstPageAppIcon bt, View.OnClickListener onClickListener) {
         final App app;
+        boolean phone = false;
         if (bt == bt_whatsapp && BuildConfig.FLAVOR.equals("gPlay") && !sharedPreferences.contains(bPrefsKey)) {
             app = AppsDatabase.getInstance(homeScreen).appsDatabaseDao().findByFlattenComponentName(baldComponentNameBeginning + Page1EditorActivity.class.getName());
+        } else if (bt == bt_recent && BuildConfig.FLAVOR.equals("gPlay") && !sharedPreferences.contains(bPrefsKey)) {
+            app = null;
+            phone = true;
         } else if (sharedPreferences.contains(bPrefsKey)) {
             app = AppsDatabase.getInstance(homeScreen).appsDatabaseDao().findByFlattenComponentName(sharedPreferences.getString(bPrefsKey, null));
             if (app == null)
@@ -242,7 +246,13 @@ public class HomePage1 extends HomeView {
         } else app = null;
         if (homeScreen != null) {
             if (app == null) {
-                bt.setOnClickListener(onClickListener);
+                if (phone) {
+                    bt.setOnClickListener(v -> activity.startActivity(S.getPhoneIntent(activity)));
+                    bt.setText(R.string.phone);
+                    bt.setImageResource(R.drawable.phone_on_button);
+                } else {
+                    bt.setOnClickListener(onClickListener);
+                }
             } else {
                 bt.setText(app.getLabel());
                 AppsDatabaseHelper.loadPic(app, bt.imageView);
@@ -251,9 +261,16 @@ public class HomePage1 extends HomeView {
             }
         } else {
             final Page1EditorActivity page1EditorActivity = (Page1EditorActivity) activity;
-            final CharSequence initialAppName = BuildConfig.FLAVOR.equals("gPlay") && bt == bt_whatsapp ?
-                    activity.getString(R.string.edit_home_screen) :
-                    bt.getText();
+            final CharSequence initialAppName;
+            if (BuildConfig.FLAVOR.equals("gPlay")) {
+                if (bt == bt_whatsapp) {
+                    initialAppName = activity.getString(R.string.edit_home_screen);
+                } else if (bt == bt_recent)
+                    initialAppName = activity.getString(R.string.phone);
+                else initialAppName = bt.getText();
+            } else {
+                initialAppName = bt.getText();
+            }
             final BDB bdb = BDB.from(activity)
                     .setTitle(R.string.custom_app)
                     .setSubText(R.string.custom_app_subtext)
@@ -278,6 +295,10 @@ public class HomePage1 extends HomeView {
                 bt.setText(app.getLabel());
                 AppsDatabaseHelper.loadPic(app, bt.imageView);
                 viewsToApps.put(app, bt);
+            }
+            if (phone) {
+                bt.setText(R.string.phone);
+                bt.setImageResource(R.drawable.phone_on_button);
             }
         }
     }

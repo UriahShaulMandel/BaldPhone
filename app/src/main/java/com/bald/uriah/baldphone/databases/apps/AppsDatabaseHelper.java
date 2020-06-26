@@ -58,7 +58,8 @@ public class AppsDatabaseHelper {
     public static Map<String, Integer> baldComponentNames = new HashMap<>(9);
 
     static {
-        baldComponentNames.put(baldComponentNameBeginning + RecentActivity.class.getName(), R.drawable.history_on_background);
+        if (!BuildConfig.FLAVOR.equals("gPlay"))
+            baldComponentNames.put(baldComponentNameBeginning + RecentActivity.class.getName(), R.drawable.history_on_background);
         baldComponentNames.put(baldComponentNameBeginning + ContactsActivity.class.getName(), R.drawable.human_on_background);
         baldComponentNames.put(baldComponentNameBeginning + DialerActivity.class.getName(), R.drawable.phone_on_background);
         baldComponentNames.put(baldComponentNameBeginning + PhotosActivity.class.getName(), R.drawable.photo_on_background);

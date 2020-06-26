@@ -29,7 +29,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.provider.Settings;
-import android.telecom.TelecomManager;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -53,7 +52,6 @@ import com.bald.uriah.baldphone.views.BaldTitleBar;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import static android.Manifest.permission.CALL_PHONE;
 import static android.Manifest.permission.CAMERA;
@@ -147,12 +145,14 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
                 return false;
         }
         if ((requiredPermissions & PERMISSION_WRITE_CALL_LOG) != 0) {
-            if (ActivityCompat.checkSelfPermission(activity, WRITE_CALL_LOG) != PERMISSION_GRANTED)
-                return false;
+            if (!BuildConfig.FLAVOR.equals("gPlay"))
+                if (ActivityCompat.checkSelfPermission(activity, WRITE_CALL_LOG) != PERMISSION_GRANTED)
+                    return false;
         }
         if ((requiredPermissions & PERMISSION_READ_CALL_LOG) != 0) {
-            if (ActivityCompat.checkSelfPermission(activity, READ_CALL_LOG) != PERMISSION_GRANTED)
-                return false;
+            if (!BuildConfig.FLAVOR.equals("gPlay"))
+                if (ActivityCompat.checkSelfPermission(activity, READ_CALL_LOG) != PERMISSION_GRANTED)
+                    return false;
         }
         if ((requiredPermissions & PERMISSION_READ_PHONE_STATE) != 0) {
             if (BPrefs.get(activity).getBoolean(BPrefs.DUAL_SIM_KEY, BPrefs.DUAL_SIM_DEFAULT_VALUE))
@@ -181,10 +181,6 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
      * not removing yet, perhaps the issue with google will be solved
      */
     static boolean defaultDialerGranted(BaldActivity activity) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            final TelecomManager telecomManager = (TelecomManager) activity.getSystemService(TELECOM_SERVICE);
-            return telecomManager != null && Objects.equals(activity.getPackageName(), telecomManager.getDefaultDialerPackage());
-        }
         return true;
     }
 

@@ -395,4 +395,8 @@ public class S {
         context.startActivity(new Intent(Intent.ACTION_SENDTO)
                 .setData(Uri.parse("smsto:" + Uri.encode(number))));
     }
+
+    public static Intent getPhoneIntent(Context context) {
+        return new Intent(Intent.ACTION_DIAL).addCategory(Intent.CATEGORY_DEFAULT);
+    }
 }
