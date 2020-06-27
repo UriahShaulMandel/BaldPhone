@@ -24,8 +24,9 @@ Feel free to contact me at baldphone.contact@gmail.com
 
 
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="120">](https://f-droid.org/packages/com.bald.uriah.baldphone)
-[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play Download" height="120">](https://play.google.com/store/apps/details?id=com.bald.uriah.baldphone.gp)
 [<img src="https://github.com/UriahShaulMandel/BaldPhone/blob/master/logo/direct_apk_download.png?raw=true" alt="Direct APK Download" height="80">](http://bit.ly/BALDPHONE)
+[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play Download" height="120">](https://play.google.com/store/apps/details?id=com.bald.uriah.baldphone.gp)
+
 
 
 
