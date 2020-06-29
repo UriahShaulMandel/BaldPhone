@@ -378,6 +378,14 @@
     <string name="colorful">多彩的</string>
     <string name="colorful_subtext">你想让BaldPhone更有色彩吗?</string>
     <string name="edit_home_screen">编辑主屏幕</string>
+    <string name="dual_sim">双 Sim卡</string>
+    <string name="dual_sim_subtext">选择如何管理双卡\n注意：如果选择“显示选项”，则需要允许另一个权限</string>
+    <string name="use_default">使用默认</string>
+    <string name="show_options">显示选项</string>
+    <string name="read_phone_state">读取手机状态</string>
+    <string name="read_phone_state_subtext">需要该权限用来从第二张sim卡拨打电话</string>
+    <string name="choose_sim">选择sim卡</string>
+    <string name="choose_sim_subtext">选择你想要用来拨打电话的sim卡</string>
 
 
     <string-array name="names_for_screenshots">
