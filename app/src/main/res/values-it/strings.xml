@@ -16,7 +16,7 @@
 
 <resources>
     <string name="about">Informazioni</string>
-    <string name="about_subtext">Ciao! Il mio nome è Uriah Shaul Mandel e sono lo sviluppatore di questa app.\nHo speso una gran parte della mia vita \"adulta\" per realizzare questo software e l\'ho rilasciato come Open Source affinché tutti lo possano utilizzare liberamente.\nSe vuoi contattarmi vie email, sei il benvenuto:\nbaldphone.contact@gmail.com</string>
+    <string name="about_subtext">Ciao! Il mio nome è Uriah Shaul Mandel e sono lo sviluppatore di questa app.\nHo speso una gran parte della mia vita \"adulta\" per realizzare questo software e l\'ho rilasciato come Open Source affinché tutti lo possano utilizzare liberamente.\nSe vuoi contattarmi via email, sei il benvenuto:\nbaldphone.contact@gmail.com</string>
     <string name="accessibility_level">Livello di accessibilità</string>
     <string name="accessibility_settings">Accessibilità</string>
     <string name="accidental_touches">Protezione contro i tocchi accidentali</string>
@@ -48,7 +48,7 @@
 
     <string name="alarms_repeats_every">Si ripete ogni</string>
     <string name="all_alarms">tutte le sveglie</string>
-    <string name="allow">Constenti</string>
+    <string name="allow">Consenti</string>
     <string name="already_setted">Tastiera impostata.\nTocca qui per cambiare.</string>
     <string name="an_error_has_occurred">Si è verificato un errore!</string>
     <string name="and_welcome_to_baldphone">benvenuto in BaldPhone!</string>
@@ -210,7 +210,7 @@
     <string name="set_default_dialer">Imposta come app predefinita per la chiamata</string>
     <string name="set_default_dialer_subtext">BaldPhone ha bisogno di essere impostata come app predefinita per le chiamate.</string>
     <string name="set_home_screen">Imposta Home page</string>
-    <string name="set_home_screen_subtext">Per utilizzare BaldPhone dovresti impostarlo come Home page. È una scelta che puoi sempre modificare da impostazioni avanzate.</string>
+    <string name="set_home_screen_subtext">Per utilizzare BaldPhone dovresti impostarlo come Home page. È una scelta che puoi sempre modificare dalle impostazioni avanzate.</string>
     <string name="set_keyboard">Imposta tastiera</string>
     <string name="setting_does_not_exist">Questa impostazione non esiste</string>
     <string name="settings">Impostazioni</string>
@@ -275,7 +275,7 @@
     <string name="clear_all_notifications">Elimina tutte le notifiche</string>
     <string name="clear_cache_subtext">Vuoi eliminare il contenuto della cache?\nEliminare i file temporanei può risolvere alcuni malfunzionamenti della app, ma verranno eliminate anche le scorciatoie create nella Home.
     </string>
-    <string name="permissions_calm">Ciao, BaldPhone deve avere le seguenti autorizzazioni per funzionare. Alcuni di questi
+    <string name="permissions_calm">Ciao, BaldPhone deve avere le seguenti autorizzazioni per funzionare. Alcune di queste
         possono spaventarti, ma è l\'unico modo in cui BaldPhone può sostituire l\'interfaccia del telefono. Nessuna informazione viene presa e non causa
         danni. Premi OK per fornire le autorizzazioni o premi No per uscire da BaldPhone.
     </string>
@@ -376,6 +376,14 @@
     <string name="colorful">Colorful</string>
     <string name="colorful_subtext">Vuoi avere un BaldPhone più colorato?</string>
     <string name="edit_home_screen">Modifica schermata Home</string>
+    <string name="dual_sim">Dual sim</string>
+    <string name="dual_sim_subtext">Scegli come vuoi gestire due sim\nNota: Se scegli Mostra Opzioni, dovrai accettare un\'altra autorizzazione</string>
+    <string name="use_default">Usa predefinito</string>
+    <string name="show_options">Mostra opzioni</string>
+    <string name="read_phone_state">Lettura stato telefono</string>
+    <string name="read_phone_state_subtext">Autorizzazione necessaria per effettuare chiamate dalla sim secondaria</string>
+    <string name="choose_sim">Scegli la Sim</string>
+    <string name="choose_sim_subtext">Scegli la sim da cui vuoi effettuare la chiamata</string>
 
 
     <string-array name="names_for_screenshots">
