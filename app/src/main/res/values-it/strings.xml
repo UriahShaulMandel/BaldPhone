@@ -275,7 +275,7 @@
     <string name="clear_all_notifications">Elimina tutte le notifiche</string>
     <string name="clear_cache_subtext">Vuoi eliminare il contenuto della cache?\nEliminare i file temporanei può risolvere alcuni malfunzionamenti della app, ma verranno eliminate anche le scorciatoie create nella Home.
     </string>
-    <string name="permissions_calm">Ciao, BaldPhone deve avere le seguenti autorizzazioni per funzionare. Alcuni di questi
+    <string name="permissions_calm">Ciao, BaldPhone deve avere le seguenti autorizzazioni per funzionare. Alcune di queste
         possono spaventarti, ma è l\'unico modo in cui BaldPhone può sostituire l\'interfaccia del telefono. Nessuna informazione viene presa e non causa
         danni. Premi OK per fornire le autorizzazioni o premi No per uscire da BaldPhone.
     </string>
