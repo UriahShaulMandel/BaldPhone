@@ -16,7 +16,7 @@
 
 <resources>
     <string name="about">Informazioni</string>
-    <string name="about_subtext">Ciao! Il mio nome è Uriah Shaul Mandel e sono lo sviluppatore di questa app.\nHo speso una gran parte della mia vita \"adulta\" per realizzare questo software e l\'ho rilasciato come Open Source affinché tutti lo possano utilizzare liberamente.\nSe vuoi contattarmi vie email, sei il benvenuto:\nbaldphone.contact@gmail.com</string>
+    <string name="about_subtext">Ciao! Il mio nome è Uriah Shaul Mandel e sono lo sviluppatore di questa app.\nHo speso una gran parte della mia vita \"adulta\" per realizzare questo software e l\'ho rilasciato come Open Source affinché tutti lo possano utilizzare liberamente.\nSe vuoi contattarmi via email, sei il benvenuto:\nbaldphone.contact@gmail.com</string>
     <string name="accessibility_level">Livello di accessibilità</string>
     <string name="accessibility_settings">Accessibilità</string>
     <string name="accidental_touches">Protezione contro i tocchi accidentali</string>
