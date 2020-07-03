@@ -376,6 +376,14 @@
     <string name="colorful">Colorful</string>
     <string name="colorful_subtext">Vuoi avere un BaldPhone più colorato?</string>
     <string name="edit_home_screen">Modifica schermata Home</string>
+    <string name="dual_sim">Dual sim</string>
+    <string name="dual_sim_subtext">Scegli come vuoi gestire due sim\nNota: Se scegli Mostra Opzioni, dovrai accettare un\'altra autorizzazione</string>
+    <string name="use_default">Usa predefinito</string>
+    <string name="show_options">Mostra opzioni</string>
+    <string name="read_phone_state">Lettura stato telefono</string>
+    <string name="read_phone_state_subtext">Autorizzazione necessaria per effettuare chiamate dalla sim secondaria</string>
+    <string name="choose_sim">Scegli la Sim</string>
+    <string name="choose_sim_subtext">Scegli la sim da cui vuoi effettuare la chiamata</string>
 
 
     <string-array name="names_for_screenshots">
