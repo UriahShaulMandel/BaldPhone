@@ -210,7 +210,7 @@
     <string name="set_default_dialer">Imposta come app predefinita per la chiamata</string>
     <string name="set_default_dialer_subtext">BaldPhone ha bisogno di essere impostata come app predefinita per le chiamate.</string>
     <string name="set_home_screen">Imposta Home page</string>
-    <string name="set_home_screen_subtext">Per utilizzare BaldPhone dovresti impostarlo come Home page. È una scelta che puoi sempre modificare da impostazioni avanzate.</string>
+    <string name="set_home_screen_subtext">Per utilizzare BaldPhone dovresti impostarlo come Home page. È una scelta che puoi sempre modificare dalle impostazioni avanzate.</string>
     <string name="set_keyboard">Imposta tastiera</string>
     <string name="setting_does_not_exist">Questa impostazione non esiste</string>
     <string name="settings">Impostazioni</string>
