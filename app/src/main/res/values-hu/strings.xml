@@ -1,0 +1,388 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about">Az alkalmazásról</string>
+    <string name="about_subtext">Szia!
+A nevem Uriah Shaul Mandel, és én fejlesztettem ezt a felületet amit használsz. Sok időt töltöttem vele, ha kérdésed van nyugodtan írj nekem emailt a baldphone.contact@gmail.com címen. (Kérlek angolul írj)</string>
+    <string name="accessibility_level">Akadálymentesítési szint</string>
+    <string name="accessibility_settings">Akadálymentes kezelés</string>
+    <string name="accidental_touches">Véletlen érintés elleni védelem</string>
+    <string name="accidental_touches_settings_subtext">Blokkolja a véletlen érintéseket olyan esetekben, ha a telefon le van takarva. Hasznos, ha zsebben tartva a telefon bekapcsol.</string>
+    <string name="accidental_touches_subtext">Véletlen érintés érzékelve.\nNyomd meg az OK gombot a folytatáshoz.\nHa ez az üzenet többször megjelenik, a beállításokban kikapcsolható a véletlen érintés elleni védelem.</string>
+    <string name="acknowledgments">Köszönetnyilvánítás</string>
+    <string name="adaptive">Adaptív</string>
+    <string name="add_alarm">Ébresztő hozzáadása</string>
+    <string name="add_alarm_quickly">Időzítő hozzáadása</string>
+    <string name="add_contact">Névjegy hozzáadása</string>
+    <string name="add_emergency_contact">Hozzáadás</string>
+    <string name="add_pill">Gyógyszer hozzáadása</string>
+    <string name="add_shortcut">Parancsikon hozzáadása</string>
+    <string name="add_to_favorite">Hozzáadás kedvencekhez</string>
+    <string name="add_to_home">Hozzáadás kezdőképernyőhöz</string>
+    <string name="add_to_sos">Hozzáadás SOS-hez</string>
+    <string name="address">Cím</string>
+    <string name="advanced_options">További beállítások</string>
+    <string name="afternoon">Délután</string>
+    <string name="airplane_mode">Repülőgépes üzemmód</string>
+    <string name="alarm_name">Ébresztő Neve</string>
+    <string name="alarm_volume">Ébresztő hangereje</string>
+    <string name="alarm_volume_subtext">Állíts hangerőt az ébresztőhöz.\nBalról jobbra növekszik.</string>
+    <string name="alarms">Ébresztők</string>
+
+    <string name="alarms_repeats_every">Ébresztő ismétlődik minden</string>
+    <string name="all_alarms">Minden ébresztő</string>
+    <string name="allow">Engedélyezés</string>
+    <string name="already_setted">Már beállítva!\nNyomj ide a változtatáshoz.</string>
+    <string name="an_error_has_occurred">Probléma történt</string>
+    <string name="and_welcome_to_baldphone">Üdvözöl a BaldPhone</string>
+
+    <string name="apps">Alkalmazások</string>
+    <string name="are_you_sure_you_want_to_delete___">Biztosan törölni akarod a következőt: %s?</string>
+    <string name="assistant">Asszisztens</string>
+    <string name="at_least_one_day_must_be_selected">Legalább egy napot választani kell!</string>
+    <string name="auto_brightness">Automatikus\nFényerő</string>
+    <string name="backspace">Törlés</string>
+    <string name="baldphone_bla_allow_permission">Engedélyezd a következőt:</string>
+    <string name="blocked">Tiltva</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="brightness">Fényerő</string>
+    <string name="brightness_subtext">Fényerő állítása</string>
+    <string name="cache_cleared_successfully">Gyorsítótár sikeresen ürítve!</string>
+    <string name="call">Hívás</string>
+    <string name="calling">Hívás folyamatban</string>
+
+    <string name="call_log">Hívás előzmények</string>
+    <string name="call_subtext">A híváshoz engedélyre van szükség.</string>
+    <string name="camera">Kamera</string>
+    <string name="camera_subtext">Szükség van engedélyre a zseblámpa bekapcsolásához.</string>
+    <string name="cancel">Mégse</string>
+    <string name="change_pills_time">Gyógyszer idejének módosítása</string>
+    <string name="change_system_settings_subtext">Engedélyezd a beállítások módosítását a betűméret és a fényerő módosításához.</string>
+    <string name="choose_friday">Pé</string>
+    <string name="choose_monday">Hé</string>
+    <string name="choose_saturday">Szo</string>
+    <string name="choose_sunday">Vas</string>
+    <string name="choose_thursday">Csüt</string>
+    <string name="choose_tuesday">Ke</string>
+    <string name="choose_wednesday">Sze</string>
+    <string name="clear">Törlés</string>
+    <string name="clear_cache">Gyorsítótár törlése</string>
+    <string name="clear_data">Minden adat törlése</string>
+    <string name="clear_data_subtext">Biztos minden felhasználói adatot törölni akarsz? A BaldPhone alkalmazás is gyári állapotba kerül.</string>
+    <string name="clear_data_subtext2">100%?</string>
+    <string name="clear_data_subtext3">Biztos?\nAz Igen opciót választva minden törlődik!</string>
+    <string name="clock">Óra</string>
+    <string name="coming_soon">Hamarosan jön!</string>
+    <string name="connection_settings">Csatlakozási lehetőségek</string>
+    <string name="contact_must_has_name">Meg kell adni a nevet!</string>
+    <string name="contact_not_created">Névjegy nem került mentésre!</string>
+    <string name="contacts">Névjegyek</string>
+    <string name="contacts_read_subtext">Szükség van erre az engedélyre a névjegyek olvasásához.</string>
+    <string name="contacts_subtext">Szükség van erre az engedélyre a névjegyek hozzáadásához.</string>
+    <string name="crash">Hoppá!\nA BaldPhone problémába ütközött és újraindul.</string>
+    <string name="current_time">Jelenlegi idő</string>
+    <string name="custom">Egyéni</string>
+    <string name="dark">Sötét</string>
+    <string name="delete">Törlés</string>
+    <string name="delete___">%s törlése?</string>
+    <string name="delete_all_alarms">Minden ébresztő törlése</string>
+    <string name="dialer">Tárcsázó</string>
+    <string name="display_settings">Kijelző</string>
+    <string name="done">Kész</string>
+    <string name="down">Le</string>
+    <string name="edit">Szerkesztés</string>
+    <string name="email">Email:</string>
+    <string name="enable_notification_access">Értesítés hozzáférés engedélyezése</string>
+    <string name="enable_notification_access_subtext">Add meg a hozzáférést az értesítésekhez</string>
+    <string name="enter">Bevitel</string>
+    <string name="enter_contact_or_phone_number">Névjegy neve:</string>
+    <string name="evening">Este</string>
+    <string name="example_of_different_text_sizes">Példa különböző méretű szövegre.\nOlvashatónak kell lennie és nem lóghat ki.</string>
+    <string name="external_storage_subtext">A képek mentéséhez szükség van erre az engedélyre.</string>
+    <string name="feedback">Visszajelzés küldése.</string>
+    <string name="feedback_cannot_be_empty">A visszajelzés nem lehet üres!</string>
+    <string name="feedback_sent_successfully">Visszajelzés elküldve!</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Válaszd ki a akadálymentesítési szintet</string>
+    <string name="font_size">Betűméret</string>
+    <string name="friday">Péntek</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Túl kicsi a billentyűzet?
+Megérkezett a BaldPhone NAGY billentyűzete!</string>
+    <string name="hello">Szia!</string>
+    <string name="help">Videó segítség</string>
+    <string name="hide">Elrejtés</string>
+    <string name="high_level">Magas szintű</string>
+    <string name="home_phone_number">Otthoni telefonszám</string>
+    <string name="hour">Óra</string>
+    <string name="huge">Óriási</string>
+    <string name="internet">Internet</string>
+    <string name="invoked_in">Meghívás</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Még egy dolog:\nAjánlott a BaldPhone-t használni alapértelmezett képernyőként.</string>
+    <string name="language">nyelv</string>
+    <string name="language_settings">Nyelv</string>
+    <string name="large">Nagy</string>
+    <string name="left_handed">Bal-kezes</string>
+    <string name="light">Könnyű</string>
+    <string name="location">Helymeghatározás</string>
+    <string name="emergency_services">Segélyhívás</string>
+    <string name="mail">Levél</string>
+    <string name="maps">Térkép</string>
+
+
+    <string name="medium">Közepes</string>
+    <string name="medium_level">Közepes szintű</string>
+    <string name="message">Üzenet</string>
+    <string name="messages">Üzenetek</string>
+    <string name="minute">Perc</string>
+    <string name="minutes">Percek</string>
+    <string name="missed">Nem fogadott</string>
+
+    <string name="mobile_phone_number">Mobil telefonszám</string>
+    <string name="monday">Hétfő</string>
+    <string name="more">tovább</string>
+    <string name="morning">Reggel</string>
+    <string name="name">Név</string>
+    <string name="named__">nevű</string>
+    <string name="new_alarm___was_created">Új ébresztő %s létrehozva!</string>
+    <string name="nfc">NFC</string>
+    <string name="no">Nem</string>
+    <string name="notes">Jegyzetek</string>
+    <string name="notes_settings">Jegyzetek</string>
+    <string name="notes_settings_subtext">Akarod a jegyzetek oldalt a kezdőképernyődön?</string>
+    <string name="notifications">Értesítések</string>
+
+    <string name="of">of</string>
+    <string name="off">Ki</string>
+    <string name="ok">OK</string>
+    <string name="on">Be</string>
+
+    <string name="only_once">Csak egyszer</string>
+
+
+    <string name="open">Nyítva</string>
+
+    <string name="outgoing">Kimenő</string>
+    <string name="page">Oldal</string>
+    <string name="permissions_part">Engedélyek</string>
+    <string name="personalization_settings">Személyre szabás</string>
+    <string name="phone">Telefon</string>
+    <string name="photo">Kép</string>
+    <string name="photos">Képek</string>
+    <string name="pill_added">Gyógyszer hozzáadva!</string>
+    <string name="pill_name">Gyógyszer neve</string>
+    <string name="pills">Gyógyszerek</string>
+    <string name="press_longer">Hosszan nyomd!</string>
+    <string name="timer">Időzítő</string>
+    <string name="read_call_log">Hívási előrmények olvasása</string>
+    <string name="read_call_log_subtext">Szükség van erre az engedélyre a hívási előzmények olvasásához.</string>
+    <string name="read_contacts">Névjegyek olvasása</string>
+    <string name="received">Fogadott</string>
+    <string name="recent">Közelmúltban</string>
+    <string name="regular_level">Általános szintű</string>
+
+    <string name="remove_from_favorite">Eltávolítás kedvencek közül</string>
+    <string name="remove_from_home">Eltávolítás a kezdőképernyőről</string>
+    <string name="remove_from_sos">Eltávolítás az SOS-ből</string>
+    <string name="remove_shortcut">Parancsikon eltávolítása</string>
+    <string name="removed_all_alarms">Minden ébresztő eltávolítva!</string>
+    <string name="repeats_every_day">Minden nap</string>
+    <string name="right_handed">Jobb-kezes</string>
+
+    <string name="saturday">Szombat</string>
+    <string name="save">Mentés</string>
+    <string name="send">Küldés</string>
+    <string name="set_default_dialer">Alapértelmezett telefon alkalmazás választása</string>
+    <string name="set_default_dialer_subtext">BaldPhone kell hogy legyen az alapértelmezett telefon alkalmazás.</string>
+    <string name="set_home_screen">Kezdőképernyő beállítása</string>
+    <string name="set_home_screen_subtext">A BaldPhone használatához be kell állítanod kezdőképernyőnek. Ez a beállítás később visszavonható.</string>
+    <string name="set_keyboard">Billentyűzet beállítása.</string>
+    <string name="setting_does_not_exist">Beállítás nem létezik.</string>
+    <string name="settings">Beállítások</string>
+    <string name="settings_permission">Beállítások hozzáférési engedély</string>
+    <string name="share">Megosztás</string>
+    <string name="share_actual_text">Szia!
+A BaldPhone platformot használom, ami lecseréli a telefonom kis gombjait nagy jól olvasható felratokra. Ha téged is érdekel nézd meg ezen az oldalon:
+https://sites.google.com/view/baldphone</string>
+    <string name="share_bald_phone_subtext">Tudsz valakit akit érdekelne a BaldPhone felület? Küld el neki!</string>
+    <string name="share_baldphone">BaldPhone megosztása</string>
+    <string name="share_contact">Névjegy megosztása</string>
+    <string name="share_differently">Megosztás másik alkalmazáson keresztül</string>
+    <string name="share_via_whatsapp">Megosztás Whatsappon</string>
+    <string name="shift">shift</string>
+    <string name="show">Tovább</string>
+    <string name="small">Kicsi</string>
+    <string name="snooze">Szundi</string>
+    <string name="sos">SOS</string>
+    <string name="sos_is_full">Az SOS tele van!</string>
+    <string name="sos_is_full_subtext">Az SOS tele van. Távolíts el névjegyeket az SOS menüből mielőtt újat adnál hozzá.</string>
+    <string name="speak">Beszéd</string>
+    <string name="speech_to_text">Beszéd szöveggé alakítása</string>
+    <string name="strong_hand">Domináns kéz</string>
+    <string name="strong_hand_subtext">Válaszd ki a domináns kezedet és átállítjuk a felületet.</string>
+    <string name="submit">küldés</string>
+    <string name="sunday">Vasárnap</string>
+    <string name="technical_information">Technikai Információk</string>
+    <string name="theme_settings">Téma</string>
+    <string name="theme_settings_subtext">Válassz témát</string>
+
+    <string name="thursday">Csütörtök</string>
+    <string name="time_changer">Gyógyszer Idejének Módosítása</string>
+    <string name="tiny">Apró</string>
+    <string name="to___days_and___hours_from_now">%d nap és %d óra múlva</string>
+    <string name="to___hours_and___minutes_from_now">%d nap és %d perc múlva</string>
+    <string name="to___minuets_from_now">%d perc múlva</string>
+    <string name="today">Ma</string>
+    <string name="took">Bevéve!</string>
+    <string name="tuesday">Kedd</string>
+    <string name="uninstall">Törlés</string>
+    <string name="uninstall_subtext">Biztosan törölni akarod %s-t?\n%s adatai örökre elvesznek.</string>
+    <string name="up">Fel</string>
+    <string name="video">Videó</string>
+    <string name="video_tutorials">Videó segítségek</string>
+    <string name="videos">Videó</string>
+
+    <string name="voice_mail">Üzenetrögzítő</string>
+    <string name="wednesday">Szerda</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="wifi">Wifi</string>
+    <string name="will_repeat_only_once">Csak egyszer ismétlődik!</string>
+    <string name="write">Írás</string>
+    <string name="write_contacts">Névjegyzék Írása</string>
+    <string name="write_external_storage">Külső tárhelyre írás</string>
+    <string name="yes">Igen</string>
+    <string name="yesterday">Tegnap</string>
+    <string name="nothing">Semmi</string>
+    <string name="no_contacts_found">Nem található névjegy</string>
+    <string name="no_alarms">Nincs ébresztő!\nHozz létre egyet a lenti gombokkal.</string>
+    <string name="no_pills">Nincs gyógyszer értesítő!\nHozz létre egyet a lenti gombbal.</string>
+    <string name="clear_all_notifications">Értesítések törlése</string>
+    <string name="clear_cache_subtext">Biztosan törölni akarod a gyorsítótárat? Az ideiglenes fájlok törlése megoldhat néhány problémát, de a kezdőképernyő tartalma elveszik.</string>
+    <string name="permissions_calm">Szia! A BaldPhone alkalmazásnak szüksége van néhány engedélyre, hogy probléma nélkül működjön. Ijesztően hangozhat, de semmilyen adat nem hagyja el a telefont. Az OK-ra nyomva elfogadod az engedélykérést.</string>
+    <string name="pending_update">Frissítés függőben.</string>
+    <string name="download">Letöltés</string>
+    <string name="install_updates">Frissítések telepítése</string>
+    <string name="install_updates_subtext">Szükséges engedély a BaldPhone frissítéséhez.</string>
+    <string name="a_new_update_is_available">Egy új frissítés érhető el! A frissítések fontosak a BaldPhone zavartalan működéséhez.</string>
+    <string name="current_version">Jelenlegi verzió:\n</string>
+    <string name="new_version">Új verzió:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">Új frissítés érhető el!</string>
+    <string name="install">Telepítés</string>
+    <string name="data_warning">Adat figyelmeztetés</string>
+    <string name="data_warning_subtext">Nem vagy wifi-hez kapcsolódva. Az alkalmazás körülbelül 3MB-ot fog letölteni. Folytatod?</string>
+    <string name="update_message_is_corrupted">Frissítési üzenet hiba</string>
+    <string name="check_for_updates">Frissítések ellenőrzése</string>
+    <string name="could_not_connect_to_server">Nem lehet csatlakozni a szerverhez!</string>
+    <string name="could_not_connect_to_internet">Nem lehet csatlakozni az internethez!</string>
+    <string name="could_not_start_the_download">Nem lehet elindítani a letöltést!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">Letöltött frissítési fájlt nem sikerült törölni!</string>
+    <string name="downloading">Letöltés...</string>
+
+    <string name="baldphone_is_up_to_date">A BaldPhone alkalmazás legfrissebb verzióját használod!</string>
+    <string name="what_s_new">Újdonságok</string>
+    <string name="download_finished">Letöltés kész</string>
+    <string name="downloading_updates">Frissítések Letöltése...</string>
+    <string name="installing_doesn_t_work">Telepítés nem működik?</string>
+    <string name="try_now">Kipróbálás Most</string>
+    <string name="download_progress">Letöltési folyamat</string>
+    <string name="what_do_you_want_to_do_with___">Mit akarsz tenni vele: %s?</string>
+    <string name="crash_reports">Összeomlási jelentés</string>
+    <string name="crash_reports_subtext">Az összeomlási jelentések elküldése segíti a BaldPhone alkamazás fejlesztését.</string>
+    <string name="custom_app">Egyéni alkalmazás</string>
+    <string name="custom_app_subtext">Válassz egyéni alkalmazást a kezdőképernyőre</string>
+    <string name="no_app_was_found">Nem található az alkalmazás!</string>
+    <string name="alarm">Ébresztő</string>
+    <string name="no_new_notifications">Nincsenek új értesítések.</string>
+    <string name="sound">Hang</string>
+    <string name="mute">Néma</string>
+    <string name="vibrate">Rezgő</string>
+    <string name="your_phone_doesnt_have_assistant_installed">A telefonodon nincsen asszisztens telepítve.</string>
+
+
+    <string name="status_bar_settings">Állapotjelző sáv</string>
+    <string name="status_bar_settings_subtext">Hol akarod hogy látszódjon az állapotjelző sáv?</string>
+    <string name="only_home_screen">Csak a kezdőképernyőn</string>
+    <string name="nowhere">Sehol</string>
+    <string name="everywhere">Mindenhol</string>
+
+
+    <string name="share_photo">Fotó megosztása</string>
+
+    <string name="choose_language_for_keyboard">Nyelv választása</string>
+    <string name="hebrew">Héber</string>
+    <string name="english">Angol</string>
+
+    <string name="search">Keresés</string>
+    <string name="next">Következő</string>
+    <string name="go">Mehet</string>
+
+
+    <string name="dialer_sounds">Tárcsázási Hang</string>
+    <string name="dialer_sounds_subtext">Válaszd ki hogy akarsz-e tárcsázási hangot</string>
+    <string name="low_battery_alert">Alacsony töltöttségi szint jelzés</string>
+    <string name="low_battery_alert_subtext">Válaszd ki, hogy az állapotjelző sáv 20% töltöttségi szint alatt pirosan jelezzen-e.</string>
+
+    <string name="also_available_at">Szintén elérhető a \nbaldphone.contact@gmail.com\nA visszajelzés nyelve angol vagy héber legyen.</string>
+    <string name="grant_all_permissions">Minden engedély megadása</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+    <string name="donate">Adomány</string>
+    <string name="emergency_button">Vészhívó gomb</string>
+    <string name="emergency_settings_subtext">Válaszd ki, hogy akarsz-e vészjívó gombot a kezdőképernyőn</string>
+    <string name="private_number">Privát Szám</string>
+    <string name="swipe_left_or_right">Húzd jobbra vagy balra</string>
+    <string name="press_next_or_back_buton">Nyomd meg a következő vagy előző gombot</string>
+    <string name="click_delay">Nyomási késleltetés</string>
+    <string name="no_delay">Nincs késleltetés</string>
+    <string name="scrolling">Lapozás</string>
+    <string name="arrows">Nyilak</string>
+    <string name="swipe">Húzás</string>
+    <string name="_long">Hosszú</string>
+    <string name="_short">Rövid</string>
+    <string name="do_you_want_to_save_your_changes">Módosítások mentése?</string>
+    <string name="discard">Elvetés</string>
+    <string name="no_recent_calls">Nincsen híváselőzmény</string>
+    <string name="apps_sort_method">Alkalmazások rendezése</string>
+    <string name="apps_sort_method_subtext">Alkalmazások rendezése négyzetrácsba, vagy betű szerint csoportba.</string>
+    <string name="groups">Csoportok</string>
+    <string name="one_grid">Egy Rács</string>
+    <string name="colorful">Színes</string>
+    <string name="colorful_subtext">Akarod színesebbé tenni a BaldPhone-t?</string>
+    <string name="edit_home_screen">Kezdőképernyő szerkesztése</string>
+    <string name="dual_sim">Két SIM</string>
+    <string name="dual_sim_subtext">Válaszd ki hogyan akarod a két SIM kártyát kezelni.</string>
+    <string name="use_default">Alapértelmezés használata</string>
+    <string name="show_options">Lehetőségek megjelenítése</string>
+    <string name="read_phone_state">Telefon állapotának olvasása</string>
+    <string name="read_phone_state_subtext">Szükséges engedély a második SIM kártyáról való telefonáláshoz.</string>
+    <string name="choose_sim">SIM választása</string>
+    <string name="choose_sim_subtext">Válaszd ki melyik SIM kártyáról akarsz hívni.</string>
+
+
+    <string-array name="names_for_screenshots">
+        <item>Keresztapa</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
+</resources>
