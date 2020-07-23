@@ -33,6 +33,7 @@ But if you have any problems with it, the old method will work just as fine
  5. propose file change
 
 ## Adding a new language to BaldPhone
+### Option 1
  1. Go to an existing language file: 
     - [Brazilian Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt-rBR/strings.xml) translated by [Kellyson Antunes](https://github.com/kellysonantunes)
     - [Chinese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-zh/strings.xml) translated by [thomassth](https://https://github.com/thomassth)
@@ -59,5 +60,11 @@ But if you have any problems with it, the old method will work just as fine
  5. Send me the file, and your name
  6. The new language together with credit will be added in the next release
  7. When the next release is published, please make sure the translations match
- 
- 
+
+### Option 2 - For git savvys 
+1. Fork the project
+2. Create a branch in your forked project called adding_(RFC language code)_translations
+3. Copy file X to new folder apps/src/main/res/values-(RFC language code)
+4. Add your language + credit to you to the list of languages in file translating/TRANSLATING.md
+5. Commit changes to your own branch
+6. Create a pull request in the original project
