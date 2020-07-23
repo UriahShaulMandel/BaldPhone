@@ -16,15 +16,14 @@
 
 <resources>
     <string name="about">Om denne app</string>
-    <string name="about_subtext">Hi!\nMy name is Uriah Shaul Mandel, and I\'m the developer of this platform.\n
-        I\'ve spent most of my \"adult\" life making this platform, and I\'ve released it for free, for all to
-        use.\nYou are more than welcome to contact me by email:\nbaldphone.contact@gmail.com
+    <string name="about_subtext">Hej!\nMit navn er Uriah Shaul Mandel og jeg er udvikleren bag denne app.\n
+        Jeg har brugt det meste af mit "voksen" liv på at lave denne app og jeg har gjort den gratis, så alle kan få gavn af den.\nDu er mere end velkommen til at kontakte mig på  email (skriv på engelsk):\nbaldphone.contact@gmail.com\nDen danske oversættelse er lavet af en tilfreds bruger, så hans mormor også kan få gavn af app'en &lt;3\nFejl i oversættelsen? Send rettelsen til baldphone@fam-petersen.eu
     </string>
     <string name="accessibility_level">Tilgængelighedsniveau</string>
     <string name="accessibility_settings">Tilgængelighedsindstillinger</string>
     <string name="accidental_touches">Beskyttelse mod utilsigtede berøringer</string>
-    <string name="accidental_touches_settings_subtext">Denne indstilling sørger for, at din telefon ikke registrerer utilsigtede berøringer, når telefonen f.eks. er i lommen eller under et lukket cover.\nHvis du har problemer med, at du ikke får alle berøringer registreret, så slå denne beskyttelse fra.</string>
-    <string name="accidental_touches_subtext">En utilsigtet berøring blev registreret\nTryk OK for at fortsætte med at bruge telefonen\nHvis denne advarsel kommer op hele tiden, kan du slå "Beskyttelse mod utilsigtede berøringer" fra under "Tilgængelighedsindstillinger"</string>
+    <string name="accidental_touches_settings_subtext">Denne indstilling sørger for, at din telefon ikke registrerer utilsigtede berøringer, når telefonen f.eks. er i lommen eller under et lukket cover.\nHvis du har problemer med, at ikke alle berøringer registreres, så slå denne beskyttelse fra.</string>
+    <string name="accidental_touches_subtext">En utilsigtet berøring blev registreret.\nTryk OK for at fortsætte med at bruge telefonen.\nHvis denne advarsel kommer op hele tiden, kan du slå "Beskyttelse mod utilsigtede berøringer" fra under "Tilgængelighedsindstillinger".</string>
     <string name="acknowledgments">Tak til</string>
     <string name="adaptive">Adaptiv</string>
     <string name="add_alarm">Tilføj alarm</string>
@@ -44,14 +43,12 @@
     <string name="alarm_volume">Lydstyrke for alarm</string>
     <string name="alarm_volume_subtext">Vælg lydstyrken for alarmer.\nLydstyrken øges fra venstre mod højre.</string>
     <string name="alarms">Alarmer</string>
-
     <string name="alarms_repeats_every">Alarmen gentages hver</string>
     <string name="all_alarms">Alle alarmer</string>
     <string name="allow">Tillad</string>
     <string name="already_setted">Er allerede indstillet!\nKlik her for at ændre til det</string>
     <string name="an_error_has_occurred">Der er sket en fejl!</string>
     <string name="and_welcome_to_baldphone">og velkommen til Baldphone</string>
-
     <string name="apps">Apps</string>
     <string name="are_you_sure_you_want_to_delete___">Er du sikker på, at du vil slette %s?</string>
     <string name="assistant">Assistent</string>
@@ -66,7 +63,6 @@
     <string name="cache_cleared_successfully">Midlertidig hukommelse blev ryddet op!</string>
     <string name="call">Opkald</string>
     <string name="calling">Ringer op</string>
-
     <string name="call_log">Opkaldsliste:</string>
     <string name="call_subtext">Denne rettighed er nødvendig for, at du kan ringe til dine kontakter.</string>
     <string name="camera">Kamera</string>
@@ -113,9 +109,7 @@
     <string name="enter">Indtast</string>
     <string name="enter_contact_or_phone_number">Indtast navn på kontakten:</string>
     <string name="evening">Aften</string>
-    <string name="example_of_different_text_sizes">Example of different text sizes\nShould be readable and not
-        overflow.
-    </string>
+    <string name="example_of_different_text_sizes">Eksempel på forskellige tekststørrelser.\nSkal være læsbare og ikke forsvinde ud over skærmen.</string>
     <string name="external_storage_subtext">This permission is required in order to save pictures.</string>
     <string name="feedback">Send Feedback</string>
     <string name="feedback_cannot_be_empty">Feedback cannot be empty!</string>
