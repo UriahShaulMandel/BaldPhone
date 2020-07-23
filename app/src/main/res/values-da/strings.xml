@@ -15,7 +15,7 @@
   -->
 
 <resources>
-    <string name="about">About</string>
+    <string name="about">Om denne app</string>
     <string name="about_subtext">Hi!\nMy name is Uriah Shaul Mandel, and I\'m the developer of this platform.\n
         I\'ve spent most of my \"adult\" life making this platform, and I\'ve released it for free, for all to
         use.\nYou are more than welcome to contact me by email:\nbaldphone.contact@gmail.com
