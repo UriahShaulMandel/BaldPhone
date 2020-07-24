@@ -204,7 +204,7 @@ public class HomePage1 extends HomeView {
         setupButton(BPrefs.CUSTOM_PHOTOS_KEY, bt_photos, v -> homeScreen.startActivity(new Intent(homeScreen, PhotosActivity.class)));
         setupButton(BPrefs.CUSTOM_CAMERA_KEY, bt_camera, v -> homeScreen.startActivity(getCameraIntent()));
         setupButton(BPrefs.CUSTOM_VIDEOS_KEY, bt_videos, v -> homeScreen.startActivity(new Intent(homeScreen, VideosActivity.class)));
-        setupButton(BPrefs.CUSTOM_PILLS_KEY, bt_reminders, v -> homeScreen.startActivity(homeScreen.getPackageManager().getLaunchIntentForPackage("com.simplemobiletools.calendar")));
+        setupButton(BPrefs.CUSTOM_PILLS_KEY, bt_reminders, v -> homeScreen.startActivity(homeScreen.getPackageManager().getLaunchIntentForPackage("com.simplemobiletools.calendar.pro")));
         setupButton(BPrefs.CUSTOM_APPS_KEY, bt_apps, v -> {
             if (!homeScreen.finishedUpdatingApps)
                 homeScreen.launchAppsActivity = true;
