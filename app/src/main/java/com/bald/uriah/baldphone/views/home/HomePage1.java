@@ -28,7 +28,6 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
-import android.net.Uri;
 import android.provider.Telephony;
 import android.util.ArrayMap;
 import android.util.AttributeSet;
@@ -50,7 +49,6 @@ import com.bald.uriah.baldphone.activities.alarms.AlarmsActivity;
 import com.bald.uriah.baldphone.activities.contacts.ContactsActivity;
 import com.bald.uriah.baldphone.activities.media.PhotosActivity;
 import com.bald.uriah.baldphone.activities.media.VideosActivity;
-import com.bald.uriah.baldphone.activities.pills.PillsActivity;
 import com.bald.uriah.baldphone.databases.apps.App;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabase;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
@@ -185,23 +183,8 @@ public class HomePage1 extends HomeView {
         setupButton(BPrefs.CUSTOM_RECENTS_KEY, bt_recent, v -> homeScreen.startActivity(new Intent(homeScreen, RecentActivity.class)));
         setupButton(BPrefs.CUSTOM_DIALER_KEY, bt_dialer, v -> homeScreen.startActivity(new Intent(homeScreen, DialerActivity.class)));
         setupButton(BPrefs.CUSTOM_CONTACTS_KEY, bt_contacts, v -> homeScreen.startActivity(new Intent(homeScreen, ContactsActivity.class)));
-        setupButton(BPrefs.CUSTOM_APP_KEY, bt_whatsapp, v -> {
-            if (S.isPackageInstalled(homeScreen, WHATSAPP_PACKAGE_NAME))
-                S.startComponentName(homeScreen, WHATSAPP_COMPONENT_NAME);
-            else
-                try {
-                    homeScreen.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + WHATSAPP_PACKAGE_NAME)));
-                } catch (android.content.ActivityNotFoundException e) {
-                    homeScreen.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + WHATSAPP_PACKAGE_NAME)));
-                }
-        });
-        setupButton(BPrefs.CUSTOM_ASSISTANT_KEY, bt_assistant, v -> {
-            try {
-                homeScreen.startActivity(new Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-            } catch (Exception e) {
-                BaldToast.from(homeScreen).setType(BaldToast.TYPE_ERROR).setText(R.string.your_phone_doesnt_have_assistant_installed).show();
-            }
-        });
+        setupButton(BPrefs.CUSTOM_APP_KEY, bt_whatsapp, v -> homeScreen.startActivity(homeScreen.getPackageManager().getLaunchIntentForPackage("com.enflick.android.TextNow")));
+        setupButton(BPrefs.CUSTOM_ASSISTANT_KEY, bt_assistant, v -> homeScreen.startActivity(homeScreen.getPackageManager().getLaunchIntentForPackage("ch.protonmail.android")));
         setupButton(BPrefs.CUSTOM_MESSAGES_KEY, bt_messages, v -> {
             try {
                 final ResolveInfo resolveInfo =
@@ -221,7 +204,7 @@ public class HomePage1 extends HomeView {
         setupButton(BPrefs.CUSTOM_PHOTOS_KEY, bt_photos, v -> homeScreen.startActivity(new Intent(homeScreen, PhotosActivity.class)));
         setupButton(BPrefs.CUSTOM_CAMERA_KEY, bt_camera, v -> homeScreen.startActivity(getCameraIntent()));
         setupButton(BPrefs.CUSTOM_VIDEOS_KEY, bt_videos, v -> homeScreen.startActivity(new Intent(homeScreen, VideosActivity.class)));
-        setupButton(BPrefs.CUSTOM_PILLS_KEY, bt_reminders, v -> homeScreen.startActivity(new Intent(homeScreen, PillsActivity.class)));
+        setupButton(BPrefs.CUSTOM_PILLS_KEY, bt_reminders, v -> homeScreen.startActivity(homeScreen.getPackageManager().getLaunchIntentForPackage("com.simplemobiletools.calendar")));
         setupButton(BPrefs.CUSTOM_APPS_KEY, bt_apps, v -> {
             if (!homeScreen.finishedUpdatingApps)
                 homeScreen.launchAppsActivity = true;

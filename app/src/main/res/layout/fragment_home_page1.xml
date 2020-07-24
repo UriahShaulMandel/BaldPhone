@@ -109,8 +109,8 @@
             android:layout_weight="1"
             android:background="@drawable/style_for_buttons_transparent"
             android:visibility="visible"
-            app:__src="@drawable/whatsapp_on_background"
-            app:__text="@string/whatsapp" />
+            app:__src="@drawable/textnow_on_background"
+            app:__text="TextNow" />
 
         <include layout="@layout/ll_divider_as_horizontal_layout" />
 
@@ -121,8 +121,8 @@
             android:layout_weight="1"
             android:background="@drawable/style_for_buttons_transparent"
             android:visibility="visible"
-            app:__src="@drawable/voice_on_background"
-            app:__text="@string/assistant" />
+            app:__src="@drawable/mail_on_button"
+            app:__text="Proton Mail" />
 
         <include layout="@layout/ll_divider_as_horizontal_layout" />
 
@@ -209,8 +209,8 @@
             android:layout_weight="1"
             android:background="@drawable/style_for_buttons_transparent"
             android:visibility="visible"
-            app:__src="@drawable/pill"
-            app:__text="@string/pills" />
+            app:__src="@drawable/calender_on_background"
+            app:__text="Simple Calender" />
 
         <include layout="@layout/ll_divider_as_horizontal_layout" />
 
