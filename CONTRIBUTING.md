@@ -6,5 +6,5 @@ You can contribute by:
   - [Translating BaldPhone to other languages](https://github.com/UriahShaulMandel/BaldPhone/blob/master/translating/TRANSLATING.md)
   - Using BaldPhone and sending feedback
   - Sharing BaldPhone with others
-  - Starring this project :)
+  - Star, Watch or Fork this project :)
   - [Donating small amounts of money](https://www.patreon.com/baldphone)
