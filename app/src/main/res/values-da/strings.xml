@@ -16,8 +16,8 @@
 
 <resources>
     <string name="about">Om denne app</string>
-    <string name="about_subtext">Hej!\nMit navn er Uriah Shaul Mandel og jeg er udvikleren bag denne app.\n
-        Jeg har brugt det meste af mit "voksen" liv på at lave denne app og jeg har gjort den gratis, så alle kan få gavn af den.\nDu er mere end velkommen til at kontakte mig på  email (skriv på engelsk):\nbaldphone.contact@gmail.com\nDen danske oversættelse er lavet af en tilfreds bruger, så hans mormor også kan få gavn af app'en &lt;3\nFejl i oversættelsen? Send rettelsen til baldphone@fam-petersen.eu
+    <string name="about_subtext">Hej!\nMit navn er Uriah Shaul Mandel. Jeg er udvikleren bag denne app.\n
+        Jeg har brugt det meste af mit \"voksenliv\" på at lave denne app. Jeg har gjort den gratis, så alle kan få gavn af den.\nDu er mere end velkommen til at kontakte mig på  email (skriv på engelsk):\nbaldphone.contact@gmail.com\nDen danske oversættelse er lavet af en tilfreds bruger, så hans mormor også kan få gavn af app\'en &lt;3\nFejl i oversættelsen? Send rettelsen til baldphone@fam-petersen.eu
     </string>
     <string name="accessibility_level">Tilgængelighedsniveau</string>
     <string name="accessibility_settings">Tilgængelighedsindstillinger</string>
@@ -80,17 +80,17 @@
     <string name="clear">Ryd</string>
     <string name="clear_cache">Ryd midlertidig hukommelse</string>
     <string name="clear_data">Slet al data</string>
-    <string name="clear_data_subtext">Er du sikker på, at du ønsker at slette al brugerdata? BaldPhone-app'en vil vende tilbage til fabriksindstillingerne (som da du lige havde installeret den).</string>
+    <string name="clear_data_subtext">Er du sikker på, at du ønsker at slette al brugerdata? BaldPhone-app\'en vil vende tilbage til fabriksindstillingerne (som da du lige havde installeret den).</string>
     <string name="clear_data_subtext2">Helt sikker?</string>
-    <string name="clear_data_subtext3">Absolut sikker?\nHvis du trykker "Ja" slettes ALT brugerdata og app'en mister alle dine indstillinger!</string>
+    <string name="clear_data_subtext3">Absolut sikker?\nHvis du trykker "Ja" slettes ALT brugerdata og app\'en mister alle dine indstillinger!</string>
     <string name="clock">Ur</string>
     <string name="coming_soon">Kommer snart!</string>
     <string name="connection_settings">Forbindelser</string>
     <string name="contact_must_has_name">Du SKAL skriv et navn på kontakten!</string>
     <string name="contact_not_created">Kontakten blev ikke oprettet!</string>
     <string name="contacts">Kontakter</string>
-    <string name="contacts_read_subtext">enne rettighed er nødvendig for, at du app'en kan se dine kontakter.</string>
-    <string name="contacts_subtext">enne rettighed er nødvendig for, at du kan tilføje nye kontakter.</string>
+    <string name="contacts_read_subtext">Denne rettighed er nødvendig for, at app\'en kan se og vise dine kontakter.</string>
+    <string name="contacts_subtext">Denne rettighed er nødvendig for, at du kan tilføje nye kontakter.</string>
     <string name="crash">Hov!\nBaldPhone har kludret i det og er nødt til at genstarte sig selv nu.</string>
     <string name="current_time">Nuværende tid</string>
     <string name="custom">Tilpasset</string>
@@ -231,48 +231,48 @@
     <string name="shift">shift</string>
     <string name="show">Show</string>
     <string name="small">Small</string>
-    <string name="snooze">Snooze</string>
+    <string name="snooze">Slumre</string>
     <string name="sos">SOS</string>
     <string name="sos_is_full">SOS is full!</string>
     <string name="sos_is_full_subtext">SOS is full! please remove other SOS contacts before adding a new one</string>
-    <string name="speak">Speak</string>
+    <string name="speak">Tal</string>
     <string name="speech_to_text">Speech to Text</string>
     <string name="strong_hand">Dominant Hand</string>
     <string name="strong_hand_subtext">Choose your dominant hand to adjust the user interface.</string>
-    <string name="submit">submit</string>
-    <string name="sunday">Sunday</string>
+    <string name="submit">Indsend</string>
+    <string name="sunday">Søndag</string>
     <string name="technical_information">Technical Information</string>
-    <string name="theme_settings">Theme</string>
-    <string name="theme_settings_subtext">Choose a theme</string>
+    <string name="theme_settings">Tena</string>
+    <string name="theme_settings_subtext">Vælg et tema</string>
 
-    <string name="thursday">Thursday</string>
-    <string name="time_changer">Pills Time Changer</string>
-    <string name="tiny">Tiny</string>
+    <string name="thursday">Torsdag</string>
+    <string name="time_changer">Ændre tid for pilletagning</string>
+    <string name="tiny">Meget lille</string>
     <string name="to___days_and___hours_from_now">to %d days and %d hours from now</string>
     <string name="to___hours_and___minutes_from_now">to %d hours and %d minutes from now</string>
     <string name="to___minuets_from_now">to %d minutes from now</string>
-    <string name="today">Today</string>
-    <string name="took">Took!</string>
+    <string name="today">I dag</string>
+    <string name="took">Taget!</string>
     <string name="tuesday">Tuesday</string>
     <string name="uninstall">Uninstall</string>
     <string name="uninstall_subtext">Are you sure you want to uninstall %s?\n%s\'s data will be gone forever!</string>
-    <string name="up">Up</string>
+    <string name="up">Op</string>
     <string name="video">Video</string>
-    <string name="video_tutorials">Video Tutorials</string>
-    <string name="videos">Videos</string>
+    <string name="video_tutorials">Videoinstruktioner</string>
+    <string name="videos">Videoer</string>
 
-    <string name="voice_mail">Voice Mail</string>
-    <string name="wednesday">Wednesday</string>
-    <string name="whatsapp">Whatsapp</string>
+    <string name="voice_mail">Telefonsvarer</string>
+    <string name="wednesday">Onsdag</string>
+    <string name="whatsapp">\"Whatsapp\"</string>
     <string name="wifi">Wifi</string>
     <string name="will_repeat_only_once">will repeat only once!</string>
-    <string name="write">Write</string>
+    <string name="write">Skriv</string>
     <string name="write_contacts">Write Contacts</string>
     <string name="write_external_storage">Write external storage</string>
-    <string name="yes">Yes</string>
-    <string name="yesterday">Yesterday</string>
-    <string name="nothing">Nothing</string>
-    <string name="no_contacts_found">No Contacts Found!</string>
+    <string name="yes">Ja</string>
+    <string name="yesterday">I går</string>
+    <string name="nothing">Ingenting</string>
+    <string name="no_contacts_found">Der blev ikke fundet nogen kontakter!</string>
     <string name="no_alarms">No Alarms\nCreate one by clicking\n\"Add Alarm\"\nOr\n\"Add Timer\"</string>
     <string name="no_pills">No Pills\nCreate one by clicking\n\"Add Pill\"</string>
     <string name="clear_all_notifications">Clear All Notifications</string>
