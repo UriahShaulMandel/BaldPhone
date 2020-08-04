@@ -15,9 +15,9 @@
   -->
 
 <resources>
-    <string name="about">À propos</string>
-    <string name="about_subtext">Bonjour\nJe m\'appelle Uriah Shaul Mandel et je suis le développeur de cette plateforme.\nJe vis à
-        Tel Aviv.\nBeaucoup de temps et d\'efforts ont été nécessaires pour créer cette plateforme et pour qu\'elle soit gratuite à utiliser pour tout le monde.\nVous pouvez me contacter avec plaisir par e-mail :\nbaldphone.contact@gmail.com
+    <string name="about">Over</string>
+    <string name="about_subtext">Hallo\nMijn naam is Uriah Shaul Mandel en ik ben de ontwikkelaar van dit platform.\nIk woon in
+        Tel Aviv.\nEr is veel tijd en moeite nodig geweest om dit platform te creëren en zodat het gratis is voor iedereen.\nU kunt contact met mij opnemen via e-mail :\nbaldphone.contact@gmail.com
     </string>
     <string name="accessibility_level">Niveau d\'accessibilité</string>
     <string name="accessibility_settings">Accessibilité</string>
