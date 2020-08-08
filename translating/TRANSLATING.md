@@ -11,6 +11,7 @@ But if you have any problems with it, the old method will work just as fine
     - [Brazilian Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt-rBR/strings.xml) translated by [Kellyson Antunes](https://github.com/kellysonantunes)
     - [Chinese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-zh/strings.xml) translated by [thomassth](https://https://github.com/thomassth)
     - [Czech](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-cs/strings.xml) translated by Tadeáš Horák
+    - [Dutch](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-nl/strings.xml) translated by Floor van den Heuvel
     - [English](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values/strings.xml)
     - [French](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-fr/strings.xml) translated by [Primokorn](https://github.com/Primokorn)
     - [German](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-de/strings.xml) translated by [Caibot](https://github.com/Caibot)
@@ -38,6 +39,7 @@ But if you have any problems with it, the old method will work just as fine
     - [Brazilian Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt-rBR/strings.xml) translated by [Kellyson Antunes](https://github.com/kellysonantunes)
     - [Chinese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-zh/strings.xml) translated by [thomassth](https://https://github.com/thomassth)
     - [Czech](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-cs/strings.xml) translated by Tadeáš Horák
+    - [Dutch](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-nl/strings.xml) translated by Floor van den Heuvel
     - [English](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values/strings.xml)
     - [French](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-fr/strings.xml) translated by [Primokorn](https://github.com/Primokorn)
     - [German](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-de/strings.xml) translated by [Caibot](https://github.com/Caibot)
