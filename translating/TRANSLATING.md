@@ -61,5 +61,3 @@ But if you have any problems with it, the old method will work just as fine
  5. Send me the file, and your name
  6. The new language together with credit will be added in the next release
  7. When the next release is published, please make sure the translations match
- 
- <!-- Add guidance for creation of a new language with "pure Git" here -->

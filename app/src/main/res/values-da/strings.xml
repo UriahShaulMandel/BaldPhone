@@ -109,153 +109,132 @@
     <string name="enter">Indtast</string>
     <string name="enter_contact_or_phone_number">Indtast navn på kontakten:</string>
     <string name="evening">Aften</string>
-    <string name="example_of_different_text_sizes">Eksempel på forskellige tekststørrelser.\nSkal være læsbare og ikke forsvinde ud over skærmen.</string>
-    <string name="external_storage_subtext">This permission is required in order to save pictures.</string>
-    <string name="feedback">Send Feedback</string>
-    <string name="feedback_cannot_be_empty">Feedback cannot be empty!</string>
-    <string name="feedback_sent_successfully">Feedback sent successfully!</string>
-    <string name="first_please_select_how_you_want_to_interact_with_buttons">Please select the level of accessibility
-    </string>
-    <string name="font_size">Font Size</string>
-    <string name="friday">Friday</string>
-    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Having a hard time using
-        the phone\'s keyboard? use Baldphone\'s BIG keyboard instead!
-    </string>
-    <string name="hello">Hello</string>
-    <string name="help">Video Tutorial</string>
-    <string name="hide">Hide</string>
-    <string name="high_level">High Level</string>
-    <string name="home_phone_number">Home phone number</string>
-    <string name="hour">Hour</string>
-    <string name="huge">Huge</string>
+    <string name="example_of_different_text_sizes">Eksempel på forskellige tekststørrelser.\nSkal være læslige og ikke forsvinde ud over skærmen.</string>
+    <string name="external_storage_subtext">Denne rettighed er nødvendig for at kunne gemme billeder.</string>
+    <string name="feedback">Send feedback</string>
+    <string name="feedback_cannot_be_empty">Du skal skrive noget feedback!</string>
+    <string name="feedback_sent_successfully">Feedback blev sendt!</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Vælg tilgængelighedsniveau</string>
+    <string name="font_size">Skriftstørrelse</string>
+    <string name="friday">Fredag</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Har du svært ved at bruge telefonens tastatur, så brug Baldphones \"BIG keyboard\" i stedet!</string>
+    <string name="hello">Hej</string>
+    <string name="help">Videoinstruktion</string>
+    <string name="hide">Skjul</string>
+    <string name="high_level">Højt niveau</string>
+    <string name="home_phone_number">Hjemmetelefonnummer</string>
+    <string name="hour">Time</string>
+    <string name="huge">Meget stor</string>
     <string name="internet">Internet</string>
-    <string name="invoked_in">Invoked in:</string>
-    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">One last
-        thing:\nIt\'s highly recommended to use Baldphone\'s home screen as the default home launcher
-    </string>
-    <string name="language">language</string>
-    <string name="language_settings">Language</string>
-    <string name="large">Large</string>
-    <string name="left_handed">Left Handed</string>
-    <string name="light">Light</string>
-    <string name="location">Location</string>
-    <string name="emergency_services">Emergency Services</string>
-    <string name="mail">Mail</string>
-    <string name="maps">Maps</string>
-
-
+    <string name="invoked_in">Aktiveret om:</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">En sidste ting:\nDet anbefales kraftigt at bruge Baldphone\'s \"skrivebord\" i stedet for telefonens eget.</string>
+    <string name="language">sprog</string>
+    <string name="language_settings">Sprogindstillinger</string>
+    <string name="large">Stor</string>
+    <string name="left_handed">Venstrehåndet</string>
+    <string name="light">Let</string>
+    <string name="location">Lokation</string>
+    <string name="emergency_services">Alarmcentralen</string> <!-- Tjek navn -->
+    <string name="mail">Email</string>
+    <string name="maps">Kort</string> <!-- Or Google Maps? -->
     <string name="medium">Medium</string>
-    <string name="medium_level">Medium Level</string>
-    <string name="message">Message</string>
-    <string name="messages">Messages</string>
-    <string name="minute">Minute</string>
-    <string name="minutes">Minutes</string>
-    <string name="missed">Missed</string>
-
-    <string name="mobile_phone_number">Mobile phone number</string>
-    <string name="monday">Monday</string>
-    <string name="more">more</string>
-    <string name="morning">Morning</string>
-    <string name="name">Name</string>
-    <string name="named__">named</string>
-    <string name="new_alarm___was_created">new alarm %s was created!</string>
+    <string name="medium_level">Mellem niveau</string>
+    <string name="message">Besked</string>
+    <string name="messages">Beskeder</string>
+    <string name="minute">Minut</string>
+    <string name="minutes">Minutter</string>
+    <string name="missed">Ubesvaret</string> <!-- Tjek navn -->
+    <string name="mobile_phone_number">Mobiltelefonnummer</string>
+    <string name="monday">Mandag</string>
+    <string name="more">mere</string>
+    <string name="morning">Morgen</string>
+    <string name="name">Navn</string>
+    <string name="named__">Navngivet</string>
+    <string name="new_alarm___was_created">Ny alarm %s oprettet!</string>
     <string name="nfc">NFC</string>
-    <string name="no">No</string>
-    <string name="notes">Notes</string>
-    <string name="notes_settings">Notes</string>
-    <string name="notes_settings_subtext">Choose if you want to have a Notes page on the home screen.</string>
-    <string name="notifications">Notifications</string>
-
-    <string name="of">of</string>
-    <string name="off">Off</string>
+    <string name="no">Nej</string>
+    <string name="notes">Noter</string>
+    <string name="notes_settings">Noter</string>
+    <string name="notes_settings_subtext">Vælg om du vil have en dedikeret side på telefonens \"skrivebord\" til at tage noter.</string>
+    <string name="notifications">Notifikationer</string>
+    <string name="of">af</string>
+    <string name="off">Slukket</string>
     <string name="ok">OK</string>
-    <string name="on">On</string>
+    <string name="on">Tændt</string>
+    <string name="only_once">Kun én gang</string>
+    <string name="open">Åbn</string>
+    <string name="outgoing">Udgående</string>
+    <string name="page">Side</string>
+    <string name="permissions_part">Rettigheder for app\'en</string>
+    <string name="personalization_settings">Personlig opsætning</string>
+    <string name="phone">Telefon</string>
+    <string name="photo">Foto</string>
+    <string name="photos">Fotos</string>
+    <string name="pill_added">Pille tilføjet!</string>
+    <string name="pill_name">Pillenavn</string>
+    <string name="pills">Piller</string>
+    <string name="press_longer">Tryk og hold længere tid!</string>
+    <string name="timer">Stopur</string>
+    <string name="read_call_log">Læs opkaldshistorik</string>
+    <string name="read_call_log_subtext">Denne rettighed er nødvendig for at app\'en kan vise din opkaldshistorik.</string>
+    <string name="read_contacts">Læs kontaktliste</string>
+    <string name="received">Modtaget</string>
+    <string name="recent">Nyeste</string>
+    <string name="regular_level">Normalt niveau</string>
+    <string name="remove_from_favorite">Fjern fra Favoritter</string>
+    <string name="remove_from_home">Fjern fra \"skrivebord\"</string>
+    <string name="remove_from_sos">Fjern fra SOS</string>
+    <string name="remove_shortcut">Fjern genvej</string>
+    <string name="removed_all_alarms">Alle alarmer blev slettet.</string>
+    <string name="repeats_every_day">Hver dag</string>
+    <string name="right_handed">Højrehåndet</string>
 
-    <string name="only_once">Only once</string>
-
-
-    <string name="open">Open</string>
-
-    <string name="outgoing">Outgoing</string>
-    <string name="page">Page</string>
-    <string name="permissions_part">Permissions</string>
-    <string name="personalization_settings">Personalization</string>
-    <string name="phone">Phone</string>
-    <string name="photo">Photo</string>
-    <string name="photos">Photos</string>
-    <string name="pill_added">Pill added!</string>
-    <string name="pill_name">Pill Name</string>
-    <string name="pills">Pills</string>
-    <string name="press_longer">Press Longer!</string>
-    <string name="timer">Timer</string>
-    <string name="read_call_log">Read Call History</string>
-    <string name="read_call_log_subtext">This permission is required in order to view the call history.</string>
-    <string name="read_contacts">Read contacts</string>
-    <string name="received">Received</string>
-    <string name="recent">Recent</string>
-    <string name="regular_level">Regular level</string>
-
-    <string name="remove_from_favorite">Remove from Favorite</string>
-    <string name="remove_from_home">Remove from Home</string>
-    <string name="remove_from_sos">Remove from SOS</string>
-    <string name="remove_shortcut">Remove shortcut</string>
-    <string name="removed_all_alarms">Removed all alarms!</string>
-    <string name="repeats_every_day">Every day</string>
-    <string name="right_handed">Right Handed</string>
-
-    <string name="saturday">Saturday</string>
-    <string name="save">Save</string>
+    <string name="saturday">Lørdag</string>
+    <string name="save">Gem</string>
     <string name="send">Send</string>
-    <string name="set_default_dialer">Set Default Calling App</string>
-    <string name="set_default_dialer_subtext">BaldPhone needs to be marked as the default calling app.</string>
-    <string name="set_home_screen">Set Home Screen</string>
-    <string name="set_home_screen_subtext">In order to use BaldPhone, you should set it as home screen.\nIt is
-        reversible and can be changed in the settings.
+    <string name="set_default_dialer">Indstil standardapp til brug for opkald</string>
+    <string name="set_default_dialer_subtext">BaldPhone skal være indstillet til at være din telefons standardapp for opkald.</string>
+    <string name="set_home_screen">Indstil standardapp for visning af \"skrivebord\".</string>
+    <string name="set_home_screen_subtext">For at kunne bruge BaldPhone, skal du indstille den til at være din telefons \"skrivebord\".\nDet kan ændres igen under telefonens indstillinger og organiseringen af dit nuværende \"skrivebord\" vil stadig være der.</string>
+    <string name="set_keyboard">Indstil tastatur</string>
+    <string name="setting_does_not_exist">Indstilling findes ikke</string>
+    <string name="settings">Indstillinger</string>
+    <string name="settings_permission">Rettigheder for indstillinger</string>
+    <string name="share">Del</string>
+    <string name="share_actual_text">Hej,\nJeg bruger en app, som hedder "BaldPhone", som giver telefonen et overskueligt udseende med tydelige knapper og simple indstillinger.\nHvis du er intersseret, kan du hente den her gratis:\n\nhttps://sites.google.com/view/baldphone
     </string>
-    <string name="set_keyboard">Set keyboard</string>
-    <string name="setting_does_not_exist">Setting Does Not Exist</string>
-    <string name="settings">Settings</string>
-    <string name="settings_permission">Settings Permission</string>
-    <string name="share">Share</string>
-    <string name="share_actual_text">Hi, I\'m using this platform named "BaldPhone" which replaces the phone\'s
-        interface to a big, simple and friendly one.\nInterested?\nYou can download it for free!\ncheck out the link
-        below for more information:\n\nhttps://sites.google.com/view/baldphone
-    </string>
-    <string name="share_bald_phone_subtext">Hey, know anyone who may want to know about BaldPhone?\nYou can
-        share it with them!"
-    </string>
-    <string name="share_baldphone">Share BaldPhone</string>
-    <string name="share_contact">Share Contact</string>
-    <string name="share_differently">Share Via Other App</string>
-    <string name="share_via_whatsapp">Share Via Whatsapp</string>
-    <string name="shift">shift</string>
-    <string name="show">Show</string>
-    <string name="small">Small</string>
+    <string name="share_bald_phone_subtext">Kender du nogen, som du synes skal høre om BaldPhone?\nSå kan du dele den med dem her!</string>
+    <string name="share_baldphone">Del et link til BaldPhone</string>
+    <string name="share_contact">Del kontaktinformation</string>
+    <string name="share_differently">Del via en anden app</string>
+    <string name="share_via_whatsapp">Del via Whatsapp</string>
+    <string name="shift">Ryk</string> <!-- Tjek navn -->
+    <string name="show">Vis</string>
+    <string name="small">Lille</string>
     <string name="snooze">Slumre</string>
     <string name="sos">SOS</string>
-    <string name="sos_is_full">SOS is full!</string>
-    <string name="sos_is_full_subtext">SOS is full! please remove other SOS contacts before adding a new one</string>
+    <string name="sos_is_full">SOS er fyldt op!</string>
+    <string name="sos_is_full_subtext">SOS er fyldt op! Slet nogle af de eksisterende SOS-kontakter, før du tilføjer en ny</string>
     <string name="speak">Tal</string>
-    <string name="speech_to_text">Speech to Text</string>
-    <string name="strong_hand">Dominant Hand</string>
-    <string name="strong_hand_subtext">Choose your dominant hand to adjust the user interface.</string>
+    <string name="speech_to_text">Tale-til-tekst</string>
+    <string name="strong_hand">Dominerende hånd</string>
+    <string name="strong_hand_subtext">Vælg hvilken hånd der er din dominerende for at tilpasse udseendet af BaldPhone efter dette.</string>
     <string name="submit">Indsend</string>
     <string name="sunday">Søndag</string>
-    <string name="technical_information">Technical Information</string>
-    <string name="theme_settings">Tena</string>
+    <string name="technical_information">Teknisk information</string>
+    <string name="theme_settings">Tema</string>
     <string name="theme_settings_subtext">Vælg et tema</string>
-
     <string name="thursday">Torsdag</string>
-    <string name="time_changer">Ændre tid for pilletagning</string>
+    <string name="time_changer">Ændr tid for pilletagning</string>
     <string name="tiny">Meget lille</string>
-    <string name="to___days_and___hours_from_now">to %d days and %d hours from now</string>
-    <string name="to___hours_and___minutes_from_now">to %d hours and %d minutes from now</string>
-    <string name="to___minuets_from_now">to %d minutes from now</string>
+    <string name="to___days_and___hours_from_now">til %d dage og %d timer fra nu</string>
+    <string name="to___hours_and___minutes_from_now">til %d timer og %d minutter fra nu</string>
+    <string name="to___minuets_from_now">til %d minutter fra nu</string>
     <string name="today">I dag</string>
-    <string name="took">Taget!</string>
-    <string name="tuesday">Tuesday</string>
-    <string name="uninstall">Uninstall</string>
-    <string name="uninstall_subtext">Are you sure you want to uninstall %s?\n%s\'s data will be gone forever!</string>
+    <string name="took">Er taget!</string>
+    <string name="tuesday">Tirsdag</string>
+    <string name="uninstall">Afinstallér</string>
+    <string name="uninstall_subtext">Er du sikker på, at du vil afinstallere %s?\n%s\'s data vil blive permanent slettet!</string>
     <string name="up">Op</string>
     <string name="video">Video</string>
     <string name="video_tutorials">Videoinstruktioner</string>
@@ -265,93 +244,82 @@
     <string name="wednesday">Onsdag</string>
     <string name="whatsapp">\"Whatsapp\"</string>
     <string name="wifi">Wifi</string>
-    <string name="will_repeat_only_once">will repeat only once!</string>
+    <string name="will_repeat_only_once">gentages kun én gang!</string>
     <string name="write">Skriv</string>
-    <string name="write_contacts">Write Contacts</string>
-    <string name="write_external_storage">Write external storage</string>
+    <string name="write_contacts">Skriv kontaktinformation</string>
+    <string name="write_external_storage">Skriv til ekstern hukommelse</string>
     <string name="yes">Ja</string>
     <string name="yesterday">I går</string>
     <string name="nothing">Ingenting</string>
     <string name="no_contacts_found">Der blev ikke fundet nogen kontakter!</string>
-    <string name="no_alarms">No Alarms\nCreate one by clicking\n\"Add Alarm\"\nOr\n\"Add Timer\"</string>
-    <string name="no_pills">No Pills\nCreate one by clicking\n\"Add Pill\"</string>
-    <string name="clear_all_notifications">Clear All Notifications</string>
-    <string name="clear_cache_subtext">Are you sure you want to delete the cache contents? Deleting temporary files may solve some BaldPhone app malfunctions, but also shortcuts created in the Home screen will be removed.</string>
-    <string name="permissions_calm">Hi, BaldPhone must have the following permissions in order to run. Some of them
-        sound scary, but it is the only way BaldPhone can replace the phone\'s interface. No data is taken and it causes
-        no harm. Press OK to grant the permissions or no to exit BaldPhone.
+    <string name="no_alarms">Ingen alarmer\nOpret en ved at klikke på \n\"Tilføj alarm\"\neller\n\"tilføj stopur\"</string>
+    <string name="no_pills">Ingen piller\nOpret en ved at klikke på\n\"Tilføj pille\"</string>
+    <string name="clear_all_notifications">Ryd alle notifikationer</string>
+    <string name="clear_cache_subtext">Er du sikker på, at du vil slette den midlertidige hukommelse? Dette kan afhjælpe småfejl i BaldPhone, men vil også slette genvejene på \"skrivebordet\".</string>
+    <string name="permissions_calm">BaldPhone har brug for nogle rettigheder for at fungere. Nogle af dem lyder måske ubetryggende, men det er den eneste måde BaldPhone kan ændre din telefons udseende, så det bliver bedre for dig. Intet data vil blive taget fra dig eller ødelagt.\nTryk OK for at give app\'en de nødvendige rettigheder eller \"Nej\" for at afslutte BaldPhone.
     </string>
-    <string name="pending_update">Pending Update</string>
+    <string name="pending_update">Afventende opdatering</string>
     <string name="download">Download</string>
-    <string name="install_updates">Install Updates</string>
-    <string name="install_updates_subtext">This Permission is required in order to update BaldPhone</string>
-    <string name="a_new_update_is_available">A new update is available!\nUpdates are important to keep BaldPhone running
-        smoothly.\nPress OK to download.
-    </string>
-    <string name="current_version">Current Version:\n</string>
-    <string name="new_version">New Version:\n</string>
-    <string name="new_updates_are_ready_to_be_downloaded">New updates are ready to be downloaded.</string>
-    <string name="install">Install</string>
-    <string name="data_warning">Data Warning</string>
-    <string name="data_warning_subtext">Hi, you\'re not connected to WIFI.\nThe size of the download is approximately 3MB,
-        if you\'re abroad it may cost you money.\nDo you want to continue with the download?
-    </string>
-    <string name="update_message_is_corrupted">Update message is corrupted.</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="could_not_connect_to_server">Could not connect to server!</string>
-    <string name="could_not_connect_to_internet">Could not connect to internet!</string>
-    <string name="could_not_start_the_download">Could not start the download!</string>
-    <string name="downloaded_update_file_could_not_be_deleted">Downloaded update file could not be deleted!</string>
-    <string name="downloading">Downloading…</string>
-
-    <string name="baldphone_is_up_to_date">BaldPhone is up to date.</string>
-    <string name="what_s_new">What\'s new</string>
-    <string name="download_finished">Download finished!</string>
-    <string name="downloading_updates">Downloading Updates…</string>
-    <string name="installing_doesn_t_work">Installing doesn\'t work?</string>
-    <string name="try_now">Try Now</string>
-    <string name="download_progress">Download Progress</string>
-    <string name="what_do_you_want_to_do_with___">What do you want to do with %s?</string>
-    <string name="crash_reports">Crash Reports</string>
-    <string name="crash_reports_subtext">Crash reports help to make BaldPhone\'s experience flawless\nThey are used only
-        to fix bugs, and no info other than what\'s necessary to fix the bug is taken
-    </string>
-    <string name="custom_app">Custom App</string>
-    <string name="custom_app_subtext">Choose custom app to be on the home screen.</string>
-    <string name="no_app_was_found">No matching app was found!</string>
+    <string name="install_updates">Installér opdateringer</string>
+    <string name="install_updates_subtext">Denne rettighed er nødvendig for at kunne opdatere BaldPhone.</string>
+    <string name="a_new_update_is_available">En ny opdatering er tilgængelig!\nOpdateringer er vigtige, fordi de sikrer, at BaldPhone bliver ved med at fungere godt!\nTryk OK for at downloade.</string>
+    <string name="current_version">Nuværende version:\n</string>
+    <string name="new_version">Ny version:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">Nye opdatering er klar til at blive downloaded.</string>
+    <string name="install">Installér</string>
+    <string name="data_warning">Advarsel om dataforbrug</string>
+    <string name="data_warning_subtext">Du er ikke forbundet til Wifi.\nStørrelsen på opdateringen er ca. 3 MB, så hvis du er i udlandet og ikke har udlandsdata med i dit abonnement, kan det koste dig lidt ekstra at hente denne opdatering. Er du i dit hjemland er det højst sandsynligt ligemeget om du er på Wifi eller ej, da 3 MB er meget lidt data.\nVil du fortsætte med at downloade?</string>
+    <string name="update_message_is_corrupted">Opdateringsbeskeden er ødelagt.</string>
+    <string name="check_for_updates">Check for nye opdateringer</string>
+    <string name="could_not_connect_to_server">Ingen forbindelse til opdateringsserveren!</string>
+    <string name="could_not_connect_to_internet">Ingen forbindelse til internettet!</string>
+    <string name="could_not_start_the_download">Downloaden kunne ikke startes!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">Opdateringsfilen kunne ikke slettes!</string>
+    <string name="downloading">Downloader…</string>
+    <string name="baldphone_is_up_to_date">BaldPhone is helt opdateret!</string>
+    <string name="what_s_new">Nyheder</string>
+    <string name="download_finished">Download afsluttet!</string>
+    <string name="downloading_updates">Downloader opdateringer…</string>
+    <string name="installing_doesn_t_work">Installation virker ikke?</string>
+    <string name="try_now">Prøv nu</string>
+    <string name="download_progress">Downloadens fremskridt</string>
+    <string name="what_do_you_want_to_do_with___">Hvad vil du gerne gøre med %s?</string>
+    <string name="crash_reports">Rapportér fejl</string>
+    <string name="crash_reports_subtext">Fejlrapporter hjælper med at gøre oplevelsen af BaldPhone bedre.\nRapporterne bliver kund brugt til at udbedre fejl\; kun den nødvendige information for dette, bliver anvendt fra dem.</string> <!-- What\'s the purpose of this statement? What unnecessary information are there in the crash reports and if it\'s unnecessary, why don\'t you just not log it? -->
+    <string name="custom_app">Valgfri app</string>
+    <string name="custom_app_subtext">Vælg en valgfri app, som du vil have en genvej til på \"skrivebordet\".</string>
+    <string name="no_app_was_found">Ingen app der passede blev fundet!</string>
     <string name="alarm">Alarm</string>
-    <string name="no_new_notifications">No New Notifications</string>
-    <string name="sound">Sound</string>
-    <string name="mute">Mute</string>
-    <string name="vibrate">Vibrate</string>
-    <string name="your_phone_doesnt_have_assistant_installed">Your Phone doesn\'t have an assistant installed.</string>
+    <string name="no_new_notifications">Ingen nye notifikationer</string>
+    <string name="sound">Lyd</string>
+    <string name="mute">Lydløs</string>
+    <string name="vibrate">Vibration</string>
+    <string name="your_phone_doesnt_have_assistant_installed">Din telefon har ikke Google Assistant installeret.</string>
+    <string name="status_bar_settings">Statusbjælke</string>
+    <string name="status_bar_settings_subtext">Hvor skal statusbjælken vises?</string>
+    <string name="only_home_screen">Kun på \"skrivebordet\"</string>
+    <string name="nowhere">Ingen steder</string>
+    <string name="everywhere">Alle steder</string>
 
 
-    <string name="status_bar_settings">Status bar</string>
-    <string name="status_bar_settings_subtext">Where do you want to show the status bar?</string>
-    <string name="only_home_screen">Only Home Screen</string>
-    <string name="nowhere">Nowhere</string>
-    <string name="everywhere">Everywhere</string>
+    <string name="share_photo">Del foto</string>
 
+    <string name="choose_language_for_keyboard">Vælg sprog</string>
+    <string name="hebrew">Hebræisk</string>
+    <string name="english">Engelsk</string>
 
-    <string name="share_photo">Share Photo</string>
-
-    <string name="choose_language_for_keyboard">Choose Language</string>
-    <string name="hebrew">Hebrew</string>
-    <string name="english">English</string>
-
-    <string name="search">Search</string>
-    <string name="next">Next</string>
+    <string name="search">Søg</string>
+    <string name="next">Næste</string>
     <string name="go">Go</string>
 
 
-    <string name="dialer_sounds">Dialer Sounds</string>
-    <string name="dialer_sounds_subtext">Choose if you want to have Dialer Sounds.</string>
-    <string name="low_battery_alert">Low battery alert</string>
-    <string name="low_battery_alert_subtext">Choose if you want the status bar to be red on the home screen when battery is under 20%\nNotice It won\'t be shown if the system status bar is hidden.</string>
+    <string name="dialer_sounds">Telefonlyde</string> <!-- Tjek navn -->
+    <string name="dialer_sounds_subtext">Choose if you want to have Dialer Sounds.</string> <!-- Tjek navn - what\'s this? -->
+    <string name="low_battery_alert">Advarsel om lavt batteriniveau</string>
+    <string name="low_battery_alert_subtext">Vælg om du vil have statusbjælken farvet rød på \"skrivebordet\", hvis batteriniveauet på telefonen er under 20 \%\nVær opmærksom på, at du ikke kan se statusbjælken, hvis den er skjult af en app.</string>
 
-    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
-    <string name="grant_all_permissions">Grant All Permissions</string>
+    <string name="also_available_at">Også tilgængelig via\nbaldphone.contact@gmail.com\nFeedback skal gives på engelsk eller hebræisk!</string>
+    <string name="grant_all_permissions">Tildel alle rettigheder</string>
 
 
     <!--For Tests:-->
