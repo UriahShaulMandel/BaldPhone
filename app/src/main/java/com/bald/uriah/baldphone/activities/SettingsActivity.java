@@ -391,7 +391,7 @@ public class SettingsActivity extends BaldActivity {
         );
         mainCategory.add(
                 new RunnableSettingsItem(R.string.donate,
-                        v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.patreon.com/baldphone"))),
+                        v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://baldphone.com/support-us/"))),
                         R.drawable.donate_on_button)
         );
         mainCategory.add(
