@@ -1,0 +1,434 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about">Sobre</string>
+    <string name="about_subtext">Hola!\nEl meu nom és Uriah Shaul Mandel i sóc el desenvolupador d\'aquesta plataforma.\n
+	He passat la major part de la meva vida "adulta" fent aquesta plataforma, i l\'he llançat gratis, perquè tots la usin.\n
+	Són benvinguts a contactar-me per correu electrònic:\n
+	baldphone.contact@gmail.com
+</string>
+    <string name="accessibility_level">Nivell d\'Accessibilitat</string>
+    <string name="accessibility_settings">Accessibilitat</string>
+    <string name="accidental_touches">Protecció de toc accidental</string>
+    <string name="accidental_touches_settings_subtext">El protector bloqueja el seu telèfon d\'entrada tàctil quan el
+	telèfon està cobert\nSi té problemes amb ell, pot desactivar-lo
+</string>
+    <string name="accidental_touches_subtext">Toc accidental detectat\n
+	Premi OK per a continuar usant el telèfon\n
+	Si aquest missatge continua apareixent pot desactivar-lo en les opcions d\'accessibilitat
+</string>
+    <string name="acknowledgments">Agraïments</string>
+    <string name="adaptive">Adaptatiu</string>
+    <string name="add_alarm">Afegir Alarma</string>
+    <string name="add_alarm_quickly">Afegir Temporitzador</string>
+    <string name="add_contact">Afegir Contacte</string>
+    <string name="add_emergency_contact">Afegir</string>
+    <string name="add_pill">Afegir Pastilla</string>
+    <string name="add_shortcut">Afegir accés directe</string>
+    <string name="add_to_favorite">Afegir a Preferits</string>
+    <string name="add_to_home">Afegir a Inici</string>
+    <string name="add_to_sos">Afegir a SOS</string>
+    <string name="address">Adreça</string>
+    <string name="advanced_options">Opcions Avançades</string>
+    <string name="afternoon">A la Tarda</string>
+    <string name="airplane_mode">Mode Avió</string>
+    <string name="alarm_name">Nom Alarma</string>
+    <string name="alarm_volume">Volum Alarma</string>
+    <string name="alarm_volume_subtext">Tria nivell de volum per a les Alarmes.\n
+	El volum s\'incrementa d\'esquerra a dreta.</string>
+    <string name="alarms">Alarmes</string>
+
+    <string name="alarms_repeats_every">Alarma es repeteix cada</string>
+    <string name="all_alarms">Totes les Alarmes</string>
+    <string name="allow">Permetre</string>
+    <string name="already_setted">Ja definit!\nPremi aquí per a canviar-ho</string>
+    <string name="an_error_has_occurred">Ha ocorregut un error!</string>
+    <string name="and_welcome_to_baldphone">i benvingut a Baldphone</string>
+
+    <string name="apps">Aplicacions</string>
+    <string name="are_you_sure_you_want_to_delete___">Està segur de voler eliminar %s?</string>
+    <string name="assistant">Assistent</string>
+    <string name="at_least_one_day_must_be_selected">Ha de seleccionar-se almenys un dia!</string>
+    <string name="auto_brightness">Brillantor\nAutomàtic</string>
+    <string name="backspace">retrocés</string>
+    <string name="baldphone_bla_allow_permission">Si us plau, permeti els següents permisos:</string>
+    <string name="blocked">Bloquejat</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="brightness">Brillantor</string>
+    <string name="brightness_subtext">Canviar Brillantor.</string>
+    <string name="cache_cleared_successfully">Cache netejada correctament!</string>
+    <string name="call">Trucar</string>
+    <string name="calling">Trucada</string>
+
+    <string name="call_log">Historial de crides:</string>
+    <string name="call_subtext">Aquest permís és necessari per a poder cridar als seus contactes.</string>
+    <string name="camera">Càmera</string>
+    <string name="camera_subtext">Aquest permís és necessari per a activar la llanterna.</string>
+    <string name="cancel">Cancel·lar</string>
+    <string name="change_pills_time">Canviar Hora Pastilles</string>
+    <string name="change_system_settings_subtext">Si us plau, permeti a BaldPhone canviar els ajustos,
+com augmentar la grandària de font o canviar la lluentor.
+</string>
+    <string name="choose_friday">Div</string>
+    <string name="choose_monday">Dll</string>
+    <string name="choose_saturday">Dis</string>
+    <string name="choose_sunday">Diu</string>
+    <string name="choose_thursday">Dij</string>
+    <string name="choose_tuesday">Dmt</string>
+    <string name="choose_wednesday">Dmc</string>
+    <string name="clear">Netejar</string>
+    <string name="clear_cache">Netejar Cache</string>
+    <string name="clear_data">Netejar totes les Dades</string>
+    <string name="clear_data_subtext">Està segur de voler ESBORRAR totes les Dades?</string>
+    <string name="clear_data_subtext2">100%?</string>
+    <string name="clear_data_subtext3">segur?\nPrémer Si esborrarà totes les dades.</string>
+    <string name="clock">Rellotge</string>
+    <string name="coming_soon">Pròximament!</string>
+    <string name="connection_settings">Connexió</string>
+    <string name="contact_must_has_name">El Contacte ha de tenir un Nom!</string>
+    <string name="contact_not_created">Contacte no creat!</string>
+    <string name="contacts">Contactes</string>
+    <string name="contacts_read_subtext">Aquest permís és necessari per a accedir als contactes.</string>
+    <string name="contacts_subtext">Aquest permís és necessari per a afegir contactes.</string>
+    <string name="crash">Oops!\*nBaldPhone ha trobat un problema i ha de reiniciar-se.</string>
+    <string name="current_time">Hora actual</string>
+    <string name="custom">Personalitzat</string>
+    <string name="dark">Fosc</string>
+    <string name="delete">Esborrar</string>
+    <string name="delete___">Esborrar %s?</string>
+    <string name="delete_all_alarms">Esborrar totes les Alarmes</string>
+    <string name="dialer">Teclat</string>
+    <string name="display_settings">Pantalla</string>
+    <string name="done">Fet</string>
+    <string name="down">Baixar</string>
+    <string name="edit">Editar</string>
+    <string name="email">Correu:</string>
+    <string name="enable_notification_access">Habilitar accés a Notificacions</string>
+    <string name="enable_notification_access_subtext">Si us plau, concedeixi a BaldPhone accés a les notificacions.</string>
+    <string name="enter">Enter</string>
+    <string name="enter_contact_or_phone_number">Introdueixi el nom del contacte:</string>
+    <string name="evening">A la Nit</string>
+    <string name="example_of_different_text_sizes">Exemple de diferents grandàries de text\n
+	Ha de ser llegible i no sortir-se.
+</string>
+    <string name="external_storage_subtext">Aquest permís és necessari per a guardar Fotos.</string>
+    <string name="feedback">Enviar Comentaris</string>
+    <string name="feedback_cannot_be_empty">Els comentaris no poden estar buits!</string>
+    <string name="feedback_sent_successfully">Comentaris enviats satisfactòriament!</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Si us plau, seleccioni el nivell d\'accessibilitat
+</string>
+    <string name="font_size">Font</string>
+    <string name="friday">Divendres</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Té dificultats usant
+el teclat? Useu el teclat de BaldPhone en el seu lloc!
+</string>
+    <string name="hello">Hola</string>
+    <string name="help">Vídeo Tutorial</string>
+    <string name="hide">Ocultar</string>
+    <string name="high_level">Nivell Alt</string>
+    <string name="home_phone_number">Número de casa</string>
+    <string name="hour">Hora</string>
+    <string name="huge">Enorme</string>
+    <string name="internet">Internet</string>
+    <string name="invoked_in">Invocat en:</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">
+Una última cosa:\n
+Es recomana encaridament usar \"Baldphone\'s home screen\" com el Llançador principal
+</string>
+    <string name="language">idioma</string>
+    <string name="language_settings">Idioma</string>
+    <string name="large">Gran</string>
+    <string name="left_handed">Esquerrà</string>
+    <string name="light">Llum</string>
+    <string name="location">Ubicació</string>
+    <string name="emergency_services">Serveis d\'Emergència</string>
+    <string name="mail">Bústia</string>
+    <string name="maps">Mapa</string>
+
+
+    <string name="medium">Mig</string>
+    <string name="medium_level">Nivell Mig</string>
+    <string name="message">Missatge</string>
+    <string name="messages">Missatges</string>
+    <string name="minute">Minut</string>
+    <string name="minutes">Minuts</string>
+    <string name="missed">Perduda</string>
+
+    <string name="mobile_phone_number">Número de telèfon mòbil</string>
+    <string name="monday">Dilluns</string>
+    <string name="more">més</string>
+    <string name="morning">Al Matí</string>
+    <string name="name">Nom</string>
+    <string name="named__">anomenat</string>
+    <string name="new_alarm___was_created">nova alarma %s creada!</string>
+    <string name="nfc">NFC</string>
+    <string name="no">No</string>
+    <string name="notes">Notes</string>
+    <string name="notes_settings">Notes</string>
+    <string name="notes_settings_subtext">Triï si desitja tenir una pàgina de Notes en la pantalla principal.</string>
+    <string name="notifications">Notificacions</string>
+
+    <string name="of">de</string>
+    <string name="off">Off</string>
+    <string name="ok">OK</string>
+    <string name="on">On</string>
+
+    <string name="only_once">Només una vegada</string>
+
+
+    <string name="open">Obrir</string>
+
+    <string name="outgoing">Sortint</string>
+    <string name="page">Pàgina</string>
+    <string name="permissions_part">Permisos</string>
+    <string name="personalization_settings">Personalització</string>
+    <string name="phone">Telèfon</string>
+    <string name="photo">Foto</string>
+    <string name="photos">Fotos</string>
+    <string name="pill_added">Pastilla afegida!</string>
+    <string name="pill_name">Nom Pastilla</string>
+    <string name="pills">Pastilles</string>
+    <string name="press_longer">Pressioni més temps!</string>
+    <string name="timer">Temporitzador</string>
+    <string name="read_call_log">Llegir historial de Trucades</string>
+    <string name="read_call_log_subtext">Aquest permís és necessari per a veure l\'historial de trucades.</string>
+    <string name="read_contacts">Llegir contactes</string>
+    <string name="received">Rebuda</string>
+    <string name="recent">Recents</string>
+    <string name="regular_level">Nivell Normal</string>
+
+    <string name="remove_from_favorite">Treure de Favorits</string>
+    <string name="remove_from_home">Treure d\'Inici</string>
+    <string name="remove_from_sos">Treure de SOS</string>
+    <string name="remove_shortcut">Treure accés directe</string>
+    <string name="removed_all_alarms">Eliminades totes les alarmes!</string>
+    <string name="repeats_every_day">Tots els dies</string>
+    <string name="right_handed">Destre</string>
+
+    <string name="saturday">Dissabte</string>
+    <string name="save">guardar</string>
+    <string name="send">confirmar</string>
+    <string name="set_default_dialer">Establir com a aplicació de Trucades per defecte</string>
+    <string name="set_default_dialer_subtext">BaldPhone necessita ser definida com a aplicació de trucades per defecte.</string>
+    <string name="set_home_screen">Establir com a Pantalla d\'Inici</string>
+    <string name="set_home_screen_subtext">Per utilitzar BaldPhone, ha d\'establir-la com a Pantalla d\'Inici.\n
+	Es pot revertir el canvi a través dels Ajustos.
+</string>
+    <string name="set_keyboard">Establir Teclat</string>
+    <string name="setting_does_not_exist">Ajustos no existeix</string>
+    <string name="settings">Ajustos</string>
+    <string name="settings_permission">Permisos</string>
+    <string name="share">Compartir</string>
+    <string name="share_actual_text">
+	Hola, estic usant aquesta plataforma anomenada "BaldPhone" que reemplaça la interfície del telèfon per una més gran, simple i amigable.\n
+	Està interessat?\n
+	Pots descarregar-ho gratis!\n
+	Eecha un cop d\'ull al siguente enllaç per a obtenir més informació:\n
+	\n
+	https: //sites.google.com/view/baldphone
+</string>
+    <string name="share_bald_phone_subtext">Hey, coneix a algú que pugui estar interessat en BaldPhone?\n
+	Pot compartir-ho amb ells!"
+</string>
+    <string name="share_baldphone">Compartir BaldPhone</string>
+    <string name="share_contact">Compartir Contacte</string>
+    <string name="share_differently">Compartir amb una altra App</string>
+    <string name="share_via_whatsapp">Compartir per Whatsapp</string>
+    <string name="shift">canvi</string>
+    <string name="show">Mostrar</string>
+    <string name="small">Petit</string>
+    <string name="snooze">Dormir</string>
+    <string name="sos">SOS</string>
+    <string name="sos_is_full">La llista de SOS està plena!</string>
+    <string name="sos_is_full_subtext">La llista de SOS està plena! si us plau elimini de la llista algun contacte abans d\'agregar un altre</string>
+    <string name="speak">Parlar</string>
+    <string name="speech_to_text">Veu a Text</string>
+    <string name="strong_hand">Mà dominant</string>
+    <string name="strong_hand_subtext">Triï la seva mà dominant per a ajustar la interfície.</string>
+    <string name="submit">enviar</string>
+    <string name="sunday">Diumenge</string>
+    <string name="technical_information">Información Tècnica</string>
+    <string name="theme_settings">Aparença</string>
+    <string name="theme_settings_subtext">Triï una Aparença</string>
+
+    <string name="thursday">Dijous</string>
+    <string name="time_changer">Canviar hora Pastilles</string>
+    <string name="tiny">Diminut</string>
+    <string name="to___days_and___hours_from_now">a %d dies i %d hores des d\'ara</string>
+    <string name="to___hours_and___minutes_from_now">a %d hores i %d minuts des d\'ara</string>
+    <string name="to___minuets_from_now">a %d minuts des d\'ara</string>
+    <string name="today">Avui</string>
+    <string name="took">Presa!</string>
+    <string name="tuesday">Dimarts</string>
+    <string name="uninstall">Desinstal·lar</string>
+    <string name="uninstall_subtext">Està segur de voler desinstal·lar %s\nLes dades de %s es perdran per sempre!</string>
+    <string name="up">A dalt</string>
+    <string name="video">Vídeo</string>
+    <string name="video_tutorials">Vídeo Tutorials</string>
+    <string name="videos">Vídeos</string>
+
+    <string name="voice_mail">Missatge de veu</string>
+    <string name="wednesday">Dimecres</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="wifi">Wifi</string>
+    <string name="will_repeat_only_once">es repetirà només una vegada!</string>
+    <string name="write">Escriure</string>
+    <string name="write_contacts">Escriure Contactes</string>
+    <string name="write_external_storage">Escriure en emmagatzematge extern</string>
+    <string name="yes">Si</string>
+    <string name="yesterday">Ahir</string>
+    <string name="nothing">Res</string>
+    <string name="no_contacts_found">No s\'han trobat contactes!</string>
+    <string name="no_alarms">Sense Alarmes\nCrea una prement\n\"Afegir Alarma\"\no\n\"Afegir Temporitzador\"</string>
+    <string name="no_pills">Sense Pastilles\nCrea una prement\n\"Afegir Pastilla\"</string>
+    <string name="clear_all_notifications">Treure totes les Notificacions</string>
+    <string name="clear_cache_subtext">De veritat voleu esborrar per complet la caché?\nEls enllaços directes també s\'esborraran!
+</string>
+    <string name="permissions_calm">
+Hola, BaldPhone ha de tenir els següents permisos per a executar-se. Alguns
+poden espantar, però és l\'única forma en què BaldPhone pot reemplaçar la interfície del telèfon.
+BaldPhone no usarà les seves dades personals ni danyarà el seu telèfon.
+Pressioni OK per a atorgar els permisos o No per a sortir de BaldPhone.
+</string>
+    <string name="pending_update">Actualització pendent</string>
+    <string name="download">Descarregar</string>
+    <string name="install_updates">Instal·lar actualitzacions</string>
+    <string name="install_updates_subtext">Aquest permís és necessari per a poder actualitzar BaldPhone</string>
+    <string name="a_new_update_is_available">Nova actualiación disponible!\n
+Les actualitzacions són importants per a millorar l\'App.\n
+Premi OK per a descarregar-la.
+</string>
+    <string name="current_version">Versió actual:
+</string>
+    <string name="new_version">Nova Versió:
+</string>
+    <string name="new_updates_are_ready_to_be_downloaded">Actualització llesta per a ser descarregada.</string>
+    <string name="install">Instal·lar</string>
+    <string name="data_warning">Avís d\'ús de Dades!</string>
+    <string name="data_warning_subtext">
+	Hola, no esteu connectat a una xarxa WIFI.\n
+	La mida de la descàrrega és d\'aproximadament 3MB, si és a \'estranger, pot costar-li diners.\n
+	Desitja continuar amb la descàrrega?
+</string>
+    <string name="update_message_is_corrupted">El missatge d\'actualització està corrupte.</string>
+    <string name="check_for_updates">Comprovar actualitzacions</string>
+    <string name="could_not_connect_to_server">No s\'ha pogut connectar al servidor!</string>
+    <string name="could_not_connect_to_internet">No s\'ha pogut connectar a internet!</string>
+    <string name="could_not_start_the_download">No s\'ha pogut començar la descàrrega!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">L\'arxiu d\'actualització descarregat no ha pogut ser esborrat!</string>
+    <string name="downloading">Descarregant…</string>
+
+    <string name="baldphone_is_up_to_date">BaldPhone està actualitzat.</string>
+    <string name="what_s_new">Novetats</string>
+    <string name="download_finished">Descàrrega finalitzada!</string>
+    <string name="downloading_updates">Descarregant actualitzacions…</string>
+    <string name="installing_doesn_t_work">La instal.lació no funciona?</string>
+    <string name="try_now">Provar ara</string>
+    <string name="download_progress">Progrés de descàrrega</string>
+    <string name="what_do_you_want_to_do_with___">Quina vol fer amb %s?</string>
+    <string name="crash_reports">Reportar errors</string>
+    <string name="crash_reports_subtext">
+	Els informes d\'errors ajuden a fer que l\'experiència de BaldPhone sigui perfecta.\n
+	S\'usen únicament per a corregir errors, i no es pren més informació que la necessària per a corregir l\'error.
+</string>
+    <string name="custom_app">App personalitzada</string>
+    <string name="custom_app_subtext">Triï una altra App com a Pantalla d\'Inici.</string>
+    <string name="no_app_was_found">Cerca d\'App sense resultats</string>
+    <string name="alarm">Alarma</string>
+    <string name="no_new_notifications">No hi ha noves Notificationes</string>
+    <string name="sound">So</string>
+    <string name="mute">Silenci</string>
+    <string name="vibrate">Vibració</string>
+    <string name="your_phone_doesnt_have_assistant_installed">El seu telèfon no té un assistent instal·lat.</string>
+
+    <string name="status_bar_settings">Barra d\'estat</string>
+    <string name="status_bar_settings_subtext">On voleu mostrar la bara d\'estat?</string>
+    <string name="only_home_screen">Només en la Pantalla d\'Inici</string>
+    <string name="nowhere">Oculta</string>
+    <string name="everywhere">Totes parts</string>
+
+
+    <string name="share_photo">Compartir Foto</string>
+
+    <string name="choose_language_for_keyboard">Trieu un Idioma</string>
+    <string name="hebrew">Hebreu</string>
+    <string name="english">Anglès</string>
+
+    <string name="search">Buscar</string>
+    <string name="next">Següent</string>
+    <string name="go">Anar</string>
+
+
+    <string name="dialer_sounds">To de trucada</string>
+    <string name="dialer_sounds_subtext">Triï si desitja tenir to de trucada.</string>
+    <string name="low_battery_alert">Alerta de bateria baixa</string>
+    <string name="low_battery_alert_subtext">Marqui si vol que la barra d\'estat es posi vermella si la bateria està per sota del 20%\n
+No es veuran canvis si la barra d\'estat està oculta.
+</string>
+
+    <string name="also_available_at">També disponible a\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
+    <string name="grant_all_permissions">Donar tots els Permisos</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+    <string name="donate">Donació</string>
+    <string name="emergency_button">Botó emergència</string>
+    <string name="emergency_settings_subtext">Trieu si voleu tenir un botó emergència a la pantalla inici.</string>
+    <string name="private_number">Número privat</string>
+    <string name="swipe_left_or_right">Swipe esquerra o dreta</string>
+    <string name="press_next_or_back_buton">Premeu la tecla següent o de retrocés</string>
+    <string name="click_delay">Demora del clic</string>
+    <string name="no_delay">Sense demora</string>
+    <string name="scrolling">Desplaçament</string>
+    <string name="arrows">Fletxes</string>
+    <string name="swipe">Swipe</string>
+    <string name="_long">Llarg</string>
+    <string name="_short">Curt</string>
+    <string name="do_you_want_to_save_your_changes">Voleu guardar els canvis?</string>
+    <string name="discard">Descartar</string>
+    <string name="no_recent_calls">Sense trucades recents</string>
+    <string name="apps_sort_method">Mètode ordenació Apps</string>
+    <string name="apps_sort_method_subtext">Trieu si voleu ordenar les apps en una columna o dividits en grups mitjançant lletres</string>
+    <string name="groups">Grups</string>
+    <string name="one_grid">Una Columna</string>
+    <string name="colorful">Colorful</string>
+    <string name="colorful_subtext">Voleu que BaldPhone habiliti Colorful?</string>
+    <string name="edit_home_screen">Edita Pàgina Inici</string>
+    <string name="dual_sim">SIM Dual</string>
+    <string name="dual_sim_subtext">Trieu com voleu gestionar la doble SIM\*nNota: Si trieu Mostrar Opcions, haureu d\'acceptar un altre permís</string>
+    <string name="use_default">Usar predeterminat</string>
+    <string name="show_options">Mostrar Opcions</string>
+    <string name="read_phone_state">Consultar estat del telèfon</string>
+    <string name="read_phone_state_subtext">Aquest permís és necessari per a poder trucar des de la segona SIM</string>
+    <string name="choose_sim">Trieu SIM</string>
+    <string name="choose_sim_subtext">Trieu la SIM des de la qual vulgueu realitzar la trucada</string>
+
+
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
+</resources>
