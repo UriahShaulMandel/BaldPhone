@@ -372,8 +372,10 @@ public class SettingsActivity extends BaldActivity {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         LayoutInflater.from(this).inflate(R.layout.credits_button, linearLayout, true);
         LayoutInflater.from(this).inflate(R.layout.open_source_licenses_button, linearLayout, true);
+        LayoutInflater.from(this).inflate(R.layout.website_button, linearLayout, true);
         linearLayout.findViewById(R.id.credits_button).setOnClickListener(v -> startActivity(new Intent(this, CreditsActivity.class)));
         linearLayout.findViewById(R.id.open_source_licenses_button).setOnClickListener(v -> startActivity(new Intent(ACTION_VIEW, Uri.parse("https://sites.google.com/view/baldphone-open-source-licenses/home"))));
+        linearLayout.findViewById(R.id.website_button).setOnClickListener(v -> startActivity(new Intent(ACTION_VIEW, Uri.parse("https://baldphone.com/"))));
         final ImageView pic = new ImageView(this);
         linearLayout.addView(pic);
         Glide.with(pic).load(R.drawable.me).into(pic);
@@ -391,7 +393,7 @@ public class SettingsActivity extends BaldActivity {
         );
         mainCategory.add(
                 new RunnableSettingsItem(R.string.donate,
-                        v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.patreon.com/baldphone"))),
+                        v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://baldphone.com/support-us/"))),
                         R.drawable.donate_on_button)
         );
         mainCategory.add(

@@ -400,6 +400,7 @@
     <string name="read_phone_state_subtext">This permission is required in order to call from the second sim</string>
     <string name="choose_sim">Choose Sim</string>
     <string name="choose_sim_subtext">Choose the sim you want to make the call from</string>
+    <string name="website">Website</string>
 
 
     <string-array name="names_for_screenshots">
