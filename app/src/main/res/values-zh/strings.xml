@@ -386,6 +386,7 @@
     <string name="read_phone_state_subtext">需要该权限用来从第二张sim卡拨打电话</string>
     <string name="choose_sim">选择sim卡</string>
     <string name="choose_sim_subtext">选择你想要用来拨打电话的sim卡</string>
+    <string name="website">网站</string>
 
 
     <string-array name="names_for_screenshots">
