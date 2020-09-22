@@ -292,7 +292,7 @@ public class HomeScreenActivity extends BaldActivity {
                                 return true;
                             })
                             .show();
-                } else if (percent > 99 && Math.random() < 0.2) {
+                } else if (percent > 99 && Math.random() < 0.1) {
                     onStartCounter = 0;
                     S.shareBaldPhone(this);
                 } else if (percent > 95) {
