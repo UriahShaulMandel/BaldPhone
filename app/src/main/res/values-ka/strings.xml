@@ -15,7 +15,7 @@
   -->
 
 <resources>
-    <string name="about">შესახებ</string>
+    <string name="about">აპლიკაციის შესახებ</string>
     <string name="about_subtext">სალამი!\nმე მქვია ურია შეულ მენდელი და მე ვარ ამ პლატფორმის BaldPhone(მელოტი ტელეფონის) დეველოპერი.\n
         მე მთელი ჩემი (ზრდასრული) ცხოვრება ამ პლატფორმას ვაკეთებდი და გადავწყვიტე გამეზიარებინა ყველასთვის,სრულიად უფასოდ.\nმოხარული ვიქნები თუ დამიკავშირდებით :\nbaldphone.contact@gmail.com
     </string>
@@ -24,7 +24,7 @@
     <string name="accidental_touches">შემთხვევითი შეხების გუშაგი</string>
     <string name="accidental_touches_settings_subtext">შემთხვევითი შეხების გუშაგი ახდენს ბლოკირებას,როდესაც ტელეფონი დაფარულია.\nთუ თქვენ მასთან პრობლემა შეგექმნათ შეგიძლიათ გათიშოთ.
     </string>
-    <string name="accidental_touches_subtext">აღმოჩენილია შემთხვევითი შეხება\დააჭირეთ OK-ს ტელეფონის გამოყენების გასაგრძელაბლად\nთუ ეს შეტყობინება გამოდის ხშირად თქვენ შეგიძლიათ გათიშოთ სპეციალური შესაძლებლობებიდან(accessibility settings)
+    <string name="accidental_touches_subtext">აღმოჩენილია შემთხვევითი შეხება.\დააჭირეთ დიახ-ს ტელეფონის გამოყენების გასაგრძელებლად.\nთუ ეს შეტყობინება გამოდის ხშირად, თქვენ შეგიძლიათ გათიშოთ სპეციალური შესაძლებლობებიდან(accessibility settings).
     </string>
     <string name="acknowledgments">მადლიერებები</string>
     <string name="adaptive">ადაპტიური</string>
@@ -103,7 +103,7 @@
     <string name="dark">ბნელი</string>
     <string name="delete">წაშლა</string>
     <string name="delete___">წავშალო %s?</string>
-    <string name="delete_all_alarms">ყველა მაღვიძარის წაშლა</string>
+    <string name="delete_all_alarms">ყველა მაღვიძარას წაშლა</string>
     <string name="dialer">ნომრების ამკრეფი</string>
     <string name="display_settings">ეკრანი</string>
     <string name="done">დამთავრებულია.</string>
@@ -136,7 +136,7 @@
     <string name="huge">დიდი</string>
     <string name="internet">ინტერნეტი</string>
     <string name="invoked_in">გაშვება:</string>
-    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">და ბოლოს:\nრეკომენდირებულია გამოიყენოთ Baldphone-ს მთავარი ეკრანი როგორც ძირითადი გამშვები(launcher)
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">და ბოლოს:\nრეკომენდირებულია გამოიყენოთ Baldphone-ს მთავარი ეკრანი, როგორც ძირითადი გამშვები(launcher)
     </string>
     <string name="language">ენა</string>
     <string name="language_settings">ენის პარამეტრები</string>
@@ -154,7 +154,7 @@
     <string name="message">შეტყობინება</string>
     <string name="messages">შეტყობინებები</string>
     <string name="minute">წუთი</string>
-    <string name="minutes">წუთები</string>
+    <string name="minutes">წუთი</string>
     <string name="missed">გამოტოვებული</string>
 
     <string name="mobile_phone_number">მობილური ტელეფონის ნომერი</string>
@@ -173,7 +173,7 @@
 
     <string name="of">თან</string>
     <string name="off">გამორთვა</string>
-    <string name="ok">OK</string>
+    <string name="ok">დიახ</string>
     <string name="on">ჩართვა</string>
 
     <string name="only_once">მხოლოდ ერთხელ</string>
@@ -249,11 +249,11 @@
     <string name="thursday">ხუთშაბათი</string>
     <string name="time_changer">აბების დროის შემცვლელი</string>
     <string name="tiny">პატარა</string>
-    <string name="to___days_and___hours_from_now"> %d დღე და %d საათ(ებ)ი მიმდინარე მომენტიდან</string>
-    <string name="to___hours_and___minutes_from_now"> %d საათ(ებ)ი და წუთ(ებ)ი %d მიმდინარე მომენტიდან</string>
-    <string name="to___minuets_from_now">%d წუთ(ებ)ი მიმდინარე მომენტიდან</string>
+    <string name="to___days_and___hours_from_now"> %d დღე და %d საათი მიმდინარე მომენტიდან</string>
+    <string name="to___hours_and___minutes_from_now"> %d საათი და წუთი %d მიმდინარე მომენტიდან</string>
+    <string name="to___minuets_from_now">%d წუთი მიმდინარე მომენტიდან</string>
     <string name="today">დღეს</string>
-    <string name="took">აღება!</string>
+    <string name="took">ავიღე!</string>
     <string name="tuesday">სამშაბათი</string>
     <string name="uninstall">წაშლა</string>
     <string name="uninstall_subtext">დარწმუნებული ხართ რომ გსურთ წაშალოთ %s?\n%s მონაცემები გაქრება სამუდამოდ!</string>
@@ -274,27 +274,24 @@
     <string name="yesterday">გუშინ</string>
     <string name="nothing">არაფერი</string>
     <string name="no_contacts_found">კონტაქტები ნაპოვნი არაა!</string>
-    <string name="no_alarms">მაღვიძარები არაა\შექმენით დაჭერით\n\"მაღვიძარის დამატება\"\nან\n\"ტაიმერის დამატება\"</string>
+    <string name="no_alarms">მაღვიძარები არაა.\შექმენით დაჭერით \n\"მაღვიძარას დამატება\"\nან\n\"ტაიმერის დამატება\"</string>
     <string name="no_pills">აბები არაა\nშექმენით დაჭერით\n\"აბის დამატება\"</string>
     <string name="clear_all_notifications">ყველა გაფრთხილების წაშლა</string>
-    <string name="clear_cache_subtext">დარწმუნებული ხართ რომ გსურთ წაშალოთ ქეშის კონტენტი? დროებითი ფაილების წაშლამ შესაძლოა გამოასწოროს ზოგიერთი შეცდომა, მაგრამ მთავარ ეკრანზე შექმნილი მალსახმობები წაიშლება.</string>
-    <string name="permissions_calm"> სალამი, BaldPhone-ს სჭირდება შემდეგი ნებართვები გასაშვებად.
-    ზოგიერთი საშიშად მოგეჩვენებათ,მაგრამ ეს ერთადერთი გზაა ტელეფონის ინტერფეისის შესაცვლელად.თქვენი
-    მონაცემები არ იქნება მოპრაული და არ მოგადგებათ ზიანი. დააჭირეთ OK ნებართვის მისაცემად ან
-    უარს(no) რომ გამოხვიდეთ BaldPhone-დან.
+    <string name="clear_cache_subtext">დარწმუნებული ხართ რომ გსურთ წაშალოთ ქეშის კონტენტი? დროებითი ფაილების წაშლამ შესაძლოა გამოასწოროს ზოგიერთი შეცდომა,მაგრამ მთავარ ეკრანზე შექმნილი მალსახმობები წაიშლება.</string>
+    <string name="permissions_calm">სალამი,BaldPhone-ს სჭირდება შემდეგი ნებართვები გასაშვებად. ზოგიერთი საშიშად მოგეჩვენებათ,მაგრამ ეს ერთადერთი გზაა ტელეფონის ინტერფეისის შესაცვლელად.თქვენი მონაცემები არ იქნება მოპარული და არ მოგადგებათ ზიანი. დააჭირეთ OK ნებართვის მისაცემად ან უარს(no) რომ გამოხვიდეთ BaldPhone-დან.
     </string>
     <string name="pending_update">მიმდინარეობს განახლება</string>
     <string name="download">გადმოწერა</string>
     <string name="install_updates">განახლებების ინსტალაცია</string>
     <string name="install_updates_subtext">ეს ნებართვა საჭიროა BaldPhone-ს განსაახლებლად</string>
-    <string name="a_new_update_is_available">განახლება ხელმისაწვდომია!\nგანახლებები აუცილებელია ტელეფონის მუშაობისთვის.\nდააჭირეთ OK-ს გადმოსაწერად.
+    <string name="a_new_update_is_available">განახლება ხელმისაწვდომია!\nგანახლებები აუცილებელია ტელეფონის მუშაობისთვის.\nდააჭირეთ დიახ-ს გადმოსაწერად.
     </string>
     <string name="current_version">ამჟამინდელი ვერსია:\n</string>
     <string name="new_version">ახალი ვერსია:\n</string>
     <string name="new_updates_are_ready_to_be_downloaded">განახლებები მზადაა გადმოსაწერად.</string>
     <string name="install">ინსტალაცია</string>
     <string name="data_warning">გაფრთხილება მობილური ინტერნეტის გამოყენების შესახებ</string>
-    <string name="data_warning_subtext">სალამი, თქვენ არ ხართ დაკავშირებული WIFI-ს.\nგადმოსაწერი პაკეტის ზომა დაახლოებით სამი მეგაბაიტია,რაც შეიძლება გარკვეული თანხა დაგიჯდეთ თუ საზღვარგარეთ იმყოფებით.\nგსურთ გადმოწერის გაგრძელება?
+    <string name="data_warning_subtext">სალამი,თქვენ არ ხართ დაკავშირებული WIFI-ს.\nგადმოსაწერი პაკეტის ზომა დაახლოებით სამი მეგაბაიტია,რაც შეიძლება გარკვეული თანხა დაგიჯდეთ თუ საზღვარგარეთ იმყოფებით.\nგსურთ გადმოწერის გაგრძელება?
     </string>
     <string name="update_message_is_corrupted">განახლების შეტყობინება დაზიანებულია.</string>
     <string name="check_for_updates">განახლებების შემოწმება</string>
@@ -313,7 +310,7 @@
     <string name="download_progress">გადმოწერის პროგრესი</string>
     <string name="what_do_you_want_to_do_with___">რისი მოქმედება გსურთ %s?</string>
     <string name="crash_reports">ავარიული შეცდომების შეტყობინება</string>
-    <string name="crash_reports_subtext">ავარიული შეცდომების შეტყობინება გეხმარებათ გახადოს აპლიკაციის გამოცდილება სრულყოფილი\nისინი გამოიყენება მხოლოდ შეცდომების გასასწორებლად, არანაირი სხვა ინფორმაცია აუცილებლის გარდა არ მიგვაქვს.
+    <string name="crash_reports_subtext">ავარიული შეცდომების შეტყობინება გეხმარებათ გახადოს აპლიკაციის გამოცდილება სრულყოფილი.\nისინი გამოიყენება მხოლოდ შეცდომების გასასწორებლად,არანაირი სხვა ინფორმაცია აუცილებლის გარდა არ მიგვაქვს.
     </string>
     <string name="custom_app">შეარჩიეთ აპი</string>
     <string name="custom_app_subtext">მონიშნეთ შერჩევითი აპლიკაცია მთავარ ეკრანზე დასაყენებლად.</string>
@@ -341,7 +338,7 @@
     <string name="dialer_sounds">ნომრების ამკრეფი-</string>
     <string name="dialer_sounds_subtext">აირჩიეთ თუ გსურთ გქონდეთ ნომრების  ამკრეფის ხმად.</string>
     <string name="low_battery_alert">გაფრთხილება ტელეფონის ელემენტის დაბალი დონის შესახებ</string>
-    <string name="low_battery_alert_subtext">აირჩიეთ თუ გსურთ რომ სტატუსბარი იყოს წითელი,როდესაც თქვენი ტელეფონის ელემენტის მუხტი ნაკლებია 20%\nშენიშვნა:არ იქნება ნაჩვენები თუ სტატუს ბარი დამალულია.</string>
+    <string name="low_battery_alert_subtext">აირჩიეთ თუ გსურთ რომ სტატუსბარი იყოს წითელი, როდესაც თქვენი ტელეფონის ელემენტის მუხტი ნაკლებია 20%\nშენიშვნა: არ იქნება ნაჩვენები თუ სტატუს ბარი დამალულია.</string>
 
     <string name="also_available_at">აგრეთვე ხელმისაწვდომია ამ მისამართზე\nbaldphone.contact@gmail.com\nუკუკავშირი უნდა იყოს ივრითზე ან ინგლისურად!</string>
     <string name="grant_all_permissions">ყველა ნებართვის მინიჭება</string>
@@ -350,7 +347,7 @@
     <!--For Tests:-->
     <string name="medication_1">ანალგინი 100</string>
     <string name="medication_2">ანალგინი 150</string>
-    <string name="donate">შეწირვა</string>
+    <string name="donate">შემოწირულობები</string>
     <string name="emergency_button">სასწრაფო ღილაკი</string>
     <string name="emergency_settings_subtext">აირჩიეთ თუ გინდა გქონდეთ სასწრაფოს ღილაკი მთავარ ეკრანზე.</string>
     <string name="private_number">კერძო ნომერი</string>
@@ -374,7 +371,7 @@
     <string name="colorful_subtext">გსურთ გახადოთ BaldPhone მეტად ფერადი?</string>
     <string name="edit_home_screen">მთავარი ეკრანის რედაქტირება</string>
     <string name="dual_sim">ორმაგი სიმ ბარათი</string>
-    <string name="dual_sim_subtext">აირჩიეთ როგორ გსურთ ორმაგი სიმ ბარათის განკარგვა\nშენიშვნა: თუ თქბვენ აირჩევთ პარამეტრების ჩვენებას, თქვენ დაგჭირდებათ კიდევ ერთი ნებართვის მიცემა</string>
+    <string name="dual_sim_subtext">აირჩიეთ როგორ გსურთ ორმაგი სიმ ბარათის განკარგვა.\nშენიშვნა: თუ თქბვენ აირჩევთ პარამეტრების ჩვენებას, თქვენ დაგჭირდებათ კიდევ ერთი ნებართვის მიცემა.</string>
     <string name="use_default">ნაგულისხმევების გამოყენება</string>
     <string name="show_options">პარამეტრების ჩვენება</string>
     <string name="read_phone_state">ტელეფონის მდგომარეობის წაკითხვა</string>
