@@ -224,7 +224,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="saturday">Sábado</string>
     <string name="save">Guardar</string>
     <string name="send">Enviar</string>
-    <string name="set_default_dialer">Configurar aplicación de llamadas principal</string>
+    <string name="set_default_dialer">Configurar aplicación de llamadas</string>
     <string name="set_default_dialer_subtext">Es necesario que configures a BaldPhone como la aplicación de llamadas predeterminada.</string>
     <string name="set_home_screen">Configurar pantalla de inicio</string>
     <string name="set_home_screen_subtext">Para usar BaldPhone, debe establecerla como Pantalla de Inicio.\n
