@@ -19,12 +19,12 @@
     <string name="about_subtext">
         ¡Hola!\n
         Mi nombre es Uriah Shaul Mandel y soy el desarrollador de esta plataforma.\n
-        He pasado la mayor parte de mi vida "adulta" haciendo esta plataforma, y la he lanzado gratis,
+        He pasado la mayor parte de mi vida «adulta» haciendo esta plataforma, y la he lanzado gratis,
         para que todos la usen.\n
-        Son bienvenidos a contactarme por correo electrónico:\n
+        Para cualquier duda o sugerencia he aquí mi correo:\n
         baldphone.contact@gmail.com
     </string>
-    <string name="accessibility_level">Nivel de Accesibilidad</string>
+    <string name="accessibility_level">Nivel de accesibilidad</string>
     <string name="accessibility_settings">Accesibilidad</string>
     <string name="accidental_touches">Protección de toque accidental</string>
     <string name="accidental_touches_settings_subtext">El protector bloquea su teléfono de entrada táctil cuando el
@@ -35,40 +35,40 @@
         Si este mensaje sigue apareciendo puede desactivarlo en las opciones de accesibilidad
     </string>
     <string name="acknowledgments">Agradecimientos</string>
-    <string name="adaptive">Adaptativo</string>
-    <string name="add_alarm">Añadir Alarma</string>
-    <string name="add_alarm_quickly">Añadir Temporizador</string>
-    <string name="add_contact">Añadir Contacto</string>
+    <string name="adaptive">Adaptable</string>
+    <string name="add_alarm">Añadir alarma</string>
+    <string name="add_alarm_quickly">Añadir temporizador</string>
+    <string name="add_contact">Añadir contacto</string>
     <string name="add_emergency_contact">Añadir</string>
-    <string name="add_pill">Añadir Pastilla</string>
+    <string name="add_pill">Añadir pastilla</string>
     <string name="add_shortcut">Añadir acceso directo</string>
-    <string name="add_to_favorite">Añadir a Favoritos</string>
-    <string name="add_to_home">Añadir a Inicio</string>
+    <string name="add_to_favorite">Añadir a favoritos</string>
+    <string name="add_to_home">Añadir a inicio</string>
     <string name="add_to_sos">Añadir a SOS</string>
     <string name="address">Dirección</string>
-    <string name="advanced_options">Opciones Avanzadas</string>
+    <string name="advanced_options">Opciones avanzadas</string>
     <string name="afternoon">A la Tarde</string>
-    <string name="airplane_mode">Modo Avión</string>
-    <string name="alarm_name">Nombre Alarma</string>
-    <string name="alarm_volume">Volumen Alarma</string>
-    <string name="alarm_volume_subtext">Elige nivel de volumen para las Alarmas.\n
-        El volumen se incrementa de izquierda a derecha.</string>
+    <string name="airplane_mode">Modo avión</string>
+    <string name="alarm_name">Nombre de alarma</string>
+    <string name="alarm_volume">Volumen de alarma</string>
+    <string name="alarm_volume_subtext">Elige nivel de volumen para las alarmas.\n
+Cuanto más a la derecha, más alto se oirá.</string>
     <string name="alarms">Alarmas</string>
 
-    <string name="alarms_repeats_every">Alarma se repite cada</string>
-    <string name="all_alarms">Todas las Alarmas</string>
+    <string name="alarms_repeats_every">Repetir alarma cada</string>
+    <string name="all_alarms">Todas las alarmas</string>
     <string name="allow">Permitir</string>
     <string name="already_setted">¡Ya definido!\nPulse aquí para cambiarlo</string>
-    <string name="an_error_has_occurred">Ha ocurrido un error!</string>
+    <string name="an_error_has_occurred">Ha ocurrido un problema.</string>
     <string name="and_welcome_to_baldphone">y bienvenido a Baldphone</string>
 
     <string name="apps">Aplicaciones</string>
-    <string name="are_you_sure_you_want_to_delete___">¿Está seguro de querer eliminar %s?</string>
+    <string name="are_you_sure_you_want_to_delete___">¿Seguro que quieres borrar %s?</string>
     <string name="assistant">Asistente</string>
-    <string name="at_least_one_day_must_be_selected">¡Debe seleccionarse al menos un día!</string>
-    <string name="auto_brightness">Brillo\nAutomático</string>
+    <string name="at_least_one_day_must_be_selected">¡Hay que elegir al menos un día!</string>
+    <string name="auto_brightness">Brillo\nautomático</string>
     <string name="backspace">retroceso</string>
-    <string name="baldphone_bla_allow_permission">Por favor, permita los siguentes permisos:</string>
+    <string name="baldphone_bla_allow_permission">Por favor, permita los siguientes permisos:</string>
     <string name="blocked">Bloqueado</string>
     <string name="bluetooth">Bluetooth</string>
     <string name="brightness">Brillo</string>
@@ -420,6 +420,7 @@
     <string name="read_phone_state_subtext">Este permiso es necesario para poder llamar desde la segunda sim</string>
     <string name="choose_sim">Elige Sim</string>
     <string name="choose_sim_subtext">Elige la sim desde la que quieras realizar la llamada</string>
+    <string name="website">Página Web</string>
 
 
     <string-array name="names_for_screenshots">
