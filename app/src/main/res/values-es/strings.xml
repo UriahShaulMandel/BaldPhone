@@ -50,7 +50,7 @@
     <string name="afternoon">A la Tarde</string>
     <string name="airplane_mode">Modo avión</string>
     <string name="alarm_name">Nombre de alarma</string>
-    <string name="alarm_volume">Volumen Alarma</string>
+    <string name="alarm_volume">Volumen de alarma</string>
     <string name="alarm_volume_subtext">Elige nivel de volumen para las Alarmas.\n
         El volumen se incrementa de izquierda a derecha.</string>
     <string name="alarms">Alarmas</string>
