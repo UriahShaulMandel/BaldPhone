@@ -106,8 +106,11 @@ public class SinglePhotoActivity extends SingleMediaActivity implements Constant
         @Override
         protected void bindView(View view, Cursor cursor, Context context) {
             final ImageView pic = view.findViewById(R.id.pic);
+            final int fieldIndex = cursor.getColumnIndex(MediaStore.Images.Media._ID);
+            final long id = cursor.getLong(fieldIndex);
+            final Uri imageUri = ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, id);
             if (S.isValidContextForGlide(pic.getContext()))
-                Glide.with(pic).load(cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA))).into(pic);
+                Glide.with(pic).load(imageUri).into(pic);
         }
 
         @Override

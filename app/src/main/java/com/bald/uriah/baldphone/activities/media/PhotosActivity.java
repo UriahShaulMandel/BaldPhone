@@ -31,8 +31,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 
-import java.io.File;
-
 /**
  * Most of this class is defined at {@link MediaScrollingActivity},
  * The Constants used are defined at {@link Constants.PhotosConstants}
@@ -83,7 +81,7 @@ public class PhotosActivity extends MediaScrollingActivity implements Constants.
                         MediaStore.Images.Thumbnails.MINI_KIND,
                         null);
 
-        if (thumbnailCursor != null && thumbnailCursor.getCount() > 0 && thumbnailCursor.moveToFirst() && new File(thumbnailCursor.getString(thumbnailCursor.getColumnIndex(MediaStore.Images.Thumbnails.DATA))).exists()) {
+        if (thumbnailCursor != null && thumbnailCursor.getCount() > 0 && thumbnailCursor.moveToFirst()) {
             Glide
                     .with(holder.itemView)
                     .load(thumbnailCursor.getString(thumbnailCursor.getColumnIndex(MediaStore.Images.Thumbnails.DATA)))
@@ -91,7 +89,7 @@ public class PhotosActivity extends MediaScrollingActivity implements Constants.
                     .into(holder.pic);
         } else {
             thumbnailCursor = MediaStore.Images.Thumbnails.queryMiniThumbnail(getContentResolver(), imgId, MediaStore.Images.Thumbnails.MICRO_KIND, null);
-            if (thumbnailCursor != null && thumbnailCursor.getCount() > 0 && thumbnailCursor.moveToFirst() && new File(thumbnailCursor.getString(thumbnailCursor.getColumnIndex(MediaStore.Images.Thumbnails.DATA))).exists()) {
+            if (thumbnailCursor != null && thumbnailCursor.getCount() > 0 && thumbnailCursor.moveToFirst()) {
                 Glide
                         .with(this)
                         .load(thumbnailCursor.getString(thumbnailCursor.getColumnIndex(MediaStore.Images.Thumbnails.DATA)))
