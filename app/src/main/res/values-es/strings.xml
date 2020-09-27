@@ -411,7 +411,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="colorful">Colorido</string>
     <string name="colorful_subtext">¿Quieres que BaldPhone tenga más colorines?</string>
     <string name="edit_home_screen">Cambiar pantalla de inicio</string>
-    <string name="dual_sim">Sim Dual</string>
+    <string name="dual_sim">SIM dual</string>
     <string name="dual_sim_subtext">Elige cómo quieres gestionar la doble sim\nNota: Si eliges Mostrar Opciones, deberás aceptar otro permiso</string>
     <string name="use_default">Usar predeterminado</string>
     <string name="show_options">Mostrar Opciones</string>
