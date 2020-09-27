@@ -407,7 +407,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="apps_sort_method">Ordenar lista de aplicaciones</string>
     <string name="apps_sort_method_subtext">Elige si quieres ordenar las aplicaciones en una sola tabla o separarlas en varios grupos, alfabéticamente, por letras</string>
     <string name="groups">Por grupos</string>
-    <string name="one_grid">One Grid</string>
+    <string name="one_grid">En una tabla</string>
     <string name="colorful">Colorful</string>
     <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
     <string name="edit_home_screen">Edit Home Screen</string>
