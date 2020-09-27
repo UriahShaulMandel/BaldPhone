@@ -321,7 +321,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="data_warning">¡Aviso del uso de datos!</string>
     <string name="data_warning_subtext">
 		Hola, parece que no estás conectado a ninguna red Wi-Fi.\n
-		El tamaño de la descarga es de aproximadamente 3MB, si estás en el extranjero, puede costarte dinero.\n
+		El tamaño de la descarga es de aproximadamente 3 MB, si estás en el extranjero, puede costarte dinero.\n
 		¿Seguro que quieres descargar la actualización?
     </string>
     <string name="update_message_is_corrupted">El mensaje de actualización está corrupto.</string>
