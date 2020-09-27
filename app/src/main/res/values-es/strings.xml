@@ -418,7 +418,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="read_phone_state">Consultar estado del teléfono</string>
     <string name="read_phone_state_subtext">Este permiso es necesario para poder llamar desde la segunda sim</string>
     <string name="choose_sim">Elige una tarjeta SIM</string>
-    <string name="choose_sim_subtext">Elige la tarjeta SIM desde la que quieras realizar la llamada</string>
+    <string name="choose_sim_subtext">Elige la tarjeta SIM desde la que quieras llamar</string>
     <string name="website">Página Web</string>
 
 
