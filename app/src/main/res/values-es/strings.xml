@@ -292,7 +292,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="yesterday">Ayer</string>
     <string name="nothing">Nada</string>
     <string name="no_contacts_found">No se ha encontrado ningún contacto.</string>
-    <string name="no_alarms">Parece que todavía no hay alarmas puestas,\npuedes crear una pulsando\n«Añadir alarma» ó «Añadir temporizador».</string>
+    <string name="no_alarms">Parece que todavía no hay ninguna alarma,\npuedes crear una pulsando\n«Añadir alarma» ó «Añadir temporizador».</string>
     <string name="no_pills">No hay ninguna pastilla registrada,\nañade alguna pulsando el botón de\n«Añadir una pastilla»</string>
     <string name="clear_all_notifications">Quitar todas las notificaciones</string>
     <string name="clear_cache_subtext">¿Seguro que quieres borrar del todo la memoria caché de BaldPhone? Puede que borrar los archivos temporales solucione algunos problemas, pero los enlaces directos de la pantalla principal también se borrarán.
