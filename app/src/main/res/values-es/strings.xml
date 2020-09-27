@@ -340,7 +340,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="try_now">Intentar de nuevo</string>
     <string name="download_progress">Descargando</string>
     <string name="what_do_you_want_to_do_with___">¿Qué quieres hacer con %s?</string>
-    <string name="crash_reports">Enviar informes de fallos automáticamente</string>
+    <string name="crash_reports">Enviar informes de fallos</string>
     <string name="crash_reports_subtext">
 		Los informes automáticos de fallos ayudan a que la experiencia de BaldPhone mejore de forma sustancial.\n
 		Estos informes solo se usan para arreglar fallos, y contienen la información mínima para poder entender el problema.
