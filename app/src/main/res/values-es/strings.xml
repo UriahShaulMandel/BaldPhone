@@ -298,7 +298,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="no_alarms">Sin Alarmas\nCrea una pulsando\n\"Añadir Alarma\"\no\n\"Añadir Temporizador\"</string>
     <string name="no_pills">Sin Pastillas\nCrea una pulsando\n\"Añadir Pastilla\"</string>
     <string name="clear_all_notifications">Quitar todas las notificaciones</string>
-    <string name="clear_cache_subtext">¿Seguro que quieres borrar del todo la memoria caché de BaldPhone? Puedes que borrar los archivos temporales solucione algunos problemas, pero los enlaces directos de la pantalla principal también se borrarán.
+    <string name="clear_cache_subtext">¿Seguro que quieres borrar del todo la memoria caché de BaldPhone? Puede que borrar los archivos temporales solucione algunos problemas, pero los enlaces directos de la pantalla principal también se borrarán.
     </string>
     <string name="permissions_calm">
 		Hola, BaldPhone debe tener los siguientes permisos para ejecutarse. Algunos
