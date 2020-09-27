@@ -357,7 +357,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
 
 
     <string name="status_bar_settings">Barra de estado</string>
-    <string name="status_bar_settings_subtext">¿Dónde quieres mostrar la barra de estado?</string>
+    <string name="status_bar_settings_subtext">¿Dónde quieres ver la barra de estado?</string>
     <string name="only_home_screen">Solo en la Pantalla de Inicio</string>
     <string name="nowhere">Oculta</string>
     <string name="everywhere">Todas partes</string>
