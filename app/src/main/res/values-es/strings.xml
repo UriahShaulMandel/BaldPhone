@@ -86,8 +86,8 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="change_system_settings_subtext">Para que BaldPhone funcione correctamente necesita poder cambiar los ajustes, como aumentar el tamaño del texto o cambiar el brillo.
 </string>
     <string name="choose_friday">Vie</string>
-    <string name="choose_monday">Lun</string>
-    <string name="choose_saturday">Sáb</string>
+    <string name="choose_monday">Lun.</string>
+    <string name="choose_saturday">Sáb.</string>
     <string name="choose_sunday">Dom.</string>
     <string name="choose_thursday">Jue.</string>
     <string name="choose_tuesday">Mar.</string>
