@@ -395,7 +395,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="swipe_left_or_right">Deslizar a izquierda o derecha</string>
     <string name="press_next_or_back_buton">Presiona la flecha de avanzar o retroceso</string>
     <string name="click_delay">Retardo al pulsar</string>
-    <string name="no_delay">No Delay</string>
+    <string name="no_delay">Sin retardo</string>
     <string name="scrolling">Scrolling</string>
     <string name="arrows">Arrows</string>
     <string name="swipe">Touch</string>
