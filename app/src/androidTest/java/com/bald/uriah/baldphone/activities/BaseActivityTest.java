@@ -24,7 +24,6 @@ import org.junit.Before;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 
 public class BaseActivityTest {
-
     @Before
     public void setUp() {
         BPrefs
