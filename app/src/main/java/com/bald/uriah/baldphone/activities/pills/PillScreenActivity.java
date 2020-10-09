@@ -164,6 +164,6 @@ public class PillScreenActivity extends TimedBaldActivity {
 
     @Override
     protected int requiredPermissions() {
-        return PERMISSION_NONE;
+        return PERMISSION_SYSTEM_ALERT_WINDOW;
     }
 }

@@ -38,6 +38,7 @@
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
     <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
 
     <uses-permission
@@ -146,8 +147,7 @@
         <activity
             android:name=".activities.RecentActivity"
             android:enabled="${recentCalls}"
-            android:label="@string/recent">
-        </activity>
+            android:label="@string/recent"></activity>
         <activity
             android:name=".activities.media.PhotosActivity"
 
