@@ -154,9 +154,9 @@ public class SingleVideoActivity extends SingleMediaActivity implements Constant
 
             });
 
-            final Uri uri = Uri.parse(cursor.getString(
-                    cursor.getColumnIndex(MediaStore.Images.Media.DATA)
-            ));
+            final int fieldIndex = cursor.getColumnIndex(MediaStore.Video.Media._ID);
+            final long id = cursor.getLong(fieldIndex);
+            final Uri uri = ContentUris.withAppendedId(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, id);
             videoView.setVideoURI(uri);
             videoView.requestFocus();
             videoView.seekTo(1);

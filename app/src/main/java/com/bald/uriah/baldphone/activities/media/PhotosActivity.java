@@ -17,10 +17,15 @@
 package com.bald.uriah.baldphone.activities.media;
 
 import android.content.ContentResolver;
+import android.content.ContentUris;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
+import android.util.Size;
 
 import androidx.annotation.Nullable;
 
@@ -31,11 +36,15 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 
+import java.io.IOException;
+
 /**
  * Most of this class is defined at {@link MediaScrollingActivity},
  * The Constants used are defined at {@link Constants.PhotosConstants}
  */
 public class PhotosActivity extends MediaScrollingActivity implements Constants.PhotosConstants {
+    private static final String TAG = PhotosActivity.class.getSimpleName();
+    private Size photoThumbnailSize;
     private RequestOptions requestOptions;
 
     @Override
@@ -48,9 +57,10 @@ public class PhotosActivity extends MediaScrollingActivity implements Constants.
     protected void setupBeforeAdapter() {
         requestOptions = new RequestOptions()
                 .override(width)
-                .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .error(R.drawable.error_on_background)
                 .lock();
+        photoThumbnailSize = new Size(width, width);
     }
 
     @Override
@@ -74,37 +84,54 @@ public class PhotosActivity extends MediaScrollingActivity implements Constants.
             return;
 
         final long imgId = cursor.getLong(cursor.getColumnIndex(MediaStore.Images.Media._ID));
-        Cursor thumbnailCursor =
-                MediaStore.Images.Thumbnails.queryMiniThumbnail(
-                        getContentResolver(),
-                        imgId,
-                        MediaStore.Images.Thumbnails.MINI_KIND,
-                        null);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            final int fieldIndex = cursor.getColumnIndex(MediaStore.Images.Media._ID);
+            final long id = cursor.getLong(fieldIndex);
+            final Uri imageUri = ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, id);
+            try {
+                Bitmap thumbnailBitmap = getContentResolver().loadThumbnail(imageUri, photoThumbnailSize, null);
+                Glide.with(holder.pic)
+                        .load(thumbnailBitmap)
+                        .apply(requestOptions)
+                        .into(holder.pic);
 
-        if (thumbnailCursor != null && thumbnailCursor.getCount() > 0 && thumbnailCursor.moveToFirst()) {
-            Glide
-                    .with(holder.itemView)
-                    .load(thumbnailCursor.getString(thumbnailCursor.getColumnIndex(MediaStore.Images.Thumbnails.DATA)))
-                    .apply(requestOptions)
-                    .into(holder.pic);
+            } catch (IOException e) {
+                Log.e(TAG, S.str(e.getMessage()));
+                e.printStackTrace();
+            }
         } else {
-            thumbnailCursor = MediaStore.Images.Thumbnails.queryMiniThumbnail(getContentResolver(), imgId, MediaStore.Images.Thumbnails.MICRO_KIND, null);
+            Cursor thumbnailCursor =
+                    MediaStore.Images.Thumbnails.queryMiniThumbnail(
+                            getContentResolver(),
+                            imgId,
+                            MediaStore.Images.Thumbnails.MINI_KIND,
+                            null);
+
             if (thumbnailCursor != null && thumbnailCursor.getCount() > 0 && thumbnailCursor.moveToFirst()) {
                 Glide
-                        .with(this)
+                        .with(holder.pic)
                         .load(thumbnailCursor.getString(thumbnailCursor.getColumnIndex(MediaStore.Images.Thumbnails.DATA)))
                         .apply(requestOptions)
                         .into(holder.pic);
             } else {
-                Glide
-                        .with(this)
-                        .load(cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA)))
-                        .apply(requestOptions)
-                        .into(holder.pic);
+                thumbnailCursor = MediaStore.Images.Thumbnails.queryMiniThumbnail(getContentResolver(), imgId, MediaStore.Images.Thumbnails.MICRO_KIND, null);
+                if (thumbnailCursor != null && thumbnailCursor.getCount() > 0 && thumbnailCursor.moveToFirst()) {
+                    Glide
+                            .with(this)
+                            .load(thumbnailCursor.getString(thumbnailCursor.getColumnIndex(MediaStore.Images.Thumbnails.DATA)))
+                            .apply(requestOptions)
+                            .into(holder.pic);
+                } else {
+                    Glide
+                            .with(this)
+                            .load(cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA)))
+                            .apply(requestOptions)
+                            .into(holder.pic);
+                }
             }
+            if (thumbnailCursor != null)
+                thumbnailCursor.close();
         }
-        if (thumbnailCursor != null)
-            thumbnailCursor.close();
     }
 
     @Override
