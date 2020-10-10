@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
@@ -29,6 +30,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.Constants;
@@ -40,6 +42,8 @@ import com.bumptech.glide.Glide;
  * The Constants used are defined at {@link Constants.PhotosConstants}
  */
 public class SinglePhotoActivity extends SingleMediaActivity implements Constants.PhotosConstants {
+    private static final String TAG = SinglePhotoActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,17 +67,31 @@ public class SinglePhotoActivity extends SingleMediaActivity implements Constant
             super(activity);
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.Q)
         @Override
-        protected void delete(Activity activity, Cursor cursor) {
+        protected void deletePost29(Activity activity) throws SecurityException {
             final int id =
                     cursor.getInt(cursor.getColumnIndex(MediaStore.MediaColumns._ID));
             final Uri deleteUri =
                     ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, id);
+
+            activity.getContentResolver().delete(
+                    deleteUri,
+                    null,
+                    null);
+        }
+
+        @Override
+        protected void delete(Activity activity) {
+            final int id =
+                    cursor.getInt(cursor.getColumnIndex(MediaStore.MediaColumns._ID));
+            final Uri deleteUri =
+                    ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, id);
+
             activity.getContentResolver().delete(
                     EXTERNAL,
                     MediaStore.MediaColumns.DATA + "=?",
                     new String[]{getPath(deleteUri)});
-
         }
 
         private String getPath(Uri uri) {
@@ -106,8 +124,11 @@ public class SinglePhotoActivity extends SingleMediaActivity implements Constant
         @Override
         protected void bindView(View view, Cursor cursor, Context context) {
             final ImageView pic = view.findViewById(R.id.pic);
+            final int fieldIndex = cursor.getColumnIndex(MediaStore.Images.Media._ID);
+            final long id = cursor.getLong(fieldIndex);
+            final Uri imageUri = ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, id);
             if (S.isValidContextForGlide(pic.getContext()))
-                Glide.with(pic).load(cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA))).into(pic);
+                Glide.with(pic).load(imageUri).into(pic);
         }
 
         @Override

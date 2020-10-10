@@ -218,6 +218,6 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
 
     @Override
     protected int requiredPermissions() {
-        return PERMISSION_NONE;
+        return PERMISSION_SYSTEM_ALERT_WINDOW;
     }
 }

@@ -82,7 +82,8 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
             PERMISSION_CAMERA = 0b1000000,
             PERMISSION_WRITE_EXTERNAL_STORAGE = 0b10000000,
             PERMISSION_NOTIFICATION_LISTENER = 0b100000000 | PERMISSION_WRITE_SETTINGS,
-            PERMISSION_REQUEST_INSTALL_PACKAGES = 0b1000000000;
+            PERMISSION_REQUEST_INSTALL_PACKAGES = 0b1000000000,
+            PERMISSION_SYSTEM_ALERT_WINDOW = 0b1000000000000;
 
     public boolean testing = false;
     public boolean colorful;
@@ -167,6 +168,11 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
         if ((requiredPermissions & PERMISSION_WRITE_EXTERNAL_STORAGE) != 0) {
             if (ActivityCompat.checkSelfPermission(activity, WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED)
                 return false;
+        }
+        if ((requiredPermissions & PERMISSION_SYSTEM_ALERT_WINDOW) != 0) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+                if (!Settings.canDrawOverlays(activity))
+                    return false;
         }
         if ((requiredPermissions & PERMISSION_REQUEST_INSTALL_PACKAGES) != 0) {
             return

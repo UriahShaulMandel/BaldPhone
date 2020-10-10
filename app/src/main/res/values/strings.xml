@@ -401,6 +401,8 @@
     <string name="choose_sim">Choose Sim</string>
     <string name="choose_sim_subtext">Choose the sim you want to make the call from</string>
     <string name="website">Website</string>
+    <string name="appear_on_top">Appear on top</string>
+    <string name="appear_on_top_subtext">This permission is required on new version of android in order to show alarms and reminders when the screen is closed</string>
 
 
     <string-array name="names_for_screenshots">

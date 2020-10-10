@@ -246,6 +246,6 @@ public class AddPillActivity extends BaldActivity {
 
     @Override
     protected int requiredPermissions() {
-        return PERMISSION_NONE;
+        return PERMISSION_SYSTEM_ALERT_WINDOW;
     }
 }
