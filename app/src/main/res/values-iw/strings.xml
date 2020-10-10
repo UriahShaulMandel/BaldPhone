@@ -402,7 +402,17 @@
     <string name="colorful">צבעים</string>
     <string name="colorful_subtext">האם ברצונך להפוך את BaldPhone ליותר צבעוני?</string>
     <string name="edit_home_screen">עריכת מסך הבית</string>
-
+    <string name="dual_sim">סים כפול</string>
+    <string name="dual_sim_subtext">בחר כיצד להשתמש בסים כפול\nאם תבחר ב הצגת אפשרויות תצטרך לאשר הרשאה נוספת</string>
+    <string name="use_default">השתמש בברירת מחדל</string>
+    <string name="show_options">הצגת אפשרויות</string>
+    <string name="read_phone_state">גישה למצב טלפון</string>
+    <string name="read_phone_state_subtext">אנא אפשר לBaldPhone לגשת למצב הטלפון על מנת לתפעל סים כפול</string>
+    <string name="choose_sim">בחר סים</string>
+    <string name="choose_sim_subtext">יש לבחור את הסים ממנו אתה רוצה לבצע את השיחה</string>
+    <string name="website">אתר</string>
+    <string name="appear_on_top">גישה להצגה מעל</string>
+    <string name="appear_on_top_subtext">יש לאפשר גישה זו בגרסאות חדשות של אנדרואיד, על מנת להציג שעון מעורר ותזכורות</string>
 
     <string-array name="names_for_screenshots">
         <item>יונה הנביא</item>
