@@ -61,7 +61,7 @@ public class PermissionActivity extends BaldActivity {
     public static final String
             EXTRA_REQUIRED_PERMISSIONS = "EXTRA_REQUIRED_PERMISSIONS",
             EXTRA_INTENT = "EXTRA_INTENT";
-    public static final int[] REQUEST_CODES = {789, 788, 787};
+    public static final int[] REQUEST_CODES = {789, 788, 787, 786};
 
     private List<PermissionItem> permissionItemList = new ArrayList<>();
     private RecyclerView recyclerView;
@@ -196,6 +196,16 @@ public class PermissionActivity extends BaldActivity {
             if (ActivityCompat.checkSelfPermission(this, WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED)
                 permissionItemList.add(
                         new SimplePermissionItem(WRITE_EXTERNAL_STORAGE, getString(R.string.write_external_storage), getString(R.string.external_storage_subtext)));
+        }
+        if ((requiredPermissions & PERMISSION_SYSTEM_ALERT_WINDOW) != 0) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                if (!Settings.canDrawOverlays(this)) {
+                    final Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                            Uri.parse("package:" + getPackageName()));
+                    permissionItemList.add(
+                            new PermissionItem(v -> startActivityForResult(intent, REQUEST_CODES[3]), getString(R.string.appear_on_top), getString(R.string.appear_on_top_subtext)));
+                }
+            }
         }
 
     }

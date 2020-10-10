@@ -220,6 +220,6 @@ public class PillsActivity extends BaldActivity {
 
     @Override
     protected int requiredPermissions() {
-        return PERMISSION_NONE;
+        return PERMISSION_SYSTEM_ALERT_WINDOW;
     }
 }

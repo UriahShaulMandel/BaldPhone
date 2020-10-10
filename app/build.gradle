@@ -19,11 +19,11 @@ apply plugin: 'com.android.application'
 
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.bald.uriah.baldphone"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 101
         versionName "12.1.5"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
