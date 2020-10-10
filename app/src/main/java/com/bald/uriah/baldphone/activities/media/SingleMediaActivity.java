@@ -137,6 +137,8 @@ public abstract class SingleMediaActivity extends BaldActivity {
                 cursor.moveToPosition(position);
                 try {
                     deletePost29(activity);
+                    activity.setResult(SHOULD_REFRESH);
+                    activity.finish();
                 } catch (RecoverableSecurityException e) {
                     Log.e(TAG, S.str(e.getMessage()));
                     e.printStackTrace();
