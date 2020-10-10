@@ -1,0 +1,2 @@
+* Fixed Android 10 bugs
+* Added and fixed languages
