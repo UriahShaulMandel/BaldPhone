@@ -64,7 +64,9 @@ public class ShareActivity extends BaseContactsActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (super.recyclerView.getAdapter().getItemCount() == 0) {
+        if (!checkPermissions(this, requiredPermissions()))
+            return;
+        if (recyclerView != null && super.recyclerView.getAdapter().getItemCount() == 0) {
             differently_container.setVisibility(View.VISIBLE);
             whatsapp_container.setVisibility(View.GONE);
             bald_switch.setVisibility(View.GONE);
