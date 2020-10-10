@@ -59,7 +59,9 @@ script:
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then git push https://UriahShaulMandel:${GITHUB_API_KEY}@${GH_REF} HEAD:master; fi'
 
 before_install:
-  - echo yes | android update sdk --all --filter build-tools-29.0.3 --no-ui --force
+  - touch $HOME/.android/repositories.cfg
+  - yes | sdkmanager "platforms;android-29"
+  - yes | sdkmanager "build-tools;29.0.3"
 dd:
   secure: kp7Bw9boFlD2Zq2W4pZi2FNscbdjG0jskAtESep/vuldrRz/3H6xFXtuWpZg6YXlAVn5mx6jMVQl8j+hw+NLgQ7BktSmhrNgoXIgQ2ZGjsv2pu3VrLGz57chD7hgeNGLaDr9SSFu3AElI6hCJuXjgkyDSATRG4F+IQ/3NT1twg7oArzYVfH6atGdtTljeuaEet2+6fIVoIcuQ0WgkorH7Kem/TGNiuSqzA6wNL2FQSL2Ff+hloFhbmHdeYh6glxhZltygOKRfxsFbDn7WBkCi/xh+F7FWZve5CTEmeGiw49z3Ydjh8IUkWmw+1LMqM0zQo2P88a1rIZlViXR9y8wI98YYvhMQPKmgQ5DSKl1WBVjBl0AxE/ou419iCQnIiB2KCUZn6UwPEvxBD7qSo6QInZVdMr6K+bKRYpsCi1BjARoJ7qqHVNajQOmL0qwXVuLnvKArNxN0DVFsUG1VqVVfw04EXXkC19Kl8mVvsBTxYdzdAsvuZZiQ4vse4K9L+kOWexVDPNhSNPSKhbG0sNFh09buIz1Pe7r4hTHEoYzlilRkG5W1YtiU9cp93a4MrC5wZ3WQ3z3IpBARmA9ehVQZyRzxDxpt7PJiuXqT8Ojdq6RY39b3CrOcwJkmPiu1vSOUC+Jj7+7pWykIQMbbubN0LspbZgNnff2YAse8FS8XuQ=
 
