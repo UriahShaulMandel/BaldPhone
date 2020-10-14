@@ -18,20 +18,15 @@
     <string name="about">Acerca de</string>
     <string name="about_subtext">
         ¡Hola, buenos días!\n
-        Me llamo Uriah Shaul Mandel y soy el desarrollador de esta plataforma.\n
-        He pasado la mayor parte de mi vida «adulta» haciendo esta plataforma, y la he lanzado gratis,
-        para que todos la usen.\n
-        Si tienes alguna duda o sugerencia he aquí mi correo electrónico:\n
+        Me llamo Uriah Shaul Mandel y soy el desarrollador de esta plataforma. He pasado la mayor parte de mi vida «adulta» desarrollando esta plataforma, y la he lanzado gratis para beneficio de todos. Si tienes alguna duda o sugerencia he aquí mi correo electrónico:\n
         baldphone.contact@gmail.com (si me escribes, mejor en inglés)
     </string>
     <string name="accessibility_level">Nivel de accesibilidad</string>
     <string name="accessibility_settings">Accesibilidad</string>
     <string name="accidental_touches">Protección de toque accidental</string>
-    <string name="accidental_touches_settings_subtext">El protector bloquea la pantalla táctil al cubrir el teléfono\nSi te causa problemas puedes desactivarlo, no pasa nada.
+    <string name="accidental_touches_settings_subtext">El protector bloquea la pantalla táctil al cubrir el teléfono. Si te causa problemas puedes desactivarlo, no pasa nada.
     </string>
-    <string name="accidental_touches_subtext">Parece que hemos detectado un toque accidental\n
-        No pasa nada, pulsa «Aceptar» para continuar usando el teléfono\n
-        Si este mensaje sigue apareciendo puedes desactivarlo en las opciones de accesibilidad.
+    <string name="accidental_touches_subtext">Parece que hemos detectado un toque accidental. No pasa nada, pulsa «Aceptar» para continuar usando el teléfono. Si este mensaje sigue apareciendo puedes desactivarlo en las opciones de accesibilidad.
     </string>
     <string name="acknowledgments">Agradecimientos</string>
     <string name="adaptive">Adaptable</string>
@@ -50,8 +45,7 @@
     <string name="airplane_mode">Modo avión</string>
     <string name="alarm_name">Nombre de alarma</string>
     <string name="alarm_volume">Volumen de alarma</string>
-    <string name="alarm_volume_subtext">Elige nivel de volumen para las alarmas.\n
-Cuanto más a la derecha, más alto se oirá.</string>
+    <string name="alarm_volume_subtext">Elige un nivel de volumen para las alarmas. Cuanto más a la derecha, más alto se oirá.</string>
     <string name="alarms">Alarmas</string>
 
     <string name="alarms_repeats_every">Repetir alarma cada</string>
@@ -59,7 +53,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="allow">Permitir</string>
     <string name="already_setted">Ya está configurado.\nPulsa aquí para cambiarlo.</string>
     <string name="an_error_has_occurred">Ha ocurrido un problema.</string>
-    <string name="and_welcome_to_baldphone">y bienvenido a Baldphone</string>
+    <string name="and_welcome_to_baldphone">te damos la bienvenida a Baldphone</string>
 
     <string name="apps">Aplicaciones</string>
     <string name="are_you_sure_you_want_to_delete___">¿Seguro que quieres borrar «%s»?</string>
@@ -74,7 +68,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="brightness_subtext">Cambiar brillo.</string>
     <string name="cache_cleared_successfully">Se ha vaciado la memoria caché correctamente.</string>
     <string name="call">Llamar</string>
-    <string name="calling">Llamando</string>
+    <string name="calling">Llamadas telefónicas</string>
 
     <string name="call_log">Historial de llamadas:</string>
     <string name="call_subtext">Se necesita este permiso para llamar a tus contactos.</string>
@@ -99,7 +93,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="clear_data_subtext3">¿Estás seguro?\nPulsar «Sí» borrará todos los datos.</string>
     <string name="clock">Reloj</string>
     <string name="coming_soon">Esta función todavía no está disponible.</string>
-    <string name="connection_settings">Conexión</string>
+    <string name="connection_settings">Conexiones de red</string>
     <string name="contact_must_has_name">Al contacto hay que ponerle un nombre.</string>
     <string name="contact_not_created">No se ha creado el contacto.</string>
     <string name="contacts">Contactos</string>
@@ -130,30 +124,26 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="feedback">Enviar comentarios y opiniones</string>
     <string name="feedback_cannot_be_empty">Para enviar comentarios primero hay que escribir algo.</string>
     <string name="feedback_sent_successfully">El comentario se ha enviado correctamente.</string>
-    <string name="first_please_select_how_you_want_to_interact_with_buttons">Para empezar elige un nivel de accesibilidad
-    </string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Elige un nivel de accesibilidad</string>
     <string name="font_size">Tamaño del texto</string>
     <string name="friday">Viernes</string>
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">¿Tienes dificultades con el teclado táctil? Puedes probar el teclado de BaldPhone, que suele ser más fácil de usar.
     </string>
-    <string name="hello">¿Hola, qué tal?</string>
+    <string name="hello">Hola, ¿qué tal?</string>
     <string name="help">Guía en formato vídeo</string>
     <string name="hide">Ocultar</string>
-    <string name="high_level">Nivel alto</string>
+    <string name="high_level">Más alto</string>
     <string name="home_phone_number">Número fijo de casa</string>
     <string name="hour">Hora</string>
     <string name="huge">Enorme</string>
     <string name="internet">Internet</string>
     <string name="invoked_in">Se invoca en:</string>
-    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">
-        Y ya para terminar\n
-        Se recomienda encarecidamente usar la pantalla de inicio de Baldphone como el lanzador principal del teléfono.
-    </string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Ya casi estamos; se recomienda encarecidamente usar la pantalla de inicio de Baldphone como el lanzador principal del teléfono.</string>
     <string name="language">idioma</string>
     <string name="language_settings">Idioma</string>
     <string name="large">Grande</string>
     <string name="left_handed">Zurdo</string>
-    <string name="light">Luz</string>
+    <string name="light">Claro</string>
     <string name="location">Ubicación</string>
     <string name="emergency_services">Servicios de emergencia</string>
     <string name="mail">Correo electrónico</string>
@@ -161,7 +151,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
 
 
     <string name="medium">Intermedio</string>
-    <string name="medium_level">Nivel intermedio</string>
+    <string name="medium_level">Intermedio</string>
     <string name="message">Mensaje</string>
     <string name="messages">Mensajes</string>
     <string name="minute">Minuto</string>
@@ -175,7 +165,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="name">Nombre</string>
     <string name="named__">llamado</string>
     <string name="new_alarm___was_created">Se ha creado una alarma nueva llamada «%s».</string>
-    <string name="nfc">NFC</string>
+    <string name="nfc">Comunicación de campo cercano (NFC)</string>
     <string name="no">No</string>
     <string name="notes">Notas</string>
     <string name="notes_settings">Notas</string>
@@ -207,9 +197,9 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="read_call_log">Leer el historial de llamadas</string>
     <string name="read_call_log_subtext">Se necesita este permiso para poder ver el historial de llamadas.</string>
     <string name="read_contacts">Leer contactos</string>
-    <string name="received">Recibida</string>
+    <string name="received">Entrante</string>
     <string name="recent">Recientes</string>
-    <string name="regular_level">Nivel normal</string>
+    <string name="regular_level">Normal</string>
 
     <string name="remove_from_favorite">Quitar de favoritos</string>
     <string name="remove_from_home">Quitar de inicio</string>
@@ -337,9 +327,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="download_progress">Descargando</string>
     <string name="what_do_you_want_to_do_with___">¿Qué quieres hacer con %s?</string>
     <string name="crash_reports">Enviar informes de fallos</string>
-    <string name="crash_reports_subtext">
-		El envío por Internet de estos informes automáticos de fallos ayuda a que la experiencia de BaldPhone mejore de forma sustancial.\n
-		Estos informes solo se usan para arreglar cosas, y contienen la información mínima para poder entender el problema.
+    <string name="crash_reports_subtext">El envío por Internet de estos informes automáticos de fallos ayuda a que la experiencia de BaldPhone mejore de forma sustancial. Estos informes solo se usan para arreglar cosas, y contienen la información mínima para poder entender el problema.
     </string>
     <string name="custom_app">Aplicación personalizada</string>
     <string name="custom_app_subtext">Elige otra aplicación como pantalla de inicio.</string>
@@ -354,7 +342,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
 
     <string name="status_bar_settings">Barra de estado</string>
     <string name="status_bar_settings_subtext">¿Dónde quieres ver la barra de estado?</string>
-    <string name="only_home_screen">Solo en la pantalla de inicio</string>
+    <string name="only_home_screen">Pantalla de inicio</string>
     <string name="nowhere">En ningún sitio</string>
     <string name="everywhere">En todas partes</string>
 
@@ -373,8 +361,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="dialer_sounds">Tono de llamada</string>
     <string name="dialer_sounds_subtext">Elige los posibles tonos de llamada.</string>
     <string name="low_battery_alert">Alerta de batería baja</string>
-    <string name="low_battery_alert_subtext">Elige si quieres que la barra de estado se ponga roja en la pantalla de inicio si la batería está por debajo del 20%\n
-        Ten en cuenta que esto no sirve de nada si la barra de estado está oculta.
+    <string name="low_battery_alert_subtext">Elige si quieres que la barra de estado se ponga roja en la pantalla de inicio cuando la batería baje del 20%. Ten en cuenta que esta opción no sirve de nada si la barra de estado está oculta.
     </string>
 
     <string name="also_available_at">También estoy disponible a través de\nbaldphone.contact@gmail.com\nLos comentarios deben de escribirse en inglés o hebreo para que yo los entienda.</string>
@@ -393,7 +380,7 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="click_delay">Retardo al pulsar</string>
     <string name="no_delay">Sin retardo</string>
     <string name="scrolling">Desplazamiento vertical</string>
-    <string name="arrows">Con flechas</string>
+    <string name="arrows">Con\nflechas</string>
     <string name="swipe">Deslizando con el dedo</string>
     <string name="_long">Largo</string>
     <string name="_short">Corto</string>
@@ -401,14 +388,14 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="discard">No, descartar</string>
     <string name="no_recent_calls">Sin llamadas recientes</string>
     <string name="apps_sort_method">Ordenar lista de aplicaciones</string>
-    <string name="apps_sort_method_subtext">Elige si quieres ordenar las aplicaciones en una sola tabla o separarlas en varios grupos, alfabéticamente, por letras</string>
+    <string name="apps_sort_method_subtext">Elige si quieres ordenar las aplicaciones en una sola tabla o separarlas en varios grupos, alfabéticamente, por letras.</string>
     <string name="groups">Por grupos</string>
     <string name="one_grid">En una tabla</string>
     <string name="colorful">Colorido</string>
     <string name="colorful_subtext">¿Quieres que BaldPhone tenga más colorines?</string>
     <string name="edit_home_screen">Cambiar pantalla de inicio</string>
     <string name="dual_sim">SIM dual</string>
-    <string name="dual_sim_subtext">Elige cómo quieres gestionar las tarjetas SIM dobles\nNota: Si eliges «ver opciones», tendrás que aceptar otro permiso</string>
+    <string name="dual_sim_subtext">Elige cómo quieres gestionar las tarjetas SIM dobles. Nota: Si eliges «ver opciones», tendrás que aceptar otro permiso.</string>
     <string name="use_default">Usar predeterminado</string>
     <string name="show_options">Ver opciones</string>
     <string name="read_phone_state">Consultar el estado del teléfono</string>
@@ -416,6 +403,8 @@ Cuanto más a la derecha, más alto se oirá.</string>
     <string name="choose_sim">Elige una tarjeta SIM</string>
     <string name="choose_sim_subtext">Elige la tarjeta SIM con la que quieras llamar</string>
     <string name="website">Página Web</string>
+    <string name="appear_on_top">Mostrar sobre otras aplicaciones</string>
+    <string name="appear_on_top_subtext">Este permiso es necesario en versiones nuevas de Android para poder mostrar alarmas y recordatorios al apagar la pantalla.</string>
 
 
     <string-array name="names_for_screenshots">
