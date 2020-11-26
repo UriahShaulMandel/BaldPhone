@@ -384,6 +384,9 @@
     <string name="read_phone_state_subtext">Autorizzazione necessaria per effettuare chiamate dalla sim secondaria</string>
     <string name="choose_sim">Scegli la Sim</string>
     <string name="choose_sim_subtext">Scegli la sim da cui vuoi effettuare la chiamata</string>
+    <string name="website">Sito Web</string>
+    <string name="appear_on_top">Mostra Sopra</string>
+    <string name="appear_on_top_subtext">Questa autorizzazione è necessaria nelle nuove versioni di android per poter mostrare allarmi e promemoria quando lo schermo è bloccato</string>
 
 
     <string-array name="names_for_screenshots">
