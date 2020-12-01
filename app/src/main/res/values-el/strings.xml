@@ -249,7 +249,7 @@
     <string name="sos_is_full_subtext">Η λιστα SOS είναι γεμάτη! Παρακαλώ αφαιρέστε μια προηγούμενη επαφή για να προσθέσετε νέα </string>
     <string name="speak">Ομιλία</string>
     <string name="speech_to_text">Ομιλία σε Κείμενο</string>
-    <string name="strong_hand">Χέρι Dominant Hand</string>
+    <string name="strong_hand">Κυρίαρχο χέρι</string>
     <string name="strong_hand_subtext">Επιλέξτε αν θέλετε η διεπαφή να προσαρμοστεί για Δεξιόχειρες η Αριστερόχειρες.Choose your dominant hand to adjust the user interface.</string>
     <string name="submit">επιβεβαίωση</string>
     <string name="sunday">Κυριακή</string>
