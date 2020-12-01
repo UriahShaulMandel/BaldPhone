@@ -46,7 +46,7 @@
     <string name="airplane_mode">Λειτουργία πτήσης</string>
     <string name="alarm_name">Όνομα Αφύπνισης</string>
     <string name="alarm_volume">Ένταση Αφύπνισης</string>
-    <string name="alarm_volume_subtext">Επιλέξτε ένταση για τις Αφυπνήσεις.\nΗ ένταση αυξάνεται από αριστερά προς δεξιά.</string>
+    <string name="alarm_volume_subtext">Επιλέξτε ένταση για τις Αφυπνίσεις.\nΗ ένταση αυξάνεται από αριστερά προς δεξιά.</string>
     <string name="alarms">Αφυπνίσεις</string>
 
     <string name="alarms_repeats_every">Επανάληψη ξυπνητηριού κάθε</string>
