@@ -218,9 +218,9 @@
     <string name="saturday">Σάββατο</string>
     <string name="save">Αποθήκευση</string>
     <string name="send">Αποστολή</string>
-    <string name="set_default_dialer">Επιλογη εφαρμογης τηλεφώνου</string>
+    <string name="set_default_dialer">Επιλογή εφαρμογής τηλεφώνου</string>
     <string name="set_default_dialer_subtext">Το BaldPhone πρέπει να επιλέγει ως εφαρμογή τηλεφώνου.</string>
-    <string name="set_home_screen">Επιλογη Αρχικής Οθόνης</string>
+    <string name="set_home_screen">Επιλογή Αρχικής Οθόνης</string>
     <string name="set_home_screen_subtext">Για να χρησιμοποιήσετε το BaldPhone πρέπει να το ορίσετε ως προεπιλεγμένη εφαρμογή αρχικής σελίδας .\nΗ
         επιλογή αυτή μπορεί να αλλάξει αργότερα από τις ρυθμίσεις.
     </string>
