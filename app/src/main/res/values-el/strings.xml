@@ -209,7 +209,7 @@
 
     <string name="remove_from_favorite">Αφαίρεση απο τα Αγαπημένα</string>
     <string name="remove_from_home">Αφαίρεση απο την Αρχική Σελίδα</string>
-    <string name="remove_from_sos">Αφαίρεση απο το SOS</string>
+    <string name="remove_from_sos">Αφαίρεση από το SOS</string>
     <string name="remove_shortcut">Αφαιρεση Συντόμευσης</string>
     <string name="removed_all_alarms">Αφαιρεθήκαν όλες οι αφυπνίσεις!</string>
     <string name="repeats_every_day">Καθε μέρα</string>
