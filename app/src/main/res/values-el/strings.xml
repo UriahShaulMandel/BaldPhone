@@ -210,7 +210,7 @@
     <string name="remove_from_favorite">Αφαίρεση από τα Αγαπημένα</string>
     <string name="remove_from_home">Αφαίρεση από την Αρχική Σελίδα</string>
     <string name="remove_from_sos">Αφαίρεση από το SOS</string>
-    <string name="remove_shortcut">Αφαιρεση Συντόμευσης</string>
+    <string name="remove_shortcut">Αφαίρεση Συντόμευσης</string>
     <string name="removed_all_alarms">Αφαιρεθήκαν όλες οι αφυπνίσεις!</string>
     <string name="repeats_every_day">Κάθε μέρα</string>
     <string name="right_handed">Δεξιόχειρες</string>
@@ -239,13 +239,13 @@
     <string name="share_baldphone">Κοινοποίηστε το BaldPhone</string>
     <string name="share_contact">Κοινοποίηση Επαφής</string>
     <string name="share_differently">Κοινοποιήστε σε Αλλη Εφαρμογή</string>
-    <string name="share_via_whatsapp">Κοινοποίηστε σε  Whatsapp</string>
+    <string name="share_via_whatsapp">Κοινοποιήστε σε Whatsapp</string>
     <string name="shift">shift</string>
     <string name="show">Εμφάνιση</string>
     <string name="small">Μικρό</string>
     <string name="snooze">Αναβολή</string>
     <string name="sos">SOS</string>
-    <string name="sos_is_full">Η λιστα SOS είναι γεμάτη</string>
+    <string name="sos_is_full">Η λίστα SOS είναι γεμάτη</string>
     <string name="sos_is_full_subtext">Η λιστα SOS είναι γεμάτη! Παρακαλώ αφαιρέστε μια προηγούμενη επαφή για να προσθέσετε νέα </string>
     <string name="speak">Ομιλία</string>
     <string name="speech_to_text">Ομιλία σε Κείμενο</string>
@@ -255,7 +255,7 @@
     <string name="sunday">Κυριακή</string>
     <string name="technical_information">Τεχνικές Πληροφορίες</string>
     <string name="theme_settings">Θέμα</string>
-    <string name="theme_settings_subtext">Επιλέξτε ενα Θέμα</string>
+    <string name="theme_settings_subtext">Επιλέξτε ένα θέμα</string>
 
     <string name="thursday">Τρίτη</string>
     <string name="time_changer">Αλλαγη Ώρας Χαπιού</string>
