@@ -26,7 +26,7 @@
     <string name="accidental_touches_settings_subtext">Αυτή η \"ασπίδα\" μπλοκάρει τα κατά λάθος πατήματα όταν το τηλέφωνο είναι
         καλυμμένο\nif αν έχετε κάποιο πρόβλημα μπορείτε να την κλείσετε.
     </string>
-    <string name="accidental_touches_subtext">Εντοπίστηκε κατά λάθος πάτημα \nπατήστε OK για να συνεχίσετε\nαν
+    <string name="accidental_touches_subtext">Εντοπίστηκε κατά λάθος πάτημα \nπατήστε ΕΝΤΑΞΕΙ για να συνεχίσετε\nαν
         αυτό το μήνυμα συνεχίζει να εμφανίζεται μπορείτε να το κλείσετε από τίς ρυθμίσεις προσβασιμότητας.
     </string>
     <string name="acknowledgments">Ευχαριστίες</string>
