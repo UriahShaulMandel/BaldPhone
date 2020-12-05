@@ -175,12 +175,12 @@
     <string name="no">Όχι</string>
     <string name="notes">Σημειώσεις</string>
     <string name="notes_settings">Ρυθμίσεις Σημειώσεων</string>
-    <string name="notes_settings_subtext">Επιλέξτε ποια σημείωση θελετε να έχετε στην αρχική σελίδα.</string>
+    <string name="notes_settings_subtext">Επιλέξτε ποια σημείωση θέλετε να έχετε στην αρχική σελίδα.</string>
     <string name="notifications">Ειδοποιήσεις</string>
 
     <string name="of">of</string>
     <string name="off">Κλείσιμο</string>
-    <string name="ok">OK</string>
+    <string name="ok">Εντάξει</string>
     <string name="on">Άνοιγμα</string>
 
     <string name="only_once">Μόνο μία φορά</string>
@@ -227,7 +227,7 @@
     <string name="set_keyboard">Επιλέξτε Πληκτρολόγιο</string>
     <string name="setting_does_not_exist">Η επιλογή αυτή δεν υπάρχει</string>
     <string name="settings">Ρυθμίσεις</string>
-    <string name="settings_permission">Ρυθμίσεις</string>
+    <string name="settings_permission">Άδεια Ρυθμίσεων</string>
     <string name="share">Κοινοποίηση</string>
     <string name="share_actual_text">Γειά, χρησιμοποιώ την πλατφόρμα \"BaldPhone\" που αλλάζει την διεπαφή του κινητού
         σε μεγαλύτερη και απλούστερη.\nΕνδιαφέρεσαι;\n Μπορείς να την κατεβάσεις δωρεάν\nστην παρακάτω διεύθυνση,
