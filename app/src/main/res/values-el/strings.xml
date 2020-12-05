@@ -175,12 +175,12 @@
     <string name="no">Όχι</string>
     <string name="notes">Σημειώσεις</string>
     <string name="notes_settings">Ρυθμίσεις Σημειώσεων</string>
-    <string name="notes_settings_subtext">Επιλέξτε ποια σημείωση θελετε να έχετε στην αρχική σελίδα.</string>
+    <string name="notes_settings_subtext">Επιλέξτε ποια σημείωση θέλετε να έχετε στην αρχική σελίδα.</string>
     <string name="notifications">Ειδοποιήσεις</string>
 
     <string name="of">of</string>
     <string name="off">Κλείσιμο</string>
-    <string name="ok">OK</string>
+    <string name="ok">Εντάξει</string>
     <string name="on">Άνοιγμα</string>
 
     <string name="only_once">Μόνο μία φορά</string>
