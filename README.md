@@ -56,3 +56,4 @@ Feel free to contact me at baldphone.contact@gmail.com
  - [Application Class](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/java/com/bald/uriah/baldphone/BaldPhone.java)
  - [Main Manifest](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/AndroidManifest.xml)
  - [build.gradle (app)](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/build.gradle)
+
