@@ -101,7 +101,7 @@
     <string name="contacts">Επαφές</string>
     <string name="contacts_read_subtext">Αυτή η άδεια απαιτείται για να λειτουργήσουν οι επαφές.</string>
     <string name="contacts_subtext"> Αυτή η άδεια απαιτείται για να προσθέσετε νέες επαφές.</string>
-    <string name="crash">Ουπς!\nΤο BaldPhone αντιμετώπισε ενα προβλήματα και θά κάνει επανεκκίνηση .</string>
+    <string name="crash">Ουπς!\nΤο BaldPhone αντιμετώπισε πρόβλημα και θα κάνει επανεκκίνηση.</string>
     <string name="current_time">Τρέχουσα Ώρα</string>
     <string name="custom">Επιλογή</string>
     <string name="dark">Σκοτεινό</string>
