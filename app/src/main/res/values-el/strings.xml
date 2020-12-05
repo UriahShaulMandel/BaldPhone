@@ -299,7 +299,7 @@
     <string name="install_updates">Εγκατάσταση Ενημερώσεων</string>
     <string name="install_updates_subtext">Αυτές οι άδειες απαιτούνται για να ενημερωθεί το BaldPhone</string>
     <string name="a_new_update_is_available">Μία νεα ενημέρωση είναι διαθέσιμη!\nΟι ενημερώσεις είναι σημαντικές για την σωστή λειτουργία
-     του BaldPhone.\nΠατήστε ΕΝΤΑΞΕΙ για λήψη.
+     του BaldPhone.\nΠατήστε Ναι για λήψη.
     </string>
     <string name="current_version">Τρέχουσα έκδοση\n</string>
     <string name="new_version">Νέα έκδοση:\n</string>
