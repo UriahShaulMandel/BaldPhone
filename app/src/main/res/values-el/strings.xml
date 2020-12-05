@@ -110,7 +110,7 @@
     <string name="delete_all_alarms">Διαγραφή αφυπνίσεων</string>
     <string name="dialer">Τηλέφωνο</string>
     <string name="display_settings">Οθόνη</string>
-    <string name="done">Έτοιμο Done</string>
+    <string name="done">Έτοιμο</string>
     <string name="down">Κάτω</string>
     <string name="edit">Επεξεργασία</string>
     <string name="email">Email:</string>
@@ -128,12 +128,12 @@
     <string name="feedback_sent_successfully">Feedback sent successfully!</string>
     <string name="first_please_select_how_you_want_to_interact_with_buttons">Παρακαλώ επιλέξτε το επίπεδο προσβασιμότητας
     </string>
-    <string name="font_size">Γραμματοσειρά</string>
+    <string name="font_size">Μέγεθος γραμματοσειράς</string>
     <string name="friday">Παρασκευή</string>
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Δυσκολεύεστε να χρησιμοποιήσετε το
        πληκτρολόγιο του τηλεφώνου; Χρησιμοποιήστε το μεγάλο πληκτρολόγιο του Baldphone!
     </string>
-    <string name="hello">Γειά</string>
+    <string name="hello">Γεια</string>
     <string name="help">Βοήθεια σε Βίντεο</string>
     <string name="hide">Απόκρυψη</string>
     <string name="high_level">Αυξημένο επίπεδο</string>
