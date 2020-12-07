@@ -193,8 +193,8 @@
     <string name="permissions_part">Άδειες</string>
     <string name="personalization_settings">Εξατομίκευση</string>
     <string name="phone">Τηλέφωνο</string>
-    <string name="photo">Φωτογραφία</string>
-    <string name="photos">Φωτογραφία</string>
+    <string name="photo">Εικόνα</string>
+    <string name="photos">Εικόνες</string>
     <string name="pill_added">Το χάπι προστέθηκε!</string>
     <string name="pill_name">Όνομα Χαπιού</string>
     <string name="pills">Χάπια</string>
@@ -326,8 +326,8 @@
     <string name="download_progress">Λήψη σε Εξέλιξη</string>
     <string name="what_do_you_want_to_do_with___">Τι θέλετε να κάνετε με %s;</string>
     <string name="crash_reports">Υποβολή Σφάλματος</string>
-    <string name="crash_reports_subtext">Οι αναφορές σφαλμάτων βοηθούν την χρήση του BaldPhone χωρίς προβλήματα\nΧρησιμοποιούνται
-        μόνο για την διόρθωση σφαλμάτων, και καμιά αλλη πληροφορία δεν λαμβάνεται υπόψη.
+    <string name="crash_reports_subtext">Οι αναφορές σφαλμάτων βοηθούν στη χωρίς προβλήματα χρήση του BaldPhone \nΧρησιμοποιούνται
+        μόνο για την διόρθωση σφαλμάτων και καμιά άλλη πληροφορία δεν λαμβάνεται.
     </string>
     <string name="custom_app">Επιλογή επαφής</string>
     <string name="custom_app_subtext">Επιλέξτε μια εφαρμογή που θα είναι στην αρχική οθόνη</string>
@@ -341,13 +341,13 @@
 
 
     <string name="status_bar_settings">Γραμμή Κατάστασης</string>
-    <string name="status_bar_settings_subtext">Που να φαίνεται η γραμμή κατάστασης;</string>
+    <string name="status_bar_settings_subtext">Που θέλετε να φαίνεται η γραμμή κατάστασης;</string>
     <string name="only_home_screen">Μόνο στην Αρχική Σελίδα</string>
     <string name="nowhere">Πουθενά</string>
     <string name="everywhere">Παντού</string>
 
 
-    <string name="share_photo">Κοινοποίηση Φωτογραφίας</string>
+    <string name="share_photo">Κοινοποίηση Εικόνας</string>
 
     <string name="choose_language_for_keyboard">Επιλέξτε Γλώσσα</string>
     <string name="hebrew">Hebrew</string>
@@ -371,7 +371,7 @@
     <string name="medication_1">Eltroxin 100</string>
     <string name="medication_2">Eltroxin 150</string>
     <string name="donate">Δωρεά</string>
-    <string name="emergency_button">Emergency Button</string>
+    <string name="emergency_button">Κουμπί άμεσης ανάγκης</string>
     <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
     <string name="private_number">Ιδιωτικός Αριθμός</string>
     <string name="swipe_left_or_right">Swipe left or right</string>
