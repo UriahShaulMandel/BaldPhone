@@ -326,8 +326,8 @@
     <string name="download_progress">Λήψη σε Εξέλιξη</string>
     <string name="what_do_you_want_to_do_with___">Τι θέλετε να κάνετε με %s;</string>
     <string name="crash_reports">Υποβολή Σφάλματος</string>
-    <string name="crash_reports_subtext">Οι αναφορές σφαλμάτων βοηθούν την χρήση του BaldPhone χωρίς προβλήματα\nΧρησιμοποιούνται
-        μόνο για την διόρθωση σφαλμάτων, και καμιά αλλη πληροφορία δεν λαμβάνεται υπόψη.
+    <string name="crash_reports_subtext">Οι αναφορές σφαλμάτων βοηθούν στη χωρίς προβλήματα χρήση του BaldPhone \nΧρησιμοποιούνται
+        μόνο για την διόρθωση σφαλμάτων και καμιά άλλη πληροφορία δεν λαμβάνεται.
     </string>
     <string name="custom_app">Επιλογή επαφής</string>
     <string name="custom_app_subtext">Επιλέξτε μια εφαρμογή που θα είναι στην αρχική οθόνη</string>
