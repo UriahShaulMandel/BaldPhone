@@ -16,66 +16,64 @@
 
 <resources>
     <string name="about">Over</string>
-    <string name="about_subtext">Hallo\nMijn naam is Uriah Shaul Mandel en ik ben de ontwikkelaar van dit platform.\nIk woon in
-        Tel Aviv.\nEr is veel tijd en moeite nodig geweest om dit platform te creëren en zodat het gratis is voor iedereen.\n Ik vind het altijd leuk om een email te ontvangen. \n U kunt contact met mij opnemen via:\nbaldphone.contact@gmail.com
-    </string>
-    <string name="accessibility_level">Toegankelijkheids niveau</string>
-    <string name="accessibility_settings">Toegankelijkheids instellingen</string>
-    <string name="accidental_touches"> Blokkering van het onbedoeld indrukken van knoppen</string>
-    <string name="accidental_touches_settings_subtext">Een bescherming activeren welke het onbedoeld indrukken van knoppen blokkeert, wanneer de telefoon in een etui zit bij voorbeeld. \n Desactiveer dit wanneer u problemen ondervindt.
-    </string>
-    <string name="accidental_touches_subtext">Een onbedoelde druk op een knop is gedetecteerd. \n Druk op OK om de telefoon te blijven gebruiken.\n Als dit bericht opnieuw verschijnt, kunt u de bescherming desactiveren in in de toegankelijkheids instellingen.
-    </string>
-    <string name="acknowledgments">Dankwoord</string>
-    <string name="adaptive">Aanpasbaar</string>
-    <string name="add_alarm">Een alarm/wekker toevoegen</string>
-    <string name="add_alarm_quickly">Een timer toevoegen</string>
-    <string name="add_contact">Een contact toevoegen</string>
+    <string name="about_subtext">Hallo! \n Mijn naam is Uriah Shaul Mandel en ik ben de ontwikkelaar van dit platform.\n 
+Ik heb het grootste deel van mijn \"volwassen\" leven besteed aan het maken van dit platform, en ik heb het gratis vrijgegeven zodat iedereen
+het kan gebruiken.\n U bent meer dan welkom om contact met mij op te nemen via e-mail:  \n baldphone.contact@gmail.com</string>
+    <string name="accessibility_level">Toegankelijkheidsniveau</string>
+    <string name="accessibility_settings">Toegankelijkheid</string>
+    <string name="accidental_touches">Onbedoelde aanrakingsbeveiliging</string>
+    <string name="accidental_touches_settings_subtext">De beveiliging blokkeert je telefoon tegen onbedoelde acties wanneer de telefoon bedekt is. Indien het problemen veroorzaakt kan het uitgeschakeld worden.</string>
+    <string name="accidental_touches_subtext">Onbedoelde invoer was gedetecteerd \nDruk op OK om de telefoon te blijven gebruiken \nals
+dit bericht blijft verschijnen dan kan het uitgeschakeld worden in de toegankelijkheidsinstellingen</string>
+    <string name="acknowledgments">Erkenningen</string>
+    <string name="adaptive">Adaptief</string>
+    <string name="add_alarm">Alarm toevoegen</string>
+    <string name="add_alarm_quickly">Timer toevoegen</string>
+    <string name="add_contact">Contact toevoegen</string>
     <string name="add_emergency_contact">Toevoegen</string>
-    <string name="add_pill">Een medicijn toevoegen</string>
-    <string name="add_shortcut">Een shortcut/afkorting toevoegen</string>
-    <string name="add_to_favorite">Een favoriet toevoegen</string>
-    <string name="add_to_home">Aan startpagina toevoegen</string>
-    <string name="add_to_sos">Aan SOS toevoegen</string>
+    <string name="add_pill">Pil toevoegen</string>
+    <string name="add_shortcut">Snelkoppeling toevoegen</string>
+    <string name="add_to_favorite">Toevoegen aan favorieten</string>
+    <string name="add_to_home">Toevoegen aan startpagina</string>
+    <string name="add_to_sos">Toevoegen aan SOS</string>
     <string name="address">Adres</string>
-    <string name="advanced_options">Geavanceerde instellingen</string>
+    <string name="advanced_options">Geavanceerde opties</string>
     <string name="afternoon">Middag</string>
-    <string name="airplane_mode">Vliegtuig modus</string>
-    <string name="alarm_name">Naam van alarm</string>
-    <string name="alarm_volume">Volume van alarm</string>
-    <string name="alarm_volume_subtext">Kies het volume van het alarm.\n Het volume neemt toe van links naar rechts.</string>
-    <string name="alarms">Wekkers</string>
+    <string name="airplane_mode">Vliegtuigmodus</string>
+    <string name="alarm_name">Alarmnaam</string>
+    <string name="alarm_volume">Alarmvolume</string>
+    <string name="alarm_volume_subtext">Kies Volume voor alarmen. \ NVolume neemt toe van links naar rechts.</string>
+    <string name="alarms">Alarmen</string>
 
-    <string name="alarms_repeats_every">De wekker herhaalt zich elke</string>
+    <string name="alarms_repeats_every">Alarm herhaald elke</string>
     <string name="all_alarms">Alle alarmen</string>
     <string name="allow">Toestaan</string>
-    <string name="already_setted">Reeds ingesteld!\n Klikt u hier om het aan te passen.</string>
-    <string name="an_error_has_occurred">Een fout is opgetreden!</string>
-    <string name="and_welcome_to_baldphone">en welcome bij Baldphone</string>
+    <string name="already_setted">Al ingesteld! \ NKlik hier om ernaartoe te gaan</string>
+    <string name="an_error_has_occurred">Er is een fout opgetreden!</string>
+    <string name="and_welcome_to_baldphone">en welkom bij Baldphone</string>
 
-    <string name="apps">Toepassingen</string>
+    <string name="apps">Apps</string>
     <string name="are_you_sure_you_want_to_delete___">Weet u zeker dat u %s wilt verwijderen?</string>
     <string name="assistant">Assistent</string>
-    <string name="at_least_one_day_must_be_selected">U moet er minstens één selecteren!</string>
-    <string name="auto_brightness">Automatische\nhelderheid</string>
-    <string name="backspace">Terug</string>
-    <string name="baldphone_bla_allow_permission">Wilt u de volgende toestemmingen geven:</string>
+    <string name="at_least_one_day_must_be_selected">Er moet minimaal één dag zijn geselecteerd!</string>
+    <string name="auto_brightness">Automatische\nHelderheid</string>
+    <string name="backspace">backspace</string>
+    <string name="baldphone_bla_allow_permission">Sta de volgende bevoegdheden toe:</string>
     <string name="blocked">Geblokkeerd</string>
     <string name="bluetooth">Bluetooth</string>
     <string name="brightness">Helderheid</string>
-    <string name="brightness_subtext">Helderheid aanpassen.</string>
-    <string name="cache_cleared_successfully">Cache/geheigen met succes verwijderd!</string>
-    <string name="call">Bellen</string>
+    <string name="brightness_subtext">Verander de helderheid.</string>
+    <string name="cache_cleared_successfully">Cache succesvol gewist!</string>
+    <string name="call">Bel</string>
     <string name="calling">Aan het bellen</string>
 
-    <string name="call_log">Oproepen:</string>
-    <string name="call_subtext">Er is toestemming nodig om uw contacten te bellen.</string>
+    <string name="call_log">Oproepgeschiedenis</string>
+    <string name="call_subtext">Deze bevoegdheid is vereist om contacten te kunnen bellen.</string>
     <string name="camera">Camera</string>
-    <string name="camera_subtext">Er is toestemming nodig om de zaklamp aan te zetten.</string>
+    <string name="camera_subtext">Deze bevoegdheid is vereist om de zaklamp aan te zetten.</string>
     <string name="cancel">Annuleren</string>
-    <string name="change_pills_time">Tijdstip van medicatie aanpassen</string>
-    <string name="change_system_settings_subtext">Wilt u BaldPhone toestemming geven om bijvoorbeeld de benodigde instellingen aan te passen om de tekst te vergroten of de helderheid aan te passen.
-    </string>
+    <string name="change_pills_time">Verander tijd van de medicijnen</string>
+    <string name="change_system_settings_subtext">Geef a.u.b. toestemming aan BaldPhone om de instellingen te wijzigen, zoals het vergroten van het lettertype</string>
     <string name="choose_friday">Vr</string>
     <string name="choose_monday">Ma</string>
     <string name="choose_saturday">Za</string>
@@ -83,92 +81,88 @@
     <string name="choose_thursday">Do</string>
     <string name="choose_tuesday">Di</string>
     <string name="choose_wednesday">Wo</string>
-    <string name="clear">Verwijderen</string>
-    <string name="clear_cache">Cache/geheugen verwijderen</string>
-    <string name="clear_data">Alle bestanden verwijderen</string>
-    <string name="clear_data_subtext">Weet u zeker dat u alle bestanden wilt verwijderen?</string>
-    <string name="clear_data_subtext2">100% ?</string>
-    <string name="clear_data_subtext3">Zeker?\n Als u op Ja drukt worden alle bestanden en gegevens verwijderd!</string>
-    <string name="clock">Horloge</string>
-    <string name="coming_soon">Binnenkort!</string>
+    <string name="clear">Wis</string>
+    <string name="clear_cache">Cache wissen</string>
+    <string name="clear_data">Wis alle gegevens</string>
+    <string name="clear_data_subtext">Weet u zeker dat u alle gebruikersgegevens wilt verwijderen? De BaldPhone-app keert terug naar een nieuw-geïnstalleerde blanco staat.</string>
+    <string name="clear_data_subtext2">100%?</string>
+    <string name="clear_data_subtext3">zeker?\ndoor op ja te drukken worden alle gegevens verwijderd!</string>
+    <string name="clock">Klok</string>
+    <string name="coming_soon">Binnenkort beschikbaar!</string>
     <string name="connection_settings">Verbinding</string>
-    <string name="contact_must_has_name">Het contact moet een naam hebben!</string>
-    <string name="contact_not_created">Contact is niet aangemaakt!</string>
+    <string name="contact_must_has_name">Contactpersoon moet een naam hebben!</string>
+    <string name="contact_not_created">Contact niet aangemaakt!</string>
     <string name="contacts">Contacten</string>
-    <string name="contacts_read_subtext">Toestemming is vereist om uw contacten te lezen.</string>
-    <string name="contacts_subtext">Toestemming is vereist om nieuwe contacten toe te voegen.</string>
-    <string name="crash">Helaas!\nBaldPhone heeft een probleem gevonden en start opnieuw op.</string>
-    <string name="current_time">Tijd</string>
-    <string name="custom">Persoonlijke instellingen</string>
+    <string name="contacts_read_subtext">Deze bevoegdheid is vereist om contacten te lezen.</string>
+    <string name="contacts_subtext">Deze bevoegdheid is vereist om nieuwe contacten toe te voegen.</string>
+    <string name="crash">Oeps!\nBaldPhone is een probleem tegengekomen en zal daarom nu opnieuw opstarten.</string>
+    <string name="current_time">Huidige tijd</string>
+    <string name="custom">Aangepaste</string>
     <string name="dark">Donker</string>
     <string name="delete">Verwijderen</string>
-    <string name="delete___"> %s verwijderen?</string>
+    <string name="delete___">%s verwijderen?</string>
     <string name="delete_all_alarms">Alle alarmen verwijderen</string>
-    <string name="dialer">Telefoon</string>
-    <string name="display_settings">Scherm instellingen</string>
-    <string name="done">Voltooid</string>
+    <string name="dialer">Kiesscherm</string>
+    <string name="display_settings">Beeld</string>
+    <string name="done">Gedaan</string>
     <string name="down">Naar beneden</string>
-    <string name="edit">Aanpassen</string>
-    <string name="email">E-mail :</string>
-    <string name="enable_notification_access">Activeer toegang tot notificaties</string>
-    <string name="enable_notification_access_subtext">Wilt u BaldPhone toegang geven aan uw notificaties.</string>
-    <string name="enter">Invoeren</string>
-    <string name="enter_contact_or_phone_number">Voer de naam van uw contact in:</string>
+    <string name="edit">Bewerken</string>
+    <string name="email">Email:</string>
+    <string name="enable_notification_access">Notificatietoestemming geven</string>
+    <string name="enable_notification_access_subtext">Geef BaldPhone notificatietoestemming.</string>
+    <string name="enter">Enter</string>
+    <string name="enter_contact_or_phone_number">Voer contactnaam in:</string>
     <string name="evening">Avond</string>
-    <string name="example_of_different_text_sizes">Voorbeeld van verschillende tekstformaten.\n Deze dienen leesbaar te zijn en niet van het scherm af te vallen.
-    </string>
-    <string name="external_storage_subtext">Toestemming is vereist om uw afbeeldingen op te slaan.</string>
-    <string name="feedback">Geef uw mening</string>
-    <string name="feedback_cannot_be_empty">Het bericht kan niet leeg zijn!</string>
-    <string name="feedback_sent_successfully">Het bericht is verzonden!</string>
-    <string name="first_please_select_how_you_want_to_interact_with_buttons">Wilt u een toegangsniveau selectioneren.
-    </string>
-    <string name="font_size">Tekst</string>
+    <string name="example_of_different_text_sizes">Voorbeeld van verschillende tekstgroottes\nMoet leesbaar zijn en niet overlopen.</string>
+    <string name="external_storage_subtext">Deze bevoegdheid is vereist om afbeeldingen op te slaan.</string>
+    <string name="feedback">Feedback verzenden</string>
+    <string name="feedback_cannot_be_empty">Feedback mag niet leeg zijn!</string>
+    <string name="feedback_sent_successfully">Feedback succesvol verzonden!</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Selecteer het toegankelijkheidsniveau</string>
+    <string name="font_size">Lettertypegrootte</string>
     <string name="friday">Vrijdag</string>
-    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Heeft u problemen met het gebruik van het toetsenbord van uw telefoon? Gebruikt u dan het grote toetsenbord van BaldPhone.
-    </string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Heeft u moeite met het gebruik van het toetsenbord van de telefoon? Gebruik in plaats daarvan Baldphone\'s GROTE toetsenbord!</string>
     <string name="hello">Hallo</string>
-    <string name="help">Help</string>
+    <string name="help">Videouitleg</string>
     <string name="hide">Verbergen</string>
-    <string name="high_level">Hoog</string>
-    <string name="home_phone_number">Huis telefoon</string>
-    <string name="hour">tijd</string>
-    <string name="huge">Heel groot</string>
+    <string name="high_level">Hoog niveau</string>
+    <string name="home_phone_number">Huistelefoonnummer</string>
+    <string name="hour">Uur</string>
+    <string name="huge">Reusachtig</string>
     <string name="internet">Internet</string>
-    <string name="invoked_in">Timer van :</string>
-    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Wij raden u aan om standaard het begin scherm van BaldPhone te gebruiken.
-    </string>
-    <string name="language">Taal</string>
-    <string name="language_settings">Taal instellingen</string>
+    <string name="invoked_in">Ingeroepen in:</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Nog een ding:\nHet is sterk aanbevolen om het startscherm van Baldphone als het standaard startprogramma in te schakelen</string>
+    <string name="language">taal</string>
+    <string name="language_settings">Taal</string>
     <string name="large">Groot</string>
     <string name="left_handed">Linkshandig</string>
-    <string name="light">Helder</string>
+    <string name="light">Licht</string>
     <string name="location">Locatie</string>
-    <string name="emergency_services">Hulpdiensten</string>
-    <string name="mail">E-mail</string>
-    <string name="maps">Kaarten</string>
+    <string name="emergency_services">Spoedgevallendiensten</string>
+    <string name="mail">Mail</string>
+    <string name="maps">Maps</string>
 
 
     <string name="medium">Gemiddeld</string>
-    <string name="medium_level">Gemiddeld niveau</string>
+    <string name="medium_level">Gemiddeld Niveau</string>
     <string name="message">Bericht</string>
     <string name="messages">Berichten</string>
     <string name="minute">Minuut</string>
     <string name="minutes">Minuten</string>
     <string name="missed">Gemist</string>
 
-    <string name="mobile_phone_number">Mobiele telefoon nummer</string>
+    <string name="mobile_phone_number">Mobiele telefoonnummer</string>
     <string name="monday">Maandag</string>
     <string name="more">meer</string>
     <string name="morning">Ochtend</string>
     <string name="name">Naam</string>
     <string name="named__">genaamd</string>
-    <string name="new_alarm___was_created">Een nieuw alarm is ingesteld!</string>
+    <string name="new_alarm___was_created">nieuw alarm %s is aangemaakt!</string>
     <string name="nfc">NFC</string>
     <string name="no">Nee</string>
     <string name="notes">Notities</string>
-    <string name="notes_settings">Notitie instellingen</string>
-    <string name="notes_settings_subtext">Kiest u hier voor als u een notitie op uw startpagina wilt hebben.</string>
+    <string name="notes_settings">Notities</string>
+    <string name="notes_settings_subtext">Kies of u een notitiepagina op het startscherm wilt hebben.</string>
     <string name="notifications">Notificaties</string>
 
     <string name="of">van</string>
@@ -176,217 +170,224 @@
     <string name="ok">OK</string>
     <string name="on">Aan</string>
 
-    <string name="only_once">Eenmalig</string>
+    <string name="only_once">Enkel één keer</string>
 
 
     <string name="open">Openen</string>
 
     <string name="outgoing">Uitgaand</string>
     <string name="page">Pagina</string>
-    <string name="permissions_part">Toestemmingen</string>
-    <string name="personalization_settings">Gepersonaliseerde instellingen</string>
+    <string name="permissions_part">Bevoegdheden</string>
+    <string name="personalization_settings">Personalisatie</string>
     <string name="phone">Telefoon</string>
     <string name="photo">Foto</string>
-    <string name="photos">Fotos</string>
+    <string name="photos">Foto\'s</string>
     <string name="pill_added">Medicatie toegevoegd!</string>
-    <string name="pill_name">Naam van medicijn</string>
+    <string name="pill_name">Naam medicatie</string>
     <string name="pills">Medicatie</string>
-    <string name="press_longer">Langer drukken!</string>
+    <string name="press_longer">Druk langer!</string>
     <string name="timer">Timer</string>
-    <string name="read_call_log">Oproep geschiedenis lezen</string>
-    <string name="read_call_log_subtext">Toestemming is vereist om de oproep geschiedenis te kunnen zien.</string>
-    <string name="read_contacts">Contacten lezen</string>
-    <string name="received">Inkomend</string>
-    <string name="recent">Recente gesprekken</string>
-    <string name="regular_level">Laag</string>
+    <string name="read_call_log">Inzien van de oproepgeschiedenis</string>
+    <string name="read_call_log_subtext">Deze bevoegdheid is vereist om de oproepgeschiedenis te bekijken.</string>
+    <string name="read_contacts">Inzien van de contacten</string>
+    <string name="received">Ontvangen</string>
+    <string name="recent">Recent</string>
+    <string name="regular_level">Gemiddeld niveau</string>
 
-    <string name="remove_from_favorite">Van favorieten verwijderen</string>
-    <string name="remove_from_home">Van startpagina verwijderen</string>
-    <string name="remove_from_sos">Van SOS verwijderen</string>
-    <string name="remove_shortcut">Shortcut verwijderen</string>
+    <string name="remove_from_favorite">Verwijderen uit Favorieten</string>
+    <string name="remove_from_home">Verwijderen uit de Startpagina</string>
+    <string name="remove_from_sos">Verwijderen uit SOS</string>
+    <string name="remove_shortcut">Snelkoppeling verwijderen</string>
     <string name="removed_all_alarms">Alle alarmen zijn verwijderd!</string>
-    <string name="repeats_every_day">Alle dagen</string>
+    <string name="repeats_every_day">Elke dag</string>
     <string name="right_handed">Rechtshandig</string>
 
     <string name="saturday">Zaterdag</string>
-    <string name="save">opslaan</string>
+    <string name="save">Opslaan</string>
     <string name="send">Verzenden</string>
-    <string name="set_default_dialer">Standaard oproep instellen</string>
-    <string name="set_default_dialer_subtext">BaldPhone dient als standaard oproep applicatie te worden ingesteld.</string>
-    <string name="set_home_screen">Startpagina instellen</string>
-    <string name="set_home_screen_subtext">Om BaldPhone te gebruiken, dient u deze als startpagina in te stellen.\n U kunt deze aanpassing bij uw instellingen ongedaan maken.
-    </string>.
+    <string name="set_default_dialer">Standaard bel-app instellen</string>
+    <string name="set_default_dialer_subtext">BaldPhone moet als de standaard bel-app worden ingesteld.</string>
+    <string name="set_home_screen">Startscherm instellen</string>
+    <string name="set_home_screen_subtext">Om BaldPhone te gebruiken, moet u deze instellen als startscherm. \ NDit is
+veranderbaar en kan worden gewijzigd in de instellingen.</string>
     <string name="set_keyboard">Toetsenbord instellen</string>
-    <string name="setting_does_not_exist">Deze instelling bestaat niet</string>
+    <string name="setting_does_not_exist">Instelling bestaat niet</string>
     <string name="settings">Instellingen</string>
-    <string name="settings_permission">Instellingen voor toestemmingen</string>
+    <string name="settings_permission">Instellingen Bevoegdheid</string>
     <string name="share">Delen</string>
-    <string name="share_actual_text">Hallo, ik gebruik de applicatie "BaldPhone". Dit past de kopellingen in mijn telefoon aan met iets wat leesbaarder, simpeler en gebruiksvriendelijker is.\n Bent u geinteresseerd?\nU kunt het gratis downloaden!\n Kijkt u op de onderstaande link voor meer informatie:\n\nhttps://sites.google.com/view/baldphone/home
-    </string>
-    <string name="share_bald_phone_subtext">Hallo,\n Kent u iemand die geinterresseerd zou kunnen zijn in BaldPhone ?\n Harteljk dank voor het doorgeven.
-    </string>
+    <string name="share_actual_text">Hallo, ik gebruik een app genaamd \"BaldPhone\" dat de interface van de telefoon vervangt door een grote, eenvoudige en gebruiksvriendelijke interface. \ NGeïnteresseerd? \nJe kan het gratis downloaden! \nklik de link hieronder voor meer informatie: \n\nhttps://sites.google.com/view/baldphone</string>
+    <string name="share_bald_phone_subtext">Ken je iemand die misschien meer wilt weten over BaldPhone? \n
+Deel het met hen!\"</string>
     <string name="share_baldphone">BaldPhone delen</string>
-    <string name="share_contact">Contact delen</string>
-    <string name="share_differently">Delen via een andere applicatie</string>
-    <string name="share_via_whatsapp">Delen via Whatsapp</string>
-    <string name="shift">Hoofdletter</string>
-    <string name="show">Weergeven</string>
+    <string name="share_contact">Delen met Contact</string>
+    <string name="share_differently">Delen via een andere app</string>
+    <string name="share_via_whatsapp">Delen via WhatsApp</string>
+    <string name="shift">verschuiven</string>
+    <string name="show">Tonen</string>
     <string name="small">Klein</string>
-    <string name="snooze">Uitstellen</string>
+    <string name="snooze">Snooze</string>
     <string name="sos">SOS</string>
     <string name="sos_is_full">SOS is vol!</string>
-    <string name="sos_is_full_subtext">SOS is vol! Wilt u contacten uit SOS verwijderen voordat u nieuwe kunt toevoegen.</string>
-    <string name="speak">Praten</string>
+    <string name="sos_is_full_subtext">SOS is vol! Verwijder andere SOS-contacten voordat u een nieuwe toevoegt</string>
+    <string name="speak">Spreken</string>
     <string name="speech_to_text">Spraak naar tekst</string>
-    <string name="strong_hand">Rechtshandig/Linkshandig</string>
-    <string name="strong_hand_subtext">Uw keuze zal de gebruikers applicaties veranderen</string>
-    <string name="submit">Opslaan</string>
+    <string name="strong_hand">Dominante Hand</string>
+    <string name="strong_hand_subtext">Kies uw dominante hand om de gebruikersinterface aan te passen.</string>
+    <string name="submit">Verzenden</string>
     <string name="sunday">Zondag</string>
     <string name="technical_information">Technische informatie</string>
     <string name="theme_settings">Thema</string>
     <string name="theme_settings_subtext">Kies een thema</string>
 
     <string name="thursday">Donderdag</string>
-    <string name="time_changer">Tijden voor medicatie</string>
-    <string name="tiny">Heel klein</string>
-    <string name="to___days_and___hours_from_now">Zal rinkelen over %d dagen en %d uur</string>
-    <string name="to___hours_and___minutes_from_now">Zal rinkelen over %d uur en %d minuten</string>
-    <string name="to___minuets_from_now">Zal rinkelen over %d minuten</string>
+    <string name="time_changer">Medicatietijdveranderaar</string>
+    <string name="tiny">Klein</string>
+    <string name="to___days_and___hours_from_now">tot %d dagen en %d uur vanaf nu</string>
+    <string name="to___hours_and___minutes_from_now">tot %d uur en %d minuten vanaf nu</string>
+    <string name="to___minuets_from_now">tot %d minuten vanaf nu</string>
     <string name="today">Vandaag</string>
     <string name="took">Genomen!</string>
     <string name="tuesday">Dinsdag</string>
-    <string name="uninstall">Desinstalleren</string>
-    <string name="uninstall_subtext">Weet u zeker dat u %s wilt desinstalleren ?\n Gegevens van %s zullen voor altijd verloren gaan!</string>
+    <string name="uninstall">Deïnstalleren</string>
+    <string name="uninstall_subtext">Weet u zeker dat u %s wilt verwijderen?\n%s\'s gegevens zullen voor voor altijd worden verwijderd!</string>
     <string name="up">Omhoog</string>
     <string name="video">Video</string>
-    <string name="video_tutorials">Video lessen</string>
+    <string name="video_tutorials">Video-uitleg</string>
     <string name="videos">Videos</string>
 
     <string name="voice_mail">Voicemail</string>
     <string name="wednesday">Woensdag</string>
-    <string name="whatsapp">Whatsapp</string>
-    <string name="wifi">Wi-Fi</string>
-    <string name="will_repeat_only_once">Zal slechts eenmalig rinkelen!</string>
-    <string name="write">Schrijven"</string>
-    <string name="write_contacts">Contact creeren</string>
-    <string name="write_external_storage">Naar externe opslag schrijven</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="wifi">Wifi</string>
+    <string name="will_repeat_only_once">zal slechts één keer herhalen!</string>
+    <string name="write">Schrijven</string>
+    <string name="write_contacts">Naar Contacten schrijven</string>
+    <string name="write_external_storage">Schrijf naar externe opslag</string>
     <string name="yes">Ja</string>
     <string name="yesterday">Gisteren</string>
     <string name="nothing">Niets</string>
     <string name="no_contacts_found">Geen contacten gevonden!</string>
-  
-    <string name="no_alarms">Geen wekker\nZet een wekker door te drukken op\n\"Wekker toevoegen"\"\nof\n\"Timer toevoegen\"</string>
-    <string name="no_pills">Geen medicijn\nVoeg een medicijn toe door te drukken op\n\"Medicijn toevoegen\"</string>
-    <string name="clear_all_notifications">Alle notificaties verwijderen</string>
-    <string name="clear_cache_subtext">Weet u zeker dat u het geheugen wilt verwijderen?\nDe snelkoppelingen naar applicaties zullen ook worden verwijderd!
-    </string>
-    <string name="permissions_calm">Hallo, BaldPhone heeft de volgende toestemmingen nodig om te functioneren. Sommigen klinken beangstigend, maar het is de enige manier waarop BaldPhone de interface van uw telefoon kan vervangen. Uw gegevens zijn veilig en u loopt geen enkel risico. Drukt u op OK om toestemming te geven, anders kunt u BaldPhone afsluiten.
-    </string>
-    <string name="pending_update">In afwachting van een update</string>
+    <string name="no_alarms">Geen alarmen\nMaak er een door op\n\"Alarm toevoegen\"\nof\n\\"Timer toevoegen\" te klikken</string>
+    <string name="no_pills">Geen medicatie ingesteld\nMaak er een door op\n\"Medicatie toevoegen\" te klikken</string>
+    <string name="clear_all_notifications">Wis alle notificaties</string>
+    <string name="clear_cache_subtext">Weet u zeker dat u de cache-inhoud wilt verwijderen? Het verwijderen van tijdelijke bestanden kan enkele storingen in de BaldPhone-app oplossen, maar ook snelkoppelingen die in het startscherm zijn gemaakt zullen worden verwijderd.</string>
+    <string name="permissions_calm">Hallo, BaldPhone moet de volgende bevoegdheden hebben om goed te kunnen werken. Sommigen van hen
+klinken misschien eng, maar het is de enige manier waarop BaldPhone de interface van de telefoon kan vervangen. Er worden geen gegevens verzameld en zal ook
+geen schade veroorzaken. Druk op OK om de bevoegdheden te geven of druk op nee om BaldPhone af te sluiten.</string>
+    <string name="pending_update">Geplande Update</string>
     <string name="download">Downloaden</string>
-    <string name="install_updates">Updates aan het installeren</string>
-    <string name="install_updates_subtext">Deze toestemming is nodig om BandPhone te updaten</string>
-    <string name="a_new_update_is_available">Een nieuwe update is beschikbaar!\n Updates zijn belangrijk zodat Baldphone normaal kan blijven functioneren.\n Druk op OK om te downloaden.
-    </string>
-    <string name="current_version">Huidige versie:\n</string>
-    <string name="new_version">Nieuwe versie:\n</string>
-    <string name="new_updates_are_ready_to_be_downloaded">Nieuwe updates zijn beschikbaar en klaar om te downloaden.</string>
+    <string name="install_updates">Updates installeren</string>
+    <string name="install_updates_subtext">Deze bevoegdheid is vereist om BaldPhone te kunnen updaten</string>
+    <string name="a_new_update_is_available">Er is een nieuwe update beschikbaar!\nUpdates zijn belangrijk om BaldPhone goed te laten werken./nDruk op OK om te downloaden.</string>
+    <string name="current_version">Huidige Versie:\n</string>
+    <string name="new_version">Nieuwe Versie:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">Nieuwe updates zijn klaar om gedownload te worden.</string>
     <string name="install">Installeren</string>
-    <string name="data_warning">Data waarschuwing</string>
-    <string name="data_warning_subtext">Hallo, u bent niet verbonden met een Wi-Fi netwerk.\n De omvang van de download is ongeveer 3MB, als un in het buitenland bent, kunnen extra kosten in rekening gebracht worden.\nWilt u doorgaan?
-    </string>
-    <string name="update_message_is_corrupted">Het update bericht is beschadigd.</string>
-    <string name="check_for_updates">Verifieer de updates</string>
-    <string name="could_not_connect_to_server">Er kan geen verbinding gemaakt worden met de server!</string>
-    <string name="could_not_connect_to_internet">Er kan geen verbinding gemaakt worden met het Internet!</string>
-    <string name="could_not_start_the_download">De download kon niet worden gestart!</string>
-    <string name="downloaded_update_file_could_not_be_deleted">De gedownloade update file kon niet worden verwijderd!</string>
-    <string name="downloading">Downloaden…</string>
+    <string name="data_warning">Datawaarschuwing</string>
+    <string name="data_warning_subtext">Hi, je hebt geen wifi-verbinding.\nDe grootte van de download is ongeveer 3 MB,
+als u in het buitenland bent, kost u dit mogelijk geld.\ nWilt u doorgaan met het downloaden?</string>
+    <string name="update_message_is_corrupted">Updatebericht is beschadigd.</string>
+    <string name="check_for_updates">Controleer op updates</string>
+    <string name="could_not_connect_to_server">Kan geen verbinding maken met de server!</string>
+    <string name="could_not_connect_to_internet">Kan geen verbinding maken met het internet!</string>
+    <string name="could_not_start_the_download">Kan de download niet starten!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">Het gedownloade updatebestand kon niet worden verwijderd!</string>
+    <string name="downloading">Aan het downloaden...</string>
 
-    <string name="baldphone_is_up_to_date">BaldPhone is up to date </string>
-    <string name="what_s_new">Wat is nieuw</string>
-    <string name="download_finished">Download is klaar!</string>
+    <string name="baldphone_is_up_to_date">BaldPhone is up-to-date.</string>
+    <string name="what_s_new">Wat is er nieuw</string>
+    <string name="download_finished">Download voltooid!</string>
     <string name="downloading_updates">Updates worden gedownload…</string>
-    <string name="installing_doesn_t_work">De installatie functioneert niet?</string>
-    <string name="try_now">Probeer nu</string>
-    <string name="download_progress">Voortgang van de download</string>
+    <string name="installing_doesn_t_work">Werkt het installeren niet?</string>
+    <string name="try_now">Probeer Nu</string>
+    <string name="download_progress">Voortgang downloaden</string>
     <string name="what_do_you_want_to_do_with___">Wat wilt u doen met %s?</string>
-    <string name="crash_reports">Fout meldingen</string>
-    <string name="crash_reports_subtext">Fout meldingen helpen om BaldPhone te verbeteren.\nZe worden alleen gebruikt om problemen te corrigeren en aleen de informatie die nodig is om het probleem op te lossen zal worden gebruikt.
-    </string>
-    <string name="custom_app">Gepersonaliseerde applicatie</string>
-    <string name="custom_app_subtext">Kiest u de gepersonaliseerde applicatie voor het startscherm.</string>
-    <string name="no_app_was_found">Geen enkele applicatie is gevonden!</string>
-    <string name="alarm">Wekker</string>
-    <string name="no_new_notifications">Geen nieuwe notificaties</string>
+    <string name="crash_reports">Crashrapporten</string>
+    <string name="crash_reports_subtext">Crashrapporten helpen om BaldPhone te verbeteren\nZe worden alleen gebruikt om bugs op te lossen en er wordt geen andere informatie verstuurd dan dat wat nodig is om de bug op te lossen.</string>
+    <string name="custom_app">Aangepaste App</string>
+    <string name="custom_app_subtext">Kies een aangepaste app die op het startscherm zal verschijnen.</string>
+    <string name="no_app_was_found">Er is geen overeenkomende app gevonden!</string>
+    <string name="alarm">Alarm</string>
+    <string name="no_new_notifications">Geen Nieuwe Notificaties</string>
     <string name="sound">Geluid</string>
-    <string name="mute">Dempen</string>
-    <string name="vibrate">Vibreren</string>
-    <string name="your_phone_doesnt_have_assistant_installed">U moet de applicatie Google Assistant downloaden om gebruik te kunnen maken van deze functie.</string>
+    <string name="mute">Geluid dempen</string>
+    <string name="vibrate">Trillen</string>
+    <string name="your_phone_doesnt_have_assistant_installed">Er is geen assistent op uw apparaat geïnstalleerd.</string>
 
 
-    <string name="status_bar_settings">Status balk</string>
-    <string name="status_bar_settings_subtext">Waar wenst u de status balk weer te geven?</string>
+    <string name="status_bar_settings">Statusbalk</string>
+    <string name="status_bar_settings_subtext">Waar wil je dat de statusbalk wordt weergegeven?</string>
     <string name="only_home_screen">Alleen op het startscherm</string>
-    <string name="nowhere">Nooit</string>
-    <string name="everywhere">Altijd</string>
+    <string name="nowhere">Nergens</string>
+    <string name="everywhere">Overal</string>
 
 
-    <string name="share_photo">Foto delen</string>
+    <string name="share_photo">Deel Foto</string>
 
-    <string name="choose_language_for_keyboard">Kies een taal</string>
+    <string name="choose_language_for_keyboard">Kies Taal</string>
     <string name="hebrew">Hebreeuws</string>
     <string name="english">Engels</string>
 
     <string name="search">Zoeken</string>
     <string name="next">Volgende</string>
-    <string name="go">Ga naar</string>
+    <string name="go">Kiezen</string>
 
 
-    <string name="dialer_sounds">Toetsen geluid</string>
-    <string name="dialer_sounds_subtext">Kiest u dit als u toetsen geluid wilt.</string>
+    <string name="dialer_sounds">Toetsgeluiden</string>
+    <string name="dialer_sounds_subtext">Kies dit als je toetsgeluiden wilt hebben.</string>
     <string name="low_battery_alert">Waarschuwing lage batterij</string>
-    <string name="low_battery_alert_subtext">Kiest u dit als u wilt dat de status balk rood kleurt wanneer de batterij onder de 20% is\nDenkt u er aan dat dit niet weergegeven wordt als de status balk niet zichtbaar is.</string>
+    <string name="low_battery_alert_subtext">Kies dit als u wilt dat de statusbalk rood wordt op het startscherm wanneer de batterij onder de 20% is\nLet op: Wanneer de statusbalk verborgen is wordt dit niet weergegeven.</string>
 
-    <string name="also_available_at">Ook beschikbaar op \nbaldphone.contact@gmail.com\nOpmerkingen graag in het Engels/Hebreeuws!</string>
-    <string name="grant_all_permissions">Geef alle toestemmingen</string>
+    <string name="also_available_at">Ook bereikbaar op \nbaldphone.contact@gmail.com\nFeedback moet echter wel in het Engels / Hebreeuws zijn!</string>
+    <string name="grant_all_permissions">Verleen alle bevoegdheden</string>
 
 
     <!--For Tests:-->
     <string name="medication_1">Eltroxin 100</string>
     <string name="medication_2">Eltroxin 150</string>
-    <string name="donate">Doneren</string>
-    <string name="emergency_button">Noodgevallen Toets</string>
-    <string name="emergency_settings_subtext">Kiest u dit als u een Noodgevallen Toets op het startscherm wilt.</string>
-    <string name="private_number">Privé Nummer</string>
-    <string name="swipe_left_or_right">Veeg naar links of naar rechts</string>
-    <string name="press_next_or_back_buton">Drukt u op de pijlen om verder of terug te gaan</string>
-    <string name="click_delay">Toetsen vertraging</string>
+    <string name="donate">Doneer</string>
+    <string name="emergency_button">Noodknop</string>
+    <string name="emergency_settings_subtext">Kies of u een noodknop op het startscherm wilt hebben.</string>
+    <string name="private_number">Privénummer</string>
+    <string name="swipe_left_or_right">Veeg naar links of rechts</string>
+    <string name="press_next_or_back_buton">Druk op volgende of terug</string>
+    <string name="click_delay">Drukvertraging</string>
     <string name="no_delay">Geen vertraging</string>
     <string name="scrolling">Scrollen</string>
     <string name="arrows">Pijlen</string>
-    <string name="swipe">Aanraken</string>
+    <string name="swipe">Veeg</string>
     <string name="_long">Lang</string>
     <string name="_short">Kort</string>
     <string name="do_you_want_to_save_your_changes">Wilt u de wijzigingen opslaan?</string>
-    <string name="discard">Verwijderen</string>
+    <string name="discard">Veranderingen ongedaan maken</string>
     <string name="no_recent_calls">Geen recente oproepen</string>
-    <string name="apps_sort_method">Applicatie Sorteer Methode</string>
-    <string name="apps_sort_method_subtext">Kiest u of u de applicaties in een rooster wilt of dat u ze verdeeld wilt hebben over verschillende groepen met letters</string>
+    <string name="apps_sort_method">Sorteermethode voor Apps</string>
+    <string name="apps_sort_method_subtext">Kies of je de apps in één raster wilt sorteren of ze wilt groeperen aan de hand van letters.</string>
     <string name="groups">Groepen</string>
-    <string name="one_grid">Een rooster</string>
-    <string name="colorful">Gekleurd</string>
-    <string name="colorful_subtext">Wilt u BaldPhone meer gekleurd maken?</string>
+    <string name="one_grid">Eén raster</string>
+    <string name="colorful">Kleurrijk</string>
+    <string name="colorful_subtext">Wilt u BaldPhone kleurrijker maken?</string>
     <string name="edit_home_screen">Startscherm aanpassen</string>
+    <string name="dual_sim">Dual Sim</string>
+    <string name="dual_sim_subtext">Kies hoe je dual sim wilt beheren\nAls je Toon Opties kiest, moet je ook nog een andere bevoegdheid geven</string>
+    <string name="use_default">Gebruik standaardinstellingen</string>
+    <string name="show_options">Toon Opties</string>
+    <string name="read_phone_state">Telefoonstatus inzien</string>
+    <string name="read_phone_state_subtext">Deze bevoegdheid is vereist om met de tweede sim te kunnen bellen</string>
+    <string name="choose_sim">Kies simkaart</string>
+    <string name="choose_sim_subtext">Kies de simkaart waarmee je wilt bellen</string>
+    <string name="website">Website</string>
+    <string name="appear_on_top">Bovenaan tonen</string>
+    <string name="appear_on_top_subtext">Deze bevoegdheid is vereist op de nieuwe versie van Android om alarmen en herinneringen weer te geven wanneer het scherm uit staat.</string>
 
 
     <string-array name="names_for_screenshots">
-        <item>Napoleon Bonaparte</item>
-        <item>Marie Antoinette</item>
-        <item>Louis Vitton</item>
-        <item>Georges Clemenceau</item>
-        <item>King Henry VIII</item>
-        <item>Gustave Eiffel</item>
+        <item>De Peetvader</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
     </string-array>
 
     <bool name="is_right_to_left">false</bool>
