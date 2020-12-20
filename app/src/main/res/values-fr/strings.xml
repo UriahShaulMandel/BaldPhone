@@ -172,9 +172,9 @@
     <string name="notifications">Notifications</string>
 
     <string name="of">de</string>
-    <string name="off">Off</string>
-    <string name="ok">OK</string>
-    <string name="on">On</string>
+    <string name="off">Éteindre</string>
+    <string name="ok">Valider</string>
+    <string name="on">Allumer</string>
 
     <string name="only_once">Une seule fois</string>
 
@@ -334,49 +334,49 @@
     <string name="share_photo">Partager Photo</string>
 
     <string name="choose_language_for_keyboard">Choisissez la langue</string>
-    <string name="hebrew">L\'hébreu</string>
-    <string name="english">Anglaise</string>
+    <string name="hebrew">Hébreux</string>
+    <string name="english">Anglais</string>
 
     <string name="search">Chercher</string>
     <string name="next">Prochaine</string>
     <string name="go">Aller à</string>
 
 
-    <string name="dialer_sounds">Dialer Sounds</string>
-    <string name="dialer_sounds_subtext">Choose if you want to have Dialer Sounds.</string>
-    <string name="low_battery_alert">Low battery alert</string>
-    <string name="low_battery_alert_subtext">Choose if you want the status bar to be red on the home screen when battery is under 20%\nNotice It won\'t be shown if the system status bar is hidden.</string>
+    <string name="dialer_sounds">Son du composeur de numéros</string>
+    <string name="dialer_sounds_subtext">Choisissez si les touches du composeur de numéro téléphonique ont un son.</string>
+    <string name="low_battery_alert">Alerte de batterie faible</string>
+    <string name="low_battery_alert_subtext">Choisissez si vous voulez que la barre d'état de l'écran d'acceuil devienne rouge quand la batterie a une charge inférieure à 20%\nNottez que cela ne sera pas visible si la barre d'état est cachée.</string>
 
-    <string name="also_available_at">Also available at\nbaldphone.contact@gmail.com\nFeedback must be in English/Hebrew!</string>
-    <string name="grant_all_permissions">Grant All Permissions</string>
+    <string name="also_available_at">Également disponible en contactant\nbaldphone.contact@gmail.com\nLes retours doivent être en anglais/hébreux !</string>
+    <string name="grant_all_permissions">Accorder toutes les autorisations</string>
 
 
     <!--For Tests:-->
     <string name="medication_1">Eltroxin 100</string>
     <string name="medication_2">Eltroxin 150</string>
-    <string name="donate">Donate</string>
-    <string name="emergency_button">Emergency Button</string>
-    <string name="emergency_settings_subtext">Choose if you want to have an Emergency Button on the home screen.</string>
-    <string name="private_number">Private Number</string>
-    <string name="swipe_left_or_right">Swipe left or right</string>
-    <string name="press_next_or_back_buton">Press next or back arrow</string>
-    <string name="click_delay">Click Delay</string>
-    <string name="no_delay">No Delay</string>
-    <string name="scrolling">Scrolling</string>
-    <string name="arrows">Arrows</string>
-    <string name="swipe">Touch</string>
+    <string name="donate">Donner</string>
+    <string name="emergency_button">Bouton d'urgence</string>
+    <string name="emergency_settings_subtext">Choisissez si vous désirez afficher un bouton d'urgence sur l\'écran d'accueil.</string>
+    <string name="private_number">Numéro privé</string>
+    <string name="swipe_left_or_right">Glissez à gauche ou à droite</string>
+    <string name="press_next_or_back_buton">Appuyez sur le bouton prochain ou sur la flèche de retour</string>
+    <string name="click_delay">Délai du clic</string>
+    <string name="no_delay">Pas de délai</string>
+    <string name="scrolling">Défilement</string>
+    <string name="arrows">Flèches</string>
+    <string name="swipe">Toucher</string>
     <string name="_long">Long</string>
-    <string name="_short">Short</string>
-    <string name="do_you_want_to_save_your_changes">Do you want to save your changes?</string>
-    <string name="discard">Discard</string>
-    <string name="no_recent_calls">No Recent Calls</string>
-    <string name="apps_sort_method">Apps Sort Method</string>
-    <string name="apps_sort_method_subtext">Choose whether you want to sort the apps in one grid or to have them divided into different groups via letters</string>
-    <string name="groups">Groups</string>
-    <string name="one_grid">One Grid</string>
-    <string name="colorful">Colorful</string>
-    <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
-    <string name="edit_home_screen">Edit Home Screen</string>
+    <string name="_short">Court</string>
+    <string name="do_you_want_to_save_your_changes">Voulez-vous sauvegarder les modifications ?</string>
+    <string name="discard">Annuler</string>
+    <string name="no_recent_calls">Pas d\'appel récent</string>
+    <string name="apps_sort_method">Méthode de tri des applications</string>
+    <string name="apps_sort_method_subtext">Choisissez si vous préférez ranger les applications sur une grille ou dans des groupes ordonnés alphabétiquement</string>
+    <string name="groups">Groupes</string>
+    <string name="one_grid">Grille</string>
+    <string name="colorful">Version coloré</string>
+    <string name="colorful_subtext">Voulez-vous une version plus colorée de BaldPhone ?</string>
+    <string name="edit_home_screen">Éditer l\'écran d'accueil</string>
 
 
     <string-array name="names_for_screenshots">
@@ -388,6 +388,6 @@
         <item>Gustave Eiffel</item>
     </string-array>
 
-    <bool name="is_right_to_left">false</bool>
+    <bool name="is_right_to_left">Faux</bool>
 
 </resources>
