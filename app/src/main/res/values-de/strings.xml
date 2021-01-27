@@ -16,8 +16,8 @@
 
 <resources>
     <string name="about">Über</string>
-    <string name="about_subtext">Hi!\nIch heiße Uriah Shaul Mandel, und ich bin der Entwickler dieser Platform.\n
-        Seit ich erwachsen bin, habe ich die meiste Zeit meines Lebens investiert, um an dieser Platform zu arbeiten. Ich habe sie frei veröffentlicht, so dass sie jeder benutzen kann.\nDu bist mehr als nur eingeladen mir zu schreiben: email:\nbaldphone.contact@gmail.com
+    <string name="about_subtext">Hi!\nIch heiße Uriah Shaul Mandel und bin der Entwickler dieser Plattform.\n
+        Die meiste Zeit meines \"Erwachsenenlebens\" habe ich damit verbracht, an dieser Plattform zu arbeiten. Ich habe sie frei veröffentlicht, damit jeder sie benutzen kann.\nGerne dürft ihr mich per Mail kontaktieren:\nbaldphone.contact@gmail.com
     </string>
     <string name="accessibility_level">Stufe der Barrierefreiheit</string>
     <string name="accessibility_settings">Barrierefreiheit</string>
@@ -41,17 +41,17 @@
     <string name="advanced_options">Weitere Einstellungen</string>
     <string name="afternoon">Nachmittag</string>
     <string name="airplane_mode">Flugzeugmodus</string>
-    <string name="alarm_name">Benennung des Weckers</string>
-    <string name="alarm_volume">Lautstärke des Weckers</string>
+    <string name="alarm_name">Wecker-Bezeichnung</string>
+    <string name="alarm_volume">Wecker-Lautstärke</string>
     <string name="alarm_volume_subtext">Wähle die Lautstärke für den Wecker.\nDie Lautstärke steigt von Links nach Rechts an.</string>
     <string name="alarms">Wecker</string>
 
     <string name="alarms_repeats_every">Der Wecker klingelt jeden</string>
     <string name="all_alarms">Alle Wecker</string>
     <string name="allow">Erlauben</string>
-    <string name="already_setted">Wurde schon eingestellt!\nKlicke hier um das zu ändern</string>
+    <string name="already_setted">Wurde schon eingestellt!\nKlicke hier, um das zu ändern</string>
     <string name="an_error_has_occurred">Es ist ein Fehler aufgetreten!</string>
-    <string name="and_welcome_to_baldphone">und herzlich Willkommen bei Baldphone</string>
+    <string name="and_welcome_to_baldphone">und herzlich Willkommen bei BaldPhone</string>
 
     <string name="apps">Apps</string>
     <string name="are_you_sure_you_want_to_delete___">Bist du dir sicher, dass du %s löschen willst?</string>
@@ -68,12 +68,12 @@
     <string name="call">Anrufen</string>
     <string name="calling">Anrufen</string>
 
-    <string name="call_log">Anrufsliste</string>
+    <string name="call_log">Anrufsliste:</string>
     <string name="call_subtext">Diese Erlaubnis wird benötigt, um Kontakte anzurufen.</string>
     <string name="camera">Kamera</string>
     <string name="camera_subtext">Diese Erlaubnis wird benötigt, um die Taschenlampe einzuschalten.</string>
     <string name="cancel">Abbrechen</string>
-    <string name="change_pills_time">Ändern der Uhrzeit für die Tabletten</string>
+    <string name="change_pills_time">Uhrzeiten für Medikamente ändern</string>
     <string name="change_system_settings_subtext">Bitte erlaube BaldPhone die Einstellungen zu ändern, wie z.B. eine größere Schriftgröße oder eine höhere Helligkeit zu setzen.
     </string>
     <string name="choose_friday">Fr</string>
@@ -86,7 +86,7 @@
     <string name="clear">Löschen</string>
     <string name="clear_cache">Cache leeren.</string>
     <string name="clear_data">Alle Daten löschen</string>
-    <string name="clear_data_subtext">Bist du dir sicher, dass du alle Daten löschen willst?</string>
+    <string name="clear_data_subtext">Bist du dir sicher, dass du alle Daten löschen willst? Die BaltPhone-App wird in den ursprünglichen Zustand zurückversetzt, als wäre sie frisch installiert worden.</string>
     <string name="clear_data_subtext2">100%?</string>
     <string name="clear_data_subtext3">Sicher?\nWenn du ja drückst, werden alle Daten gelöscht!</string>
     <string name="clock">Uhr</string>
@@ -97,7 +97,7 @@
     <string name="contacts">Adressbuch</string>
     <string name="contacts_read_subtext">Diese Erlaubnis wird benötigt, um Kontakte lesen zu können.</string>
     <string name="contacts_subtext">Diese Erlaubnis wird benötigt, um neue Kontakte hinzuzufügen.</string>
-    <string name="crash">Oops!\nBei BaldPhone ist ein Problem aufgetreten, es wird jetzt neu starten.</string>
+    <string name="crash">Ups!\nBei BaldPhone ist ein Problem aufgetreten; es wird jetzt neu starten.</string>
     <string name="current_time">Aktuelle Uhrzeit</string>
     <string name="custom">Benutzerdefiniert</string>
     <string name="dark">Dunkel</string>
@@ -105,13 +105,13 @@
     <string name="delete___">%s löschen?</string>
     <string name="delete_all_alarms">Alle Wecker löschen</string>
     <string name="dialer">Telefon</string>
-    <string name="display_settings">Display</string>
+    <string name="display_settings">Bildschirm</string>
     <string name="done">Erledigt</string>
     <string name="down">Abwärts</string>
     <string name="edit">Bearbeiten</string>
     <string name="email">Email:</string>
-    <string name="enable_notification_access">Zugriff auf Benachrichtigungen aktivieren</string>
-    <string name="enable_notification_access_subtext">Bitte gewähre BaldPhone Zugriff auf die Bachrichtigungen.</string>
+    <string name="enable_notification_access">Zugriff auf Benachrichtigungen ermöglichen</string>
+    <string name="enable_notification_access_subtext">Bitte erlaube BaldPhone, auf die Benachrichtigungen deines Handys zuzugreifen.</string>
     <string name="enter">Enter</string>
     <string name="enter_contact_or_phone_number">Trage hier den Namen des Kontaktes ein:</string>
     <string name="evening">Abend</string>
@@ -121,11 +121,11 @@
     <string name="feedback">Rückmeldung geben</string>
     <string name="feedback_cannot_be_empty">Die Rückmeldung darf nicht leer sein!</string>
     <string name="feedback_sent_successfully">Die Rückmeldung wurde erfolgreich versendet!</string>
-    <string name="first_please_select_how_you_want_to_interact_with_buttons">Bitte wähle zuerst die Barrierefreiheit der Knöpfe.
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Bitte lege die Stufe der Barrierefreiheit fest
     </string>
     <string name="font_size">Schriftgröße</string>
     <string name="friday">Freitag</string>
-    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Fällt es dir schwer, die Tastatur deines Handys zu benutzen? Benutze stattdessen Baldphone\'s GROSSE Tastatur!
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Fällt es dir schwer, die Tastatur deines Handys zu benutzen? Benutze stattdessen Baldphones GROSSE Tastatur!
     </string>
     <string name="hello">Hallo</string>
     <string name="help">Anleitung im Videoformat</string>
@@ -136,7 +136,7 @@
     <string name="huge">Groß</string>
     <string name="internet">Internet</string>
     <string name="invoked_in">Aufgerufen in:</string>
-    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Zuletzt:\nEs wird dringend empfohlen Baldphone\'s Startbildschirm als Standard Starter zu benutzen.
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Zuletzt:\nEs wird dringend empfohlen, BaldPhone als Standard-Start-App festzulegen
     </string>
     <string name="language">Sprache</string>
     <string name="language_settings">Sprache</string>
@@ -160,7 +160,7 @@
     <string name="mobile_phone_number">Handynummer</string>
     <string name="monday">Montag</string>
     <string name="more">weiteres</string>
-    <string name="morning">Morgens</string>
+    <string name="morning">Morgen</string>
     <string name="name">Name</string>
     <string name="named__">Genannt</string>
     <string name="new_alarm___was_created">Der neue Wecker %s wurde erstellt!</string>
@@ -203,7 +203,7 @@
     <string name="remove_from_favorite">Aus den Favoriten entfernen</string>
     <string name="remove_from_home">Vom Startbildschirm entfernen</string>
     <string name="remove_from_sos">Von SOS entfernen</string>
-    <string name="remove_shortcut">Kurzwahltaste entfernen</string>
+    <string name="remove_shortcut">Kurzwahl entfernen</string>
     <string name="removed_all_alarms">Alle Wecker wurden gelöscht!</string>
     <string name="repeats_every_day">Jeden Tag</string>
     <string name="right_handed">Rechtshänder</string>
@@ -212,7 +212,7 @@
     <string name="save">Speichern</string>
     <string name="send">Senden</string>
     <string name="set_default_dialer">Die Standard Telefon-App festlegen</string>
-    <string name="set_default_dialer_subtext">BaldPhone muss als Standard Telefon-App gekennzeichnet sein.</string>
+    <string name="set_default_dialer_subtext">BaldPhone muss als Standard-Telefon-App gekennzeichnet sein.</string>
     <string name="set_home_screen">Startbildschirm festlegen</string>
     <string name="set_home_screen_subtext">Um BaldPhone zu nutzen, solltest du es als Startbildschirm festlegen.\nDas kann in den Einstellungen wieder geändert werden.
     </string>
@@ -221,9 +221,9 @@
     <string name="settings">Einstellungen</string>
     <string name="settings_permission">Berechtigung, Einstellungen vorzunehmen</string>
     <string name="share">Weiterleiten</string>
-    <string name="share_actual_text">Hallo, Ich benutze diese Platform, die sich "BaldPhone" nennt und die Bedienoberfläche des Handys durch eine größere, leichter und netter zu bedienende ersetzt.\nInteressiert dich das auch?\nDu kannst sie kostenlos herunterladen!\nFolge unten stehendem Link für mehr Informationen:\n\nhttps://sites.google.com/view/baldphone
+    <string name="share_actual_text">Hallo, Ich benutze die Plattform \"BaldPhone\". Sie macht die Bedienoberfläche des Handys größer, einfacher und netter.\nInteressiert dich das auch?\nDu kannst sie kostenlos herunterladen!\nFolge unten stehendem Link für mehr Informationen:\n\nhttps://sites.google.com/view/baldphone
     </string>
-    <string name="share_bald_phone_subtext">Hallo, kennst du jemanden, der sich vielleicht für BaldPhone interessieren könnte?\nDu kannst es ihm weitersagen!"
+    <string name="share_bald_phone_subtext">Hallo, kennst du Personen, die sich vielleicht für BaldPhone interessieren?\nErzähl ihnen von der App!\"
     </string>
     <string name="share_baldphone">Anderen von BaldPhone erzählen</string>
     <string name="share_contact">Kontakt weiterleiten</string>
@@ -236,7 +236,7 @@
     <string name="sos">SOS</string>
     <string name="sos_is_full">SOS ist voll belegt!</string>
     <string name="sos_is_full_subtext">SOS ist voll belegt! Bitte entferne einen Notfallkontakt, bevor du einen neuen hinzufügst</string>
-    <string name="speak">Sprich</string>
+    <string name="speak">Einsprechen</string>
     <string name="speech_to_text">Gesprochenes in Text umwandeln</string>
     <string name="strong_hand">Händigkeit</string>
     <string name="strong_hand_subtext">Wähle deine Händigkeit, um die Benutzeroberfläche anzupassen.</string>
@@ -247,7 +247,7 @@
     <string name="theme_settings_subtext">Wähle einen Stil</string>
 
     <string name="thursday">Donnerstag</string>
-    <string name="time_changer">Änderung der Zeiten für die Medikamente</string>
+    <string name="time_changer">Änderung der Uhrzeiten für Medikamente</string>
     <string name="tiny">Winzig</string>
     <string name="to___days_and___hours_from_now">zu %d Tagen und %d Stunden von jetzt an</string>
     <string name="to___hours_and___minutes_from_now">zu %d Stunden und %d Minuten von jetzt an</string>
@@ -256,10 +256,10 @@
     <string name="took">Angenommen!</string>
     <string name="tuesday">Dienstag</string>
     <string name="uninstall">Deinstallieren</string>
-    <string name="uninstall_subtext">Bist du dir sicher, dass du %s deinstallieren willst?\nDie Daten von %s !</string>
+    <string name="uninstall_subtext">Bist du dir sicher, dass du %s deinstallieren willst?\nDie Daten von %s gehen dabei unwiderruflich verloren!</string>
     <string name="up">Hoch</string>
     <string name="video">Video</string>
-    <string name="video_tutorials">Video Anleitungen</string>
+    <string name="video_tutorials">Anleitungen im Videoformat</string>
     <string name="videos">Videos</string>
 
     <string name="voice_mail">Sprachnachricht</string>
@@ -277,23 +277,23 @@
     <string name="no_alarms">Keine Wecker vorhanden.\nLege einen Wecker an, indem du auf\n\"Alarm hinzufügen\"\nOder\n\"Eieruhr hinzufügen\" drückst.</string>
     <string name="no_pills">Keine Medikamente vorhanden\nLege welche an, indem du auf\n\"Medikamente hinzufügen\" drückst</string>
     <string name="clear_all_notifications">Alle Benachrichtigungen löschen</string>
-    <string name="clear_cache_subtext">Bist du dir sicher, dass du den gesamten Cache leeren willst?\nAuch die Schnellwahltasten für die Apps werden gelöscht!
+    <string name="clear_cache_subtext">Bist du dir sicher, dass du den Cache leeren willst?\nDas Löschen temporärer Dateien kann helfen, Probleme mit BaldPhone zu beheben, allerdings werden auch die Kurzwahltasten auf dem Startbildschirm gelöscht!
     </string>
-    <string name="permissions_calm">Hi, BaldPhone benötigt folgende Berechtigungen, um zu funktionieren. Manche klingen beängstigend, aber das ist die einzige Möglichkeit, wie BaldPhone die Bedienoberfläche des Handys ersetzen kann. Es werden keine Daten gesamelt und kein Schaden verursacht. Drücke OK, um die Berechtigungen zu erteilen, oder Nein, um BaldPhone zu verlassen.
+    <string name="permissions_calm">Hi, BaldPhone benötigt die folgenden Berechtigungen, um zu funktionieren. Manche davon klingen beängstigend, aber das ist die einzige Möglichkeit, wie BaldPhone die Bedienoberfläche des Handys ersetzen kann. Es werden keine Daten abgegriffen und kein Schaden verursacht. Drücke OK, um die Berechtigungen zu erteilen, oder Nein, um BaldPhone zu verlassen.
     </string>
     <string name="pending_update">Ausstehende Aktualisierung</string>
     <string name="download">Download</string>
     <string name="install_updates">Aktualisierung installieren</string>
-    <string name="install_updates_subtext">Diese Erlaubnis wird benötigt, um BaldPhone aktualisieren zu können.</string>
-    <string name="a_new_update_is_available">Eine neue Aktualisierung steht bereit!\nAktualisierungen sind wichtig, damit BaldPhone weiterhin flüssig läuft.\nDrücke OK, um herunterzuladen.
+    <string name="install_updates_subtext">Diese Erlaubnis wird benötigt, um BaldPhone aktualisieren zu können</string>
+    <string name="a_new_update_is_available">Eine neue Aktualisierung steht bereit!\nAktualisierungen sind wichtig, damit BaldPhone weiterhin flüssig funktioniert.\nDrücke OK, um die Aktualisierung herunterzuladen.
     </string>
     <string name="current_version">Die aktuelle Version:\n</string>
     <string name="new_version">Die neue Version:\n</string>
     <string name="new_updates_are_ready_to_be_downloaded">Neue Aktualisierungen können heruntergeladen werden.</string>
-    <string name="install">Installiern</string>
+    <string name="install">Installieren</string>
     <string name="data_warning">Datenwarnung</string>
-    <string name="data_warning_subtext">Hallo, du bist nicht via W-LAN verbunden.\nDer Download ist ungefähr 3MB groß,
-        falls du unterwegs bist können Kosten entstehen.\nMöchtest du mit dem Download fortdahren?
+    <string name="data_warning_subtext">Hallo, du bist mit keinem W-LAN verbunden.\nDer Download ist ungefähr 3MB groß,
+        falls du unterwegs bist können Kosten entstehen.\nMöchtest du mit dem Download fortfahren?
     </string>
     <string name="update_message_is_corrupted">Die Aktualisierungsnachricht ist fehlerhaft.</string>
     <string name="check_for_updates">Auf Aktualisierungen überprüfen</string>
@@ -304,36 +304,36 @@
     <string name="downloading">Herunterladen…</string>
 
     <string name="baldphone_is_up_to_date">BaldPhone ist aktuell.</string>
-    <string name="what_s_new">Was es neues gibt</string>
+    <string name="what_s_new">Was es Neues gibt</string>
     <string name="download_finished">Download abgeschlossen!</string>
     <string name="downloading_updates">Aktualisierungen werden heruntergeladen…</string>
     <string name="installing_doesn_t_work">Funktioniert das Installieren nicht?</string>
-    <string name="try_now">Probiere es jetzt</string>
+    <string name="try_now">Probiere es aus</string>
     <string name="download_progress">Fortschritt des Downloads</string>
     <string name="what_do_you_want_to_do_with___">Was willst du mit %s machen?</string>
     <string name="crash_reports">Absturzberichte</string>
-    <string name="crash_reports_subtext">Absturzberichte helfen dabei, dass BaldPhone fehlerfrei funktioniert.\nSie werden nur benutzt, um Fehler zu beheben. Es werden darüber hinaus keine Daten gesammelt.</string>
+    <string name="crash_reports_subtext">Absturzberichte helfen dabei, dass BaldPhone fehlerfrei funktioniert.\nSie werden nur benutzt, um Fehler zu beheben. Es werden darüber hinaus keine Informationen gesammelt</string>
     <string name="custom_app">Benutzerdefinierte Anwendung</string>
     <string name="custom_app_subtext">Wähle die benutzerdefinierte App, die Teil des Startbildschirms sein soll.</string>
     <string name="no_app_was_found">Es wurde keine passende Anwendung gefunden!</string>
     <string name="alarm">Wecker</string>
     <string name="no_new_notifications">Es gibt keine neuen Benachrichtigungen</string>
     <string name="sound">Ton</string>
-    <string name="mute">Stummschaltung</string>
+    <string name="mute">Stumm</string>
     <string name="vibrate">Vibration</string>
     <string name="your_phone_doesnt_have_assistant_installed">Auf deinem Handy ist kein Assistent installiert.</string>
 
 
     <string name="status_bar_settings">Statusleiste</string>
     <string name="status_bar_settings_subtext">Wo soll die Statusleiste angezeigt werden?</string>
-    <string name="only_home_screen">Nur auf dem Startbildschirm</string>
+    <string name="only_home_screen">Nur auf Startbildschirm</string>
     <string name="nowhere">Nirgendwo</string>
     <string name="everywhere">Überall</string>
 
 
     <string name="share_photo">Foto weiterleiten</string>
 
-    <string name="choose_language_for_keyboard">Wähle die Tastatursprache</string>
+    <string name="choose_language_for_keyboard">Sprache festlegen</string>
     <string name="hebrew">Hebräisch</string>
     <string name="english">Englisch</string>
 
@@ -345,9 +345,9 @@
     <string name="dialer_sounds">Wähltastentöne</string>
     <string name="dialer_sounds_subtext">Entscheide, ob du Wähltastentöne haben möchtest.</string>
     <string name="low_battery_alert">Akku-Warnung</string>
-    <string name="low_battery_alert_subtext">Entscheide, ob die Statusleiste des Startbildschirms rot gefärbt werden soll, wenn die Akkuladung unter 20% sinkt.\nHinweis: Es wird nicht angezeigt, wenn die Statusleiste des Systems versteckt ist.</string>
+    <string name="low_battery_alert_subtext">Entscheide, ob die Statusleiste des Startbildschirms rot gefärbt werden soll, wenn die Akkuladung unter 20% sinkt.\nHinweis: Dies wird nicht angezeigt, wenn die Statusleiste des Systems versteckt ist.</string>
 
-    <string name="also_available_at">Auch verfügbar bei\nbaldphone.contact@gmail.com\nFeedback muss auf English/Israeli sein!</string>
+    <string name="also_available_at">Auch verfügbar bei\nbaldphone.contact@gmail.com\nFeedback muss auf English/Hebräisch sein!</string>
     <string name="grant_all_permissions">Alle Berechtigungen erteilen</string>
 
 
@@ -358,23 +358,22 @@
     <string name="emergency_button">Notfall-Knopf</string>
     <string name="emergency_settings_subtext">Entscheide, ob du einen Nofall-Knopf auf dem Startbildschirm haben möchtest.</string>
     <string name="private_number">Private Nummer</string>
-    <string name="swipe_left_or_right">Wischen sie nach links oder rechts.</string>
-    <string name="press_next_or_back_buton">Drücken sie weiter oder zurück</string>
-    <string name="click_delay">Druck Verzögerung</string>
+    <string name="swipe_left_or_right">Wische nach links oder rechts.</string>
+    <string name="press_next_or_back_buton">Drücke auf die Pfeile</string>
+    <string name="click_delay">Klick-Verzögerung</string>
     <string name="no_delay">Keine Verzögerung</string>
     <string name="scrolling">Scrollen</string>
     <string name="arrows">Pfeile</string>
     <string name="swipe">Wischen</string>
     <string name="_long">Lang</string>
     <string name="_short">Kurz</string>
-    <string name="do_you_want_to_save_your_changes">Wollen sie ihre Änderungen speichern?</string>
+    <string name="do_you_want_to_save_your_changes">Möchtest du die Änderungen speichern?</string>
     <string name="discard">Ablehnen</string>
     <string name="no_recent_calls">Keine kürzlichen Anrufe</string>
     <string name="apps_sort_method">Anordnung Apps</string>
     <string name="apps_sort_method_subtext">Entscheide, ob deine Apps in einem gemeinsamen Raster angeordnet oder nach Anfangsbuchstaben gruppiert werden sollen</string>
     <string name="groups">Gruppieren</string>
     <string name="one_grid">Ein Raster</string>
-    <string name="colorful">Colorful</string>
     <string name="colorful_subtext">Möchtest du BaldPhone bunter gestalten?</string>
     <string name="edit_home_screen">Startbildschirm anpassen</string>
     <string name="dual_sim">Dual SIM</string>
@@ -385,8 +384,6 @@
     <string name="read_phone_state_subtext">Diese Erlaubnis wird benötigt, um die zweite SIM-Karte zum Telefonieren zu nutzen</string>
     <string name="choose_sim">Wähle SIM-Karte</string>
     <string name="choose_sim_subtext">Wähle die SIM-Karte, welche du zum Telefonieren verwenden möchtest</string>
-
-
     <string-array name="names_for_screenshots">
         <item>Bismarck</item>
         <item>Bach</item>
