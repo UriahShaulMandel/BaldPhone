@@ -22,25 +22,25 @@
     </string>
     <string name="accessibility_level">Accessibility Level</string>
     <string name="accessibility_settings">Accessibility</string>
-    <string name="accidental_touches">Istenmeden Dokunma Ayarı</string>
+    <string name="accidental_touches">Bescherming tegen Ongewild aanraken</string>
     <string name="accidental_touches_settings_subtext">But ayar telefonunuz örtülü olduğu zaman, dokunuşlari algılamıyor. Sorun yaşıyorsanız, bu ayarı kapatın.
     </string>
     <string name="accidental_touches_subtext">Istenmeden Dokunma algılandı. Telefonu kullanmak için OK ye basınız. Bu mesaj devamıyla gelirse, \"erişilebilirlik ayarları\" altında kapatabilirsiniz.
     </string>
     <string name="acknowledgments">Acknowledgments</string>
-    <string name="adaptive">Adaptiv</string>
-    <string name="add_alarm">Alarm ekle</string>
-    <string name="add_alarm_quickly">Timer ekle</string>
-    <string name="add_contact">Kişi ekle</string>
-    <string name="add_emergency_contact">Ilk yardım Kişisini ekle</string>
-    <string name="add_pill">Hap ekle</string>
-    <string name="add_shortcut">Uygulama kısayol ekle</string>
-    <string name="add_to_favorite">Favorilerine ekle</string>
-    <string name="add_to_home">Anasayfaya ekle</string>
-    <string name="add_to_sos">Ilk yardıma/SOS\'e ekle</string>
-    <string name="address">Adress</string>
-    <string name="advanced_options">Geliştirici Ayarlar</string>
-    <string name="afternoon">Öğleden sonra</string>
+    <string name="adaptive">Adaptief</string>
+    <string name="add_alarm">Nieuw alarm</string>
+    <string name="add_alarm_quickly">Nieuwe tiimer</string>
+    <string name="add_contact">Nieuw ccontact</string>
+    <string name="add_emergency_contact">Toevoegen</string>
+    <string name="add_pill">Voeg een medicijn toe</string>
+    <string name="add_shortcut">Nieuwe snelkoppeling</string>
+    <string name="add_to_favorite">Voeg toe aan favorieten</string>
+    <string name="add_to_home">Voeg toe aan startscherm</string>
+    <string name="add_to_sos">Voeg toe aan SOS</string>
+    <string name="address">Adres</string>
+    <string name="advanced_options">Geavanceerd</string>
+    <string name="afternoon">Middag</string>
     <string name="airplane_mode">Uçak modu</string>
     <string name="alarm_name">Alarmın ismi</string>
     <string name="alarm_volume">Alarmın Ses Seviyesi</string>
@@ -177,29 +177,29 @@
     <string name="ok">OK</string>
     <string name="on">On</string>
 
-    <string name="only_once">Sadece bir kere</string>
+    <string name="only_once">Only once</string>
 
 
-    <string name="open">Aç</string>
+    <string name="open">Open</string>
 
-    <string name="outgoing">dışa dönük</string>
-    <string name="page">Sayfa</string>
-    <string name="permissions_part">izin</string>
-    <string name="personalization_settings">Personalization ayarları</string>
-    <string name="phone">Telefon</string>
-    <string name="photo">Resim</string>
-    <string name="photos">Resimler</string>
-    <string name="pill_added">Hap eklemdi!</string>
-    <string name="pill_name">Hap ismi</string>
-    <string name="pills">Haplar</string>
-    <string name="press_longer">Daha uzun basınız!</string>
-    <string name="timer">Kronometre</string>
-    <string name="read_call_log">Arama geçmişi</string>
-    <string name="read_call_log_subtext">Bu izin telefon aramalarınızı görmek için gereklidir.</string>
-    <string name="read_contacts">Kişiler</string>
-    <string name="received">Alınan</string>
-    <string name="recent">Geçmiş</string>
-    <string name="regular_level">Düzenli seviye</string>
+    <string name="outgoing">Outgoing</string>
+    <string name="page">Page</string>
+    <string name="permissions_part">Permissions</string>
+    <string name="personalization_settings">Personalization</string>
+    <string name="phone">Phone</string>
+    <string name="photo">Photo</string>
+    <string name="photos">Photos</string>
+    <string name="pill_added">Pill added!</string>
+    <string name="pill_name">Pill Name</string>
+    <string name="pills">Pills</string>
+    <string name="press_longer">Press Longer!</string>
+    <string name="timer">Timer</string>
+    <string name="read_call_log">Read Call History</string>
+    <string name="read_call_log_subtext">This permission is required in order to view the call history.</string>
+    <string name="read_contacts">Read contacts</string>
+    <string name="received">Received</string>
+    <string name="recent">Recent</string>
+    <string name="regular_level">Regular level</string>
 
     <string name="remove_from_favorite">Remove from Favorite</string>
     <string name="remove_from_home">Remove from Home</string>
@@ -387,8 +387,6 @@
     <string name="colorful">Colorful</string>
     <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
     <string name="edit_home_screen">Edit Home Screen</string>
-
-
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
         <item>Abraham Lincoln</item>
