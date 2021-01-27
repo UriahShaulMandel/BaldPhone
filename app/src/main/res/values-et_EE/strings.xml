@@ -1,0 +1,410 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about">Teave</string>
+    <string name="about_subtext">Tere.\nMinu nimi on Uriah Shaul Mandel, ma olen selle rakenduse looja.\n
+         Olen seda rakendust arendanud terve oma täiskasvanu ea. Programm on kõigile kasutamiseks tasuta.\nKui soovite võite minuga, inglise keeles, ühendust võtta: nbaldphone.contact@gmail.com
+    </string>
+    <string name="accessibility_level">Hõlbustuse tase</string>
+    <string name="accessibility_settings">Hõlbustusfunktsioonid</string>
+    <string name="accidental_touches">Juhusliku puudutuse kaitse</string>
+    <string name="accidental_touches_settings_subtext">Kui telefon on kaetud, siis kaitse funktsioon blokeerib ekraani puudutused.\n
+        Kui see funktsioon valmistab probleeme, siis võite selle välja lülitada
+    </string>
+    <string name="accidental_touches_subtext">Programm tuvastas juhusliku ekraani puudutuse,\ntelefoni kasutamiseks vajutage OK.\n
+        Kui see teade ilmub korduvalt, saate selle keelata hõlbustusfunktsioonide seadetes</string>
+    <string name="acknowledgments">Tänusõnad</string>
+    <string name="adaptive">Kohanduv</string>
+    <string name="add_alarm">Lisa äratus</string>
+    <string name="add_alarm_quickly">Lisa taimer</string>
+    <string name="add_contact">Lisa kontakt</string>
+    <string name="add_emergency_contact">Lisa</string>
+    <string name="add_pill">Lisa tablett</string>
+    <string name="add_shortcut">Lisa otsetee</string>
+    <string name="add_to_favorite">Lisa lemmikutesse</string>
+    <string name="add_to_home">Lisa avaekraanile</string>
+    <string name="add_to_sos">Lisa SOS-kontaktiks</string>
+    <string name="address">Aadress</string>
+    <string name="advanced_options">Lisavalikud</string>
+    <string name="afternoon">Peale lõunat</string>
+    <string name="airplane_mode">Lennurežiim</string>
+    <string name="alarm_name">Äratuse nimi</string>
+    <string name="alarm_volume">Äratuse helitase</string>
+    <string name="alarm_volume_subtext">Määra äratuste helitase.\nHelitase tõuseb vasakult paremale.</string>
+    <string name="alarms">Äratused</string>
+
+    <string name="alarms_repeats_every">Äratust korratakse iga</string>
+    <string name="all_alarms">Kõik äratused</string>
+    <string name="allow">Luba</string>
+    <string name="already_setted">Juba määratud.\nMuutmiseks toksa siin</string>
+    <string name="an_error_has_occurred">Veateade!</string>
+    <string name="and_welcome_to_baldphone">ja tere tulemast Baldphone\'i</string>
+
+    <string name="apps">Rakendused</string>
+    <string name="are_you_sure_you_want_to_delete___">Kas olete kindel, et soovite %s\'i kustutada?</string>
+    <string name="assistant">Abiline</string>
+    <string name="at_least_one_day_must_be_selected">Vähemalt ühe päeva peab valima.</string>
+    <string name="auto_brightness">Automaatne\nheledus</string>
+    <string name="backspace">tagasilüke</string>
+    <string name="baldphone_bla_allow_permission">Palun andke järgmised õigused:</string>
+    <string name="blocked">Keelatud</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="brightness">Heledus</string>
+    <string name="brightness_subtext">Muuda heledust.</string>
+    <string name="cache_cleared_successfully">Vahemälu on kustutatud.</string>
+    <string name="call">Helista</string>
+    <string name="calling">Helistamine</string>
+
+    <string name="call_log">Kõnede ajalugu:</string>
+    <string name="call_subtext">Kontaktidele helistamiseks on vaja juurdepääsuluba.</string>
+    <string name="camera">Kaamera</string>
+    <string name="camera_subtext">Taskulambi kasutamiseks on vaja juurdepääsuluba.</string>
+    <string name="cancel">Tühista</string>
+    <string name="change_pills_time">Muuda tablettide võtmise aega</string>
+    <string name="change_system_settings_subtext">Palun anna luba BaldPhone\'il muuta seadeid nagu šrifti suurendamine
+        ja heleduse muutmine.
+    </string>
+    <string name="choose_friday">R</string>
+    <string name="choose_monday">E</string>
+    <string name="choose_saturday">L</string>
+    <string name="choose_sunday">P</string>
+    <string name="choose_thursday">N</string>
+    <string name="choose_tuesday">T</string>
+    <string name="choose_wednesday">K</string>
+    <string name="clear">Tühjenda</string>
+    <string name="clear_cache">Tühjenda vahemälu</string>
+    <string name="clear_data">Tühjenda kõik andmed</string>
+    <string name="clear_data_subtext">Kas te soovite kõik kasutaja andmed kustutada? Peale seda on BaldPhone\'i rakendus samas seisus nagu   peale paigaldamist. </string>
+    <string name="clear_data_subtext2">100%?</string>
+    <string name="clear_data_subtext3">kindel?\nvajutades, jah, kustutatakse kõik andmed.</string>
+    <string name="clock">Kell</string>
+    <string name="coming_soon">Saabub peatselt.</string>
+    <string name="connection_settings">Ühendus</string>
+    <string name="contact_must_has_name">Kontaktil ei ole nime.</string>
+    <string name="contact_not_created">Kontakti ei loodud.</string>
+    <string name="contacts">Kontaktid</string>
+    <string name="contacts_read_subtext">Kontaktide sirvimiseks on vaja juurdepääsuluba.</string>
+    <string name="contacts_subtext">Uute kontaktide lisamiseks on vaja juurdepääsuluba.</string>
+    <string name="crash">Oih.\nBaldPhone jooksis kokku ja kohe taaskäivitub.</string>
+    <string name="current_time">Kellaaeg</string>
+    <string name="custom">Kohandatud</string>
+    <string name="dark">Tume</string>
+    <string name="delete">Kustuta</string>
+    <string name="delete___">Kas kustutada %s?</string>
+    <string name="delete_all_alarms">Kustuta kõik äratused</string>
+    <string name="dialer">Helista</string>
+    <string name="display_settings">Ekraan</string>
+    <string name="done">Valmis</string>
+    <string name="down">Alla</string>
+    <string name="edit">Muuda</string>
+    <string name="email">E-post:</string>
+    <string name="enable_notification_access">Luba juurdepääs teavitustele</string>
+    <string name="enable_notification_access_subtext">Palun andke BaldPhone\'ile juurdepääs teavitustele.</string>
+    <string name="enter">Sisesta</string>
+    <string name="enter_contact_or_phone_number">Sisesta kontakti nimi:</string>
+    <string name="evening">Õhtul</string>
+    <string name="example_of_different_text_sizes">Näide erinevatest teksti suurustest\nTekst peab olema loetav,
+        aga mitte üle voolama.
+    </string>
+    <string name="external_storage_subtext">Piltide salvestamiseks on vaja juurdepääsuluba.</string>
+    <string name="feedback">Saada tagasiside</string>
+    <string name="feedback_cannot_be_empty">Tagasiside kast ei tohi olla tühi.</string>
+    <string name="feedback_sent_successfully">Tagasiside saadetud.</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Palun vali hõlbustusfunktsioonide tase
+    </string>
+    <string name="font_size">Šrifti suurus</string>
+    <string name="friday">Reede</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Kui telefoni klaviatuur on liiga väike,
+        kasutage BaldPhone\'i BIG ehk suurt klaviatuuri.
+    </string>
+    <string name="hello">Tere</string>
+    <string name="help">Videoõpetus</string>
+    <string name="hide">Peida</string>
+    <string name="high_level">Kõrge</string>
+    <string name="home_phone_number">Lauatelefoni number</string>
+    <string name="hour">Tund</string>
+    <string name="huge">Väga suur</string>
+    <string name="internet">Internet</string>
+    <string name="invoked_in">Tööle pandud:</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Viimane
+        nõuanne:\nSoovitatav on kasutada BaldPhone\'i avakuva peamise käivitajana
+    </string>
+    <string name="language">keel</string>
+    <string name="language_settings">Keel</string>
+    <string name="large">Suur</string>
+    <string name="left_handed">Vasakukäeline</string>
+    <string name="light">Kerge</string>
+    <string name="location">Asukoht</string>
+    <string name="emergency_services">Hädaabi teenused</string>
+    <string name="mail">Postkast</string>
+    <string name="maps">Kaardid</string>
+
+
+    <string name="medium">Keskmine</string>
+    <string name="medium_level">Keskmine</string>
+    <string name="message">Sõnum</string>
+    <string name="messages">Sõnumid</string>
+    <string name="minute">Minut</string>
+    <string name="minutes">Minutit</string>
+    <string name="missed">Vastamata</string>
+
+    <string name="mobile_phone_number">Mobiiltelefoni number</string>
+    <string name="monday">Esmaspäev</string>
+    <string name="more">rohkem</string>
+    <string name="morning">Hommikul</string>
+    <string name="name">Nimi</string>
+    <string name="named__">nimeline</string>
+    <string name="new_alarm___was_created">uus äratus %s loodud.</string>
+    <string name="nfc">NFC</string>
+    <string name="no">Ei</string>
+    <string name="notes">Märkmed</string>
+    <string name="notes_settings">Märkmed</string>
+    <string name="notes_settings_subtext">Valige, kui soovite märkmelehte avakuval näha.</string>
+    <string name="notifications">Teavitused</string>
+
+    <string name="off">Väljas</string>
+    <string name="ok">OK</string>
+    <string name="on">Sees</string>
+
+    <string name="only_once">Üks kord</string>
+
+
+    <string name="open">Ava</string>
+
+    <string name="outgoing">Väljuvad</string>
+    <string name="page">Lehekülg</string>
+    <string name="permissions_part">Juurdepääsuload</string>
+    <string name="personalization_settings">Isikupärastamine</string>
+    <string name="phone">Telefon</string>
+    <string name="photo">Foto</string>
+    <string name="photos">Fotod</string>
+    <string name="pill_added">Tablett lisatud.</string>
+    <string name="pill_name">Tableti nimi</string>
+    <string name="pills">Tabletid</string>
+    <string name="press_longer">Hoia all kauem.</string>
+    <string name="timer">Taimer</string>
+    <string name="read_call_log">Kõneajalugu</string>
+    <string name="read_call_log_subtext">Seda luba on vaja kõneajaloo näitamiseks.</string>
+    <string name="read_contacts">Kontaktid</string>
+    <string name="received">Vastu võetud</string>
+    <string name="recent">Viimased kõned</string>
+    <string name="regular_level">Tavaline tase</string>
+
+    <string name="remove_from_favorite">Eemalda lemmikutest</string>
+    <string name="remove_from_home">Eemalda avakuvalt</string>
+    <string name="remove_from_sos">Eemalda SOS-kontaktide alt</string>
+    <string name="remove_shortcut">Eemalda otsetee</string>
+    <string name="removed_all_alarms">Kõik äratused eemaldatud.</string>
+    <string name="repeats_every_day">Iga päev</string>
+    <string name="right_handed">Paremakäeline</string>
+
+    <string name="saturday">Laupäev</string>
+    <string name="save">Salvesta</string>
+    <string name="send">Saada</string>
+    <string name="set_default_dialer">Määra helistamise rakendus</string>
+    <string name="set_default_dialer_subtext">BaldPhone\'i peab määrama peamiseks helistamise rakenduseks.</string>
+    <string name="set_home_screen">Määra avakuva</string>
+    <string name="set_home_screen_subtext">BaldPhone\'i kasutamiseks peate rakenduse määrama avakuvaks.\n
+        Soovi korral saab selle tagasi muuta seadetes.
+    </string>
+    <string name="set_keyboard">Määra klaviatuur</string>
+    <string name="setting_does_not_exist">Seadet ei ole</string>
+    <string name="settings">Seaded</string>
+    <string name="settings_permission">Seadete juurdepääsuluba</string>
+    <string name="share">Jaga</string>
+    <string name="share_actual_text">Tere. Mina kasutan nutitelefoni rakendust \"BaldPhone\", mis muudab telefoni
+        menüüd suureks, lihtsaks ja sõbralikuks.\nKas pakub huvi?\nRakendus on tasuta.\nRohkem infot veebilehelt:\n
+        \nhttps://baldphone.com
+    </string>
+    <string name="share_bald_phone_subtext">Kas teate kedagi, kellele võiks meeldida BaldPhone?\nJagage teistega
+    </string>
+    <string name="share_baldphone">Jaga BaldPhone\'i</string>
+    <string name="share_contact">Jaga kontakti</string>
+    <string name="share_differently">Jaga mõne teise rakendusega</string>
+    <string name="share_via_whatsapp">Jaga Whatsapp\'iga</string>
+    <string name="shift">tõste</string>
+    <string name="show">Näita</string>
+    <string name="small">Väike</string>
+    <string name="snooze">Lükka edasi</string>
+    <string name="sos">SOS</string>
+    <string name="sos_is_full">SOS on täis</string>
+    <string name="sos_is_full_subtext">SOS on täis. Palun eemaldage mõni SOS-kontakt enne uute lisamist</string>
+    <string name="speak">Räägi</string>
+    <string name="speech_to_text">Kõne tekstiks</string>
+    <string name="strong_hand">Käelisus</string>
+    <string name="strong_hand_subtext">Valige rakenduse seadistamiseks käelisus.</string>
+    <string name="submit">esita</string>
+    <string name="sunday">Pühapäev</string>
+    <string name="technical_information">Tehniline teave</string>
+    <string name="theme_settings">Teema</string>
+    <string name="theme_settings_subtext">Valige teema</string>
+
+    <string name="thursday">Neljapäev</string>
+    <string name="time_changer">Tabletivõtmise aja muutmine</string>
+    <string name="tiny">Tilluke</string>
+    <string name="to___days_and___hours_from_now">%d päeva ja %d tunni pärast</string>
+    <string name="to___hours_and___minutes_from_now">%d tunni ja %d minuti pärast</string>
+    <string name="to___minuets_from_now">%d minuti pärast</string>
+    <string name="today">Täna</string>
+    <string name="took">Juba võetud.</string>
+    <string name="tuesday">Teisipäev</string>
+    <string name="uninstall">Eemalda telefonist</string>
+    <string name="uninstall_subtext">Kas olete kindel, et soovite telefonist eemaldada %s\'i?\n%s\'i andmed kustutatakse.</string>
+    <string name="up">Üles</string>
+    <string name="video">Video</string>
+    <string name="video_tutorials">Videoõpetused</string>
+    <string name="videos">Videod</string>
+
+    <string name="voice_mail">Kõnepost</string>
+    <string name="wednesday">Kolmapäev</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="wifi">Wifi</string>
+    <string name="will_repeat_only_once">tuletab meelde ainult üks kord.</string>
+    <string name="write">Kirjuta</string>
+    <string name="write_contacts">Kirjuta kontaktidesse</string>
+    <string name="write_external_storage">Kirjuta välisele salvestusseadmele</string>
+    <string name="yes">Jah</string>
+    <string name="yesterday">Eile</string>
+    <string name="nothing">Mitte midagi</string>
+    <string name="no_contacts_found">Kontakte ei ole.</string>
+    <string name="no_alarms">Äratusi ei ole\nÄratuse saate lisada toksates\n\"Lisa äratus\"\nvõi\n\"Lisa taimer</string>
+    <string name="no_pills">Tablette ei ole\nTableti saate lisada toksates\n\"Lisa tablett\"</string>
+    <string name="clear_all_notifications">Kustuta kõik teavitused</string>
+    <string name="clear_cache_subtext">Kas olete kindel, et soovite vahemälu sisu kustutada? Ajutiste failide kustutamine vahemälust võib lahendada mõned BaldPhone\'is ilmnevad vead, aga ka avakuvale loodud otseteed eemaldatakse. </string>
+    <string name="permissions_calm">Tere. BaldPhone\'i sujuvaks töötamiseks peate andma järgnevad juurdepääsuload.
+        Mõned load võivad kõlada hirmsalt, aga see on ainus moodus, kuidas BaldPhone saab töötada. Rakendus
+        ei kogu andmeid ja ei tee liiga telefonile. Loa andmiseks vajutage OK või BaldPhone\'st väljumiseks, ei.
+    </string>
+    <string name="pending_update">Uuendus ootamas</string>
+    <string name="download">Lae alla</string>
+    <string name="install_updates">Paigalda uuendused</string>
+    <string name="install_updates_subtext">Juurdepääsuluba on vaja BaldPhone\'i uuendamiseks</string>
+    <string name="a_new_update_is_available">Uuendus on saadaval.\nUuendused on vajalikud BaldPhone\'i sujuvaks 
+        töötamiseks.\nAllalaadimiseks vajuta OK.
+    </string>
+    <string name="current_version">Praegune versioon:\n</string>
+    <string name="new_version">Uus versioon:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">Uuendused ootavad allalaadimist.</string>
+    <string name="install">Paigalda</string>
+    <string name="data_warning">Andmemahu hoiatus</string>
+    <string name="data_warning_subtext">Telefon ei ole ühendatud WiFI\'ga.\nAllalaaditava maht on 3MB, 
+     välismaal viibides võib see maksta.\nKas soovite sellegi poolest allla laadida?</string>
+    <string name="update_message_is_corrupted">Uuenduse teave on vigane.</string>
+    <string name="check_for_updates">Kontrolli uuendusi</string>
+    <string name="could_not_connect_to_server">Serveriga ei saa ühendust.</string>
+    <string name="could_not_connect_to_internet">Internetti ei saa ühenduda.</string>
+    <string name="could_not_start_the_download">Ei saanud alustada allalaadimist.</string>
+    <string name="downloaded_update_file_could_not_be_deleted">Alla laetud uuenduse faili ei saanud kustutada.</string>
+    <string name="downloading">Allalaadimine…</string>
+
+    <string name="baldphone_is_up_to_date">BaldPhone\'i kõige viimane versioon on paigaldatud.</string>
+    <string name="what_s_new">Mis on uus</string>
+    <string name="download_finished">Allalaadimine on lõpetatud.</string>
+    <string name="downloading_updates">Uuenduste allalaadimine...</string>
+    <string name="installing_doesn_t_work">Kas ei saa installida?</string>
+    <string name="try_now">Proovi kohe</string>
+    <string name="download_progress">Allalaadimise seis</string>
+    <string name="what_do_you_want_to_do_with___">Mida te soovite %s\'ga teha?</string>
+    <string name="crash_reports">Veateated</string>
+    <string name="crash_reports_subtext">Veateated on aruanded, mis aitavad BaldPhone\'i teha paremaks\nTeateid kasutatakse
+        ainult rakenduse vigade parandamiseks, mitte millekski muuks.
+    </string>
+    <string name="custom_app">Kohandatud rakendus</string>
+    <string name="custom_app_subtext">Vali avakuvale kohandatud rakendus.</string>
+    <string name="no_app_was_found">Sellist rakendust ei ole.</string>
+    <string name="alarm">Äratus</string>
+    <string name="no_new_notifications">Uus teavitusi ei ole</string>
+    <string name="sound">Heli</string>
+    <string name="mute">Vaigista</string>
+    <string name="vibrate">Värista</string>
+    <string name="your_phone_doesnt_have_assistant_installed">Telefoni ei ole paigaldatud assistenti.</string>
+
+
+    <string name="status_bar_settings">Olekuriba</string>
+    <string name="status_bar_settings_subtext">Kus te soovite olekuriba näidata?</string>
+    <string name="only_home_screen">Ainult avakuval</string>
+    <string name="nowhere">Ei näidata</string>
+    <string name="everywhere">Kõikjal</string>
+
+
+    <string name="share_photo">Jaga fotot</string>
+
+    <string name="choose_language_for_keyboard">Vali keel</string>
+    <string name="hebrew">Heebrea</string>
+    <string name="english">Inglise</string>
+
+    <string name="search">Otsi</string>
+    <string name="next">Järgmine</string>
+    <string name="go">Mine</string>
+
+
+    <string name="dialer_sounds">Numbriklahvide heli</string>
+    <string name="dialer_sounds_subtext">Valige, kui soovite kuulda numbriklahvide helisid.</string>
+    <string name="low_battery_alert">Madala akutaseme teavitus</string>
+    <string name="low_battery_alert_subtext">Valige, kui soovite, et avakuva tegumiriba oleks punane, kui aku mahutavus on alla 20%\nTähelepanek Seda ei näidata, kui süsteemi tegumiriba on peidus.</string>
+
+    <string name="also_available_at">Tagasiside saab saata ka\nbaldphone.contact@gmail.com\nTekst peab olema inglise või heebrea keeles.</string>
+    <string name="grant_all_permissions">Anna kõik vajalikud juurdepääsuload</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxin 100</string>
+    <string name="medication_2">Eltroxin 150</string>
+    <string name="donate">Anneta</string>
+    <string name="emergency_button">Hädaabinupp</string>
+    <string name="emergency_settings_subtext">Valige, kui soovite avakuvale hädaabinuppu.</string>
+    <string name="private_number">Varjatud number</string>
+    <string name="swipe_left_or_right">Lohista vasakule või paremale</string>
+    <string name="press_next_or_back_buton">Vajuta nool vasakule või paremale</string>
+    <string name="click_delay">Toksamise viivitus</string>
+    <string name="no_delay">Viivitust ei ole</string>
+    <string name="scrolling">Kerimine</string>
+    <string name="arrows">Nooled</string>
+    <string name="swipe">Lohista</string>
+    <string name="_long">Pikk</string>
+    <string name="_short">Lühike</string>
+    <string name="do_you_want_to_save_your_changes">Kas soovite muudatused salvestada?</string>
+    <string name="discard">Hülga</string>
+    <string name="no_recent_calls">Viimaseid kõnesid ei ole</string>
+    <string name="apps_sort_method">Rakenduste järjestuse viis</string>
+    <string name="apps_sort_method_subtext">Valige, kas soovite, et rakendused on ühel joonel või jagatud erinevatesse gruppidesse tähestiku alusel</string>
+    <string name="groups">Grupid</string>
+    <string name="one_grid">Ühes reas</string>
+    <string name="colorful">Värviline</string>
+    <string name="colorful_subtext">Kas soovite BaldPhone\'ile värvi lisada?</string>
+    <string name="edit_home_screen">Redigeeri avakuva</string>
+    <string name="dual_sim">Kaks SIM-kaarti</string>
+    <string name="dual_sim_subtext">Valige, kuidas soovite hallata kahte SIM-kaarti\nMärkus: valides menüüst Kuva valikud, peate andma veel ühe juurdepääsuloa</string>
+    <string name="use_default">Kasuta vaikevalikut</string>
+    <string name="show_options">Näita valikuid</string>
+    <string name="read_phone_state">Uuri telefoni olekut</string>
+    <string name="read_phone_state_subtext">Teiselt SIM-kaardilt helistamiseks on vaja juurdepääsuluba</string>
+    <string name="choose_sim">Vali SIM-kaart</string>
+    <string name="choose_sim_subtext">Valige SIM-kaart millega helistada</string>
+    <string name="website">Veebilehekülg</string>
+    <string-array name="names_for_screenshots">
+        <item>Ristiisa</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
+</resources>
