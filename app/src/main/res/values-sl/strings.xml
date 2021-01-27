@@ -259,7 +259,7 @@
     <string name="today">Danes</string>
     <string name="took">Vzel!</string>
     <string name="tuesday">Torek</string>
-    <string name="uninstall">Odstrani</string>
+    <string name="uninstall">Odstranite</string>
     <string name="uninstall_subtext">Ali ste prepričani, da želite odstraniti %s?\n%s\ podatki bodo izbrisani za vedno!</string>
     <string name="up">Gor</string>
     <string name="video">Video</string>
@@ -385,8 +385,6 @@
     <string name="colorful">Barvito</string>
     <string name="colorful_subtext">Ali želite, da je BaldPhone bolj barvit?</string>
     <string name="edit_home_screen">Uredi elemente na domačem zaslonu</string>
-
-
     <string-array name="names_for_screenshots">
         <item>Rudolf Maister</item>
         <item>Marjana Deržaj</item>
