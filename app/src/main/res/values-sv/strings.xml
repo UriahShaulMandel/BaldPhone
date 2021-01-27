@@ -384,8 +384,6 @@
     <string name="colorful">Färgglad</string>
     <string name="colorful_subtext">Vill du att BaldPhone ska visas med fler färger?</string>
     <string name="edit_home_screen">Anpassa Hemskärmen</string>
-
-
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
         <item>Abraham Lincoln</item>
