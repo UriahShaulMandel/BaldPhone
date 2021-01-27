@@ -387,6 +387,8 @@
     <string name="choose_sim">选择sim卡</string>
     <string name="choose_sim_subtext">选择你想要用来拨打电话的sim卡</string>
     <string name="website">网站</string>
+    <string name="appear_on_top">出现在顶部</string>
+    <string name="appear_on_top_subtext">在新版本的安卓系统上需要此权限，以便在屏幕处于关闭状态时显示警报和提醒</string>
 
 
     <string-array name="names_for_screenshots">
