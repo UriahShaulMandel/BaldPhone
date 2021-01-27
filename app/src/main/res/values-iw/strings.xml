@@ -414,6 +414,7 @@
     <string name="appear_on_top">גישה להצגה מעל</string>
     <string name="appear_on_top_subtext">יש לאפשר גישה זו בגרסאות חדשות של אנדרואיד, על מנת להציג שעון מעורר ותזכורות</string>
 
+
     <string-array name="names_for_screenshots">
         <item>יונה הנביא</item>
         <item>בנימין זאב הרצל</item>
