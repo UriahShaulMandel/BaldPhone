@@ -345,7 +345,7 @@
     <string name="dialer_sounds">Son du composeur de numéros</string>
     <string name="dialer_sounds_subtext">Choisissez si les touches du composeur de numéro téléphonique ont un son.</string>
     <string name="low_battery_alert">Alerte de batterie faible</string>
-    <string name="low_battery_alert_subtext">Choisissez si vous voulez que la barre d'état de l'écran d'acceuil devienne rouge quand la batterie a une charge inférieure à 20%\nNottez que cela ne sera pas visible si la barre d'état est cachée.</string>
+    <string name="low_battery_alert_subtext">Choisissez si vous voulez que la barre d\'état de l\'écran d\'acceuil devienne rouge quand la batterie a une charge inférieure à 20%\nNottez que cela ne sera pas visible si la barre d\'état est cachée.</string>
 
     <string name="also_available_at">Également disponible en contactant\nbaldphone.contact@gmail.com\nLes retours doivent être en anglais/hébreux !</string>
     <string name="grant_all_permissions">Accorder toutes les autorisations</string>
@@ -355,8 +355,8 @@
     <string name="medication_1">Eltroxin 100</string>
     <string name="medication_2">Eltroxin 150</string>
     <string name="donate">Donner</string>
-    <string name="emergency_button">Bouton d'urgence</string>
-    <string name="emergency_settings_subtext">Choisissez si vous désirez afficher un bouton d'urgence sur l\'écran d'accueil.</string>
+    <string name="emergency_button">Bouton d\'urgence</string>
+    <string name="emergency_settings_subtext">Choisissez si vous désirez afficher un bouton d\'urgence sur l\'écran d\'accueil.</string>
     <string name="private_number">Numéro privé</string>
     <string name="swipe_left_or_right">Glissez à gauche ou à droite</string>
     <string name="press_next_or_back_buton">Appuyez sur le bouton prochain ou sur la flèche de retour</string>
@@ -376,7 +376,7 @@
     <string name="one_grid">Grille</string>
     <string name="colorful">Version coloré</string>
     <string name="colorful_subtext">Voulez-vous une version plus colorée de BaldPhone ?</string>
-    <string name="edit_home_screen">Éditer l\'écran d'accueil</string>
+    <string name="edit_home_screen">Éditer l\'écran d\'accueil</string>
 
 
     <string-array name="names_for_screenshots">
