@@ -391,8 +391,8 @@
     <string name="apps_sort_method_subtext"> Επιλέξτε αν θέλετε να ταξινομήσετε τις εφαρμογές σε ένα πλέγμα ή αν θέλετε να τις χωρίσετε σε ομάδες βάση του πρώτου
   γράμματος</string>
     <string name="groups">Ομάδες</string>
-    <string name="one_grid">Έναλέγμα</string>
-    <string name="colorful">Χρώματα</string>
+    <string name="one_grid">Ένα πλέγμα</string>
+    <string name="colorful">Χρωματιστό</string>
     <string name="colorful_subtext">Θέλετε να γίνει το BaldPhone ποιο χρωματιστό;</string>
     <string name="edit_home_screen">Προσαρμογή αρχικής οθόνης</string>
     <string name="dual_sim">Διπλή κάρτα sim</string>
@@ -400,7 +400,7 @@
     <string name="use_default">Χρήση προεπιλογής</string>
     <string name="show_options">Προβολή Eπιλογών</string>
     <string name="read_phone_state">Ανάγνωση κατάστασης τηλεφώνου</string>
-    <string name="read_phone_state_subtext">Αυτή η άδεια απαιτείται για κλίση από τη δεύτερη κάρτα sim</string>
+    <string name="read_phone_state_subtext">Αυτή η άδεια απαιτείται για κλήση από την δεύτερη κάρτα sim</string>
     <string name="choose_sim">Επιλογή κάρτας sim</string>
     <string name="choose_sim_subtext">Επιλογή κάρτας sim από την οποία θα γίνει η κλήση</string>
     <string name="website">Ιστότοπος</string>
