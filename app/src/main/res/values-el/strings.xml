@@ -17,7 +17,7 @@
 <resources>
     <string name="about">Σχετικά</string>
     <string name="about_subtext">Γειά σας!\nΤο όνομα μου είναι Uriah Shaul Mandel, και είμαι ο προγραμματιστής αυτής της πλατφόρμας\n
-        Έχω προσφέρει κάποια χρόνο από την \"ενήλικη\" ζωή μου αναπτύσσοντας αυτή την πλατφόρμα, και την έδωσα σε κυκλοφορία δωρεάν, για χρήση από
+        Έχω προσφέρει κάποιο χρόνο από την \"ενήλικη\" ζωή μου αναπτύσσοντας αυτή την πλατφόρμα, και τη δημοσίευσα δωρεάν, για χρήση από
         όλους.\nΜπορείτε να επικοινωνήσετε μαζί μου στο email:\nbaldphone.contact@gmail.com
     </string>
     <string name="accessibility_level">Επίπεδο Προσβασιμότητας</string>
@@ -31,7 +31,7 @@
     </string>
     <string name="acknowledgments">Ευχαριστίες</string>
     <string name="adaptive">Προσαρμογή</string>
-    <string name="add_alarm">Νέα Αφύπνιση</string>
+    <string name="add_alarm">Νέο Ξυπνητήρι</string>
     <string name="add_alarm_quickly">Νέο Χρονόμετρο</string>
     <string name="add_contact">Νέα Επαφή</string>
     <string name="add_emergency_contact">Προσθήκη</string>
@@ -41,16 +41,16 @@
     <string name="add_to_home">Προσθήκη στην Αρχική Σελίδα</string>
     <string name="add_to_sos">Προσθήκη στο SOS</string>
     <string name="address">Διεύθυνση</string>
-    <string name="advanced_options">Ρυθμίσεις για προχωρημένους</string>
+    <string name="advanced_options">Επιπλέον Ρυθμίσεις</string>
     <string name="afternoon">Απόγευμα</string>
     <string name="airplane_mode">Λειτουργία πτήσης</string>
-    <string name="alarm_name">Όνομα Αφύπνισης</string>
-    <string name="alarm_volume">Ένταση Αφύπνισης</string>
-    <string name="alarm_volume_subtext">Επιλέξτε ένταση για τις Αφυπνίσεις.\nΗ ένταση αυξάνεται από αριστερά προς δεξιά.</string>
-    <string name="alarms">Αφυπνίσεις</string>
+    <string name="alarm_name">Όνομα Ξυπνητηριού</string>
+    <string name="alarm_volume">Ένταση Ξυπνητηριού</string>
+    <string name="alarm_volume_subtext">Επιλέξτε ένταση για τα ξυπνητήρια.\nΗ ένταση αυξάνεται από αριστερά προς δεξιά.</string>
+    <string name="alarms">Ξυπνητήρια</string>
 
-    <string name="alarms_repeats_every">Επανάληψη αφύπνισης κάθε</string>
-    <string name="all_alarms">Όλες οι αφυπνίσεις</string>
+    <string name="alarms_repeats_every">Το ξυπνητήρι επαναλαμβάνεται κάθε</string>
+    <string name="all_alarms">Όλα τα Ξυπνητήρια</string>
     <string name="allow">Ναι</string>
     <string name="already_setted">Έχει ήδη ρυθμιστεί!\nΠατήστε εδώ για να το αλλάξετε</string>
     <string name="an_error_has_occurred">Εντοπίστηκε σφάλμα!</string>
@@ -59,11 +59,11 @@
     <string name="apps">Εφαρμογές</string>
     <string name="are_you_sure_you_want_to_delete___">Είστε σίγουροι ότι θέλετε να διαγράψετε  %s;</string>
     <string name="assistant">Βοηθός</string>
-    <string name="at_least_one_day_must_be_selected">Τουλάχιστον μια ήμερα πρέπει να επιλεγεί!</string>
+    <string name="at_least_one_day_must_be_selected">Τουλάχιστον μια ήμερα πρέπει να επιλεχθεί!</string>
     <string name="auto_brightness">Αυτόματη\nΦωτεινότητα</string>
     <string name="backspace">backspace</string>
     <string name="baldphone_bla_allow_permission">Παρακαλώ επιτρέψτε τις ακόλουθες άδειες:</string>
-    <string name="blocked">Μπλοκαρίστηκε</string>
+    <string name="blocked">Μπλο</string>
     <string name="bluetooth">Bluetooth</string>
     <string name="brightness">Φωτεινότητα</string>
     <string name="brightness_subtext">Αλλαγή Φωτεινότητας.</string>
@@ -73,12 +73,12 @@
 
     <string name="call_log">Πρόσφατες Κλήσεις:</string>
     <string name="call_subtext">Αυτή η άδεια απαιτείται για να λειτουργήσει η κλήση επαφών.</string>
-    <string name="camera">Φωτογραφ. μηχανή</string>
+    <string name="camera">Κάμερα</string>
     <string name="camera_subtext">Αυτή η άδεια απαιτείται για να λειτουργήσει ο φακός. </string>
     <string name="cancel">Ακύρωση</string>
     <string name="change_pills_time">Αλλαγή Ώρας Χαπιών</string>
-    <string name="change_system_settings_subtext">Παρακαλώ δώστε άδεια στο BaldPhone για να αλλάξει τις ρυθμίσεις , όπως η αύξηση της γραμματοσειράς
-        και η αλλαγή φωτεινότητας
+    <string name="change_system_settings_subtext">Παρακαλώ δώστε άδεια στο BaldPhone για να αλλάξει τις ρυθμίσεις , όπως το μέγεθος της γραμματοσειράς
+        και την φωτεινότητα.
     </string>
     <string name="choose_friday">Παρ.</string>
     <string name="choose_monday">Δευτ.</string>
@@ -88,26 +88,26 @@
     <string name="choose_tuesday">Τρίτη</string>
     <string name="choose_wednesday">Τετ.</string>
     <string name="clear">Διαγραφή</string>
-    <string name="clear_cache">Διαγραφή Cache</string>
+    <string name="clear_cache">Διαγραφή του Cache</string>
     <string name="clear_data">Διαγραφή δεδομένων</string>
     <string name="clear_data_subtext">Είστε σίγουροι ότι θέλετε να διαγράψετε όλα τα δεδομένα;</string>
     <string name="clear_data_subtext2">100%;</string>
     <string name="clear_data_subtext3">είστε σίγουροι;\nαν πατήσετε ναι, όλα τα δεδομένα θα διαγραφούν!</string>
     <string name="clock">Ρολόι</string>
-    <string name="coming_soon">Προσεχώς!</string>
+    <string name="coming_soon">Έρχεται σύντομα!</string>
     <string name="connection_settings">Σύνδεση</string>
-    <string name="contact_must_has_name">Η επαφή πρέπει να έχει όνομα!</string>
-    <string name="contact_not_created">Η επαφή δεν προστέθηκε!</string>
+    <string name="contact_must_has_name">Η επαφή πρέπει να έχει ένα όνομα!</string>
+    <string name="contact_not_created">Η επαφή δε δημιουργήθηκε!</string>
     <string name="contacts">Επαφές</string>
     <string name="contacts_read_subtext">Αυτή η άδεια απαιτείται για να λειτουργήσουν οι επαφές.</string>
     <string name="contacts_subtext"> Αυτή η άδεια απαιτείται για να προσθέσετε νέες επαφές.</string>
-    <string name="crash">Ουπς!\nΤο BaldPhone αντιμετώπισε πρόβλημα και θα κάνει επανεκκίνηση.</string>
-    <string name="current_time">Τρέχουσα Ώρα</string>
-    <string name="custom">Επιλογή</string>
+    <string name="crash">Ουπς!\nΤο BaldPhone αντιμετώπισε ένα πρόβλημα και θα κάνει επανεκκίνηση.</string>
+    <string name="current_time">Η Ώρα Τώρα</string>
+    <string name="custom">Προσαρμοσμένο</string>
     <string name="dark">Σκοτεινό</string>
     <string name="delete">Διαγραφή </string>
     <string name="delete___">Διαγραφή %s;</string>
-    <string name="delete_all_alarms">Διαγραφή αφυπνίσεων</string>
+    <string name="delete_all_alarms">Διαγραφή όλων ξυπνητηριών</string>
     <string name="dialer">Τηλέφωνο</string>
     <string name="display_settings">Οθόνη</string>
     <string name="done">Έτοιμο</string>
@@ -116,16 +116,16 @@
     <string name="email">Email:</string>
     <string name="enable_notification_access">Ενεργοποίηση Πρόσβασης στις Ειδοποιήσεις</string>
     <string name="enable_notification_access_subtext">Παρακαλώ δώστε άδεια στο BaldPhone για πρόσβαση στις ειδοποιήσεις.</string>
-    <string name="enter">Enter</string>
-    <string name="enter_contact_or_phone_number">Εισάγεται ένα όνομα επαφής:</string>
+    <string name="enter">Εισαγωγή</string>
+    <string name="enter_contact_or_phone_number">Εισάγετε ένα όνομα επαφής:</string>
     <string name="evening">Βράδυ</string>
-    <string name="example_of_different_text_sizes">Παραδειγμα μεγέθους γραμματοσειράς \nΘα πρέπει να μπορείτε να
-        διαβάζετε.
+    <string name="example_of_different_text_sizes">Παραδειγμα μεγέθους γραμματοσειράς \nΘα πρέπει να μπορεί να
+        διαβαστεί.
     </string>
     <string name="external_storage_subtext">Αυτή η άδεια απαιτείται για να αποθηκεύετε φωτογραφίες.</string>
-    <string name="feedback">Αποστολή σχολίων</string>
-    <string name="feedback_cannot_be_empty">Feedback cannot be empty!</string>
-    <string name="feedback_sent_successfully">Feedback sent successfully!</string>
+    <string name="feedback">Αποστολή σχόλιου</string>
+    <string name="feedback_cannot_be_empty">Το σχόλιο δεν μπορεί να είναι άδειο!</string>
+    <string name="feedback_sent_successfully">Το σχόλιο στάλθηκε!</string>
     <string name="first_please_select_how_you_want_to_interact_with_buttons">Παρακαλώ επιλέξτε το επίπεδο προσβασιμότητας
     </string>
     <string name="font_size">Μέγεθος γραμματοσειράς</string>
@@ -134,25 +134,25 @@
        πληκτρολόγιο του τηλεφώνου; Χρησιμοποιήστε το μεγάλο πληκτρολόγιο του Baldphone!
     </string>
     <string name="hello">Γεια</string>
-    <string name="help">Βοήθεια σε Βίντεο</string>
-    <string name="hide">Απόκρυψη</string>
-    <string name="high_level">Αυξημένο επίπεδο</string>
+    <string name="help">Βοήθεια μέσω Βίντεο</string>
+    <string name="hide">Κρύψτε</string>
+    <string name="high_level">Μεγάλο επίπεδο</string>
     <string name="home_phone_number">Αριθμός τηλ. σπιτιού</string>
     <string name="hour">Ώρα</string>
-    <string name="huge">Τέρας</string>
+    <string name="huge">Μεγάλο</string>
     <string name="internet">Διαδίκτυο</string>
     <string name="invoked_in">Invoked in:</string>
-    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Κάτι τελευταίο
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Κάτι
         τελευταίο:\nΣυνιστάται να χρησιμοποιήσετε το Baldphone ως κύρια αρχική οθόνη
     </string>
     <string name="language">γλώσσα</string>
     <string name="language_settings">Γλώσσα</string>
     <string name="large">Μεγάλο</string>
-    <string name="left_handed">Αριστερόχειρες</string>
-    <string name="light">Ανοιχτό</string>
+    <string name="left_handed">Αριστερόχειρος</string>
+    <string name="light">Φωτεινό</string>
     <string name="location">Τοποθεσία</string>
     <string name="emergency_services">Υπηρεσίες Έκτακτης Ανάγκης</string>
-    <string name="mail">Αλληλογραφία</string>
+    <string name="mail">Mail</string>
     <string name="maps">Χάρτες</string>
 
 
@@ -169,8 +169,8 @@
     <string name="more">περισσότερα</string>
     <string name="morning">Πρωί</string>
     <string name="name">Όνομα</string>
-    <string name="named__">με όνομα</string>
-    <string name="new_alarm___was_created">νέα αφύπνιση %s δημιουργήθηκε!</string>
+    <string name="named__">όνομα</string>
+    <string name="new_alarm___was_created">νέo ξυπνητήρι %s δημιουργήθηκε!</string>
     <string name="nfc">NFC</string>
     <string name="no">Όχι</string>
     <string name="notes">Σημειώσεις</string>
@@ -188,11 +188,11 @@
 
     <string name="open">Άνοιγμα</string>
 
-    <string name="outgoing">Εξωτερική</string>
+    <string name="outgoing">Εξερχόμενο</string>
     <string name="page">Σελίδα</string>
     <string name="permissions_part">Άδειες</string>
     <string name="personalization_settings">Εξατομίκευση</string>
-    <string name="phone">Κλήση</string>
+    <string name="phone">Τηλέφωνο</string>
     <string name="photo">Εικόνα</string>
     <string name="photos">Εικόνες</string>
     <string name="pill_added">Το χάπι προστέθηκε!</string>
@@ -211,15 +211,15 @@
     <string name="remove_from_home">Αφαίρεση από την Αρχική Σελίδα</string>
     <string name="remove_from_sos">Αφαίρεση από το SOS</string>
     <string name="remove_shortcut">Αφαίρεση Συντόμευσης</string>
-    <string name="removed_all_alarms">Αφαιρεθήκαν όλες οι αφυπνίσεις!</string>
+    <string name="removed_all_alarms">Αφαιρεθήκαν όλα τα ξυπνητήρια!</string>
     <string name="repeats_every_day">Κάθε μέρα</string>
-    <string name="right_handed">Δεξιόχειρες</string>
+    <string name="right_handed">Δεξιόχειρος</string>
 
     <string name="saturday">Σάββατο</string>
     <string name="save">Αποθήκευση</string>
     <string name="send">Αποστολή</string>
-    <string name="set_default_dialer">Επιλογή εφαρμογής τηλεφώνου</string>
-    <string name="set_default_dialer_subtext">Το BaldPhone πρέπει να επιλέγει ως εφαρμογή τηλεφώνου.</string>
+    <string name="set_default_dialer">Επιλογή προεπιλεγμένου τηλεφώνου</string>
+    <string name="set_default_dialer_subtext">Το BaldPhone πρέπει να επιλεχθεί ως προεπιλεγμένο τηλέφωνο.</string>
     <string name="set_home_screen">Επιλογή Αρχικής Οθόνης</string>
     <string name="set_home_screen_subtext">Για να χρησιμοποιήσετε το BaldPhone πρέπει να το ορίσετε ως προεπιλεγμένη εφαρμογή αρχικής οθόνης.\nΗ
         επιλογή αυτή μπορεί να αλλάξει αργότερα από τις ρυθμίσεις.
@@ -233,13 +233,13 @@
         σε μεγαλύτερη και απλούστερη.\nΕνδιαφέρεστε;\n Μπορείτε να την κατεβάσετε δωρεάν\nστην παρακάτω διεύθυνση,
         για περισσότερες πληροφορίες:\n\nhttps://sites.google.com/view/baldphone
     </string>
-    <string name="share_bald_phone_subtext">Χαίρεται, ξέρετε κάποιον που μπορεί να τον ενδιαφέρει το BaldPhone;\nΜπορείτε
+    <string name="share_bald_phone_subtext">Ξέρετε κάποιον που μπορεί να τον ενδιαφέρει το BaldPhone;\nΜπορείτε
         να το μοιραστείτε μαζί του\"
     </string>
     <string name="share_baldphone">Κοινοποίηστε το BaldPhone</string>
     <string name="share_contact">Κοινοποίηση Επαφής</string>
     <string name="share_differently">Κοινοποιήστε σε άλλη Εφαρμογή</string>
-    <string name="share_via_whatsapp">Κοινοποιήστε σε Whatsapp</string>
+    <string name="share_via_whatsapp">Κοινοποιήστε στο Whatsapp</string>
     <string name="shift">shift</string>
     <string name="show">Εμφάνιση</string>
     <string name="small">Μικρό</string>
@@ -250,7 +250,7 @@
     <string name="speak">Ομιλία</string>
     <string name="speech_to_text">Ομιλία σε Κείμενο</string>
     <string name="strong_hand">Κυρίαρχο χέρι</string>
-    <string name="strong_hand_subtext">Επιλέξτε αν θέλετε η διεπαφή να προσαρμοστεί για Δεξιόχειρες η Αριστερόχειρες.</string>
+    <string name="strong_hand_subtext">Επιλέξτε αν θέλετε η διεπαφή να προσαρμοστεί για Δεξιόχειρουσ η Αριστερόχειρους.</string>
     <string name="submit">επιβεβαίωση</string>
     <string name="sunday">Κυριακή</string>
     <string name="technical_information">Τεχνικές Πληροφορίες</string>
@@ -259,7 +259,7 @@
 
     <string name="thursday">Τρίτη</string>
     <string name="time_changer">Αλλαγή Ώρας Χαπιού</string>
-    <string name="tiny">Μικροσκοπικό</string>
+    <string name="tiny">Μικρό</string>
     <string name="to___days_and___hours_from_now">σε %d μέρες και %d ώρες από τώρα</string>
     <string name="to___hours_and___minutes_from_now">σε %d ωρες και %d λεπτά από τώρα</string>
     <string name="to___minuets_from_now">σε %d λεπτά από τώρα</string>
@@ -285,14 +285,14 @@
     <string name="yesterday">Τετάρτη</string>
     <string name="nothing">Τίποτα</string>
     <string name="no_contacts_found">Δεν βρέθηκαν επαφές!</string>
-    <string name="no_alarms">Καμία Αφύπνιση\nπροσθέστε μία επιλέγοντας \n\"Νέα Αφύπνιση\"\nή\n\"Νέο Χρονόμετρο\"</string>
+    <string name="no_alarms">Κανένα ξυπνητήρι\nπροσθέστε ένα επιλέγοντας \n\"Νέο Ξυπνητήρι\"\nή\n\"Νέο Χρονόμετρο\"</string>
     <string name="no_pills">Κανένα Χάπι\nπροσθέστε ένα επιλέγοντας\n\"Νέο Χάπι\"</string>
     <string name="clear_all_notifications">Διαγραφή Ειδοποιήσεων</string>
     <string name="clear_cache_subtext">Είστε σίγουροι ότι θέλετε να σβήσετε την μνήμη cache?\nΠροσωρινά αρχεία και συντομεύσεις θα διαγραφούν!
     </string>
     <string name="permissions_calm">Γειά σας, το BaldPhone χρειάζεται κάποιες άδειες για να λειτουργήσει, κάποιες από αυτές
       φαίνονται τρομακτικές αλλά μόνο έτσι το BaldPhone μπορεί να αντικαταστήσει τη διεπαφή του τηλεφώνου. Δεν λαμβάνει δεδομένα και δεν προκαλεί
-         ζημιά. πατήστε Ναι για να χορηγήσετε τα δικαιώματα ή Όχι για να βγείτε από το BaldPhone.
+         ζημιά. Πατήστε Ναι για να παραχωρήσετε τισ άδειες ή Όχι για να βγείτε από το BaldPhone.
     </string>
     <string name="pending_update">Ενημέρωση εκκρεμής</string>
     <string name="download">Λήψη</string>
@@ -337,11 +337,11 @@
     <string name="sound">Ήχος</string>
     <string name="mute">Αθόρυβο</string>
     <string name="vibrate">Δόνηση</string>
-    <string name="your_phone_doesnt_have_assistant_installed">Το κινητό σας δεν έχει εγκατεστημένο assistant.</string>
+    <string name="your_phone_doesnt_have_assistant_installed">Το κινητό σας δεν έχει έναν εγκατεστημένο βοηθό.</string>
 
 
-    <string name="status_bar_settings">Γραμμή Κατάστασης</string>
-    <string name="status_bar_settings_subtext">Που θέλετε να φαίνεται η γραμμή κατάστασης;</string>
+    <string name="status_bar_settings">Μπάρα Κατάστασης</string>
+    <string name="status_bar_settings_subtext">Που θέλετε να φαίνεται η μπάρα κατάστασης;</string>
     <string name="only_home_screen">Μόνο στην Αρχική Οθόνη</string>
     <string name="nowhere">Πουθενά</string>
     <string name="everywhere">Παντού</string>
@@ -361,35 +361,35 @@
     <string name="dialer_sounds">Ήχοι Πληκτρολογίου Κλήσης</string>
     <string name="dialer_sounds_subtext">Επιλέξτε αν θέλετε ήχους στο πληκτρολόγιο κλήσης</string>
     <string name="low_battery_alert">Ειδοποίηση χαμηλής μπαταρίας</string>
-    <string name="low_battery_alert_subtext">Επιλέξτε, αν θέλετε, η γραμμή κατάστασης να είναι κόκκινη στην αρχική οθόνη όταν η μπαταρία είναι κάτω του 20%\nΣημείωση: Δεν θα φαίνεται αν η γραμμή κατάστασης είναι κρυμμένη.</string>
+    <string name="low_battery_alert_subtext">Επιλέξτε, αν θέλετε, η γραμμή κατάστασης να είναι κόκκινη στην αρχική οθόνη όταν η μπαταρία είναι κάτω του 20%\nΣημείωση: Δεν θα φαίνεται αν η μπάρα κατάστασης είναι κρυμμένη.</string>
 
-    <string name="also_available_at">Επίσης αποστολή σχολίων στο\nbaldphone.contact@gmail.com\nΤα σχόλια πρέπει να είναι σε Αγγλικά/Εβραϊκά!</string>
+    <string name="also_available_at">Επίσης αποστολή σχολίων στο\nbaldphone.contact@gmail.com\nΤα σχόλια πρέπει να είναι στα Αγγλικά/Εβραϊκά!</string>
     <string name="grant_all_permissions">Παραχώρηση όλων των αδειών</string>
 
 
     <!--For Tests:-->
     <string name="medication_1">Eltroxin 100</string>
     <string name="medication_2">Eltroxin 150</string>
-    <string name="donate">Δωρεά</string>
+    <string name="donate">Δώρημα</string>
     <string name="emergency_button">Κουμπί άμεσης ανάγκης</string>
     <string name="emergency_settings_subtext">Επιλέξτε αν θέλετε το κουμπί άμεσης ανάγκης να είναι στην αρχική οθόνη.</string>
     <string name="private_number">Ιδιωτικός Αριθμός</string>
-    <string name="swipe_left_or_right">Swipe left or right</string>
-    <string name="press_next_or_back_buton">Press next or back arrow</string>
-    <string name="click_delay">Click Delay</string>
-    <string name="no_delay">No Delay</string>
-    <string name="scrolling">Scrolling</string>
+    <string name="swipe_left_or_right">Σύρετε προς τα αριστερά ή προς τα δεξιά</string>
+    <string name="press_next_or_back_buton">Πατήστε το επόμενο ή το προηγούμενο βελάκι</string>
+    <string name="click_delay">Πατήστε Καθυστέρηση</string>
+    <string name="no_delay">Καμία Καθυστέρηση</string>
+    <string name="scrolling">Κύλιση</string>
     <string name="arrows">Βέλη</string>
-    <string name="swipe">Touch</string>
-    <string name="_long">Long</string>
-    <string name="_short">Short</string>
+    <string name="swipe">Αφή</string>
+    <string name="_long">Μακρύ</string>
+    <string name="_short">Μικρό</string>
     <string name="do_you_want_to_save_your_changes">Θέλετε να σώσετε τις αλλαγές σας;</string>
     <string name="discard">Απόρριψη</string>
-    <string name="no_recent_calls">No Recent Calls</string>
-    <string name="apps_sort_method">Apps Sort Method</string>
-    <string name="apps_sort_method_subtext">Choose whether you want to sort the apps in one grid or to have them divided into different groups via letters</string>
+    <string name="no_recent_calls">Καθόλου Πρόσφατες Κλήσεις</string>
+    <string name="apps_sort_method">Μέθοδος Ταξινόμησης Εφαρμογών</string>
+    <string name="apps_sort_method_subtext"Επιλέξτε αν θέλετε να ταξινομήσετε τις εφαρμογές σε ένα πλέγμα ή να τις χωρίσετε σε διαφορετικές ομάδες σύμφωνα με γράμματα</string>
     <string name="groups">Ομάδες</string>
-    <string name="one_grid">One Grid</string>
+    <string name="one_grid">Ένα Πλέγμα</string>
     <string name="colorful">Χρώματα</string>
     <string name="colorful_subtext">Θέλετε να γίνει το BaldPhone ποιο χρωματιστό;</string>
     <string name="edit_home_screen">Προσαρμογή αρχικής οθόνης</string>
