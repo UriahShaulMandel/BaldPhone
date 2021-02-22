@@ -73,7 +73,8 @@
     <string name="camera_subtext">Den här rättigheten krävs för att starta ficklampan med BaldPhone.</string>
     <string name="cancel">Avbryt</string>
     <string name="change_pills_time">Ändra Läkemedelstider</string>
-    <string name="change_system_settings_subtext">Ger BaldPhone tillåtelse att ändra telefonens inställningar</string>
+    <string name="change_system_settings_subtext">Ger BaldPhone tillåtelse att ändra telefonens inställningar, som att öka teckensnittet
+storlek och ändra ljusstyrkan.</string>
     <string name="choose_friday">Fre</string>
     <string name="choose_monday">Mån</string>
     <string name="choose_saturday">Lör</string>
@@ -84,8 +85,8 @@
     <string name="clear">Rensa</string>
     <string name="clear_cache">Rensa Cache</string>
     <string name="clear_data">Rensa All Data</string>
-    <string name="clear_data_subtext">Vill du rensa all data?</string>
-    <string name="clear_data_subtext2">Säker?</string>
+    <string name="clear_data_subtext">Är du säker på att ta bort all användardata? BaldPhone-appen kommer att återgå i ett nytt tillstånd, som om det just var installerat.</string>
+    <string name="clear_data_subtext2">100%?</string>
     <string name="clear_data_subtext3">Absolut säker?\nOm du klickar på ja försvinner all data!</string>
     <string name="clock">Klocka</string>
     <string name="coming_soon">Under utveckling!</string>
@@ -384,6 +385,17 @@
     <string name="colorful">Färgglad</string>
     <string name="colorful_subtext">Vill du att BaldPhone ska visas med fler färger?</string>
     <string name="edit_home_screen">Anpassa Hemskärmen</string>
+    <string name="dual_sim">Dubbel SIM</string>
+    <string name="dual_sim_subtext">Välj hur du vill hantera dubbel SIM\nObs! Om du väljer Visa alternativ måste du tillåta annan lov</string>
+    <string name="use_default">Använd standard</string>
+    <string name="show_options">Visa alternativ</string>
+    <string name="read_phone_state">Läs telefonens tillstånd</string>
+    <string name="read_phone_state_subtext">Detta lov krävs för att kunna ringa från den andra simen</string>
+    <string name="choose_sim">Välj SIM</string>
+    <string name="choose_sim_subtext">Välj den SIM du vill ringa från</string>
+    <string name="website">Webbplats</string>
+    <string name="appear_on_top">Visas på toppen</string>
+    <string name="appear_on_top_subtext">Detta lov krävs för ny version av Android för att visa larm och påminnelser när skärmen är stängd</string>
 
 
     <string-array name="names_for_screenshots">
