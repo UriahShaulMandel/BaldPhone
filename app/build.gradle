@@ -90,7 +90,7 @@ dependencies {
     implementation 'net.danlew:android.joda:2.10.6'
     implementation 'com.github.nisrulz:lantern:2.0.0'
     implementation 'com.yqritc:recyclerview-flexibledivider:1.4.0'
-    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.android.volley:volley:1.2.0'
     implementation "ch.acra:acra-http:5.6.1"
     implementation 'androidx.exifinterface:exifinterface:1.2.0'
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
