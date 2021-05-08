@@ -46,6 +46,10 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 * [Subreddit r/BaldPhone](https://www.reddit.com/r/BaldPhone/)
 * [Telegram](https://t.me/BaldPhone)
 
+## Reviews 
+* [AlternativeTo](https://alternativeto.net/software/baldphone/about/)
+* [Slant](https://www.slant.co/options/36464/~baldphone-review)
+
 ## Screenshots
 
 [<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20white.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20white.jpg)
