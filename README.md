@@ -45,10 +45,6 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 * [Subreddit r/BaldPhone](https://www.reddit.com/r/BaldPhone/)
 * [Telegram](https://t.me/BaldPhone)
 
-## Reviews 
-* [AlternativeTo](https://alternativeto.net/software/baldphone/about/)
-* [Slant](https://www.slant.co/options/36464/~baldphone-review)
-
 ## Screenshots
 
 [<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20white.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20white.jpg)
@@ -80,3 +76,7 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 ## Extras
 * [Companion Repository](https://github.com/UriahShaulMandel/BaldPhoneCompanion) - Auto generated screenshots, test apks and db backups
 * Feel free to contact me at [baldphone.contact@gmail.com](mailto:baldphone.contact@gmail.com?subject=[GitHub]%20BaldPhone)
+
+## Reviews (your opinion counts)
+* [AlternativeTo](https://alternativeto.net/software/baldphone/about/)
+* [Slant](https://www.slant.co/options/36464/~baldphone-review)
