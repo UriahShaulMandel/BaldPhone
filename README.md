@@ -38,7 +38,7 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 * [Translating](https://github.com/UriahShaulMandel/BaldPhone/blob/master/translating/TRANSLATING.md) BaldPhone to other languages, anyone can do it on [Transifex](https://www.transifex.com/baldphone/baldphone/)
 * Adding features and fixing bugs.
 * Using BaldPhone and sending feedback
-* Sharing BaldPhone with others
+* Share BaldPhone with others
 * Star, Watch or Fork this project
 * Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
  
