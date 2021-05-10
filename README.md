@@ -77,6 +77,6 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 * [Companion Repository](https://github.com/UriahShaulMandel/BaldPhoneCompanion) - Auto generated screenshots, test apks and db backups
 * Feel free to contact me at [baldphone.contact@gmail.com](mailto:baldphone.contact@gmail.com?subject=[GitHub]%20BaldPhone)
 
-## Reviews (your opinion counts)
+## Reviews (your opinion matters)
 * [AlternativeTo](https://alternativeto.net/software/baldphone/about/)
 * [Slant](https://www.slant.co/options/36464/~baldphone-review)
