@@ -385,6 +385,17 @@
     <string name="colorful">Barvito</string>
     <string name="colorful_subtext">Ali želite, da je BaldPhone bolj barvit?</string>
     <string name="edit_home_screen">Uredi elemente na domačem zaslonu</string>
+    <string name="dual_sim">Dve SIM kartici</string>
+    <string name="dual_sim_subtext">Izberite, kako želite upravljati dve sim kartici\nOpomba: Če izberete Prikaži Možnosti, boste morali odobriti še eno dovoljenje </string>
+    <string name="use_default">Uporabi privzeto</string>
+    <string name="show_options">Prikaži Možnosti</string>
+    <string name="read_phone_state">Beri stanje telefona</string>
+    <string name="read_phone_state_subtext">To dovoljenje je potrebno, da lahko kličete z druge SIM kartice</string>
+    <string name="choose_sim">Izberi SIM kartico</string>
+    <string name="choose_sim_subtext">Izberite SIM kartico, s katere boste klicali</string>
+    <string name="website">Spletna stran</string>
+    <string name="appear_on_top">Prikaži na vrhu</string>
+    <string name="appear_on_top_subtext">To dovoljenje je potrebno na novejših Android različicah, da se vam budilke in opomniki prikažejo tudi, ko je zaslon izklopljen.</string>
 
 
     <string-array name="names_for_screenshots">
