@@ -36,19 +36,6 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 
 * Note: Google Play version is limited by not containing the Recent Calls feature, as to follow app permission rules on that platform.
 
-## Get involved
-
-* [Translating](https://github.com/UriahShaulMandel/BaldPhone/blob/master/translating/TRANSLATING.md) BaldPhone to other languages, anyone can do it on [Transifex](https://www.transifex.com/baldphone/baldphone/)
-* Adding features and fixing bugs.
-* Using BaldPhone and sending feedback
-* Share BaldPhone with others
-* Star, Watch or Fork this project
-* Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
- 
- ## Community
-* [Subreddit r/BaldPhone](https://www.reddit.com/r/BaldPhone/)
-* [Telegram](https://t.me/BaldPhone)
-
 ## Screenshots
 
 [<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20white.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/homescreen%20white.jpg)
@@ -70,6 +57,19 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 [<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/video%20tutorials.jpg" width=160>](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/fastlane/metadata/android/en-US/images/phoneScreenshots/video%20tutorials.jpg)
 
 </details>
+
+## Get involved
+
+* [Translating](https://github.com/UriahShaulMandel/BaldPhone/blob/master/translating/TRANSLATING.md) BaldPhone to other languages, anyone can do it on [Transifex](https://www.transifex.com/baldphone/baldphone/)
+* Adding features and fixing bugs.
+* Using BaldPhone and sending feedback
+* Share BaldPhone with others
+* Star, Watch or Fork this project
+* Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+ 
+ ## Community
+* [Subreddit r/BaldPhone](https://www.reddit.com/r/BaldPhone/)
+* [Telegram](https://t.me/BaldPhone)
 
 ## Shortcuts (for developers)
  - [Home Screen Activity](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/java/com/bald/uriah/baldphone/activities/HomeScreenActivity.java)
