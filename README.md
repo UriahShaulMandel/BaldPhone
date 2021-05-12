@@ -28,6 +28,7 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/com.bald.uriah.baldphone)
 
 * Note: Direct APK version has a built in update check/download mechanism, Fdroid version checks/updates through the F-Droid app.
+* [Beta apk](https://github.com/UriahShaulMandel/BaldPhoneCompanion/raw/master/apks/master/tmp_apk.apk) (latest build **for testing purposes**)
 
 ## Second Version
 
