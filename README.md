@@ -34,7 +34,7 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 
 [<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play Download" height="80">](https://play.google.com/store/apps/details?id=com.bald.uriah.baldphone.gp)
 
-* Note: Google Play version is limited by not containing the Recent Calls feature, as to follow app permission rules on that platform.
+* Note: Google Play version does not contain the Recent Calls feature.
 
 ## Screenshots
 
