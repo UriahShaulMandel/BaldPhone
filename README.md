@@ -30,9 +30,10 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 * Note: Direct APK version has a built in update check/download mechanism, Fdroid version checks/updates through the F-Droid app.
 
 ## Second Version
-(does not contain the Recent Calls feature)
 
 [<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play Download" height="80">](https://play.google.com/store/apps/details?id=com.bald.uriah.baldphone.gp)
+
+* Note: Google Play version is limited by not containing the Recent Calls feature, as to follow app permission rules on that platform.
 
 ## Get involved
 
