@@ -1,4 +1,4 @@
-[![BaldPhone](https://raw.githubusercontent.com/UriahShaulMandel/BaldPhone/master/logo/rectangle.png)](https://www.youtube.com/watch?v=G33E4XQp_Xw)
+[![BaldPhone](logo/rectangle.png)](https://www.youtube.com/watch?v=G33E4XQp_Xw)
  
 A platform which replaces the phone's interface to a bigger, simpler and friendlier one.
  
@@ -21,10 +21,10 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 
 ## Documentation
 * [Installing Manual pdf](https://github.com/UriahShaulMandel/BaldPhone/raw/master/manual/Manual%20hebrew.pdf) (Hebrew)
-* [Contributing](https://github.com/UriahShaulMandel/BaldPhone/blob/master/CONTRIBUTING.md)
+* [Contributing](CONTRIBUTING.md)
 
 ## Full Version
-[<img src="https://github.com/aha999/BaldPhone/blob/master/logo/direct_apk_download_v2.png?raw=true" alt="Direct APK Download" height="80">](http://bit.ly/BALDPHONE)
+[<img src="logo/direct_apk_download_v2.png?raw=true" alt="Direct APK Download" height="80">](http://bit.ly/BALDPHONE)
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/com.bald.uriah.baldphone)
 
 * Note: Direct APK version has a built in update check/download mechanism, Fdroid version checks/updates through the F-Droid app.
@@ -60,7 +60,7 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 
 ## Get involved
 
-* [Translating](https://github.com/UriahShaulMandel/BaldPhone/blob/master/translating/TRANSLATING.md) BaldPhone to other languages, anyone can do it on [Transifex](https://www.transifex.com/baldphone/baldphone/)
+* [Translating](translating/TRANSLATING.md) BaldPhone to other languages, anyone can do it on [Transifex](https://www.transifex.com/baldphone/baldphone/)
 * Adding features and fixing bugs.
 * Using BaldPhone and sending feedback
 * Share BaldPhone with others
