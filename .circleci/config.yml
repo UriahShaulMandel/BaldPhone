@@ -18,8 +18,9 @@ jobs:
       - checkout
 
       # The next step will run the unit tests
-      - android/chmod-gradlew:
-          test-command: chmod 777 ./gradlew
+      - run:
+          name: change gradle mode 
+          command : chmod 777 ./gradlew
 
       - android/run-tests:
           test-command: ./gradlew lint testDebug --continue
