@@ -11,7 +11,7 @@ jobs:
       - android/create-avd:
           avd-name: myavd
           install: true
-          system-image: system-images;android-22;armeabi-v7a
+          system-image: system-images;android-22;default;x86
       - android/start-emulator:
           avd-name: myavd
           additional-args: -no-audio -no-window -camera-back none -camera-front none -no-boot-anim -sdcard /home/travis/sdcard/sdcard.img -no-snapshot-save &
