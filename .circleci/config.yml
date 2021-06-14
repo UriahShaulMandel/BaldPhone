@@ -20,7 +20,7 @@ jobs:
           system-image: system-images;android-23;google_apis;x86
       - android/start-emulator:
           avd-name: myavd
-          additional-args: -no-audio -no-window -camera-back none -camera-front none -no-boot-anim -sdcard ~/sdcard/sdcard.img -no-snapshot-save &
+          additional-args: -no-window -camera-back none -camera-front none -no-boot-anim -sdcard ~/sdcard/sdcard.img -no-snapshot-save &
           post-emulator-launch-assemble-command: echo created
       - android/run-tests:
           test-command: adb shell settings put global window_animation_scale 0 & adb shell settings put global transition_animation_scale 0 & adb shell settings put global animator_duration_scale 0 & adb shell pm disable com.android.launcher 
