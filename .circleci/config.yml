@@ -25,6 +25,7 @@ jobs:
           wait-for-emulator: false
           verbose: true
           restore-gradle-cache-post-emulator-launch: false
+      - wait-for-emulator
       - android/run-tests:
           test-command: adb shell settings put global window_animation_scale 0 & adb shell settings put global transition_animation_scale 0 & adb shell settings put global animator_duration_scale 0 & adb shell pm disable com.android.launcher 
 
