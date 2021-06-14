@@ -72,10 +72,10 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 * [Telegram](https://t.me/BaldPhone)
 
 ## Shortcuts (for developers)
- - [Home Screen Activity](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/java/com/bald/uriah/baldphone/activities/HomeScreenActivity.java)
- - [Application Class](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/java/com/bald/uriah/baldphone/BaldPhone.java)
- - [Main Manifest](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/AndroidManifest.xml)
- - [build.gradle (app)](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/build.gradle)
+ - [Home Screen Activity](app/src/main/java/com/bald/uriah/baldphone/activities/HomeScreenActivity.java)
+ - [Application Class](app/src/main/java/com/bald/uriah/baldphone/BaldPhone.java)
+ - [Main Manifest](app/src/main/AndroidManifest.xml)
+ - [build.gradle (app)](app/build.gradle)
 
 ## Extras
 * [Companion Repository](https://github.com/UriahShaulMandel/BaldPhoneCompanion) - Auto generated screenshots, test apks and db backups
