@@ -19,6 +19,7 @@ jobs:
 
       # The next step will run the unit tests
       - android/run-tests:
+          test-command: chmod 777 ./gradlew
           test-command: ./gradlew lint testDebug --continue
 
       # Then start the emulator and run the Instrumentation tests!
