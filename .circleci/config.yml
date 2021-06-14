@@ -23,6 +23,7 @@ jobs:
       
       # Then start the emulator
       - android/start-emulator-and-run-tests:
+          test-command: echo StartingEmulator
           system-image: system-images;android-25;google_apis;x86
 
       - run:
