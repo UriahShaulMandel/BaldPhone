@@ -17,24 +17,23 @@ jobs:
       # Checkout the code as the first step.
       - checkout
 
-      # The next step will run the unit tests
       - run:
-          name: change gradle mode 
+          name: chmod gradlew
           command : chmod 777 ./gradlew
-
-      - android/run-tests:
-          test-command: ./gradlew lint testDebug --continue
-
-      # Then start the emulator and run the Instrumentation tests!
+      
+      # Then start the emulator
       - android/start-emulator-and-run-tests:
-          test-command: ./gradlew connectedDebugAndroidTest
           system-image: system-images;android-25;google_apis;x86
+
+      - run:
+          name: change adb settings
+          command : adb shell settings put global window_animation_scale 0 & adb shell settings put global transition_animation_scale 0 & adb shell settings put global animator_duration_scale 0 &  adb shell pm disable com.android.launcher
 
       # And finally run the release build
       - run:
           name: Assemble release build
           command: |
-            ./gradlew assembleRelease    
+            ./gradlew assemblebaldUpdatesDebug    
 
 workflows:
   # Below is the definition of your workflow.
