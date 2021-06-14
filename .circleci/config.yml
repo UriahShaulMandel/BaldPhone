@@ -17,7 +17,7 @@ jobs:
       - android/create-avd:
           avd-name: myavd
           install: false
-          system-image: system-images;android-22;default;x86
+          system-image: system-images;android-25;default;x86
       - android/start-emulator:
           avd-name: myavd
           additional-args: -no-audio -no-window -camera-back none -camera-front none -no-boot-anim -sdcard ~/sdcard/sdcard.img -no-snapshot-save &
