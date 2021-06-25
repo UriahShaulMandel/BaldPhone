@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: gradle
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "03:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - UriahShaulMandel
+  assignees:
+  - UriahShaulMandel
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: com.google.android.material:material
+    versions:
+    - 1.3.0
+    - 1.4.0-alpha01
