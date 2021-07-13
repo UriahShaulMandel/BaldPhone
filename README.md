@@ -1,10 +1,3 @@
-[![BaldPhone](logo/rectangle.png)](https://www.youtube.com/watch?v=G33E4XQp_Xw)
- 
-A platform which replaces the phone's interface to a bigger, simpler and friendlier one.
- 
- - Click the image above to watch the [introductionary video](https://www.youtube.com/watch?v=G33E4XQp_Xw)
-
-
 # BaldPhone 
 [![Build Status](https://travis-ci.com/UriahShaulMandel/BaldPhone.svg?branch=master)](https://travis-ci.com/UriahShaulMandel/BaldPhone) 
 [![GitHub version](https://img.shields.io/github/tag/UriahShaulMandel/BaldPhone.svg)](https://github.com/UriahShaulMandel/BaldPhone/releases/latest) 
@@ -18,6 +11,11 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 [![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/baldphone?color=orange)](https://reddit.com/r/baldphone) 
 [![GitHub commits since latest release](https://img.shields.io/github/commits-since/UriahShaulMandel/BaldPhone/latest)](https://github.com/UriahShaulMandel/BaldPhone/releases/tag/latest) 
 [![GitHub contributors](https://img.shields.io/github/contributors-anon/UriahShaulMandel/BaldPhone)](https://github.com/UriahShaulMandel/BaldPhone/graphs/contributors)
+
+A platform which replaces the phone's interface to a bigger, simpler and friendlier one.
+ 
+ - The [introductionary video](https://www.youtube.com/watch?v=G33E4XQp_Xw)
+
 
 ## Documentation
 * [Installing Manual pdf](https://github.com/UriahShaulMandel/BaldPhone/raw/master/manual/Manual%20hebrew.pdf) (Hebrew)
@@ -80,7 +78,3 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 ## Extras
 * [Companion Repository](https://github.com/UriahShaulMandel/BaldPhoneCompanion) - Auto generated screenshots, test apks and db backups
 * Feel free to contact me at [baldphone.contact@gmail.com](mailto:baldphone.contact@gmail.com?subject=[GitHub]%20BaldPhone)
-
-## Reviews (your opinion matters)
-* [AlternativeTo](https://alternativeto.net/software/baldphone/about/)
-* [Slant](https://www.slant.co/options/36464/~baldphone-review)
