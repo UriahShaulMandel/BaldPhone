@@ -24,7 +24,7 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 * [Contributing](CONTRIBUTING.md)
 
 ## Full Version
-[<img src="logo/direct_apk_download_v2.png?raw=true" alt="Direct APK Download" height="80">](http://bit.ly/BALDPHONE)
+
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/com.bald.uriah.baldphone)
 
 * Note: Direct APK version has a built in update check/download mechanism, Fdroid version checks/updates through the F-Droid app.
