@@ -14,9 +14,8 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
  
  - The [introductionary video](https://www.youtube.com/watch?v=G33E4XQp_Xw)
 
-
 ## Documentation
-* [Installing Manual pdf](https://github.com/UriahShaulMandel/BaldPhone/raw/master/manual/Manual%20hebrew.pdf) (Hebrew)
+* [Install Manual pdf](https://github.com/UriahShaulMandel/BaldPhone/raw/master/manual/Manual%20hebrew.pdf) (Hebrew)
 * [Contributing](CONTRIBUTING.md)
 
 ## Full Version
