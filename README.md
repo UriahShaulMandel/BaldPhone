@@ -1,16 +1,14 @@
 # BaldPhone 
-[![Build Status](https://travis-ci.com/UriahShaulMandel/BaldPhone.svg?branch=master)](https://travis-ci.com/UriahShaulMandel/BaldPhone) 
-[![GitHub version](https://img.shields.io/github/tag/UriahShaulMandel/BaldPhone.svg)](https://github.com/UriahShaulMandel/BaldPhone/releases/latest) 
-[![users](https://img.shields.io/endpoint?url=https%3A%2F%2Fbaldphone.com%2Fdb_db%2Fbadges%2Fget_badge.php)](https://baldphone.com/stats/) 
-[![GitHub repo size](https://img.shields.io/github/repo-size/UriahShaulMandel/BaldPhone)](https://github.com/UriahShaulMandel/BaldPhone) 
-[![Maintenance](https://img.shields.io/maintenance/yes/2022)](https://github.com/UriahShaulMandel/BaldPhone) 
+[![Build Status](https://travis-ci.com/UriahShaulMandel/BaldPhone.svg?branch=master)](https://travis-ci.com/UriahShaulMandel/BaldPhone)
+[![Maintenance](https://img.shields.io/maintenance/yes/2022)](https://github.com/UriahShaulMandel/BaldPhone)
+[![GitHub commits since latest release](https://img.shields.io/github/commits-since/UriahShaulMandel/BaldPhone/latest)](https://github.com/UriahShaulMandel/BaldPhone/releases/tag/latest) 
+[![GitHub repo size](https://img.shields.io/github/repo-size/UriahShaulMandel/BaldPhone)](https://github.com/UriahShaulMandel/BaldPhone)
+[![GitHub contributors](https://img.shields.io/github/contributors-anon/UriahShaulMandel/BaldPhone)](https://github.com/UriahShaulMandel/BaldPhone/graphs/contributors)
+[![users](https://img.shields.io/endpoint?url=https%3A%2F%2Fbaldphone.com%2Fdb_db%2Fbadges%2Fget_badge.php)](https://baldphone.com/stats/)
+[![Website](https://img.shields.io/website?down_color=red&down_message=down&up_color=green&up_message=online&url=http%3A%2F%2Fbaldphone.com)](http://baldphone.com) 
 [![Discord](https://img.shields.io/discord/633644055779213362?label=Chat%20%28Discord%29)](https://discord.gg/K4XTNWN) 
 [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue)](https://t.me/BaldPhone) 
-[![F-Droid](https://img.shields.io/f-droid/v/com.bald.uriah.baldphone)](https://f-droid.org/packages/com.bald.uriah.baldphone/) 
-[![Website](https://img.shields.io/website?down_color=red&down_message=down&up_color=green&up_message=online&url=http%3A%2F%2Fbaldphone.com)](http://baldphone.com) 
 [![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/baldphone?color=orange)](https://reddit.com/r/baldphone) 
-[![GitHub commits since latest release](https://img.shields.io/github/commits-since/UriahShaulMandel/BaldPhone/latest)](https://github.com/UriahShaulMandel/BaldPhone/releases/tag/latest) 
-[![GitHub contributors](https://img.shields.io/github/contributors-anon/UriahShaulMandel/BaldPhone)](https://github.com/UriahShaulMandel/BaldPhone/graphs/contributors)
 
 A platform which replaces the phone's interface to a bigger, simpler and friendlier one.
  
@@ -22,10 +20,14 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 * [Contributing](CONTRIBUTING.md)
 
 ## Full Version
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/UriahShaulMandel/BaldPhone?label=latest%20version&sort=semver)](https://github.com/UriahShaulMandel/BaldPhone/releases)
+[![F-Droid](https://img.shields.io/f-droid/v/com.bald.uriah.baldphone)](https://f-droid.org/packages/com.bald.uriah.baldphone/)
+
 [<img src="logo/direct_apk_download_v2.png?raw=true" alt="Direct APK Download" height="80">](http://bit.ly/BALDPHONE)
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/com.bald.uriah.baldphone)
 
-* Note: Direct APK version has a built in update check/download mechanism, Fdroid version checks/updates through the F-Droid app.
+* Direct APK version has a built in update check/download mechanism, 
+* Fdroid version checks/updates through the F-Droid app.
 * [Beta apk](https://github.com/UriahShaulMandel/BaldPhoneCompanion/raw/master/apks/master/tmp_apk.apk) (latest build **for testing purposes**)
 
 ## Second Version
