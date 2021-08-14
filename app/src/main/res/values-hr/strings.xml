@@ -38,7 +38,7 @@
     <string name="add_pill">Dodaj Pilulu</string>
     <string name="add_shortcut">Dodaj Prečac</string>
     <string name="add_to_favorite">Dodaj u Favorite</string>
-    <string name="add_to_home">Dodaj u Dom</string>
+    <string name="add_to_home">Dodaj na Početni</string>
     <string name="add_to_sos">Dodaj u SOS</string>
     <string name="address">Adresa</string>
     <string name="advanced_options">Napredne Postavke</string>
@@ -52,17 +52,17 @@
     <string name="alarms_repeats_every">Ponavljanje Alarma</string>
     <string name="all_alarms">Svi Alarmi</string>
     <string name="allow">Dopusti</string>
-    <string name="already_setted">Već Postavljeno!\nKliknite ovdje za promjenu na trnutno</string>
+    <string name="already_setted">Već Postavljeno!\nKliknite ovdje za promjenu tipkovnice</string>
     <string name="an_error_has_occurred">Dogodila se Pogreška!</string>
-    <string name="and_welcome_to_baldphone">dobrodošli u Baldphone</string>
+    <string name="and_welcome_to_baldphone">Dobrodošli u BaldPhone</string>
 
     <string name="apps">Apps</string>
-    <string name="are_you_sure_you_want_to_delete___">Jeste li Sigurni da Želite izbrisati %s?</string>
+    <string name="are_you_sure_you_want_to_delete___">Jeste li sigurni da želite izbrisati %s?</string>
     <string name="assistant">Asistent</string>
     <string name="at_least_one_day_must_be_selected">Najmanje jedna stavka mora biti označena!</string>
     <string name="auto_brightness">Prilagodljiva\nSvjetlina</string>
     <string name="backspace">Natrag</string>
-    <string name="baldphone_bla_allow_permission">Molim Dopustite Sljedeće Dozvole:</string>
+    <string name="baldphone_bla_allow_permission">Molim dopustite Sljedeće Dozvole:</string>
     <string name="blocked">Blokirano</string>
     <string name="bluetooth">Bluetooth</string>
     <string name="brightness">Svjetlina</string>
@@ -74,10 +74,10 @@
     <string name="call_log">Popis poziva:</string>
     <string name="call_subtext">Ova Dozvola je potrebna za pozivanje kontakata.</string>
     <string name="camera">Kamera</string>
-    <string name="camera_subtext">Ova Dozvola je potrebna za korištenje svjetiljke.</string>
+    <string name="camera_subtext">Ova Dozvola je potrebna za korištenje svjetiljke</string>
     <string name="cancel">Poništi</string>
     <string name="change_pills_time">Promijeni termin doziranja pilula</string>
-    <string name="change_system_settings_subtext">Molim dopustite aplikaciji BaldPhone na korištenje postavki, poput promjene veličine teksta i razinu svjetline zaslona.
+    <string name="change_system_settings_subtext">Molim dopustite aplikaciji  na korištenje postavki, poput promjene veličine teksta i razinu svjetline zaslona.
     </string>
     <string name="choose_friday">Pet</string>
     <string name="choose_monday">Pon</string>
@@ -104,7 +104,7 @@
     <string name="current_time">Trenutno Vrijeme</string>
     <string name="custom">Prilagođeno</string>
     <string name="dark">Tamno</string>
-    <string name="delete">Iubriši</string>
+    <string name="delete">Izbriši</string>
     <string name="delete___">Izbrisati %s?</string>
     <string name="delete_all_alarms">Izbriši sve alarme</string>
     <string name="dialer">Brojčanik</string>
@@ -113,14 +113,14 @@
     <string name="down">Dolje</string>
     <string name="edit">Uredi</string>
     <string name="email">Email:</string>
-    <string name="enable_notification_access">Omogući Pristup obavijestima</string>
-    <string name="enable_notification_access_subtext">Molim dopustite aplikaciji BaldPhone pristup obavijestima.</string>
+    <string name="enable_notification_access">Pristup obavijestima</string>
+    <string name="enable_notification_access_subtext">Molim dopustite aplikaciji BaldPhone pristup obavijestima</string>
     <string name="enter">Potvrdi</string>
     <string name="enter_contact_or_phone_number">Unesi ime kontakta:</string>
     <string name="evening">Večer</string>
     <string name="example_of_different_text_sizes">Primjer različitih veličina teksta\nTrebao bi biti čitljiv i bez prelijevanja teksta.
     </string>
-    <string name="external_storage_subtext">Ova Dozvola je potrebna za spremanje slika.</string>
+    <string name="external_storage_subtext">Ova Dozvola je potrebna za spremanje slika</string>
     <string name="feedback">Pošalji Povratne Informacije</string>
     <string name="feedback_cannot_be_empty">Povratne Informacije ne mogu biti prazne!</string>
     <string name="feedback_sent_successfully">Povratna Informacija uspješno poslana!</string>
@@ -138,7 +138,7 @@
     <string name="huge">Ogromno</string>
     <string name="internet">Internet</string>
     <string name="invoked_in">Prizvan u:</string>
-    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Posljednja stvar:\nUvelike se preporučuje da koristite BaldPhone pokretač kao zadani pokretač.
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Posljednja stvar:\nJako se preporučuje da koristite BaldPhone pokretač kao zadani pokretač.
     </string>
     <string name="language">jezik</string>
     <string name="language_settings">Jezik</string>
@@ -147,7 +147,7 @@
     <string name="light">Svjetlo</string>
     <string name="location">Lokacija</string>
     <string name="emergency_services">Hitne Službe</string>
-    <string name="mail">E Pošta</string>
+    <string name="mail">E-Pošta</string>
     <string name="maps">Karte</string>
 
 
@@ -161,11 +161,11 @@
 
     <string name="mobile_phone_number">Broj mobilnog telefona</string>
     <string name="monday">Ponedjeljak</string>
-    <string name="more">više</string>
-    <string name="morning">jutro</string>
+    <string name="more">Više</string>
+    <string name="morning">Jutro</string>
     <string name="name">Ime</string>
     <string name="named__">Imenovano</string>
-    <string name="new_alarm___was_created">novi alarm %s je stvoren!</string>
+    <string name="new_alarm___was_created">Novi alarm %s je stvoren!</string>
     <string name="nfc">NFC</string>
     <string name="no">Ne</string>
     <string name="notes">Bilješke</string>
@@ -197,10 +197,10 @@
     <string name="timer">Kronometar</string>
     <string name="read_call_log">Čitaj Popis Poziva</string>
     <string name="read_call_log_subtext">Ova Dozvola je potrebna za pregled povijesti poziva.</string>
-    <string name="read_contacts">Read contacts</string>
+    <string name="read_contacts">Čitanje kontakata</string>
     <string name="received">Dolazno</string>
-    <string name="recent">Nedavno</string>
-    <string name="regular_level">Srednja razina</string>
+    <string name="recent">Popis poziva</string>
+    <string name="regular_level">Regularna razina</string>
 
     <string name="remove_from_favorite">Ukloni iz Favorita</string>
     <string name="remove_from_home">Ukloni sa Početnog Zaslona</string>
@@ -216,20 +216,20 @@
     <string name="set_default_dialer">Postavi Zadanu Aplikaciju za Pozive</string>
     <string name="set_default_dialer_subtext">BaldPhone treba biti odabran kao zadana aplikacija za uspostavu poziva.</string>
     <string name="set_home_screen">Postavi Početni Zaslon</string>
-    <string name="set_home_screen_subtext">Ukoliko želite koristiti BaldPhone, trebali biste ga postaviti kao početni zaslon/pokretač.\nTo je reverzibilno i može se promijeniti u postavkama uređaja.
+    <string name="set_home_screen_subtext">Ukoliko želite koristiti BaldPhone, trebali biste ga postaviti kao početni zaslon/pokretač.\nOva postavka je reverzibilna i može se promijeniti u postavkama uređaja.
     </string>
     <string name="set_keyboard">Postavi Tipkovnicu</string>
-    <string name="setting_does_not_exist">Postavka ne Postoji</string>
+    <string name="setting_does_not_exist">Postavka ne postoji</string>
     <string name="settings">Postavke</string>
     <string name="settings_permission">Dozvole postavki</string>
     <string name="share">Dijeli</string>
-    <string name="share_actual_text">Bok, ja koristim aplikaciju "BaldPhone" koja zamjenjuje izgled uređaja u veliko, jednostavno i prijateljsko sučelje.\nUkoliko ste zainteresirani, možete ga preuzeti besplatno na web stranici besplatno!\nKliknite na link za više informacija:\n\nhttps://sites.google.com/view/baldphone
+    <string name="share_actual_text">Bok, ja koristim aplikaciju "BaldPhone" koja zamjenjuje izgled uređaja u veliko, jednostavno i prijateljsko sučelje.\nUkoliko ste zainteresirani, možete ga preuzeti na web stranici besplatno!\nKliknite na link za više informacija:\n\nhttps://sites.google.com/view/baldphone
     </string>
     <string name="share_bald_phone_subtext">Hej, poznajete li nekoga tko bi želio koristiti aplikaciju BaldPhone?\nMožete ju podijeliti s njima!</string>
     <string name="share_baldphone">Dijeli BaldPhone</string>
     <string name="share_contact">Podijeli Kontakt</string>
-    <string name="share_differently">Podijeli sa Drugom Aplikacijom</string>
-    <string name="share_via_whatsapp">Podijeli Putem Whatsapp-a</string>
+    <string name="share_differently">Podijeli sa drugom aplikacijom</string>
+    <string name="share_via_whatsapp">Podijeli putem Whatsapp-a</string>
     <string name="shift">shift</string>
     <string name="show">Prikaži</string>
     <string name="small">Malo</string>
@@ -266,8 +266,8 @@
     <string name="voice_mail">Glasovna Pošta</string>
     <string name="wednesday">Srijeda</string>
     <string name="whatsapp">Whatsapp</string>
-    <string name="wifi">Wifi</string>
-    <string name="will_repeat_only_once">ponoviti će se samo jednom!</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="will_repeat_only_once">Ponoviti će se samo jednom!</string>
     <string name="write">Pišite</string>
     <string name="write_contacts">Pisanje Kontakata</string>
     <string name="write_external_storage">Pisanje u vanjskoj pohrani</string>
@@ -275,9 +275,9 @@
     <string name="yesterday">Jučer</string>
     <string name="nothing">Ništa</string>
     <string name="no_contacts_found">Nije pronađen nijedan kontakt!</string>
-    <string name="no_alarms">Nema Alarma\nDodajte klikom ba\n\"Dodaj Alarm\"\nIli\n\"Dodaj Mjerač Vremena\"</string>
+    <string name="no_alarms">Nema Alarma\nDodajte klikom na\n\"Dodaj Alarm\"\nIli\n\"Dodaj Mjerač Vremena\"</string>
     <string name="no_pills">Nema Pilula\nDodajte klikom na\n\"Dodaj Pilulu\"</string>
-    <string name="clear_all_notifications">Očisti Sve Obavijesti</string>
+    <string name="clear_all_notifications">Ukloni Sve Obavijesti</string>
     <string name="clear_cache_subtext">Jeste li sigurni da želiste izbrisati podatke predmemorije? Brisanjem privremenih datoteka može popraviti greške aplikacije BaldPhone, no briše i sve prečace stvorene na Početnom Zaslonu.</string>
     <string name="permissions_calm">Bok, BaldPhone mora imati slijedeće dozvole za pokretanje. Poneke mogu zvučati strašno no to je jedini način da BaldPhone zamijeni trenutno sučelje uređaja. Nikakvi podaci se ne sakupljaju na taj način niti se šteti Vama ili uređaju. Kliknite OK za odobravanje dozvola ili Ne za izlazak iz aplikacije BaldPhone.
     </string>
@@ -310,12 +310,12 @@
     <string name="download_progress">Napredak Preuzimanja</string>
     <string name="what_do_you_want_to_do_with___">Što želite napraviti sa %s?</string>
     <string name="crash_reports">Izvještaji o Pogreškama</string>
-    <string name="crash_reports_subtext">Izvještaji o pogreškama pomažu učiniti korištenje aplikacije BaldPhone besprijekornim\nKoriste se samo za ispravljanje pogrešaka i nikakve dodatne informacije osim najpotrebnijih nisu uzete.</string>
+    <string name="crash_reports_subtext">Izvještaji o pogreškama pomažu učiniti korištenje aplikacije BaldPhone besprijekornim.\nIzvještaji se koriste samo za ispravljanje pogrešaka i nikakve dodatne informacije osim najosnovnijih se ne prikupljaju.</string>
     <string name="custom_app">Prilagođena Aplikacija</string>
     <string name="custom_app_subtext">Odaberite prilagođenu aplikaciju za početni zaslon.</string>
     <string name="no_app_was_found">Podudarna aplikacija nije pronađena!</string>
     <string name="alarm">Alarm</string>
-    <string name="no_new_notifications">Nema Novih Obavijesti</string>
+    <string name="no_new_notifications">Nema novih obavijesti</string>
     <string name="sound">Zvuk</string>
     <string name="mute">Utišaj</string>
     <string name="vibrate">Vibracija</string>
@@ -357,12 +357,12 @@
     <string name="emergency_settings_subtext">Odaberite želite li Gumb za Hitnoće na Početnom Zaslonu.</string>
     <string name="private_number">Privatni Broj</string>
     <string name="swipe_left_or_right">Prijeđite prstom lijevo ili desno</string>
-    <string name="press_next_or_back_buton">Kliknite strelicu za dalje ili natrag</string>
+    <string name="press_next_or_back_buton">Kliknite strelicu za Dalje ili Natrag</string>
     <string name="click_delay">Duljina Klika</string>
     <string name="no_delay">Bez Odgode</string>
     <string name="scrolling">Pomicanje</string>
-    <string name="arrows">Strelice</string>
-    <string name="swipe">Prijeđite prstom</string>
+    <string name="arrows">Bočne strelice</string>
+    <string name="swipe">Prijelaz prstom</string>
     <string name="_long">Dugo</string>
     <string name="_short">Kratko</string>
     <string name="do_you_want_to_save_your_changes">Želite li spremiti promjene?</string>
@@ -371,7 +371,7 @@
     <string name="apps_sort_method">Metoda Sortiranja Aplikacija</string>
     <string name="apps_sort_method_subtext">Odaberite želite sortirati aplikacije u jednu rešetku ili da su sortirane u grupama bazirano na prvom slovu imena aplikacije</string>
     <string name="groups">Grupe</string>
-    <string name="one_grid">Jedna Rešetka</string>
+    <string name="one_grid">Rešetka</string>
     <string name="colorful">U više boja</string>
     <string name="colorful_subtext">Želite li učiniti da BaldPhone bude u više boja?</string>
     <string name="edit_home_screen">Uredi Početni Zaslon</string>
