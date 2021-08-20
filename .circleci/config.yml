@@ -25,6 +25,7 @@ jobs:
           wait-for-emulator: true
           verbose: true
           restore-gradle-cache-post-emulator-launch: false
+          
       - run:
             command: |
               circle-android wait-for-boot
