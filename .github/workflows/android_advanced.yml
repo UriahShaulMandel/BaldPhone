@@ -18,6 +18,13 @@ jobs:
       with:
         java-version: 1.8
 
+    - name: Install Android sdkmanager
+      run: |
+        wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS}.zip
+        sudo unzip -d $ANDROID_HOME android-sdk.zip > /dev/null
+    - name: Install required Android tools
+      run: |
+        echo "y" | sudo $ANDROID_HOME/tools/bin/sdkmanager "ndk;${ANDROID_NDK}" > /dev/null
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Create sdcard folder
