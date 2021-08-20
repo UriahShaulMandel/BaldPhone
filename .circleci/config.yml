@@ -1,0 +1,47 @@
+version: '2.1'
+orbs:
+  android: circleci/android@1.0.3
+jobs:
+  test:
+    executor:
+      name: android/android-machine
+      resource-class: medium
+    steps:
+      - checkout
+      - android/run-tests:
+          test-command: chmod +x gradlew
+      - android/run-tests:
+          test-command: mkdir -p ~/sdcard/
+      - android/run-tests:
+          test-command: mksdcard -l baldphonesdcard 128M ~/sdcard/sdcard.img
+      - android/create-avd:
+          avd-name: myavd
+          install: true
+          system-image: system-images;android-22;default;armeabi-v7a
+      - android/start-emulator:
+          avd-name: myavd
+          additional-args: -no-audio -no-window -camera-back none -camera-front none -no-boot-anim -sdcard ~/sdcard/sdcard.img -no-snapshot-save &
+          post-emulator-launch-assemble-command: echo created
+          wait-for-emulator: true
+          verbose: true
+          restore-gradle-cache-post-emulator-launch: false
+      - run:
+            command: |
+              circle-android wait-for-boot
+            name: Wait for the emulator to start
+      - android/run-tests:
+          test-command: adb shell settings put global window_animation_scale 0 & adb shell settings put global transition_animation_scale 0 & adb shell settings put global animator_duration_scale 0 & adb shell pm disable com.android.launcher 
+
+      - android/run-tests:
+          test-command: ./gradlew assemblebaldUpdatesDebug
+      
+      - android/run-tests:
+          test-command: ./gradlew installbaldUpdatesDebug
+
+      - android/run-tests:
+          test-command: adb shell settings put secure enabled_notification_listeners %nlisteners:com.bald.uriah.baldphone/com.bald.uriah.baldphone.services.NotificationListenerService & adb shell ime enable com.bald.uriah.baldphone/.keyboard.BaldInputMethodService & adb shell ime set com.bald.uriah.baldphone/.keyboard.BaldInputMethodService & adb shell input keyevent 82
+
+workflows:
+  test:
+    jobs:
+      - test
