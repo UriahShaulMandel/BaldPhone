@@ -22,13 +22,13 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Create sdcard folder
-      run: mkdir -p /home/travis/sdcard/
+      run: mkdir -p ~/sdcard/
     - name: Create actual sdcard
-      run: mksdcard -l baldphonesdcard 128M /home/travis/sdcard/sdcard.img
+      run: mksdcard -l baldphonesdcard 128M ~/sdcard/sdcard.img
     - name: Create AVD
       run: echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
     - name: Start AVD
-      run: emulator -avd test -no-audio -no-window -camera-back none -camera-front none -no-boot-anim -sdcard /home/travis/sdcard/sdcard.img -no-snapshot-save &
+      run: emulator -avd test -no-audio -no-window -camera-back none -camera-front none -no-boot-anim -sdcard ~/sdcard/sdcard.img -no-snapshot-save &
     - name: Wait for the emulator to boot up
       run: android-wait-for-emulator
     - name: Remove window animations
