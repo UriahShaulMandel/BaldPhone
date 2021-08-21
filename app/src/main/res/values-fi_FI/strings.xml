@@ -17,7 +17,7 @@
 <resources>
     <string name="about">Tietoja</string>
     <string name="about_subtext">Hei!\nNimeni on Uriah Shaul Mandel, ja olen tämän alustan kehittäjä.\n
-        Olen käyttänyt valtaosan \"aikuisikääni\" alustan tekemiseen ja julkaisen sen ilmeiseksi, kaikkien
+        Olen käyttänyt valtaosan \"aikuisikääni\" alustan tekemiseen ja julkaisen sen ilmaiseksi, kaikkien
         käyttöön.\nVoit mielihyvin ottaa minuun yhteyttä sähköpostilla:\nbaldphone.contact@gmail.com
     </string>
     <string name="accessibility_level">Esteettömyys-taso</string>
@@ -44,9 +44,9 @@
     <string name="advanced_options">Edistyneet asetukset</string>
     <string name="afternoon">Iltapäivä</string>
     <string name="airplane_mode">Lentokonetila</string>
-    <string name="alarm_name">Hälytys-nimi</string>
+    <string name="alarm_name">Nimeä Hälytys</string>
     <string name="alarm_volume">Hälytysvoimakkuus</string>
-    <string name="alarm_volume_subtext">Valitse hälytysvoimakkuus.\nAäni voimistuu vasemmalta oikealle</string>
+    <string name="alarm_volume_subtext">Valitse hälytysvoimakkuus.\nÄäni voimistuu vasemmalta oikealle</string>
     <string name="alarms">Hälytykset</string>
 
     <string name="alarms_repeats_every">Hälytys toistuu joka</string>
@@ -54,15 +54,15 @@
     <string name="allow">Salli</string>
     <string name="already_setted">Jo asetettu!\nNapsauta tätä vaihtaaksesi siihen</string>
     <string name="an_error_has_occurred">Tapahtui virhe</string>
-    <string name="and_welcome_to_baldphone">ja tervetuloa BaldPhoneen</string>
+    <string name="and_welcome_to_baldphone">Tervetuloa BaldPhoneen</string>
 
     <string name="apps">Sovellukset</string>
     <string name="are_you_sure_you_want_to_delete___">Oletko varma että haluat poistaa %s?</string>
     <string name="assistant">Avustaja</string>
     <string name="at_least_one_day_must_be_selected">Vähintään yksi päivä tulee valita</string>
     <string name="auto_brightness">Automaattinen kirkkaus</string>
-    <string name="backspace">askelpalautin</string>
-    <string name="baldphone_bla_allow_permission">Tarvitaan seuraavat oikeudet</string>
+    <string name="backspace">askel/npalautin</string>
+    <string name="baldphone_bla_allow_permission">Tarvitaan seuraavat luvat:</string>
     <string name="blocked">Estetty</string>
     <string name="bluetooth">Bluetooth</string>
     <string name="brightness">Kirkkaus</string>
@@ -98,10 +98,10 @@ ja muuttaa kirkkautta.</string>
     <string name="contact_must_has_name">Yhteystiedolla pitää olla nimi!</string>
     <string name="contact_not_created">Yhteystietoa ei luotu!</string>
     <string name="contacts">Kontaktit</string>
-    <string name="contacts_read_subtext">Tämä oikeus on tarpeen yhteystietojen lukemiseksi.</string>
-    <string name="contacts_subtext">Tämä oikeus on tarpeen uusien yhteystietojen luomiseksi.</string>
+    <string name="contacts_read_subtext">Tämä lupa on tarpeen yhteystietojen lukemiseksi.</string>
+    <string name="contacts_subtext">Tämä lupa on tarpeen uusien yhteystietojen luomiseksi.</string>
     <string name="crash">Hups! \nBaldPhone törmäsi ongelmaan ja käynnistyy nyt uudelleen.</string>
-    <string name="current_time">Tänhetkinen aika</string>
+    <string name="current_time">Tämänhetkinen aika</string>
     <string name="custom">Mukautettu</string>
     <string name="dark">Tumma</string>
     <string name="delete">Poista</string>
@@ -114,32 +114,32 @@ ja muuttaa kirkkautta.</string>
     <string name="edit">Muuta</string>
     <string name="email">Sähköposti:</string>
     <string name="enable_notification_access">Ota käyttöön ilmoitusten käyttö</string>
-    <string name="enable_notification_access_subtext">Anna BaldPhonelle käyttöoikeus ilmoituksiin.</string>
+    <string name="enable_notification_access_subtext">Anna BaldPhonelle käyttölupa ilmoituksiin.</string>
     <string name="enter">Syötä</string>
     <string name="enter_contact_or_phone_number">Syötä yhteyshenkilön nimi</string>
     <string name="evening">Ilta</string>
     <string name="example_of_different_text_sizes">Esimerkki eri tekstikoista\nPitäisi olla luettava ja ei
         ylivuotoa.
     </string>
-    <string name="external_storage_subtext">Tämä oikeus tarvitaan kuvien tallentamiseksi</string>
+    <string name="external_storage_subtext">Tämä lupa tarvitaan kuvien tallentamiseksi</string>
     <string name="feedback">Lähetä palautetta</string>
     <string name="feedback_cannot_be_empty">Palaute ei voi olla tyhjä!</string>
     <string name="feedback_sent_successfully">Palaute lähetetty onnistuneesti!</string>
-    <string name="first_please_select_how_you_want_to_interact_with_buttons">Valitse esteettömyystaso</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Valitse taso:/n esteettömyys</string>
     <string name="font_size">Kirjasinkoko</string>
     <string name="friday">Perjantai</string>
     <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Onko vaikeaa käyttää
-        puhelimen näppäimistöä? Käytä Baldphonen ISOA näppäimistöä!
+        puhelimen näppäimistöä? Käytä BaldPhonen ISOA näppäimistöä!
     </string>
     <string name="hello">Hei</string>
-    <string name="help">Video-ohje</string>
+    <string name="help">Video-ohjeet</string>
     <string name="hide">Piilota</string>
-    <string name="high_level">Korkeatasoinen</string>
+    <string name="high_level">Korkea taso</string>
     <string name="home_phone_number">Kotipuhelinnumero</string>
     <string name="hour">Tunti</string>
     <string name="huge">Valtava</string>
     <string name="internet">Internet</string>
-    <string name="invoked_in">Käynnistetty:</string>
+    <string name="invoked_in">Ajastin-ajan kesto:</string>
     <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Vielä yksi
         asia:\nOn suositeltavaa käyttää Baldphonen kotinäkymää oletuksena käynnistysnäkymänä
     </string>
@@ -149,18 +149,18 @@ ja muuttaa kirkkautta.</string>
     <string name="left_handed">Vasenkätinen</string>
     <string name="light">Kevyt</string>
     <string name="location">Sijainti</string>
-    <string name="emergency_services">Hätäpalvelut</string>
+    <string name="emergency_services">Hätäpalvelut, 112</string>
     <string name="mail">Posti</string>
     <string name="maps">Kartat</string>
 
 
-    <string name="medium">Keskitato</string>
+    <string name="medium">Keski</string>
     <string name="medium_level">Keskitaso</string>
     <string name="message">Viesti</string>
     <string name="messages">Viestit</string>
-    <string name="minute">Muistiinpano</string>
-    <string name="minutes">Muistiinpanot</string>
-    <string name="missed">Ohimennyt</string>
+    <string name="minute">Minuutti</string>
+    <string name="minutes">Minuuttia</string>
+    <string name="missed">Jo mennyt</string>
 
     <string name="mobile_phone_number">Matkapuhelinnumero</string>
     <string name="monday">Maanantai</string>
@@ -173,8 +173,8 @@ ja muuttaa kirkkautta.</string>
     <string name="no">Ei</string>
     <string name="notes">Muistio</string>
     <string name="notes_settings">Muistiot</string>
-    <string name="notes_settings_subtext">Valitse jos haluat Muistio-sivun kotinäytölle</string>
-    <string name="notifications">Huomautukset</string>
+    <string name="notes_settings_subtext">Valitse jos haluat Muistio-sivun kotinäytöille</string>
+    <string name="notifications">Ilmoitukset</string>
 
     <string name="of">/</string>
     <string name="off">Pois</string>
@@ -193,7 +193,7 @@ ja muuttaa kirkkautta.</string>
     <string name="phone">Puhelin</string>
     <string name="photo">Kuva</string>
     <string name="photos">Kuvat</string>
-    <string name="pill_added">Lääkitys lisätty!</string>
+    <string name="pill_added">Lääke lisätty!</string>
     <string name="pill_name">Lääkenimi</string>
     <string name="pills">Lääkkeet</string>
     <string name="press_longer">Paina pidempään!</string>
@@ -202,7 +202,7 @@ ja muuttaa kirkkautta.</string>
     <string name="read_call_log_subtext">Tämä lupa tarvitaan puheluhistorian tarkastelemiseen.</string>
     <string name="read_contacts">Lue yhteystiedot</string>
     <string name="received">Vastaanotettu</string>
-    <string name="recent">Viimeksi</string>
+    <string name="recent">Viime puhelut</string>
     <string name="regular_level">Tavallinen taso</string>
 
     <string name="remove_from_favorite">Poista suosikeista</string>
@@ -217,7 +217,7 @@ ja muuttaa kirkkautta.</string>
     <string name="save">Talleta</string>
     <string name="send">Lähetä</string>
     <string name="set_default_dialer">Aseta oletus-soittosovellus</string>
-    <string name="set_default_dialer_subtext">BaldPhone tarvitsee merkitä oletuspuhelusovellukseksi.</string>
+    <string name="set_default_dialer_subtext">BaldPhone tarvitsee merkitä oletus-puhelusovellukseksi.</string>
     <string name="set_home_screen">Aseta Koti-näyttö</string>
     <string name="set_home_screen_subtext">BaldPhonen käyttämiseksi sinun tulee asettaa se aloitusnäytöksi.\nSen voi
         vaihtaa takaisin pois käytöstä asetuksista.
@@ -234,7 +234,7 @@ ja muuttaa kirkkautta.</string>
     <string name="share_bald_phone_subtext">Hei, tiedätkö joitain, jotka ehkä haluavat tietää BaldPhonesta?\nSinä voit
         kertoa siitä heille!
     </string>
-    <string name="share_baldphone">Jaa BaldPhonea</string>
+    <string name="share_baldphone">Vinkkaa BaldPhone:sta</string>
     <string name="share_contact">Jaa yhteystieto</string>
     <string name="share_differently">Jaa toisen sovelluksen kautta</string>
     <string name="share_via_whatsapp">Jaa Whatsappissa</string>
@@ -242,14 +242,14 @@ ja muuttaa kirkkautta.</string>
     <string name="show">Näytä</string>
     <string name="small">Pieni</string>
     <string name="snooze">Torkku</string>
-    <string name="sos">SOS</string>
+    <string name="sos">SOS, Hätä</string>
     <string name="sos_is_full">SOS on täynnä</string>
     <string name="sos_is_full_subtext">SOS on täynnä! Poista muita SOS-yhteystietoja ennen uuden lisäämistä</string>
     <string name="speak">Puhu</string>
     <string name="speech_to_text">Puhe tekstiksi</string>
     <string name="strong_hand">Kätisyys</string>
     <string name="strong_hand_subtext">Valitse kätisyytesi käyttöliittymän säätämiseksi.</string>
-    <string name="submit">lähetä</string>
+    <string name="submit">Lisää</string>
     <string name="sunday">Sunnuntai</string>
     <string name="technical_information">Tekninen informaatio</string>
     <string name="theme_settings">Teema</string>
@@ -257,7 +257,7 @@ ja muuttaa kirkkautta.</string>
 
     <string name="thursday">Torstai</string>
     <string name="time_changer">Lääkitysajan vaihtaja</string>
-    <string name="tiny">Pikkanen</string>
+    <string name="tiny">Pikkuinen</string>
     <string name="to___days_and___hours_from_now"> %d päivää ja %d tuntia tästä alkaen</string>
     <string name="to___hours_and___minutes_from_now"> %d tuntia ja %d minuuttia tästä alkaen</string>
     <string name="to___minuets_from_now"> %d minuuttia tästä alkaen</string>
@@ -276,7 +276,7 @@ ja muuttaa kirkkautta.</string>
     <string name="whatsapp">WhatsApp</string>
     <string name="wifi">Wi-Fi</string>
     <string name="will_repeat_only_once">toistaa vain kerran!</string>
-    <string name="write">Tallenna</string>
+    <string name="write">Kirjoita</string>
     <string name="write_contacts">Tallenna Yhteystiedot</string>
     <string name="write_external_storage">Tallenna ulkoiseen muistiin</string>
     <string name="yes">Kyllä</string>
@@ -284,12 +284,12 @@ ja muuttaa kirkkautta.</string>
     <string name="nothing">Ei mitään</string>
     <string name="no_contacts_found">Yhteystietoja ei löydy!</string>
     <string name="no_alarms">Ei hälytyksiä\nLuo uusi painamalla\n\"Lisää hälytys\"\ntai\n\"Lisää ajastin\"</string>
-    <string name="no_pills">Ei lääkityksiä\nLisää uusi painamalla\n\"Lisää lääkitys\"</string>
-    <string name="clear_all_notifications">Poista kaikki muistutukset</string>
+    <string name="no_pills">Ei lääkityksiä\nLisää uusi painamalla\n\"Lisää lääke\"</string>
+    <string name="clear_all_notifications">Poista kaikki ilmoitukset</string>
     <string name="clear_cache_subtext">Haluatko varmasti poistaa välimuistin sisällön? Väliaikaistiedostojen poistaminen voi ratkaista joitain BaldPhone-sovelluksen toimintahäiriöitä, mutta myös aloitusnäytölle luodut pikakuvakkeet poistetaan.</string>
-    <string name="permissions_calm">Hei, BaldPhone tarvitsee seuraavat oikeudet toimiakseen. Osa voi kuulostaa
+    <string name="permissions_calm">Hei, BaldPhone tarvitsee seuraavat luvat toimiakseen. Osa voi kuulostaa
         pelottavalta, mutta vain niin BaldPhone voi korvata käyttöliittymän. Tietoja ei oteta eikä se aiheuta haittaa
-        Paina OK antaaksesi oikeudet tai Ei poistuaksesi BaldPhonesta.
+        Paina OK antaaksesi luvat tai Ei poistuaksesi BaldPhonesta.
     </string>
     <string name="pending_update">Odottava päivitys</string>
     <string name="download">Lataa</string>
@@ -324,7 +324,7 @@ ja muuttaa kirkkautta.</string>
     <string name="what_do_you_want_to_do_with___">Mitä haluat tehdä: %s?</string>
     <string name="crash_reports">Kaatumisraportit</string>
     <string name="crash_reports_subtext">Kaatumisraporteilla parannetaan BaldPhonen käyttöä sujuvaksi\nNiitä käytetään vain
-        virhekorjaukseen ja vain virheen korjaamiseen välttämättömiä tietoja otetaan
+        virhekorjaukseen ja vain virheen korjaamiseen välttämättömiä tietoja käytetään
     </string>
     <string name="custom_app">Mukautettu sovellus</string>
     <string name="custom_app_subtext">Valitse mukautettu sovellus aloitusnäytölle.</string>
@@ -355,29 +355,29 @@ ja muuttaa kirkkautta.</string>
     <string name="go">Mene</string>
 
 
-    <string name="dialer_sounds">Soittajan äänet</string>
-    <string name="dialer_sounds_subtext">Valitse, haluatko käyttää Soittajan ääniä.</string>
+    <string name="dialer_sounds">Soiton äänet</string>
+    <string name="dialer_sounds_subtext">Valitse, haluatko käyttää soittoääniä.</string>
     <string name="low_battery_alert">Akku vähissä hälytys</string>
     <string name="low_battery_alert_subtext">Valitse, haluatko tilarivin olevan punainen aloitusnäytössä, kun akun varaus on alle 20%\nHuomaa, Sitä ei näytetä, jos järjestelmän tilarivi on piilotettu.</string>
 
-    <string name="also_available_at">Myös saatavilla\nbaldphone.contact@gmail.com\nPalaute oltava englanniksi / hepreaksi!</string>
-    <string name="grant_all_permissions">Myönnä kaikki käyttöoikeudet</string>
+    <string name="also_available_at">Myös tavoitettavissa:\nbaldphone.contact@gmail.com\nPalaute oltava englanniksi / hepreaksi!</string>
+    <string name="grant_all_permissions">Myönnä kaikki käyttöluvat</string>
 
 
     <!--For Tests:-->
     <string name="medication_1">Eltroxin 100</string>
     <string name="medication_2">Eltroxin 150</string>
     <string name="donate">Lahjoita</string>
-    <string name="emergency_button">Hätäpainike</string>
-    <string name="emergency_settings_subtext">Valitse, haluatko hätäpainikkeen aloitusnäytölle.</string>
+    <string name="emergency_button">Hätäpainike, SOS</string>
+    <string name="emergency_settings_subtext">Valitse, haluatko Hätä-painikkeen aloitusnäytölle.</string>
     <string name="private_number">Yksityinen numero</string>
-    <string name="swipe_left_or_right">Pyyhkäise vasemmalle tai oikealle</string>
+    <string name="swipe_left_or_right">Sipaise vasemmalle tai oikealle</string>
     <string name="press_next_or_back_buton">Paina seuraava / takaisin nuolta</string>
     <string name="click_delay">Napsautusviive</string>
     <string name="no_delay">Ei viivettä</string>
     <string name="scrolling">Vieritys</string>
     <string name="arrows">Nuolet</string>
-    <string name="swipe">Pyyhkäie</string>
+    <string name="swipe">Sipaisu</string>
     <string name="_long">Pitkä</string>
     <string name="_short">Lyhyt</string>
     <string name="do_you_want_to_save_your_changes">Haluatko tallentaa muutokset?</string>
@@ -391,16 +391,16 @@ ja muuttaa kirkkautta.</string>
     <string name="colorful_subtext">Haluatko tehdä BaldPhonen värikkäämmäksi?</string>
     <string name="edit_home_screen">Muokkaa aloitusnäyttöä</string>
     <string name="dual_sim">Kaksois-SIM</string>
-    <string name="dual_sim_subtext">Valitse, kuinka haluat hallita kaksois-SIM:ä\nHuomaa: Jos valitset Näytä vaihtoehdot, sinun on annettava uusi käyttöoikeus</string>
+    <string name="dual_sim_subtext">Valitse, kuinka haluat hallita kaksois-SIM:ä\nHuomaa: Jos valitset Näytä valinnat, sinun on annettava uusi käyttöoikeus</string>
     <string name="use_default">Käytä oletusta</string>
     <string name="show_options">Näytä valinnat</string>
     <string name="read_phone_state">Lue puhelimen tila</string>
     <string name="read_phone_state_subtext">Tämä lupa tarvitaan, jotta toisella SIM:llä voi soittaa</string>
     <string name="choose_sim">Valitse SIM-kortti</string>
     <string name="choose_sim_subtext">Valitse SIM, jolla haluat soittaa puhelun</string>
-    <string name="website">Verkkosivusto</string>
+    <string name="website">Internet-sivusto</string>
     <string name="appear_on_top">Näkyy ylhäällä</string>
-    <string name="appear_on_top_subtext">Tätä lupaa tarvitaan uudelle Android-versiolle, jotta hälytykset ja muistutukset voidaan näyttää, kun näyttö on suljettu</string>
+    <string name="appear_on_top_subtext">Tämä lupa tarvitaan uudelle Android-versiolle, jotta hälytykset ja muistutukset voidaan näyttää, kun näyttö on suljettu</string>
 
 
     <string-array name="names_for_screenshots">
