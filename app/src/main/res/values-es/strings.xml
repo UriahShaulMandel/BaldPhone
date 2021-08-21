@@ -17,9 +17,7 @@
 <resources>
     <string name="about">Acerca de</string>
     <string name="about_subtext">
-        ¡Hola, buenos días!\n
-        Me llamo Uriah Shaul Mandel y soy el desarrollador de esta plataforma. He pasado la mayor parte de mi vida «adulta» desarrollando esta plataforma, y la he lanzado gratis para beneficio de todos. Si tienes alguna duda o sugerencia he aquí mi correo electrónico:\n
-        baldphone.contact@gmail.com (si me escribes, mejor en inglés)
+Hola. Me llamo Uriah Shaul Mandel y soy el desarrollador de esta plataforma. He pasado la la parte de mi juventud escribiendo este programa, y lo he lanzado gratis para beneficio de todos. Si tienes alguna duda o sugerencia he aquí mi correo electrónico: baldphone.contact@gmail.com (si me escribes, mejor en inglés)
     </string>
     <string name="accessibility_level">Nivel de accesibilidad</string>
     <string name="accessibility_settings">Accesibilidad</string>
@@ -43,7 +41,7 @@
     <string name="advanced_options">Opciones avanzadas</string>
     <string name="afternoon">Por la tarde</string>
     <string name="airplane_mode">Modo avión</string>
-    <string name="alarm_name">Nombre de alarma</string>
+    <string name="alarm_name">Toca para ponerle nombre</string>
     <string name="alarm_volume">Volumen de alarma</string>
     <string name="alarm_volume_subtext">Elige un nivel de volumen para las alarmas. Cuanto más a la derecha, más alto se oirá.</string>
     <string name="alarms">Alarmas</string>
@@ -65,7 +63,7 @@
     <string name="blocked">Bloqueado</string>
     <string name="bluetooth">Bluetooth</string>
     <string name="brightness">Brillo</string>
-    <string name="brightness_subtext">Cambiar brillo.</string>
+    <string name="brightness_subtext">Mueve la barra para cambiar el brillo.</string>
     <string name="cache_cleared_successfully">Se ha vaciado la memoria caché correctamente.</string>
     <string name="call">Llamar</string>
     <string name="calling">Llamadas telefónicas</string>
@@ -120,7 +118,7 @@
     <string name="example_of_different_text_sizes">Ejemplo de diferentes tamaños de texto\n
         Las letras deben ser legibles y no salirse.
     </string>
-    <string name="external_storage_subtext">Este permiso es necesario para guardar Fotos.</string>
+    <string name="external_storage_subtext">Este permiso es necesario para poder guardar fotos.</string>
     <string name="feedback">Enviar comentarios y opiniones</string>
     <string name="feedback_cannot_be_empty">Para enviar comentarios primero hay que escribir algo.</string>
     <string name="feedback_sent_successfully">El comentario se ha enviado correctamente.</string>
@@ -158,7 +156,7 @@
     <string name="minutes">Minutos</string>
     <string name="missed">Perdida</string>
 
-    <string name="mobile_phone_number">Número de teléfono movil</string>
+    <string name="mobile_phone_number">Número de teléfono móvil</string>
     <string name="monday">lunes</string>
     <string name="more">más</string>
     <string name="morning">Por la mañana</string>
@@ -190,7 +188,7 @@
     <string name="photo">Foto</string>
     <string name="photos">Fotos</string>
     <string name="pill_added">La pastilla se ha añadido correctamente.</string>
-    <string name="pill_name">Nombre de la pastilla</string>
+    <string name="pill_name">Toca para ponerle nombre</string>
     <string name="pills">Pastillas</string>
     <string name="press_longer">Mantén pulsado el botón un poco más...</string>
     <string name="timer">Temporizador</string>
@@ -220,9 +218,9 @@
     <string name="set_keyboard">Configurar teclado principal</string>
     <string name="setting_does_not_exist">El ajuste no existe</string>
     <string name="settings">Ajustes</string>
-    <string name="settings_permission">Permisos concedidos</string>
+    <string name="settings_permission">Configurar ajustes del sistema</string>
     <string name="share">Compartir</string>
-    <string name="share_actual_text">Hola, estoy usando esta plataforma llamada «BaldPhone» que reemplaza la interfaz del teléfono por otra que es más clara, grande, concisa y fácil de usar. ¿Te parece interesante? Pues puedes descargarla gratis. Haz clic en este enlace para entrar en la página Web: https://sites.google.com/view/baldphone</string>
+    <string name="share_actual_text">Hola, he estado probando una aplicación de Android llamada «BaldPhone» que reemplaza la interfaz del teléfono por otra que es más clara, grande, concisa y fácil de usar. ¿Te parece interesante? Pues puedes descargarla gratis. Haz clic en este enlace para ver la página Web: https://sites.google.com/view/baldphone</string>
     <string name="share_bald_phone_subtext">Oye, ¿conoces a alguien al que le pueda venir bien usar BaldPhone?\n
         Si quieres puedes recomendarles la aplicación.
     </string>
@@ -280,8 +278,7 @@
     <string name="clear_all_notifications">Quitar todas las notificaciones</string>
     <string name="clear_cache_subtext">¿Seguro que quieres borrar del todo la memoria caché de BaldPhone? Puede que borrar los archivos temporales solucione algunos problemas, pero los enlaces directos de la pantalla de inicio también desaparecerán.
     </string>
-    <string name="permissions_calm">
-		Hola, BaldPhone debe tener los siguientes permisos para ejecutarse. Algunos pueden parecer demasiado, pero es la única forma de que BaldPhone pueda reemplazar la interfaz del teléfono.
+    <string name="permissions_calm">		Hola, BaldPhone debe tener los siguientes permisos para ejecutarse. Algunos pueden parecer demasiado, pero es la única forma de que BaldPhone pueda reemplazar la interfaz del teléfono.
 		BaldPhone no hará nada raro con tus datos personales ni dañará tu teléfono.
 		Presiona el botón de «Aceptar» para otorgar los permisos o «No» para salir de BaldPhone.
     </string>
