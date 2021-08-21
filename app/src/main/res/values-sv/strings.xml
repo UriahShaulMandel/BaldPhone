@@ -384,6 +384,17 @@
     <string name="colorful">Färgglad</string>
     <string name="colorful_subtext">Vill du att BaldPhone ska visas med fler färger?</string>
     <string name="edit_home_screen">Anpassa Hemskärmen</string>
+    <string name="dual_sim">Dubbel SIM</string>
+    <string name="dual_sim_subtext">Välj hur du vill hantera dubbel SIM\nObs! Om du väljer Visa alternativ måste du tillåta annan rättighet</string>
+    <string name="use_default">Använd standard</string>
+    <string name="show_options">Visa alternativ</string>
+    <string name="read_phone_state">Läs telefonens tillstånd</string>
+    <string name="read_phone_state_subtext">Den här rättighet krävs för att kunna ringa från den andra SIM</string>
+    <string name="choose_sim">Välj SIM</string>
+    <string name="choose_sim_subtext">Välj den SIM du vill ringa från</string>
+    <string name="website">Webbplats</string>
+    <string name="appear_on_top">Visas på toppen</string>
+    <string name="appear_on_top_subtext">Den här rättighet krävs för ny version av Android för att visa larm och påminnelser när skärmen är stängd</string>
 
 
     <string-array name="names_for_screenshots">
