@@ -335,6 +335,8 @@
     <string name="choose_language_for_keyboard">ენის არჩევა</string>
     <string name="hebrew">ებრაული</string>
     <string name="go">მიდი</string>
+
+
     <string name="dialer_sounds">ნომრების ამკრეფი-</string>
     <string name="dialer_sounds_subtext">აირჩიეთ თუ გსურთ გქონდეთ ნომრების  ამკრეფის ხმად.</string>
     <string name="low_battery_alert">გაფრთხილება ტელეფონის ელემენტის დაბალი დონის შესახებ</string>
@@ -379,8 +381,6 @@
     <string name="choose_sim">აირჩიეთ სიმ ბარათი</string>
     <string name="choose_sim_subtext">აირჩიეთ სიმ ბარათი,რომლიდანაც გსურთ დარეკვა</string>
     <string name="website">ვებსაიტი</string>
-
-
     <string-array name="names_for_screenshots">
         <item>რიჩარდ მეთიუ სტოლმანი</item>
         <item>ლინუს ტორვალდსი</item>
@@ -393,5 +393,3 @@
     <bool name="is_right_to_left">false</bool>
 
 </resources>
-
-
