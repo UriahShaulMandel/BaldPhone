@@ -385,8 +385,6 @@
     <string name="read_phone_state_subtext">Diese Erlaubnis wird benötigt, um die zweite SIM-Karte zum Telefonieren zu nutzen</string>
     <string name="choose_sim">Wähle SIM-Karte</string>
     <string name="choose_sim_subtext">Wähle die SIM-Karte, welche du zum Telefonieren verwenden möchtest</string>
-
-
     <string-array name="names_for_screenshots">
         <item>Bismarck</item>
         <item>Bach</item>
