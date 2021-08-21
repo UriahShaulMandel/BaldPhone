@@ -9,7 +9,9 @@ But if you have any problems with it, the old method will work just as fine
 ## Fixing\changing existing translations
  1. Go to your desired language file: 
     - [Brazilian Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt-rBR/strings.xml) translated by [Kellyson Antunes](https://github.com/kellysonantunes)
+    Ivaylo Dimitrov
     - [Chinese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-zh/strings.xml) translated by [thomassth](https://github.com/thomassth)
+    - [Bulgarian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-bg/strings.xml) translated by Ivaylo Dimitrov    
     - [Czech](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-cs/strings.xml) translated by Tadeáš Horák
     - [Danish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-da/strings.xml) (not finished yet) translated by ["a happy user"](https://github.com/DBC-226)
     - [Dutch](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-nl/strings.xml) translated by Floor van den Heuvel
@@ -26,7 +28,7 @@ But if you have any problems with it, the old method will work just as fine
     - [Romanian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ro/strings.xml) translated by Tibz Leet
     - [Russian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ru/strings.xml) translated by [Vintic](https://github.com/Vintic)
     - [Slovenian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-sl/strings.xml) translated by Klemen Skerbiš
-    - [Spanish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-es/strings.xml) translated by [Victor Arribas](https://github.com/varhub)
+    - [Spanish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-es/strings.xml) translated by [Victor Arribas](https://github.com/varhub) and Ismael Ferreras Morezuelas (Swyter)
     - [Swedish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-sv/strings.xml) translated by [Patrik Bogren](https://github.com/mmFooD)
     - [Turkish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-tr/strings.xml) (not finished yet) translated by Samii571
  2. Click "edit this file" 
@@ -39,6 +41,7 @@ But if you have any problems with it, the old method will work just as fine
  1. Go to an existing language file: 
     - [Brazilian Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-pt-rBR/strings.xml) translated by [Kellyson Antunes](https://github.com/kellysonantunes)
     - [Chinese](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-zh/strings.xml) translated by [thomassth](https://github.com/thomassth)
+    - [Bulgarian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-bg/strings.xml) translated by Ivaylo Dimitrov
     - [Czech](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-cs/strings.xml) translated by Tadeáš Horák
     - [Danish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-da/strings.xml) (not finished yet) translated by ["a happy user"](https://github.com/DBC-226)
     - [Dutch](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-nl/strings.xml) translated by Floor van den Heuvel
@@ -55,7 +58,7 @@ But if you have any problems with it, the old method will work just as fine
     - [Romanian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ro/strings.xml) translated by Tibz Leet
     - [Russian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-ru/strings.xml) translated by [Vintic](https://github.com/Vintic)
     - [Slovenian](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-sl/strings.xml) translated by Klemen Skerbiš
-    - [Spanish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-es/strings.xml) translated by [Victor Arribas](https://github.com/varhub)
+    - [Spanish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-es/strings.xml) translated by [Victor Arribas](https://github.com/varhub) and Ismael Ferreras Morezuelas (Swyter)
     - [Swedish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-sv/strings.xml) translated by [Patrik Bogren](https://github.com/mmFooD)
     - [Turkish](https://github.com/UriahShaulMandel/BaldPhone/blob/master/app/src/main/res/values-tr/strings.xml) (not finished yet) translated by Samii571
  2. Click "Raw" and copy the text to your text editor (Notepad++ is great for this specific task) 
