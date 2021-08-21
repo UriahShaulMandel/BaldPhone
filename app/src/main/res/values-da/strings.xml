@@ -43,12 +43,14 @@
     <string name="alarm_volume">Lydstyrke for alarm</string>
     <string name="alarm_volume_subtext">Vælg lydstyrken for alarmer.\nLydstyrken øges fra venstre mod højre.</string>
     <string name="alarms">Alarmer</string>
+
     <string name="alarms_repeats_every">Alarmen gentages hver</string>
     <string name="all_alarms">Alle alarmer</string>
     <string name="allow">Tillad</string>
     <string name="already_setted">Er allerede indstillet!\nKlik her for at ændre til det</string>
     <string name="an_error_has_occurred">Der er sket en fejl!</string>
     <string name="and_welcome_to_baldphone">og velkommen til Baldphone</string>
+
     <string name="apps">Apps</string>
     <string name="are_you_sure_you_want_to_delete___">Er du sikker på, at du vil slette %s?</string>
     <string name="assistant">Assistent</string>
@@ -63,6 +65,7 @@
     <string name="cache_cleared_successfully">Midlertidig hukommelse blev ryddet op!</string>
     <string name="call">Opkald</string>
     <string name="calling">Ringer op</string>
+
     <string name="call_log">Opkaldsliste:</string>
     <string name="call_subtext">Denne rettighed er nødvendig for, at du kan ringe til dine kontakter.</string>
     <string name="camera">Kamera</string>
@@ -98,14 +101,14 @@
     <string name="delete">Slet</string>
     <string name="delete___">Slet %s?</string>
     <string name="delete_all_alarms">Slet alle alarmer</string>
-    <string name="dialer">Ring op</string> <!-- Tjek navn -->
+    <string name="dialer">Ring op</string>
     <string name="display_settings">Skærm</string>
     <string name="done">Færdig</string>
     <string name="down">Ned</string>
     <string name="edit">Ændr</string>
     <string name="email">Email:</string>
     <string name="enable_notification_access">Giv adgang til notifikationer</string>
-    <string name="enable_notification_access_subtext">Du er nødt til at give BaldPhone adgang til dine notifikationer.</string> <!-- Ensret formuleringer -->
+    <string name="enable_notification_access_subtext">Du er nødt til at give BaldPhone adgang til dine notifikationer.</string>
     <string name="enter">Indtast</string>
     <string name="enter_contact_or_phone_number">Indtast navn på kontakten:</string>
     <string name="evening">Aften</string>
@@ -134,16 +137,19 @@
     <string name="left_handed">Venstrehåndet</string>
     <string name="light">Let</string>
     <string name="location">Lokation</string>
-    <string name="emergency_services">Alarmcentralen</string> <!-- Tjek navn -->
+    <string name="emergency_services">Alarmcentralen</string>
     <string name="mail">Email</string>
-    <string name="maps">Kort</string> <!-- Or Google Maps? -->
+    <string name="maps">Kort</string>
+
+
     <string name="medium">Medium</string>
     <string name="medium_level">Mellem niveau</string>
     <string name="message">Besked</string>
     <string name="messages">Beskeder</string>
     <string name="minute">Minut</string>
     <string name="minutes">Minutter</string>
-    <string name="missed">Ubesvaret</string> <!-- Tjek navn -->
+    <string name="missed">Ubesvaret</string>
+
     <string name="mobile_phone_number">Mobiltelefonnummer</string>
     <string name="monday">Mandag</string>
     <string name="more">mere</string>
@@ -157,12 +163,17 @@
     <string name="notes_settings">Noter</string>
     <string name="notes_settings_subtext">Vælg om du vil have en dedikeret side på telefonens \"skrivebord\" til at tage noter.</string>
     <string name="notifications">Notifikationer</string>
+
     <string name="of">af</string>
     <string name="off">Slukket</string>
     <string name="ok">OK</string>
     <string name="on">Tændt</string>
+
     <string name="only_once">Kun én gang</string>
+
+
     <string name="open">Åbn</string>
+
     <string name="outgoing">Udgående</string>
     <string name="page">Side</string>
     <string name="permissions_part">Rettigheder for app\'en</string>
@@ -181,6 +192,7 @@
     <string name="received">Modtaget</string>
     <string name="recent">Nyeste</string>
     <string name="regular_level">Normalt niveau</string>
+
     <string name="remove_from_favorite">Fjern fra Favoritter</string>
     <string name="remove_from_home">Fjern fra \"skrivebord\"</string>
     <string name="remove_from_sos">Fjern fra SOS</string>
@@ -208,7 +220,7 @@
     <string name="share_contact">Del kontaktinformation</string>
     <string name="share_differently">Del via en anden app</string>
     <string name="share_via_whatsapp">Del via Whatsapp</string>
-    <string name="shift">Ryk</string> <!-- Tjek navn -->
+    <string name="shift">Ryk</string>
     <string name="show">Vis</string>
     <string name="small">Lille</string>
     <string name="snooze">Slumre</string>
@@ -224,6 +236,7 @@
     <string name="technical_information">Teknisk information</string>
     <string name="theme_settings">Tema</string>
     <string name="theme_settings_subtext">Vælg et tema</string>
+
     <string name="thursday">Torsdag</string>
     <string name="time_changer">Ændr tid for pilletagning</string>
     <string name="tiny">Meget lille</string>
@@ -276,6 +289,7 @@
     <string name="could_not_start_the_download">Downloaden kunne ikke startes!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Opdateringsfilen kunne ikke slettes!</string>
     <string name="downloading">Downloader…</string>
+
     <string name="baldphone_is_up_to_date">BaldPhone is helt opdateret!</string>
     <string name="what_s_new">Nyheder</string>
     <string name="download_finished">Download afsluttet!</string>
@@ -285,7 +299,7 @@
     <string name="download_progress">Downloadens fremskridt</string>
     <string name="what_do_you_want_to_do_with___">Hvad vil du gerne gøre med %s?</string>
     <string name="crash_reports">Rapportér fejl</string>
-    <string name="crash_reports_subtext">Fejlrapporter hjælper med at gøre oplevelsen af BaldPhone bedre.\nRapporterne bliver kund brugt til at udbedre fejl\; kun den nødvendige information for dette, bliver anvendt fra dem.</string> <!-- What\'s the purpose of this statement? What unnecessary information are there in the crash reports and if it\'s unnecessary, why don\'t you just not log it? -->
+    <string name="crash_reports_subtext">Fejlrapporter hjælper med at gøre oplevelsen af BaldPhone bedre.\nRapporterne bliver kund brugt til at udbedre fejl\; kun den nødvendige information for dette, bliver anvendt fra dem.</string>
     <string name="custom_app">Valgfri app</string>
     <string name="custom_app_subtext">Vælg en valgfri app, som du vil have en genvej til på \"skrivebordet\".</string>
     <string name="no_app_was_found">Ingen app der passede blev fundet!</string>
@@ -295,6 +309,8 @@
     <string name="mute">Lydløs</string>
     <string name="vibrate">Vibration</string>
     <string name="your_phone_doesnt_have_assistant_installed">Din telefon har ikke Google Assistant installeret.</string>
+
+
     <string name="status_bar_settings">Statusbjælke</string>
     <string name="status_bar_settings_subtext">Hvor skal statusbjælken vises?</string>
     <string name="only_home_screen">Kun på \"skrivebordet\"</string>
@@ -313,8 +329,8 @@
     <string name="go">Go</string>
 
 
-    <string name="dialer_sounds">Telefonlyde</string> <!-- Tjek navn -->
-    <string name="dialer_sounds_subtext">Choose if you want to have Dialer Sounds.</string> <!-- Tjek navn - what\'s this? -->
+    <string name="dialer_sounds">Telefonlyde</string>
+    <string name="dialer_sounds_subtext">Choose if you want to have Dialer Sounds.</string>
     <string name="low_battery_alert">Advarsel om lavt batteriniveau</string>
     <string name="low_battery_alert_subtext">Vælg om du vil have statusbjælken farvet rød på \"skrivebordet\", hvis batteriniveauet på telefonen er under 20 \%\nVær opmærksom på, at du ikke kan se statusbjælken, hvis den er skjult af en app.</string>
 
@@ -356,8 +372,6 @@
     <string name="read_phone_state_subtext">This permission is required in order to call from the second sim</string>
     <string name="choose_sim">Choose Sim</string>
     <string name="choose_sim_subtext">Choose the sim you want to make the call from</string>
-
-
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
         <item>Abraham Lincoln</item>
