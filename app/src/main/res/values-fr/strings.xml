@@ -377,8 +377,6 @@
     <string name="colorful">Version coloré</string>
     <string name="colorful_subtext">Voulez-vous une version plus colorée de BaldPhone ?</string>
     <string name="edit_home_screen">Éditer l\'écran d\'accueil</string>
-
-
     <string-array name="names_for_screenshots">
         <item>Napoleon Bonaparte</item>
         <item>Marie Antoinette</item>
