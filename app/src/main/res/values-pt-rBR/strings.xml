@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<!--
   ~ Copyright 2019 Uriah Shaul Mandel
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,23 +15,6 @@
   -->
 
 <resources>
-    <!--For Tests:-->
-    <string name="low_battery_alert_subtext">
-        Escolha se deseja a barra de notificações em vermelho quando a bateria estiver abaixo de 20%.\nNão será mostrado se a barra de notificações estiver oculta.</string>
-    <string name="medication_1">Eltroxina 100</string>
-    <string name="medication_2">Eltroxina 150</string>
-
-    <string-array name="names_for_screenshots">
-        <item>O Poderoso Chefão</item>
-        <item>Abraham Lincoln</item>
-        <item>Paul McCartney</item>
-        <item>Tyrion Lannister</item>
-        <item>The Rock</item>
-        <item>Robert Downey Jr.</item>
-    </string-array>
-    <!--For Tests:-->
-
-    <bool name="is_right_to_left">false</bool>
     <string name="about">Sobre</string>
     <string name="about_subtext">Olá!\nMeu nome é Uriah Shaul Mandel, e sou o desenvolvedor deste aplicativo.\nMoro na cidade de Tel Aviv, em Israel. \nFoi necessário muito tempo e esforço para criar este aplicativo e agora estou o disponibilizando de forma gratuita para que qualquer pessoa possa utilizá-lo.\nSinta-se livre para me contatar através do meu e-mail:\nbaldphone.contact@gmail.com
     </string>
@@ -61,15 +44,15 @@
     <string name="alarm_name">Nome do Alarme</string>
     <string name="alarm_volume">Volume do Alarme</string>
     <string name="alarm_volume_subtext">Escolha o volume do Alarme.\nO volume aumenta da esquerda para a direita.</string>
-
     <string name="alarms">Alarmes</string>
+
     <string name="alarms_repeats_every">Repetir Alarme</string>
     <string name="all_alarms">Todos os Alarmes</string>
     <string name="allow">Permitir</string>
     <string name="already_setted">Já definido!\nClique aqui para alterar</string>
     <string name="an_error_has_occurred">Ocorreu um erro!</string>
-
     <string name="and_welcome_to_baldphone">Seja bem-vindo(a) ao Baldphone!</string>
+
     <string name="apps">Aplicativos</string>
     <string name="are_you_sure_you_want_to_delete___">Tem certeza que deseja apagar %s?</string>
     <string name="assistant">Assistente</string>
@@ -83,8 +66,8 @@
     <string name="brightness_subtext">Ajustar o brilho</string>
     <string name="cache_cleared_successfully">Cache Limpo com Sucesso!</string>
     <string name="call">Chamar</string>
-
     <string name="calling">Chamadas</string>
+
     <string name="call_log">Registo de Chamadas:</string>
     <string name="call_subtext">Essa permissão é necessária para conseguir realizar chamadas.</string>
     <string name="camera">Câmera</string>
@@ -159,17 +142,17 @@
     <string name="location">Localização</string>
     <string name="emergency_services">Serviços de Emergência</string>
     <string name="mail">E-mail</string>
-
-
     <string name="maps">Mapas</string>
+
+
     <string name="medium">Médio</string>
     <string name="medium_level">Média</string>
     <string name="message">Mensagem</string>
     <string name="messages">Mensagens</string>
     <string name="minute">Minuto</string>
     <string name="minutes">Minutos</string>
-
     <string name="missed">Perdida</string>
+
     <string name="mobile_phone_number">Número de Telefone</string>
     <string name="monday">Segunda-feira</string>
     <string name="more">mais</string>
@@ -182,18 +165,18 @@
     <string name="notes">Notas</string>
     <string name="notes_settings">Notas</string>
     <string name="notes_settings_subtext">Selecione se deseja ter o Notas na página inicial.</string>
-
     <string name="notifications">Notificações</string>
+
     <string name="of">de</string>
     <string name="off">Desligado</string>
     <string name="ok">OK</string>
-
     <string name="on">Ligado</string>
-
 
     <string name="only_once">Apenas uma vez</string>
 
+
     <string name="open">Abrir</string>
+
     <string name="outgoing">Efetuada</string>
     <string name="page">Página</string>
     <string name="permissions_part">Permissões</string>
@@ -211,16 +194,16 @@
     <string name="read_contacts">Ver contatos</string>
     <string name="received">Recebida</string>
     <string name="recent">Chamadas</string>
-
     <string name="regular_level">Regular</string>
+
     <string name="remove_from_favorite">Remover dos Favoritos</string>
     <string name="remove_from_home">Remover da Página Inicial</string>
     <string name="remove_from_sos">Remover do SOS</string>
     <string name="remove_shortcut">Remover atalho</string>
     <string name="removed_all_alarms">Remover todos os alarmes!</string>
     <string name="repeats_every_day">Todos os dias</string>
-
     <string name="right_handed">Destro</string>
+
     <string name="saturday">Sábado</string>
     <string name="save">Salvar</string>
     <string name="send">Enviar</string>
@@ -255,8 +238,8 @@
     <string name="sunday">Domingo</string>
     <string name="technical_information">Informações técnicas</string>
     <string name="theme_settings">Temas</string>
-
     <string name="theme_settings_subtext">Escolha um tema</string>
+
     <string name="thursday">Quinta-feira</string>
     <string name="time_changer">Alterar Horário dos Medicamentos</string>
     <string name="tiny">Minúscula</string>
@@ -271,8 +254,8 @@
     <string name="up">Cima</string>
     <string name="video">Vídeo</string>
     <string name="video_tutorials">Tutorial em Vídeo</string>
-
     <string name="videos">Vídeos</string>
+
     <string name="voice_mail">Mensagem de voz</string>
     <string name="wednesday">Quarta-feira</string>
     <string name="whatsapp">Whatsapp</string>
@@ -308,8 +291,8 @@
     <string name="could_not_connect_to_internet">Não foi possível conectar-se à internet!</string>
     <string name="could_not_start_the_download">Não foi possível iniciar o download!</string>
     <string name="downloaded_update_file_could_not_be_deleted">O arquivo baixado não pôde ser apagado!</string>
-
     <string name="downloading">Baixando…</string>
+
     <string name="baldphone_is_up_to_date">O BaldPhone está atualizado.</string>
     <string name="what_s_new">O que há de novo</string>
     <string name="download_finished">Download completo!</string>
@@ -328,37 +311,43 @@
     <string name="sound">Som</string>
     <string name="mute">Silenciar</string>
     <string name="vibrate">Vibrar</string>
-
-
     <string name="your_phone_doesnt_have_assistant_installed">O seu telefone não tem um Assistente instalado.</string>
+
+
     <string name="status_bar_settings">Barra de Notificações</string>
     <string name="status_bar_settings_subtext">Onde deseja a barra de notificações?</string>
     <string name="only_home_screen">Apenas na Página Inicial</string>
     <string name="nowhere">Ocultar</string>
-
-
     <string name="everywhere">Em todos lugares</string>
 
+
     <string name="share_photo">Compartilhar foto</string>
+
     <string name="choose_language_for_keyboard">Escolha o Idioma</string>
     <string name="hebrew">Hebraico</string>
-
     <string name="english">Inglês</string>
+
     <string name="search">Procurar</string>
     <string name="next">Próximo</string>
-
-
     <string name="go">Ir</string>
+
+
     <string name="dialer_sounds">Sons do Discador</string>
     <string name="dialer_sounds_subtext">Escolha se deseja sons no Discador.</string>
     <string name="low_battery_alert">Bateria baixa</string>
-
+    <string name="low_battery_alert_subtext">
+        Escolha se deseja a barra de notificações em vermelho quando a bateria estiver abaixo de 20%.\nNão será mostrado se a barra de notificações estiver oculta.</string>
 
     <string name="also_available_at">Também disponível através do e-mail\nbaldphone.contact@gmail.com\nOs comentários devem ser em Inglês ou Hebraico!</string>
     <string name="grant_all_permissions">Conceder Todas Permissões</string>
-    <string name="emergency_settings_subtext">Selecione se deseja ter o Botão de Emergência na Pagina Inicial.</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">Eltroxina 100</string>
+    <string name="medication_2">Eltroxina 150</string>
     <string name="donate">Doar</string>
     <string name="emergency_button">Botão de Emergência</string>
+    <string name="emergency_settings_subtext">Selecione se deseja ter o Botão de Emergência na Pagina Inicial.</string>
     <string name="private_number">Número Privado</string>
     <string name="swipe_left_or_right">Deslize para a direita ou para a esquerda</string>
     <string name="press_next_or_back_buton">Pressione a seta para frente ou para trás</string>
@@ -379,6 +368,28 @@
     <string name="colorful">Colorido</string>
     <string name="colorful_subtext">Deseja tornar o BaldPhone mais colorido?</string>
     <string name="edit_home_screen">Editar Página Inicial</string>
+    <string name="dual_sim">Dual SIM</string>
+    <string name="dual_sim_subtext">Escolha como deseja gerenciar o dual sim\nNota: Se você escolher Mostrar Opções, precisará permitir outra permissão</string>
+    <string name="use_default">Usar Padrão</string>
+    <string name="show_options">Mostrar Opções</string>
+    <string name="read_phone_state">Ler o Estado do Telefone</string>
+    <string name="read_phone_state_subtext">Essa permissão é necessária para realizar chamadas a partir do segundo SIM</string>
+    <string name="choose_sim">Escolher SIM</string>
+    <string name="choose_sim_subtext">Escolha o SIM que você deseja realizar a chamada</string>
+    <string name="website">Site</string>
+    <string name="appear_on_top">Aparecer sobre outros</string>
+    <string name="appear_on_top_subtext">Essa permissão é necessária em novas versões do Android para mostrar alarmes e lembretes quando a tela estiver desligada</string>
 
-  
+
+    <string-array name="names_for_screenshots">
+        <item>O Poderoso Chefão</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
 </resources>
