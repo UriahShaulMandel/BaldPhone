@@ -372,8 +372,6 @@ https://sites.google.com/view/baldphone</string>
     <string name="read_phone_state_subtext">Szükséges engedély a második SIM kártyáról való telefonáláshoz.</string>
     <string name="choose_sim">SIM választása</string>
     <string name="choose_sim_subtext">Válaszd ki melyik SIM kártyáról akarsz hívni.</string>
-
-
     <string-array name="names_for_screenshots">
         <item>Keresztapa</item>
         <item>Abraham Lincoln</item>
