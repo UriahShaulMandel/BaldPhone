@@ -322,7 +322,7 @@
     <string name="next">Næste</string>
     <string name="go">Go</string>
     <string name="dialer_sounds">Ringetoner</string> <!-- Tjek navn -->
-    <string name="dialer_sounds_subtext">Vælg om du vil have ringetoner(?? usikker på denne oversættelse...)</string> <!-- Tjek navn - what\'s this? -->
+    <string name="dialer_sounds_subtext">Vælg om du vil have ringetoner(?? usikker på denne oversættelse…)</string> <!-- Tjek navn - what\'s this? -->
 
     <string name="low_battery_alert">Advarsel om lavt batteriniveau</string>
     <string name="low_battery_alert_subtext">Vælg om du vil have statusbjælken farvet rød på \"skrivebordet\", hvis batteriniveauet på telefonen er under 20 \%\nVær opmærksom på, at du ikke kan se statusbjælken, hvis den er skjult af en app.</string>
