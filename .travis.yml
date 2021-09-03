@@ -18,7 +18,7 @@ android:
     - sys-img-armeabi-v7a-android-22
 
 jdk:
-  - oraclejdk8
+  - oraclejdk11
 before_script:
   - pwd
   - chmod +x gradlew

@@ -85,7 +85,6 @@ public class RecentCallsActivityScreenshot extends BaseScreenshotTakerTest<Recen
     @Override
     protected void cleanupAfterTest() {
         super.cleanupAfterTest();
-        TestUtils.deleteAllContactsInEmulator(getInstrumentation().getTargetContext().getApplicationContext());
     }
 
     @Override
