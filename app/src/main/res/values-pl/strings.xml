@@ -69,7 +69,7 @@
     <string name="brightness_subtext">Zmień jasność</string>
     <string name="cache_cleared_successfully">Pomyślnie wyczyszczono pamięc cachce!</string>
     <string name="call">Dzwoń</string>
-    <string name="calling">Dzwonienie...</string>
+    <string name="calling">Dzwonienie…</string>
 
     <string name="call_log">Rejestr połączeń:</string>
     <string name="call_subtext">To dozwolenie jest wymagane aby dzwonić do kontaktów.</string>

@@ -284,12 +284,12 @@
     <string name="could_not_connect_to_internet">Nije moguće povezati se na internet!</string>
     <string name="could_not_start_the_download">Nije moguće započeti preuzimanje!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Nije moguće izbrisati preuzetu datoteku ažuriranja!</string>
-    <string name="downloading">Preuzimanje...</string>
+    <string name="downloading">Preuzimanje…</string>
 
     <string name="baldphone_is_up_to_date">BaldPhone je ažuriran.</string>
     <string name="what_s_new">Šta je novo</string>
     <string name="download_finished">Preuzimanje je završeno!</string>
-    <string name="downloading_updates">Preuzimanje ažuriranja...</string>
+    <string name="downloading_updates">Preuzimanje ažuriranja…</string>
     <string name="installing_doesn_t_work">Instaliranje ne funkcioniše?</string>
     <string name="try_now">Pokuštajte sada</string>
     <string name="download_progress">Napredak preuzimanja</string>

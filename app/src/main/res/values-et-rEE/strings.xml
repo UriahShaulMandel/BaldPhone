@@ -314,7 +314,7 @@
     <string name="baldphone_is_up_to_date">BaldPhone\'i kõige viimane versioon on paigaldatud.</string>
     <string name="what_s_new">Mis on uus</string>
     <string name="download_finished">Allalaadimine on lõpetatud.</string>
-    <string name="downloading_updates">Uuenduste allalaadimine...</string>
+    <string name="downloading_updates">Uuenduste allalaadimine…</string>
     <string name="installing_doesn_t_work">Kas ei saa installida?</string>
     <string name="try_now">Proovi kohe</string>
     <string name="download_progress">Allalaadimise seis</string>

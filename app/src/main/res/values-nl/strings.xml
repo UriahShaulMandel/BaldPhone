@@ -292,7 +292,7 @@ als u in het buitenland bent, kost u dit mogelijk geld.\ nWilt u doorgaan met he
     <string name="could_not_connect_to_internet">Kan geen verbinding maken met het internet!</string>
     <string name="could_not_start_the_download">Kan de download niet starten!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Het gedownloade updatebestand kon niet worden verwijderd!</string>
-    <string name="downloading">Aan het downloaden...</string>
+    <string name="downloading">Aan het downloaden…</string>
 
     <string name="baldphone_is_up_to_date">BaldPhone is up-to-date.</string>
     <string name="what_s_new">Wat is er nieuw</string>
