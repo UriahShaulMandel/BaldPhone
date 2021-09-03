@@ -8,7 +8,6 @@ android:
     - tools
     - platform-tools
     - build-tools-29.0.3
-    - android-29
     - extra
     - addon
     - android-22
@@ -18,7 +17,7 @@ android:
     - sys-img-armeabi-v7a-android-22
 
 jdk:
-  - oraclejdk11
+  - openjdk11
 before_script:
   - pwd
   - chmod +x gradlew
