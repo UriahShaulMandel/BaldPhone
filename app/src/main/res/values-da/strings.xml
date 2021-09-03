@@ -160,8 +160,8 @@
     <string name="nfc">NFC</string>
     <string name="no">Nej</string>
     <string name="notes">Noter</string>
-    <string name="notes_settings">Noter</string>
-    <string name="notes_settings_subtext">Vælg om du vil have en dedikeret side på telefonens \"skrivebord\" til at tage noter.</string>
+    <string name="notes_settings">Indstillinger for Noter</string>
+    <string name="notes_settings_subtext">Vælg om du vil have et ekstra skrivebord til at tage noter. Swipe til siden efter du har aktiveret denne indstilling for at finde det.</string>
     <string name="notifications">Notifikationer</string>
 
     <string name="of">af</string>
@@ -177,20 +177,20 @@
     <string name="outgoing">Udgående</string>
     <string name="page">Side</string>
     <string name="permissions_part">Rettigheder for app\'en</string>
-    <string name="personalization_settings">Personlig opsætning</string>
+    <string name="personalization_settings">Opsætning af udseende</string>
     <string name="phone">Telefon</string>
     <string name="photo">Foto</string>
     <string name="photos">Fotos</string>
-    <string name="pill_added">Pille tilføjet!</string>
+    <string name="pill_added">En pille blev tilføjet!</string>
     <string name="pill_name">Pillenavn</string>
     <string name="pills">Piller</string>
-    <string name="press_longer">Tryk og hold længere tid!</string>
+    <string name="press_longer">Tryk og hold lidt længere tid med fingeren.</string>
     <string name="timer">Stopur</string>
     <string name="read_call_log">Læs opkaldshistorik</string>
     <string name="read_call_log_subtext">Denne rettighed er nødvendig for at app\'en kan vise din opkaldshistorik.</string>
     <string name="read_contacts">Læs kontaktliste</string>
     <string name="received">Modtaget</string>
-    <string name="recent">Nyeste</string>
+    <string name="recent">Seneste opkald</string>
     <string name="regular_level">Normalt niveau</string>
 
     <string name="remove_from_favorite">Fjern fra Favoritter</string>
@@ -200,7 +200,6 @@
     <string name="removed_all_alarms">Alle alarmer blev slettet.</string>
     <string name="repeats_every_day">Hver dag</string>
     <string name="right_handed">Højrehåndet</string>
-
     <string name="saturday">Lørdag</string>
     <string name="save">Gem</string>
     <string name="send">Send</string>
@@ -252,7 +251,6 @@
     <string name="video">Video</string>
     <string name="video_tutorials">Videoinstruktioner</string>
     <string name="videos">Videoer</string>
-
     <string name="voice_mail">Telefonsvarer</string>
     <string name="wednesday">Onsdag</string>
     <string name="whatsapp">\"Whatsapp\"</string>
@@ -278,7 +276,7 @@
     <string name="a_new_update_is_available">En ny opdatering er tilgængelig!\nOpdateringer er vigtige, fordi de sikrer, at BaldPhone bliver ved med at fungere godt!\nTryk OK for at downloade.</string>
     <string name="current_version">Nuværende version:\n</string>
     <string name="new_version">Ny version:\n</string>
-    <string name="new_updates_are_ready_to_be_downloaded">Nye opdatering er klar til at blive downloaded.</string>
+    <string name="new_updates_are_ready_to_be_downloaded">Nye opdateringer er klar til at blive downloaded.</string>
     <string name="install">Installér</string>
     <string name="data_warning">Advarsel om dataforbrug</string>
     <string name="data_warning_subtext">Du er ikke forbundet til Wifi.\nStørrelsen på opdateringen er ca. 3 MB, så hvis du er i udlandet og ikke har udlandsdata med i dit abonnement, kan det koste dig lidt ekstra at hente denne opdatering. Er du i dit hjemland er det højst sandsynligt ligemeget om du er på Wifi eller ej, da 3 MB er meget lidt data.\nVil du fortsætte med at downloade?</string>
@@ -296,7 +294,7 @@
     <string name="downloading_updates">Downloader opdateringer…</string>
     <string name="installing_doesn_t_work">Installation virker ikke?</string>
     <string name="try_now">Prøv nu</string>
-    <string name="download_progress">Downloadens fremskridt</string>
+    <string name="download_progress">Downloadens status</string>
     <string name="what_do_you_want_to_do_with___">Hvad vil du gerne gøre med %s?</string>
     <string name="crash_reports">Rapportér fejl</string>
     <string name="crash_reports_subtext">Fejlrapporter hjælper med at gøre oplevelsen af BaldPhone bedre.\nRapporterne bliver kund brugt til at udbedre fejl\; kun den nødvendige information for dette, bliver anvendt fra dem.</string>
@@ -316,21 +314,16 @@
     <string name="only_home_screen">Kun på \"skrivebordet\"</string>
     <string name="nowhere">Ingen steder</string>
     <string name="everywhere">Alle steder</string>
-
-
     <string name="share_photo">Del foto</string>
-
     <string name="choose_language_for_keyboard">Vælg sprog</string>
     <string name="hebrew">Hebræisk</string>
     <string name="english">Engelsk</string>
-
     <string name="search">Søg</string>
     <string name="next">Næste</string>
     <string name="go">Go</string>
+    <string name="dialer_sounds">Ringetoner</string> <!-- Tjek navn -->
+    <string name="dialer_sounds_subtext">Vælg om du vil have ringetoner(?? usikker på denne oversættelse...)</string> <!-- Tjek navn - what\'s this? -->
 
-
-    <string name="dialer_sounds">Telefonlyde</string>
-    <string name="dialer_sounds_subtext">Choose if you want to have Dialer Sounds.</string>
     <string name="low_battery_alert">Advarsel om lavt batteriniveau</string>
     <string name="low_battery_alert_subtext">Vælg om du vil have statusbjælken farvet rød på \"skrivebordet\", hvis batteriniveauet på telefonen er under 20 \%\nVær opmærksom på, at du ikke kan se statusbjælken, hvis den er skjult af en app.</string>
 
