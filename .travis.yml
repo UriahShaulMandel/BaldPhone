@@ -8,7 +8,6 @@ android:
     - tools
     - platform-tools
     - build-tools-29.0.3
-    - android-29
     - extra
     - addon
     - android-22
