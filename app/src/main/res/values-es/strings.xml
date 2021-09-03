@@ -192,7 +192,7 @@
     <string name="pill_added">La pastilla se ha añadido correctamente.</string>
     <string name="pill_name">Nombre de la pastilla</string>
     <string name="pills">Pastillas</string>
-    <string name="press_longer">Mantén pulsado el botón un poco más...</string>
+    <string name="press_longer">Mantén pulsado el botón un poco más…</string>
     <string name="timer">Temporizador</string>
     <string name="read_call_log">Leer el historial de llamadas</string>
     <string name="read_call_log_subtext">Se necesita este permiso para poder ver el historial de llamadas.</string>
@@ -309,7 +309,7 @@
     <string name="could_not_connect_to_internet">No ha sido posible conectarse a Internet.</string>
     <string name="could_not_start_the_download">No ha sido posible empezar la descarga.</string>
     <string name="downloaded_update_file_could_not_be_deleted">No se ha podido eliminar el archivo con la actualización.</string>
-    <string name="downloading">Descargando...</string>
+    <string name="downloading">Descargando…</string>
 
     <string name="baldphone_is_up_to_date">BaldPhone está actualizado.</string>
     <string name="what_s_new">Novedades</string>

@@ -1,0 +1,248 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about">Honi buruz</string>
+    <string name="about_subtext">Kaixo!\nNire izena Uriah Shaul Mandel da, eta plataforma honen sustatzailea naiz.\n Nire bizitza \"helduaren\" zatirik handiena plataforma hau egiten eman dut, eta dohainik argitaratu dut, edonorrek erabili dezan.\nOngi etorria zara nirekin posta elektronikoz harremanetan jartzeko:\nbaldphone.contact@gmail.com</string>
+    <string name="accessibility_level">Erabilerraztasun maila</string>
+    <string name="accessibility_settings">Erabilerraztasuna</string>
+    <string name="accidental_touches">Ustekabeko utzitzen aurkako babesa</string>
+    <string name="accidental_touches_settings_subtext">Babesleak telefonoaren ukipen-sarrera oztopatzen du telefonoa estalita dagoenean.\nHarekin arazorik baduzu, itzali egin dezakezu.</string>
+    <string name="accidental_touches_subtext">Nahi gabe ukitu dela nabaritu da.\nAdos sakatu telefonoa erabiltzen jarraitzeko.\nMezu hau etengabe agertzen bazaizu, erabilerraztasun ezarpenetan uka dezakezu.</string>
+    <string name="acknowledgments">Eskerrak</string>
+    <string name="adaptive">Moldagarria</string>
+    <string name="add_alarm">Alarma gehitu</string>
+    <string name="add_alarm_quickly">Kronometroa gehitu</string>
+    <string name="add_contact">Kontaktua gehitu</string>
+    <string name="add_emergency_contact">Gehitu</string>
+    <string name="add_pill">Pilula gehitu</string>
+    <string name="add_shortcut">Lasterbidea gehitu</string>
+    <string name="add_to_favorite">Gogokoenetan gehitu</string>
+    <string name="add_to_home">Hasieran gehitu</string>
+    <string name="add_to_sos">Larrialdira gehitu</string>
+    <string name="address">Helbidea</string>
+    <string name="advanced_options">Ezarpen aurreratuak</string>
+    <string name="afternoon">Arratsalde</string>
+    <string name="airplane_mode">Hegaldi modua</string>
+    <string name="alarm_name">Alarmaren izena</string>
+    <string name="alarm_volume">Alarmaren bolumena</string>
+    <string name="alarm_volume_subtext">Aukeratu alarmentzako bolumena.\nBolumena ezkerretik eskuinera igotzen da.</string>
+    <string name="alarms">Alarmak</string>
+
+    <string name="alarms_repeats_every">Alarmaren errepikapen aldia</string>
+    <string name="all_alarms">Alarma guztiak</string>
+    <string name="allow">Baimendu</string>
+    <string name="already_setted">Jadanik prest!\nHemen klikatu aldatzeko</string>
+    <string name="an_error_has_occurred">Akats bat gertatu da!</string>
+    <string name="and_welcome_to_baldphone">ta ongi etorri Baldphone-ra</string>
+
+    <string name="apps">Aplikazioak</string>
+    <string name="are_you_sure_you_want_to_delete___">%s ezabatzeko ziur al zaude?</string>
+    <string name="assistant">Morroia</string>
+    <string name="at_least_one_day_must_be_selected">Egun bat aukeratu behar duzu gutxienez!</string>
+    <string name="auto_brightness">Distira\ndoigarria</string>
+    <string name="backspace">atzera egin</string>
+    <string name="baldphone_bla_allow_permission">Hurrengo baimenak baimendu, mesedez:</string>
+    <string name="blocked">Blokeatuta</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="brightness">Distira</string>
+    <string name="brightness_subtext">Distira aldatu.</string>
+    <string name="cache_cleared_successfully">Cachea arrakastaz hustuta!</string>
+    <string name="call">Deitu</string>
+    <string name="calling">Deitzen</string>
+
+    <string name="call_log">Deien historia:</string>
+    <string name="call_subtext">Baimen hau derrigorrezkoa da kontaktuak deitzeko.</string>
+    <string name="camera">Kamera</string>
+    <string name="camera_subtext">Baimen hau derrigorrezkoa da linterna pizteko.</string>
+    <string name="cancel">Utzi</string>
+    <string name="change_pills_time">Pilulen ordua aldatu</string>
+    <string name="change_system_settings_subtext">Mesedez, baimena emaiozu BaldPhone-ri, ezarpenak aldatu ahal izateko, adibidez:
+letra-tipoaren tamaina eta distira aldatzeko.</string>
+    <string name="choose_friday">ol.</string>
+    <string name="choose_monday">al.</string>
+    <string name="choose_saturday">lr.</string>
+    <string name="choose_sunday">ig.</string>
+    <string name="choose_thursday">og.</string>
+    <string name="choose_tuesday">ar.</string>
+    <string name="choose_wednesday">az.</string>
+    <string name="clear">Hustu</string>
+    <string name="clear_cache">Cachea hustu</string>
+    <string name="clear_data">Datu guztiak hustu</string>
+    <string name="clear_data_subtext">Ziur zaude erabiltzaile-datu guztiak garbitu nahi dituzula? BaldPhone appa berrezarri egingo da, instalatu berri balitz bezala.</string>
+    <string name="clear_data_subtext2">%100?</string>
+    <string name="clear_data_subtext3">Ziur zaude?\n\"Bai\" sakatzean, datu guztiak ezabatuko dira!</string>
+    <string name="clock">Erlojua</string>
+    <string name="coming_soon">Laster!</string>
+    <string name="connection_settings">Konexioa</string>
+    <string name="contact_must_has_name">Kontaktuak izen bat behar du!</string>
+    <string name="contact_not_created">Kontaktua ez da sortu!</string>
+    <string name="contacts">Kontaktuak</string>
+    <string name="contacts_read_subtext">Baimen hau derrigorrezkoa da kontaktuak irakurtzeko.</string>
+    <string name="contacts_subtext">Baimen hau derrigorrezkoa da kontaktu berriak sortzeko.</string>
+    <string name="crash">Epa!\nBaldPhonek arazo bat aurkitu du eta berriro hasiko da.</string>
+    <string name="current_time">Oraingo ordua</string>
+    <string name="custom">Neurrira</string>
+    <string name="dark">Iluna</string>
+    <string name="delete">Ezabatu</string>
+    <string name="delete___">%s ezabatu?</string>
+    <string name="delete_all_alarms">Alarma guztiak ezabatu</string>
+    <string name="dialer">Telefonoa</string>
+    <string name="display_settings">Pantaila</string>
+    <string name="done">Eginda</string>
+    <string name="down">Behera</string>
+    <string name="edit">Editatu</string>
+    <string name="email">Email:</string>
+    <string name="enable_notification_access">Baimendu jakinarazpenen sarbidea</string>
+    <string name="enable_notification_access_subtext">Mesedez emaiozu BaldPhoneri sarbidea jakinarazpenak irakurtzeko</string>
+    <string name="enter">Sartu</string>
+    <string name="enter_contact_or_phone_number">Sartu kontaktuaren izena:</string>
+    <string name="evening">Arratsalde</string>
+    <string name="external_storage_subtext">Baimen hau derrigorrezkoa da argazkiak gordetzeko.</string>
+    <string name="feedback">Berrelikadura bidali</string>
+    <string name="feedback_cannot_be_empty">Berrelikadura ezin da hutsik egon!</string>
+    <string name="feedback_sent_successfully">Berrelikadura arrakastaz bidali da!</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Erabilerraztasun maila aukeratu</string>
+    <string name="font_size">Letra-tipoaren neurria</string>
+    <string name="friday">Ostirala</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Asko kostatzen zaizu telefonoaren teklatua erabiltzea? Horren ordez, BaldPhoneren teklatu HANDIA erabili dezakezu.</string>
+    <string name="hello">Kaixo</string>
+    <string name="help">Bideo tutoriala</string>
+    <string name="hide">Ezkutatu</string>
+    <string name="high_level">Maila altua</string>
+    <string name="home_phone_number">Etxeko telefono zenbakia</string>
+    <string name="hour">Ordua</string>
+    <string name="huge">Itzela</string>
+    <string name="internet">Internet</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">Azken gauza bat:\nOso gomendagarria da Baldphone-ren hasierako pantaila lehenetsitako abiarazle gisa erabiltzea</string>
+    <string name="language">hizkuntza</string>
+    <string name="language_settings">Hizkuntza</string>
+    <string name="large">Handia</string>
+    <string name="left_handed">Ezkerti</string>
+    <string name="light">Argia</string>
+    <string name="location">Kokapena</string>
+    <string name="emergency_services">Larrialdi zerbitzuak</string>
+    <string name="mail">Posta</string>
+    <string name="maps">Mapak</string>
+
+
+    <string name="medium">Ertaina</string>
+    <string name="medium_level">Maila ertaina</string>
+    <string name="message">Mezu</string>
+    <string name="messages">Mezuak</string>
+    <string name="minute">Minutu</string>
+    <string name="minutes">Minutuak</string>
+    <string name="missed">Huts eginda</string>
+
+    <string name="mobile_phone_number">Telefono mugikorraren zenbakia</string>
+    <string name="monday">Astelehena</string>
+    <string name="more">gehiago</string>
+    <string name="morning">Goiza</string>
+    <string name="name">Izena</string>
+    <string name="named__">deiturikoa</string>
+    <string name="new_alarm___was_created">Alarma berria %s sortu da!</string>
+    <string name="nfc">NFC</string>
+    <string name="no">Ez</string>
+    <string name="notes">Oharrak</string>
+    <string name="notes_settings">Oharrak</string>
+    <string name="notes_settings_subtext">Aukeratu hasierako pantailan Oharrak orri bat eduki nahi duzun.</string>
+    <string name="notifications">Jakinarazpenak</string>
+
+    <string name="off">Itzalita</string>
+    <string name="ok">Ados</string>
+    <string name="on">Piztuta</string>
+
+    <string name="only_once">Behin bakarrik</string>
+
+
+    <string name="open">Ireki</string>
+
+    <string name="page">Orrialde</string>
+    <string name="permissions_part">Baimenak</string>
+    <string name="photo">Argazki</string>
+    <string name="photos">Argazkiak</string>
+    <string name="pill_added">Pilula gehituta!</string>
+    <string name="pill_name">Pilularen izena</string>
+    <string name="pills">Pilulak</string>
+    <string name="press_longer">Luzeago sakatu!</string>
+    <string name="read_call_log">Deien historia irakurri</string>
+    <string name="read_call_log_subtext">Baimen hau derrigorrezkoa da deien historia ikusteko.</string>
+    <string name="read_contacts">Kontaktuak irakurri</string>
+    <string name="received">Jasota</string>
+    <string name="recent">Gertatu berria</string>
+    <string name="regular_level">Maila arrunta</string>
+
+    <string name="remove_from_favorite">Gogokoetatik kendu</string>
+    <string name="remove_from_home">Hasieratik kendu</string>
+    <string name="remove_from_sos">SOStik kendu</string>
+    <string name="remove_shortcut">Kendu lasterbidea</string>
+    <string name="removed_all_alarms">Alarma guztiak kendu dira!</string>
+    <string name="repeats_every_day">Egunero</string>
+    <string name="right_handed">Eskuina</string>
+
+    <string name="saturday">Larunbata</string>
+    <string name="save">Gorde</string>
+    <string name="send">Bidali</string>
+    <string name="share">Partekatu</string>
+    <string name="share_baldphone">BaldPhone partekatu</string>
+    <string name="share_contact">Kontaktua partekatu </string>
+    <string name="share_differently">Beste app baten bidez partekatu</string>
+    <string name="share_via_whatsapp">WhatsApp bidez partekatu</string>
+    <string name="shift">aldaketa</string>
+    <string name="show">Erakutsi</string>
+    <string name="small">Txikia</string>
+    <string name="snooze">Atzeratu</string>
+    <string name="sos">SOS</string>
+    <string name="sos_is_full">SOS beteta dago!</string>
+    <string name="speak">Hitz egin</string>
+    <string name="speech_to_text">Hizketatik testura</string>
+    <string name="strong_hand">Esku menderatzailea</string>
+    <string name="submit">eman</string>
+    <string name="sunday">Igandea</string>
+    <string name="technical_information">Informazio teknikoa</string>
+    <string name="thursday">Osteguna</string>
+    <string name="time_changer">Pilulen denbora aldatzailea</string>
+    <string name="tiny">Ñimiñoa</string>
+    <string name="to___days_and___hours_from_now">oraindik %d egun eta %d ordutara</string>
+    <string name="to___hours_and___minutes_from_now">oraindik %d ordu eta %d minutura</string>
+    <string name="to___minuets_from_now">oraindik %d minututara</string>
+    <string name="today">Gaur</string>
+    <string name="took">Hartuta!</string>
+    <string name="tuesday">Asteartea</string>
+    <string name="uninstall">Desinstalatu</string>
+    <string name="uninstall_subtext">Ziur zaude %s desinstalatu nahi duzula?\n%s-ren datuak betirako ezabatuko dira!</string>
+    <string name="up">Gora</string>
+    <string name="video">Bideo</string>
+    <string name="video_tutorials">Bideo tutorialak</string>
+    <string name="videos">Bideo tutorialak</string>
+
+    <string name="install_updates_subtext">Baimen hau derrigorrezkoa da BaldPhone eguneratzeko.</string>
+    <string name="read_phone_state">Irakurri telefonoaren egoera</string>
+    <string name="read_phone_state_subtext">Baimen hau derrigorrezkoa da bigarren simarekin deiak egiteko.</string>
+    <string name="choose_sim">Aukeratu sima</string>
+    <string name="choose_sim_subtext">Aukeratu zein sim erabili nahi duzun deia egiteko</string>
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
+</resources>

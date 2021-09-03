@@ -1,0 +1,169 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about">مقدمة</string>
+    <string name="accidental_touches">حماية من اللمس غير المقصود</string>
+    <string name="adaptive">تلقائي</string>
+    <string name="add_alarm">إضافة منبه</string>
+    <string name="add_alarm_quickly">إضافة مؤقت</string>
+    <string name="add_contact">إضافة جهة اتصال</string>
+    <string name="add_emergency_contact">إضافة</string>
+    <string name="add_pill">إضافة دواء</string>
+    <string name="add_shortcut">إضافة إختصار</string>
+    <string name="add_to_favorite">إضافة إلي المفضلة</string>
+    <string name="add_to_home">إضافة إلي الرئيسية</string>
+    <string name="add_to_sos">إضافة إلي الطوارئ</string>
+    <string name="address">عنوان</string>
+    <string name="advanced_options">الاعدادات المتقدمة</string>
+    <string name="afternoon">بعد الظهر</string>
+    <string name="airplane_mode">وضع الطيران</string>
+    <string name="alarm_name">إسم المنبه</string>
+    <string name="alarm_volume">مستوي صوت المنبه</string>
+    <string name="alarm_volume_subtext">حدد مستوي الصوت للمنبهات.</string>
+    <string name="alarms">المنبهات</string>
+
+    <string name="alarms_repeats_every">المنبه يُعاد كل</string>
+    <string name="all_alarms">كل المنبهات</string>
+    <string name="allow">سماح</string>
+    <string name="already_setted">مٌعد بالفعل
+اضغط هنا للتغيير</string>
+    <string name="an_error_has_occurred">حدث خطأ</string>
+    <string name="apps">التطبيقات</string>
+    <string name="are_you_sure_you_want_to_delete___">هل انت متأكد انك تريد حذف ‍%s ؟</string>
+    <string name="assistant">المساعد</string>
+    <string name="at_least_one_day_must_be_selected">يجب ان تحدد يوم واحد علي اللأقل</string>
+    <string name="auto_brightness">مستوي إضائة تلقائي</string>
+    <string name="baldphone_bla_allow_permission">من فضلك السماح للصلاحيات الأتية:</string>
+    <string name="blocked">محظور</string>
+    <string name="bluetooth">بلوتوث</string>
+    <string name="brightness">مستوي السطوع</string>
+    <string name="brightness_subtext">تغيير مستوي السطوع</string>
+    <string name="cache_cleared_successfully">تم تنظيف الذاكرة المؤقتة بنجاح!</string>
+    <string name="call">إتصل</string>
+    <string name="calling">يتم الإتصال</string>
+
+    <string name="call_log">سجل المكالمات</string>
+    <string name="call_subtext">هذا الإذن مطلوب لعمل مكالمات</string>
+    <string name="camera">الكاميرا</string>
+    <string name="camera_subtext">هذا الإذن مطلوب لتشغيل الفلاش</string>
+    <string name="cancel">إلغاء</string>
+    <string name="change_pills_time">تغيير ميعاد الدواء</string>
+    <string name="clear_cache">مسح الذاكرة المؤقتة</string>
+    <string name="clock">الساعة</string>
+    <string name="connection_settings">الإتصال</string>
+    <string name="contact_must_has_name">جهة الإتصال يجب ان تحتوي علي إسم!</string>
+    <string name="contact_not_created">لم يتم إنشاء جهة الإتصال!</string>
+    <string name="contacts">جهات الإتصال</string>
+    <string name="current_time">الوقت الحالي</string>
+    <string name="delete">حذف</string>
+    <string name="delete___">حذف %s ؟</string>
+    <string name="delete_all_alarms">حذف كل المنبهات؟</string>
+    <string name="dialer">إتصال برقم</string>
+    <string name="display_settings">الشاشة</string>
+    <string name="done">تم</string>
+    <string name="edit">تعديل</string>
+    <string name="enter_contact_or_phone_number">إدخل اسم جهة الإتصال</string>
+    <string name="evening">مساء</string>
+    <string name="feedback">إرسال تعليق</string>
+    <string name="feedback_cannot_be_empty">التعليق لايمكن ان يكون فارغ!</string>
+    <string name="feedback_sent_successfully">تم إرسال التعليق بنجاح!</string>
+    <string name="font_size">حجم الخط</string>
+    <string name="friday">الجمعة</string>
+    <string name="hello">مرحبا</string>
+    <string name="help">فيديو تعليمي</string>
+    <string name="hide">إخفاء</string>
+    <string name="home_phone_number">رقم هاتف المنزل</string>
+    <string name="hour">ساعة</string>
+    <string name="internet">الإنترنت</string>
+    <string name="language">لغة</string>
+    <string name="language_settings">اللغة</string>
+    <string name="location">الموقع</string>
+    <string name="emergency_services">خدمات الطوارئ</string>
+    <string name="maps">الخرائط</string>
+
+
+    <string name="medium">متوسط</string>
+    <string name="medium_level">مستوي متوسط</string>
+    <string name="message">رسالة</string>
+    <string name="messages">الرسائل</string>
+    <string name="minute">دقيقة</string>
+    <string name="minutes">دقائق</string>
+    <string name="mobile_phone_number">رقم الهاتف المحمول</string>
+    <string name="more">المزيد</string>
+    <string name="name">الأسم</string>
+    <string name="new_alarm___was_created">منبه جديد %s تم إنشائه!</string>
+    <string name="no">لا</string>
+    <string name="notes">الملاحظات</string>
+    <string name="notes_settings">الملاحظات</string>
+    <string name="notifications">الإشعارات</string>
+
+    <string name="only_once">مرة واحدة فقط</string>
+
+
+    <string name="page">صفحة</string>
+    <string name="permissions_part">الصلاحيات</string>
+    <string name="photo">صورة</string>
+    <string name="photos">صور</string>
+    <string name="pill_added">تم إضافة دواء!</string>
+    <string name="pill_name">إسم الدواء</string>
+    <string name="pills">الأدوية</string>
+    <string name="press_longer">إضغط مدة أطول</string>
+    <string name="timer">مؤقت</string>
+    <string name="received">مستلمة</string>
+    <string name="recent">جديد</string>
+    <string name="remove_from_favorite">حذف من المفضلة</string>
+    <string name="remove_from_home">حذف من الرئيسية</string>
+    <string name="remove_from_sos">حذف من الطوارئ</string>
+    <string name="removed_all_alarms">تم حذف كل المنبهات!</string>
+    <string name="repeats_every_day">كل يوم</string>
+    <string name="saturday">السبت</string>
+    <string name="save">حفظ</string>
+    <string name="send">إرسال</string>
+    <string name="share">مشاركة</string>
+    <string name="share_contact">مشاركة جهة إتصال</string>
+    <string name="share_differently">مشاركة عبر تطبيق اخر</string>
+    <string name="share_via_whatsapp">مشاركة عبر الواتساب</string>
+    <string name="snooze">غفوة</string>
+    <string name="speak">تحدث</string>
+    <string name="today">اليوم</string>
+    <string name="video_tutorials">فيديوهات تعليمية</string>
+    <string name="voice_mail">بريد صوتي</string>
+    <string name="wednesday">الأربعاء</string>
+    <string name="whatsapp">واتساب</string>
+    <string name="yesterday">الأمس</string>
+    <string name="clear_all_notifications">حذف كل الإشعارات؟</string>
+    <string name="download">تنزيل</string>
+    <string name="alarm">منبه</string>
+    <string name="no_new_notifications">لا يوجد إشعارات جديدة</string>
+    <string name="mute">كتم الصوت</string>
+    <string name="vibrate">الأهتزاز</string>
+    <string name="share_photo">مشاركة الصورة</string>
+
+    <string name="choose_language_for_keyboard">اختر لغة</string>
+    <string name="search">بحث</string>
+    <string name="next">التالي</string>
+    <string name="donate">تبرع</string>
+    <string name="emergency_button">زر الطوارئ</string>
+    <string name="do_you_want_to_save_your_changes">هل تريد حفظ التغييرات؟</string>
+    <string name="discard">إلغاء</string>
+    <string name="no_recent_calls">لا توجد مكالمات جديدة</string>
+    <string name="dual_sim">خطين</string>
+    <string name="choose_sim">اختر خط</string>
+    <string name="choose_sim_subtext">أختر الخط الذي تريد الأتصال منه</string>
+    <bool name="is_right_to_left">true</bool>
+
+</resources>
