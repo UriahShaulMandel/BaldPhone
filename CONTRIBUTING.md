@@ -7,4 +7,3 @@ You can contribute by:
   - Using BaldPhone and sending feedback
   - Sharing BaldPhone with others
   - Star, Watch or Fork this project :)
-  - [Donating small amounts of money](https://www.patreon.com/baldphone)

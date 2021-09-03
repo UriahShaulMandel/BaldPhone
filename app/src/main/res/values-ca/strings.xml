@@ -355,6 +355,7 @@ Premi OK per a descarregar-la.
     <string name="vibrate">Vibració</string>
     <string name="your_phone_doesnt_have_assistant_installed">El seu telèfon no té un assistent instal·lat.</string>
 
+
     <string name="status_bar_settings">Barra d\'estat</string>
     <string name="status_bar_settings_subtext">On voleu mostrar la bara d\'estat?</string>
     <string name="only_home_screen">Només en la Pantalla d\'Inici</string>
@@ -418,8 +419,6 @@ No es veuran canvis si la barra d\'estat està oculta.
     <string name="read_phone_state_subtext">Aquest permís és necessari per a poder trucar des de la segona SIM</string>
     <string name="choose_sim">Trieu SIM</string>
     <string name="choose_sim_subtext">Trieu la SIM des de la qual vulgueu realitzar la trucada</string>
-
-
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
         <item>Abraham Lincoln</item>
