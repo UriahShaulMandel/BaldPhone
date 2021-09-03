@@ -40,7 +40,7 @@
     <string name="address">Adresse</string>
     <string name="advanced_options">Weitere Einstellungen</string>
     <string name="afternoon">Nachmittag</string>
-    <string name="airplane_mode">Flugzeugmodus</string>
+    <string name="airplane_mode">Flugmodus</string>
     <string name="alarm_name">Benennung des Weckers</string>
     <string name="alarm_volume">Lautstärke des Weckers</string>
     <string name="alarm_volume_subtext">Wähle die Lautstärke für den Wecker.\nDie Lautstärke steigt von Links nach Rechts an.</string>
@@ -221,9 +221,9 @@
     <string name="settings">Einstellungen</string>
     <string name="settings_permission">Berechtigung, Einstellungen vorzunehmen</string>
     <string name="share">Weiterleiten</string>
-    <string name="share_actual_text">Hallo, Ich benutze diese Platform, die sich "BaldPhone" nennt und die Bedienoberfläche des Handys durch eine größere, leichter und netter zu bedienende ersetzt.\nInteressiert dich das auch?\nDu kannst sie kostenlos herunterladen!\nFolge unten stehendem Link für mehr Informationen:\n\nhttps://sites.google.com/view/baldphone
+    <string name="share_actual_text">Hallo, Ich benutze die Plattform \"BaldPhone\". Sie macht die Bedienoberfläche des Handys größer, einfacher und netter.\nInteressiert dich das auch?\nDu kannst sie kostenlos herunterladen!\nFolge unten stehendem Link für mehr Informationen:\n\nhttps://sites.google.com/view/baldphone
     </string>
-    <string name="share_bald_phone_subtext">Hallo, kennst du jemanden, der sich vielleicht für BaldPhone interessieren könnte?\nDu kannst es ihm weitersagen!"
+    <string name="share_bald_phone_subtext">Hallo, kennst du Personen, die sich vielleicht für BaldPhone interessieren?\nErzähl ihnen von der App!\"
     </string>
     <string name="share_baldphone">Anderen von BaldPhone erzählen</string>
     <string name="share_contact">Kontakt weiterleiten</string>
@@ -385,6 +385,9 @@
     <string name="read_phone_state_subtext">Diese Erlaubnis wird benötigt, um die zweite SIM-Karte zum Telefonieren zu nutzen</string>
     <string name="choose_sim">Wähle SIM-Karte</string>
     <string name="choose_sim_subtext">Wähle die SIM-Karte, welche du zum Telefonieren verwenden möchtest</string>
+    <string name="website">Webseite</string>
+    <string name="appear_on_top">Erscheint oben</string>
+    <string name="appear_on_top_subtext">Diese Berechtigung ist bei der neuen Version von Android erforderlich, um Alarme und Erinnerungen anzuzeigen, wenn die App minimiert ist.</string>
 
 
     <string-array name="names_for_screenshots">

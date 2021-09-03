@@ -312,12 +312,12 @@ ja muuttaa kirkkautta.</string>
     <string name="could_not_connect_to_internet">Ei voitu muodostaa yhteyttä Internetiin!</string>
     <string name="could_not_start_the_download">Latausta ei voitu aloittaa!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Ladattua päivitystiedostoa ei voitu poistaa!</string>
-    <string name="downloading">Ladataan...</string>
+    <string name="downloading">Ladataan…</string>
 
     <string name="baldphone_is_up_to_date">BaldPhone on ajantasalla</string>
     <string name="what_s_new">Mikä on uutta</string>
     <string name="download_finished">Lataus on valmis</string>
-    <string name="downloading_updates">Ladataan päivityksiä...</string>
+    <string name="downloading_updates">Ladataan päivityksiä…</string>
     <string name="installing_doesn_t_work">Asentaminen ei onnistu?</string>
     <string name="try_now">Kokeile nyt</string>
     <string name="download_progress">Latauksen edistyminen</string>

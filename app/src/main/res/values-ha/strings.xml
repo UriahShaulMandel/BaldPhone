@@ -1,0 +1,83 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about"> Game da</string>
+    <string name="accessibility_settings">Samun dama</string>
+    <string name="acknowledgments">Amincewa</string>
+    <string name="add_alarm">Kara Kararrawa</string>
+    <string name="add_emergency_contact">Kara</string>
+    <string name="add_pill">Kara Kwaya</string>
+    <string name="afternoon">Yamma</string>
+    <string name="and_welcome_to_baldphone">kuma barka da zuwa Baldphone</string>
+
+    <string name="apps">Apps</string>
+    <string name="assistant">Mataimaki</string>
+    <string name="at_least_one_day_must_be_selected">Aƙalla rana ɗaya dole ne a zaɓi!</string>
+    <string name="backspace">kashin baya</string>
+    <string name="baldphone_bla_allow_permission">Da fatan za a ba da izini masu izini kamar haka:</string>
+    <string name="blocked">An toshe</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="brightness">Haske</string>
+    <string name="brightness_subtext">Canza Haske</string>
+    <string name="cache_cleared_successfully">An Cire Cache Da Nasara!</string>
+    <string name="call">Kira</string>
+    <string name="calling">Kan Kira</string>
+
+    <string name="camera">Kyamara</string>
+    <string name="camera_subtext">Ana buƙatar wannan izinin don kunna walƙiya</string>
+    <string name="cancel">Sake</string>
+    <string name="change_pills_time">Canja Lokaci Kwayoyin</string>
+    <string name="choose_friday">Jum</string>
+    <string name="choose_monday">Lit</string>
+    <string name="choose_saturday">Asa</string>
+    <string name="choose_sunday">Lah</string>
+    <string name="choose_thursday">Alh</string>
+    <string name="choose_tuesday">Tal</string>
+    <string name="choose_wednesday">Lar</string>
+    <string name="clear">A share</string>
+    <string name="clear_cache">Share Cache</string>
+    <string name="clock">Agogo</string>
+    <string name="contacts">Adiresoshi</string>
+    <string name="contacts_read_subtext">Ana buƙatar wannan izinin don karanta lambobin sadarwa.</string>
+    <string name="contacts_subtext">Ana buƙatar wannan izinin don ƙara sababbin lambobin sadarwa.</string>
+    <string name="current_time">Lokaci Na Yanzu</string>
+    <string name="dark">Duhu</string>
+    <string name="delete">Share</string>
+    <string name="done">Anyi</string>
+    <string name="down">Kasa</string>
+    <string name="evening">Maraice</string>
+    <string name="hide">Boye</string>
+    <string name="remove_from_sos">Cire daga SOS</string>
+    <string name="repeats_every_day">Kowace rana</string>
+    <string name="right_handed">Hannun dama</string>
+
+    <string name="settings">Saiti</string>
+    <string name="settings_permission">Izinin Saiti</string>
+    <string name="share">Raba</string>
+    <string name="share_baldphone">Raba BaldPhone</string>
+    <string name="share_contact">Raba Adireshin</string>
+    <string name="show">Nuna</string>
+    <string name="small">Karami</string>
+    <string name="speak">Yi magana</string>
+    <string name="today">Yau</string>
+    <string name="write">Rubuta</string>
+    <string name="write_contacts">Rubuta Lambobin Sadarwa</string>
+    <string name="yes">Haka ne</string>
+    <string name="discard">A watse</string>
+    <bool name="is_right_to_left">false</bool>
+
+</resources>

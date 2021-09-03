@@ -288,12 +288,12 @@ https://sites.google.com/view/baldphone</string>
     <string name="could_not_connect_to_internet">Nem lehet csatlakozni az internethez!</string>
     <string name="could_not_start_the_download">Nem lehet elindítani a letöltést!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Letöltött frissítési fájlt nem sikerült törölni!</string>
-    <string name="downloading">Letöltés...</string>
+    <string name="downloading">Letöltés…</string>
 
     <string name="baldphone_is_up_to_date">A BaldPhone alkalmazás legfrissebb verzióját használod!</string>
     <string name="what_s_new">Újdonságok</string>
     <string name="download_finished">Letöltés kész</string>
-    <string name="downloading_updates">Frissítések Letöltése...</string>
+    <string name="downloading_updates">Frissítések Letöltése…</string>
     <string name="installing_doesn_t_work">Telepítés nem működik?</string>
     <string name="try_now">Kipróbálás Most</string>
     <string name="download_progress">Letöltési folyamat</string>
@@ -372,8 +372,6 @@ https://sites.google.com/view/baldphone</string>
     <string name="read_phone_state_subtext">Szükséges engedély a második SIM kártyáról való telefonáláshoz.</string>
     <string name="choose_sim">SIM választása</string>
     <string name="choose_sim_subtext">Válaszd ki melyik SIM kártyáról akarsz hívni.</string>
-
-
     <string-array name="names_for_screenshots">
         <item>Keresztapa</item>
         <item>Abraham Lincoln</item>
