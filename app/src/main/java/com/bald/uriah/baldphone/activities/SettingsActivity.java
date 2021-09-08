@@ -391,12 +391,11 @@ public class SettingsActivity extends BaldActivity {
 
                         , R.drawable.info_on_button)
         );
-        if (!BuildConfig.FLAVOR.equals("gPlay"))
-            mainCategory.add(
-                    new RunnableSettingsItem(R.string.donate,
-                            v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://baldphone.com/support-us/"))),
-                            R.drawable.donate_on_button)
-            );
+        mainCategory.add(
+                new RunnableSettingsItem(R.string.get_involved,
+                        v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/UriahShaulMandel/BaldPhone/blob/master/CONTRIBUTING.md"))),
+                        R.drawable.contribute_on_button)
+        );
         mainCategory.add(
                 new RunnableSettingsItem(R.string.technical_information,
                         v -> startActivity(new Intent(this, TechnicalInfoActivity.class)),
