@@ -388,7 +388,6 @@
     <string name="appear_on_top">Mostra Sopra</string>
     <string name="appear_on_top_subtext">Questa autorizzazione è necessaria nelle nuove versioni di android per poter mostrare allarmi e promemoria quando lo schermo è bloccato</string>
 
-
     <string-array name="names_for_screenshots">
         <item>Il Padrino</item>
         <item>Abramo Lincoln</item>
