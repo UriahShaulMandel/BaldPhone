@@ -399,7 +399,6 @@
     <string name="appear_on_top">Mostrar sobre otras aplicaciones</string>
     <string name="appear_on_top_subtext">Este permiso es necesario en versiones nuevas de Android para poder mostrar alarmas y recordatorios al apagar la pantalla.</string>
 
-
     <string-array name="names_for_screenshots">
         <item>El padrino</item>
         <item>Abraham Lincoln</item>
