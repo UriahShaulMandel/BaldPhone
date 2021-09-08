@@ -404,6 +404,7 @@
     <string name="appear_on_top">Appear on top</string>
     <string name="appear_on_top_subtext">This permission is required on new version of android in order to show alarms and reminders when the screen is closed</string>
 
+    <string name="mail_application_not_found">Mail application not found!</string>
 
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
