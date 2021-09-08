@@ -380,7 +380,6 @@
     <string name="appear_on_top">Aparecer sobre outros</string>
     <string name="appear_on_top_subtext">Essa permissão é necessária em novas versões do Android para mostrar alarmes e lembretes quando a tela estiver desligada</string>
 
-
     <string-array name="names_for_screenshots">
         <item>O Poderoso Chefão</item>
         <item>Abraham Lincoln</item>
