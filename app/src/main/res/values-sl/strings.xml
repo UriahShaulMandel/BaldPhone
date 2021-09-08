@@ -397,7 +397,6 @@
     <string name="appear_on_top">Prikaži na vrhu</string>
     <string name="appear_on_top_subtext">To dovoljenje je potrebno na novejših Android različicah, da se vam budilke in opomniki prikažejo tudi, ko je zaslon izklopljen.</string>
 
-
     <string-array name="names_for_screenshots">
         <item>Rudolf Maister</item>
         <item>Marjana Deržaj</item>
