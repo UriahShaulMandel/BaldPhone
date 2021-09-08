@@ -413,6 +413,8 @@
     <string name="website">אתר</string>
     <string name="appear_on_top">גישה להצגה מעל</string>
     <string name="appear_on_top_subtext">יש לאפשר גישה זו בגרסאות חדשות של אנדרואיד, על מנת להציג שעון מעורר ותזכורות</string>
+    <string name="mail_application_not_found">לא נמצאה תוכנת מייל!</string>
+    <string name="get_involved">השתתף בפיתוח BaldPhone</string>
 
 
     <string-array name="names_for_screenshots">
