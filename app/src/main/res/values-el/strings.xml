@@ -407,7 +407,6 @@
     <string name="appear_on_top">Εμφάνιση στην κορυφή</string>
     <string name="appear_on_top_subtext"> Αυτή η άδεια απαιτείται στη νέα έκδοση Android για να προβληθούν οι ειδοποιήσεις και υπενθυμίσεις όταν η οθόνη είναι κλειστή</string>
 
-
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
         <item>Abraham Lincoln</item>
