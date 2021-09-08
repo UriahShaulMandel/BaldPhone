@@ -396,7 +396,6 @@
     <string name="appear_on_top">Visas på toppen</string>
     <string name="appear_on_top_subtext">Den här rättighet krävs för ny version av Android för att visa larm och påminnelser när skärmen är stängd</string>
 
-
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
         <item>Abraham Lincoln</item>
