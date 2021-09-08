@@ -387,7 +387,6 @@
     <string name="appear_on_top">Prikaži na vrhu</string>
     <string name="appear_on_top_subtext">Ova dovola je potrebna na novijoj verziji Androida da se prikažu alarmi i podsjetnici kad je zaslon ugašen</string>
 
-
     <string-array name="names_for_screenshots">
         <item>Kum</item>
         <item>Abraham Lincoln</item>
