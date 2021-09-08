@@ -15,7 +15,7 @@
   -->
 
 <resources>
-    <string name="about">About</string>
+    <string name="about">關於</string>
     <string name="about_subtext">Hi!\nMy name is Uriah Shaul Mandel, and I\'m the developer of this platform.\n
         I\'ve spent most of my \"adult\" life making this platform, and I\'ve released it for free, for all to
         use.\nYou are more than welcome to contact me by email:\nbaldphone.contact@gmail.com
@@ -379,6 +379,15 @@
     <string name="colorful">Colorful</string>
     <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
     <string name="edit_home_screen">Edit Home Screen</string>
+    <string name="dual_sim">雙 SIM 卡</string>
+    <string name="use_default">使用預設值</string>
+    <string name="show_options">顯示選項</string>
+    <string name="read_phone_state">讀取電話狀態</string>
+    <string name="read_phone_state_subtext">需要以下權限才可使用第二 SIM 卡致電</string>
+    <string name="choose_sim">選擇 SIM 卡</string>
+    <string name="choose_sim_subtext">請選擇使用哪張 SIM 卡致電</string>
+    <string name="website">網站</string>
+    <string name="appear_on_top">覆蓋於上顯示</string>
     <string-array name="names_for_screenshots">
         <item>教父</item>
         <item>亞伯拉罕·林肯</item>
