@@ -53,12 +53,6 @@ public class ContactsActivityScreenshot extends BaseScreenshotTakerTest<Contacts
     }
 
     @Override
-    protected void cleanupAfterTest() {
-        super.cleanupAfterTest();
-        TestUtils.deleteAllContactsInEmulator(getInstrumentation().getTargetContext().getApplicationContext());
-    }
-
-    @Override
     protected Class<ContactsActivity> activity() {
         return ContactsActivity.class;
     }

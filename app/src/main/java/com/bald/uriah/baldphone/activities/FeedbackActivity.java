@@ -16,6 +16,8 @@
 
 package com.bald.uriah.baldphone.activities;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.EditText;
 
@@ -23,8 +25,6 @@ import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.BaldToast;
-
-import org.acra.ACRA;
 
 public class FeedbackActivity extends BaldActivity {
     @Override
@@ -37,17 +37,24 @@ public class FeedbackActivity extends BaldActivity {
             if (text.length() == 0)
                 BaldToast.from(v.getContext()).setType(BaldToast.TYPE_ERROR).setText(R.string.feedback_cannot_be_empty).show();
             else {
-                ACRA.getErrorReporter().handleSilentException(new FeedbackException(String.valueOf(text)));
-                BaldToast.from(getApplicationContext()).setText(R.string.feedback_sent_successfully).show();
-                finish();
+                Intent intent =
+                        new Intent(Intent.ACTION_SENDTO)
+                                .setData(Uri.parse("mailto:"))
+                                .putExtra(Intent.EXTRA_EMAIL, new String[]{"baldphone.contact@gmail.com"})
+                                .putExtra(Intent.EXTRA_SUBJECT, "BaldPhone feedback")
+                                .putExtra(Intent.EXTRA_TEXT, String.valueOf(text));
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                    finish();
+                } else {
+                    // No mail client, weird!
+                    BaldToast.from(this)
+                            .setText(R.string.mail_application_not_found)
+                            .setType(BaldToast.TYPE_ERROR)
+                            .show();
+                }
             }
         });
-    }
-
-    private final static class FeedbackException extends Exception {
-        FeedbackException(String message) {
-            super(message);
-        }
     }
 
     @Override
