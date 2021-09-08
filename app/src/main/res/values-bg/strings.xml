@@ -404,7 +404,6 @@
     <string name="appear_on_top">Показване над другите приложения</string>
     <string name="appear_on_top_subtext">Разрешението е необходимо в новите версии на Андроид, за да се показват алармите и напомнянията при заключен екран</string>
 
-
     <string-array name="names_for_screenshots">
         <item>Кръстникът</item>
         <item>Абрахан Линкълн</item>
