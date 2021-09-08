@@ -402,7 +402,6 @@ ja muuttaa kirkkautta.</string>
     <string name="appear_on_top">Näkyy ylhäällä</string>
     <string name="appear_on_top_subtext">Tätä lupaa tarvitaan uudelle Android-versiolle, jotta hälytykset ja muistutukset voidaan näyttää, kun näyttö on suljettu</string>
 
-
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
         <item>Abraham Lincoln</item>
