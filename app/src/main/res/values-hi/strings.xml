@@ -403,7 +403,6 @@
     <string name="appear_on_top">शीर्ष पर दिखाई दें</string>
     <string name="appear_on_top_subtext">स्क्रीन बंद होने पर अलार्म और रिमाइंडर दिखाने के लिए एंड्रॉइड के नए संस्करण पर यह अनुमति आवश्यक है</string>
 
-
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
         <item>Abraham Lincoln</item>
