@@ -389,7 +389,6 @@
     <string name="appear_on_top">Erscheint oben</string>
     <string name="appear_on_top_subtext">Diese Berechtigung ist bei der neuen Version von Android erforderlich, um Alarme und Erinnerungen anzuzeigen, wenn die App minimiert ist.</string>
 
-
     <string-array name="names_for_screenshots">
         <item>Bismarck</item>
         <item>Bach</item>
