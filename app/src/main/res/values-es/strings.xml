@@ -222,7 +222,7 @@
     <string name="settings">Ajustes</string>
     <string name="settings_permission">Permisos concedidos</string>
     <string name="share">Compartir</string>
-    <string name="share_actual_text">Hola, estoy usando esta plataforma llamada «BaldPhone» que reemplaza la interfaz del teléfono por otra que es más clara, grande, concisa y fácil de usar. ¿Te parece interesante? Pues puedes descargarla gratis. Haz clic en este enlace para entrar en la página Web: https://sites.google.com/view/baldphone</string>
+    <string name="share_actual_text">Hola, estoy usando esta plataforma llamada «BaldPhone» que reemplaza la interfaz del teléfono por otra que es más clara, grande, concisa y fácil de usar. ¿Te parece interesante? Pues puedes descargarla gratis. Haz clic en este enlace para entrar en la página Web: https://baldphone.com</string>
     <string name="share_bald_phone_subtext">Oye, ¿conoces a alguien al que le pueda venir bien usar BaldPhone?\n
         Si quieres puedes recomendarles la aplicación.
     </string>

@@ -210,7 +210,7 @@
     <string name="settings">설정</string>
     <string name="settings_permission">설정 허가</string>
     <string name="share">공유</string>
-    <string name="share_actual_text">안녕하세요, 저는 BaldPhone이라는이 플랫폼을 사용하고 있습니다.이 플랫폼은 전화기의 인터페이스를 크고 단순하며 친숙한 인터페이스로 대체합니다. 관심이있으세요? 무료로 다운로드 할 수 있습니다! 자세한 내용은 아래 링크를 확인하십시오. https://sites.google.com/view/baldphone</string>
+    <string name="share_actual_text">안녕하세요, 저는 BaldPhone이라는이 플랫폼을 사용하고 있습니다.이 플랫폼은 전화기의 인터페이스를 크고 단순하며 친숙한 인터페이스로 대체합니다. 관심이있으세요? 무료로 다운로드 할 수 있습니다! 자세한 내용은 아래 링크를 확인하십시오. https://baldphone.com</string>
     <string name="share_bald_phone_subtext">BaldPhone에 대해 알고 싶은 사람이 있습니까? 당신은 그들과 이야기 나눌 수 있습니다!</string>
     <string name="share_baldphone">BaldPhone 공유</string>
     <string name="share_contact">연락처 공유</string>
