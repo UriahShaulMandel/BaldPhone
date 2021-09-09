@@ -223,7 +223,7 @@
     <string name="settings">Postavke</string>
     <string name="settings_permission">Dozvole postavki</string>
     <string name="share">Dijeli</string>
-    <string name="share_actual_text">Bok, ja koristim aplikaciju "BaldPhone" koja zamjenjuje izgled uređaja u veliko, jednostavno i prijateljsko sučelje.\nUkoliko ste zainteresirani, možete ga preuzeti na web stranici besplatno!\nKliknite na link za više informacija:\n\nhttps://sites.google.com/view/baldphone
+    <string name="share_actual_text">Bok, ja koristim aplikaciju "BaldPhone" koja zamjenjuje izgled uređaja u veliko, jednostavno i prijateljsko sučelje.\nUkoliko ste zainteresirani, možete ga preuzeti na web stranici besplatno!\nKliknite na link za više informacija:\n\nhttps://baldphone.com
     </string>
     <string name="share_bald_phone_subtext">Hej, poznajete li nekoga tko bi želio koristiti aplikaciju BaldPhone?\nMožete ju podijeliti s njima!</string>
     <string name="share_baldphone">Dijeli BaldPhone</string>

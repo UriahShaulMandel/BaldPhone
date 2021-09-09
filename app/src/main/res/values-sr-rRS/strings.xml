@@ -211,7 +211,7 @@
     <string name="settings">Podešavanja</string>
     <string name="settings_permission">Dozvole za opcije</string>
     <string name="share">Podeli</string>
-    <string name="share_actual_text">Zdravo, koristim platformu koja se zove \"BaldPhone\" koja menja telefon interfejs sa drzgim koji je veći i pojednostavljen.\nZainteresovan?\nMožeš da ga skineš besplatno!\nPogledaj na ovom linku ispod za više informacija:\n\nhttps://sites.google.com/view/baldphone</string>
+    <string name="share_actual_text">Zdravo, koristim platformu koja se zove \"BaldPhone\" koja menja telefon interfejs sa drzgim koji je veći i pojednostavljen.\nZainteresovan?\nMožeš da ga skineš besplatno!\nPogledaj na ovom linku ispod za više informacija:\n\nhttps://baldphone.com</string>
     <string name="share_bald_phone_subtext">Zdravo, poznaješ nekog ko bi želeo da zna za BaldPhone?\nPodeli to sa njim!</string>
     <string name="share_baldphone">Podelite BaldPhone</string>
     <string name="share_contact">Podeli kontakt</string>
