@@ -221,8 +221,9 @@
     <string name="settings">設定</string>
     <string name="settings_permission">設定權限</string>
     <string name="share">分享</string>
-    <string name="share_actual_text">你好！我正使用清風電話，電話的字體現在又大又簡單易用！\n立即免費下載!\n到這個網址下載:\n\nhttps://baldphone.com
-    </string>
+    <string name="share_actual_text">嗨，我正在使用这个名为“BaldPhone”的平台，它将手机的界面替换为
+       一个大字体、简单，友好的界面。\n感兴趣吗?\n你可以免费下载它！\n查看下方链接
+        获取更多信息：\n\nhttps://baldphone.com</string>
     <string name="share_bald_phone_subtext">你認識其他會喜歡清風電話的人嗎?與他們分享吧!"
     </string>
     <string name="share_baldphone">分享清風電話</string>
@@ -390,6 +391,8 @@
     <string name="appear_on_top">出现在顶部</string>
     <string name="appear_on_top_subtext">在新版本的安卓系统上需要此权限，以便在屏幕处于关闭状态时显示警报和提醒</string>
 
+    <string name="mail_application_not_found">未找到电子邮件应用！</string>
+    <string name="get_involved">参与进来</string>
 
     <string-array name="names_for_screenshots">
         <item>教父</item>
