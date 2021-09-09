@@ -390,6 +390,7 @@
     <string name="appear_on_top">出现在顶部</string>
     <string name="appear_on_top_subtext">在新版本的安卓系统上需要此权限，以便在屏幕处于关闭状态时显示警报和提醒</string>
 
+    <string name="mail_application_not_found">未找到电子邮件应用</string>
 
     <string-array name="names_for_screenshots">
         <item>教父</item>
