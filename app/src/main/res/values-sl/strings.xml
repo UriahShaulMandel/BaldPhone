@@ -224,10 +224,7 @@
     <string name="settings">Nastavitve</string>
     <string name="settings_permission">Dovoljenja nastavitev</string>
     <string name="share">Deli</string>
-    <string name="share_actual_text">Zdravo, uporabljam platformo imenovano BaldPhone, katera nadomesti privzet telefonski vmesnik
-		v velikega, enostavnega in prijaznega za uporabo.\nLahko jo preneseš in uporabljaš brezplačno!\nPreveri spodnjo povezavo za več
-		informacij:\n\nhttps://baldphone.com
-    </string>
+    <string name="share_actual_text">Zdravo, uporabljam platformo imenovano BaldPhone, katera nadomesti privzet telefonski vmesnik v velikega, enostavnega in prijaznega za uporabo.\nTe zanima?\nLahko jo preneseš brezplačno!\nPreveri spodnjo povezavo za več informacij:\n\nhttps://baldphone.com</string>
     <string name="share_bald_phone_subtext">Hej, morda poznaš ljudi, ki bi želeli spoznati BaldPhone ?\nLahko ga deliš z njimi !"</string>
     <string name="share_baldphone">Deli BaldPhone</string>
     <string name="share_contact">Deli stik</string>
@@ -397,6 +394,8 @@
     <string name="appear_on_top">Prikaži na vrhu</string>
     <string name="appear_on_top_subtext">To dovoljenje je potrebno na novejših Android različicah, da se vam budilke in opomniki prikažejo tudi, ko je zaslon izklopljen.</string>
 
+    <string name="mail_application_not_found">Aplikacija za e-pošto ni bila najdena!</string>
+    <string name="get_involved">Vključite se</string>
 
     <string-array name="names_for_screenshots">
         <item>Rudolf Maister</item>
