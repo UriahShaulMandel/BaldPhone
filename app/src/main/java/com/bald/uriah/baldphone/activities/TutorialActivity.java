@@ -28,7 +28,7 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment1;
 import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment2;
 import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment4;
-import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.views.ViewPagerHolder;
 
 public class TutorialActivity extends BaldActivity {

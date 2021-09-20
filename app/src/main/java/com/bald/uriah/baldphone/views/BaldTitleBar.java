@@ -32,8 +32,8 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.StringRes;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.core.BPrefs;
+import com.bald.uriah.baldphone.core.BaldToast;
 
 public class BaldTitleBar extends LinearLayout {
     private CharSequence title;

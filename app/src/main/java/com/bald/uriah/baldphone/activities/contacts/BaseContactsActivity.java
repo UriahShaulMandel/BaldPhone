@@ -40,10 +40,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
-import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.core.BaldToast;
+import com.bald.uriah.baldphone.utils.InputUtils;
 import com.bald.uriah.baldphone.utils.S;
-import com.bald.uriah.baldphone.utils.SoftInputAssist;
-import com.bald.uriah.baldphone.utils.Toggeler;
+import com.bald.uriah.baldphone.utils.ToggleUtils;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 
 import static android.view.View.GONE;
@@ -70,7 +70,7 @@ abstract class BaseContactsActivity extends BaldActivity {
 
     private String filter = "";
     private boolean favorite = false;
-    private SoftInputAssist softInputAssist;
+    private InputUtils.SoftInputAssist softInputAssist;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -79,7 +79,7 @@ abstract class BaseContactsActivity extends BaldActivity {
             return;
         setContentView(layout());
 
-        softInputAssist = new SoftInputAssist(this);
+        softInputAssist = new InputUtils.SoftInputAssist(this);
         contentResolver = getContentResolver();
 
         final Intent callingIntent = getIntent();
@@ -186,7 +186,7 @@ abstract class BaseContactsActivity extends BaldActivity {
         });
         bt_speak.setOnClickListener(this::onClick);
         bt_type.setOnClickListener(this::onClick);
-        Toggeler.newBackgroundToggeler(bt_favorite, bt_favorite, new int[]{
+        ToggleUtils.newBackgroundToggeler(bt_favorite, bt_favorite, new int[]{
                 R.drawable.btn_selected, R.drawable.style_for_buttons
         }, new View.OnClickListener[]{
                 v -> {

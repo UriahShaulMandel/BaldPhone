@@ -16,7 +16,7 @@
 
 package com.bald.uriah.baldphone.activities;
 
-import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.core.BPrefs;
 
 import org.junit.After;
 import org.junit.Before;

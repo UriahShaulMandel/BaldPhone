@@ -37,7 +37,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.Constants;
-import com.bald.uriah.baldphone.utils.Toggeler;
+import com.bald.uriah.baldphone.utils.ToggleUtils;
 
 /**
  * Most of this class is defined at {@link SingleMediaActivity},
@@ -175,7 +175,7 @@ public class SingleVideoActivity extends SingleMediaActivity implements Constant
             videoView.seekTo(1);
             videoView.setOnCompletionListener(mp -> {
                 play_stop.setImageResource(R.drawable.replay_on_background);
-                Toggeler.newImageToggeler(
+                ToggleUtils.newImageToggeler(
                         play_stop,
                         play_stop,
                         new int[]{R.drawable.stop_on_background, R.drawable.play_on_background},
@@ -185,7 +185,7 @@ public class SingleVideoActivity extends SingleMediaActivity implements Constant
                         });
             });
 
-            Toggeler.newImageToggeler(
+            ToggleUtils.newImageToggeler(
                     play_stop,
                     play_stop,
                     new int[]{R.drawable.stop_on_background, R.drawable.play_on_background},
@@ -197,7 +197,7 @@ public class SingleVideoActivity extends SingleMediaActivity implements Constant
             ((VideoViewWrapper) v).setOnShowedChangedListener(shown -> {
                 if (shown) {
                     videoView.seekTo(1);
-                    Toggeler.newImageToggeler(
+                    ToggleUtils.newImageToggeler(
                             play_stop,
                             play_stop,
                             new int[]{R.drawable.stop_on_background, R.drawable.play_on_background},

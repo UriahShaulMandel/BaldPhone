@@ -34,9 +34,9 @@ import com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.apps.App;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabase;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
-import com.bald.uriah.baldphone.utils.BDB;
-import com.bald.uriah.baldphone.utils.BDialog;
-import com.bald.uriah.baldphone.utils.DropDownRecyclerViewAdapter;
+import com.bald.uriah.baldphone.core.BDB;
+import com.bald.uriah.baldphone.core.BDialog;
+import com.bald.uriah.baldphone.adapters.DropDownRecyclerViewAdapter;
 import com.bald.uriah.baldphone.utils.S;
 
 import java.util.List;

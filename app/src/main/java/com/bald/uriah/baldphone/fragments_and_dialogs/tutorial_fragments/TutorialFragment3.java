@@ -26,7 +26,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.core.BaldToast;
 import com.bald.uriah.baldphone.views.BaldButton;
 
 import java.util.List;

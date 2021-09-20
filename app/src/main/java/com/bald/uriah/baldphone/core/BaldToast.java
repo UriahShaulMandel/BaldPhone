@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.utils;
+package com.bald.uriah.baldphone.core;
 
 import android.content.Context;
 import android.os.Handler;
@@ -37,6 +37,7 @@ import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
 
 import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

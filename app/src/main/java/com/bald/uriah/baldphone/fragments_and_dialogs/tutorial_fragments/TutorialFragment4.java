@@ -20,7 +20,7 @@ import android.content.Context;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.FakeLauncherActivity;
-import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.views.BaldButton;
 
 public class TutorialFragment4 extends TutorialFragment {

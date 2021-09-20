@@ -37,7 +37,7 @@ import androidx.core.util.Pools;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.adapters.BaldViewAdapter;
-import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.core.BaldToast;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 import com.bald.uriah.baldphone.views.ViewPagerHolder;

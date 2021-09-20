@@ -22,7 +22,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldPrefsUtils;
 
 public class Page1EditorActivity extends BaldActivity {

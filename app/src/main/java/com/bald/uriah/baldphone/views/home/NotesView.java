@@ -31,8 +31,8 @@ import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
-import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.Toggeler;
+import com.bald.uriah.baldphone.core.BPrefs;
+import com.bald.uriah.baldphone.utils.ToggleUtils;
 import com.bald.uriah.baldphone.views.BaldPictureTextButton;
 
 import java.lang.ref.WeakReference;
@@ -55,7 +55,7 @@ public class NotesView extends HomeView {
         editText.setText(sharedPreferences.getString(BPrefs.NOTE_KEY, ""));
 
         final BaldPictureTextButton bt_edit = view.findViewById(R.id.bt_edit);
-        Toggeler.newSimpleTextImageToggeler(
+        ToggleUtils.newSimpleTextImageToggeler(
                 bt_edit,
                 bt_edit.getImageView(),
                 bt_edit.getTextView(),

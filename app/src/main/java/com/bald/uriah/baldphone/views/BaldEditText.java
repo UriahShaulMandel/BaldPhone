@@ -25,7 +25,7 @@ import android.view.inputmethod.InputMethodManager;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
-import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
 
 /**

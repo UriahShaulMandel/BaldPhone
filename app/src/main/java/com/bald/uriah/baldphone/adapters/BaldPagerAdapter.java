@@ -24,7 +24,7 @@ import androidx.core.util.Pools;
 
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
-import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.views.home.HomePage1;
 import com.bald.uriah.baldphone.views.home.HomePage2;
 import com.bald.uriah.baldphone.views.home.HomeViewFactory;

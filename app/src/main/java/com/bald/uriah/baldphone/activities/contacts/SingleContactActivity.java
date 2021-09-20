@@ -50,11 +50,11 @@ import com.bald.uriah.baldphone.databases.calls.Call;
 import com.bald.uriah.baldphone.databases.calls.CallLogsHelper;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
-import com.bald.uriah.baldphone.utils.BDB;
-import com.bald.uriah.baldphone.utils.BDialog;
-import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.core.BDB;
+import com.bald.uriah.baldphone.core.BDialog;
+import com.bald.uriah.baldphone.core.BaldToast;
 import com.bald.uriah.baldphone.utils.S;
-import com.bald.uriah.baldphone.utils.Toggeler;
+import com.bald.uriah.baldphone.utils.ToggleUtils;
 import com.bald.uriah.baldphone.views.BaldLinearLayoutButton;
 import com.bald.uriah.baldphone.views.BaldPictureTextButton;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
@@ -288,7 +288,7 @@ public class SingleContactActivity extends BaldActivity {
                 favorite = view.findViewById(R.id.favorite),
                 sos = view.findViewById(R.id.sos);
 
-        Toggeler.newTextImageToggeler(
+        ToggleUtils.newTextImageToggeler(
                 home,
                 home.getImageView(),
                 home.getTextView(),
@@ -301,7 +301,7 @@ public class SingleContactActivity extends BaldActivity {
                 HomeScreenPinHelper.isPinned(this, contact.getLookupKey()) ? 1 : 0
         );
 
-        Toggeler.newTextImageToggeler(
+        ToggleUtils.newTextImageToggeler(
                 sos,
                 sos.getImageView(),
                 sos.getTextView(),
@@ -328,7 +328,7 @@ public class SingleContactActivity extends BaldActivity {
         final ContentValues UNSTAR = new ContentValues();
         UNSTAR.put(ContactsContract.Contacts.STARRED, 0);
         baldTitleBar.setGold(contact.isFavorite());
-        Toggeler.newTextImageToggeler(
+        ToggleUtils.newTextImageToggeler(
                 favorite,
                 favorite.getImageView(),
                 favorite.getTextView(),
@@ -401,7 +401,7 @@ public class SingleContactActivity extends BaldActivity {
         recyclerView.setAdapter(new CallsRecyclerViewAdapter(callList, this));
 
         final BaldPictureTextButton show = view.findViewById(R.id.bt_show);
-        Toggeler.newSimpleTextImageToggeler(
+        ToggleUtils.newSimpleTextImageToggeler(
                 show,
                 show.getImageView(),
                 show.getTextView(),

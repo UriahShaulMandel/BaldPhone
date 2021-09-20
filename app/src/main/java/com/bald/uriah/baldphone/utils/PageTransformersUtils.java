@@ -22,7 +22,7 @@ import androidx.viewpager.widget.ViewPager;
  * right now this feature is still working, but not available in the settings.
  * the reason for it is that i want to deprecate it, but not sure yet.
  */
-public class PageTransformers {
+public class PageTransformersUtils {
     private static final ViewPager.PageTransformer OPTION_C = (page, position) -> page.setRotationY(position * -30);
     private static final ViewPager.PageTransformer OPTION_B = (page, position) -> {
         final float normalizedposition = Math.abs(Math.abs(position) - 1);

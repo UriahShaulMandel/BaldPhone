@@ -22,7 +22,7 @@ import androidx.test.filters.LargeTest;
 import androidx.test.runner.AndroidJUnit4;
 
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
-import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.core.BPrefs;
 
 import org.junit.runner.RunWith;
 

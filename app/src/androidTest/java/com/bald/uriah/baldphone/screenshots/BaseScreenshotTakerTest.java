@@ -23,7 +23,7 @@ import android.view.View;
 
 import androidx.test.rule.ActivityTestRule;
 
-import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.core.BPrefs;
 
 import org.junit.After;
 import org.junit.Before;

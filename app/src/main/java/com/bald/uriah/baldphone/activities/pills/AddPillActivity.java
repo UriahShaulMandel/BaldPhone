@@ -35,15 +35,15 @@ import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
 import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
 import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
-import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.core.BPrefs;
+import com.bald.uriah.baldphone.core.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.views.BaldButton;
 import com.bald.uriah.baldphone.views.BaldMultipleSelection;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 
-import static com.bald.uriah.baldphone.utils.BaldToast.TYPE_ERROR;
+import static com.bald.uriah.baldphone.core.BaldToast.TYPE_ERROR;
 
 public class AddPillActivity extends BaldActivity {
     private static final String TAG = AddPillActivity.class.getSimpleName();

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.utils;
+package com.bald.uriah.baldphone.core;
 
 import android.content.Context;
 import android.view.View;

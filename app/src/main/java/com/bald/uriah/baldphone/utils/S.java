@@ -57,7 +57,11 @@ import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.activities.contacts.ShareActivity;
+import com.bald.uriah.baldphone.adapters.DropDownRecyclerViewAdapter;
 import com.bald.uriah.baldphone.content_providers.BaldFileProvider;
+import com.bald.uriah.baldphone.core.BDB;
+import com.bald.uriah.baldphone.core.BDialog;
+import com.bald.uriah.baldphone.core.BPrefs;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import org.joda.time.DateTime;

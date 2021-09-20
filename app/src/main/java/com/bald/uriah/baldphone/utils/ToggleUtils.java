@@ -24,7 +24,7 @@ import android.widget.TextView;
  * Simple Toggeler maker, moves the boilerplate code to here
  * each one is different, and uses different technique
  */
-public class Toggeler {
+public class ToggleUtils {
     public static void newSimpleTextImageToggeler(View button, ImageView imageView, TextView textView, int pic1, int pic2, int text1, int text2, View.OnClickListener listener1, View.OnClickListener listener2) {
         final boolean[] state = new boolean[]{true};
         button.setOnClickListener((v -> {

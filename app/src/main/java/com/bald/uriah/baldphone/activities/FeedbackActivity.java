@@ -24,7 +24,7 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.core.BaldToast;
 
 public class FeedbackActivity extends BaldActivity {
     @Override

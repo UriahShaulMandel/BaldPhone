@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.utils;
+package com.bald.uriah.baldphone.core;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -24,6 +24,7 @@ import androidx.annotation.StyleRes;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 
 public final class BPrefs {
     public static final String KEY = "baldPrefs";

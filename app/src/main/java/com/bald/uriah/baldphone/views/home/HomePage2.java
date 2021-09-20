@@ -34,8 +34,8 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.activities.SettingsActivity;
 import com.bald.uriah.baldphone.activities.VideoTutorialsActivity;
-import com.bald.uriah.baldphone.utils.BaldToast;
-import com.bald.uriah.baldphone.utils.DropDownRecyclerViewAdapter;
+import com.bald.uriah.baldphone.core.BaldToast;
+import com.bald.uriah.baldphone.adapters.DropDownRecyclerViewAdapter;
 import com.bald.uriah.baldphone.utils.S;
 import com.bumptech.glide.Glide;
 

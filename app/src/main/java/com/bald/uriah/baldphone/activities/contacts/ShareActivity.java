@@ -31,7 +31,7 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 import com.bald.uriah.baldphone.adapters.IntentAdapter;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
-import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.core.BaldToast;
 import com.bald.uriah.baldphone.utils.PackageUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldSwitch;

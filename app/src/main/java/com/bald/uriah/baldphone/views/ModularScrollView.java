@@ -23,7 +23,7 @@ import android.widget.ScrollView;
 
 import androidx.annotation.Nullable;
 
-import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.core.BPrefs;
 
 public class ModularScrollView extends ScrollView implements Modular {
     public boolean touchEnabled;

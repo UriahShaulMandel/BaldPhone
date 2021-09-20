@@ -58,16 +58,16 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.adapters.BaldPagerAdapter;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
 import com.bald.uriah.baldphone.services.NotificationListenerService;
-import com.bald.uriah.baldphone.utils.BDB;
-import com.bald.uriah.baldphone.utils.BDialog;
-import com.bald.uriah.baldphone.utils.BPrefs;
+import com.bald.uriah.baldphone.core.BDB;
+import com.bald.uriah.baldphone.core.BDialog;
+import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldHomeWatcher;
 import com.bald.uriah.baldphone.utils.BaldPrefsUtils;
-import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.core.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
-import com.bald.uriah.baldphone.utils.DropDownRecyclerViewAdapter;
-import com.bald.uriah.baldphone.utils.PageTransformers;
+import com.bald.uriah.baldphone.adapters.DropDownRecyclerViewAdapter;
+import com.bald.uriah.baldphone.utils.PageTransformersUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.utils.UpdatingUtil;
 import com.bald.uriah.baldphone.views.BaldImageButton;
@@ -389,7 +389,7 @@ public class HomeScreenActivity extends BaldActivity {
      */
     private void viewPagerHandler() {
         baldPagerAdapter = new BaldPagerAdapter(this);
-        viewPagerHolder.setPageTransformer(false, PageTransformers.pageTransformers[sharedPreferences.getInt(BPrefs.PAGE_TRANSFORMERS_KEY, BPrefs.PAGE_TRANSFORMERS_DEFAULT_VALUE)]);
+        viewPagerHolder.setPageTransformer(false, PageTransformersUtils.pageTransformers[sharedPreferences.getInt(BPrefs.PAGE_TRANSFORMERS_KEY, BPrefs.PAGE_TRANSFORMERS_DEFAULT_VALUE)]);
         viewPagerHolder.setViewPagerAdapter(baldPagerAdapter);
         viewPagerHolder.setCurrentItem(baldPagerAdapter.startingPage);
     }

@@ -40,7 +40,7 @@ import com.bald.uriah.baldphone.databases.reminders.Reminder;
 import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
 import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
 import com.bald.uriah.baldphone.utils.BaldGridItemDecoration;
-import com.bald.uriah.baldphone.utils.BaldToast;
+import com.bald.uriah.baldphone.core.BaldToast;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
