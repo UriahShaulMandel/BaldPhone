@@ -24,9 +24,9 @@ import androidx.annotation.ColorInt;
 import java.util.Random;
 
 public class RandomColorMaker {
-    private SparseIntArray hashsToColors = new SparseIntArray();
-    private Random random = new Random();
-    private boolean bright;
+    private final SparseIntArray hashsToColors = new SparseIntArray();
+    private final Random random = new Random();
+    private final boolean bright;
 
     public RandomColorMaker(int backgroundColor) {
         this.bright = !isColorBright(backgroundColor);
