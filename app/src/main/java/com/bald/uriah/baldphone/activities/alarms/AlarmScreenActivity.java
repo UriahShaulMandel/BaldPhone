@@ -37,7 +37,7 @@ import com.bald.uriah.baldphone.activities.TimedBaldActivity;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
-import com.bald.uriah.baldphone.utils.Animations;
+import com.bald.uriah.baldphone.utils.AnimationsUtils;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
@@ -134,7 +134,7 @@ public class AlarmScreenActivity extends TimedBaldActivity {
             e.printStackTrace();
         }
 
-        Animations.makeBiggerAndSmaller(this, cancel, () -> {
+        AnimationsUtils.makeBiggerAndSmaller(this, cancel, () -> {
             if (vibrator != null) vibrator.vibrate(D.vibetime);
         });
         scheduleNextAlarm();

@@ -36,7 +36,7 @@ import com.bald.uriah.baldphone.activities.TimedBaldActivity;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
 import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
 import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
-import com.bald.uriah.baldphone.utils.Animations;
+import com.bald.uriah.baldphone.utils.AnimationsUtils;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
@@ -108,7 +108,7 @@ public class PillScreenActivity extends TimedBaldActivity {
             e.printStackTrace();
         }
 
-        Animations.makeBiggerAndSmaller(this, iv_pill, null);
+        AnimationsUtils.makeBiggerAndSmaller(this, iv_pill, null);
         scheduleNextReminder();
     }
 

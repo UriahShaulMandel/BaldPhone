@@ -23,7 +23,7 @@ import android.view.animation.AnimationUtils;
 
 import com.bald.uriah.baldphone.R;
 
-public class Animations {
+public class AnimationsUtils {
 
     public static void makeBiggerAndSmaller(final Context context, final View view, final Runnable runnable) {
         final Animation enlarge =
