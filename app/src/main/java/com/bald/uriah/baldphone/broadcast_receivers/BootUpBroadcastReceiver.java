@@ -20,7 +20,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.bald.uriah.baldphone.BaldPhone;
+import com.bald.uriah.baldphone.core.BaldPhone;
 import com.bald.uriah.baldphone.utils.S;
 
 /**

@@ -35,7 +35,7 @@ import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 
 import java.util.ArrayList;
 
@@ -169,7 +169,7 @@ public class BaldMultipleSelection extends LinearLayout {
         layoutParams.setMargins(getOrientation() == VERTICAL ? 0 : inPx, getOrientation() != VERTICAL ? 0 : inPx, getOrientation() == VERTICAL ? 0 : inPx, getOrientation() != VERTICAL ? 0 : inPx);
         layoutParams.weight = 1f;
         button.setLayoutParams(layoutParams);
-        button.setOnClickListener(D.longer);
+        button.setOnClickListener(GeneralConstants.longer);
         button.setTextColor(textColorOnButton);
         button.setOnClickListener(v -> {
             if (selection == index)

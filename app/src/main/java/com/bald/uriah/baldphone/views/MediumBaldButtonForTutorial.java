@@ -22,7 +22,7 @@ import android.util.AttributeSet;
 
 import androidx.annotation.Nullable;
 
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 
 public class MediumBaldButtonForTutorial extends androidx.appcompat.widget.AppCompatTextView implements BaldButtonInterface {
     private Vibrator vibrator;
@@ -51,13 +51,13 @@ public class MediumBaldButtonForTutorial extends androidx.appcompat.widget.AppCo
 
     @Override
     public void vibrate() {
-        vibrator.vibrate(D.vibetime);
+        vibrator.vibrate(GeneralConstants.vibetime);
     }
 
     @Override
     public void setOnClickListener(@Nullable OnClickListener l) {
         this.onClickListener = l;
-        super.setOnClickListener(D.EMPTY_CLICK_LISTENER);
+        super.setOnClickListener(GeneralConstants.EMPTY_CLICK_LISTENER);
         super.setOnTouchListener(new BaldButtonTouchListener(this));
 
     }

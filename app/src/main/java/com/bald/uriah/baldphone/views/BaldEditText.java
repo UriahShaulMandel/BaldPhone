@@ -26,7 +26,7 @@ import android.view.inputmethod.InputMethodManager;
 import androidx.appcompat.widget.AppCompatEditText;
 
 import com.bald.uriah.baldphone.core.BPrefs;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 
 /**
  * This class isn't the same as {@link BaldButton} so be careful
@@ -63,7 +63,7 @@ public class BaldEditText extends AppCompatEditText implements View.OnLongClickL
     @Override
     public boolean onLongClick(View v) {
         if (vibrationFeedback)
-            vibrator.vibrate(D.vibetime);
+            vibrator.vibrate(GeneralConstants.vibetime);
 
         if (requestFocus()) {
             final CharSequence charSequence = getText();

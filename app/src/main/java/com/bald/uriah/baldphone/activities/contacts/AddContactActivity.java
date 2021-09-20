@@ -40,13 +40,13 @@ import androidx.exifinterface.media.ExifInterface;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.BaldActivity;
-import com.bald.uriah.baldphone.activities.HomeScreenActivity;
+import com.bald.uriah.baldphone.activities.homescreen.HomeScreenActivity;
 import com.bald.uriah.baldphone.activities.media.PhotosActivity;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 import com.bald.uriah.baldphone.core.BDB;
 import com.bald.uriah.baldphone.core.BDialog;
 import com.bald.uriah.baldphone.core.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldImageButton;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
@@ -436,7 +436,7 @@ public class AddContactActivity extends BaldActivity {
             super.onBackPressed();
         else {
             if (vibrator != null)
-                vibrator.vibrate(D.vibetime);
+                vibrator.vibrate(GeneralConstants.vibetime);
             showExitMessage();
         }
     }

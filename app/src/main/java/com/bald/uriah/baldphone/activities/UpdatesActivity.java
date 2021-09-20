@@ -43,7 +43,7 @@ import com.bald.uriah.baldphone.core.BDB;
 import com.bald.uriah.baldphone.core.BDialog;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.core.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 
@@ -175,7 +175,7 @@ public class UpdatesActivity extends BaldActivity {
             bt.setText(R.string.install);
         } else if (downloading) {
             bt.setText(R.string.downloading);
-            bt.setOnClickListener(D.EMPTY_CLICK_LISTENER);
+            bt.setOnClickListener(GeneralConstants.EMPTY_CLICK_LISTENER);
             pb.setVisibility(View.VISIBLE);
             tv_download_progress.setVisibility(View.VISIBLE);
             startProgressChecker();

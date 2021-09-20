@@ -33,7 +33,7 @@ import com.bald.uriah.baldphone.databases.alarms.Alarm;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
 import com.bald.uriah.baldphone.core.BPrefs;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.views.BaldButton;
 import com.bald.uriah.baldphone.views.BaldNumberChooser;
@@ -150,7 +150,7 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
     private void genOnClickListeners() {
         bt_alarm_submit.setOnClickListener((v) -> submit());
         only_once.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (vibrator != null) vibrator.vibrate(D.vibetime);
+            if (vibrator != null) vibrator.vibrate(GeneralConstants.vibetime);
             if (isChecked) {
                 for (CheckBox checkBox : daysCheckBoxes)
                     checkBox.setChecked(false);
@@ -165,7 +165,7 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
         every_day.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (vibrator != null) vibrator.vibrate(D.vibetime);
+                if (vibrator != null) vibrator.vibrate(GeneralConstants.vibetime);
                 if (isChecked) {
                     for (CheckBox checkBox : daysCheckBoxes)
                         checkBox.setChecked(false);
@@ -184,7 +184,7 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
         for (final CheckBox checkBox : daysCheckBoxes) {
             checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 if (vibrator != null)
-                    vibrator.vibrate(D.vibetime);
+                    vibrator.vibrate(GeneralConstants.vibetime);
                 if (isChecked) {
                     only_once.setChecked(false);
                     every_day.setChecked(false);

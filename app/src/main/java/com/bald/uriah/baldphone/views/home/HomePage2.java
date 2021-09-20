@@ -31,7 +31,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.HomeScreenActivity;
+import com.bald.uriah.baldphone.activities.homescreen.HomeScreenActivity;
 import com.bald.uriah.baldphone.activities.SettingsActivity;
 import com.bald.uriah.baldphone.activities.VideoTutorialsActivity;
 import com.bald.uriah.baldphone.core.BaldToast;

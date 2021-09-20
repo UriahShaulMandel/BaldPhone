@@ -38,7 +38,7 @@ import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
 import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
 import com.bald.uriah.baldphone.utils.AnimationsUtils;
 import com.bald.uriah.baldphone.core.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 
@@ -83,12 +83,12 @@ public class PillScreenActivity extends TimedBaldActivity {
 
         took.setOnClickListener(v -> {
             if (vibrator != null)
-                vibrator.vibrate(D.vibetime);
+                vibrator.vibrate(GeneralConstants.vibetime);
             finish();
         });
         took.setOnLongClickListener(v -> {
             if (vibrator != null)
-                vibrator.vibrate(D.vibetime);
+                vibrator.vibrate(GeneralConstants.vibetime);
             finish();
             return true;
         });
@@ -143,7 +143,7 @@ public class PillScreenActivity extends TimedBaldActivity {
 
     private void snooze() {
         if (vibrator != null)
-            vibrator.vibrate(D.vibetime);
+            vibrator.vibrate(GeneralConstants.vibetime);
         ReminderScheduler.scheduleSnooze(reminder, this);
         finish();
     }

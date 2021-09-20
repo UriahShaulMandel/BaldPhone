@@ -39,9 +39,9 @@ import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
 import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
 import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
-import com.bald.uriah.baldphone.utils.BaldGridItemDecoration;
 import com.bald.uriah.baldphone.core.BaldToast;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
+import com.bald.uriah.baldphone.utils.RecyclerViewUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
@@ -71,7 +71,7 @@ public class PillsActivity extends BaldActivity {
         recyclerView.setLayoutManager(gridLayoutManager);
         Resources r = getResources();
         recyclerView.addItemDecoration(
-                new BaldGridItemDecoration(r.getDimensionPixelSize(R.dimen.divider),
+                new RecyclerViewUtils.BaldGridItemDecoration(r.getDimensionPixelSize(R.dimen.divider),
                         numberOfAppsInARow,
                         getDrawable(R.drawable.ll_divider),
                         r.getDimensionPixelSize(R.dimen.padding_dividers)));

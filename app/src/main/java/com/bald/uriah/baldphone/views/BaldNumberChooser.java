@@ -30,7 +30,7 @@ import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BPrefs;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 
 import java.util.Objects;
 
@@ -81,7 +81,7 @@ public class BaldNumberChooser extends FrameLayout {
         tv_description = findViewById(R.id.tv_description);
 
         up.setOnClickListener(v -> {
-            if (vibrator != null) vibrator.vibrate(D.vibetime);
+            if (vibrator != null) vibrator.vibrate(GeneralConstants.vibetime);
             if ((number += jumps) > max) number = min;
             tv_number.setText(String.valueOf(number));
             if (onClickListener != null)
@@ -90,7 +90,7 @@ public class BaldNumberChooser extends FrameLayout {
         });
 
         down.setOnClickListener(v -> {
-            if (vibrator != null) vibrator.vibrate(D.vibetime);
+            if (vibrator != null) vibrator.vibrate(GeneralConstants.vibetime);
             if ((number -= jumps) < min) number = max;
             tv_number.setText(String.valueOf(number));
             if (onClickListener != null)

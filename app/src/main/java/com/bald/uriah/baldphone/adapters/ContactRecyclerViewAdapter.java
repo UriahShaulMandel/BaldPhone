@@ -46,7 +46,7 @@ import com.bald.uriah.baldphone.activities.SOSActivity;
 import com.bald.uriah.baldphone.activities.contacts.ShareActivity;
 import com.bald.uriah.baldphone.activities.contacts.SingleContactActivity;
 import com.bald.uriah.baldphone.fragments_and_dialogs.LetterChooserDialog;
-import com.bald.uriah.baldphone.utils.RandomColorMaker;
+import com.bald.uriah.baldphone.utils.ColorUtils;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 import com.bumptech.glide.Glide;
 
@@ -68,7 +68,7 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
     private final int mode;
     @ColorInt
     private final int textColorOnGold, textColorOnButton;
-    private RandomColorMaker randomColorMaker;
+    private ColorUtils.RandomColorMaker randomColorMaker;
     private Cursor cursor;
 
     public ContactRecyclerViewAdapter(BaldActivity activity, Cursor cursor, RecyclerView recyclerView, @IntRange(from = MODE_DEFAULT, to = MODE_SHARE) int mode) {
@@ -81,7 +81,7 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
         final Resources.Theme theme = activity.getTheme();
         theme.resolveAttribute(R.attr.bald_background, typedValue, true);
         this.letterContactBackground = new ColorDrawable(typedValue.data);
-        this.randomColorMaker = new RandomColorMaker(typedValue.data);
+        this.randomColorMaker = new ColorUtils.RandomColorMaker(typedValue.data);
         letterToPosition = new SparseIntArray();
         theme.resolveAttribute(R.attr.bald_text_on_gold, typedValue, true);
         textColorOnGold = typedValue.data;

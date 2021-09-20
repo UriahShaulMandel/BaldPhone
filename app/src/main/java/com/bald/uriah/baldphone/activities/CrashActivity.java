@@ -23,6 +23,7 @@ import android.os.Handler;
 import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.activities.homescreen.HomeScreenActivity;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 
 public class CrashActivity extends BaldActivity {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.utils;
+package com.bald.uriah.baldphone.activities.homescreen;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -26,7 +26,7 @@ import android.util.Log;
  * with help from {@link "https://stackoverflow.com/questions/8881951/detect-home-button-press-in-android"}
  * but suited for BaldPhone...
  */
-public class BaldHomeWatcher {
+class BaldHomeWatcher {
     private static final String TAG = BaldHomeWatcher.class.getSimpleName();
     private final Context context;
     private final IntentFilter filter;

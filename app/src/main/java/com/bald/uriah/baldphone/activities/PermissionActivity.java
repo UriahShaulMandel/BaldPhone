@@ -35,6 +35,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.activities.homescreen.HomeScreenActivity;
 import com.bald.uriah.baldphone.core.BDB;
 import com.bald.uriah.baldphone.core.BDialog;
 import com.bald.uriah.baldphone.core.BPrefs;

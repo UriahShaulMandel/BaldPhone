@@ -36,7 +36,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BPrefs;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 import com.duolingo.open.rtlviewpager.RtlViewPager;
 import com.google.android.material.tabs.TabLayout;
 
@@ -136,7 +136,7 @@ public class ViewPagerHolder extends LinearLayout {
             final View arrowHolder = layoutInflater.inflate(R.layout.view_pager_holder_arrows, this, false);
             right = arrowHolder.findViewById(R.id.right_arrow);
             left = arrowHolder.findViewById(R.id.left_arrow);
-            right.setOnClickListener(D.longer);
+            right.setOnClickListener(GeneralConstants.longer);
             right.setOnClickListener(v -> {
                 final int currentItem = viewPager.getCurrentItem();
                 final PagerAdapter pagerAdapter = viewPager.getAdapter();

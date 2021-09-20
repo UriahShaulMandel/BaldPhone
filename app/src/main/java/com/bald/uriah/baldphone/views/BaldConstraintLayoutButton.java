@@ -29,7 +29,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.core.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 
 /**
  * Simple Button, extends {@link ConstraintLayout}; adapted to App settings.
@@ -57,7 +57,7 @@ public class BaldConstraintLayoutButton extends ConstraintLayout implements Bald
             if (longPressesShorter) {
                 baldButtonTouchListener = new BaldButtonTouchListener(this);
                 super.setOnTouchListener(baldButtonTouchListener);
-                super.setOnClickListener(D.EMPTY_CLICK_LISTENER);
+                super.setOnClickListener(GeneralConstants.EMPTY_CLICK_LISTENER);
             } else {
                 super.setOnLongClickListener(this);
                 super.setOnClickListener(this);
@@ -80,7 +80,7 @@ public class BaldConstraintLayoutButton extends ConstraintLayout implements Bald
             if (longPressesShorter) {
                 baldButtonTouchListener = new BaldButtonTouchListener(this);
                 super.setOnTouchListener(baldButtonTouchListener);
-                super.setOnClickListener(D.EMPTY_CLICK_LISTENER);
+                super.setOnClickListener(GeneralConstants.EMPTY_CLICK_LISTENER);
             } else {
                 super.setOnLongClickListener(this);
                 super.setOnClickListener(this);
@@ -102,7 +102,7 @@ public class BaldConstraintLayoutButton extends ConstraintLayout implements Bald
             if (longPressesShorter) {
                 baldButtonTouchListener = new BaldButtonTouchListener(this);
                 super.setOnTouchListener(baldButtonTouchListener);
-                super.setOnClickListener(D.EMPTY_CLICK_LISTENER);
+                super.setOnClickListener(GeneralConstants.EMPTY_CLICK_LISTENER);
             } else {
                 super.setOnLongClickListener(this);
                 super.setOnClickListener(this);
@@ -167,6 +167,6 @@ public class BaldConstraintLayoutButton extends ConstraintLayout implements Bald
     @Override
     public void vibrate() {
         if (vibrationFeedback)
-            vibrator.vibrate(D.vibetime);
+            vibrator.vibrate(GeneralConstants.vibetime);
     }
 }

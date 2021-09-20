@@ -30,7 +30,7 @@ import androidx.annotation.ColorInt;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.core.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 
 public class TutorialFragment2 extends TutorialFragment {
     private Vibrator vibrator;
@@ -61,7 +61,7 @@ public class TutorialFragment2 extends TutorialFragment {
 
         presses[2].setOnLongClickListener((v) -> {
             clickedEffect((TextView) v);
-            vibrator.vibrate(D.vibetime);
+            vibrator.vibrate(GeneralConstants.vibetime);
             return true;
         });
         presses[2].setOnClickListener((v) -> BaldToast.from(v.getContext()).setText(R.string.press_longer).show());

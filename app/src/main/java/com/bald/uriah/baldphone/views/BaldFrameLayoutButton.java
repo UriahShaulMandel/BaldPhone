@@ -28,7 +28,7 @@ import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.core.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 
 /**
  * Simple Button, extends {@link androidx.appcompat.widget.AppCompatTextView}; adapted to App settings.
@@ -55,7 +55,7 @@ public class BaldFrameLayoutButton extends FrameLayout implements BaldButtonInte
             if (longPressesShorter) {
                 baldButtonTouchListener = new BaldButtonTouchListener(this);
                 super.setOnTouchListener(baldButtonTouchListener);
-                super.setOnClickListener(D.EMPTY_CLICK_LISTENER);
+                super.setOnClickListener(GeneralConstants.EMPTY_CLICK_LISTENER);
             } else {
                 super.setOnLongClickListener(this);
                 super.setOnClickListener(this);
@@ -77,7 +77,7 @@ public class BaldFrameLayoutButton extends FrameLayout implements BaldButtonInte
             if (longPressesShorter) {
                 baldButtonTouchListener = new BaldButtonTouchListener(this);
                 super.setOnTouchListener(baldButtonTouchListener);
-                super.setOnClickListener(D.EMPTY_CLICK_LISTENER);
+                super.setOnClickListener(GeneralConstants.EMPTY_CLICK_LISTENER);
             } else {
                 super.setOnLongClickListener(this);
                 super.setOnClickListener(this);
@@ -98,7 +98,7 @@ public class BaldFrameLayoutButton extends FrameLayout implements BaldButtonInte
             if (longPressesShorter) {
                 baldButtonTouchListener = new BaldButtonTouchListener(this);
                 super.setOnTouchListener(baldButtonTouchListener);
-                super.setOnClickListener(D.EMPTY_CLICK_LISTENER);
+                super.setOnClickListener(GeneralConstants.EMPTY_CLICK_LISTENER);
             } else {
                 super.setOnLongClickListener(this);
                 super.setOnClickListener(this);
@@ -162,6 +162,6 @@ public class BaldFrameLayoutButton extends FrameLayout implements BaldButtonInte
     @Override
     public void vibrate() {
         if (vibrationFeedback)
-            vibrator.vibrate(D.vibetime);
+            vibrator.vibrate(GeneralConstants.vibetime);
     }
 }

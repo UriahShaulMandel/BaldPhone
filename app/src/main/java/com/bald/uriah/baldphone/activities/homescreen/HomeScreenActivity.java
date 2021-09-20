@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.activities;
+package com.bald.uriah.baldphone.activities.homescreen;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -55,16 +55,22 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.activities.AppsActivity;
+import com.bald.uriah.baldphone.activities.BaldActivity;
+import com.bald.uriah.baldphone.activities.FakeLauncherActivity;
+import com.bald.uriah.baldphone.activities.NotificationsActivity;
+import com.bald.uriah.baldphone.activities.PermissionActivity;
+import com.bald.uriah.baldphone.activities.SOSActivity;
+import com.bald.uriah.baldphone.activities.TutorialActivity;
 import com.bald.uriah.baldphone.adapters.BaldPagerAdapter;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
 import com.bald.uriah.baldphone.services.NotificationListenerService;
 import com.bald.uriah.baldphone.core.BDB;
 import com.bald.uriah.baldphone.core.BDialog;
 import com.bald.uriah.baldphone.core.BPrefs;
-import com.bald.uriah.baldphone.utils.BaldHomeWatcher;
 import com.bald.uriah.baldphone.utils.BaldPrefsUtils;
 import com.bald.uriah.baldphone.core.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.adapters.DropDownRecyclerViewAdapter;
 import com.bald.uriah.baldphone.utils.PageTransformersUtils;
@@ -130,7 +136,7 @@ public class HomeScreenActivity extends BaldActivity {
                 final boolean charged = chargePlug == BatteryManager.BATTERY_PLUGGED_AC || chargePlug == BatteryManager.BATTERY_PLUGGED_WIRELESS || chargePlug == BatteryManager.BATTERY_PLUGGED_USB;
                 batteryView.setLevel(batteryPct, charged);
                 if (lowBatteryAlert)
-                    getWindow().setStatusBarColor((batteryPct < BatteryView.LOW_BATTERY_LEVEL && !charged) ? ContextCompat.getColor(context, R.color.battery_low) : D.DEFAULT_STATUS_BAR_COLOR);
+                    getWindow().setStatusBarColor((batteryPct < BatteryView.LOW_BATTERY_LEVEL && !charged) ? ContextCompat.getColor(context, R.color.battery_low) : GeneralConstants.DEFAULT_STATUS_BAR_COLOR);
             }
         }
     };
@@ -336,7 +342,7 @@ public class HomeScreenActivity extends BaldActivity {
             ));
 
         } else if (!testing) { // For travis screenshots to show the flashlight
-            flashButton.setOnClickListener(D.EMPTY_CLICK_LISTENER);
+            flashButton.setOnClickListener(GeneralConstants.EMPTY_CLICK_LISTENER);
             flashButton.setVisibility(View.GONE);
         }
 
@@ -470,7 +476,7 @@ public class HomeScreenActivity extends BaldActivity {
     @Override
     public void onBackPressed() {
         if (vibrator != null)
-            vibrator.vibrate(D.vibetime);
+            vibrator.vibrate(GeneralConstants.vibetime);
         updateViewPager();
     }
 

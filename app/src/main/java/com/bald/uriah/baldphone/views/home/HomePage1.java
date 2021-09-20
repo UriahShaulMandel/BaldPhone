@@ -43,7 +43,7 @@ import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.AppsActivity;
 import com.bald.uriah.baldphone.activities.DialerActivity;
-import com.bald.uriah.baldphone.activities.HomeScreenActivity;
+import com.bald.uriah.baldphone.activities.homescreen.HomeScreenActivity;
 import com.bald.uriah.baldphone.activities.Page1EditorActivity;
 import com.bald.uriah.baldphone.activities.RecentActivity;
 import com.bald.uriah.baldphone.activities.alarms.AlarmsActivity;

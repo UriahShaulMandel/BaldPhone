@@ -37,7 +37,7 @@ import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
 import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.core.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.views.BaldButton;
 import com.bald.uriah.baldphone.views.BaldMultipleSelection;
@@ -190,7 +190,7 @@ public class AddPillActivity extends BaldActivity {
         bt_submit.setOnClickListener((v) -> submit2());
 
         every_day.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (vibrator != null) vibrator.vibrate(D.vibetime);
+            if (vibrator != null) vibrator.vibrate(GeneralConstants.vibetime);
             if (isChecked) {
                 for (CheckBox checkBox : daysCheckBoxes) {
                     checkBox.setChecked(false);
@@ -207,7 +207,7 @@ public class AddPillActivity extends BaldActivity {
 
         for (final CheckBox checkBox : daysCheckBoxes) {
             checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
-                if (vibrator != null) vibrator.vibrate(D.vibetime);
+                if (vibrator != null) vibrator.vibrate(GeneralConstants.vibetime);
                 if (isChecked)
                     every_day.setChecked(false);
                 else {
@@ -226,7 +226,7 @@ public class AddPillActivity extends BaldActivity {
                 }
             });
             checkBox.setOnLongClickListener(v -> {
-                if (vibrator != null) vibrator.vibrate(D.vibetime);
+                if (vibrator != null) vibrator.vibrate(GeneralConstants.vibetime);
                 checkBox.setChecked(!checkBox.isChecked());
                 return true;
             });

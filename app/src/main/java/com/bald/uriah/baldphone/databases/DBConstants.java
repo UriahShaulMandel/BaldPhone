@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.utils;
+package com.bald.uriah.baldphone.databases;
 
 import android.net.Uri;
 import android.provider.ContactsContract;
@@ -23,7 +23,7 @@ import android.provider.MediaStore;
 /**
  * Constants that are used in multiple classes
  */
-public class Constants {
+public class DBConstants {
 
     /**
      * contains the constants used in

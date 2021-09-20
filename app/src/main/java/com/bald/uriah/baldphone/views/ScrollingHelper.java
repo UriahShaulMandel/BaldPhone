@@ -41,7 +41,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BPrefs;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -330,7 +330,7 @@ public class ScrollingHelper extends ConstraintLayout {
                 }
             };
 
-        final OnClickListener onClickListener = D.EMPTY_CLICK_LISTENER;
+        final OnClickListener onClickListener = GeneralConstants.EMPTY_CLICK_LISTENER;
 
         if (whereBar == RIGHT || whereBar == LEFT) {
             LinearLayout container;

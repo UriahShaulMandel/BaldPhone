@@ -37,9 +37,9 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
-import com.bald.uriah.baldphone.utils.BaldGridItemDecoration;
 import com.bald.uriah.baldphone.core.BaldToast;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
+import com.bald.uriah.baldphone.utils.RecyclerViewUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldSwitch;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
@@ -77,7 +77,7 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
         final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, numberOfAppsInARow);
         recyclerView.setLayoutManager(gridLayoutManager);
         Resources r = getResources();
-        recyclerView.addItemDecoration(new BaldGridItemDecoration(r.getDimensionPixelSize(R.dimen.divider), numberOfAppsInARow, getDrawable(R.drawable.ll_divider), r.getDimensionPixelSize(R.dimen.padding_dividers)));
+        recyclerView.addItemDecoration(new RecyclerViewUtils.BaldGridItemDecoration(r.getDimensionPixelSize(R.dimen.divider), numberOfAppsInARow, getDrawable(R.drawable.ll_divider), r.getDimensionPixelSize(R.dimen.padding_dividers)));
 
         recyclerView.setAdapter(adapter);
 

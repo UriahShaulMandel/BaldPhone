@@ -14,13 +14,15 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone;
+package com.bald.uriah.baldphone.core;
 
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import com.bald.uriah.baldphone.BuildConfig;
+import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.UpdatesActivity;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;

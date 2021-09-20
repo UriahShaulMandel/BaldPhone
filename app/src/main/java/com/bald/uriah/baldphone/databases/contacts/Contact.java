@@ -25,7 +25,7 @@ import android.util.Pair;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.bald.uriah.baldphone.utils.Constants;
+import com.bald.uriah.baldphone.databases.DBConstants;
 import com.bald.uriah.baldphone.utils.PackageUtils;
 
 import java.util.ArrayList;
@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * Immutable Contact class
  */
-public class Contact implements Constants.ContactConstants {
+public class Contact implements DBConstants.ContactConstants {
     private final int id;
     @NonNull
     private final String lookupKey;

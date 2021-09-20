@@ -58,7 +58,7 @@ import com.bald.uriah.baldphone.core.BDialog;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldPrefsUtils;
 import com.bald.uriah.baldphone.core.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.utils.UpdatingUtil;
@@ -445,7 +445,7 @@ public class SettingsActivity extends BaldActivity {
         if (currentCategory == mainCategory)
             return false;
         if (vibrator != null)
-            vibrator.vibrate(D.vibetime);
+            vibrator.vibrate(GeneralConstants.vibetime);
 
         newCategory(mainCategory);
         return true;

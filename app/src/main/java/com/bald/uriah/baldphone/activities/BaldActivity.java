@@ -45,7 +45,7 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BDB;
 import com.bald.uriah.baldphone.core.BDialog;
 import com.bald.uriah.baldphone.core.BPrefs;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
@@ -236,7 +236,7 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
             final Window window = getWindow();
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(D.DEFAULT_STATUS_BAR_COLOR);
+            window.setStatusBarColor(GeneralConstants.DEFAULT_STATUS_BAR_COLOR);
         }
 
         if (useAccidentalGuard = sharedPreferences.getBoolean(BPrefs.USE_ACCIDENTAL_GUARD_KEY, BPrefs.USE_ACCIDENTAL_GUARD_DEFAULT_VALUE)) {
@@ -281,7 +281,7 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     @Override
     public void onBackPressed() {
         if (vibrator != null)
-            vibrator.vibrate(D.vibetime);
+            vibrator.vibrate(GeneralConstants.vibetime);
         super.onBackPressed();
     }
 

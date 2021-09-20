@@ -40,7 +40,7 @@ import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
 import com.bald.uriah.baldphone.utils.AnimationsUtils;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.core.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.GeneralConstants;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 
@@ -105,14 +105,14 @@ public class AlarmScreenActivity extends TimedBaldActivity {
 
         cancel.setOnClickListener(v -> {
             if (vibrator != null)
-                vibrator.vibrate(D.vibetime);
+                vibrator.vibrate(GeneralConstants.vibetime);
             if (alarm.getName().equals(getString(R.string.timer)))
                 AlarmsDatabase.getInstance(this).alarmsDatabaseDao().delete(alarm);
             finish();
         });
         cancel.setOnLongClickListener(v -> {
             if (vibrator != null)
-                vibrator.vibrate(D.vibetime);
+                vibrator.vibrate(GeneralConstants.vibetime);
             if (alarm.getName().equals(getString(R.string.timer)))
                 AlarmsDatabase.getInstance(this).alarmsDatabaseDao().delete(alarm);
             finish();
@@ -135,7 +135,7 @@ public class AlarmScreenActivity extends TimedBaldActivity {
         }
 
         AnimationsUtils.makeBiggerAndSmaller(this, cancel, () -> {
-            if (vibrator != null) vibrator.vibrate(D.vibetime);
+            if (vibrator != null) vibrator.vibrate(GeneralConstants.vibetime);
         });
         scheduleNextAlarm();
     }
@@ -169,7 +169,7 @@ public class AlarmScreenActivity extends TimedBaldActivity {
 
     private void snooze() {
         if (vibrator != null)
-            vibrator.vibrate(D.vibetime);
+            vibrator.vibrate(GeneralConstants.vibetime);
         AlarmScheduler.scheduleSnooze(alarm, this);
         finish();
     }

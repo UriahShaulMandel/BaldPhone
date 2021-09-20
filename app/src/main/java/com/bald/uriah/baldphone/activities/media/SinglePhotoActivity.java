@@ -33,15 +33,15 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.Constants;
+import com.bald.uriah.baldphone.databases.DBConstants;
 import com.bald.uriah.baldphone.utils.S;
 import com.bumptech.glide.Glide;
 
 /**
  * Most of this class is defined at {@link SingleMediaActivity}
- * The Constants used are defined at {@link Constants.PhotosConstants}
+ * The Constants used are defined at {@link DBConstants.PhotosConstants}
  */
-public class SinglePhotoActivity extends SingleMediaActivity implements Constants.PhotosConstants {
+public class SinglePhotoActivity extends SingleMediaActivity implements DBConstants.PhotosConstants {
     private static final String TAG = SinglePhotoActivity.class.getSimpleName();
 
     @Override
