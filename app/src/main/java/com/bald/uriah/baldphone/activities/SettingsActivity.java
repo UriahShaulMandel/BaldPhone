@@ -59,6 +59,7 @@ import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldPrefsUtils;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.utils.UpdatingUtil;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
@@ -112,7 +113,7 @@ public class SettingsActivity extends BaldActivity {
         if (!checkPermissions(this, requiredPermissions()))
             return;
         setContentView(R.layout.activity_settings);
-        sharedPreferences = getSharedPreferences(D.BALD_PREFS, MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences(BPrefs.KEY, MODE_PRIVATE);
         baldPrefsUtils = BaldPrefsUtils.newInstance(this);
         editor = sharedPreferences.edit();
 
@@ -481,7 +482,7 @@ public class SettingsActivity extends BaldActivity {
                 sharedPreferences.edit().putInt(BPrefs.ALARM_VOLUME_KEY, progress).apply();
                 ringtone = AlarmScreenActivity.getRingtone(SettingsActivity.this);
                 ringtone.play();
-                handler.postDelayed(closeRingtone, 4 * D.SECOND);
+                handler.postDelayed(closeRingtone, 4 * DateTimeUtils.SECOND);
 
             }
 

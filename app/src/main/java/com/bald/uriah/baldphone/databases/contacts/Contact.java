@@ -26,7 +26,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.utils.Constants;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.PackageUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -167,7 +167,7 @@ public class Contact implements Constants.ContactConstants {
                              ContactsContract.RawContacts.CONTENT_URI,
                              new String[]{ContactsContract.RawContacts._ID},
                              ContactsContract.RawContacts.ACCOUNT_TYPE + "= ? AND " + ContactsContract.CommonDataKinds.StructuredName.DISPLAY_NAME_PRIMARY + " = ?",
-                             new String[]{D.WHATSAPP_PACKAGE_NAME, contactName},
+                             new String[]{PackageUtils.WHATSAPP_PACKAGE_NAME, contactName},
                              null)) {
             String rawContactId, phoneNumber;
             while (cursor1.moveToNext()) {

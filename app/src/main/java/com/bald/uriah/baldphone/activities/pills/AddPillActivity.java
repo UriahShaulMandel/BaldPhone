@@ -38,6 +38,7 @@ import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.views.BaldButton;
 import com.bald.uriah.baldphone.views.BaldMultipleSelection;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
@@ -98,11 +99,11 @@ public class AddPillActivity extends BaldActivity {
                 reminder_edit_name.setText(reminder.getTextualContent());
 
             final int alarmDays = reminder.getDays();
-            if (alarmDays == D.Days.ALL)
+            if (alarmDays == DateTimeUtils.Days.ALL)
                 every_day.setChecked(true);
             else {
                 for (int i = 0; i < daysCheckBoxes.length; i++) {
-                    daysCheckBoxes[i].setChecked((alarmDays | (D.Days.SUNDAY << i)) == alarmDays);
+                    daysCheckBoxes[i].setChecked((alarmDays | (DateTimeUtils.Days.SUNDAY << i)) == alarmDays);
                 }
             }
 
@@ -146,9 +147,9 @@ public class AddPillActivity extends BaldActivity {
 
         if (!every_day.isChecked()) {
             for (int i = 0; i < daysCheckBoxes.length; i++)
-                sum |= daysCheckBoxes[i].isChecked() ? D.Days.SUNDAY << i : 0;
+                sum |= daysCheckBoxes[i].isChecked() ? DateTimeUtils.Days.SUNDAY << i : 0;
         } else
-            sum = D.Days.ALL;
+            sum = DateTimeUtils.Days.ALL;
 
         if (sum == 0) {
             BaldToast.from(this).setType(TYPE_ERROR).setText(R.string.at_least_one_day_must_be_selected).show();

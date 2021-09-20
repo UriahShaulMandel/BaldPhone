@@ -32,7 +32,7 @@ import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 import com.bald.uriah.baldphone.adapters.IntentAdapter;
 import com.bald.uriah.baldphone.databases.contacts.Contact;
 import com.bald.uriah.baldphone.utils.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.PackageUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldSwitch;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
@@ -148,7 +148,7 @@ public class ShareActivity extends BaseContactsActivity {
             finish();
             return;
         }
-        shareIntent.setPackage(D.WHATSAPP_PACKAGE_NAME);
+        shareIntent.setPackage(PackageUtils.WHATSAPP_PACKAGE_NAME);
         String smsNumber = PhoneNumberUtils.stripSeparators(contact.getWhatsappNumbers().get(0)).replace("+", "").replace(" ", "");
         shareIntent.putExtra("jid", smsNumber + "@s.whatsapp.net"); //phone number without "+" prefix
         startActivity(shareIntent);

@@ -39,7 +39,7 @@ import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
 import com.bald.uriah.baldphone.utils.BaldGridItemDecoration;
 import com.bald.uriah.baldphone.utils.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldSwitch;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
@@ -157,12 +157,12 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
                 BaldToast.from(this).setText(message).setType(BaldToast.TYPE_INFORMATIVE).show();
                 final long nextTimeAlarmWillWork = AlarmScheduler.nextTimeAlarmWillWorkInMsFromNow(newAlarm);
                 final String message2;
-                if (nextTimeAlarmWillWork < D.HOUR)
-                    message2 = String.format(getString(R.string.to___minuets_from_now), nextTimeAlarmWillWork / D.MINUTE);
-                else if (nextTimeAlarmWillWork < D.DAY)
-                    message2 = String.format(getString(R.string.to___hours_and___minutes_from_now), nextTimeAlarmWillWork / D.HOUR, (nextTimeAlarmWillWork % D.HOUR) / D.MINUTE);
+                if (nextTimeAlarmWillWork < DateTimeUtils.HOUR)
+                    message2 = String.format(getString(R.string.to___minuets_from_now), nextTimeAlarmWillWork / DateTimeUtils.MINUTE);
+                else if (nextTimeAlarmWillWork < DateTimeUtils.DAY)
+                    message2 = String.format(getString(R.string.to___hours_and___minutes_from_now), nextTimeAlarmWillWork / DateTimeUtils.HOUR, (nextTimeAlarmWillWork % DateTimeUtils.HOUR) / DateTimeUtils.MINUTE);
                 else
-                    message2 = String.format(getString(R.string.to___days_and___hours_from_now), nextTimeAlarmWillWork / D.DAY, (nextTimeAlarmWillWork % D.DAY) / D.HOUR);
+                    message2 = String.format(getString(R.string.to___days_and___hours_from_now), nextTimeAlarmWillWork / DateTimeUtils.DAY, (nextTimeAlarmWillWork % DateTimeUtils.DAY) / DateTimeUtils.HOUR);
 
                 BaldToast.from(this).setText(message2).setType(BaldToast.TYPE_INFORMATIVE).show();
             }
@@ -212,16 +212,16 @@ public class AlarmsActivity extends com.bald.uriah.baldphone.activities.BaldActi
                 final CharSequence message;
                 if (alarm.getDays() == -1)
                     message = AlarmsActivity.this.getString(R.string.will_repeat_only_once);
-                else if (alarm.getDays() == (D.Days.ALL))
+                else if (alarm.getDays() == (DateTimeUtils.Days.ALL))
                     message = AlarmsActivity.this.getString(R.string.repeats_every_day);
                 else {
 
                     StringBuilder stringBuilder = new StringBuilder(40);
                     stringBuilder.append(AlarmsActivity.this.getText(R.string.alarms_repeats_every));
                     stringBuilder.append(' ');
-                    for (int day : D.Days.ARRAY_ALL)
+                    for (int day : DateTimeUtils.Days.ARRAY_ALL)
                         if ((alarm.getDays() & day) == day) {
-                            stringBuilder.append(AlarmsActivity.this.getString(S.balddayToStringId(day)));
+                            stringBuilder.append(AlarmsActivity.this.getString(DateTimeUtils.balddayToStringId(day)));
                             stringBuilder.append(", ");
                         }
                     stringBuilder.setLength(stringBuilder.length() - 2);

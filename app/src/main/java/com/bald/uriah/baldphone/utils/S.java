@@ -45,7 +45,6 @@ import android.widget.RelativeLayout;
 import androidx.annotation.ArrayRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 import androidx.annotation.StyleRes;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -111,32 +110,6 @@ public class S {
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
-    @StringRes
-    public static int balddayToStringId(int baldDay) {
-        switch (baldDay) {
-            case 0:
-                throw new RuntimeException("0 is not defined in a baldday int");
-            case -1:
-                throw new RuntimeException("-1 doesn't have a String id");
-            case D.Days.SUNDAY:
-                return R.string.sunday;
-            case D.Days.MONDAY:
-                return R.string.monday;
-            case D.Days.TUESDAY:
-                return R.string.tuesday;
-            case D.Days.WEDNESDAY:
-                return R.string.wednesday;
-            case D.Days.THURSDAY:
-                return R.string.thursday;
-            case D.Days.FRIDAY:
-                return R.string.friday;
-            case D.Days.SATURDAY:
-                return R.string.saturday;
-
-        }
-        throw new RuntimeException(baldDay + " is not defined in a specific baldday int");
-    }
-
     public static boolean isPackageInstalled(@NonNull Context context, @NonNull String packageName) {
         final PackageManager packageManager = context.getPackageManager();
         final Intent intent = packageManager.getLaunchIntentForPackage(packageName);
@@ -165,7 +138,7 @@ public class S {
 
     @StyleRes
     public static int getTheme(@NonNull Context context) {
-        @StyleRes int theme = BPrefs.Themes.THEMES[context.getSharedPreferences(D.BALD_PREFS, Context.MODE_PRIVATE).getInt(BPrefs.THEME_KEY, BPrefs.THEME_DEFAULT_VALUE)];
+        @StyleRes int theme = BPrefs.Themes.THEMES[context.getSharedPreferences(BPrefs.KEY, Context.MODE_PRIVATE).getInt(BPrefs.THEME_KEY, BPrefs.THEME_DEFAULT_VALUE)];
         if (theme == -1) {
             int hour = DateTime.now().getHourOfDay();
             if (hour > 6 && hour < 19)

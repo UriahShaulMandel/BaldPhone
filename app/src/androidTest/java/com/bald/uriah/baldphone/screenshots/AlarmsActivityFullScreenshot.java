@@ -25,7 +25,7 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.activities.alarms.AlarmsActivity;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
 import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 
 import org.junit.runner.RunWith;
 
@@ -37,7 +37,7 @@ public class AlarmsActivityFullScreenshot extends BaseScreenshotTakerTest<Alarms
 
     public void test() {
         final Alarm alarm = new Alarm();
-        alarm.setDays(D.Days.ALL);
+        alarm.setDays(DateTimeUtils.Days.ALL);
         alarm.setHour(8);
         alarm.setMinute(30);
         alarm.setEnabled(true);

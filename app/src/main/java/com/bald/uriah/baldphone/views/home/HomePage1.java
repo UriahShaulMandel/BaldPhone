@@ -60,7 +60,7 @@ import com.bald.uriah.baldphone.utils.BDB;
 import com.bald.uriah.baldphone.utils.BDialog;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.PackageUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.FirstPageAppIcon;
 
@@ -91,7 +91,7 @@ public class HomePage1 extends HomeView {
         public void onReceive(Context context, Intent intent) {
             final Set<String> packagesSet = new HashSet<>(intent.getStringArrayListExtra("packages"));
             if (!viewsToApps.containsValue(bt_whatsapp))
-                bt_whatsapp.setBadgeVisibility(packagesSet.contains(D.WHATSAPP_PACKAGE_NAME));
+                bt_whatsapp.setBadgeVisibility(packagesSet.contains(PackageUtils.WHATSAPP_PACKAGE_NAME));
             if (!viewsToApps.containsValue(bt_recent))
                 bt_recent.setBadgeVisibility(!CallLogsHelper.isAllReadSafe(getContext().getContentResolver()));
             if (!viewsToApps.containsValue(bt_messages))

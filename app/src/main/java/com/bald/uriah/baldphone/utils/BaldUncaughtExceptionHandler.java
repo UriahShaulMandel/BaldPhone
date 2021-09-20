@@ -62,7 +62,7 @@ public class BaldUncaughtExceptionHandler implements Thread.UncaughtExceptionHan
                 );
 
         final AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, 300 * D.MILLISECOND, pendingIntent);
+        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, 300 * DateTimeUtils.MILLISECOND, pendingIntent);
 
         Runtime.getRuntime().exit(2);
     }

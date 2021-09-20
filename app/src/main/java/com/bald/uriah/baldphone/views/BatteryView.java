@@ -23,9 +23,9 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.D;
 
 public class BatteryView extends BaldImageButton {
+    public static final int LOW_BATTERY_LEVEL = 20;
     public int percentage;
 
     public BatteryView(Context context) {
@@ -61,7 +61,7 @@ public class BatteryView extends BaldImageButton {
             } else
                 drawableRes = R.drawable.battery_full_on_background;
         } else {
-            if (level < D.LOW_BATTERY_LEVEL) {
+            if (level < LOW_BATTERY_LEVEL) {
                 drawableRes = R.drawable.battery_20_on_background;
             } else if (level < 30) {
                 drawableRes = R.drawable.battery_30_on_background;

@@ -39,6 +39,7 @@ import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
 import com.bald.uriah.baldphone.utils.Animations;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 
 public class PillScreenActivity extends TimedBaldActivity {
@@ -159,7 +160,7 @@ public class PillScreenActivity extends TimedBaldActivity {
 
     @Override
     protected int screenTimeout() {
-        return D.MINUTE * 2;
+        return DateTimeUtils.MINUTE * 2;
     }
 
     @Override

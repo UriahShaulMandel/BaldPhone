@@ -28,7 +28,7 @@ import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.activities.pills.PillsActivity;
 import com.bald.uriah.baldphone.broadcast_receivers.ReminderReceiver;
 import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 
 import org.joda.time.DateTime;
@@ -42,7 +42,7 @@ import java.util.List;
 public class ReminderScheduler {
     private static final String TAG = ReminderScheduler.class.getSimpleName();
     public static final Object LOCK = new Object();
-    public static final int SNOOZE_MILLIS = 5 * D.MINUTE;
+    public static final int SNOOZE_MILLIS = 5 * DateTimeUtils.MINUTE;
 
     /**
      * helper class should not be instantiate
@@ -127,8 +127,8 @@ public class ReminderScheduler {
 
         {   //find next day
             for (int i = baldDay << 1; i != baldDay; i <<= 1) {
-                if (i > D.Days.SATURDAY)
-                    i = D.Days.SUNDAY;
+                if (i > DateTimeUtils.Days.SATURDAY)
+                    i = DateTimeUtils.Days.SUNDAY;
 
                 if ((days & i) == i) {
                     selectedBaldDay = i;

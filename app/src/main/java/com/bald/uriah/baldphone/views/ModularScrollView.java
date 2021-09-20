@@ -24,24 +24,23 @@ import android.widget.ScrollView;
 import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.utils.BPrefs;
-import com.bald.uriah.baldphone.utils.D;
 
 public class ModularScrollView extends ScrollView implements Modular {
     public boolean touchEnabled;
 
     public ModularScrollView(Context context) {
         super(context);
-        touchEnabled = context.getSharedPreferences(D.BALD_PREFS, Context.MODE_PRIVATE).getBoolean(BPrefs.TOUCH_NOT_HARD_KEY, false);
+        touchEnabled = context.getSharedPreferences(BPrefs.KEY, Context.MODE_PRIVATE).getBoolean(BPrefs.TOUCH_NOT_HARD_KEY, false);
     }
 
     public ModularScrollView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        touchEnabled = context.getSharedPreferences(D.BALD_PREFS, Context.MODE_PRIVATE).getBoolean(BPrefs.TOUCH_NOT_HARD_KEY, false);
+        touchEnabled = context.getSharedPreferences(BPrefs.KEY, Context.MODE_PRIVATE).getBoolean(BPrefs.TOUCH_NOT_HARD_KEY, false);
     }
 
     public ModularScrollView(Context context, @Nullable AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        touchEnabled = context.getSharedPreferences(D.BALD_PREFS, Context.MODE_PRIVATE).getBoolean(BPrefs.TOUCH_NOT_HARD_KEY, false);
+        touchEnabled = context.getSharedPreferences(BPrefs.KEY, Context.MODE_PRIVATE).getBoolean(BPrefs.TOUCH_NOT_HARD_KEY, false);
     }
 
     @Override

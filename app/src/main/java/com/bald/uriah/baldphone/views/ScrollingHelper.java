@@ -132,7 +132,7 @@ public class ScrollingHelper extends ConstraintLayout {
         this.layoutInflater = LayoutInflater.from(context);
 
         //if touch is hard
-        this.sharedPreferences = context.getSharedPreferences(D.BALD_PREFS, Context.MODE_PRIVATE);
+        this.sharedPreferences = context.getSharedPreferences(BPrefs.KEY, Context.MODE_PRIVATE);
         gone = sharedPreferences.getBoolean(BPrefs.TOUCH_NOT_HARD_KEY, false);
 
         SCROLL_CONST = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, SCROLL_CONST_IN_DP, getResources().getDisplayMetrics());

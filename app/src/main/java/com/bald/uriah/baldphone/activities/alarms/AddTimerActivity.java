@@ -30,7 +30,7 @@ import com.bald.uriah.baldphone.activities.BaldActivity;
 import com.bald.uriah.baldphone.databases.alarms.Alarm;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 
 import org.joda.time.DateTime;
 
@@ -102,7 +102,7 @@ public class AddTimerActivity extends BaldActivity {
 
     @SuppressLint("DefaultLocale")
     private void updateAccordingToTime() {
-        if (timeIn5Minutes < 1 || timeIn5Minutes > (D.DAY / (5 * D.MINUTE)))//its 288
+        if (timeIn5Minutes < 1 || timeIn5Minutes > (DateTimeUtils.DAY / (5 * DateTimeUtils.MINUTE)))//its 288
             timeIn5Minutes = 1;
         time.setText(String.format("%d %s", timeIn5Minutes * 5, getString(R.string.minutes)));
     }

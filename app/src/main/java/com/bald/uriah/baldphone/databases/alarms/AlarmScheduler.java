@@ -27,7 +27,7 @@ import androidx.annotation.NonNull;
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.activities.alarms.AlarmsActivity;
 import com.bald.uriah.baldphone.broadcast_receivers.AlarmReceiver;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 
 import org.joda.time.DateTime;
@@ -41,7 +41,7 @@ import java.util.List;
 public class AlarmScheduler {
     private static final String TAG = AlarmScheduler.class.getSimpleName();
     public static final Object LOCK = new Object();
-    public static final int SNOOZE_MILLIS = 5 * D.MINUTE;
+    public static final int SNOOZE_MILLIS = 5 * DateTimeUtils.MINUTE;
 
     private AlarmScheduler() {
     }
@@ -124,8 +124,8 @@ public class AlarmScheduler {
 
         {   //find next day
             for (int i = baldDay << 1; i != baldDay; i <<= 1) {
-                if (i > D.Days.SATURDAY)
-                    i = D.Days.SUNDAY;
+                if (i > DateTimeUtils.Days.SATURDAY)
+                    i = DateTimeUtils.Days.SUNDAY;
 
                 if ((alarm.getDays() & i) == i) {
                     selectedBaldDay = i;

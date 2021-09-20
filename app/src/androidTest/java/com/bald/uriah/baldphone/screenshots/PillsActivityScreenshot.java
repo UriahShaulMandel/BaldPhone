@@ -29,7 +29,7 @@ import com.bald.uriah.baldphone.activities.pills.AddPillActivity;
 import com.bald.uriah.baldphone.activities.pills.PillsActivity;
 import com.bald.uriah.baldphone.databases.reminders.Reminder;
 import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 
 import org.junit.runner.RunWith;
 
@@ -48,7 +48,7 @@ public class PillsActivityScreenshot extends BaseScreenshotTakerTest<PillsActivi
 
                     final Reminder medication_1 = new Reminder();
                     medication_1.setStartingTime(Reminder.TIME_MORNING);
-                    medication_1.setDays(D.Days.ALL ^ D.Days.SUNDAY);
+                    medication_1.setDays(DateTimeUtils.Days.ALL ^ DateTimeUtils.Days.SUNDAY);
                     medication_1.setTextualContent(dis.getString(R.string.medication_1));
                     medication_1.setBinaryContentType(Reminder.BINARY_RGB);
                     medication_1.setReminderType(Reminder.TYPE_PILL);
@@ -57,7 +57,7 @@ public class PillsActivityScreenshot extends BaseScreenshotTakerTest<PillsActivi
 
                     final Reminder medication_2 = new Reminder();
                     medication_2.setStartingTime(Reminder.TIME_MORNING);
-                    medication_2.setDays(D.Days.SUNDAY);
+                    medication_2.setDays(DateTimeUtils.Days.SUNDAY);
                     medication_2.setTextualContent(dis.getString(R.string.medication_2));
                     medication_2.setBinaryContentType(Reminder.BINARY_RGB);
                     medication_2.setReminderType(Reminder.TYPE_PILL);

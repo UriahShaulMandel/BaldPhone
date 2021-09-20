@@ -29,7 +29,7 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 import com.bald.uriah.baldphone.views.FirstPageAppIcon;
@@ -42,7 +42,7 @@ public class YoutubeActivity extends BaldActivity {
     public static final String EXTRA_ID = "EXTRA_ID";
     private static final float VERTICAL_BIAS_AFTER = 0.8f;
     private static final float VERTICAL_BIAS_BEFORE = 1f;
-    private final static long ANIMATION_DURATION = D.MILLISECOND * 800;
+    private final static long ANIMATION_DURATION = DateTimeUtils.MILLISECOND * 800;
 
     private Space bottom;
     private String url;

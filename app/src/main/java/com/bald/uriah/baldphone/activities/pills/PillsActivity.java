@@ -41,7 +41,7 @@ import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
 import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
 import com.bald.uriah.baldphone.utils.BaldGridItemDecoration;
 import com.bald.uriah.baldphone.utils.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
@@ -169,16 +169,16 @@ public class PillsActivity extends BaldActivity {
             public void update(Reminder reminder) {
                 final CharSequence message;
 
-                if (reminder.getDays() == (D.Days.ALL))
+                if (reminder.getDays() == (DateTimeUtils.Days.ALL))
                     message = PillsActivity.this.getString(R.string.repeats_every_day);
                 else {
 
                     StringBuilder stringBuilder = new StringBuilder(20);
 //                    stringBuilder.append(PillsActivity.this.getText(R.string.reminder_repeats_every));
 //                    stringBuilder.append(' ');
-                    for (int day : D.Days.ARRAY_ALL)
+                    for (int day : DateTimeUtils.Days.ARRAY_ALL)
                         if ((reminder.getDays() & day) == day) {
-                            stringBuilder.append(PillsActivity.this.getString(S.balddayToStringId(day)));
+                            stringBuilder.append(PillsActivity.this.getString(DateTimeUtils.balddayToStringId(day)));
                             stringBuilder.append(", ");
                         }
                     stringBuilder.setLength(stringBuilder.length() - 2);

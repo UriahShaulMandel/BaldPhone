@@ -65,6 +65,7 @@ import com.bald.uriah.baldphone.utils.BaldHomeWatcher;
 import com.bald.uriah.baldphone.utils.BaldPrefsUtils;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.DropDownRecyclerViewAdapter;
 import com.bald.uriah.baldphone.utils.PageTransformers;
 import com.bald.uriah.baldphone.utils.S;
@@ -129,7 +130,7 @@ public class HomeScreenActivity extends BaldActivity {
                 final boolean charged = chargePlug == BatteryManager.BATTERY_PLUGGED_AC || chargePlug == BatteryManager.BATTERY_PLUGGED_WIRELESS || chargePlug == BatteryManager.BATTERY_PLUGGED_USB;
                 batteryView.setLevel(batteryPct, charged);
                 if (lowBatteryAlert)
-                    getWindow().setStatusBarColor((batteryPct < D.LOW_BATTERY_LEVEL && !charged) ? ContextCompat.getColor(context, R.color.battery_low) : D.DEFAULT_STATUS_BAR_COLOR);
+                    getWindow().setStatusBarColor((batteryPct < BatteryView.LOW_BATTERY_LEVEL && !charged) ? ContextCompat.getColor(context, R.color.battery_low) : D.DEFAULT_STATUS_BAR_COLOR);
             }
         }
     };
@@ -152,7 +153,7 @@ public class HomeScreenActivity extends BaldActivity {
                 final AnimatedVectorDrawable animatedVectorDrawable = (AnimatedVectorDrawable) d;
                 animatedVectorDrawable.start();
                 final int minusSeconds = Math.min((int) (Math.max((notificationCount - NOTIFICATIONS_ALOT) * 0.5f, 0)), 7);
-                handler.postDelayed(this, (10 - minusSeconds) * D.SECOND);
+                handler.postDelayed(this, (10 - minusSeconds) * DateTimeUtils.SECOND);
             }
         }
     };
@@ -179,7 +180,7 @@ public class HomeScreenActivity extends BaldActivity {
             }
 
             handler.removeCallbacks(shakeIt);
-            handler.postDelayed(shakeIt, 5 * D.SECOND);
+            handler.postDelayed(shakeIt, 5 * DateTimeUtils.SECOND);
         }
     };
 
@@ -298,7 +299,7 @@ public class HomeScreenActivity extends BaldActivity {
                 } else if (percent > 95) {
                     //noinspection ConstantConditions
                     if (BuildConfig.FLAVOR.equals("baldUpdates"))
-                        if (sharedPreferences.getLong(BPrefs.LAST_UPDATE_ASKED_VERSION_KEY, 0) + 2 * D.DAY < System.currentTimeMillis()) {
+                        if (sharedPreferences.getLong(BPrefs.LAST_UPDATE_ASKED_VERSION_KEY, 0) + 2 * DateTimeUtils.DAY < System.currentTimeMillis()) {
                             UpdatingUtil.checkForUpdates(this, false);
                         }
                 }
@@ -345,7 +346,7 @@ public class HomeScreenActivity extends BaldActivity {
         handler.postDelayed(() -> LocalBroadcastManager.getInstance(this).
                 sendBroadcast(
                         new Intent(ACTION_REGISTER_ACTIVITY)
-                                .putExtra(KEY_EXTRA_ACTIVITY, NOTIFICATIONS_HOME_SCREEN)), 200 * D.MILLISECOND);
+                                .putExtra(KEY_EXTRA_ACTIVITY, NOTIFICATIONS_HOME_SCREEN)), 200 * DateTimeUtils.MILLISECOND);
 
         registerReceiver(batteryReceiver, BATTERY_FILTER);
     }

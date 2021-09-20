@@ -46,6 +46,7 @@ import com.bald.uriah.baldphone.utils.BDB;
 import com.bald.uriah.baldphone.utils.BDialog;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 
@@ -96,7 +97,7 @@ public abstract class BaldActivity extends AppCompatActivity implements SensorEv
     private Sensor proximitySensor;
     private boolean near;
     private int touches;
-    private int accidentalMinTouches = 3, accidentalTime = 3 * D.SECOND;
+    private int accidentalMinTouches = 3, accidentalTime = 3 * DateTimeUtils.SECOND;
     private boolean useAccidentalGuard = true;
     private Handler handler;
     private Runnable touchesDecreaser = () -> touches = (touches -= 1) < 0 ? 0 : touches;

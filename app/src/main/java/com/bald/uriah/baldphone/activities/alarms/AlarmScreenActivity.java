@@ -41,6 +41,7 @@ import com.bald.uriah.baldphone.utils.Animations;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 
 /**
@@ -195,7 +196,7 @@ public class AlarmScreenActivity extends TimedBaldActivity {
 
     @Override
     protected int screenTimeout() {
-        return D.MINUTE * 5;
+        return DateTimeUtils.MINUTE * 5;
     }
 
     @Override

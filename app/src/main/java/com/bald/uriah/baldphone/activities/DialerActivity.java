@@ -51,7 +51,7 @@ import com.bald.uriah.baldphone.utils.BDB;
 import com.bald.uriah.baldphone.utils.BDialog;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
-import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 
 import java.util.List;
 
@@ -64,7 +64,7 @@ public class DialerActivity extends BaldActivity {
     private final static String[] PROJECTION =
             {ContactsContract.Data.DISPLAY_NAME, ContactsContract.Data._ID, ContactsContract.Contacts.PHOTO_URI, ContactsContract.Data.LOOKUP_KEY, ContactsContract.Data.STARRED};
     private static final String NUMBER_STATE = "NUMBER_STATE";
-    private static final int TONE_DURATION = 300 * D.MILLISECOND;
+    private static final int TONE_DURATION = 300 * DateTimeUtils.MILLISECOND;
     private static final int TONE_VOLUME = 75; // 0-100
 
     private ToneGenerator dtmfGenerator;

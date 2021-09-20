@@ -44,6 +44,7 @@ import com.bald.uriah.baldphone.utils.BDialog;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 
 import java.io.File;
@@ -54,7 +55,7 @@ import static com.bald.uriah.baldphone.utils.UpdatingUtil.getDownloadedFile;
 
 public class UpdatesActivity extends BaldActivity {
     public static final String EXTRA_BALD_UPDATE_OBJECT = "EXTRA_BALD_UPDATE_OBJECT";
-    private static final int PROGRESS_DELAY = 200 * D.MILLISECOND;
+    private static final int PROGRESS_DELAY = 200 * DateTimeUtils.MILLISECOND;
 
     private BaldUpdateObject baldUpdateObject;
     private DownloadManager manager;
@@ -82,7 +83,7 @@ public class UpdatesActivity extends BaldActivity {
                     downloadFinishedToast.show();
                     stopProgressChecker();
                     apply();
-                }, 50 * D.MILLISECOND);
+                }, 50 * DateTimeUtils.MILLISECOND);
             }
         }
     };

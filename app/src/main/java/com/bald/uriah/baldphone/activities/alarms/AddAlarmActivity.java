@@ -34,6 +34,7 @@ import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
 import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.utils.D;
+import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.views.BaldButton;
 import com.bald.uriah.baldphone.views.BaldNumberChooser;
 
@@ -79,7 +80,7 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
                 only_once.setChecked(true);
             else
                 for (int i = 0; i < daysCheckBoxes.length; i++)
-                    daysCheckBoxes[i].setChecked((alarmDays | (D.Days.SUNDAY << i)) == alarmDays);
+                    daysCheckBoxes[i].setChecked((alarmDays | (DateTimeUtils.Days.SUNDAY << i)) == alarmDays);
         } else {
             final DateTime now = DateTime.now();
             chooser_hours.setNumber(now.getHourOfDay());
@@ -115,10 +116,10 @@ public class AddAlarmActivity extends com.bald.uriah.baldphone.activities.BaldAc
 
         int sum = 0;
         if (every_day.isChecked()) {
-            sum = D.Days.ALL;
+            sum = DateTimeUtils.Days.ALL;
         } else {
             for (int i = 0; i < daysCheckBoxes.length; i++)
-                sum |= daysCheckBoxes[i].isChecked() ? D.Days.SUNDAY << i : 0;
+                sum |= daysCheckBoxes[i].isChecked() ? DateTimeUtils.Days.SUNDAY << i : 0;
 
             if (sum == 0) sum = -1;
         }
