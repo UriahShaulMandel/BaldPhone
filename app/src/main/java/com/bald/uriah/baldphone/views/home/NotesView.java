@@ -30,7 +30,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.homescreen.HomeScreenActivity;
+import com.bald.uriah.baldphone.apps.homescreen.HomeScreenActivity;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.utils.ToggleUtils;
 import com.bald.uriah.baldphone.views.BaldPictureTextButton;

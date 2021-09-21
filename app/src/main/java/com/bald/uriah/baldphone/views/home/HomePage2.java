@@ -31,9 +31,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.homescreen.HomeScreenActivity;
-import com.bald.uriah.baldphone.activities.SettingsActivity;
-import com.bald.uriah.baldphone.activities.VideoTutorialsActivity;
+import com.bald.uriah.baldphone.apps.homescreen.HomeScreenActivity;
+import com.bald.uriah.baldphone.apps.settings.SettingsActivity;
+import com.bald.uriah.baldphone.apps.video_tutorials.VideoTutorialsActivity;
 import com.bald.uriah.baldphone.core.BaldToast;
 import com.bald.uriah.baldphone.adapters.DropDownRecyclerViewAdapter;
 import com.bald.uriah.baldphone.utils.S;

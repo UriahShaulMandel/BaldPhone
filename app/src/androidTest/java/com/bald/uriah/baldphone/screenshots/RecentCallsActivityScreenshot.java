@@ -23,7 +23,7 @@ import androidx.test.filters.LargeTest;
 import androidx.test.runner.AndroidJUnit4;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.RecentActivity;
+import com.bald.uriah.baldphone.apps.phone.recent_calls.RecentActivity;
 
 import org.joda.time.DateTime;
 import org.junit.runner.RunWith;

@@ -41,10 +41,10 @@ import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.BaldActivity;
-import com.bald.uriah.baldphone.activities.SOSActivity;
-import com.bald.uriah.baldphone.activities.contacts.ShareActivity;
-import com.bald.uriah.baldphone.activities.contacts.SingleContactActivity;
+import com.bald.uriah.baldphone.core.BaldActivity;
+import com.bald.uriah.baldphone.apps.sos.SOSPinningUtils;
+import com.bald.uriah.baldphone.apps.phone.contacts.ShareActivity;
+import com.bald.uriah.baldphone.apps.phone.contacts.SingleContactActivity;
 import com.bald.uriah.baldphone.fragments_and_dialogs.LetterChooserDialog;
 import com.bald.uriah.baldphone.utils.ColorUtils;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
@@ -272,7 +272,7 @@ public class ContactRecyclerViewAdapter extends ModularRecyclerView.ModularAdapt
                     activity.startActivityForResult(intent, SingleContactActivity.REQUEST_CHECK_CHANGE);
                     break;
                 case MODE_SOS:
-                    SOSActivity.PinHelper.pinContact(v.getContext(), lookupKey);
+                    SOSPinningUtils.pinContact(v.getContext(), lookupKey);
                     activity.finish();
                     break;
                 case MODE_SHARE:

@@ -27,9 +27,9 @@ public class DBConstants {
 
     /**
      * contains the constants used in
-     * {@link com.bald.uriah.baldphone.activities.media.SinglePhotoActivity}
+     * {@link com.bald.uriah.baldphone.apps.media.SinglePhotoActivity}
      * and
-     * {@link com.bald.uriah.baldphone.activities.media.PhotosActivity}
+     * {@link com.bald.uriah.baldphone.apps.media.PhotosActivity}
      */
     public interface PhotosConstants {
         String SORT_ORDER = MediaStore.Images.Media.DATE_MODIFIED + " DESC";
@@ -39,9 +39,9 @@ public class DBConstants {
 
     /**
      * contains the constants used in
-     * {@link com.bald.uriah.baldphone.activities.media.SingleVideoActivity}
+     * {@link com.bald.uriah.baldphone.apps.media.SingleVideoActivity}
      * and
-     * {@link com.bald.uriah.baldphone.activities.media.VideosActivity}
+     * {@link com.bald.uriah.baldphone.apps.media.VideosActivity}
      */
     public interface VideosConstants {
         String SORT_ORDER = MediaStore.Video.Media.DATE_TAKEN + " DESC";

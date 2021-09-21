@@ -28,7 +28,7 @@ import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.core.BaldToast;
-import com.bald.uriah.baldphone.GeneralConstants;
+import com.bald.uriah.baldphone.core.GeneralConstants;
 
 /**
  * Simple Button, extends {@link LinearLayout}; adapted to App settings.

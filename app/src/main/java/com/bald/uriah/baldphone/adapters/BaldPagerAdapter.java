@@ -22,7 +22,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.core.util.Pools;
 
-import com.bald.uriah.baldphone.activities.homescreen.HomeScreenActivity;
+import com.bald.uriah.baldphone.apps.homescreen.HomeScreenActivity;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.views.home.HomePage1;

@@ -35,7 +35,7 @@ import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.GeneralConstants;
+import com.bald.uriah.baldphone.core.GeneralConstants;
 
 import java.util.ArrayList;
 

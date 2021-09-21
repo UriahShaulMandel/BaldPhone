@@ -24,8 +24,8 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import com.bald.uriah.baldphone.activities.homescreen.HomeScreenActivity;
-import com.bald.uriah.baldphone.activities.pills.PillsActivity;
+import com.bald.uriah.baldphone.apps.homescreen.HomeScreenActivity;
+import com.bald.uriah.baldphone.apps.pills.PillsActivity;
 import com.bald.uriah.baldphone.broadcast_receivers.ReminderReceiver;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;

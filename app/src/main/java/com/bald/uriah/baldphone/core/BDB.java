@@ -23,8 +23,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 
-import com.bald.uriah.baldphone.activities.BaldActivity;
-
 /**
  * Builder for {@link BDialog}
  */

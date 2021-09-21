@@ -30,7 +30,7 @@ import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.YoutubeActivity;
+import com.bald.uriah.baldphone.apps.video_tutorials.VideoTutorialActivity;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 
 public class HelpRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<HelpRecyclerViewAdapter.ViewHolder> {
@@ -74,7 +74,7 @@ public class HelpRecyclerViewAdapter extends ModularRecyclerView.ModularAdapter<
             text = itemView.findViewById(R.id.text);
             itemView.setOnClickListener(v -> {
                 final Context context = v.getContext();
-                context.startActivity(new Intent(context, YoutubeActivity.class).putExtra(YoutubeActivity.EXTRA_ID, index));
+                context.startActivity(new Intent(context, VideoTutorialActivity.class).putExtra(VideoTutorialActivity.EXTRA_ID, index));
             });
         }
 

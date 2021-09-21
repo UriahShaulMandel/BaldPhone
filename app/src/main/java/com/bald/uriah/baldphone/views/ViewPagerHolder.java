@@ -36,7 +36,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BPrefs;
-import com.bald.uriah.baldphone.GeneralConstants;
+import com.bald.uriah.baldphone.core.GeneralConstants;
 import com.duolingo.open.rtlviewpager.RtlViewPager;
 import com.google.android.material.tabs.TabLayout;
 

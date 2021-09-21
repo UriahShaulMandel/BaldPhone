@@ -30,7 +30,7 @@ import androidx.annotation.ColorInt;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.core.BaldToast;
-import com.bald.uriah.baldphone.GeneralConstants;
+import com.bald.uriah.baldphone.core.GeneralConstants;
 
 public class TutorialFragment2 extends TutorialFragment {
     private Vibrator vibrator;

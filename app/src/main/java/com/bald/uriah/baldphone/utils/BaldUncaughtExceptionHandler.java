@@ -23,7 +23,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-import com.bald.uriah.baldphone.activities.CrashActivity;
+import com.bald.uriah.baldphone.core.CrashActivity;
 import com.bald.uriah.baldphone.core.BPrefs;
 
 import org.acra.ACRA;

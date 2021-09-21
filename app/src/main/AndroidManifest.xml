@@ -59,7 +59,7 @@
 
 
         <activity
-            android:name=".activities.homescreen.HomeScreenActivity"
+            android:name=".apps.homescreen.HomeScreenActivity"
             android:enabled="${fullApp}"
             android:launchMode="singleTask">
             <intent-filter>
@@ -72,7 +72,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.DialerActivity"
+            android:name=".apps.phone.dialer.DialerActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/dialer">
@@ -81,60 +81,60 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.alarms.AlarmsActivity"
+            android:name=".apps.alarms.AlarmsActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/alarms" />
         <activity
-            android:name=".activities.alarms.AlarmScreenActivity"
+            android:name=".apps.alarms.AlarmScreenActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/alarm"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.alarms.AddAlarmActivity"
+            android:name=".apps.alarms.AddAlarmActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/add_alarm"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.contacts.ContactsActivity"
+            android:name=".apps.phone.contacts.ContactsActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/contacts"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".activities.contacts.SingleContactActivity"
+            android:name=".apps.phone.contacts.SingleContactActivity"
             android:enabled="${fullApp}" />
         <activity
-            android:name=".activities.media.SingleVideoActivity"
+            android:name=".apps.media.SingleVideoActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/video" />
         <activity
-            android:name=".activities.TutorialActivity"
+            android:name=".apps.tutorial.TutorialActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/video_tutorials"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.SOSActivity"
+            android:name=".apps.sos.SOSActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/sos" />
 
         <activity
-            android:name=".activities.SettingsActivity"
+            android:name=".apps.settings.SettingsActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/settings" />
         <activity
-            android:name=".activities.NotificationsActivity"
+            android:name=".apps.notifications.NotificationsActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/notifications" />
         <activity
-            android:name=".activities.FakeLauncherActivity"
+            android:name=".utils.LauncherChangingUtil"
             android:enabled="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -143,18 +143,18 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.PermissionActivity" />
+        <activity android:name=".core.PermissionActivity" />
         <activity
-            android:name=".activities.RecentActivity"
+            android:name=".apps.phone.recent_calls.RecentActivity"
             android:enabled="${recentCalls}"
             android:label="@string/recent"></activity>
         <activity
-            android:name=".activities.media.PhotosActivity"
+            android:name=".apps.media.PhotosActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/photos" />
         <activity
-            android:name=".activities.media.VideosActivity"
+            android:name=".apps.media.VideosActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/videos">
@@ -165,73 +165,73 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.media.SinglePhotoActivity"
+            android:name=".apps.media.SinglePhotoActivity"
             android:enabled="${fullApp}" />
         <activity
-            android:name=".activities.contacts.AddContactActivity"
+            android:name=".apps.phone.contacts.AddContactActivity"
             android:enabled="${fullApp}" />
         <activity
-            android:name=".activities.alarms.AddTimerActivity"
+            android:name=".apps.alarms.AddTimerActivity"
 
             android:enabled="${fullApp}"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.AppsActivity"
+            android:name=".apps.applications.AppsActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/apps" />
         <activity
-            android:name=".activities.pills.PillsActivity"
+            android:name=".apps.pills.PillsActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/pills" />
         <activity
-            android:name=".activities.pills.AddPillActivity"
+            android:name=".apps.pills.AddPillActivity"
 
             android:enabled="${fullApp}"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.pills.PillScreenActivity"
+            android:name=".apps.pills.PillScreenActivity"
 
             android:enabled="${fullApp}"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.FontChangerActivity"
+            android:name=".apps.settings.FontChangerActivity"
 
             android:enabled="${fullApp}"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.AccessibilityLevelChangerActivity"
+            android:name=".apps.settings.AccessibilityLevelChangerActivity"
 
             android:enabled="${fullApp}"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.contacts.ShareActivity"
+            android:name=".apps.phone.contacts.ShareActivity"
 
             android:enabled="${fullApp}"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".activities.CreditsActivity"
+            android:name=".apps.credits.CreditsActivity"
             android:enabled="${fullApp}" />
         <activity
-            android:name=".activities.YoutubeActivity"
+            android:name=".apps.video_tutorials.VideoTutorialActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.VideoTutorialsActivity"
+            android:name=".apps.video_tutorials.VideoTutorialsActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/video_tutorials" />
         <activity
-            android:name=".activities.CrashActivity"
+            android:name=".core.CrashActivity"
             android:label="@string/crash" />
         <activity
-            android:name=".activities.KeyboardChangerActivity"
+            android:name=".apps.settings.KeyboardChangerActivity"
             android:enabled="${fullApp}" />
         <activity
-            android:name=".activities.pills.PillTimeSetterActivity"
+            android:name=".apps.pills.PillTimeSetterActivity"
             android:enabled="${fullApp}" />
         <activity
-            android:name=".activities.PhoneActivity"
+            android:name=".apps.phone.dialer.PhoneActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/phone">
@@ -242,18 +242,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.TechnicalInfoActivity"
+            android:name=".apps.settings.TechnicalInfoActivity"
 
             android:enabled="${fullApp}"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.FeedbackActivity"
+            android:name=".apps.feedback.FeedbackActivity"
             android:enabled="${fullApp}" />
         <activity
-            android:name=".activities.UpdatesActivity"
+            android:name=".apps.updating.UpdatesActivity"
             android:enabled="${fullApp}" />
         <activity
-            android:name=".activities.Page1EditorActivity"
+            android:name=".apps.homescreen.Page1EditorActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/edit_home_screen" />

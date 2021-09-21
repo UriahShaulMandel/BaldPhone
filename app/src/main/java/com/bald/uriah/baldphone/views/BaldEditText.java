@@ -26,7 +26,7 @@ import android.view.inputmethod.InputMethodManager;
 import androidx.appcompat.widget.AppCompatEditText;
 
 import com.bald.uriah.baldphone.core.BPrefs;
-import com.bald.uriah.baldphone.GeneralConstants;
+import com.bald.uriah.baldphone.core.GeneralConstants;
 
 /**
  * This class isn't the same as {@link BaldButton} so be careful

@@ -22,7 +22,7 @@ import android.util.AttributeSet;
 
 import androidx.annotation.Nullable;
 
-import com.bald.uriah.baldphone.GeneralConstants;
+import com.bald.uriah.baldphone.core.GeneralConstants;
 
 public class MediumBaldButtonForTutorial extends androidx.appcompat.widget.AppCompatTextView implements BaldButtonInterface {
     private Vibrator vibrator;

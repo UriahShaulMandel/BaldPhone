@@ -29,7 +29,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.core.BaldToast;
-import com.bald.uriah.baldphone.GeneralConstants;
+import com.bald.uriah.baldphone.core.GeneralConstants;
 
 /**
  * Simple Button, extends {@link ConstraintLayout}; adapted to App settings.

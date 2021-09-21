@@ -33,8 +33,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.activities.AppsActivity;
-import com.bald.uriah.baldphone.activities.BaldActivity;
+import com.bald.uriah.baldphone.apps.applications.AppsActivity;
+import com.bald.uriah.baldphone.core.BaldActivity;
 import com.bald.uriah.baldphone.databases.apps.App;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
 import com.bald.uriah.baldphone.fragments_and_dialogs.LetterChooserDialog;
