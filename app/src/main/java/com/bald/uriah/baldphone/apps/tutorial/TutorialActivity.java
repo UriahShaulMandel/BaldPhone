@@ -26,9 +26,9 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BaldActivity;
-import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment1;
-import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment2;
-import com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment4;
+import com.bald.uriah.baldphone.apps.tutorial.tutorial_fragments.TutorialFragment1;
+import com.bald.uriah.baldphone.apps.tutorial.tutorial_fragments.TutorialFragment2;
+import com.bald.uriah.baldphone.apps.tutorial.tutorial_fragments.TutorialFragment4;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.views.ViewPagerHolder;
 

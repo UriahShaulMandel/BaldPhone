@@ -56,7 +56,7 @@ import com.android.volley.toolbox.Volley;
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BaldActivity;
-import com.bald.uriah.baldphone.apps.phone.contacts.ShareActivity;
+import com.bald.uriah.baldphone.apps.share.ShareActivity;
 import com.bald.uriah.baldphone.adapters.DropDownRecyclerViewAdapter;
 import com.bald.uriah.baldphone.content_providers.BaldFileProvider;
 import com.bald.uriah.baldphone.core.BDB;

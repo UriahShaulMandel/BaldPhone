@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.apps.phone.dialer;
+package com.bald.uriah.baldphone.apps.dialer;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -43,7 +43,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.apps.phone.contacts.AddContactActivity;
+import com.bald.uriah.baldphone.apps.contacts.AddContactActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 import com.bald.uriah.baldphone.core.BaldActivity;
 import com.bald.uriah.baldphone.databases.contacts.Contact;

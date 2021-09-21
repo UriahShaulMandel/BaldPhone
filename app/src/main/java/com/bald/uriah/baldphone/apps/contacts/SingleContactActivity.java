@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.apps.phone.contacts;
+package com.bald.uriah.baldphone.apps.contacts;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -43,7 +43,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BaldActivity;
-import com.bald.uriah.baldphone.apps.phone.dialer.DialerActivity;
+import com.bald.uriah.baldphone.apps.dialer.DialerActivity;
 import com.bald.uriah.baldphone.apps.sos.SOSPinningUtils;
 import com.bald.uriah.baldphone.adapters.CallsRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.calls.Call;

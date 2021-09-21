@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.apps.phone.contacts;
+package com.bald.uriah.baldphone.apps.contacts;
 
 import android.content.ActivityNotFoundException;
 import android.content.ContentResolver;
@@ -38,6 +38,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
+import com.bald.uriah.baldphone.apps.share.ShareActivity;
 import com.bald.uriah.baldphone.core.BaldActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 import com.bald.uriah.baldphone.core.BaldToast;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.apps.phone.contacts;
+package com.bald.uriah.baldphone.apps.contacts;
 
 import android.content.Intent;
 import android.database.Cursor;

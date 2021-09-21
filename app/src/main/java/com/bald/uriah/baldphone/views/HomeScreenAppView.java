@@ -24,7 +24,7 @@ import android.widget.TextView;
 import androidx.annotation.StringRes;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.apps.phone.contacts.SingleContactActivity;
+import com.bald.uriah.baldphone.apps.contacts.SingleContactActivity;
 import com.bald.uriah.baldphone.utils.S;
 
 public class HomeScreenAppView {

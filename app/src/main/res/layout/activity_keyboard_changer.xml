@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/fragment"
-        class="com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment3"
+        class="com.bald.uriah.baldphone.apps.tutorial.tutorial_fragments.TutorialFragment3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -23,7 +23,7 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-import com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter;
+import com.bald.uriah.baldphone.apps.applications.AppsRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.views.HomeScreenAppView;

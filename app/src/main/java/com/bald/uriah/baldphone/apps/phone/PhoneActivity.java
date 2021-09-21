@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.apps.phone.dialer;
+package com.bald.uriah.baldphone.apps.phone;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,8 +24,9 @@ import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.apps.phone.contacts.ContactsActivity;
-import com.bald.uriah.baldphone.apps.phone.recent_calls.RecentActivity;
+import com.bald.uriah.baldphone.apps.contacts.ContactsActivity;
+import com.bald.uriah.baldphone.apps.dialer.DialerActivity;
+import com.bald.uriah.baldphone.apps.recent_calls.RecentActivity;
 import com.bald.uriah.baldphone.core.BaldActivity;
 
 public class PhoneActivity extends BaldActivity {

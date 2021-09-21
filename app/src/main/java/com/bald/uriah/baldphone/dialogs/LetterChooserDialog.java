@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.fragments_and_dialogs;
+package com.bald.uriah.baldphone.dialogs;
 
 import android.app.Dialog;
 import android.content.Context;

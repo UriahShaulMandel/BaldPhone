@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments;
+package com.bald.uriah.baldphone.apps.tutorial.tutorial_fragments;
 
 import android.content.Context;
 import android.content.Intent;

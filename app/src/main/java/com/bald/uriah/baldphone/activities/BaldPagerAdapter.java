@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.adapters;
+package com.bald.uriah.baldphone.activities;
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +22,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.core.util.Pools;
 
-import com.bald.uriah.baldphone.activities.HomeScreenActivity;
+import com.bald.uriah.baldphone.adapters.BaldViewAdapter;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.views.home.HomePage1;

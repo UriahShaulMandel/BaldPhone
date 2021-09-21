@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.adapters;
+package com.bald.uriah.baldphone.apps.applications;
 
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -33,11 +33,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.apps.applications.AppsActivity;
 import com.bald.uriah.baldphone.core.BaldActivity;
 import com.bald.uriah.baldphone.databases.apps.App;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
-import com.bald.uriah.baldphone.fragments_and_dialogs.LetterChooserDialog;
+import com.bald.uriah.baldphone.dialogs.LetterChooserDialog;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 

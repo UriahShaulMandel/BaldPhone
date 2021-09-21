@@ -72,7 +72,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".apps.phone.dialer.DialerActivity"
+            android:name=".apps.dialer.DialerActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/dialer">
@@ -98,13 +98,13 @@
             android:label="@string/add_alarm"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".apps.phone.contacts.ContactsActivity"
+            android:name=".apps.contacts.ContactsActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/contacts"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".apps.phone.contacts.SingleContactActivity"
+            android:name=".apps.contacts.SingleContactActivity"
             android:enabled="${fullApp}" />
         <activity
             android:name=".apps.media.SingleVideoActivity"
@@ -145,7 +145,7 @@
         </activity>
         <activity android:name=".core.PermissionActivity" />
         <activity
-            android:name=".apps.phone.recent_calls.RecentActivity"
+            android:name=".apps.recent_calls.RecentActivity"
             android:enabled="${recentCalls}"
             android:label="@string/recent"></activity>
         <activity
@@ -168,7 +168,7 @@
             android:name=".apps.media.SinglePhotoActivity"
             android:enabled="${fullApp}" />
         <activity
-            android:name=".apps.phone.contacts.AddContactActivity"
+            android:name=".apps.contacts.AddContactActivity"
             android:enabled="${fullApp}" />
         <activity
             android:name=".apps.alarms.AddTimerActivity"
@@ -206,7 +206,7 @@
             android:enabled="${fullApp}"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".apps.phone.contacts.ShareActivity"
+            android:name=".apps.share.ShareActivity"
 
             android:enabled="${fullApp}"
             android:windowSoftInputMode="adjustResize" />
@@ -231,7 +231,7 @@
             android:name=".apps.pills.PillTimeSetterActivity"
             android:enabled="${fullApp}" />
         <activity
-            android:name=".apps.phone.dialer.PhoneActivity"
+            android:name=".apps.phone.PhoneActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/phone">

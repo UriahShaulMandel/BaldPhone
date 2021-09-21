@@ -24,7 +24,7 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BaldActivity;
 
 /**
- * A simple holder to {@link com.bald.uriah.baldphone.fragments_and_dialogs.tutorial_fragments.TutorialFragment3}
+ * A simple holder to {@link com.bald.uriah.baldphone.apps.tutorial.tutorial_fragments.TutorialFragment3}
  */
 public class KeyboardChangerActivity extends BaldActivity {
     @Override

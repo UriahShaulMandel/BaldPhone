@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.adapters;
+package com.bald.uriah.baldphone.apps.tutorial;
 
 import android.content.Context;
 import android.content.Intent;

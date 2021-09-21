@@ -24,7 +24,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.adapters.HelpRecyclerViewAdapter;
+import com.bald.uriah.baldphone.apps.tutorial.HelpRecyclerViewAdapter;
 import com.bald.uriah.baldphone.core.BaldActivity;
 import com.bald.uriah.baldphone.utils.S;
 

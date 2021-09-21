@@ -30,7 +30,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter;
 import com.bald.uriah.baldphone.core.BaldActivity;
 import com.bald.uriah.baldphone.databases.apps.App;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabase;
@@ -43,7 +42,7 @@ import com.bald.uriah.baldphone.utils.S;
 import java.util.List;
 import java.util.Objects;
 
-import static com.bald.uriah.baldphone.adapters.AppsRecyclerViewAdapter.TYPE_HEADER;
+import static com.bald.uriah.baldphone.apps.applications.AppsRecyclerViewAdapter.TYPE_HEADER;
 import static com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper.baldComponentNameBeginning;
 
 public class AppsActivity extends BaldActivity {

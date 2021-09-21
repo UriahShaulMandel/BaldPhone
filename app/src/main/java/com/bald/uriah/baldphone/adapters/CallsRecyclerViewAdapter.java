@@ -40,9 +40,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BaldActivity;
-import com.bald.uriah.baldphone.apps.phone.dialer.DialerActivity;
-import com.bald.uriah.baldphone.apps.phone.contacts.AddContactActivity;
-import com.bald.uriah.baldphone.apps.phone.contacts.SingleContactActivity;
+import com.bald.uriah.baldphone.apps.dialer.DialerActivity;
+import com.bald.uriah.baldphone.apps.contacts.AddContactActivity;
+import com.bald.uriah.baldphone.apps.contacts.SingleContactActivity;
 import com.bald.uriah.baldphone.databases.calls.Call;
 import com.bald.uriah.baldphone.databases.contacts.MiniContact;
 import com.bald.uriah.baldphone.core.BDB;

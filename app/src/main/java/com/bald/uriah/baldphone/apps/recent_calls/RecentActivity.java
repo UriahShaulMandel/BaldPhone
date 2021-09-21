@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.apps.phone.recent_calls;
+package com.bald.uriah.baldphone.apps.recent_calls;
 
 import android.os.Bundle;
 
