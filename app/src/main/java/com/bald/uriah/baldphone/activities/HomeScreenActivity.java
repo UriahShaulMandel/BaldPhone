@@ -96,6 +96,8 @@ import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTI
 import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_NONE;
 import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_SOME;
 
+// This class cannot be moved!
+// Backward compatibility
 public class HomeScreenActivity extends BaldActivity {
     private static final String TAG = HomeScreenActivity.class.getSimpleName();
 

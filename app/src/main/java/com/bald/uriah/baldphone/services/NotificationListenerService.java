@@ -36,7 +36,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.Objects;
 
-// LEGACY - cannot be moved!
+/**
+ * LEGACY - cannot be moved!
+ */
 public class NotificationListenerService extends android.service.notification.NotificationListenerService {
     private static final String TAG = NotificationListenerService.class.getSimpleName();
     public static final String NOTIFICATIONS_ACTIVITY_BROADCAST = "NOTIFICATIONS_ACTIVITY_BROADCAST";
