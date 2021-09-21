@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.apps.homescreen;
+package com.bald.uriah.baldphone.activities;
 
 import android.Manifest;
 import android.annotation.SuppressLint;

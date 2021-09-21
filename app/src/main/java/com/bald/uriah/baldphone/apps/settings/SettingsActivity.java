@@ -52,7 +52,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.utils.LauncherChangingUtil;
-import com.bald.uriah.baldphone.apps.homescreen.Page1EditorActivity;
+import com.bald.uriah.baldphone.activities.Page1EditorActivity;
 import com.bald.uriah.baldphone.core.PermissionActivity;
 import com.bald.uriah.baldphone.apps.alarms.AlarmScreenActivity;
 import com.bald.uriah.baldphone.apps.pills.PillTimeSetterActivity;

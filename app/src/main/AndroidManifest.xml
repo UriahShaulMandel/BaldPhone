@@ -59,7 +59,7 @@
 
 
         <activity
-            android:name=".apps.homescreen.HomeScreenActivity"
+            android:name=".activities.HomeScreenActivity"
             android:enabled="${fullApp}"
             android:launchMode="singleTask">
             <intent-filter>
@@ -253,7 +253,7 @@
             android:name=".apps.updating.UpdatesActivity"
             android:enabled="${fullApp}" />
         <activity
-            android:name=".apps.homescreen.Page1EditorActivity"
+            android:name=".activities.Page1EditorActivity"
 
             android:enabled="${fullApp}"
             android:label="@string/edit_home_screen" />

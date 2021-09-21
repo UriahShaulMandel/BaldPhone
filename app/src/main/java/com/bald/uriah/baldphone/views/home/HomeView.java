@@ -23,7 +23,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
-import com.bald.uriah.baldphone.apps.homescreen.HomeScreenActivity;
+import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 
 public abstract class HomeView extends FrameLayout {
     protected final HomeScreenActivity homeScreen;
