@@ -26,7 +26,7 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.apps.updating.UpdatesActivity;
 import com.bald.uriah.baldphone.databases.alarms.AlarmScheduler;
 import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
-import com.bald.uriah.baldphone.apps.notifications.NotificationListenerService;
+import com.bald.uriah.baldphone.services.NotificationListenerService;
 import com.bald.uriah.baldphone.utils.BaldUncaughtExceptionHandler;
 import com.bald.uriah.baldphone.utils.S;
 

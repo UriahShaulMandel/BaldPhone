@@ -55,7 +55,7 @@ import com.bald.uriah.baldphone.databases.apps.App;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabase;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
 import com.bald.uriah.baldphone.databases.calls.CallLogsHelper;
-import com.bald.uriah.baldphone.apps.notifications.NotificationListenerService;
+import com.bald.uriah.baldphone.services.NotificationListenerService;
 import com.bald.uriah.baldphone.core.BDB;
 import com.bald.uriah.baldphone.core.BDialog;
 import com.bald.uriah.baldphone.core.BPrefs;
@@ -69,9 +69,9 @@ import java.util.Map;
 import java.util.Set;
 
 import static com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper.baldComponentNameBeginning;
-import static com.bald.uriah.baldphone.apps.notifications.NotificationListenerService.ACTION_REGISTER_ACTIVITY;
-import static com.bald.uriah.baldphone.apps.notifications.NotificationListenerService.KEY_EXTRA_ACTIVITY;
-import static com.bald.uriah.baldphone.apps.notifications.NotificationListenerService.NOTIFICATIONS_HOME_SCREEN;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.ACTION_REGISTER_ACTIVITY;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.KEY_EXTRA_ACTIVITY;
+import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_HOME_SCREEN;
 
 @SuppressLint("ViewConstructor")
 public class HomePage1 extends HomeView {
