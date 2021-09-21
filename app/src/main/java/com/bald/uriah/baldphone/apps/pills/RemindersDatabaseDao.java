@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.databases.alarms;
+package com.bald.uriah.baldphone.apps.pills;
 
 import androidx.room.Dao;
-import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
@@ -25,40 +24,35 @@ import androidx.room.Query;
 import java.util.List;
 
 @Dao
-public interface AlarmsDatabaseDao {
-    @Query("SELECT * FROM Alarm")
-    List<Alarm> getAll();
+public interface RemindersDatabaseDao {
 
-    @Query("SELECT * FROM Alarm ORDER BY hour ASC, minute ASC")
-    List<Alarm> getAllSortedByTime();
+    @Query("SELECT * FROM Reminder")
+    List<Reminder> getAllReminders();
 
-    @Query("SELECT * FROM Alarm WHERE enabled = 1")
-    List<Alarm> getAllEnabled();
+    @Query("SELECT * FROM Reminder WHERE `id` = :id LIMIT 1")
+    Reminder getById(int id);
 
-    @Query("UPDATE Alarm SET enabled=:enabled WHERE `key` = :key")
-    void update(int key, boolean enabled);
+    @Query("SELECT * FROM Reminder ORDER BY starting_time ASC")
+    List<Reminder> getAllRemindersOrderedByTime();
 
-    @Query("SELECT * FROM Alarm WHERE `key` = :key LIMIT 1")
-    Alarm getByKey(int key);
+    @Query("DELETE FROM Reminder WHERE id = :id")
+    void removeReminder(int id);
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insertAll(Alarm... alarms);
+    @Query("DELETE FROM Reminder WHERE id IN (:ids)")
+    void removeReminders(int... ids);
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    long insert(Alarm alarm);
+    void insertAll(Reminder... reminders);
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    long insert(Reminder reminders);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    long replace(Alarm alarm);
+    long replace(Reminder reminder);
 
-    @Delete
-    void delete(Alarm alarm);
-
-    @Query("DELETE FROM Alarm WHERE `key` IN (:keys)")
-    void deleteByIds(int... keys);
-
-    @Query("DELETE FROM Alarm")
-    void deleteAll();
-
-    @Query("SELECT COUNT(*) FROM Alarm")
+    @Query("SELECT COUNT(*) FROM Reminder")
     int getNumberOfRows();
+
+    @Query("DELETE FROM Reminder")
+    void deleteAll();
 }

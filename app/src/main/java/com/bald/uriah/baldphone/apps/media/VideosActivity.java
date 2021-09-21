@@ -28,7 +28,6 @@ import android.util.Log;
 import android.util.Size;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.databases.DBConstants;
 import com.bald.uriah.baldphone.utils.S;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -38,9 +37,9 @@ import java.io.IOException;
 
 /**
  * Most of this class is defined at {@link MediaScrollingActivity},
- * The Constants used are defined at {@link DBConstants.VideosConstants}
+ * The Constants used are defined at {@link VideosConstants}
  */
-public class VideosActivity extends MediaScrollingActivity implements DBConstants.VideosConstants {
+public class VideosActivity extends MediaScrollingActivity implements VideosConstants {
     private static final String TAG = VideosActivity.class.getSimpleName();
     private Size videoThumbnailSize;
     private RequestOptions requestOptions;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.databases.reminders;
+package com.bald.uriah.baldphone.apps.pills;
 
 import android.util.SparseIntArray;
 

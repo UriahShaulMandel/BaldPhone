@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.databases.calls;
+package com.bald.uriah.baldphone.apps.recent_calls;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;
@@ -25,7 +25,7 @@ import android.provider.ContactsContract;
 
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.adapters.CallsRecyclerViewAdapter;
-import com.bald.uriah.baldphone.databases.contacts.Contact;
+import com.bald.uriah.baldphone.apps.contacts.Contact;
 
 import java.util.ArrayList;
 import java.util.List;

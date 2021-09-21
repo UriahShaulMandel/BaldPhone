@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.databases.alarms;
+package com.bald.uriah.baldphone.apps.pills;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -25,8 +25,8 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
-import com.bald.uriah.baldphone.apps.alarms.AlarmsActivity;
-import com.bald.uriah.baldphone.broadcast_receivers.AlarmReceiver;
+import com.bald.uriah.baldphone.broadcast_receivers.ReminderReceiver;
+import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 import com.bald.uriah.baldphone.utils.S;
 
@@ -38,20 +38,23 @@ import java.util.List;
 /**
  *
  */
-public class AlarmScheduler {
-    private static final String TAG = AlarmScheduler.class.getSimpleName();
+public class ReminderScheduler {
+    private static final String TAG = ReminderScheduler.class.getSimpleName();
     public static final Object LOCK = new Object();
     public static final int SNOOZE_MILLIS = 5 * DateTimeUtils.MINUTE;
 
-    private AlarmScheduler() {
+    /**
+     * helper class should not be instantiate
+     */
+    private ReminderScheduler() {
     }
 
-    public static void cancelAlarm(int key, Context context) {
+    //Helpers Doesn't need to be synchronized
+    public static void cancelReminder(int key, Context context) {
         synchronized (LOCK) {
-            _cancelAlarm(key, context);
+            _cancelReminder(key, context);
         }
     }
-
     // BaldDay -
     /*
           sunday = 1
@@ -89,24 +92,22 @@ public class AlarmScheduler {
         return day;
     }
 
-    public static long nextTimeAlarmWillWorkInMsFromNow(@NonNull Alarm alarm) {
-        return nextTimeAlarmWillWorkInMs(alarm) - DateTime.now().getMillis();
-    }
-
-    static long nextTimeAlarmWillWorkInMs(@NonNull Alarm alarm) {
+    private static long nextTimeReminderWillWorkInMs(@NonNull Reminder reminder, Context context) {
         final MutableDateTime mDateTime = MutableDateTime.now();
+
         {   //creating a date of today with the hours and minutes of the alarm
             mDateTime.setMillisOfSecond(0);
             mDateTime.setSecondOfMinute(0);
-            mDateTime.setHourOfDay(alarm.getHour());
-            mDateTime.setMinuteOfHour(alarm.getMinute());
+
+            mDateTime.setHourOfDay(BPrefs.getHour(reminder.getStartingTime(), context));
+            mDateTime.setMinuteOfHour(BPrefs.getMinute(reminder.getStartingTime(), context));
         }
 
         final int baldDay = getBaldDay();
-
+        final int days = reminder.getDays();
         {   //today or one time
-            if ((alarm.getDays() & baldDay) == baldDay) {//today may have an alarm
-                if ((alarm.getDays() == baldDay)) {
+            if ((days & baldDay) == baldDay) {//today may have an alarm
+                if ((days == baldDay)) {
                     if (mDateTime.isBeforeNow())
                         mDateTime.addWeeks(1);  //next week if today's time already passed
                     return mDateTime.getMillis();
@@ -114,12 +115,13 @@ public class AlarmScheduler {
                     if (mDateTime.isAfterNow())
                         return mDateTime.getMillis();
                 }
-            } else if (alarm.getDays() == -1) {
+            } else if (days == -1) {
                 if (mDateTime.isBeforeNow())
                     mDateTime.addDays(1);
                 return mDateTime.getMillis();
             }
         }
+
         int selectedBaldDay = baldDay;
 
         {   //find next day
@@ -127,7 +129,7 @@ public class AlarmScheduler {
                 if (i > DateTimeUtils.Days.SATURDAY)
                     i = DateTimeUtils.Days.SUNDAY;
 
-                if ((alarm.getDays() & i) == i) {
+                if ((days & i) == i) {
                     selectedBaldDay = i;
                     break;
                 }
@@ -143,55 +145,56 @@ public class AlarmScheduler {
         return mDateTime.getMillis();
     }
 
-    private static void _cancelAlarm(int key, Context context) {
+    private static void _cancelReminder(int key, Context context) {
         ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).cancel(getIntent(context, key));
     }
 
-    public static void scheduleAlarm(@NonNull Alarm alarm, @NonNull Context context) throws IllegalArgumentException {
+    public static void scheduleReminder(@NonNull Reminder reminder, @NonNull Context context) throws IllegalArgumentException {
         synchronized (LOCK) {
-            S.logImportant("Scheduling an alarm!");
             final AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-            final long nextTimeAlarmWillWorkInMs = nextTimeAlarmWillWorkInMs(alarm);
+            final long nextTimeReminderWillWorkInMs = nextTimeReminderWillWorkInMs(reminder, context);
             alarmManager.setAlarmClock(
                     new AlarmManager.AlarmClockInfo(
-                            nextTimeAlarmWillWorkInMs,
-                            PendingIntent.getActivity(context, 0, new Intent(context, AlarmsActivity.class), 0)
+                            nextTimeReminderWillWorkInMs,
+                            PendingIntent.getActivity(context, 0, new Intent(context, PillsActivity.class), 0)
                     ),
-                    getIntent(context, alarm.getKey())
+                    getIntent(context, reminder.getId())
             );
         }
     }
 
     private static PendingIntent getIntent(Context context, int alarmKey) {
         Log.e(TAG, "getIntent: ");
-        Intent intent = new Intent(context, AlarmReceiver.class).putExtra(Alarm.ALARM_KEY_VIA_INTENTS, alarmKey);
+        Intent intent = new Intent(context, ReminderReceiver.class).putExtra(Reminder.REMINDER_KEY_VIA_INTENTS, alarmKey);
         return PendingIntent.getBroadcast(context, alarmKey, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
-    public static void scheduleSnooze(@NonNull Alarm alarm, Context context) throws IllegalArgumentException {
+    public static void scheduleSnooze(@NonNull Reminder alarm, Context context) throws IllegalArgumentException {
         synchronized (LOCK) {
             final AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
             alarmManager.setAlarmClock(
                     new AlarmManager.AlarmClockInfo(
                             DateTime.now().getMillis() + SNOOZE_MILLIS,
-                            PendingIntent.getActivity(context, alarm.getKey(), new Intent(context, HomeScreenActivity.class), 0)//TODO??
+                            PendingIntent.getActivity(context, alarm.getId(), new Intent(context, HomeScreenActivity.class), 0)//TODO??
                     ),
-                    getIntent(context, alarm.getKey())
+                    getIntent(context, alarm.getId())
             );
         }
     }
 
-    public static void reStartAlarms(final Context context) {
-        S.logImportant("reStartAlarms was called!");
+    public static void reStartReminders(final Context context) {
+        S.logImportant("reStartReminders was called!");
         synchronized (LOCK) {
-            S.logImportant("reStartAlarms was started!");
-            final List<Alarm> alarmList = AlarmsDatabase.getInstance(context).alarmsDatabaseDao().getAllEnabled();
-            for (Alarm alarm : alarmList) {
-                AlarmScheduler.cancelAlarm(alarm.getKey(), context);
-                AlarmScheduler.scheduleAlarm(alarm, context);
+            S.logImportant("reStartReminders was started!");
+            final List<Reminder> alarmList =
+                    RemindersDatabase.getInstance(context)
+                            .remindersDatabaseDao().getAllReminders();
+            for (Reminder alarm :
+                    alarmList) {
+                ReminderScheduler.cancelReminder(alarm.getId(), context);
+                ReminderScheduler.scheduleReminder(alarm, context);
             }
-            S.logImportant("reStartAlarms has finished!");
-
+            S.logImportant("reStartReminders has finished!");
         }
     }
 }

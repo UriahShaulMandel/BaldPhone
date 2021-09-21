@@ -62,7 +62,7 @@ import com.bald.uriah.baldphone.apps.notifications.NotificationsActivity;
 import com.bald.uriah.baldphone.core.PermissionActivity;
 import com.bald.uriah.baldphone.apps.sos.SOSActivity;
 import com.bald.uriah.baldphone.apps.tutorial.TutorialActivity;
-import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
+import com.bald.uriah.baldphone.apps.applications.AppsDatabaseHelper;
 import com.bald.uriah.baldphone.services.NotificationListenerService;
 import com.bald.uriah.baldphone.core.BDB;
 import com.bald.uriah.baldphone.core.BDialog;

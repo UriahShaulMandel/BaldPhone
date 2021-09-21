@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.databases.alarms;
+package com.bald.uriah.baldphone.apps.alarms;
 
 import androidx.annotation.Nullable;
 import androidx.room.ColumnInfo;

@@ -36,14 +36,13 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.databases.DBConstants;
 import com.bald.uriah.baldphone.utils.ToggleUtils;
 
 /**
  * Most of this class is defined at {@link SingleMediaActivity},
- * The Constants used are defined at {@link DBConstants.VideosConstants}
+ * The Constants used are defined at {@link VideosConstants}
  */
-public class SingleVideoActivity extends SingleMediaActivity implements DBConstants.VideosConstants {
+public class SingleVideoActivity extends SingleMediaActivity implements VideosConstants {
     private VideoPagerAdapter videoPagerAdapter;
 
     @Override

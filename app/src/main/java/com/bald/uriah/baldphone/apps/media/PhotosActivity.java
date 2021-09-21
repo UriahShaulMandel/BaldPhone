@@ -30,7 +30,6 @@ import android.util.Size;
 import androidx.annotation.Nullable;
 
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.databases.DBConstants;
 import com.bald.uriah.baldphone.utils.S;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -40,9 +39,9 @@ import java.io.IOException;
 
 /**
  * Most of this class is defined at {@link MediaScrollingActivity},
- * The Constants used are defined at {@link DBConstants.PhotosConstants}
+ * The Constants used are defined at {@link PhotosConstants}
  */
-public class PhotosActivity extends MediaScrollingActivity implements DBConstants.PhotosConstants {
+public class PhotosActivity extends MediaScrollingActivity implements PhotosConstants {
     private static final String TAG = PhotosActivity.class.getSimpleName();
     private Size photoThumbnailSize;
     private RequestOptions requestOptions;

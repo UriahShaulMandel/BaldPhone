@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.databases.apps;
+package com.bald.uriah.baldphone.apps.applications;
 
 import android.content.Context;
 

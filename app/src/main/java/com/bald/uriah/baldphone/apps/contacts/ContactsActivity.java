@@ -28,7 +28,7 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 
 /**
- * Activity for viewing and adding {@link com.bald.uriah.baldphone.databases.contacts.Contact}.
+ * Activity for viewing and adding {@link Contact}.
  * most of the activity actually defind in {@link BaseContactsActivity}
  */
 public class ContactsActivity extends BaseContactsActivity {

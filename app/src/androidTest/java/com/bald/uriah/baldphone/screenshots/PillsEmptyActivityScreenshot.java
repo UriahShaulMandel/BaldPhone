@@ -23,7 +23,7 @@ import androidx.test.filters.LargeTest;
 import androidx.test.runner.AndroidJUnit4;
 
 import com.bald.uriah.baldphone.apps.pills.PillsActivity;
-import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
+import com.bald.uriah.baldphone.apps.pills.RemindersDatabase;
 
 import org.junit.runner.RunWith;
 

@@ -28,7 +28,7 @@ import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.apps.updating.UpdatesActivity;
 import com.bald.uriah.baldphone.core.BaldActivity;
-import com.bald.uriah.baldphone.databases.apps.AppsDatabase;
+import com.bald.uriah.baldphone.apps.applications.AppsDatabase;
 import com.bald.uriah.baldphone.core.BDB;
 import com.bald.uriah.baldphone.core.BDialog;
 import com.bald.uriah.baldphone.core.BPrefs;

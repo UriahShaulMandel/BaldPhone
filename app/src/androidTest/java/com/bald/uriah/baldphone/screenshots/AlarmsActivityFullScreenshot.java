@@ -23,8 +23,8 @@ import androidx.test.runner.AndroidJUnit4;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.apps.alarms.AlarmsActivity;
-import com.bald.uriah.baldphone.databases.alarms.Alarm;
-import com.bald.uriah.baldphone.databases.alarms.AlarmsDatabase;
+import com.bald.uriah.baldphone.apps.alarms.Alarm;
+import com.bald.uriah.baldphone.apps.alarms.AlarmsDatabase;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 
 import org.junit.runner.RunWith;

@@ -42,7 +42,6 @@ import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BaldActivity;
 import com.bald.uriah.baldphone.activities.HomeScreenActivity;
 import com.bald.uriah.baldphone.apps.media.PhotosActivity;
-import com.bald.uriah.baldphone.databases.contacts.Contact;
 import com.bald.uriah.baldphone.core.BDB;
 import com.bald.uriah.baldphone.core.BDialog;
 import com.bald.uriah.baldphone.core.BaldToast;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.databases.apps;
+package com.bald.uriah.baldphone.apps.applications;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -29,7 +29,6 @@ import android.widget.ImageView;
 
 import com.bald.uriah.baldphone.BuildConfig;
 import com.bald.uriah.baldphone.R;
-import com.bald.uriah.baldphone.apps.applications.AppsActivity;
 import com.bald.uriah.baldphone.apps.dialer.DialerActivity;
 import com.bald.uriah.baldphone.activities.Page1EditorActivity;
 import com.bald.uriah.baldphone.apps.recent_calls.RecentActivity;

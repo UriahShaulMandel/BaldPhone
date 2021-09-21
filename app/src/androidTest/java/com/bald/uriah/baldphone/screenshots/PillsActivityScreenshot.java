@@ -27,8 +27,8 @@ import androidx.test.runner.AndroidJUnit4;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.apps.pills.AddPillActivity;
 import com.bald.uriah.baldphone.apps.pills.PillsActivity;
-import com.bald.uriah.baldphone.databases.reminders.Reminder;
-import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
+import com.bald.uriah.baldphone.apps.pills.Reminder;
+import com.bald.uriah.baldphone.apps.pills.RemindersDatabase;
 import com.bald.uriah.baldphone.utils.DateTimeUtils;
 
 import org.junit.runner.RunWith;

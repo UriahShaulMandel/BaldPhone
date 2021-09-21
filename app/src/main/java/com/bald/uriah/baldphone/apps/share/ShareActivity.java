@@ -30,7 +30,7 @@ import androidx.annotation.Nullable;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 import com.bald.uriah.baldphone.apps.contacts.BaseContactsActivity;
-import com.bald.uriah.baldphone.databases.contacts.Contact;
+import com.bald.uriah.baldphone.apps.contacts.Contact;
 import com.bald.uriah.baldphone.core.BaldToast;
 import com.bald.uriah.baldphone.utils.PackageUtils;
 import com.bald.uriah.baldphone.utils.S;

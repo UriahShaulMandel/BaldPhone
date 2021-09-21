@@ -1,6 +1,6 @@
 package com.bald.uriah.baldphone.apps.sos;
 
-import static com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper.SHARED_PREFS_KEY;
+import static com.bald.uriah.baldphone.activities.HomeScreenPinHelper.SHARED_PREFS_KEY;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -8,8 +8,8 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.provider.ContactsContract;
 
-import com.bald.uriah.baldphone.databases.contacts.MiniContact;
-import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
+import com.bald.uriah.baldphone.apps.contacts.MiniContact;
+import com.bald.uriah.baldphone.activities.HomeScreenPinHelper;
 
 import java.util.ArrayList;
 import java.util.Collections;

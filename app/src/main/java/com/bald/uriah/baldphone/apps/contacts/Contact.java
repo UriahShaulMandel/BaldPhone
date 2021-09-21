@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.databases.contacts;
+package com.bald.uriah.baldphone.apps.contacts;
 
 import android.content.ContentResolver;
 import android.database.Cursor;
@@ -25,7 +25,6 @@ import android.util.Pair;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.bald.uriah.baldphone.databases.DBConstants;
 import com.bald.uriah.baldphone.utils.PackageUtils;
 
 import java.util.ArrayList;
@@ -34,7 +33,7 @@ import java.util.List;
 /**
  * Immutable Contact class
  */
-public class Contact implements DBConstants.ContactConstants {
+public class Contact implements ContactConstants {
     private final int id;
     @NonNull
     private final String lookupKey;

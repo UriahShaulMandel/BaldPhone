@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.databases.calls;
+package com.bald.uriah.baldphone.apps.recent_calls;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -24,7 +24,7 @@ import android.provider.ContactsContract;
 
 import androidx.annotation.Nullable;
 
-import com.bald.uriah.baldphone.databases.contacts.MiniContact;
+import com.bald.uriah.baldphone.apps.contacts.MiniContact;
 
 public class Call {
     private static final String TAG = Call.class.getSimpleName();

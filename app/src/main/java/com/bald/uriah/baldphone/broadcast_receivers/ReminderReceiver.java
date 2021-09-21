@@ -22,9 +22,9 @@ import android.content.Intent;
 import android.util.Log;
 
 import com.bald.uriah.baldphone.apps.pills.PillScreenActivity;
-import com.bald.uriah.baldphone.databases.reminders.Reminder;
-import com.bald.uriah.baldphone.databases.reminders.ReminderScheduler;
-import com.bald.uriah.baldphone.databases.reminders.RemindersDatabase;
+import com.bald.uriah.baldphone.apps.pills.Reminder;
+import com.bald.uriah.baldphone.apps.pills.ReminderScheduler;
+import com.bald.uriah.baldphone.apps.pills.RemindersDatabase;
 
 /**
  * the middle man between the {@link ReminderScheduler} and {@link PillScreenActivity}.

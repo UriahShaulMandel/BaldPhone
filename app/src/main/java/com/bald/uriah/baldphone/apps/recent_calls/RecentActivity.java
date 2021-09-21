@@ -25,7 +25,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BaldActivity;
 import com.bald.uriah.baldphone.adapters.CallsRecyclerViewAdapter;
-import com.bald.uriah.baldphone.databases.calls.CallLogsHelper;
 
 public class RecentActivity extends BaldActivity {
     public RecyclerView recyclerView;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.databases.home_screen_pins;
+package com.bald.uriah.baldphone.activities;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -22,8 +22,8 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.provider.ContactsContract;
 
-import com.bald.uriah.baldphone.databases.apps.AppsDatabase;
-import com.bald.uriah.baldphone.databases.contacts.MiniContact;
+import com.bald.uriah.baldphone.apps.applications.AppsDatabase;
+import com.bald.uriah.baldphone.apps.contacts.MiniContact;
 import com.bald.uriah.baldphone.views.HomeScreenAppView;
 
 import java.util.ArrayList;

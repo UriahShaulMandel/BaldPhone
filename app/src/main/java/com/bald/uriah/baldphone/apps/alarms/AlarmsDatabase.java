@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.databases.reminders;
+package com.bald.uriah.baldphone.apps.alarms;
 
 import android.content.Context;
 
@@ -22,21 +22,20 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {Reminder.class}, version = 1, exportSchema = false)
-public abstract class RemindersDatabase extends RoomDatabase {
-    private static final Object LOCK = new Object();
-    private static RemindersDatabase remindersDatabase = null;
+@Database(entities = {Alarm.class}, version = 1, exportSchema = false)
 
-    public static RemindersDatabase getInstance(Context context) {
+public abstract class AlarmsDatabase extends RoomDatabase {
+    private static final Object LOCK = new Object();
+    private static AlarmsDatabase alarmsDatabase = null;
+
+    public static AlarmsDatabase getInstance(Context context) {
         synchronized (LOCK) {
-            if (remindersDatabase == null)
-                remindersDatabase = Room.databaseBuilder(context.getApplicationContext(),
-                        RemindersDatabase.class, "reminders")
-                        .allowMainThreadQueries()
-                        .build();
-            return remindersDatabase;
+            if (alarmsDatabase == null)
+                alarmsDatabase = Room.databaseBuilder(context.getApplicationContext(),
+                        AlarmsDatabase.class, "alarmsbeta").allowMainThreadQueries().build();
+            return alarmsDatabase;
         }
     }
 
-    public abstract RemindersDatabaseDao remindersDatabaseDao();
+    public abstract AlarmsDatabaseDao alarmsDatabaseDao();
 }

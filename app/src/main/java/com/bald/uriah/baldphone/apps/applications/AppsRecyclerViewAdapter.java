@@ -34,8 +34,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bald.uriah.baldphone.R;
 import com.bald.uriah.baldphone.core.BaldActivity;
-import com.bald.uriah.baldphone.databases.apps.App;
-import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
 import com.bald.uriah.baldphone.dialogs.LetterChooserDialog;
 import com.bald.uriah.baldphone.core.BPrefs;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;

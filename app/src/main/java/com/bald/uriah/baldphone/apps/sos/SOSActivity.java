@@ -30,7 +30,7 @@ import com.bald.uriah.baldphone.core.BaldActivity;
 import com.bald.uriah.baldphone.apps.dialer.DialerActivity;
 import com.bald.uriah.baldphone.apps.contacts.ContactsActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
-import com.bald.uriah.baldphone.databases.contacts.MiniContact;
+import com.bald.uriah.baldphone.apps.contacts.MiniContact;
 import com.bald.uriah.baldphone.views.BaldLinearLayoutButton;
 
 import java.util.List;
