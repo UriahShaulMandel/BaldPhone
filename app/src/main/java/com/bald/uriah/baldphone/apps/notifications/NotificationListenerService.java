@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.bald.uriah.baldphone.services;
+package com.bald.uriah.baldphone.apps.notifications;
 
 import android.app.Notification;
 import android.content.BroadcastReceiver;
@@ -38,33 +38,32 @@ import java.util.Objects;
 
 public class NotificationListenerService extends android.service.notification.NotificationListenerService {
     private static final String TAG = NotificationListenerService.class.getSimpleName();
-    // BROADCASTS
+
     public static final String NOTIFICATIONS_ACTIVITY_BROADCAST = "NOTIFICATIONS_ACTIVITY_BROADCAST";
     public static final String HOME_SCREEN_ACTIVITY_BROADCAST = "HOME_SCREEN_ACTIVITY_BROADCAST";
-    //    ACTIONS
+
     public static final String ACTION_REGISTER_ACTIVITY = "ACTION_REGISTER_ACTIVITY";
-    // BROADCASTS
     public static final String ACTION_CLEAR = "ACTION_CLEAR";
-    //    KEYS
+
     public static final String KEY_EXTRA_KEY = "KEY_EXTRA_KEY";
-    //    ACTIONS
     public static final String KEY_EXTRA_NOTIFICATIONS = "KEY_EXTRA_NOTIFICATIONS";
     public static final String KEY_EXTRA_ACTIVITY = "KEY_EXTRA_ACTIVITY";
+
     public static final int
             NOTIFICATIONS_NONE = 0,
             NOTIFICATIONS_SOME = 2,
             NOTIFICATIONS_ALOT = 5;
-    //    KEYS
+
     public static final int
             ACTIVITY_NONE = -1,
             NOTIFICATIONS_ACTIVITY = 1,
             NOTIFICATIONS_HOME_SCREEN = 2;
-    // VARS
+
     @SupportedActivitys
     private int activity = ACTIVITY_NONE;
     private PackageManager packageManager;
     private boolean listening = false;
-    // VARS
+
     private final BroadcastReceiver listener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {

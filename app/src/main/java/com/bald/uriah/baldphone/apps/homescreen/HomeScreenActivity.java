@@ -64,7 +64,7 @@ import com.bald.uriah.baldphone.apps.sos.SOSActivity;
 import com.bald.uriah.baldphone.apps.tutorial.TutorialActivity;
 import com.bald.uriah.baldphone.adapters.BaldPagerAdapter;
 import com.bald.uriah.baldphone.databases.apps.AppsDatabaseHelper;
-import com.bald.uriah.baldphone.services.NotificationListenerService;
+import com.bald.uriah.baldphone.apps.notifications.NotificationListenerService;
 import com.bald.uriah.baldphone.core.BDB;
 import com.bald.uriah.baldphone.core.BDialog;
 import com.bald.uriah.baldphone.core.BPrefs;
@@ -88,13 +88,13 @@ import java.util.List;
 
 import github.nisrulz.lantern.Lantern;
 
-import static com.bald.uriah.baldphone.services.NotificationListenerService.ACTION_REGISTER_ACTIVITY;
-import static com.bald.uriah.baldphone.services.NotificationListenerService.ACTIVITY_NONE;
-import static com.bald.uriah.baldphone.services.NotificationListenerService.KEY_EXTRA_ACTIVITY;
-import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_ALOT;
-import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_HOME_SCREEN;
-import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_NONE;
-import static com.bald.uriah.baldphone.services.NotificationListenerService.NOTIFICATIONS_SOME;
+import static com.bald.uriah.baldphone.apps.notifications.NotificationListenerService.ACTION_REGISTER_ACTIVITY;
+import static com.bald.uriah.baldphone.apps.notifications.NotificationListenerService.ACTIVITY_NONE;
+import static com.bald.uriah.baldphone.apps.notifications.NotificationListenerService.KEY_EXTRA_ACTIVITY;
+import static com.bald.uriah.baldphone.apps.notifications.NotificationListenerService.NOTIFICATIONS_ALOT;
+import static com.bald.uriah.baldphone.apps.notifications.NotificationListenerService.NOTIFICATIONS_HOME_SCREEN;
+import static com.bald.uriah.baldphone.apps.notifications.NotificationListenerService.NOTIFICATIONS_NONE;
+import static com.bald.uriah.baldphone.apps.notifications.NotificationListenerService.NOTIFICATIONS_SOME;
 
 public class HomeScreenActivity extends BaldActivity {
     private static final String TAG = HomeScreenActivity.class.getSimpleName();
