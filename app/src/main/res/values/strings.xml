@@ -406,6 +406,7 @@
 
     <string name="mail_application_not_found">Mail application not found!</string>
     <string name="get_involved">Get Involved</string>
+    <string name="emergency_number">Emergency number:</string>
 
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>

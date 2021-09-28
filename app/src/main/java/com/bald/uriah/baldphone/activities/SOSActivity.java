@@ -35,6 +35,7 @@ import com.bald.uriah.baldphone.activities.contacts.ContactsActivity;
 import com.bald.uriah.baldphone.adapters.ContactRecyclerViewAdapter;
 import com.bald.uriah.baldphone.databases.contacts.MiniContact;
 import com.bald.uriah.baldphone.databases.home_screen_pins.HomeScreenPinHelper;
+import com.bald.uriah.baldphone.utils.BPrefs;
 import com.bald.uriah.baldphone.views.BaldLinearLayoutButton;
 
 import java.util.ArrayList;
@@ -88,7 +89,8 @@ public class SOSActivity extends BaldActivity {
     }
 
     private void callEmergencyNumber() {
-        DialerActivity.call("112", this, true);//should work 99.99% of the times
+        final String emergencyNumber = BPrefs.get(this).getString(BPrefs.EMERGENCY_BUTTON_NUMBER_KEY, BPrefs.EMERGENCY_BUTTON_NUMBER_DEFAULT_VALUE);
+        DialerActivity.call(emergencyNumber, this, true);
     }
 
     @Override

@@ -375,8 +375,7 @@
     <string name="also_available_at">ניתן ליצור קשר גם ב\nbaldphone.contact@gmail.com</string>
     <string name="grant_all_permissions">אפשר את כל ההרשאות</string>
 
-
-    <!--For Tests:-->
+    
     <string name="medication_1">אלטרוקסין 100</string>
     <string name="medication_2">אלטרוקסין 150</string>
     <string name="donate">תרומה</string>
@@ -413,7 +412,7 @@
     <string name="website">אתר</string>
     <string name="appear_on_top">גישה להצגה מעל</string>
     <string name="appear_on_top_subtext">יש לאפשר גישה זו בגרסאות חדשות של אנדרואיד, על מנת להציג שעון מעורר ותזכורות</string>
-
+    <string name="emergency_number">מספר חירום</string>
 
     <string-array name="names_for_screenshots">
         <item>יונה הנביא</item>

@@ -61,6 +61,7 @@ import com.bald.uriah.baldphone.utils.BaldToast;
 import com.bald.uriah.baldphone.utils.D;
 import com.bald.uriah.baldphone.utils.S;
 import com.bald.uriah.baldphone.utils.UpdatingUtil;
+import com.bald.uriah.baldphone.views.BaldEditText;
 import com.bald.uriah.baldphone.views.BaldTitleBar;
 import com.bald.uriah.baldphone.views.ModularRecyclerView;
 import com.bumptech.glide.Glide;
@@ -182,18 +183,8 @@ public class SettingsActivity extends BaldActivity {
 
         personalizationCategory.add(new RunnableSettingsItem(R.string.language_settings, v -> startActivity(new Intent(Settings.ACTION_LOCALE_SETTINGS)), R.drawable.translate_on_button));
 
-        personalizationCategory.add(
-                new BDBSettingsItem(R.string.emergency_button, BDB.from(this)
-                        .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL).setTitle(R.string.emergency_button)
-                        .setSubText(R.string.emergency_settings_subtext)
-                        .setOptions(R.string.yes, R.string.no)
-                        .setPositiveButtonListener(params -> {
-                            editor.putBoolean(BPrefs.EMERGENCY_BUTTON_VISIBLE_KEY, params[0].equals(0)).apply();
-                            this.recreate();
-                            return true;
-                        })
-                        .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.EMERGENCY_BUTTON_VISIBLE_KEY, BPrefs.EMERGENCY_BUTTON_VISIBLE_DEFAULT_VALUE) ? 0 : 1),
-                        R.drawable.emergency_on_button));
+        personalizationCategory.add(setupEmergencySettings());
+
         personalizationCategory.add(new RunnableSettingsItem(R.string.time_changer, v -> startActivity(new Intent(this, PillTimeSetterActivity.class)), R.drawable.pill));
         personalizationCategory.add(new RunnableSettingsItem(R.string.edit_home_screen, v -> startActivity(new Intent(this, Page1EditorActivity.class)), R.drawable.edit_on_button));
 
@@ -345,8 +336,8 @@ public class SettingsActivity extends BaldActivity {
         displayCategory.add(fontSettingsItem);
         accessibilityCategory.add(fontSettingsItem);
 
-        setupBrightness();
-        setupAlarmVolume();
+        displayCategory.add(setupBrightness());
+        personalizationCategory.add(setupAlarmVolume());
 
         //connections
         connectionCategory.add(new RunnableSettingsItem(R.string.airplane_mode, v -> startActivity(new Intent(Settings.ACTION_AIRPLANE_MODE_SETTINGS)), R.drawable.airplane_mode_on_button));
@@ -457,8 +448,34 @@ public class SettingsActivity extends BaldActivity {
         baldTitleBar.setTitle(category.textResId);
 
     }
+    private SettingsItem setupEmergencySettings() {
+        final String emergencyNumber = BPrefs.get(this).getString(BPrefs.EMERGENCY_BUTTON_NUMBER_KEY, BPrefs.EMERGENCY_BUTTON_NUMBER_DEFAULT_VALUE);
+        final View emergencyEditorHolder =
+                LayoutInflater.from(this).inflate(R.layout.sos_number_editor, null, false);
+        final BaldEditText sosNumberEditText = emergencyEditorHolder.findViewById(R.id.et_sos_number_editor);
 
-    private void setupAlarmVolume() {
+        sosNumberEditText.setText(emergencyNumber);
+
+        return new BDBSettingsItem(R.string.emergency_button,
+                BDB.from(this)
+                        .addFlag(BDialog.FLAG_OK | BDialog.FLAG_CANCEL).setTitle(R.string.emergency_button)
+                        .setSubText(R.string.emergency_settings_subtext)
+                        .setOptions(R.string.yes, R.string.no)
+                        .setPositiveButtonListener(params -> {
+                            editor
+                                    .putBoolean(BPrefs.EMERGENCY_BUTTON_VISIBLE_KEY, params[0].equals(0))
+                                    .putString(BPrefs.EMERGENCY_BUTTON_NUMBER_KEY, String.valueOf(sosNumberEditText.getText()))
+                                    .apply();
+
+                            this.recreate();
+                            return true;
+                        })
+                        .setOptionsStartingIndex(() -> sharedPreferences.getBoolean(BPrefs.EMERGENCY_BUTTON_VISIBLE_KEY, BPrefs.EMERGENCY_BUTTON_VISIBLE_DEFAULT_VALUE) ? 0 : 1)
+                        .setExtraView(sosNumberEditText),
+                R.drawable.emergency_on_button);
+    }
+
+    private SettingsItem setupAlarmVolume() {
         final SeekBar volumeSeekBar = (SeekBar) LayoutInflater.from(this).inflate(R.layout.volume_seek_bar, null, false);
         final SharedPreferences sharedPreferences = BPrefs.get(this);
         int volume = sharedPreferences.getInt(BPrefs.ALARM_VOLUME_KEY, BPrefs.ALARM_VOLUME_DEFAULT_VALUE);
@@ -502,11 +519,11 @@ public class SettingsActivity extends BaldActivity {
                         .setExtraView(volumeSeekBar), R.drawable.clock_on_background
 
         );
-        personalizationCategory.add(alarmVolumeSettingsItem);
+        return alarmVolumeSettingsItem;
 
     }
 
-    private void setupBrightness() {
+    private SettingsItem setupBrightness() {
         final LinearLayout brightnessSeekBarHolder = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.brightness_seek_bar, null, false);
         final SeekBar brightnessSeekBar = brightnessSeekBarHolder.findViewById(R.id.brightness_seek_bar);
         final CheckBox checkBoxAutoBrightness = brightnessSeekBarHolder.findViewById(R.id.auto_brightness_check_box);
@@ -566,7 +583,7 @@ public class SettingsActivity extends BaldActivity {
                         .setPositiveButtonListener(params -> true)
                         .setExtraView(brightnessSeekBarHolder), R.drawable.brightness_on_button
         );
-        displayCategory.add(brightnessSettingsItem);
+        return brightnessSettingsItem;
     }
 
     @Override
