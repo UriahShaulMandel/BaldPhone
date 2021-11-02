@@ -7,4 +7,4 @@ You can contribute by:
   - Using BaldPhone and sending feedback
   - Sharing BaldPhone with others
   - Star, Watch or Fork this project :)
-  - Share a review on [Google Play](https://play.google.com/store/apps/details?id=com.bald.uriah.baldphone.gp&hl=iw&gl=US)
+  - Share a review on [Google Play](https://play.google.com/store/apps/details?id=com.bald.uriah.baldphone.gp)
