@@ -93,7 +93,7 @@ dependencies {
     implementation 'com.android.volley:volley:1.1.1'
     implementation "ch.acra:acra-http:5.6.1"
     implementation 'androidx.exifinterface:exifinterface:1.2.0'
-    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
     // Only for tests
     androidTestImplementation 'androidx.test:rules:1.2.0'
     androidTestImplementation 'com.tomash:androidcontacts:1.14.0'
