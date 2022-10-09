@@ -1,0 +1,413 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about">बारे में</string>
+    <string name="about_subtext">नमस्ते!\nमेरा नाम उरिय्याह शॉल मंडेल है, और मैं इस मंच का विकासकर्ता हूँ।\n
+        मैंने अपना अधिकांश \"वयस्क\" जीवन इस प्लेटफॉर्म को बनाने में बिताया है, और मैंने इसे सभी के लिए मुफ्त में जारी किया है।
+        उपयोग करें।\nआपका स्वागत है मुझसे ईमेल द्वारा संपर्क करने के लिए:\nbaldphone.contact@gmail.com
+    </string>
+    <string name="accessibility_level">अभिगम्यता स्तर</string>
+    <string name="accessibility_settings">सरल उपयोग</string>
+    <string name="accidental_touches">एक्सीडेंटल टच गार्ड</string>
+    <string name="accidental_touches_settings_subtext">जब फोन होता है तो गार्ड आपके फोन को टच इनपुट से ब्लॉक कर देता है
+        कवर\nयदि आपको इससे कोई समस्या है तो आप इसे बंद कर सकते हैं
+    </string>
+    <string name="accidental_touches_subtext">आकस्मिक स्पर्श का पता चला था\nफ़ोन का उपयोग जारी रखने के लिए ठीक दबाएं\nif
+        यह संदेश दिखाई देता रहता है आप इसे एक्सेसिबिलिटी सेटिंग्स में अक्षम कर सकते हैं
+    </string>
+    <string name="acknowledgments">स्वीकृतियाँ</string>
+    <string name="adaptive">अनुकूली</string>
+    <string name="add_alarm">अलार्म जोड़ें</string>
+    <string name="add_alarm_quickly">टाइमर जोड़ें</string>
+    <string name="add_contact">संपर्क जोड़ें</string>
+    <string name="add_emergency_contact">आपातकालीन संपर्क जोड़ें</string>
+    <string name="add_pill">गोली जोड़ें</string>
+    <string name="add_shortcut">छोटा रास्ता जोडें</string>
+    <string name="add_to_favorite">पसंदीदा लिस्ट मे डालें</string>
+    <string name="add_to_home">घर में जोड़ें</string>
+    <string name="add_to_sos">एसओएस में जोड़ें</string>
+    <string name="address">पता</string>
+    <string name="advanced_options">उन्नत विकल्प</string>
+    <string name="afternoon">दोपहर</string>
+    <string name="airplane_mode">विमान मोड</string>
+    <string name="alarm_name">अलार्म नाम</string>
+    <string name="alarm_volume">अलार्म वॉल्यूम</string>
+    <string name="alarm_volume_subtext">अलार्म के लिए वॉल्यूम चुनें।\nवॉल्यूम बाएं से दाएं बढ़ता है.</string>
+    <string name="alarms">एलार्म</string>
+
+    <string name="alarms_repeats_every">अलार्म हर बार दोहराता है</string>
+    <string name="all_alarms">सभी अलार्म</string>
+    <string name="allow">अनुमति देना</string>
+    <string name="already_setted">पहले से ही सेट!\nइसे बदलने के लिए यहां क्लिक करें</string>
+    <string name="an_error_has_occurred">एक गलती हुई है!</string>
+    <string name="and_welcome_to_baldphone">और बाल्डफ़ोन में आपका स्वागत है</string>
+
+    <string name="apps">ऐप्स</string>
+    <string name="are_you_sure_you_want_to_delete___">क्या आप वाकई %s हटाना चाहते हैं?</string>
+    <string name="assistant">सहायक</string>
+    <string name="at_least_one_day_must_be_selected">कम से कम एक दिन चुना जाना चाहिए!</string>
+    <string name="auto_brightness">स्वतः\nचमक</string>
+    <string name="backspace">बैकस्पेस</string>
+    <string name="baldphone_bla_allow_permission">कृपया निम्नलिखित अनुमतियों की अनुमति दें:</string>
+    <string name="blocked">अवरोधित</string>
+    <string name="bluetooth">ब्लूटूथ</string>
+    <string name="brightness">चमक</string>
+    <string name="brightness_subtext">चमक बदलें।</string>
+    <string name="cache_cleared_successfully">कैशे सफलतापूर्वक साफ़ हो गया!</string>
+    <string name="call">बुलाना</string>
+    <string name="calling">कॉलिंग</string>
+
+    <string name="call_log">कॉल लॉग:</string>
+    <string name="call_subtext">संपर्कों को कॉल करने के लिए यह अनुमति आवश्यक है</string>
+    <string name="camera">कैमरा</string>
+    <string name="camera_subtext">टॉर्च चालू करने के लिए यह अनुमति आवश्यक है।</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="change_pills_time">गोलियां समय बदलें</string>
+    <string name="change_system_settings_subtext">कृपया बाल्डफोन को सेटिंग बदलने की अनुमति दें, जैसे कि फ़ॉन्ट बढ़ाना
+        आकार और चमक बदल रहा है।
+    </string>
+    <string name="choose_friday">शुक्रवार</string>
+    <string name="choose_monday">सोमवार</string>
+    <string name="choose_saturday">शनिवार</string>
+    <string name="choose_sunday">रविवार</string>
+    <string name="choose_thursday">गुरूवार</string>
+    <string name="choose_tuesday">मंगलवार</string>
+    <string name="choose_wednesday">बुधवार</string>
+    <string name="clear">स्पष्ट</string>
+    <string name="clear_cache">कैश को साफ़ करें</string>
+    <string name="clear_data">सभी डेटा साफ़ करें</string>
+    <string name="clear_data_subtext">क्या आप वाकई सभी उपयोगकर्ता डेटा हटाना चाहते हैं? बाल्डफोन ऐप नए सिरे से नई स्थिति में वापस आ जाएगा, जैसे कि इसे अभी इंस्टॉल किया गया हो।</string>
+    <string name="clear_data_subtext2">100%?</string>
+    <string name="clear_data_subtext3">पक्का?\nहाँ दबाने से सारा डेटा हट जाएगा!</string>
+    <string name="clock">घड़ी</string>
+    <string name="coming_soon">जल्द आ रहा है!</string>
+    <string name="connection_settings">संबंध</string>
+    <string name="contact_must_has_name">संपर्क का एक नाम होना चाहिए!</string>
+    <string name="contact_not_created">संपर्क नहीं बनाया गया!</string>
+    <string name="contacts">Contacts</string>
+    <string name="contacts_read_subtext">संपर्कों को पढ़ने के लिए यह अनुमति आवश्यक है।</string>
+    <string name="contacts_subtext">नए संपर्क जोड़ने के लिए यह अनुमति आवश्यक है.</string>
+    <string name="crash">ओह!\nबाल्डफ़ोन में समस्या आ गई और अब पुनः प्रारंभ होगा।</string>
+    <string name="current_time">वर्तमान समय</string>
+    <string name="custom">रीति</string>
+    <string name="dark">अंधेरा</string>
+    <string name="delete">मिटाना</string>
+    <string name="delete___">हटाएं %s?</string>
+    <string name="delete_all_alarms">सभी अलार्म हटाएं</string>
+    <string name="dialer">डायलर</string>
+    <string name="display_settings">प्रदर्शन</string>
+    <string name="done">किया हुआ</string>
+    <string name="down">नीचे</string>
+    <string name="edit">संपादित करें</string>
+    <string name="email">ईमेल:</string>
+    <string name="enable_notification_access">अधिसूचना पहुंच सक्षम करें</string>
+    <string name="enable_notification_access_subtext">कृपया बाल्डफोन को सूचनाओं तक पहुंच प्रदान करें.</string>
+    <string name="enter">प्रवेश करना</string>
+    <string name="enter_contact_or_phone_number">संपर्क नाम दर्ज करें:</string>
+    <string name="evening">शाम</string>
+    <string name="example_of_different_text_sizes">विभिन्न पाठ आकारों का उदाहरण\nपढ़ने योग्य होना चाहिए न कि
+        अतिप्रवाह।</string>
+    <string name="external_storage_subtext">चित्रों को सहेजने के लिए यह अनुमति आवश्यक है.</string>
+    <string name="feedback">प्रतिक्रिया भेजें</string>
+    <string name="feedback_cannot_be_empty">फ़ीडबैक खाली नहीं हो सकता!</string>
+    <string name="feedback_sent_successfully">फ़ीडबैक सफलतापूर्वक भेजा गया!</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">कृपया पहुंच के स्तर का चयन करें
+    </string>
+    <string name="font_size">फ़ॉन्ट आकार</string>
+    <string name="friday">शुक्रवार</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">उपयोग करने में कठिनाई हो रही है
+        फोन का कीबोर्ड? इसके बजाय बाल्डफ़ोन के बड़े कीबोर्ड का उपयोग करें!
+    </string>
+    <string name="hello">नमस्ते</string>
+    <string name="help">वीडियो ट्यूटोरियल</string>
+    <string name="hide">छिपाना</string>
+    <string name="high_level">उच्च स्तर</string>
+    <string name="home_phone_number">घर का फोन नंबर</string>
+    <string name="hour">घण्टा</string>
+    <string name="huge">विशाल</string>
+    <string name="internet">इंटरनेट</string>
+    <string name="invoked_in">इसमें शामिल किया गया:</string>
+    <string name="it_s_highly_recommended_to_use_baldphone_s_home_screen_as_the_default_home_launcher">एक आखिरी
+        बात:\n डिफ़ॉल्ट होम लॉन्चर के रूप में बाल्डफ़ोन की होम स्क्रीन का उपयोग करने की अत्यधिक अनुशंसा की जाती है
+    </string>
+    <string name="language">भाषा</string>
+    <string name="language_settings">भाषा सेटिंग</string>
+    <string name="large">बड़ा</string>
+    <string name="left_handed">बाएं हाथ से काम करने वाला</string>
+    <string name="light">रोशनी</string>
+    <string name="location">स्थान</string>
+    <string name="emergency_services">आपातकालीन सेवाएं</string>
+    <string name="mail">मेल</string>
+    <string name="maps">नक्शा</string>
+
+
+    <string name="medium">मध्यम</string>
+    <string name="medium_level">मध्यम स्तर</string>
+    <string name="message">संदेश</string>
+    <string name="messages">संदेशों</string>
+    <string name="minute">मिनट</string>
+    <string name="minutes">मिनट</string>
+    <string name="missed">चूकना</string>
+
+    <string name="mobile_phone_number">मोबाइल फोन नंबर</string>
+    <string name="monday">सोमवार</string>
+    <string name="more">अधिक</string>
+    <string name="morning">सुबह</string>
+    <string name="name">नाम</string>
+    <string name="named__">नामांकित</string>
+    <string name="new_alarm___was_created">नया अलार्म %s बनाया गया!</string>
+    <string name="nfc">एनएफसी</string>
+    <string name="no">नहीं</string>
+    <string name="notes">टिप्पणियाँ</string>
+    <string name="notes_settings">टिप्पणियाँ</string>
+    <string name="notes_settings_subtext">चुनें कि क्या आप होम स्क्रीन पर नोट्स पेज रखना चाहते हैं।</string>
+    <string name="notifications">सूचनाएं</string>
+
+    <string name="of">की</string>
+    <string name="off">बंद</string>
+    <string name="ok">ठीक है</string>
+    <string name="on">पर</string>
+
+    <string name="only_once">सिर्फ एक बार</string>
+
+
+    <string name="open">खोलना</string>
+
+    <string name="outgoing">निवर्तमान</string>
+    <string name="page">पृष्ठ</string>
+    <string name="permissions_part">अनुमतियां</string>
+    <string name="personalization_settings">वैयक्तिकरण</string>
+    <string name="phone">फ़ोन</string>
+    <string name="photo">तस्वीर</string>
+    <string name="photos">तस्वीरें</string>
+    <string name="pill_added">गोली जोड़ी गई!</string>
+    <string name="pill_name">गोली का नाम</string>
+    <string name="pills">गोली</string>
+    <string name="press_longer">लंबे समय तक दबाएं!</string>
+    <string name="timer">घड़ी</string>
+    <string name="read_call_log">कॉल इतिहास पढ़ें</string>
+    <string name="read_call_log_subtext">कॉल इतिहास देखने के लिए यह अनुमति आवश्यक है.</string>
+    <string name="read_contacts">संपर्क पढ़ें</string>
+    <string name="received">प्राप्त</string>
+    <string name="recent">हालिया</string>
+    <string name="regular_level">नियमित स्तर</string>
+
+    <string name="remove_from_favorite">पसंदीदा से निकालें</string>
+    <string name="remove_from_home">घर से हटाएं</string>
+    <string name="remove_from_sos">एसओएस से हटाएं</string>
+    <string name="remove_shortcut">शॉर्टकट हटाएं</string>
+    <string name="removed_all_alarms">सभी अलार्म हटा दिए!</string>
+    <string name="repeats_every_day">प्रतिदिन</string>
+    <string name="right_handed">दांए हाथ से काम करने वाला</string>
+
+    <string name="saturday">शनिवार</string>
+    <string name="save">सहेजें</string>
+    <string name="send">भेजना</string>
+    <string name="set_default_dialer">डिफ़ॉल्ट कॉलिंग ऐप सेट करें</string>
+    <string name="set_default_dialer_subtext">बाल्डफ़ोन को डिफ़ॉल्ट कॉलिंग ऐप के रूप में चिह्नित करने की आवश्यकता है।</string>
+    <string name="set_home_screen">होम स्क्रीन सेट करें</string>
+    <string name="set_home_screen_subtext">बाल्डफोन का उपयोग करने के लिए, आपको इसे होम स्क्रीन के रूप में सेट करना चाहिए।\nयह है
+        प्रतिवर्ती और सेटिंग्स में बदला जा सकता है।
+    </string>
+    <string name="set_keyboard">कीबोर्ड सेट करें</string>
+    <string name="setting_does_not_exist">सेटिंग मौजूद नहीं है</string>
+    <string name="settings">समायोजन</string>
+    <string name="settings_permission">सेटिंग अनुमति</string>
+    <string name="share">साझा करना</string>
+    <string name="share_bald_phone_subtext">अरे, किसी ऐसे व्यक्ति को जानिए जो बाल्डफ़ोन के बारे में जानना चाहे?\nआप कर सकते हैं
+        इसे उनके साथ साझा करें!"
+    </string>
+    <string name="share_baldphone">बाल्डफ़ोन साझा करें</string>
+    <string name="share_contact">संपर्क साझा करें</string>
+    <string name="share_differently">अन्य ऐप के माध्यम से साझा करें</string>
+    <string name="share_via_whatsapp">Whatsapp के माध्यम से साझा करें</string>
+    <string name="shift">खिसक जाना</string>
+    <string name="show">प्रदर्शन</string>
+    <string name="small">छोटा</string>
+    <string name="snooze">झपकी</string>
+    <string name="sos">मुसीबत का इशारा</string>
+    <string name="sos_is_full">एसओएस भरा हुआ है!</string>
+    <string name="sos_is_full_subtext">एसओएस भरा हुआ है! कृपया एक नया जोड़ने से पहले अन्य एसओएस संपर्कों को हटा दें</string>
+    <string name="speak">बोलना</string>
+    <string name="speech_to_text">पाठ के लिए भाषण</string>
+    <string name="strong_hand">प्रमुख हाथ</string>
+    <string name="strong_hand_subtext">यूजर इंटरफेस को समायोजित करने के लिए अपना प्रमुख हाथ चुनें।</string>
+    <string name="submit">प्रस्तुत</string>
+    <string name="sunday">रविवार</string>
+    <string name="technical_information">तकनीकी जानकारी</string>
+    <string name="theme_settings">विषय</string>
+    <string name="theme_settings_subtext">एक विषय चुनें</string>
+
+    <string name="thursday">गुरूवार</string>
+    <string name="time_changer">गोलियां समय परिवर्तक</string>
+    <string name="tiny">छोटा</string>
+    <string name="to___days_and___hours_from_now">अब से %d दिन और %d घंटे तक</string>
+    <string name="to___hours_and___minutes_from_now">अब से %d घंटे और %d मिनट तक</string>
+    <string name="to___minuets_from_now">अब से %d मिनट तक</string>
+    <string name="today">आज</string>
+    <string name="took">लिया!</string>
+    <string name="tuesday">मंगलवार</string>
+    <string name="uninstall">स्थापना रद्द करें</string>
+    <string name="uninstall_subtext">क्या आप वाकई %s को अनइंस्टॉल करना चाहते हैं?\n%s\'s डेटा हमेशा के लिए चला जाएगा!</string>
+    <string name="up">ऊपर</string>
+    <string name="video">वीडियो</string>
+    <string name="video_tutorials">वीडियो शिक्षण</string>
+    <string name="videos">वीडियो</string>
+
+    <string name="voice_mail">स्वर-पत्र</string>
+    <string name="wednesday">बुधवार</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="wifi">वाई - फाई</string>
+    <string name="will_repeat_only_once">केवल एक बार दोहराएंगे!</string>
+    <string name="write">लिखना</string>
+    <string name="write_contacts">संपर्क लिखें</string>
+    <string name="write_external_storage">बाहरी भंडारण लिखें</string>
+    <string name="yes">हां</string>
+    <string name="yesterday">कल</string>
+    <string name="nothing">कुछ नहीं</string>
+    <string name="no_contacts_found">कोई संपर्क नहीं मिला!</string>
+    <string name="no_alarms">कोई अलार्म नहीं\nक्लिक करके एक बनाएं\n\"अलार्म जोड़ें\"\nया\n\"टाइमर जोड़ें\"</string>
+    <string name="no_pills">कोई गोली नहीं\n\n\"गोली जोड़ें\" क्लिक करके एक बनाएं</string>
+    <string name="clear_all_notifications">सभी सूचनाएं साफ़ करें</string>
+    <string name="clear_cache_subtext">क्या आप वाकई कैशे की सामग्री को हटाना चाहते हैं? अस्थायी फ़ाइलों को हटाने से कुछ बाल्डफ़ोन ऐप की खराबी का समाधान हो सकता है, लेकिन होम स्क्रीन में बनाए गए शॉर्टकट भी हटा दिए जाएंगे।</string>
+    <string name="permissions_calm">नमस्ते, बाल्डफोन को चलाने के लिए निम्नलिखित अनुमतियां होनी चाहिए। उनमे से कुछ
+        ध्वनि डरावना है, लेकिन यह एकमात्र तरीका है जिससे बाल्डफोन फोन के इंटरफेस को बदल सकता है। कोई डेटा नहीं लिया जाता है और इसका कारण बनता है
+        कोई नुकसान नहीं। BaldPhone से बाहर निकलने के लिए अनुमति या नहीं देने के लिए OK दबाएं।
+    </string>
+    <string name="pending_update">लंबित अद्यतन</string>
+    <string name="download">डाउनलोड</string>
+    <string name="install_updates">अद्यतनों को स्थापित करें</string>
+    <string name="install_updates_subtext">बाल्डफोन को अपडेट करने के लिए इस अनुमति की आवश्यकता है</string>
+    <string name="a_new_update_is_available">एक नया अपडेट उपलब्ध है!\n बाल्डफोन को चालू रखने के लिए अपडेट महत्वपूर्ण हैं
+        सुचारू रूप से।\nडाउनलोड करने के लिए ओके दबाएं।
+    </string>
+    <string name="current_version">वर्तमान संस्करण:\n</string>
+    <string name="new_version">नया संस्करण:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">नए अपडेट डाउनलोड करने के लिए तैयार हैं.</string>
+    <string name="install">इंस्टॉल</string>
+    <string name="data_warning">डेटा चेतावनी</string>
+    <string name="data_warning_subtext">नमस्ते, आप वाईफ़ाई से कनेक्ट नहीं हैं।\n डाउनलोड का आकार लगभग ३एमबी है,
+        अगर आप विदेश में हैं तो इसमें आपके पैसे खर्च हो सकते हैं।\nक्या आप डाउनलोड जारी रखना चाहते हैं?
+    </string>
+    <string name="update_message_is_corrupted">अद्यतन संदेश दूषित है।</string>
+    <string name="check_for_updates">अद्यतन के लिए जाँच</string>
+    <string name="could_not_connect_to_server">सर्वर से कनेक्ट नहीं कर सकते!</string>
+    <string name="could_not_connect_to_internet">इंटरनेट से कनेक्ट नहीं हो सका!</string>
+    <string name="could_not_start_the_download">डाउनलोड प्रारंभ नहीं हो सका!</string>
+    <string name="downloaded_update_file_could_not_be_deleted">डाउनलोड की गई अद्यतन फ़ाइल को हटाया नहीं जा सका!</string>
+    <string name="downloading">डाउनलोड हो रहा है…</string>
+
+    <string name="baldphone_is_up_to_date">बाल्डफोन अप टू डेट है।</string>
+    <string name="what_s_new">नया क्या है</string>
+    <string name="download_finished">डाउनलोड समाप्त!</string>
+    <string name="downloading_updates">अपडेट डाउनलोड हो रहे हैं…</string>
+    <string name="installing_doesn_t_work">इंस्टॉल करना काम नहीं कर रहा है?</string>
+    <string name="try_now">अब कोशिश करो</string>
+    <string name="download_progress">डाउनलोड प्रगति</string>
+    <string name="what_do_you_want_to_do_with___">आप %s के साथ क्या करना चाहते हैं?</string>
+    <string name="crash_reports">क्रैश रिपोर्ट</string>
+    <string name="crash_reports_subtext">क्रैश रिपोर्ट बाल्डफ़ोन के अनुभव को त्रुटिहीन बनाने में मदद करती है\nवे केवल उपयोग किए जाते हैं
+        बग को ठीक करने के लिए, और बग को ठीक करने के लिए जो आवश्यक है उसके अलावा कोई जानकारी नहीं ली जाती है
+    </string>
+    <string name="custom_app">कस्टम ऐप</string>
+    <string name="custom_app_subtext">होम स्क्रीन पर होने के लिए कस्टम ऐप चुनें।</string>
+    <string name="no_app_was_found">कोई मेल खाने वाला ऐप नहीं मिला!</string>
+    <string name="alarm">अलार्म</string>
+    <string name="no_new_notifications">कोई नए संदेश नहीं</string>
+    <string name="sound">ध्वनि</string>
+    <string name="mute">मूक</string>
+    <string name="vibrate">कंपन</string>
+    <string name="your_phone_doesnt_have_assistant_installed">आपके फ़ोन में कोई सहायक स्थापित नहीं है।</string>
+
+
+    <string name="status_bar_settings">स्टेटस बार</string>
+    <string name="status_bar_settings_subtext">आप स्टेटस बार कहाँ दिखाना चाहते हैं?</string>
+    <string name="only_home_screen">केवल होम स्क्रीन</string>
+    <string name="nowhere">कहीं भी नहीं</string>
+    <string name="everywhere">हर जगह</string>
+
+
+    <string name="share_photo">फोटो साझा करें</string>
+
+    <string name="choose_language_for_keyboard">भाषा चुनें</string>
+    <string name="hebrew">यहूदी</string>
+    <string name="english">अंग्रेज़ी</string>
+
+    <string name="search">खोज</string>
+    <string name="next">अगला</string>
+    <string name="go">जाना</string>
+
+
+    <string name="dialer_sounds">डायलर लगता है</string>
+    <string name="dialer_sounds_subtext">चुनें कि क्या आप डायलर ध्वनियां चाहते हैं।</string>
+    <string name="low_battery_alert">कम बैटरी अलर्ट</string>
+    <string name="low_battery_alert_subtext">चुनें कि क्या आप चाहते हैं कि होम स्क्रीन पर स्टेटस बार लाल हो, जब बैटरी 20% से कम हो\nध्यान दें कि सिस्टम स्टेटस बार छुपा हुआ है तो यह नहीं दिखाया जाएगा।</string>
+
+    <string name="also_available_at">\nbaldphone.contact@gmail.com पर भी उपलब्ध है\nप्रतिक्रिया अंग्रेजी/हिब्रू में होनी चाहिए!</string>
+    <string name="grant_all_permissions">सभी अनुमतियां प्रदान करें</string>
+
+
+    <!--For Tests:-->
+    <string name="medication_1">एल्ट्रोक्सिन 100</string>
+    <string name="medication_2">एल्ट्रोक्सिन 150</string>
+    <string name="donate">दान </string>
+    <string name="emergency_button">आपातकालीन बटन</string>
+    <string name="emergency_settings_subtext">चुनें कि क्या आप होम स्क्रीन पर आपातकालीन बटन रखना चाहते हैं.</string>
+    <string name="private_number">निजी संख्या</string>
+    <string name="swipe_left_or_right">बाएं या दाएं स्वाइप करें</string>
+    <string name="press_next_or_back_buton">अगला या पीछे का तीर दबाएं</string>
+    <string name="click_delay">देरी पर क्लिक करें</string>
+    <string name="no_delay">देरी नहीं</string>
+    <string name="scrolling">स्क्रोलिंग</string>
+    <string name="arrows">तीर</string>
+    <string name="swipe">कड़ी चोट</string>
+    <string name="_long">लंबा</string>
+    <string name="_short">छोटा</string>
+    <string name="do_you_want_to_save_your_changes">क्या आप अपने परिवर्तनों को सहेजना चाहते हैं?</string>
+    <string name="discard">नामंज़ूर करना</string>
+    <string name="no_recent_calls">कोई हालिया कॉल नहीं</string>
+    <string name="apps_sort_method">ऐप्स सॉर्ट विधि</string>
+    <string name="apps_sort_method_subtext">चुनें कि क्या आप ऐप्स को एक ग्रिड में सॉर्ट करना चाहते हैं या उन्हें अक्षरों के माध्यम से अलग-अलग समूहों में विभाजित करना चाहते हैं</string>
+    <string name="groups">समूहों</string>
+    <string name="one_grid">एक ग्रिड</string>
+    <string name="colorful">रंगीन</string>
+    <string name="colorful_subtext">क्या आप बाल्डफोन को और रंगीन बनाना चाहते हैं?</string>
+    <string name="edit_home_screen">होम स्क्रीन संपादित करें</string>
+    <string name="dual_sim">दोहरी सिम</string>
+    <string name="dual_sim_subtext">चुनें कि आप दोहरी सिम कैसे प्रबंधित करना चाहते हैं\nनोट: यदि आप विकल्प दिखाएँ चुनते हैं, तो आपको एक और अनुमति की अनुमति देनी होगी</string>
+    <string name="use_default">डिफ़ॉल्ट उपयोग करें</string>
+    <string name="show_options">विकल्प दिखाएं</string>
+    <string name="read_phone_state">फोन की स्थिति पढ़ें</string>
+    <string name="read_phone_state_subtext">दूसरी सिम से कॉल करने के लिए यह अनुमति आवश्यक है</string>
+    <string name="choose_sim">सिम चुनें</string>
+    <string name="choose_sim_subtext">वह सिम चुनें जिससे आप कॉल करना चाहते हैं</string>
+    <string name="website">वेबसाइट</string>
+    <string name="appear_on_top">शीर्ष पर दिखाई दें</string>
+    <string name="appear_on_top_subtext">स्क्रीन बंद होने पर अलार्म और रिमाइंडर दिखाने के लिए एंड्रॉइड के नए संस्करण पर यह अनुमति आवश्यक है</string>
+
+    <string-array name="names_for_screenshots">
+        <item>The Godfather</item>
+        <item>Abraham Lincoln</item>
+        <item>Paul McCartney</item>
+        <item>Tyrion Lannister</item>
+        <item>The Rock</item>
+        <item>Robert Downey Jr.</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
+</resources>
