@@ -1,0 +1,204 @@
+<!--
+  ~ Copyright 2019 Uriah Shaul Mandel
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="about">Про програму</string>
+    <string name="about_subtext">Привіт!
+Мене звати Урія Шаул Мандель, і я розробник цієї платформи.
+Я провів більшу частину свого \"дорослого\" життя розробляючи цю платформу і випустив її безкоштовно для всіх.
+Ви можете зв’язатися зі мною електронною поштою:
+nbaldphone.contact@gmail.com</string>
+    <string name="accessibility_level">Рівень Доступності</string>
+    <string name="accessibility_settings">Доступність</string>
+    <string name="accidental_touches">Захист від випадкових дотиків</string>
+    <string name="accidental_touches_settings_subtext">Захист блокує ваш телефон від випадкового введення коли телефон накритий.
+Якщо у вас проблеми з цим, ви можете його вимкнути</string>
+    <string name="accidental_touches_subtext">Виявлено випадковий дотик
+натисніть OK, щоб продовжувати користуватися телефоном
+якщо це повідомлення продовжить з’являтися, ви можете вимкнути його в налаштуваннях доступності</string>
+    <string name="acknowledgments">Подяки</string>
+    <string name="adaptive">Адаптивний</string>
+    <string name="add_alarm">Додати Будильник</string>
+    <string name="add_alarm_quickly">Додати Таймер</string>
+    <string name="add_contact">Додати Контакт</string>
+    <string name="add_emergency_contact">Додати</string>
+    <string name="add_pill">Додати Таблетку</string>
+    <string name="add_shortcut">Додати Ярлик</string>
+    <string name="add_to_favorite">Додати до Обраного</string>
+    <string name="add_to_home">Додати на Головний Екран</string>
+    <string name="add_to_sos">Додати в SOS</string>
+    <string name="address">Адреса</string>
+    <string name="advanced_options">Розширені Опції</string>
+    <string name="afternoon">Після обіду</string>
+    <string name="airplane_mode">Режим \"у літаку\"</string>
+    <string name="alarm_name">Назва Будильника</string>
+    <string name="alarm_volume">Гучність Будильника</string>
+    <string name="allow">Дзволити</string>
+    <string name="an_error_has_occurred">Сталася помилка!</string>
+    <string name="apps">Програми</string>
+    <string name="assistant">Помічник</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="brightness">Яскравість</string>
+    <string name="brightness_subtext">Змінити яскравість.</string>
+    <string name="cache_cleared_successfully">Кеш вдало очищено!</string>
+    <string name="call_log">Журнал дзвінків:</string>
+    <string name="camera">Камера</string>
+    <string name="cancel">Скасувати</string>
+    <string name="choose_friday">Пт</string>
+    <string name="choose_monday">Пн</string>
+    <string name="choose_saturday">Сб</string>
+    <string name="choose_sunday">Нд</string>
+    <string name="choose_thursday">Чт</string>
+    <string name="choose_tuesday">Вт</string>
+    <string name="choose_wednesday">Ср</string>
+    <string name="clear">Очистити</string>
+    <string name="clear_cache">Очистити кеш</string>
+    <string name="clear_data">Очистити всі дані</string>
+    <string name="clear_data_subtext2">100%?</string>
+    <string name="clock">Годинник</string>
+    <string name="coming_soon">Скоро буде!</string>
+    <string name="connection_settings">Зʼєднання</string>
+    <string name="contact_must_has_name">Контакт має мати імʼя!</string>
+    <string name="contact_not_created">Контакт не створено!</string>
+    <string name="contacts">Контакти</string>
+    <string name="current_time">Поточний час</string>
+    <string name="custom">Власна</string>
+    <string name="dark">Темна</string>
+    <string name="delete">Видалити</string>
+    <string name="delete___">Видалити %s?</string>
+    <string name="done">Готово</string>
+    <string name="edit">Змінити</string>
+    <string name="email">Ел. пошта:</string>
+    <string name="enter_contact_or_phone_number">Уведіть назву контакту:</string>
+    <string name="evening">Вечір</string>
+    <string name="feedback">Надіслати відгук</string>
+    <string name="font_size">Розмір шрифту</string>
+    <string name="friday">Пʼятниця</string>
+    <string name="hello">Привіт</string>
+    <string name="help">Відео-урок</string>
+    <string name="hide">Сховати</string>
+    <string name="high_level">Вищий рівень</string>
+    <string name="home_phone_number">Домашній номер телефону</string>
+    <string name="hour">Година</string>
+    <string name="internet">Інтернет</string>
+    <string name="language">мова</string>
+    <string name="language_settings">Мова</string>
+    <string name="location">Розташування</string>
+    <string name="mail">Пошта</string>
+    <string name="maps">Мапи</string>
+
+
+    <string name="message">Повідомлення</string>
+    <string name="messages">Повідомлення</string>
+    <string name="minute">Хвилина</string>
+    <string name="minutes">Хвилини</string>
+    <string name="mobile_phone_number">Мобільний номер телефону</string>
+    <string name="monday">Понеділок</string>
+    <string name="more">більше</string>
+    <string name="morning">Ранок</string>
+    <string name="name">Назва</string>
+    <string name="named__">названо</string>
+    <string name="no">Ні</string>
+    <string name="notes">Нотатки</string>
+    <string name="notes_settings">Нотатки</string>
+    <string name="notifications">Сповіщення</string>
+
+    <string name="off">Вимк.</string>
+    <string name="ok">Гаразд</string>
+    <string name="on">Увімк.</string>
+
+    <string name="only_once">Лише раз</string>
+
+
+    <string name="open">Відкрити</string>
+
+    <string name="page">Сторінка</string>
+    <string name="permissions_part">Дозволи</string>
+    <string name="personalization_settings">Персоналізація</string>
+    <string name="phone">Телефон</string>
+    <string name="photo">Фото</string>
+    <string name="photos">Фото</string>
+    <string name="timer">Таймер</string>
+    <string name="repeats_every_day">Щодня</string>
+    <string name="saturday">Субота</string>
+    <string name="save">Зберегти</string>
+    <string name="send">Надіслати</string>
+    <string name="set_keyboard">Задати клавіатуру</string>
+    <string name="setting_does_not_exist">Налаштування не існує</string>
+    <string name="settings">Налаштування</string>
+    <string name="share">Поширити</string>
+    <string name="share_baldphone">Поширити BaldPhone</string>
+    <string name="share_contact">Поділитися контактом</string>
+    <string name="share_differently">Поширити через іншу програму</string>
+    <string name="share_via_whatsapp">Поширити через Whatsapp</string>
+    <string name="show">Показати</string>
+    <string name="sunday">Неділя</string>
+    <string name="technical_information">Технічна інформація</string>
+    <string name="theme_settings">Тема</string>
+    <string name="theme_settings_subtext">Оберіть тему</string>
+
+    <string name="thursday">Четвер</string>
+    <string name="today">Сьогодні</string>
+    <string name="tuesday">Вівторок</string>
+    <string name="uninstall">Видалити</string>
+    <string name="video">Відео</string>
+    <string name="video_tutorials">Відеоуроки</string>
+    <string name="videos">Відео</string>
+
+    <string name="voice_mail">Голосова пошта</string>
+    <string name="wednesday">Середа</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="wifi">Wifi</string>
+    <string name="yes">Так</string>
+    <string name="yesterday">Вчора</string>
+    <string name="clear_all_notifications">Очистити всі сповіщення</string>
+    <string name="pending_update">Не завершене оновлення</string>
+    <string name="download">Завантажити</string>
+    <string name="install_updates">Встановити оновлення</string>
+    <string name="current_version">Поточна версія:\n</string>
+    <string name="new_version">Нова версія:\n</string>
+    <string name="new_updates_are_ready_to_be_downloaded">Нові оновлення готові до завантаження.</string>
+    <string name="install">Встановити</string>
+    <string name="check_for_updates">Перевірити на оновлення</string>
+    <string name="downloading">Завантаження...</string>
+
+    <string name="try_now">Спробувати зараз</string>
+    <string name="download_progress">Поступ завантаження</string>
+    <string name="crash_reports">Звіти про збої</string>
+    <string name="custom_app">Власна програма</string>
+    <string name="sound">Звук</string>
+    <string name="mute">Тихо</string>
+    <string name="status_bar_settings">Рядок стану</string>
+    <string name="only_home_screen">Лише домашній екран</string>
+    <string name="choose_language_for_keyboard">Оберіть мову</string>
+    <string name="hebrew">Єврейська</string>
+    <string name="english">Англійська</string>
+
+    <string name="search">Пошук</string>
+    <string name="next">Далі</string>
+    <string name="private_number">Приватний номер</string>
+    <string name="website">Вебсайт</string>
+    <string-array name="names_for_screenshots">
+        <item>Хресний батько</item>
+        <item>Абрагам Лінкольн</item>
+        <item>Пол Маккартні</item>
+        <item>Тиріон Ланістер</item>
+        <item>Роберт Давні Молодший</item>
+    </string-array>
+
+    <bool name="is_right_to_left">false</bool>
+
+</resources>
