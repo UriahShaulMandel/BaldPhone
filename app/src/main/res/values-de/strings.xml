@@ -221,8 +221,6 @@
     <string name="settings">Einstellungen</string>
     <string name="settings_permission">Berechtigung, Einstellungen vorzunehmen</string>
     <string name="share">Weiterleiten</string>
-    <string name="share_actual_text">Hallo, Ich benutze die Plattform \"BaldPhone\". Sie macht die Bedienoberfläche des Handys größer, einfacher und netter.\nInteressiert dich das auch?\nDu kannst sie kostenlos herunterladen!\nFolge unten stehendem Link für mehr Informationen:\n\nhttps://baldphone.com
-    </string>
     <string name="share_bald_phone_subtext">Hallo, kennst du Personen, die sich vielleicht für BaldPhone interessieren?\nErzähl ihnen von der App!\"
     </string>
     <string name="share_baldphone">Anderen von BaldPhone erzählen</string>
@@ -388,7 +386,6 @@
     <string name="website">Webseite</string>
     <string name="appear_on_top">Erscheint oben</string>
     <string name="appear_on_top_subtext">Diese Berechtigung ist bei der neuen Version von Android erforderlich, um Alarme und Erinnerungen anzuzeigen, wenn die App minimiert ist.</string>
-
 
     <string-array name="names_for_screenshots">
         <item>Bismarck</item>
