@@ -221,8 +221,6 @@
     <string name="settings">პარამეტრები</string>
     <string name="settings_permission">პარამეტრების ნებართვა</string>
     <string name="share">გაზიარება</string>
-    <string name="share_actual_text">სალამი, მე ვიყენებ ამ პლატფორმას "BaldPhone"-ს,რომელიც ცვლის ტელეფონის ინტერფეისს დიდ, მარტივ და მეგობრულზე.\nდაინტერესდი?\nშენ შეგიძლია გადმოწერო ის უფასოდ!\nნახეთ მეტი ინფორმაცისათვის:\n\nhttps://baldphone.com
-    </string>
     <string name="share_bald_phone_subtext">იცნობთ ადამიანებს,რომლებსაც შეიძლება სურდეთ მელოტი ტელეფონის შესახებ მეტის გაგება?\nთქვენ შეგიძლიათ გაუზიაროთ ის მათ!"
     </string>
     <string name="share_baldphone">გააზიარე BaldPhone</string>
