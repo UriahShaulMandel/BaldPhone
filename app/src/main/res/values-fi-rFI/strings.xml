@@ -29,7 +29,7 @@
     <string name="accidental_touches_subtext">Tahaton kosketus havaittiin\nPaina OK jatkaaksesi puhelimen käyttöä\nJos
         ilmoitus tulee toistuvasti, voit poistaa sen käytöstä esteettömyysasetuksista
     </string>
-    <string name="acknowledgments">Kiitollisuudenosoitukset</string>
+    <string name="acknowledgments">Kiitokset</string>
     <string name="adaptive">Mukautuva</string>
     <string name="add_alarm">Lisää hälytys</string>
     <string name="add_alarm_quickly">Lisää ajastin</string>
@@ -227,10 +227,6 @@ ja muuttaa kirkkautta.</string>
     <string name="settings">Asetukset</string>
     <string name="settings_permission">Asetusten käyttöoikeudet</string>
     <string name="share">Jaa</string>
-    <string name="share_actual_text">Hei, Käytän tätä \"BaldPhone\"-nimistä alustaa, joka korvaa puhelimen käyttö-
-        liittymän isoksi, helpoksi ja ystävälliseksi.\nKiinnostako?\nSinä voit ladata sen ilmaiseksi!\nKatso linkistä
-        lisää tietoa:\n\nhttps://baldphone.com
-    </string>
     <string name="share_bald_phone_subtext">Hei, tiedätkö joitain, jotka ehkä haluavat tietää BaldPhonesta?\nSinä voit
         kertoa siitä heille!
     </string>
@@ -377,7 +373,7 @@ ja muuttaa kirkkautta.</string>
     <string name="no_delay">Ei viivettä</string>
     <string name="scrolling">Vieritys</string>
     <string name="arrows">Nuolet</string>
-    <string name="swipe">Pyyhkäie</string>
+    <string name="swipe">Pyyhkäise</string>
     <string name="_long">Pitkä</string>
     <string name="_short">Lyhyt</string>
     <string name="do_you_want_to_save_your_changes">Haluatko tallentaa muutokset?</string>
@@ -401,7 +397,6 @@ ja muuttaa kirkkautta.</string>
     <string name="website">Verkkosivusto</string>
     <string name="appear_on_top">Näkyy ylhäällä</string>
     <string name="appear_on_top_subtext">Tätä lupaa tarvitaan uudelle Android-versiolle, jotta hälytykset ja muistutukset voidaan näyttää, kun näyttö on suljettu</string>
-
 
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
