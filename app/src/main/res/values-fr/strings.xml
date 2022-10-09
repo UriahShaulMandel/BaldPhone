@@ -221,8 +221,6 @@
     <string name="settings">Paramètres</string>
     <string name="settings_permission">Paramètres des permissions</string>
     <string name="share">Partager</string>
-    <string name="share_actual_text">Bonjour, j\'utilise l\'application "BaldPhone" qui remplace l\'interface de mon téléphone par quelque chose de plus lisible, simple et facile d\'utilisation.\nIntéressé(e) ?\nTu peux la télécharger gratuitement !\nRegarde le lien ci-dessous pour plus d\'informations :\n\nhttps://baldphone.com/home
-    </string>
     <string name="share_bald_phone_subtext">Bonjour,\nConnaissez-vous une personne qui serait intéressée par BaldPhone ?\nMerci de faire passer le mot.
     </string>
     <string name="share_baldphone">Partager BaldPhone</string>
