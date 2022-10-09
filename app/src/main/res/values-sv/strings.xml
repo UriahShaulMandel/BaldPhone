@@ -219,8 +219,6 @@
     <string name="settings">Inställningar</string>
     <string name="settings_permission">Rättigheter för inställningar</string>
     <string name="share">Dela</string>
-    <string name="share_actual_text">Hej, jag använder appen "BaldPhone" som ersätter telefonens ursprungliga användargränssnitt mot ett som är större, tydligare och enklare.\nLåter det intressant?\nDu kan ladda ner det gratis!\nBesök länken nedan för mer information:\n\nhttps://baldphone.com
-    </string>
     <string name="share_bald_phone_subtext">Känner du till någon som kan ha nytta av BaldPhone?\n\n
       Du kan berätta för dem om appen!"
     </string>
@@ -395,7 +393,6 @@
     <string name="website">Webbplats</string>
     <string name="appear_on_top">Visas på toppen</string>
     <string name="appear_on_top_subtext">Den här rättighet krävs för ny version av Android för att visa larm och påminnelser när skärmen är stängd</string>
-
 
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
