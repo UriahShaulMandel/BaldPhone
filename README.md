@@ -10,7 +10,7 @@ A platform which replaces the phone's interface to a bigger, simpler and friendl
 [![GitHub version](https://img.shields.io/github/tag/UriahShaulMandel/BaldPhone.svg)](https://github.com/UriahShaulMandel/BaldPhone/releases/latest) 
 [![users](https://img.shields.io/endpoint?url=https%3A%2F%2Fbaldphone.com%2Fdb_db%2Fbadges%2Fget_badge.php)](https://baldphone.com/stats/) 
 [![GitHub repo size](https://img.shields.io/github/repo-size/UriahShaulMandel/BaldPhone)](https://github.com/UriahShaulMandel/BaldPhone) 
-[![Maintenance](https://img.shields.io/maintenance/yes/2022)](https://github.com/UriahShaulMandel/BaldPhone) 
+[![Maintenance](https://img.shields.io/maintenance/translations%20%20mostly/2022)](https://github.com/UriahShaulMandel/BaldPhone) 
 [![Discord](https://img.shields.io/discord/633644055779213362?label=Chat%20%28Discord%29)](https://discord.gg/K4XTNWN) 
 [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue)](https://t.me/BaldPhone) 
 [![F-Droid](https://img.shields.io/f-droid/v/com.bald.uriah.baldphone)](https://f-droid.org/packages/com.bald.uriah.baldphone/) 

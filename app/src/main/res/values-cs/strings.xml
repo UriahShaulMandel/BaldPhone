@@ -80,19 +80,19 @@
     <string name="change_system_settings_subtext">Prosím povolte BaldPhone změnu nastavení, jako například
     zvětšení písma a změnu jasu.
     </string>
-    <string name="choose_friday">Pát</string>
-    <string name="choose_monday">Pon</string>
-    <string name="choose_saturday">Sob</string>
-    <string name="choose_sunday">Ned</string>
-    <string name="choose_thursday">Čtv</string>
+    <string name="choose_friday">Pá</string>
+    <string name="choose_monday">Po</string>
+    <string name="choose_saturday">So</string>
+    <string name="choose_sunday">Ne</string>
+    <string name="choose_thursday">Čt</string>
     <string name="choose_tuesday">Út</string>
-    <string name="choose_wednesday">Stř</string>
+    <string name="choose_wednesday">St</string>
     <string name="clear">Vyčistit</string>
     <string name="clear_cache">Vyčistit mezipaměť</string>
-    <string name="clear_data">Vymazat všechny data</string>
-    <string name="clear_data_subtext">Jste si jistí, že chcete vymazat všechny data?</string>
+    <string name="clear_data">Vymazat všechna data</string>
+    <string name="clear_data_subtext">Jste si jistí, že chcete vymazat všechna data?</string>
     <string name="clear_data_subtext2">100%?</string>
-    <string name="clear_data_subtext3">Opravdu?\nZmáčknutí tlačítka ano vymaže všechny data</string>
+    <string name="clear_data_subtext3">Opravdu?\nZmáčknutí tlačítka ano vymaže všechna data</string>
     <string name="clock">Hodiny</string>
     <string name="coming_soon">Brzy!</string>
     <string name="connection_settings">Připojení</string>
@@ -120,7 +120,7 @@
     <string name="enter_contact_or_phone_number">Zadejte jméno kontaktu:</string>
     <string name="evening">Večer</string>
     <string name="example_of_different_text_sizes">Příklad různých velikostí textu\nMěl by být
-    čitelný a nepřetíkat
+    čitelný a nepřetékat
     </string>
     <string name="external_storage_subtext">Toto oprávnění je nutné k ukládání obrázků.</string>
     <string name="feedback">Poslat zpětnou vazbu</string>
@@ -134,7 +134,7 @@
     Použijte velkou klávesnici BaldPhone.
     </string>
     <string name="hello">Dobrý den</string>
-    <string name="help">Video tutoriál</string>
+    <string name="help">Video návod</string>
     <string name="hide">Skrýt</string>
     <string name="high_level">Vysoká úroveň</string>
     <string name="home_phone_number">Číslo telefonu domů</string>
@@ -230,7 +230,7 @@
     <string name="settings_permission">Nastavení oprávnění</string>
     <string name="share">Sdílet</string>
     <string name="share_actual_text">Ahoj, používám platformu BaldPhone, která nahrazuje rozhraní telefonu
-        za jedno, co je velké a jednoduché. Zaujat? Můžeš stáhnou zadarmo! Podívej se na odkaz
+        za jedno, co je velké a jednoduché. Zaujalo vás to? Lze stáhnou zadarmo! Podívej se na odkaz
         :\n\nhttps://baldphone.com
     </string>
     <string name="share_bald_phone_subtext">Hej, víš o někom, kdo by chtěl používat BaldPhone?\nMůžeš to s
@@ -260,9 +260,9 @@
     <string name="thursday">Čtvrtek</string>
     <string name="time_changer">Měnič času pilulky</string>
     <string name="tiny">Malinký</string>
-    <string name="to___days_and___hours_from_now">Do %d dnů a %d hodin od nyní</string>
-    <string name="to___hours_and___minutes_from_now">do %d hodin a %d minut od nyní</string>
-    <string name="to___minuets_from_now">do %d minut od nyní</string>
+    <string name="to___days_and___hours_from_now">Do %d dnů a %d hodin od teď</string>
+    <string name="to___hours_and___minutes_from_now">do %d hodin a %d minut od teď</string>
+    <string name="to___minuets_from_now">do %d minut od teď</string>
     <string name="today">Dnes</string>
     <string name="took">Měl jsem!</string>
     <string name="tuesday">Úterý</string>
@@ -291,7 +291,7 @@
     <string name="clear_cache_subtext">Jste si jistí že chcete smazat všechna dočastná data?\nZkratky aplikací budou smazány také!
     </string>
     <string name="permissions_calm">Ahoj, BaldPhone potřebuje následující oprávnění k funkci. Některá z nich
-        zní strašidelně, ale je to jediný způsob, jak může BaldPhone nahradit prostředí vašeho telefonu. Žádné data nejsou sebrány a nezpůsobuje
+        zní strašidelně, ale je to jediný způsob, jak může BaldPhone nahradit prostředí vašeho telefonu. Žádné data nejsou sebrána a nezpůsobuje
         žádné škody. Zmáčkněte OK pro udělení oprávnění, nebo ne pro opuštění BaldPhone.
     </string>
     <string name="pending_update">Čeká na aktualizaci</string>
@@ -323,11 +323,11 @@
     <string name="downloading_updates">Stahuji aktualizace…</string>
     <string name="installing_doesn_t_work">Instalování nefunguje?</string>
     <string name="try_now">Zkuste nyní</string>
-    <string name="download_progress">Pokrok stahování</string>
+    <string name="download_progress">Průběh stahování</string>
     <string name="what_do_you_want_to_do_with___">Co chcete dělat s %s?</string>
     <string name="crash_reports">Zprávy o havárii</string>
     <string name="crash_reports_subtext">Zprávy o havárii pomáhají dělat prostředí BaldPhone bezchybné\nJsou používány pouze
-        k opravě chyb a žádné jiné informace, než to co je potřeba k opravě chyb je bráno
+        k opravě chyb a žádné jiné informace, než to co je potřeba k opravě chyb, není posíláno.
     </string>
     <string name="custom_app">Vlastní aplikace</string>
     <string name="custom_app_subtext">Vyberte vlastní aplikace, která bude na domovské obrazovce.</string>
