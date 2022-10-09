@@ -164,6 +164,6 @@
     <string name="dual_sim">خطين</string>
     <string name="choose_sim">اختر خط</string>
     <string name="choose_sim_subtext">أختر الخط الذي تريد الأتصال منه</string>
-    <bool name="is_right_to_left">true</bool>
+    <bool name="is_right_to_left">false</bool>
 
 </resources>
