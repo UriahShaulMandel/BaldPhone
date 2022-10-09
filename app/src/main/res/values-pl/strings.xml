@@ -69,7 +69,7 @@
     <string name="brightness_subtext">Zmień jasność</string>
     <string name="cache_cleared_successfully">Pomyślnie wyczyszczono pamięc cachce!</string>
     <string name="call">Dzwoń</string>
-    <string name="calling">Dzwonienie…</string>
+    <string name="calling">Dzwonienie...</string>
 
     <string name="call_log">Rejestr połączeń:</string>
     <string name="call_subtext">To dozwolenie jest wymagane aby dzwonić do kontaktów.</string>
@@ -218,9 +218,6 @@
     <string name="settings">Ustawienia</string>
     <string name="settings_permission">Ustawienia dozwoleń</string>
     <string name="share">Udostępnij</string>
-    <string name="share_actual_text">Cześć, używam aplikacji "BaldPhone" która sprawia że interfejs telefonu jest duży, prosty i przyjazny. \nZaintesowany/a?\nTa aplikacja jest darmowa!\nkliknij link
-        poniżej aby zobaczyć więcej informacji:\n\nhttps://baldphone.com
-    </string>
     <string name="share_bald_phone_subtext">Znasz kogoś kto też chciałby używać BaldPhone ? Udostępnij !</string>
     <string name="share_baldphone">Udostępnij BaldPhone</string>
     <string name="share_contact">Udostępnij kontakt</string>
