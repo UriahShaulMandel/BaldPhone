@@ -216,10 +216,6 @@
     <string name="settings">Impostazioni</string>
     <string name="settings_permission">Impostazione autorizzazioni</string>
     <string name="share">Condividi</string>
-    <string name="share_actual_text">Ciao, sto usando una app chiamata \"BaldPhone\" che sostituisce l\'interfaccia dello smartphone con una
-        più grande e facile da usare.\nTi interessa?\nPuoi scaricarla gratuitamente!\nGuarda questo link
-        per altre informazioni:\n\nhttps://baldphone.com
-    </string>
     <string name="share_bald_phone_subtext">Conosci qualcuno che potrebbe essere interessato a BaldPhone? Fagli sapere che esiste!</string>
     <string name="share_baldphone">Condividi BaldPhone</string>
     <string name="share_contact">Condividi contatto</string>
@@ -387,7 +383,6 @@
     <string name="website">Sito Web</string>
     <string name="appear_on_top">Mostra Sopra</string>
     <string name="appear_on_top_subtext">Questa autorizzazione è necessaria nelle nuove versioni di android per poter mostrare allarmi e promemoria quando lo schermo è bloccato</string>
-
 
     <string-array name="names_for_screenshots">
         <item>Il Padrino</item>
