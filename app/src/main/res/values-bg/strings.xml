@@ -229,10 +229,6 @@
     <string name="settings">Настройки</string>
     <string name="settings_permission">Разрешение за настройки</string>
     <string name="share">Споделяне</string>
-    <string name="share_actual_text">Привет, използвам платформата "BaldPhone", която замества интерфейса
-        на телефона с нов - уголемен,опростен и удобен.\nЗаинтересуван сте?\nМожете да я изтеглите безплатно!\nЗа повече информация
-        използвайте следния линк:\n\nhttps://baldphone.com
-    </string>
     <string name="share_bald_phone_subtext">Здравей, имаш ли познати, които биха се заинтересували от BaldPhone?\nМожеш
         да го споделиш с тях!"
     </string>
@@ -403,7 +399,6 @@
     <string name="website">WEB сайт</string>
     <string name="appear_on_top">Показване над другите приложения</string>
     <string name="appear_on_top_subtext">Разрешението е необходимо в новите версии на Андроид, за да се показват алармите и напомнянията при заключен екран</string>
-
 
     <string-array name="names_for_screenshots">
         <item>Кръстникът</item>
