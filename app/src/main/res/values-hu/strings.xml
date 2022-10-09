@@ -213,9 +213,6 @@ Megérkezett a BaldPhone NAGY billentyűzete!</string>
     <string name="settings">Beállítások</string>
     <string name="settings_permission">Beállítások hozzáférési engedély</string>
     <string name="share">Megosztás</string>
-    <string name="share_actual_text">Szia!
-A BaldPhone platformot használom, ami lecseréli a telefonom kis gombjait nagy jól olvasható felratokra. Ha téged is érdekel nézd meg ezen az oldalon:
-https://baldphone.com</string>
     <string name="share_bald_phone_subtext">Tudsz valakit akit érdekelne a BaldPhone felület? Küld el neki!</string>
     <string name="share_baldphone">BaldPhone megosztása</string>
     <string name="share_contact">Névjegy megosztása</string>
@@ -288,12 +285,12 @@ https://baldphone.com</string>
     <string name="could_not_connect_to_internet">Nem lehet csatlakozni az internethez!</string>
     <string name="could_not_start_the_download">Nem lehet elindítani a letöltést!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Letöltött frissítési fájlt nem sikerült törölni!</string>
-    <string name="downloading">Letöltés…</string>
+    <string name="downloading">Letöltés...</string>
 
     <string name="baldphone_is_up_to_date">A BaldPhone alkalmazás legfrissebb verzióját használod!</string>
     <string name="what_s_new">Újdonságok</string>
     <string name="download_finished">Letöltés kész</string>
-    <string name="downloading_updates">Frissítések Letöltése…</string>
+    <string name="downloading_updates">Frissítések Letöltése...</string>
     <string name="installing_doesn_t_work">Telepítés nem működik?</string>
     <string name="try_now">Kipróbálás Most</string>
     <string name="download_progress">Letöltési folyamat</string>
