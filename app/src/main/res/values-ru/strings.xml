@@ -221,8 +221,6 @@
     <string name="settings">Настройки</string>
     <string name="settings_permission">Настройка Разрешений</string>
     <string name="share">Поделиться</string>
-    <string name="share_actual_text">Привет, Я использую платформу названную "BaldPhone" которая заменяет интерфейс телефона на более крупный, простой и дружелюбный.\nЗаинтересовался?\nВы можете скачать его бесплатно!\nоткройте ссылку ниже для получения дополнительной информации:\n\nhttps://baldphone.com
-    </string>
     <string name="share_bald_phone_subtext">Эй, знаете кого-нибудь, кто хотел бы узнать о BaldPhone?\nВы можете поделиться им с ними!"
     </string>
     <string name="share_baldphone">Поделиться BaldPhone</string>
