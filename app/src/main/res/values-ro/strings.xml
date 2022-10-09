@@ -222,10 +222,6 @@
     <string name="settings">Setări</string>
     <string name="settings_permission">Permisiune setări</string>
     <string name="share">Share</string>
-    <string name="share_actual_text">Hi, I\'m using this platform named "BaldPhone" which replaces the phone\'s
-        interface to a big, simple and friendly one.\nInterested?\nYou can download it for free!\ncheck out the link
-        below for more information:\n\nhttps://baldphone.com
-    </string>
     <string name="share_bald_phone_subtext">Hey, know anyone who may want to know about BaldPhone?\nYou can
         share it with them!"
     </string>
@@ -363,7 +359,7 @@
     <string name="emergency_settings_subtext">Alegeți dacă doriți un buton de urgență pe pagina principală.</string>
     <string name="private_number">Număr privat</string>
     <string name="swipe_left_or_right">Trageți în stânga sau în dreaptat</string>
-    <string name="press_next_or_back_buton">Apăsați următorul sau înapoi</string>
+    <string name="press_next_or_back_buton">Press următorul sau înapoi</string>
     <string name="click_delay">Întarziere atingere</string>
     <string name="no_delay">Fară așteptare</string>
     <string name="scrolling">Defilare</string>
@@ -378,9 +374,9 @@
     <string name="apps_sort_method_subtext">Alegeți dacă vreți ca aplicațiile sa fie sortate in grupe sau alfabetic.</string>
     <string name="groups">Grupe</string>
     <string name="one_grid">Alfabetic</string>
-    <string name="colorful">Colorat</string>
-    <string name="colorful_subtext">Doriți să faceți aplicația mai colorată?</string>
-    <string name="edit_home_screen">Editați Ecranul Acasă</string>
+    <string name="colorful">Colorful</string>
+    <string name="colorful_subtext">Do you want to make BaldPhone more colorful?</string>
+    <string name="edit_home_screen">Edit Home Screen</string>
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
         <item>Abraham Lincoln</item>
