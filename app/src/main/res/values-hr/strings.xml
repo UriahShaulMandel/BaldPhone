@@ -223,8 +223,6 @@
     <string name="settings">Postavke</string>
     <string name="settings_permission">Dozvole postavki</string>
     <string name="share">Dijeli</string>
-    <string name="share_actual_text">Bok, ja koristim aplikaciju "BaldPhone" koja zamjenjuje izgled uređaja u veliko, jednostavno i prijateljsko sučelje.\nUkoliko ste zainteresirani, možete ga preuzeti na web stranici besplatno!\nKliknite na link za više informacija:\n\nhttps://baldphone.com
-    </string>
     <string name="share_bald_phone_subtext">Hej, poznajete li nekoga tko bi želio koristiti aplikaciju BaldPhone?\nMožete ju podijeliti s njima!</string>
     <string name="share_baldphone">Dijeli BaldPhone</string>
     <string name="share_contact">Podijeli Kontakt</string>
@@ -386,7 +384,6 @@
     <string name="website">Web stranica</string>
     <string name="appear_on_top">Prikaži na vrhu</string>
     <string name="appear_on_top_subtext">Ova dovola je potrebna na novijoj verziji Androida da se prikažu alarmi i podsjetnici kad je zaslon ugašen</string>
-
 
     <string-array name="names_for_screenshots">
         <item>Kum</item>
