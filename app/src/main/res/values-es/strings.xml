@@ -16,9 +16,11 @@
 
 <resources>
     <string name="about">Acerca de</string>
-    <string name="about_subtext">
-        ¡Hola, buenos días!\n
-        Me llamo Uriah Shaul Mandel y soy el desarrollador de esta plataforma. He pasado la mayor parte de mi vida «adulta» desarrollando esta plataforma, y la he lanzado gratis para beneficio de todos. Si tienes alguna duda o sugerencia he aquí mi correo electrónico:\n
+    <string name="about_subtext">¡Hola, buenos días!\n
+        Me llamo Uriah Shaul Mandel y soy el desarrollador de esta plataforma.\n
+        He pasado la mayor parte de mi vida «adulta» haciendo esta plataforma, y la he lanzado gratis,
+        para que todos la usen.\n
+        Si tienes alguna duda o sugerencia he aquí mi correo electrónico:\n
         baldphone.contact@gmail.com (si me escribes, mejor en inglés)
     </string>
     <string name="accessibility_level">Nivel de accesibilidad</string>
@@ -192,7 +194,7 @@
     <string name="pill_added">La pastilla se ha añadido correctamente.</string>
     <string name="pill_name">Nombre de la pastilla</string>
     <string name="pills">Pastillas</string>
-    <string name="press_longer">Mantén pulsado el botón un poco más…</string>
+    <string name="press_longer">Mantén pulsado el botón un poco más...</string>
     <string name="timer">Temporizador</string>
     <string name="read_call_log">Leer el historial de llamadas</string>
     <string name="read_call_log_subtext">Se necesita este permiso para poder ver el historial de llamadas.</string>
@@ -222,7 +224,6 @@
     <string name="settings">Ajustes</string>
     <string name="settings_permission">Permisos concedidos</string>
     <string name="share">Compartir</string>
-    <string name="share_actual_text">Hola, estoy usando esta plataforma llamada «BaldPhone» que reemplaza la interfaz del teléfono por otra que es más clara, grande, concisa y fácil de usar. ¿Te parece interesante? Pues puedes descargarla gratis. Haz clic en este enlace para entrar en la página Web: https://baldphone.com</string>
     <string name="share_bald_phone_subtext">Oye, ¿conoces a alguien al que le pueda venir bien usar BaldPhone?\n
         Si quieres puedes recomendarles la aplicación.
     </string>
@@ -309,7 +310,7 @@
     <string name="could_not_connect_to_internet">No ha sido posible conectarse a Internet.</string>
     <string name="could_not_start_the_download">No ha sido posible empezar la descarga.</string>
     <string name="downloaded_update_file_could_not_be_deleted">No se ha podido eliminar el archivo con la actualización.</string>
-    <string name="downloading">Descargando…</string>
+    <string name="downloading">Descargando...</string>
 
     <string name="baldphone_is_up_to_date">BaldPhone está actualizado.</string>
     <string name="what_s_new">Novedades</string>
@@ -398,7 +399,6 @@
     <string name="website">Página Web</string>
     <string name="appear_on_top">Mostrar sobre otras aplicaciones</string>
     <string name="appear_on_top_subtext">Este permiso es necesario en versiones nuevas de Android para poder mostrar alarmas y recordatorios al apagar la pantalla.</string>
-
 
     <string-array name="names_for_screenshots">
         <item>El padrino</item>
