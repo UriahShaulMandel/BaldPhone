@@ -233,14 +233,6 @@ Es recomana encaridament usar \"Baldphone\'s home screen\" com el Llançador pri
     <string name="settings">Ajustos</string>
     <string name="settings_permission">Permisos</string>
     <string name="share">Compartir</string>
-    <string name="share_actual_text">
-	Hola, estic usant aquesta plataforma anomenada "BaldPhone" que reemplaça la interfície del telèfon per una més gran, simple i amigable.\n
-	Està interessat?\n
-	Pots descarregar-ho gratis!\n
-	Eecha un cop d\'ull al siguente enllaç per a obtenir més informació:\n
-	\n
-	https://baldphone.com
-</string>
     <string name="share_bald_phone_subtext">Hey, coneix a algú que pugui estar interessat en BaldPhone?\n
 	Pot compartir-ho amb ells!"
 </string>
