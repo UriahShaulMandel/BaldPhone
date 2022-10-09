@@ -226,10 +226,6 @@
     <string name="settings">Seaded</string>
     <string name="settings_permission">Seadete juurdepääsuluba</string>
     <string name="share">Jaga</string>
-    <string name="share_actual_text">Tere. Mina kasutan nutitelefoni rakendust \"BaldPhone\", mis muudab telefoni
-        menüüd suureks, lihtsaks ja sõbralikuks.\nKas pakub huvi?\nRakendus on tasuta.\nRohkem infot veebilehelt:\n
-        \nhttps://baldphone.com
-    </string>
     <string name="share_bald_phone_subtext">Kas teate kedagi, kellele võiks meeldida BaldPhone?\nJagage teistega
     </string>
     <string name="share_baldphone">Jaga BaldPhone\'i</string>
@@ -314,7 +310,7 @@
     <string name="baldphone_is_up_to_date">BaldPhone\'i kõige viimane versioon on paigaldatud.</string>
     <string name="what_s_new">Mis on uus</string>
     <string name="download_finished">Allalaadimine on lõpetatud.</string>
-    <string name="downloading_updates">Uuenduste allalaadimine…</string>
+    <string name="downloading_updates">Uuenduste allalaadimine...</string>
     <string name="installing_doesn_t_work">Kas ei saa installida?</string>
     <string name="try_now">Proovi kohe</string>
     <string name="download_progress">Allalaadimise seis</string>
