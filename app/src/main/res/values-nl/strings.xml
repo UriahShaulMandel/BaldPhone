@@ -215,7 +215,6 @@ veranderbaar en kan worden gewijzigd in de instellingen.</string>
     <string name="settings">Instellingen</string>
     <string name="settings_permission">Instellingen Bevoegdheid</string>
     <string name="share">Delen</string>
-    <string name="share_actual_text">Hallo, ik gebruik een app genaamd \"BaldPhone\" dat de interface van de telefoon vervangt door een grote, eenvoudige en gebruiksvriendelijke interface. \ NGeïnteresseerd? \nJe kan het gratis downloaden! \nklik de link hieronder voor meer informatie: \n\nhttps://baldphone.com</string>
     <string name="share_bald_phone_subtext">Ken je iemand die misschien meer wilt weten over BaldPhone? \n
 Deel het met hen!\"</string>
     <string name="share_baldphone">BaldPhone delen</string>
@@ -292,7 +291,7 @@ als u in het buitenland bent, kost u dit mogelijk geld.\ nWilt u doorgaan met he
     <string name="could_not_connect_to_internet">Kan geen verbinding maken met het internet!</string>
     <string name="could_not_start_the_download">Kan de download niet starten!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Het gedownloade updatebestand kon niet worden verwijderd!</string>
-    <string name="downloading">Aan het downloaden…</string>
+    <string name="downloading">Aan het downloaden...</string>
 
     <string name="baldphone_is_up_to_date">BaldPhone is up-to-date.</string>
     <string name="what_s_new">Wat is er nieuw</string>
@@ -379,7 +378,6 @@ als u in het buitenland bent, kost u dit mogelijk geld.\ nWilt u doorgaan met he
     <string name="website">Website</string>
     <string name="appear_on_top">Bovenaan tonen</string>
     <string name="appear_on_top_subtext">Deze bevoegdheid is vereist op de nieuwe versie van Android om alarmen en herinneringen weer te geven wanneer het scherm uit staat.</string>
-
 
     <string-array name="names_for_screenshots">
         <item>De Peetvader</item>
