@@ -228,10 +228,6 @@
     <string name="settings">समायोजन</string>
     <string name="settings_permission">सेटिंग अनुमति</string>
     <string name="share">साझा करना</string>
-    <string name="share_actual_text">नमस्ते, मैं "बाल्डफोन" नाम के इस प्लेटफॉर्म का उपयोग कर रहा हूं जो फोन को बदल देता है
-        एक बड़े, सरल और मैत्रीपूर्ण इंटरफ़ेस के लिए।\nइच्छुक?\nआप इसे मुफ्त में डाउनलोड कर सकते हैं!\nलिंक देखें
-        अधिक जानकारी के लिए नीचे:\n\nhttps://baldphone.com
-    </string>
     <string name="share_bald_phone_subtext">अरे, किसी ऐसे व्यक्ति को जानिए जो बाल्डफ़ोन के बारे में जानना चाहे?\nआप कर सकते हैं
         इसे उनके साथ साझा करें!"
     </string>
@@ -402,7 +398,6 @@
     <string name="website">वेबसाइट</string>
     <string name="appear_on_top">शीर्ष पर दिखाई दें</string>
     <string name="appear_on_top_subtext">स्क्रीन बंद होने पर अलार्म और रिमाइंडर दिखाने के लिए एंड्रॉइड के नए संस्करण पर यह अनुमति आवश्यक है</string>
-
 
     <string-array name="names_for_screenshots">
         <item>The Godfather</item>
