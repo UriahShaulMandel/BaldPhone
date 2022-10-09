@@ -211,7 +211,6 @@
     <string name="settings">Podešavanja</string>
     <string name="settings_permission">Dozvole za opcije</string>
     <string name="share">Podeli</string>
-    <string name="share_actual_text">Zdravo, koristim platformu koja se zove \"BaldPhone\" koja menja telefon interfejs sa drzgim koji je veći i pojednostavljen.\nZainteresovan?\nMožeš da ga skineš besplatno!\nPogledaj na ovom linku ispod za više informacija:\n\nhttps://baldphone.com</string>
     <string name="share_bald_phone_subtext">Zdravo, poznaješ nekog ko bi želeo da zna za BaldPhone?\nPodeli to sa njim!</string>
     <string name="share_baldphone">Podelite BaldPhone</string>
     <string name="share_contact">Podeli kontakt</string>
@@ -284,12 +283,12 @@
     <string name="could_not_connect_to_internet">Nije moguće povezati se na internet!</string>
     <string name="could_not_start_the_download">Nije moguće započeti preuzimanje!</string>
     <string name="downloaded_update_file_could_not_be_deleted">Nije moguće izbrisati preuzetu datoteku ažuriranja!</string>
-    <string name="downloading">Preuzimanje…</string>
+    <string name="downloading">Preuzimanje...</string>
 
     <string name="baldphone_is_up_to_date">BaldPhone je ažuriran.</string>
     <string name="what_s_new">Šta je novo</string>
     <string name="download_finished">Preuzimanje je završeno!</string>
-    <string name="downloading_updates">Preuzimanje ažuriranja…</string>
+    <string name="downloading_updates">Preuzimanje ažuriranja...</string>
     <string name="installing_doesn_t_work">Instaliranje ne funkcioniše?</string>
     <string name="try_now">Pokuštajte sada</string>
     <string name="download_progress">Napredak preuzimanja</string>
@@ -371,7 +370,6 @@
     <string name="website">Sajt</string>
     <string name="appear_on_top">Prikaži na vrhu</string>
     <string name="appear_on_top_subtext">Ova dozvola je potrebna na novijim verzijama Androida da bi se prikazali alarmi i podsetnici kada je ekran ugašen</string>
-
 
     <string-array name="names_for_screenshots">
         <item>Kum</item>
