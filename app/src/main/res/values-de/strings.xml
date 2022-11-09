@@ -111,7 +111,7 @@
     <string name="edit">Bearbeiten</string>
     <string name="email">Email:</string>
     <string name="enable_notification_access">Zugriff auf Benachrichtigungen aktivieren</string>
-    <string name="enable_notification_access_subtext">Bitte gewähre BaldPhone Zugriff auf die Bachrichtigungen.</string>
+    <string name="enable_notification_access_subtext">Bitte gewähre BaldPhone Zugriff auf die Benachrichtigungen.</string>
     <string name="enter">Enter</string>
     <string name="enter_contact_or_phone_number">Trage hier den Namen des Kontaktes ein:</string>
     <string name="evening">Abend</string>
