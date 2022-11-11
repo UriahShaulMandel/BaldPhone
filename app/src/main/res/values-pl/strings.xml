@@ -23,11 +23,11 @@
     <string name="accessibility_level">Poziom dostępności</string>
     <string name="accessibility_settings">Dostępność</string>
     <string name="accidental_touches">Zapobiegaj przypadkowym dotknięciom</string>
-    <string name="accidental_touches_settings_subtext">Ta funkcja blokuje enran dotykowy kiedy telefon jest przykryty,
+    <string name="accidental_touches_settings_subtext">Ta funkcja blokuje ekran dotykowy kiedy telefon jest przykryty,
     	\njeśli to sprawi problemy możesz to wyłączyć
     </string>
     <string name="accidental_touches_subtext">Wykryto przypadkowe dostnięcie\nnaciśnij OK aby odblokować dotyk\njeśli
-        ta wiadomość się powtarza możesz wyłączyc tą funkcję w ustawieniach dostępności
+        ta wiadomość się powtarza możesz wyłączyć tę funkcję w ustawieniach dostępności
     </string>
     <string name="acknowledgments">Podziękowania</string>
     <string name="adaptive">Adaptywny</string>
@@ -67,7 +67,7 @@
     <string name="bluetooth">Bluetooth</string>
     <string name="brightness">Jasność</string>
     <string name="brightness_subtext">Zmień jasność</string>
-    <string name="cache_cleared_successfully">Pomyślnie wyczyszczono pamięc cachce!</string>
+    <string name="cache_cleared_successfully">Pomyślnie wyczyszczono pamięć cache!</string>
     <string name="call">Dzwoń</string>
     <string name="calling">Dzwonienie…</string>
 
@@ -77,7 +77,7 @@
     <string name="camera_subtext">TTo dozwolenie jest wymagane aby aby włączyć latarkę.</string>
     <string name="cancel">Anuluj</string>
     <string name="change_pills_time">Zmień porę tabletek</string>
-    <string name="change_system_settings_subtext">Zezwól BaldPhone na zmiane ustawień, takich jak rozmiar czcionki i jasność ekranu.</string>
+    <string name="change_system_settings_subtext">Zezwól BaldPhone na zmianę ustawień, takich jak rozmiar czcionki i jasność ekranu.</string>
     <string name="choose_friday">Pią</string>
     <string name="choose_monday">Pon</string>
     <string name="choose_saturday">Sob</string>
@@ -118,14 +118,14 @@
     <string name="enter_contact_or_phone_number">Wpisz nazwę kontaktu:</string>
     <string name="evening">Wieczór</string>
     <string name="example_of_different_text_sizes">Przykład różnych rozmiarów czcionki\nTen tekst powinien być czytelny i nie zawijać się</string>
-    <string name="external_storage_subtext">To dozwolenie jest wymagane aby zapisywać zdięcia.</string>
+    <string name="external_storage_subtext">To dozwolenie jest wymagane aby zapisywać zdjęcia.</string>
     <string name="feedback">Wyślij opinię</string>
     <string name="feedback_cannot_be_empty">Opinia nie może być pusta</string>
     <string name="feedback_sent_successfully">Opinia pomyślnie wysłana</string>
-    <string name="first_please_select_how_you_want_to_interact_with_buttons">Proszę wybrac poziom dostępności</string>
+    <string name="first_please_select_how_you_want_to_interact_with_buttons">Proszę wybrać poziom dostępności</string>
     <string name="font_size">Czcionka</string>
     <string name="friday">Piątek</string>
-    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Trudności w używaniu klawiatury telefonu ? przełącz na DUŻĄ klawiaturę BaldPhone</string>
+    <string name="have_hard_time_using_the_phone_s_keyboard_use_baldphone_s_big_keyboard_instead">Trudności w używaniu klawiatury telefonu? przełącz na DUŻĄ klawiaturę BaldPhone</string>
     <string name="hello">Witaj</string>
     <string name="help">Tutorial wideo</string>
     <string name="hide">Ukryj</string>
@@ -166,7 +166,7 @@
     <string name="no">Nie</string>
     <string name="notes">Notatki</string>
     <string name="notes_settings">Ustawienia notatek</string>
-    <string name="notes_settings_subtext">Czy chcesz mieć stronę notatek na ekranie głównym ?</string>
+    <string name="notes_settings_subtext">Czy chcesz mieć stronę notatek na ekranie głównym?</string>
     <string name="notifications">Powiadomienia</string>
 
     <string name="of">z</string>
@@ -179,18 +179,18 @@
 
     <string name="open">Otwórz</string>
 
-    <string name="outgoing">Towarzyski</string>
+    <string name="outgoing">Wychodzące</string>
     <string name="page">Strona</string>
     <string name="permissions_part">Zezwolenia</string>
     <string name="personalization_settings">Personalizacja</string>
-    <string name="phone">Telfon</string>
-    <string name="photo">Zdięcie</string>
-    <string name="photos">Zdięcia</string>
+    <string name="phone">Telefon</string>
+    <string name="photo">Zdjęcie</string>
+    <string name="photos">Zdjęcia</string>
     <string name="pill_added">PTabletka dodana</string>
     <string name="pill_name">Nazwa tabletki</string>
     <string name="pills">Tabletki</string>
     <string name="press_longer">Przytrzymaj dłużej</string>
-    <string name="timer">Tajmer</string>
+    <string name="timer">Timer</string>
     <string name="read_call_log">Wyświetl rejestr połączeń</string>
     <string name="read_call_log_subtext">To dozwolenie jest wymagane aby wyświetlić rejestr połączeń.</string>
     <string name="read_contacts">Wyświetl kontakty</string>
@@ -200,7 +200,7 @@
 
     <string name="remove_from_favorite">Usuń z ulubionych</string>
     <string name="remove_from_home">Usuń z ekranu domowego</string>
-    <string name="remove_from_sos">Usuń z  SOS</string>
+    <string name="remove_from_sos">Usuń z SOS</string>
     <string name="remove_shortcut">Usuń skrót</string>
     <string name="removed_all_alarms">Wszystkie alarmy usunięte!</string>
     <string name="repeats_every_day">Codziennie</string>
@@ -274,7 +274,7 @@
     <string name="no_alarms">Brak alarmów\nUtwórz nowy przez kliknięcie\n\"Dodaj Alarm\"\nlub\n\"Dodaj Timer\"</string>
     <string name="no_pills">Brak tabletek\nDoda nową klikając\n\"Dodaj tabletkę\"</string>
     <string name="clear_all_notifications">Wyczyść wszystkie powiadomienia</string>
-    <string name="clear_cache_subtext">Napewno chcesz uzunąć cały cachce ?\nSkróty aplikacji zostaną usunięte w wyniku tej operacji
+    <string name="clear_cache_subtext">Napewno chcesz usunąć cały cache?\nSkróty aplikacji zostaną usunięte w wyniku tej operacji
     </string>
     <string name="permissions_calm">Witaj, BaldPhone musi mieć następujące dozwolenia aby funkcjonować. Kilka z nich może wydawać się niepotrzebnych, ale tylko tak BaldPhone może zastąpić interfejs telefonu.
       Nie są wysyłane żadne dane. Wciśnij OK aby przyznać dozwolenia lub Anuluj aby wyjść
@@ -309,8 +309,8 @@
     <string name="try_now">Spróbój teraz</string>
     <string name="download_progress">Postęp pobierania</string>
     <string name="what_do_you_want_to_do_with___">Co chcesz zrobić z %s?</string>
-    <string name="crash_reports">Raporty błedów</string>
-    <string name="crash_reports_subtext">W raportach błedów nie ma Twoich danych, są one bardzo użyteczne do diagnozy problemów z BaldPhone i ich naprawie.
+    <string name="crash_reports">Raporty błędów</string>
+    <string name="crash_reports_subtext">W raportach błędów nie ma Twoich danych, są one bardzo użyteczne do diagnozy problemów z BaldPhone i ich naprawie.
     </string>
     <string name="custom_app">Inna aplikacja</string>
     <string name="custom_app_subtext">Wybierz aplikację do dodania na ekran domowy.</string>
@@ -332,7 +332,7 @@
 
     <string name="share_photo">Udostępnij obraz</string>
 
-    <string name="choose_language_for_keyboard">Wybbierz język</string>
+    <string name="choose_language_for_keyboard">Wybierz język</string>
     <string name="hebrew">Hebrajski</string>
     <string name="english">Angielski</string>
 
@@ -341,7 +341,7 @@
     <string name="go">Zatwierdź</string>
 
 
-    <string name="dialer_sounds">Dzwięki dialeras</string>
+    <string name="dialer_sounds">Dzwięki dialera</string>
     <string name="dialer_sounds_subtext">Wybierz czy chcesz włączyć dzwięki dialera.</string>
     <string name="low_battery_alert">Ostrzeżenie o niskim poziomie baterii</string>
     <string name="low_battery_alert_subtext">Czy chcesz aby belka statusu była czerwona kiedy bateria jest poniżej 20%\nPamiętaj że to ustawienie jest zależne od od tego czy masz włączoną belkę statusu.</string>
