@@ -27,6 +27,7 @@ But if you have any problems with it, the old method will work just as fine
     - [Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-pt/strings.xml) translated by Vladyslav Rudakevych
     - [Romanian](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-ro/strings.xml) translated by Tibz Leet
     - [Russian](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-ru/strings.xml) translated by [Vintic](https://github.com/Vintic)
+    - [Slovak](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-sk/strings.xml)
     - [Slovenian](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-sl/strings.xml) translated by Klemen Skerbiš
     - [Spanish](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-es/strings.xml) translated by [Victor Arribas](https://github.com/varhub) and Ismael Ferreras Morezuelas (Swyter)
     - [Swedish](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-sv/strings.xml) translated by [Patrik Bogren](https://github.com/mmFooD)
@@ -57,6 +58,7 @@ But if you have any problems with it, the old method will work just as fine
     - [Portuguese](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-pt/strings.xml) translated by Vladyslav Rudakevych
     - [Romanian](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-ro/strings.xml) translated by Tibz Leet
     - [Russian](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-ru/strings.xml) translated by [Vintic](https://github.com/Vintic)
+    - [Slovak](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-sk/strings.xml)
     - [Slovenian](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-sl/strings.xml) translated by Klemen Skerbiš
     - [Spanish](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-es/strings.xml) translated by [Victor Arribas](https://github.com/varhub) and Ismael Ferreras Morezuelas (Swyter)
     - [Swedish](https://github.com/UriahShaulMandel/BaldPhone/blob/translations/app/src/main/res/values-sv/strings.xml) translated by [Patrik Bogren](https://github.com/mmFooD)
